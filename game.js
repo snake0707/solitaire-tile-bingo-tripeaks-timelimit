@@ -234,6 +234,25 @@ class Game {
         document.getElementById('menu-btn').addEventListener('click', () => this.showLevelSelect());
         document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
 
+        // Event delegation for pyramid cards (single listener instead of per-card)
+        this._lastTouchTime = 0;
+        this.gridEl.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            this._lastTouchTime = Date.now();
+            const cardEl = e.target.closest('.pyramid-card');
+            if (cardEl && !cardEl.classList.contains('face-down')) {
+                this.onPyramidCardClick(Number(cardEl.dataset.cardId));
+            }
+        });
+        this.gridEl.addEventListener('click', (e) => {
+            // Skip click if it followed a touchend (prevents double-fire on mobile)
+            if (Date.now() - this._lastTouchTime < 500) return;
+            const cardEl = e.target.closest('.pyramid-card');
+            if (cardEl && !cardEl.classList.contains('face-down')) {
+                this.onPyramidCardClick(Number(cardEl.dataset.cardId));
+            }
+        });
+
         this.levelData = {};
         this.init();
     }
@@ -732,11 +751,6 @@ class Game {
             }
 
             el.appendChild(inner);
-
-            // Click handler only for face-up cards
-            if (cardObj.faceUp) {
-                el.addEventListener('click', () => this.onPyramidCardClick(cardObj.id));
-            }
 
             // 2D flip animation for newly uncovered cards
             if (cardObj.justFlipped) {
