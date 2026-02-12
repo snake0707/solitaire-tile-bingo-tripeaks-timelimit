@@ -211,12 +211,12 @@ body {
 }
 
 /* Slot category colors */
-.slot-card.active.color-a { background: linear-gradient(145deg, #a3d4fb, #64b5f6); }
-.slot-card.active.color-b { background: linear-gradient(145deg, #f5a3a1, #ef5350); }
-.slot-card.active.color-c { background: linear-gradient(145deg, #a5dba7, #66bb6a); }
-.slot-card.active.color-d { background: linear-gradient(145deg, #ffd699, #ffa726); }
-.slot-card.active.color-e { background: linear-gradient(145deg, #d1a3db, #ab47bc); }
-.slot-card.active.color-f { background: linear-gradient(145deg, #99e5ef, #26c6da); }
+.slot-card.active.color-a { background: linear-gradient(145deg, #7ab4ff, #1e78ff); }
+.slot-card.active.color-b { background: linear-gradient(145deg, #f09090, #e63232); }
+.slot-card.active.color-c { background: linear-gradient(145deg, #80d898, #28b446); }
+.slot-card.active.color-d { background: linear-gradient(145deg, #ffe080, #ffb400); }
+.slot-card.active.color-e { background: linear-gradient(145deg, #cc8ae6, #9b28c8); }
+.slot-card.active.color-f { background: linear-gradient(145deg, #70e8e8, #00bebe); }
 
 @keyframes slotPopIn {
     0% { transform: scale(0.3); opacity: 0; }
@@ -406,13 +406,13 @@ body {
     white-space: nowrap;
 }
 
-/* Color variants for category identification (6 colors) */
-.card-face.color-a::before { background: rgba(66, 165, 245, 0.3); }
-.card-face.color-b::before { background: rgba(239, 83, 80, 0.3); }
-.card-face.color-c::before { background: rgba(102, 187, 106, 0.3); }
-.card-face.color-d::before { background: rgba(255, 167, 38, 0.3); }
-.card-face.color-e::before { background: rgba(171, 71, 188, 0.3); }
-.card-face.color-f::before { background: rgba(38, 198, 218, 0.3); }
+/* Color variants for category identification (6 high-contrast colors) */
+.card-face.color-a::before { background: rgba(30, 120, 255, 0.45); }
+.card-face.color-b::before { background: rgba(230, 50, 50, 0.45); }
+.card-face.color-c::before { background: rgba(40, 180, 70, 0.45); }
+.card-face.color-d::before { background: rgba(255, 180, 0, 0.45); }
+.card-face.color-e::before { background: rgba(155, 40, 200, 0.45); }
+.card-face.color-f::before { background: rgba(0, 190, 190, 0.45); }
 
 /* Gold card face */
 .card-face.gold-card {
