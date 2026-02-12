@@ -210,6 +210,14 @@ body {
     animation: slotPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Slot category colors */
+.slot-card.active.color-a { border-color: #42a5f5; }
+.slot-card.active.color-b { border-color: #ef5350; }
+.slot-card.active.color-c { border-color: #66bb6a; }
+.slot-card.active.color-d { border-color: #ffa726; }
+.slot-card.active.color-e { border-color: #ab47bc; }
+.slot-card.active.color-f { border-color: #26c6da; }
+
 @keyframes slotPopIn {
     0% { transform: scale(0.3); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
@@ -380,10 +388,13 @@ body {
     white-space: nowrap;
 }
 
-/* Color variants for regular cards (tint overlay) */
-.card-face.color-a .card-name { color: #1565c0; }
-.card-face.color-b .card-name { color: #c2185b; }
-.card-face.color-c .card-name { color: #2e7d32; }
+/* Color variants for category identification (6 colors) */
+.card-face.color-a { border: 3px solid #42a5f5; }
+.card-face.color-b { border: 3px solid #ef5350; }
+.card-face.color-c { border: 3px solid #66bb6a; }
+.card-face.color-d { border: 3px solid #ffa726; }
+.card-face.color-e { border: 3px solid #ab47bc; }
+.card-face.color-f { border: 3px solid #26c6da; }
 
 /* Gold card face */
 .card-face.gold-card {

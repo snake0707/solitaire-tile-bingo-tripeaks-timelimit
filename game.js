@@ -9,7 +9,7 @@
 // ─── Data (loaded from categories.js) ────────────────────────
 
 const MAX_SLOTS = 5;
-const CARD_COLORS = ['color-a', 'color-b', 'color-c'];
+const CARD_COLORS = ['color-a', 'color-b', 'color-c', 'color-d', 'color-e', 'color-f'];
 const MAX_LEVEL = 10;
 
 // ─── Layout Constants ────────────────────────────────────────
@@ -273,7 +273,7 @@ class Game {
 
         this.categoryColorMap = {};
         activeCatKeys.forEach((key, i) => {
-            this.categoryColorMap[key] = CARD_COLORS[Math.floor(i / 2) % CARD_COLORS.length];
+            this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
         });
 
         // Build all cards: 1 gold + N regular per category
@@ -559,7 +559,8 @@ class Game {
                 div.innerHTML = `<span class="slot-empty-icon">?</span>`;
             } else {
                 const isFull = slot.collected >= slot.target;
-                div.className = 'slot-card active' + (isFull ? ' full' : '');
+                const slotColor = this.categoryColorMap[slot.key] || '';
+                div.className = 'slot-card active ' + slotColor + (isFull ? ' full' : '');
                 div.innerHTML = `
                     <span class="cat-name">${slot.name}</span>
                     <span class="cat-progress">${slot.collected}/${slot.target}</span>
@@ -658,9 +659,7 @@ class Game {
                 // Front face
                 const face = document.createElement('div');
                 const goldClass = cardObj.card.type === 'gold' ? ' gold-card' : '';
-                const colorClass = cardObj.card.type === 'regular'
-                    ? ' ' + (this.categoryColorMap[cardObj.card.category] || '')
-                    : '';
+                const colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
                 face.className = `card-face${goldClass}${colorClass}`;
 
                 if (cardObj.card.type === 'gold') {

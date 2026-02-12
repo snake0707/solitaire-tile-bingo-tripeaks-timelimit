@@ -136,7 +136,7 @@
 <script>
 // ─── Data ────────────────────────────────────────────────────────────────
 
-const CARD_COLORS = ['color-a', 'color-b', 'color-c'];
+const CARD_COLORS = ['color-a', 'color-b', 'color-c', 'color-d', 'color-e', 'color-f'];
 
 // ─── Level Layouts (boolean masks) ──────────────────────────────────
 
@@ -240,7 +240,7 @@ function generateCards(config) {
 
     const categoryColorMap = {};
     activeCatKeys.forEach((key, i) => {
-        categoryColorMap[key] = CARD_COLORS[Math.floor(i / 2) % CARD_COLORS.length];
+        categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
     });
 
     const allCards = [];
