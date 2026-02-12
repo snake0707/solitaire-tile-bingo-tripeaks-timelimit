@@ -186,7 +186,12 @@ class Game {
         this.completedCount = 0;
         this.slots = new Array(this.maxSlots).fill(null);
         this.categoryTargets = { ...layout.categoryTargets };
-        this.categoryColorMap = { ...layout.categoryColorMap };
+        // Always recompute color map at runtime to ensure unique colors per category
+        const activeCatKeys = [...new Set(layout.cards.map(c => c.card.category))];
+        this.categoryColorMap = {};
+        activeCatKeys.forEach((key, i) => {
+            this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
+        });
         this.cards = [];
         this.cardMap = {};
         this.cleared = [];

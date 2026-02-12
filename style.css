@@ -352,9 +352,23 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
-    border: 2px solid #bbb;
+    background: url('res/Panel/basic_cards_1.png') center/cover no-repeat;
+    border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* Semi-transparent color overlay */
+.card-face::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .card-face .card-img {
@@ -362,6 +376,8 @@ body {
     height: 52px;
     object-fit: contain;
     pointer-events: none;
+    position: relative;
+    z-index: 1;
 }
 
 .card-face .card-text {
@@ -374,6 +390,8 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    position: relative;
+    z-index: 1;
 }
 
 .card-face .card-name {
@@ -386,38 +404,27 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    position: relative;
+    z-index: 1;
 }
 
-/* Color variants for category identification (6 bold colors) */
-.card-face.color-a {
-    background: linear-gradient(145deg, #b8edd8, #98dfc6);
-    border-color: #6fc7a4;
-}
-.card-face.color-b {
-    background: linear-gradient(145deg, #ffd0ca, #ffb6ad);
-    border-color: #f08e82;
-}
-.card-face.color-c {
-    background: linear-gradient(145deg, #c8e8fa, #add8f5);
-    border-color: #7db8e0;
-}
-.card-face.color-d {
-    background: linear-gradient(145deg, #fff0be, #ffe699);
-    border-color: #e0c060;
-}
-.card-face.color-e {
-    background: linear-gradient(145deg, #ddd0f0, #c8b6e6);
-    border-color: #a08cc8;
-}
-.card-face.color-f {
-    background: linear-gradient(145deg, #ffdcb8, #ffc491);
-    border-color: #e09a58;
-}
+/* Color variants — semi-transparent overlay on panel image */
+.card-face.color-a::before { background: rgba(152, 223, 198, 0.3); }
+.card-face.color-b::before { background: rgba(255, 182, 173, 0.3); }
+.card-face.color-c::before { background: rgba(173, 216, 245, 0.3); }
+.card-face.color-d::before { background: rgba(255, 230, 153, 0.3); }
+.card-face.color-e::before { background: rgba(200, 182, 230, 0.3); }
+.card-face.color-f::before { background: rgba(255, 196, 145, 0.3); }
 
-/* Gold card face — inherits category color, adds gold border */
+/* Gold card face — uses category_card_1 panel, no color overlay */
 .card-face.gold-card {
-    border: 3px solid #ff8f00;
+    background: url('res/Panel/category_card_1.png') center/cover no-repeat;
+    border: none;
     box-shadow: 0 2px 6px rgba(255,179,0,0.5);
+}
+
+.card-face.gold-card::before {
+    display: none;
 }
 
 .card-face.gold-card .card-name {
