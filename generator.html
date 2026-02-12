@@ -132,86 +132,10 @@
         <div id="log"></div>
     </div>
 
+<script src="categories.js"></script>
 <script>
-// ─── Data (copied from game.js) ────────────────────────────────────────
+// ─── Data ────────────────────────────────────────────────────────────────
 
-const CATEGORIES = {
-    animals: {
-        name: 'Animals', emoji: '\u{1F43E}',
-        items: [
-            { name: 'Bear', emoji: '\u{1F43B}' }, { name: 'Monkey', emoji: '\u{1F435}' },
-            { name: 'Pig', emoji: '\u{1F437}' }, { name: 'Sheep', emoji: '\u{1F411}' },
-            { name: 'Horse', emoji: '\u{1F434}' }, { name: 'Cat', emoji: '\u{1F431}' },
-            { name: 'Dog', emoji: '\u{1F436}' }, { name: 'Rabbit', emoji: '\u{1F430}' },
-            { name: 'Fox', emoji: '\u{1F98A}' }, { name: 'Panda', emoji: '\u{1F43C}' },
-        ]
-    },
-    flowers: {
-        name: 'Flowers', emoji: '\u{1F338}',
-        items: [
-            { name: 'Lily', emoji: '\u{1F337}' }, { name: 'Peony', emoji: '\u{1F33A}' },
-            { name: 'Rose', emoji: '\u{1F339}' }, { name: 'Daisy', emoji: '\u{1F33C}' },
-            { name: 'Tulip', emoji: '\u{1F490}' }, { name: 'Orchid', emoji: '\u{1FAB}' },
-            { name: 'Lotus', emoji: '\u{1FAB7}' }, { name: 'Sunflower', emoji: '\u{1F33B}' },
-        ]
-    },
-    furniture: {
-        name: 'Furniture', emoji: '\u{1FA91}',
-        items: [
-            { name: 'Chair', emoji: '\u{1FA91}' }, { name: 'Bed', emoji: '\u{1F6CF}\uFE0F' },
-            { name: 'Sofa', emoji: '\u{1F6CB}\uFE0F' }, { name: 'Lamp', emoji: '\u{1FA94}' },
-            { name: 'Table', emoji: '\u{1FAB5}' }, { name: 'Clock', emoji: '\u{1F570}\uFE0F' },
-            { name: 'Mirror', emoji: '\u{1FA9E}' }, { name: 'Vase', emoji: '\u{1F3FA}' },
-        ]
-    },
-    aquatics: {
-        name: 'Aquatics', emoji: '\u{1F420}',
-        items: [
-            { name: 'Fish', emoji: '\u{1F41F}' }, { name: 'Whale', emoji: '\u{1F40B}' },
-            { name: 'Dolphin', emoji: '\u{1F42C}' }, { name: 'Octopus', emoji: '\u{1F419}' },
-            { name: 'Crab', emoji: '\u{1F980}' }, { name: 'Shrimp', emoji: '\u{1F990}' },
-            { name: 'Turtle', emoji: '\u{1F422}' }, { name: 'Shark', emoji: '\u{1F988}' },
-        ]
-    },
-    vehicles: {
-        name: 'Vehicles', emoji: '\u{1F697}',
-        items: [
-            { name: 'Car', emoji: '\u{1F697}' }, { name: 'Bus', emoji: '\u{1F68C}' },
-            { name: 'Rocket', emoji: '\u{1F680}' }, { name: 'Boat', emoji: '\u26F5' },
-            { name: 'Train', emoji: '\u{1F682}' }, { name: 'Plane', emoji: '\u2708\uFE0F' },
-            { name: 'Bike', emoji: '\u{1F6B2}' }, { name: 'Truck', emoji: '\u{1F69A}' },
-        ]
-    },
-    food: {
-        name: 'Food', emoji: '\u{1F354}',
-        items: [
-            { name: 'Pizza', emoji: '\u{1F355}' }, { name: 'Burger', emoji: '\u{1F354}' },
-            { name: 'Cake', emoji: '\u{1F382}' }, { name: 'Apple', emoji: '\u{1F34E}' },
-            { name: 'Ice Cream', emoji: '\u{1F366}' }, { name: 'Cookie', emoji: '\u{1F36A}' },
-            { name: 'Banana', emoji: '\u{1F34C}' }, { name: 'Grape', emoji: '\u{1F347}' },
-        ]
-    },
-    sports: {
-        name: 'Sports', emoji: '\u26BD',
-        items: [
-            { name: 'Soccer', emoji: '\u26BD' }, { name: 'Baseball', emoji: '\u26BE' },
-            { name: 'Tennis', emoji: '\u{1F3BE}' }, { name: 'Basket', emoji: '\u{1F3C0}' },
-            { name: 'Bowling', emoji: '\u{1F3B3}' }, { name: 'Golf', emoji: '\u26F3' },
-            { name: 'Rugby', emoji: '\u{1F3C8}' }, { name: 'Pingpong', emoji: '\u{1F3D3}' },
-        ]
-    },
-    music: {
-        name: 'Music', emoji: '\u{1F3B5}',
-        items: [
-            { name: 'Guitar', emoji: '\u{1F3B8}' }, { name: 'Piano', emoji: '\u{1F3B9}' },
-            { name: 'Drum', emoji: '\u{1F941}' }, { name: 'Violin', emoji: '\u{1F3BB}' },
-            { name: 'Trumpet', emoji: '\u{1F3BA}' }, { name: 'Sax', emoji: '\u{1F3B7}' },
-            { name: 'Mic', emoji: '\u{1F3A4}' }, { name: 'Flute', emoji: '\u{1FA88}' },
-        ]
-    },
-};
-
-const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES);
 const CARD_COLORS = ['color-a', 'color-b', 'color-c'];
 
 // ─── Level Layouts (boolean masks) ──────────────────────────────────
@@ -328,7 +252,7 @@ function generateCards(config) {
             type: 'gold',
             category: catKey,
             name: cat.name,
-            emoji: cat.emoji,
+            isText: cat.isText,
         });
 
         const shuffledItems = shuffleArray([...cat.items]);
@@ -339,7 +263,8 @@ function generateCards(config) {
                 type: 'regular',
                 category: catKey,
                 name: shuffledItems[i].name,
-                emoji: shuffledItems[i].emoji,
+                image: shuffledItems[i].image,
+                isText: cat.isText,
             });
         }
     });
@@ -354,7 +279,8 @@ function generateCards(config) {
             type: 'regular',
             category: catKey,
             name: item.name,
-            emoji: item.emoji,
+            image: item.image,
+            isText: cat.isText,
         });
         regularCountPerCat[catKey]++;
         categoryTargets[catKey] = regularCountPerCat[catKey];

@@ -220,11 +220,6 @@ body {
     border-color: #388e3c;
 }
 
-.slot-card .cat-emoji {
-    font-size: 20px;
-    display: block;
-}
-
 .slot-card .cat-name {
     font-size: 11px;
     font-weight: 700;
@@ -354,16 +349,29 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
-.card-face .card-emoji {
-    font-size: 22px;
-    line-height: 1;
+.card-face .card-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.card-face .card-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #37474f;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 58px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-face .card-name {
     font-size: 8px;
     font-weight: 600;
     color: #37474f;
-    margin-top: 1px;
     text-align: center;
     line-height: 1.1;
     max-width: 58px;
@@ -399,6 +407,7 @@ body {
 }
 
 .card-face.gold-card .card-name {
+    font-size: 11px;
     color: #5d4037;
     font-weight: 700;
 }
@@ -412,7 +421,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 8px;
-    background: linear-gradient(145deg, #3949ab, #1a237e);
+    background: url('res/Panel/bac_card.png') center/cover no-repeat;
     border: 2px solid #283593;
     box-shadow: 0 2px 4px rgba(0,0,0,0.25);
     display: flex;
@@ -776,11 +785,12 @@ body {
         padding: 4px 6px;
         min-height: 62px;
     }
-    .slot-card .cat-emoji {
-        font-size: 18px;
+    .card-face .card-img {
+        width: 34px;
+        height: 34px;
     }
-    .card-face .card-emoji {
-        font-size: 18px;
+    .card-face .card-text {
+        font-size: 12px;
     }
     .card-face .card-name {
         font-size: 7px;

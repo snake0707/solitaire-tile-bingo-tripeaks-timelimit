@@ -6,85 +6,8 @@
  * a 5×5 grid used for BINGO detection.
  */
 
-// ─── Data ────────────────────────────────────────────────────
+// ─── Data (loaded from categories.js) ────────────────────────
 
-const CATEGORIES = {
-    animals: {
-        name: 'Animals', emoji: '🐾',
-        items: [
-            { name: 'Bear', emoji: '🐻' }, { name: 'Monkey', emoji: '🐵' },
-            { name: 'Pig', emoji: '🐷' }, { name: 'Sheep', emoji: '🐑' },
-            { name: 'Horse', emoji: '🐴' }, { name: 'Cat', emoji: '🐱' },
-            { name: 'Dog', emoji: '🐶' }, { name: 'Rabbit', emoji: '🐰' },
-            { name: 'Fox', emoji: '🦊' }, { name: 'Panda', emoji: '🐼' },
-        ]
-    },
-    flowers: {
-        name: 'Flowers', emoji: '🌸',
-        items: [
-            { name: 'Lily', emoji: '🌷' }, { name: 'Peony', emoji: '🌺' },
-            { name: 'Rose', emoji: '🌹' }, { name: 'Daisy', emoji: '🌼' },
-            { name: 'Tulip', emoji: '💐' }, { name: 'Orchid', emoji: '🪻' },
-            { name: 'Lotus', emoji: '🪷' }, { name: 'Sunflower', emoji: '🌻' },
-        ]
-    },
-    furniture: {
-        name: 'Furniture', emoji: '🪑',
-        items: [
-            { name: 'Chair', emoji: '🪑' }, { name: 'Bed', emoji: '🛏️' },
-            { name: 'Sofa', emoji: '🛋️' }, { name: 'Lamp', emoji: '🪔' },
-            { name: 'Table', emoji: '🪵' }, { name: 'Clock', emoji: '🕰️' },
-            { name: 'Mirror', emoji: '🪞' }, { name: 'Vase', emoji: '🏺' },
-        ]
-    },
-    aquatics: {
-        name: 'Aquatics', emoji: '🐠',
-        items: [
-            { name: 'Fish', emoji: '🐟' }, { name: 'Whale', emoji: '🐋' },
-            { name: 'Dolphin', emoji: '🐬' }, { name: 'Octopus', emoji: '🐙' },
-            { name: 'Crab', emoji: '🦀' }, { name: 'Shrimp', emoji: '🦐' },
-            { name: 'Turtle', emoji: '🐢' }, { name: 'Shark', emoji: '🦈' },
-        ]
-    },
-    vehicles: {
-        name: 'Vehicles', emoji: '🚗',
-        items: [
-            { name: 'Car', emoji: '🚗' }, { name: 'Bus', emoji: '🚌' },
-            { name: 'Rocket', emoji: '🚀' }, { name: 'Boat', emoji: '⛵' },
-            { name: 'Train', emoji: '🚂' }, { name: 'Plane', emoji: '✈️' },
-            { name: 'Bike', emoji: '🚲' }, { name: 'Truck', emoji: '🚚' },
-        ]
-    },
-    food: {
-        name: 'Food', emoji: '🍔',
-        items: [
-            { name: 'Pizza', emoji: '🍕' }, { name: 'Burger', emoji: '🍔' },
-            { name: 'Cake', emoji: '🎂' }, { name: 'Apple', emoji: '🍎' },
-            { name: 'Ice Cream', emoji: '🍦' }, { name: 'Cookie', emoji: '🍪' },
-            { name: 'Banana', emoji: '🍌' }, { name: 'Grape', emoji: '🍇' },
-        ]
-    },
-    sports: {
-        name: 'Sports', emoji: '⚽',
-        items: [
-            { name: 'Soccer', emoji: '⚽' }, { name: 'Baseball', emoji: '⚾' },
-            { name: 'Tennis', emoji: '🎾' }, { name: 'Basket', emoji: '🏀' },
-            { name: 'Bowling', emoji: '🎳' }, { name: 'Golf', emoji: '⛳' },
-            { name: 'Rugby', emoji: '🏈' }, { name: 'Pingpong', emoji: '🏓' },
-        ]
-    },
-    music: {
-        name: 'Music', emoji: '🎵',
-        items: [
-            { name: 'Guitar', emoji: '🎸' }, { name: 'Piano', emoji: '🎹' },
-            { name: 'Drum', emoji: '🥁' }, { name: 'Violin', emoji: '🎻' },
-            { name: 'Trumpet', emoji: '🎺' }, { name: 'Sax', emoji: '🎷' },
-            { name: 'Mic', emoji: '🎤' }, { name: 'Flute', emoji: '🪈' },
-        ]
-    },
-};
-
-const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES);
 const MAX_SLOTS = 5;
 const CARD_COLORS = ['color-a', 'color-b', 'color-c'];
 const MAX_LEVEL = 10;
@@ -363,7 +286,7 @@ class Game {
                 type: 'gold',
                 category: catKey,
                 name: cat.name,
-                emoji: cat.emoji,
+                isText: cat.isText,
             });
 
             const shuffledItems = this.shuffleArray([...cat.items]);
@@ -374,7 +297,8 @@ class Game {
                     type: 'regular',
                     category: catKey,
                     name: shuffledItems[i].name,
-                    emoji: shuffledItems[i].emoji,
+                    image: shuffledItems[i].image,
+                    isText: cat.isText,
                 });
             }
         });
@@ -390,7 +314,8 @@ class Game {
                 type: 'regular',
                 category: catKey,
                 name: item.name,
-                emoji: item.emoji,
+                image: item.image,
+                isText: cat.isText,
             });
             regularCountPerCat[catKey]++;
             this.categoryTargets[catKey] = regularCountPerCat[catKey];
@@ -636,7 +561,6 @@ class Game {
                 const isFull = slot.collected >= slot.target;
                 div.className = 'slot-card active' + (isFull ? ' full' : '');
                 div.innerHTML = `
-                    <span class="cat-emoji">${slot.emoji}</span>
                     <span class="cat-name">${slot.name}</span>
                     <span class="cat-progress">${slot.collected}/${slot.target}</span>
                     <div class="progress-bar">
@@ -738,10 +662,23 @@ class Game {
                     ? ' ' + (this.categoryColorMap[cardObj.card.category] || '')
                     : '';
                 face.className = `card-face${goldClass}${colorClass}`;
-                face.innerHTML = `
-                    <span class="card-emoji">${cardObj.card.emoji}</span>
-                    <span class="card-name">${cardObj.card.name}</span>
-                `;
+
+                if (cardObj.card.type === 'gold') {
+                    // Gold card: category name on gold background
+                    face.innerHTML = `
+                        <span class="card-name">${cardObj.card.name}</span>
+                    `;
+                } else if (cardObj.card.isText) {
+                    // Text card: show text label
+                    face.innerHTML = `
+                        <span class="card-text">${cardObj.card.name}</span>
+                    `;
+                } else {
+                    // Image card
+                    face.innerHTML = `
+                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
+                    `;
+                }
                 inner.appendChild(face);
             } else {
                 // Back face
@@ -826,7 +763,6 @@ class Game {
             this.slots[emptySlotIdx] = {
                 key: cardObj.card.category,
                 name: cardObj.card.name,
-                emoji: cardObj.card.emoji,
                 collected: 0,
                 target: this.categoryTargets[cardObj.card.category] || 0,
             };
@@ -1030,7 +966,6 @@ class Game {
                 this.slots[move.slotIndex] = {
                     key: catKey,
                     name: CATEGORIES[catKey].name,
-                    emoji: CATEGORIES[catKey].emoji,
                     collected: this.categoryTargets[catKey] - 1,
                     target: this.categoryTargets[catKey],
                 };
