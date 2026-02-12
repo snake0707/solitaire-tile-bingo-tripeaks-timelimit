@@ -223,7 +223,6 @@ class Game {
         this.levelLabelEl = document.getElementById('level-label');
         this.winOverlay = document.getElementById('win-overlay');
         this.loseOverlay = document.getElementById('lose-overlay');
-        this.bingoMiniEl = document.getElementById('bingo-mini');
         this.levelOverlay = document.getElementById('level-overlay');
         this.levelGridEl = document.getElementById('level-grid');
 
@@ -574,7 +573,6 @@ class Game {
         this.renderSlots();
         this.renderPyramid();
         this.updateBingoCount();
-        this.renderBingoMini();
     }
 
     // ── Timer ───────────────────────────────────────────────
@@ -748,24 +746,6 @@ class Game {
             }
 
             this.gridEl.appendChild(el);
-        }
-    }
-
-    renderBingoMini() {
-        if (!this.bingoMiniEl) return;
-        this.bingoMiniEl.innerHTML = '';
-        for (let r = 0; r < 5; r++) {
-            for (let c = 0; c < 5; c++) {
-                const dot = document.createElement('div');
-                dot.className = 'bingo-mini-dot';
-                if (this.cleared[r][c]) {
-                    dot.classList.add('cleared');
-                }
-                if (this.isCellInBingo(r, c)) {
-                    dot.classList.add('bingo');
-                }
-                this.bingoMiniEl.appendChild(dot);
-            }
         }
     }
 
