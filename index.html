@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Solitaire Tile Bingo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Header -->
+        <div id="header">
+            <div id="level-label">Level 1</div>
+            <button id="menu-btn">&#9776;</button>
+        </div>
+
+        <!-- Goals -->
+        <div id="goals-bar">
+            <div id="goals-left">
+                <span class="goals-label">GOALS</span>
+                <div class="bingo-mini-icon">BINGO</div>
+                <span id="bingo-count">0 / 1</span>
+            </div>
+            <div id="goals-right">
+                <div id="timer-display">
+                    <span id="timer-icon">&#9201;</span>
+                    <span id="timer-count">0:00</span>
+                </div>
+                <div id="category-indicator"></div>
+            </div>
+        </div>
+
+        <!-- Gold Category Collector Cards -->
+        <div id="collectors"></div>
+
+        <!-- Pyramid Card Area -->
+        <div id="bingo-grid"></div>
+
+        <!-- Mini Bingo Tracker -->
+        <div id="bingo-mini"></div>
+
+        <!-- Bottom Bar -->
+        <div id="bottom-bar">
+            <button class="bottom-btn" id="btn-shuffle" title="Shuffle">&#128260;</button>
+            <button class="bottom-btn" id="btn-hint" title="Hint">&#128161;</button>
+            <button class="bottom-btn" id="btn-undo" title="Undo">&#8617;</button>
+        </div>
+    </div>
+
+    <!-- Win Overlay -->
+    <div id="win-overlay" class="hidden">
+        <div id="win-dialog">
+            <h2>&#127881; BINGO! &#127881;</h2>
+            <p id="win-message">You completed the level!</p>
+            <button id="btn-next-level">Next Level</button>
+        </div>
+    </div>
+
+    <!-- Lose Overlay -->
+    <div id="lose-overlay" class="hidden">
+        <div id="lose-dialog">
+            <h2>Game Over</h2>
+            <p id="lose-message">No more moves available!</p>
+            <button id="btn-retry">Retry</button>
+        </div>
+    </div>
+
+    <!-- Level Select Overlay -->
+    <div id="level-overlay" class="hidden">
+        <div id="level-dialog">
+            <h2>Select Level</h2>
+            <div id="level-grid"></div>
+            <button id="btn-close-levels">Cancel</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

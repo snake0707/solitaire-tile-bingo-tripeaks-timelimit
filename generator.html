@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire Tile Bingo - Level Generator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 30px 15px;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #ffd700;
+        }
+        .config {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .config label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .config input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+        .row {
+            display: flex;
+            gap: 12px;
+        }
+        .row > div { flex: 1; }
+        button#btn-generate {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #4caf50, #2e7d32);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+        button#btn-generate:active { transform: scale(0.97); }
+        button#btn-generate:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+        .progress-container {
+            margin-top: 20px;
+        }
+        .progress-bar-outer {
+            width: 100%;
+            height: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            border-radius: 6px;
+            width: 0%;
+            transition: width 0.15s ease;
+        }
+        .progress-label {
+            font-size: 13px;
+            color: #aaa;
+            text-align: center;
+        }
+        #log {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Level Generator</h1>
+        <div class="config">
+            <div class="row">
+                <div>
+                    <label for="start-level">Start Level</label>
+                    <input type="number" id="start-level" value="1" min="1" max="10">
+                </div>
+                <div>
+                    <label for="num-levels">Number of Levels</label>
+                    <input type="number" id="num-levels" value="2" min="1" max="10">
+                </div>
+            </div>
+            <label for="layouts-per-level">Layouts per Level</label>
+            <input type="number" id="layouts-per-level" value="5" min="1" max="20">
+            <button id="btn-generate">Generate Levels</button>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progress-fill"></div>
+            </div>
+            <div class="progress-label" id="progress-label">Ready</div>
+        </div>
+        <div id="log"></div>
+    </div>
+
+<script>
+// ─── Data (copied from game.js) ────────────────────────────────────────
+
+const CATEGORIES = {
+    animals: {
+        name: 'Animals', emoji: '\u{1F43E}',
+        items: [
+            { name: 'Bear', emoji: '\u{1F43B}' }, { name: 'Monkey', emoji: '\u{1F435}' },
+            { name: 'Pig', emoji: '\u{1F437}' }, { name: 'Sheep', emoji: '\u{1F411}' },
+            { name: 'Horse', emoji: '\u{1F434}' }, { name: 'Cat', emoji: '\u{1F431}' },
+            { name: 'Dog', emoji: '\u{1F436}' }, { name: 'Rabbit', emoji: '\u{1F430}' },
+            { name: 'Fox', emoji: '\u{1F98A}' }, { name: 'Panda', emoji: '\u{1F43C}' },
+        ]
+    },
+    flowers: {
+        name: 'Flowers', emoji: '\u{1F338}',
+        items: [
+            { name: 'Lily', emoji: '\u{1F337}' }, { name: 'Peony', emoji: '\u{1F33A}' },
+            { name: 'Rose', emoji: '\u{1F339}' }, { name: 'Daisy', emoji: '\u{1F33C}' },
+            { name: 'Tulip', emoji: '\u{1F490}' }, { name: 'Orchid', emoji: '\u{1FAB}' },
+            { name: 'Lotus', emoji: '\u{1FAB7}' }, { name: 'Sunflower', emoji: '\u{1F33B}' },
+        ]
+    },
+    furniture: {
+        name: 'Furniture', emoji: '\u{1FA91}',
+        items: [
+            { name: 'Chair', emoji: '\u{1FA91}' }, { name: 'Bed', emoji: '\u{1F6CF}\uFE0F' },
+            { name: 'Sofa', emoji: '\u{1F6CB}\uFE0F' }, { name: 'Lamp', emoji: '\u{1FA94}' },
+            { name: 'Table', emoji: '\u{1FAB5}' }, { name: 'Clock', emoji: '\u{1F570}\uFE0F' },
+            { name: 'Mirror', emoji: '\u{1FA9E}' }, { name: 'Vase', emoji: '\u{1F3FA}' },
+        ]
+    },
+    aquatics: {
+        name: 'Aquatics', emoji: '\u{1F420}',
+        items: [
+            { name: 'Fish', emoji: '\u{1F41F}' }, { name: 'Whale', emoji: '\u{1F40B}' },
+            { name: 'Dolphin', emoji: '\u{1F42C}' }, { name: 'Octopus', emoji: '\u{1F419}' },
+            { name: 'Crab', emoji: '\u{1F980}' }, { name: 'Shrimp', emoji: '\u{1F990}' },
+            { name: 'Turtle', emoji: '\u{1F422}' }, { name: 'Shark', emoji: '\u{1F988}' },
+        ]
+    },
+    vehicles: {
+        name: 'Vehicles', emoji: '\u{1F697}',
+        items: [
+            { name: 'Car', emoji: '\u{1F697}' }, { name: 'Bus', emoji: '\u{1F68C}' },
+            { name: 'Rocket', emoji: '\u{1F680}' }, { name: 'Boat', emoji: '\u26F5' },
+            { name: 'Train', emoji: '\u{1F682}' }, { name: 'Plane', emoji: '\u2708\uFE0F' },
+            { name: 'Bike', emoji: '\u{1F6B2}' }, { name: 'Truck', emoji: '\u{1F69A}' },
+        ]
+    },
+    food: {
+        name: 'Food', emoji: '\u{1F354}',
+        items: [
+            { name: 'Pizza', emoji: '\u{1F355}' }, { name: 'Burger', emoji: '\u{1F354}' },
+            { name: 'Cake', emoji: '\u{1F382}' }, { name: 'Apple', emoji: '\u{1F34E}' },
+            { name: 'Ice Cream', emoji: '\u{1F366}' }, { name: 'Cookie', emoji: '\u{1F36A}' },
+            { name: 'Banana', emoji: '\u{1F34C}' }, { name: 'Grape', emoji: '\u{1F347}' },
+        ]
+    },
+    sports: {
+        name: 'Sports', emoji: '\u26BD',
+        items: [
+            { name: 'Soccer', emoji: '\u26BD' }, { name: 'Baseball', emoji: '\u26BE' },
+            { name: 'Tennis', emoji: '\u{1F3BE}' }, { name: 'Basket', emoji: '\u{1F3C0}' },
+            { name: 'Bowling', emoji: '\u{1F3B3}' }, { name: 'Golf', emoji: '\u26F3' },
+            { name: 'Rugby', emoji: '\u{1F3C8}' }, { name: 'Pingpong', emoji: '\u{1F3D3}' },
+        ]
+    },
+    music: {
+        name: 'Music', emoji: '\u{1F3B5}',
+        items: [
+            { name: 'Guitar', emoji: '\u{1F3B8}' }, { name: 'Piano', emoji: '\u{1F3B9}' },
+            { name: 'Drum', emoji: '\u{1F941}' }, { name: 'Violin', emoji: '\u{1F3BB}' },
+            { name: 'Trumpet', emoji: '\u{1F3BA}' }, { name: 'Sax', emoji: '\u{1F3B7}' },
+            { name: 'Mic', emoji: '\u{1F3A4}' }, { name: 'Flute', emoji: '\u{1FA88}' },
+        ]
+    },
+};
+
+const ALL_CATEGORY_KEYS = Object.keys(CATEGORIES);
+const CARD_COLORS = ['color-a', 'color-b', 'color-c'];
+
+// ─── Level Layouts (boolean masks) ──────────────────────────────────
+
+const LEVEL_LAYOUTS = {
+    1: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+    ],
+    2: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+    ],
+    3: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
+    ],
+    4: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+        [[1,1,1],[1,1,1],[1,1,1]],
+    ],
+    5: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,0,0,1],[1,0,0,1],[1,1,1,1]],
+        [[0,1,0],[1,1,1],[0,1,0]],
+    ],
+    6: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+        [[1,1,1],[1,1,1],[1,1,1]],
+        [[1,1],[1,1]],
+    ],
+    7: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+        [[1,1,1],[1,0,1],[1,1,1]],
+        [[1,1],[1,1]],
+    ],
+    8: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+        [[1,1,1],[1,1,1],[1,1,1]],
+        [[1,1],[1,1]],
+        [[1]],
+    ],
+    9: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
+        [[1,1,1],[1,1,1],[1,1,1]],
+        [[1,0],[0,1]],
+        [[1]],
+    ],
+    10: [
+        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
+        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
+        [[1,1,1],[1,1,1],[1,1,1]],
+        [[1,1],[1,1]],
+        [[1]],
+    ],
+};
+
+function countLayoutPositions(layout) {
+    let total = 0;
+    for (const layer of layout) {
+        for (const row of layer) {
+            for (const cell of row) {
+                total += cell;
+            }
+        }
+    }
+    return total;
+}
+
+// ─── Config ────────────────────────────────────────────────────────
+
+function getLevelConfig(level) {
+    const layout = LEVEL_LAYOUTS[level] || LEVEL_LAYOUTS[1];
+    const numLayers = layout.length;
+    const totalPositions = countLayoutPositions(layout);
+    const NUM_CATEGORIES_BY_LEVEL = [0, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6];
+    const numCategories = NUM_CATEGORIES_BY_LEVEL[level] || 6;
+    const bingosNeeded = Math.min(1 + Math.floor((level - 1) / 2), 5);
+    const cardsPerCategory = Math.min(2 + level, 6);
+    const maxSlots = Math.min(3 + Math.floor((level - 1) / 3), 5);
+    const timeLimit = totalPositions * 10;
+    return { numCategories, numLayers, bingosNeeded, cardsPerCategory, totalPositions, maxSlots, timeLimit, layout };
+}
+
+// ─── Generation Logic ──────────────────────────────────────────────
+
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+function generateCards(config) {
+    const shuffledCats = shuffleArray([...ALL_CATEGORY_KEYS]);
+    const activeCatKeys = shuffledCats.slice(0, config.numCategories);
+
+    const categoryColorMap = {};
+    activeCatKeys.forEach((key, i) => {
+        categoryColorMap[key] = CARD_COLORS[Math.floor(i / 2) % CARD_COLORS.length];
+    });
+
+    const allCards = [];
+    const regularCountPerCat = {};
+
+    activeCatKeys.forEach(catKey => {
+        const cat = CATEGORIES[catKey];
+        allCards.push({
+            type: 'gold',
+            category: catKey,
+            name: cat.name,
+            emoji: cat.emoji,
+        });
+
+        const shuffledItems = shuffleArray([...cat.items]);
+        const count = Math.min(config.cardsPerCategory, shuffledItems.length);
+        regularCountPerCat[catKey] = count;
+        for (let i = 0; i < count; i++) {
+            allCards.push({
+                type: 'regular',
+                category: catKey,
+                name: shuffledItems[i].name,
+                emoji: shuffledItems[i].emoji,
+            });
+        }
+    });
+
+    const categoryTargets = { ...regularCountPerCat };
+
+    while (allCards.length < config.totalPositions) {
+        const catKey = activeCatKeys[Math.floor(Math.random() * activeCatKeys.length)];
+        const cat = CATEGORIES[catKey];
+        const item = cat.items[Math.floor(Math.random() * cat.items.length)];
+        allCards.push({
+            type: 'regular',
+            category: catKey,
+            name: item.name,
+            emoji: item.emoji,
+        });
+        regularCountPerCat[catKey]++;
+        categoryTargets[catKey] = regularCountPerCat[catKey];
+    }
+
+    shuffleArray(allCards);
+
+    const cards = [];
+    const cardMap = {};
+    let cardIndex = 0;
+
+    for (let L = 0; L < config.numLayers; L++) {
+        const layerMask = config.layout[L];
+        for (let r = 0; r < layerMask.length; r++) {
+            for (let c = 0; c < layerMask[r].length; c++) {
+                if (!layerMask[r][c]) continue;
+                if (cardIndex >= allCards.length) break;
+                const key = `${L}-${r}-${c}`;
+                const cardObj = {
+                    id: cards.length,
+                    layer: L,
+                    row: r,
+                    col: c,
+                    card: allCards[cardIndex++],
+                    faceUp: false,
+                    removed: false,
+                };
+                cards.push(cardObj);
+                cardMap[key] = cardObj;
+            }
+        }
+    }
+
+    // Build covering relationships
+    const coveredBy = {};
+    for (const card of cards) {
+        const key = `${card.layer}-${card.row}-${card.col}`;
+        coveredBy[key] = [];
+    }
+    for (const card of cards) {
+        if (card.layer === 0) continue;
+        const L = card.layer;
+        const R = card.row;
+        const C = card.col;
+        const upperKey = `${L}-${R}-${C}`;
+        const coveredPositions = [
+            [L - 1, R, C], [L - 1, R, C + 1],
+            [L - 1, R + 1, C], [L - 1, R + 1, C + 1]
+        ];
+        for (const [cl, cr, cc] of coveredPositions) {
+            const lowerKey = `${cl}-${cr}-${cc}`;
+            if (cardMap[lowerKey]) {
+                coveredBy[lowerKey].push(upperKey);
+            }
+        }
+    }
+
+    // Update face-up states
+    for (const card of cards) {
+        if (card.removed) continue;
+        const key = `${card.layer}-${card.row}-${card.col}`;
+        const coveringKeys = coveredBy[key] || [];
+        card.faceUp = coveringKeys.every(ck => {
+            const cc = cardMap[ck];
+            return !cc || cc.removed;
+        });
+    }
+
+    // Ensure gold on top
+    ensureGoldOnTop(cards);
+
+    return { cards, cardMap, coveredBy, categoryTargets, categoryColorMap };
+}
+
+function ensureGoldOnTop(cards) {
+    const faceUpCards = cards.filter(c => !c.removed && c.faceUp);
+    if (faceUpCards.some(c => c.card.type === 'gold')) return;
+
+    const buriedGold = cards.find(c => !c.removed && !c.faceUp && c.card.type === 'gold');
+    if (!buriedGold) return;
+
+    const swapTarget = faceUpCards.find(c => c.card.type !== 'gold');
+    if (!swapTarget) return;
+
+    const temp = buriedGold.card;
+    buriedGold.card = swapTarget.card;
+    swapTarget.card = temp;
+}
+
+// ─── DFS Solver ────────────────────────────────────────────────────
+
+function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded, maxMoves, maxSlots) {
+    const result = { solvable: false, nodesExplored: 0 };
+    const state = {
+        removed: new Set(),
+        slots: new Array(maxSlots).fill(null),
+        cleared: Array.from({ length: 5 }, () => Array(5).fill(false)),
+        movesLeft: maxMoves,
+        completedCount: 0,
+    };
+
+    let nodesExplored = 0;
+    const MAX_NODES = 500000; // aggressive limit — runs offline
+
+    function simIsFaceUp(cardObj) {
+        if (state.removed.has(cardObj.id)) return false;
+        const key = `${cardObj.layer}-${cardObj.row}-${cardObj.col}`;
+        const coveringKeys = coveredBy[key] || [];
+        return coveringKeys.every(ck => {
+            const cc = cardMap[ck];
+            return !cc || state.removed.has(cc.id);
+        });
+    }
+
+    function countBingoLines() {
+        let count = 0;
+        for (let r = 0; r < 5; r++) {
+            if (state.cleared[r].every(v => v)) count++;
+        }
+        for (let c = 0; c < 5; c++) {
+            if ([0, 1, 2, 3, 4].every(r => state.cleared[r][c])) count++;
+        }
+        if ([0, 1, 2, 3, 4].every(i => state.cleared[i][i])) count++;
+        if ([0, 1, 2, 3, 4].every(i => state.cleared[i][4 - i])) count++;
+        return count;
+    }
+
+    function getMoves() {
+        const moves = [];
+        const hasEmptySlot = state.slots.some(s => s === null);
+
+        for (const cardObj of cards) {
+            if (state.removed.has(cardObj.id)) continue;
+            if (!simIsFaceUp(cardObj)) continue;
+
+            if (cardObj.card.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'gold', cardObj });
+            } else if (cardObj.card.type === 'regular') {
+                const slotIdx = state.slots.findIndex(
+                    s => s !== null && s.key === cardObj.card.category && s.collected < s.target
+                );
+                if (slotIdx !== -1) {
+                    moves.push({ type: 'regular', cardObj, slotIndex: slotIdx });
+                }
+            }
+        }
+
+        moves.sort((a, b) => {
+            if (a.type === 'regular' && b.type === 'gold') return -1;
+            if (a.type === 'gold' && b.type === 'regular') return 1;
+            if (a.type === 'regular' && b.type === 'regular') {
+                const aRemain = state.slots[a.slotIndex].target - state.slots[a.slotIndex].collected;
+                const bRemain = state.slots[b.slotIndex].target - state.slots[b.slotIndex].collected;
+                return aRemain - bRemain;
+            }
+            return 0;
+        });
+
+        return moves;
+    }
+
+    function applyMove(move) {
+        const undo = {
+            cardId: move.cardObj.id,
+            type: move.type,
+            layer: move.cardObj.layer,
+            row: move.cardObj.row,
+            col: move.cardObj.col,
+        };
+
+        state.removed.add(move.cardObj.id);
+        state.movesLeft--;
+
+        if (move.cardObj.layer === 0) {
+            state.cleared[move.cardObj.row][move.cardObj.col] = true;
+            undo.clearedCell = true;
+        }
+
+        if (move.type === 'gold') {
+            const emptyIdx = state.slots.findIndex(s => s === null);
+            state.slots[emptyIdx] = {
+                key: move.cardObj.card.category,
+                collected: 0,
+                target: categoryTargets[move.cardObj.card.category] || 0,
+            };
+            undo.slotIndex = emptyIdx;
+        } else {
+            const slot = state.slots[move.slotIndex];
+            undo.slotIndex = move.slotIndex;
+            undo.prevCollected = slot.collected;
+            slot.collected++;
+            if (slot.collected >= slot.target) {
+                undo.completedSlot = { key: slot.key, collected: undo.prevCollected, target: slot.target };
+                state.slots[move.slotIndex] = null;
+                state.completedCount++;
+                undo.completedCategory = true;
+            }
+        }
+
+        return undo;
+    }
+
+    function undoMove(undo) {
+        state.removed.delete(undo.cardId);
+        state.movesLeft++;
+
+        if (undo.clearedCell) {
+            state.cleared[undo.row][undo.col] = false;
+        }
+
+        if (undo.type === 'gold') {
+            state.slots[undo.slotIndex] = null;
+        } else {
+            if (undo.completedCategory) {
+                state.completedCount--;
+                state.slots[undo.slotIndex] = undo.completedSlot;
+            } else {
+                state.slots[undo.slotIndex].collected--;
+            }
+        }
+    }
+
+    function solve() {
+        nodesExplored++;
+        if (nodesExplored > MAX_NODES) return false;
+
+        if (countBingoLines() >= bingosNeeded) return true;
+        if (state.movesLeft <= 0) return false;
+
+        const moves = getMoves();
+        if (moves.length === 0) return false;
+
+        for (const move of moves) {
+            const undo = applyMove(move);
+            if (solve()) return true;
+            undoMove(undo);
+        }
+
+        return false;
+    }
+
+    result.solvable = solve();
+    result.nodesExplored = nodesExplored;
+    return result;
+}
+
+// ─── Generator Logic ───────────────────────────────────────────────
+
+function generateSolvableLayout(level) {
+    const config = getLevelConfig(level);
+    const maxAttempts = 200;
+    let totalNodes = 0;
+
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        const gen = generateCards(config);
+        const result = verifySolvable(
+            gen.cards, gen.cardMap, gen.coveredBy,
+            gen.categoryTargets, config.bingosNeeded, config.totalPositions, config.maxSlots
+        );
+        totalNodes += result.nodesExplored;
+        if (result.solvable) {
+            return {
+                layout: {
+                    cards: gen.cards.map(c => ({
+                        layer: c.layer, row: c.row, col: c.col,
+                        card: { ...c.card },
+                    })),
+                    categoryTargets: { ...gen.categoryTargets },
+                    categoryColorMap: { ...gen.categoryColorMap },
+                },
+                attempts: attempt + 1,
+                totalNodes,
+            };
+        }
+    }
+    return { layout: null, attempts: maxAttempts, totalNodes };
+}
+
+function downloadJSON(filename, data) {
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// ─── UI ────────────────────────────────────────────────────────────
+
+const btnGenerate = document.getElementById('btn-generate');
+const progressFill = document.getElementById('progress-fill');
+const progressLabel = document.getElementById('progress-label');
+const logEl = document.getElementById('log');
+
+function log(msg) {
+    logEl.textContent += msg + '\n';
+    logEl.scrollTop = logEl.scrollHeight;
+}
+
+function setProgress(pct, label) {
+    progressFill.style.width = pct + '%';
+    progressLabel.textContent = label;
+}
+
+btnGenerate.addEventListener('click', async () => {
+    const startLevel = parseInt(document.getElementById('start-level').value, 10) || 1;
+    const numLevels = parseInt(document.getElementById('num-levels').value, 10) || 2;
+    const layoutsPerLevel = parseInt(document.getElementById('layouts-per-level').value, 10) || 5;
+
+    btnGenerate.disabled = true;
+    logEl.textContent = '';
+    log(`Starting generation: levels ${startLevel}-${startLevel + numLevels - 1}, ${layoutsPerLevel} layouts each`);
+
+    const totalWork = numLevels * layoutsPerLevel;
+    let completed = 0;
+
+    for (let lv = startLevel; lv < startLevel + numLevels; lv++) {
+        const layouts = [];
+        const cfg = getLevelConfig(lv);
+        log(`\n--- Level ${lv} (${cfg.numLayers}L, ${cfg.totalPositions} cards, ${cfg.maxSlots} slots, ${cfg.bingosNeeded} bingos, ${cfg.numCategories} cats, ${cfg.timeLimit}s) ---`);
+
+        for (let i = 0; i < layoutsPerLevel; i++) {
+            setProgress((completed / totalWork) * 100, `Level ${lv}: layout ${i + 1}/${layoutsPerLevel}`);
+
+            // Yield to keep UI responsive
+            await new Promise(r => setTimeout(r, 0));
+
+            const result = generateSolvableLayout(lv);
+            if (result.layout) {
+                layouts.push(result.layout);
+                log(`  Layout ${i + 1}: OK (${result.layout.cards.length} cards, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
+            } else {
+                log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes explored)`);
+            }
+            completed++;
+        }
+
+        if (layouts.length > 0) {
+            downloadJSON(`level_${lv}.json`, layouts);
+            log(`  Downloaded level_${lv}.json (${layouts.length} layouts)`);
+        } else {
+            log(`  WARNING: No solvable layouts found for level ${lv}`);
+        }
+    }
+
+    setProgress(100, 'Done!');
+    log('\nGeneration complete!');
+    btnGenerate.disabled = false;
+});
+</script>
+</body>
+</html>
