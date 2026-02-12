@@ -14,8 +14,8 @@ const MAX_LEVEL = 10;
 
 // ─── Layout Constants ────────────────────────────────────────
 
-const CARD_W = 64;
-const CARD_H = 56;
+const CARD_W = 60;
+const CARD_H = 70;
 const GAP_X = 4;
 const GAP_Y = 3;
 const VERTICAL_OVERLAP = 30;

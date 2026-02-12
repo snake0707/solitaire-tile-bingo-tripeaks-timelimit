@@ -299,8 +299,8 @@ body {
 
 .pyramid-card {
     position: absolute;
-    width: 64px;
-    height: 56px;
+    width: 60px;
+    height: 70px;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -344,14 +344,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(145deg, #ffffff, #e8eaf6);
-    border: 2px solid #90a4ae;
+    background: url('res/Panel/basic_cards_1.png') center/cover no-repeat;
+    border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .card-face .card-img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 52px;
     object-fit: contain;
     pointer-events: none;
 }
@@ -380,29 +380,15 @@ body {
     white-space: nowrap;
 }
 
-/* Color variants for regular cards */
-.card-face.color-a {
-    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
-    border-color: #64b5f6;
-}
+/* Color variants for regular cards (tint overlay) */
 .card-face.color-a .card-name { color: #1565c0; }
-
-.card-face.color-b {
-    background: linear-gradient(145deg, #fce4ec, #f8bbd0);
-    border-color: #f06292;
-}
 .card-face.color-b .card-name { color: #c2185b; }
-
-.card-face.color-c {
-    background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
-    border-color: #81c784;
-}
 .card-face.color-c .card-name { color: #2e7d32; }
 
 /* Gold card face */
 .card-face.gold-card {
-    background: linear-gradient(145deg, #ffd54f, #ffb300);
-    border: 2px solid #ff8f00;
+    background: url('res/Panel/category_card_1.png') center/cover no-repeat;
+    border: none;
     box-shadow: 0 2px 6px rgba(255,179,0,0.4);
 }
 
@@ -422,7 +408,7 @@ body {
     height: 100%;
     border-radius: 8px;
     background: url('res/Panel/bac_card.png') center/cover no-repeat;
-    border: 2px solid #283593;
+    border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.25);
     display: flex;
     align-items: center;
@@ -448,8 +434,8 @@ body {
 
 .cleared-mark-pyramid {
     position: absolute;
-    width: 64px;
-    height: 56px;
+    width: 60px;
+    height: 70px;
     border-radius: 8px;
     background: linear-gradient(145deg, #4caf50, #2e7d32);
     border: 2px solid #1b5e20;
@@ -786,8 +772,8 @@ body {
         min-height: 62px;
     }
     .card-face .card-img {
-        width: 34px;
-        height: 34px;
+        width: 38px;
+        height: 44px;
     }
     .card-face .card-text {
         font-size: 12px;
