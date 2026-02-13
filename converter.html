@@ -309,7 +309,9 @@
       }
     }
 
-    // Build handPile from category_content (in order, earlier = on top)
+    // Build handPile from category_content
+    // category_content[0] = first card player sees when flipping
+    // handPile uses pop(), so reverse so that first entry ends up on top
     const handPile = [];
     for (const catEntry of categoryContent) {
       let catObj = CATEGORIES[catEntry];
@@ -323,6 +325,7 @@
         isText: catObj.isText
       });
     }
+    handPile.reverse();
 
     return {
       cards: cards,
