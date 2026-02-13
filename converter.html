@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Config Converter</title>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="categories.js"></script>
+<script src="level_settings.js"></script>
+<script src="color_settings.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 32px; color: #333; }
+  h1 { margin-bottom: 24px; font-size: 24px; }
+  .panel { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.12); margin-bottom: 24px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  label { font-weight: 600; }
+  input[type="file"] { padding: 6px; }
+  button { background: #2563eb; color: #fff; border: none; padding: 10px 24px; border-radius: 6px; font-size: 14px; cursor: pointer; }
+  button:hover { background: #1d4ed8; }
+  button:disabled { background: #94a3b8; cursor: default; }
+  #log { background: #1e1e1e; color: #d4d4d4; font-family: 'Menlo', 'Consolas', monospace; font-size: 13px; padding: 16px; border-radius: 8px; max-height: 500px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; }
+  .log-info { color: #4fc1ff; }
+  .log-ok { color: #6a9955; }
+  .log-warn { color: #ce9178; }
+  .log-err { color: #f44747; }
+</style>
+</head>
+<body>
+<h1>Level Config Converter</h1>
+
+<div class="panel">
+  <div class="row">
+    <label for="fileInput">Spreadsheet (.xlsx):</label>
+    <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
+    <button id="convertBtn" disabled>Convert</button>
+  </div>
+</div>
+
+<div id="log"></div>
+
+<script>
+(function () {
+  // ── Build itemIdMap from CATEGORIES ──────────────────────────────
+  // Maps item.id → { category (key), name, image, isText }
+  const itemIdMap = {};
+  for (const [catKey, catObj] of Object.entries(CATEGORIES)) {
+    for (const item of catObj.items) {
+      itemIdMap[item.id] = {
+        category: catObj.name,
+        categoryKey: catKey,
+        name: item.name,
+        image: item.image,
+        isText: catObj.isText
+      };
+    }
+  }
+
+  // ── Parse bracket notation (unquoted) into nested arrays ─────────
+  // Handles formats like: [[Pizza_Food,Bed_Furniture_1],[Cat_Pets]]
+  // and flat: [Furniture_word,Pets_word,Food_word]
+  function parseBracketArray(str) {
+    str = str.trim();
+    if (str[0] !== '[') throw new Error('Expected "[", got: ' + str[0]);
+
+    // Detect nested vs flat: nested starts with [[
+    const isNested = str[1] === '[';
+    if (isNested) {
+      // Remove outer brackets
+      if (str[str.length - 1] !== ']') throw new Error('Missing closing "]"');
+      const inner = str.slice(1, -1); // strip outer []
+      const result = [];
+      let depth = 0;
+      let start = -1;
+      for (let i = 0; i < inner.length; i++) {
+        if (inner[i] === '[') {
+          if (depth === 0) start = i + 1;
+          depth++;
+        } else if (inner[i] === ']') {
+          depth--;
+          if (depth === 0) {
+            const segment = inner.slice(start, i).trim();
+            result.push(segment.length === 0 ? [] : segment.split(',').map(s => s.trim()));
+          }
+        }
+      }
+      return result;
+    } else {
+      // Flat array: [a,b,c]
+      const inner = str.slice(1, -1).trim();
+      return inner.length === 0 ? [] : inner.split(',').map(s => s.trim());
+    }
+  }
+
+  // Number of metadata rows after the header row (types, descriptions, access tags, references)
+  const METADATA_ROWS = 4;
+
+  // ── Logging helpers ──────────────────────────────────────────────
+  const logEl = document.getElementById('log');
+  function log(msg, cls) {
+    const span = document.createElement('span');
+    if (cls) span.className = cls;
+    span.textContent = msg + '\n';
+    logEl.appendChild(span);
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+  function clearLog() { logEl.innerHTML = ''; }
+
+  // ── UI wiring ────────────────────────────────────────────────────
+  const fileInput = document.getElementById('fileInput');
+  const convertBtn = document.getElementById('convertBtn');
+
+  fileInput.addEventListener('change', () => {
+    convertBtn.disabled = !fileInput.files.length;
+  });
+
+  convertBtn.addEventListener('click', () => {
+    clearLog();
+    const file = fileInput.files[0];
+    if (!file) return;
+    log('Reading file: ' + file.name, 'log-info');
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        processWorkbook(e.target.result);
+      } catch (err) {
+        log('FATAL: ' + err.message, 'log-err');
+        console.error(err);
+      }
+    };
+    reader.readAsArrayBuffer(file);
+  });
+
+  // ── Core conversion ──────────────────────────────────────────────
+  function processWorkbook(data) {
+    const wb = XLSX.read(data, { type: 'array' });
+    const sheetName = wb.SheetNames[0];
+    log('Using sheet: ' + sheetName, 'log-info');
+    const allRows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName]);
+    log('Total rows (incl. metadata): ' + allRows.length, 'log-info');
+    if (allRows.length > 0) {
+      log('Columns: ' + Object.keys(allRows[0]).join(', '), 'log-info');
+    }
+
+    // Skip metadata rows (types, descriptions, access tags, references)
+    const rows = allRows.slice(METADATA_ROWS);
+    log('Data rows: ' + rows.length, 'log-info');
+
+    if (rows.length === 0) {
+      log('No data rows found.', 'log-warn');
+      return;
+    }
+
+    // Group rows by level_id, preserving order
+    const levelMap = new Map(); // level_id → [row, ...]
+    for (let r = 0; r < rows.length; r++) {
+      const row = rows[r];
+      const levelId = row.level_id;
+      // spreadsheet row = header(1) + metadata(4) + data index + 1
+      const sheetRow = METADATA_ROWS + r + 2;
+      if (levelId == null) {
+        log('Sheet row ' + sheetRow + ': missing level_id, skipping', 'log-warn');
+        continue;
+      }
+      if (!levelMap.has(levelId)) levelMap.set(levelId, []);
+      levelMap.get(levelId).push({ rowIndex: sheetRow, data: row });
+    }
+
+    log('Levels to generate: ' + [...levelMap.keys()].join(', '), 'log-info');
+    log('', '');
+
+    let errorCount = 0;
+
+    for (const [levelId, rowEntries] of levelMap) {
+      log('── level_' + levelId + '.json (' + rowEntries.length + ' layout(s)) ──', 'log-info');
+      const layouts = [];
+      const cfg = getLevelSettings(levelId);
+
+      for (const { rowIndex, data: row } of rowEntries) {
+        try {
+          const layout = buildLayout(row, rowIndex);
+
+          // Per-row config: read bingo_num, slot_cnt, level_time, deduct_time from the same row
+          // Fall back to level_settings.js defaults when empty
+          const rowConfig = {
+            bingosNeeded: cfg.bingosNeeded,
+            maxSlots: cfg.maxSlots,
+            timeLimit: cfg.timeLimit,
+            penaltyTime: cfg.penaltyTime,
+          };
+          if (row.bingo_num != null && row.bingo_num !== '') rowConfig.bingosNeeded = Number(row.bingo_num);
+          if (row.slot_cnt != null && row.slot_cnt !== '') rowConfig.maxSlots = Number(row.slot_cnt);
+          if (row.level_time != null && row.level_time !== '') rowConfig.timeLimit = Number(row.level_time);
+          if (row.deduct_time != null && row.deduct_time !== '') rowConfig.penaltyTime = Number(row.deduct_time);
+          layout.config = rowConfig;
+
+          layouts.push(layout);
+          const cardCount = layout.cards.length;
+          const cats = Object.keys(layout.categoryTargets).join(', ');
+          log('  Layout from row ' + rowIndex + ': ' + cardCount + ' cards, categories: ' + cats, 'log-ok');
+          log('    config: bingo=' + rowConfig.bingosNeeded + ' slots=' + rowConfig.maxSlots +
+              ' time=' + rowConfig.timeLimit + ' penalty=' + rowConfig.penaltyTime, 'log-ok');
+        } catch (err) {
+          log('  Row ' + rowIndex + ' ERROR: ' + err.message, 'log-err');
+          errorCount++;
+        }
+      }
+
+      if (layouts.length > 0) {
+        const json = JSON.stringify(layouts, null, 2);
+        downloadFile('level_' + levelId + '.json', json);
+        log('  -> Downloaded level_' + levelId + '.json', 'log-ok');
+      }
+    }
+
+    log('', '');
+    if (errorCount > 0) {
+      log('Done with ' + errorCount + ' error(s).', 'log-warn');
+    } else {
+      log('Done. All levels converted successfully.', 'log-ok');
+    }
+  }
+
+  // ── Build one layout from a spreadsheet row ──────────────────────
+  function buildLayout(row, rowIndex) {
+    // Parse bracket-notation fields (unquoted arrays)
+    let cardContent, categoryContent;
+    try {
+      const raw = String(row.card_content || '');
+      cardContent = parseBracketArray(raw);
+    } catch (e) {
+      throw new Error('Invalid card_content: ' + e.message);
+    }
+    try {
+      const raw = String(row.category_content || '');
+      categoryContent = parseBracketArray(raw);
+    } catch (e) {
+      throw new Error('Invalid category_content: ' + e.message);
+    }
+
+    if (!Array.isArray(cardContent) || cardContent.length !== 25) {
+      throw new Error('card_content must be an array of 25 sub-arrays, got ' +
+        (Array.isArray(cardContent) ? cardContent.length : typeof cardContent));
+    }
+    if (!Array.isArray(categoryContent) || categoryContent.length === 0) {
+      throw new Error('category_content must be a non-empty array');
+    }
+
+    // Determine active categories from category_content
+    // category_content entries are category keys (e.g., "Folklore")
+    // We need to resolve them to category names
+    const activeCategoryNames = new Set();
+    for (const catEntry of categoryContent) {
+      const catObj = CATEGORIES[catEntry];
+      if (catObj) {
+        activeCategoryNames.add(catObj.name);
+      } else {
+        // Try treating as a category name directly
+        const found = Object.values(CATEGORIES).find(c => c.name === catEntry);
+        if (found) {
+          activeCategoryNames.add(found.name);
+        } else {
+          throw new Error('Unknown category in category_content: "' + catEntry + '"');
+        }
+      }
+    }
+
+    // Build cards array
+    const cards = [];
+    const categoryTargets = {};
+
+    for (let i = 0; i < 25; i++) {
+      const subArr = cardContent[i];
+      if (!Array.isArray(subArr)) {
+        throw new Error('card_content[' + i + '] is not an array');
+      }
+      const r = Math.floor(i / 5);
+      const c = i % 5;
+
+      for (let j = 0; j < subArr.length; j++) {
+        const itemId = subArr[j];
+        const info = itemIdMap[itemId];
+        if (!info) {
+          throw new Error('Unknown item ID "' + itemId + '" at card_content[' + i + '][' + j + ']');
+        }
+
+        // Layer: index 0 = topmost = highest layer number
+        const layer = (subArr.length - 1) - j;
+        const isActive = activeCategoryNames.has(info.category);
+        const type = isActive ? 'regular' : 'filler';
+
+        cards.push({
+          layer: layer,
+          row: r,
+          col: c,
+          card: {
+            type: type,
+            category: info.category,
+            name: info.name,
+            image: info.image,
+            isText: info.isText
+          }
+        });
+
+        if (isActive) {
+          categoryTargets[info.category] = (categoryTargets[info.category] || 0) + 1;
+        }
+      }
+    }
+
+    // Build handPile from category_content (in order, earlier = on top)
+    const handPile = [];
+    for (const catEntry of categoryContent) {
+      let catObj = CATEGORIES[catEntry];
+      if (!catObj) {
+        catObj = Object.values(CATEGORIES).find(c => c.name === catEntry);
+      }
+      handPile.push({
+        type: 'gold',
+        category: catObj.name,
+        name: catObj.name,
+        isText: catObj.isText
+      });
+    }
+
+    return {
+      cards: cards,
+      categoryTargets: categoryTargets,
+      handPile: handPile,
+      handDisplay: []
+    };
+  }
+
+  // ── File download helper ─────────────────────────────────────────
+  function downloadFile(filename, content) {
+    const blob = new Blob([content], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+})();
+</script>
+</body>
+</html>

@@ -147,6 +147,20 @@ body {
     animation: floatUp 1s ease-out forwards;
 }
 
+/* Penalty text floating above a card */
+.time-penalty-card {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    color: #ff5252;
+    font-size: 16px;
+    font-weight: 800;
+    pointer-events: none;
+    z-index: 100;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    animation: floatUp 1s ease-out forwards;
+}
+
 @keyframes floatUp {
     0% { opacity: 1; transform: translateX(-50%) translateY(0); }
     100% { opacity: 0; transform: translateX(-50%) translateY(-30px); }
@@ -169,102 +183,123 @@ body {
     gap: 6px;
     margin-bottom: 12px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: nowrap;
 }
 
-/* Empty slot */
+/* Slot wrapper (label + card) */
+.slot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Slot label (category name above card) */
+.slot-label {
+    background: linear-gradient(135deg, #ffb300, #ff8f00);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 68px;
+    text-align: center;
+}
+
+/* Base slot card — fixed size matching pyramid cards */
 .slot-card {
-    border-radius: 10px;
-    padding: 6px 10px;
-    min-width: 95px;
-    flex: 1;
-    max-width: 120px;
+    width: 60px;
+    height: 70px;
+    border-radius: 8px;
     text-align: center;
     position: relative;
-    min-height: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
 .slot-card.empty {
-    background: rgba(255,255,255,0.08);
-    border: 2px dashed rgba(255,255,255,0.25);
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.15);
+    background: transparent;
+    border: none;
 }
 
-.slot-empty-icon {
-    font-size: 24px;
-    font-weight: 700;
-    color: rgba(255,255,255,0.2);
+.slot-empty-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* Active gold slot */
-.slot-card.active {
-    background: linear-gradient(145deg, #ffd54f, #ffb300);
-    border: 2px solid #ff8f00;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+/* Category placed state (gold card placed, 0 collected) */
+.slot-card.category-placed {
+    background: transparent;
+    border: none;
+    position: relative;
     animation: slotPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Slot category colors */
-.slot-card.active.color-a { background: linear-gradient(145deg, #b8edd8, #98dfc6); border-color: #6fc7a4; }
-.slot-card.active.color-b { background: linear-gradient(145deg, #ffd0ca, #ffb6ad); border-color: #f08e82; }
-.slot-card.active.color-c { background: linear-gradient(145deg, #c8e8fa, #add8f5); border-color: #7db8e0; }
-.slot-card.active.color-d { background: linear-gradient(145deg, #fff0be, #ffe699); border-color: #e0c060; }
-.slot-card.active.color-e { background: linear-gradient(145deg, #ddd0f0, #c8b6e6); border-color: #a08cc8; }
-.slot-card.active.color-f { background: linear-gradient(145deg, #ffdcb8, #ffc491); border-color: #e09a58; }
+.slot-card.category-placed .slot-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Collecting state — shows last collected card + progress */
+.slot-card.collecting {
+    background: url('res/Panel/basic_cards_1.png') center/cover no-repeat;
+    border: 2px solid #e0c060;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+.slot-card.collecting .cat-progress {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #5d4037;
+    z-index: 1;
+}
+
+.slot-card.collecting .slot-card-img {
+    width: 40px;
+    height: 48px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.slot-card.collecting .slot-card-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: #37474f;
+    text-align: center;
+    z-index: 1;
+    word-break: break-word;
+    max-width: 54px;
+}
+
+.slot-card.collecting.full {
+    border-color: #388e3c;
+}
+
+.slot-card.collecting.full .cat-progress {
+    color: #1b5e20;
+}
 
 @keyframes slotPopIn {
     0% { transform: scale(0.3); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
-}
-
-.slot-card.active.full {
-    background: linear-gradient(145deg, #81c784, #4caf50);
-    border-color: #388e3c;
-}
-
-.slot-card .cat-name {
-    font-size: 11px;
-    font-weight: 700;
-    color: #5d4037;
-    margin-top: 2px;
-}
-
-.slot-card .cat-progress {
-    font-size: 10px;
-    color: #795548;
-    margin-top: 2px;
-}
-
-.slot-card.full .cat-name,
-.slot-card.full .cat-progress {
-    color: #1b5e20;
-}
-
-/* Progress bar inside slot */
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background: rgba(0,0,0,0.15);
-    border-radius: 2px;
-    margin-top: 4px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #ff6b35, #e94560);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-.slot-card.full .progress-fill {
-    background: linear-gradient(90deg, #1b5e20, #4caf50);
 }
 
 /* Completed badge */
@@ -381,15 +416,17 @@ body {
 }
 
 .card-face .card-text {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
     color: #37474f;
     text-align: center;
-    line-height: 1.1;
-    max-width: 58px;
+    line-height: 1.2;
+    max-width: 56px;
+    word-break: break-word;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     position: relative;
     z-index: 1;
 }
@@ -408,30 +445,7 @@ body {
     z-index: 1;
 }
 
-/* Color variants — semi-transparent overlay on panel image */
-.card-face.color-a::before { background: rgba(152, 223, 198, 0.3); }
-.card-face.color-b::before { background: rgba(255, 182, 173, 0.3); }
-.card-face.color-c::before { background: rgba(173, 216, 245, 0.3); }
-.card-face.color-d::before { background: rgba(255, 230, 153, 0.3); }
-.card-face.color-e::before { background: rgba(200, 182, 230, 0.3); }
-.card-face.color-f::before { background: rgba(255, 196, 145, 0.3); }
-
-/* Gold card face — uses category_card_1 panel, no color overlay */
-.card-face.gold-card {
-    background: url('res/Panel/category_card_1.png') center/cover no-repeat;
-    border: none;
-    box-shadow: 0 2px 6px rgba(255,179,0,0.5);
-}
-
-.card-face.gold-card::before {
-    display: none;
-}
-
-.card-face.gold-card .card-name {
-    font-size: 11px;
-    color: #5d4037;
-    font-weight: 700;
-}
+/* Color variants are injected by color_settings.js */
 
 /* ─── Card Back (face-down) ─────────────────────────────── */
 
@@ -487,6 +501,10 @@ body {
     color: #fff;
     font-weight: 700;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.cleared-mark-pyramid.no-anim {
+    animation: none;
 }
 
 .cleared-mark-pyramid.bingo-cell {
@@ -795,6 +813,156 @@ body {
     background: rgba(0,0,0,0.15);
 }
 
+/* ─── Stack Count Badge ─────────────────────────────────── */
+
+.stack-count-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 0 3px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ─── Hand Card Area ───────────────────────────────────── */
+
+#hand-area {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    height: 80px;
+    margin-bottom: 8px;
+    padding: 0 8px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+.hand-area-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    margin-right: auto;
+    padding-left: 4px;
+}
+
+#hand-display {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+#hand-pile {
+    position: relative;
+    width: 60px;
+    height: 70px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hand-pile-card {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    border-radius: 8px;
+    background: #5c3d2e url('res/Panel/bac_card.png') center/cover no-repeat;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.hand-pile-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    min-width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 0 3px;
+    z-index: 5;
+}
+
+.recover-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.hand-display-card {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    border-radius: 8px;
+    background: url('res/Panel/category_card_1.png') center/cover no-repeat;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    pointer-events: none;
+}
+
+.hand-display-card.topmost {
+    pointer-events: auto;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255,179,0,0.5);
+}
+
+.hand-card-name {
+    font-size: 10px;
+    font-weight: 700;
+    color: #5d4037;
+    text-align: center;
+    max-width: 54px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Hand area hint highlight */
+.hint-highlight-hand {
+    animation: hintGlowHand 1s ease infinite alternate;
+}
+
+@keyframes hintGlowHand {
+    from { filter: brightness(1) drop-shadow(0 0 4px rgba(255,215,0,0.5)); }
+    to { filter: brightness(1.2) drop-shadow(0 0 12px rgba(255,215,0,1)); }
+}
+
+/* No-match shake for hand display */
+#hand-display.no-match-hand {
+    animation: shake 0.4s ease;
+}
+
+/* ─── Flying Card Animation ────────────────────────────── */
+
+.flying-card {
+    position: fixed;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+}
+
 /* ─── Responsive ────────────────────────────────────────── */
 
 @media (max-width: 420px) {
@@ -802,18 +970,35 @@ body {
         padding: 8px;
     }
     .slot-card {
-        min-width: 75px;
-        padding: 4px 6px;
-        min-height: 62px;
+        width: 52px;
+        height: 62px;
+    }
+    .slot-label {
+        font-size: 8px;
+        max-width: 58px;
     }
     .card-face .card-img {
         width: 38px;
         height: 44px;
     }
     .card-face .card-text {
-        font-size: 12px;
+        font-size: 10px;
     }
-    .card-face .card-name {
-        font-size: 7px;
+    #hand-area {
+        gap: 8px;
+        height: 72px;
+    }
+    .hand-display-card,
+    .hand-pile-card {
+        width: 52px;
+        height: 62px;
+    }
+    #hand-display {
+        width: 88px;
+        height: 62px;
+    }
+    #hand-pile {
+        width: 52px;
+        height: 62px;
     }
 }

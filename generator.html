@@ -133,96 +133,10 @@
     </div>
 
 <script src="categories.js"></script>
+<script src="level_settings.js"></script>
+<script src="color_settings.js"></script>
 <script>
 // ─── Data ────────────────────────────────────────────────────────────────
-
-const CARD_COLORS = ['color-a', 'color-b', 'color-c', 'color-d', 'color-e', 'color-f'];
-
-// ─── Level Layouts (boolean masks) ──────────────────────────────────
-
-const LEVEL_LAYOUTS = {
-    1: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-    ],
-    2: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-    ],
-    3: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
-    ],
-    4: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-    ],
-    5: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,0,0,1],[1,0,0,1],[1,1,1,1]],
-        [[0,1,0],[1,1,1],[0,1,0]],
-    ],
-    6: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-    ],
-    7: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,0,1],[1,1,1]],
-        [[1,1],[1,1]],
-    ],
-    8: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-        [[1]],
-    ],
-    9: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,0],[0,1]],
-        [[1]],
-    ],
-    10: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-        [[1]],
-    ],
-};
-
-function countLayoutPositions(layout) {
-    let total = 0;
-    for (const layer of layout) {
-        for (const row of layer) {
-            for (const cell of row) {
-                total += cell;
-            }
-        }
-    }
-    return total;
-}
-
-// ─── Config ────────────────────────────────────────────────────────
-
-function getLevelConfig(level) {
-    const layout = LEVEL_LAYOUTS[level] || LEVEL_LAYOUTS[1];
-    const numLayers = layout.length;
-    const totalPositions = countLayoutPositions(layout);
-    const NUM_CATEGORIES_BY_LEVEL = [0, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6];
-    const numCategories = NUM_CATEGORIES_BY_LEVEL[level] || 6;
-    const bingosNeeded = Math.min(1 + Math.floor((level - 1) / 2), 5);
-    const cardsPerCategory = Math.min(2 + level, 6);
-    const maxSlots = Math.min(3 + Math.floor((level - 1) / 3), 5);
-    const timeLimit = totalPositions * 10;
-    return { numCategories, numLayers, bingosNeeded, cardsPerCategory, totalPositions, maxSlots, timeLimit, layout };
-}
 
 // ─── Generation Logic ──────────────────────────────────────────────
 
@@ -243,12 +157,14 @@ function generateCards(config) {
         categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
     });
 
-    const allCards = [];
+    // Separate gold (hand pile) and regular (grid) cards
+    const goldCards = [];
+    const regularCards = [];
     const regularCountPerCat = {};
 
     activeCatKeys.forEach(catKey => {
         const cat = CATEGORIES[catKey];
-        allCards.push({
+        goldCards.push({
             type: 'gold',
             category: catKey,
             name: cat.name,
@@ -259,7 +175,7 @@ function generateCards(config) {
         const count = Math.min(config.cardsPerCategory, shuffledItems.length);
         regularCountPerCat[catKey] = count;
         for (let i = 0; i < count; i++) {
-            allCards.push({
+            regularCards.push({
                 type: 'regular',
                 category: catKey,
                 name: shuffledItems[i].name,
@@ -271,11 +187,13 @@ function generateCards(config) {
 
     const categoryTargets = { ...regularCountPerCat };
 
-    while (allCards.length < config.totalPositions) {
+    // Pad regular cards to fill grid positions (minus filler slots)
+    const regularPositions = config.totalPositions - (config.numFillers || 0);
+    while (regularCards.length < regularPositions) {
         const catKey = activeCatKeys[Math.floor(Math.random() * activeCatKeys.length)];
         const cat = CATEGORIES[catKey];
         const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-        allCards.push({
+        regularCards.push({
             type: 'regular',
             category: catKey,
             name: item.name,
@@ -286,25 +204,65 @@ function generateCards(config) {
         categoryTargets[catKey] = regularCountPerCat[catKey];
     }
 
-    shuffleArray(allCards);
+    // Generate filler cards from non-active categories
+    const fillerCards = [];
+    const inactiveCatKeys = ALL_CATEGORY_KEYS.filter(k => !activeCatKeys.includes(k));
+    const numFillers = config.numFillers || 0;
+    for (let i = 0; i < numFillers && inactiveCatKeys.length > 0; i++) {
+        const catKey = inactiveCatKeys[Math.floor(Math.random() * inactiveCatKeys.length)];
+        const cat = CATEGORIES[catKey];
+        const item = cat.items[Math.floor(Math.random() * cat.items.length)];
+        fillerCards.push({
+            type: 'filler',
+            category: catKey,
+            name: item.name,
+            image: item.image,
+            isText: cat.isText,
+        });
+    }
 
+    // Determine which layer-0 positions get fillers
+    const layer0Positions = [];
+    const layerMask0 = config.layout[0];
+    for (let r = 0; r < layerMask0.length; r++) {
+        for (let c = 0; c < layerMask0[r].length; c++) {
+            if (layerMask0[r][c]) layer0Positions.push({ r, c });
+        }
+    }
+    shuffleArray(layer0Positions);
+    const fillerPositionSet = new Set();
+    for (let i = 0; i < Math.min(numFillers, layer0Positions.length); i++) {
+        fillerPositionSet.add(`${layer0Positions[i].r}-${layer0Positions[i].c}`);
+    }
+
+    shuffleArray(regularCards);
+    shuffleArray(goldCards);
+
+    // Build grid cards (fillers at layer 0 only)
     const cards = [];
     const cardMap = {};
-    let cardIndex = 0;
+    let regularIdx = 0;
+    let fillerIdx = 0;
 
     for (let L = 0; L < config.numLayers; L++) {
         const layerMask = config.layout[L];
         for (let r = 0; r < layerMask.length; r++) {
             for (let c = 0; c < layerMask[r].length; c++) {
                 if (!layerMask[r][c]) continue;
-                if (cardIndex >= allCards.length) break;
+                let card;
+                if (L === 0 && fillerPositionSet.has(`${r}-${c}`) && fillerIdx < fillerCards.length) {
+                    card = fillerCards[fillerIdx++];
+                } else {
+                    if (regularIdx >= regularCards.length) continue;
+                    card = regularCards[regularIdx++];
+                }
                 const key = `${L}-${r}-${c}`;
                 const cardObj = {
                     id: cards.length,
                     layer: L,
                     row: r,
                     col: c,
-                    card: allCards[cardIndex++],
+                    card: card,
                     faceUp: false,
                     removed: false,
                 };
@@ -314,7 +272,7 @@ function generateCards(config) {
         }
     }
 
-    // Build covering relationships
+    // Build 1-to-1 covering relationships
     const coveredBy = {};
     for (const card of cards) {
         const key = `${card.layer}-${card.row}-${card.col}`;
@@ -326,15 +284,9 @@ function generateCards(config) {
         const R = card.row;
         const C = card.col;
         const upperKey = `${L}-${R}-${C}`;
-        const coveredPositions = [
-            [L - 1, R, C], [L - 1, R, C + 1],
-            [L - 1, R + 1, C], [L - 1, R + 1, C + 1]
-        ];
-        for (const [cl, cr, cc] of coveredPositions) {
-            const lowerKey = `${cl}-${cr}-${cc}`;
-            if (cardMap[lowerKey]) {
-                coveredBy[lowerKey].push(upperKey);
-            }
+        const lowerKey = `${L - 1}-${R}-${C}`;
+        if (cardMap[lowerKey]) {
+            coveredBy[lowerKey].push(upperKey);
         }
     }
 
@@ -349,30 +301,15 @@ function generateCards(config) {
         });
     }
 
-    // Ensure gold on top
-    ensureGoldOnTop(cards);
+    // handPile = gold cards (shuffled), handDisplay starts empty
+    const handPile = goldCards;
 
-    return { cards, cardMap, coveredBy, categoryTargets, categoryColorMap };
+    return { cards, cardMap, coveredBy, categoryTargets, categoryColorMap, handPile };
 }
 
-function ensureGoldOnTop(cards) {
-    const faceUpCards = cards.filter(c => !c.removed && c.faceUp);
-    if (faceUpCards.some(c => c.card.type === 'gold')) return;
+// ─── DFS Solver (new mechanics) ──────────────────────────────────────
 
-    const buriedGold = cards.find(c => !c.removed && !c.faceUp && c.card.type === 'gold');
-    if (!buriedGold) return;
-
-    const swapTarget = faceUpCards.find(c => c.card.type !== 'gold');
-    if (!swapTarget) return;
-
-    const temp = buriedGold.card;
-    buriedGold.card = swapTarget.card;
-    swapTarget.card = temp;
-}
-
-// ─── DFS Solver ────────────────────────────────────────────────────
-
-function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded, maxMoves, maxSlots) {
+function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded, maxMoves, maxSlots, handPile) {
     const result = { solvable: false, nodesExplored: 0 };
     const state = {
         removed: new Set(),
@@ -380,10 +317,14 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
         cleared: Array.from({ length: 5 }, () => Array(5).fill(false)),
         movesLeft: maxMoves,
         completedCount: 0,
+        handPile: [...handPile],       // copy
+        handDisplay: [],
+        recycleCount: 0,
     };
 
     let nodesExplored = 0;
-    const MAX_NODES = 500000; // aggressive limit — runs offline
+    const MAX_NODES = 800000;
+    const MAX_RECYCLES = 3;
 
     function simIsFaceUp(cardObj) {
         if (state.removed.has(cardObj.id)) return false;
@@ -412,26 +353,43 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
         const moves = [];
         const hasEmptySlot = state.slots.some(s => s === null);
 
+        // Move type: collect_regular — face-up basic card matching active slot
         for (const cardObj of cards) {
             if (state.removed.has(cardObj.id)) continue;
             if (!simIsFaceUp(cardObj)) continue;
-
-            if (cardObj.card.type === 'gold' && hasEmptySlot) {
-                moves.push({ type: 'gold', cardObj });
-            } else if (cardObj.card.type === 'regular') {
+            if (cardObj.card.type === 'regular') {
                 const slotIdx = state.slots.findIndex(
                     s => s !== null && s.key === cardObj.card.category && s.collected < s.target
                 );
                 if (slotIdx !== -1) {
-                    moves.push({ type: 'regular', cardObj, slotIndex: slotIdx });
+                    moves.push({ type: 'collect_regular', cardObj, slotIndex: slotIdx });
                 }
             }
         }
 
+        // Move type: place_from_display — top display card into empty slot
+        if (state.handDisplay.length > 0 && hasEmptySlot) {
+            moves.push({ type: 'place_from_display' });
+        }
+
+        // Move type: flip_hand — flip top pile card to display
+        if (state.handPile.length > 0) {
+            moves.push({ type: 'flip_hand' });
+        }
+
+        // Move type: recycle — reverse display back into pile (limited)
+        if (state.handPile.length === 0 && state.handDisplay.length > 0 && state.recycleCount < MAX_RECYCLES) {
+            moves.push({ type: 'recycle' });
+        }
+
+        // Priority: collect_regular first, then place, flip, recycle last
+        const priority = { collect_regular: 0, place_from_display: 1, flip_hand: 2, recycle: 3 };
         moves.sort((a, b) => {
-            if (a.type === 'regular' && b.type === 'gold') return -1;
-            if (a.type === 'gold' && b.type === 'regular') return 1;
-            if (a.type === 'regular' && b.type === 'regular') {
+            const pa = priority[a.type];
+            const pb = priority[b.type];
+            if (pa !== pb) return pa - pb;
+            // Among regular collects, prefer ones closer to completion
+            if (a.type === 'collect_regular' && b.type === 'collect_regular') {
                 const aRemain = state.slots[a.slotIndex].target - state.slots[a.slotIndex].collected;
                 const bRemain = state.slots[b.slotIndex].target - state.slots[b.slotIndex].collected;
                 return aRemain - bRemain;
@@ -443,31 +401,21 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
     }
 
     function applyMove(move) {
-        const undo = {
-            cardId: move.cardObj.id,
-            type: move.type,
-            layer: move.cardObj.layer,
-            row: move.cardObj.row,
-            col: move.cardObj.col,
-        };
-
-        state.removed.add(move.cardObj.id);
+        const undo = { type: move.type };
         state.movesLeft--;
 
-        if (move.cardObj.layer === 0) {
-            state.cleared[move.cardObj.row][move.cardObj.col] = true;
-            undo.clearedCell = true;
-        }
+        if (move.type === 'collect_regular') {
+            undo.cardId = move.cardObj.id;
+            undo.layer = move.cardObj.layer;
+            undo.row = move.cardObj.row;
+            undo.col = move.cardObj.col;
+            state.removed.add(move.cardObj.id);
 
-        if (move.type === 'gold') {
-            const emptyIdx = state.slots.findIndex(s => s === null);
-            state.slots[emptyIdx] = {
-                key: move.cardObj.card.category,
-                collected: 0,
-                target: categoryTargets[move.cardObj.card.category] || 0,
-            };
-            undo.slotIndex = emptyIdx;
-        } else {
+            if (move.cardObj.layer === 0) {
+                state.cleared[move.cardObj.row][move.cardObj.col] = true;
+                undo.clearedCell = true;
+            }
+
             const slot = state.slots[move.slotIndex];
             undo.slotIndex = move.slotIndex;
             undo.prevCollected = slot.collected;
@@ -478,28 +426,54 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
                 state.completedCount++;
                 undo.completedCategory = true;
             }
+        } else if (move.type === 'place_from_display') {
+            const card = state.handDisplay.pop();
+            undo.card = card;
+            const emptyIdx = state.slots.findIndex(s => s === null);
+            state.slots[emptyIdx] = {
+                key: card.category,
+                collected: 0,
+                target: categoryTargets[card.category] || 0,
+            };
+            undo.slotIndex = emptyIdx;
+        } else if (move.type === 'flip_hand') {
+            const card = state.handPile.pop();
+            state.handDisplay.push(card);
+            undo.card = card;
+        } else if (move.type === 'recycle') {
+            undo.displaySnapshot = [...state.handDisplay];
+            state.handPile = [...state.handDisplay].reverse();
+            state.handDisplay = [];
+            state.recycleCount++;
         }
 
         return undo;
     }
 
     function undoMove(undo) {
-        state.removed.delete(undo.cardId);
         state.movesLeft++;
 
-        if (undo.clearedCell) {
-            state.cleared[undo.row][undo.col] = false;
-        }
-
-        if (undo.type === 'gold') {
-            state.slots[undo.slotIndex] = null;
-        } else {
+        if (undo.type === 'collect_regular') {
+            state.removed.delete(undo.cardId);
+            if (undo.clearedCell) {
+                state.cleared[undo.row][undo.col] = false;
+            }
             if (undo.completedCategory) {
                 state.completedCount--;
                 state.slots[undo.slotIndex] = undo.completedSlot;
             } else {
                 state.slots[undo.slotIndex].collected--;
             }
+        } else if (undo.type === 'place_from_display') {
+            state.slots[undo.slotIndex] = null;
+            state.handDisplay.push(undo.card);
+        } else if (undo.type === 'flip_hand') {
+            state.handDisplay.pop();
+            state.handPile.push(undo.card);
+        } else if (undo.type === 'recycle') {
+            state.handDisplay = undo.displaySnapshot;
+            state.handPile = [];
+            state.recycleCount--;
         }
     }
 
@@ -530,7 +504,7 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
 // ─── Generator Logic ───────────────────────────────────────────────
 
 function generateSolvableLayout(level) {
-    const config = getLevelConfig(level);
+    const config = getLevelSettings(level);
     const maxAttempts = 200;
     let totalNodes = 0;
 
@@ -538,18 +512,27 @@ function generateSolvableLayout(level) {
         const gen = generateCards(config);
         const result = verifySolvable(
             gen.cards, gen.cardMap, gen.coveredBy,
-            gen.categoryTargets, config.bingosNeeded, config.totalPositions, config.maxSlots
+            gen.categoryTargets, config.bingosNeeded,
+            config.totalPositions + gen.handPile.length * 2, // generous move budget
+            config.maxSlots, gen.handPile
         );
         totalNodes += result.nodesExplored;
         if (result.solvable) {
             return {
                 layout: {
+                    config: {
+                        bingosNeeded: config.bingosNeeded,
+                        maxSlots: config.maxSlots,
+                        timeLimit: config.timeLimit,
+                        penaltyTime: config.penaltyTime,
+                    },
                     cards: gen.cards.map(c => ({
                         layer: c.layer, row: c.row, col: c.col,
                         card: { ...c.card },
                     })),
                     categoryTargets: { ...gen.categoryTargets },
-                    categoryColorMap: { ...gen.categoryColorMap },
+                    handPile: gen.handPile.map(c => ({ ...c })),
+                    handDisplay: [],
                 },
                 attempts: attempt + 1,
                 totalNodes,
@@ -602,8 +585,8 @@ btnGenerate.addEventListener('click', async () => {
 
     for (let lv = startLevel; lv < startLevel + numLevels; lv++) {
         const layouts = [];
-        const cfg = getLevelConfig(lv);
-        log(`\n--- Level ${lv} (${cfg.numLayers}L, ${cfg.totalPositions} cards, ${cfg.maxSlots} slots, ${cfg.bingosNeeded} bingos, ${cfg.numCategories} cats, ${cfg.timeLimit}s) ---`);
+        const cfg = getLevelSettings(lv);
+        log(`\n--- Level ${lv} (${cfg.numLayers}L, ${cfg.totalPositions} grid cards, ${cfg.maxSlots} slots, ${cfg.bingosNeeded} bingos, ${cfg.numCategories} cats, ${cfg.timeLimit}s) ---`);
 
         for (let i = 0; i < layoutsPerLevel; i++) {
             setProgress((completed / totalWork) * 100, `Level ${lv}: layout ${i + 1}/${layoutsPerLevel}`);
@@ -614,7 +597,7 @@ btnGenerate.addEventListener('click', async () => {
             const result = generateSolvableLayout(lv);
             if (result.layout) {
                 layouts.push(result.layout);
-                log(`  Layout ${i + 1}: OK (${result.layout.cards.length} cards, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
+                log(`  Layout ${i + 1}: OK (${result.layout.cards.length} grid + ${result.layout.handPile.length} hand, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
             } else {
                 log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes explored)`);
             }

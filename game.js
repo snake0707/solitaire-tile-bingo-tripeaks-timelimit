@@ -1,16 +1,15 @@
 /**
- * Solitaire Tile Bingo – v4.0 (TriPeaks Pyramid)
+ * Solitaire Tile Bingo – v5.0 (Same-Position Stacking + Hand Card Area)
  *
- * Cards are arranged in a pyramid: upper-layer cards overlap and cover
- * lower-layer cards. Covered cards are face-down. The bottom layer is
- * a 5×5 grid used for BINGO detection.
+ * Cards are arranged in a 5x5 grid with stacked layers (1-on-1 covering).
+ * Gold/category cards are in a Klondike-style hand area (draw pile + display).
+ * The bottom layer is a 5x5 grid used for BINGO detection.
  */
 
 // ─── Data (loaded from categories.js) ────────────────────────
 
 const MAX_SLOTS = 5;
-const CARD_COLORS = ['color-a', 'color-b', 'color-c', 'color-d', 'color-e', 'color-f'];
-const MAX_LEVEL = 10;
+const LEVEL_SCAN_MAX = 50; // Upper bound for scanning level JSON files
 
 // ─── Layout Constants ────────────────────────────────────────
 
@@ -18,7 +17,6 @@ const CARD_W = 60;
 const CARD_H = 70;
 const GAP_X = 4;
 const GAP_Y = 3;
-const VERTICAL_OVERLAP = 30;
 
 function getContainerInnerWidth() {
     const container = document.getElementById('game-container');
@@ -29,92 +27,11 @@ function getContainerInnerWidth() {
     return 376;
 }
 
-// ─── Level Layouts (boolean masks) ──────────────────────────
+// ─── Layout Constants (stacking offsets) ─────────────────────
 
-const LEVEL_LAYOUTS = {
-    1: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-    ],
-    2: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-    ],
-    3: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
-    ],
-    4: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-    ],
-    5: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,0,0,1],[1,0,0,1],[1,1,1,1]],
-        [[0,1,0],[1,1,1],[0,1,0]],
-    ],
-    6: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-    ],
-    7: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,0,1],[1,1,1]],
-        [[1,1],[1,1]],
-    ],
-    8: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-        [[1]],
-    ],
-    9: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[0,1,1,0],[1,1,1,1],[1,1,1,1],[0,1,1,0]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,0],[0,1]],
-        [[1]],
-    ],
-    10: [
-        [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]],
-        [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]],
-        [[1,1,1],[1,1,1],[1,1,1]],
-        [[1,1],[1,1]],
-        [[1]],
-    ],
-};
-
-function countLayoutPositions(layout) {
-    let total = 0;
-    for (const layer of layout) {
-        for (const row of layer) {
-            for (const cell of row) {
-                total += cell;
-            }
-        }
-    }
-    return total;
-}
-
-// ─── Level Config ────────────────────────────────────────────
-
-function getLevelConfig(level) {
-    const layout = LEVEL_LAYOUTS[level] || LEVEL_LAYOUTS[1];
-    const numLayers = layout.length;
-    const totalPositions = countLayoutPositions(layout);
-    const NUM_CATEGORIES_BY_LEVEL = [0, 3, 4, 4, 5, 5, 5, 6, 6, 6, 6];
-    const numCategories = NUM_CATEGORIES_BY_LEVEL[level] || 6;
-    const bingosNeeded = Math.min(1 + Math.floor((level - 1) / 2), 5);
-    const cardsPerCategory = Math.min(2 + level, 6);
-    const maxSlots = Math.min(3 + Math.floor((level - 1) / 3), 5);
-    const timeLimit = totalPositions * 10;
-
-    return { numCategories, numLayers, bingosNeeded, cardsPerCategory, totalPositions, maxSlots, timeLimit, layout };
-}
+// All layers are 5x5 grids (same-position stacking: 1-on-1 covering)
+const STACK_OFFSET_X = 3;
+const STACK_OFFSET_Y = 5;
 
 // ─── Game ────────────────────────────────────────────────────
 
@@ -126,6 +43,7 @@ class Game {
         this.coveredBy = {};
         this.covers = {};
         this.cleared = [];
+        this._prevCleared = {};
         this.slots = [];
         this.completedCount = 0;
         this.bingoLines = [];
@@ -136,8 +54,11 @@ class Game {
         this.timeLeft = 0;
         this.timerInterval = null;
         this.maxSlots = 3;
+        this.penaltyTime = 5;
         this.retryBonus = {};
         this.currentNumLayers = 2;
+        this.handPile = [];
+        this.handDisplay = [];
 
         this.gridEl = document.getElementById('bingo-grid');
         this.timerEl = document.getElementById('timer-count');
@@ -148,6 +69,8 @@ class Game {
         this.loseOverlay = document.getElementById('lose-overlay');
         this.levelOverlay = document.getElementById('level-overlay');
         this.levelGridEl = document.getElementById('level-grid');
+        this.handDisplayEl = document.getElementById('hand-display');
+        this.handPileEl = document.getElementById('hand-pile');
 
         document.getElementById('btn-shuffle').addEventListener('click', () => this.shuffle());
         document.getElementById('btn-hint').addEventListener('click', () => this.showHint());
@@ -168,7 +91,6 @@ class Game {
             }
         });
         this.gridEl.addEventListener('click', (e) => {
-            // Skip click if it followed a touchend (prevents double-fire on mobile)
             if (Date.now() - this._lastTouchTime < 500) return;
             const cardEl = e.target.closest('.pyramid-card');
             if (cardEl && !cardEl.classList.contains('face-down')) {
@@ -176,7 +98,34 @@ class Game {
             }
         });
 
+        // Hand area event listeners (with null safety for cached HTML)
+        if (this.handPileEl) {
+            this.handPileEl.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                this._lastTouchTime = Date.now();
+                this.onHandPileClick();
+            });
+            this.handPileEl.addEventListener('click', (e) => {
+                if (Date.now() - this._lastTouchTime < 500) return;
+                this.onHandPileClick();
+            });
+        }
+        if (this.handDisplayEl) {
+            this.handDisplayEl.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                this._lastTouchTime = Date.now();
+                const topCard = e.target.closest('.hand-display-card.topmost');
+                if (topCard) this.onHandDisplayClick();
+            });
+            this.handDisplayEl.addEventListener('click', (e) => {
+                if (Date.now() - this._lastTouchTime < 500) return;
+                const topCard = e.target.closest('.hand-display-card.topmost');
+                if (topCard) this.onHandDisplayClick();
+            });
+        }
+
         this.levelData = {};
+        this.availableLevels = new Set(Object.keys(LEVEL_SETTINGS).map(Number));
         this.init();
     }
 
@@ -186,8 +135,10 @@ class Game {
         this.completedCount = 0;
         this.slots = new Array(this.maxSlots).fill(null);
         this.categoryTargets = { ...layout.categoryTargets };
-        // Always recompute color map at runtime to ensure unique colors per category
-        const activeCatKeys = [...new Set(layout.cards.map(c => c.card.category))];
+        // Collect all active categories from grid cards (exclude fillers) and hand pile
+        const gridCatKeys = layout.cards.filter(c => c.card.type !== 'filler').map(c => c.card.category);
+        const handCatKeys = (layout.handPile || []).map(c => c.category);
+        const activeCatKeys = [...new Set([...gridCatKeys, ...handCatKeys])];
         this.categoryColorMap = {};
         activeCatKeys.forEach((key, i) => {
             this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
@@ -195,6 +146,7 @@ class Game {
         this.cards = [];
         this.cardMap = {};
         this.cleared = [];
+        this._prevCleared = {};
 
         for (let r = 0; r < 5; r++) {
             this.cleared[r] = [];
@@ -219,18 +171,34 @@ class Game {
             this.cardMap[key] = cardObj;
         }
 
+        // Restore hand pile and display
+        this.handPile = (layout.handPile || []).map(c => ({ ...c }));
+        this.handDisplay = (layout.handDisplay || []).map(c => ({ ...c }));
+
         this.buildCoveringRelationships();
         this.updateFaceUpStates();
     }
 
     async init() {
-        // Fetch all level JSON files
+        // Fetch level JSON files (scan up to LEVEL_SCAN_MAX, 404s are silently ignored)
+        const cacheBust = Date.now();
         const fetches = [];
-        for (let lv = 1; lv <= MAX_LEVEL; lv++) {
+        for (let lv = 1; lv <= LEVEL_SCAN_MAX; lv++) {
             fetches.push(
-                fetch(`level/level_${lv}.json`)
+                fetch(`level/level_${lv}.json?v=${cacheBust}`)
                     .then(r => r.ok ? r.json() : null)
-                    .then(data => { if (data) this.levelData[lv] = data; })
+                    .then(data => {
+                        if (!data) return;
+                        if (Array.isArray(data)) {
+                            this.levelData[lv] = data;
+                        } else if (data.layouts) {
+                            const lvlCfg = data.config || {};
+                            this.levelData[lv] = data.layouts.map(layout =>
+                                layout.config ? layout : { ...layout, config: lvlCfg }
+                            );
+                        }
+                        this.availableLevels.add(lv);
+                    })
                     .catch(() => {})
             );
         }
@@ -246,19 +214,32 @@ class Game {
         this.moveHistory = [];
         this.bingoLines = [];
         this.levelLabelEl.textContent = `Level ${level}`;
-        const config = getLevelConfig(level);
+
+        const baseConfig = getLevelSettings(level);
+        const layouts = this.levelData[level];
+        let config = baseConfig;
+        let selectedLayout = null;
+
+        // Try to load from pre-generated level data
+        if (layouts && layouts.length > 0) {
+            const idx = Math.floor(Math.random() * layouts.length);
+            selectedLayout = layouts[idx];
+            // Per-layout config overrides defaults
+            if (selectedLayout.config) {
+                config = { ...baseConfig, ...selectedLayout.config };
+            }
+        }
+
         this.bingosNeeded = config.bingosNeeded;
         this.currentNumLayers = config.numLayers;
         this.maxSlots = config.maxSlots;
+        this.penaltyTime = config.penaltyTime;
 
         const bonus = this.retryBonus[level] || 0;
         this.timeLeft = config.timeLimit + bonus;
 
-        // Try to load from pre-generated level data
-        const layouts = this.levelData[level];
-        if (layouts && layouts.length > 0) {
-            const idx = Math.floor(Math.random() * layouts.length);
-            this.restoreLayout(layouts[idx]);
+        if (selectedLayout) {
+            this.restoreLayout(selectedLayout);
         } else {
             // Fallback: generate on-the-fly (unverified)
             this.completedCount = 0;
@@ -281,13 +262,14 @@ class Game {
             this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
         });
 
-        // Build all cards: 1 gold + N regular per category
-        const allCards = [];
+        // Gold/category cards go to hand pile, regular cards go to grid
+        const goldCards = [];
+        const regularCards = [];
         const regularCountPerCat = {};
 
         activeCatKeys.forEach(catKey => {
             const cat = CATEGORIES[catKey];
-            allCards.push({
+            goldCards.push({
                 type: 'gold',
                 category: catKey,
                 name: cat.name,
@@ -298,7 +280,7 @@ class Game {
             const count = Math.min(config.cardsPerCategory, shuffledItems.length);
             regularCountPerCat[catKey] = count;
             for (let i = 0; i < count; i++) {
-                allCards.push({
+                regularCards.push({
                     type: 'regular',
                     category: catKey,
                     name: shuffledItems[i].name,
@@ -310,12 +292,13 @@ class Game {
 
         this.categoryTargets = { ...regularCountPerCat };
 
-        // Pad to fill all pyramid positions
-        while (allCards.length < config.totalPositions) {
+        // Pad regular cards to fill grid positions (minus filler slots)
+        const regularPositions = config.totalPositions - (config.numFillers || 0);
+        while (regularCards.length < regularPositions) {
             const catKey = activeCatKeys[Math.floor(Math.random() * activeCatKeys.length)];
             const cat = CATEGORIES[catKey];
             const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-            allCards.push({
+            regularCards.push({
                 type: 'regular',
                 category: catKey,
                 name: item.name,
@@ -326,13 +309,51 @@ class Game {
             this.categoryTargets[catKey] = regularCountPerCat[catKey];
         }
 
-        this.shuffleArray(allCards);
+        // Generate filler cards from non-active categories
+        const fillerCards = [];
+        const inactiveCatKeys = ALL_CATEGORY_KEYS.filter(k => !activeCatKeys.includes(k));
+        const numFillers = config.numFillers || 0;
+        for (let i = 0; i < numFillers && inactiveCatKeys.length > 0; i++) {
+            const catKey = inactiveCatKeys[Math.floor(Math.random() * inactiveCatKeys.length)];
+            const cat = CATEGORIES[catKey];
+            const item = cat.items[Math.floor(Math.random() * cat.items.length)];
+            fillerCards.push({
+                type: 'filler',
+                category: catKey,
+                name: item.name,
+                image: item.image,
+                isText: cat.isText,
+            });
+        }
 
-        // Distribute cards into pyramid
+        // Determine which layer-0 positions get fillers
+        const layer0Positions = [];
+        const layerMask0 = config.layout[0];
+        for (let r = 0; r < layerMask0.length; r++) {
+            for (let c = 0; c < layerMask0[r].length; c++) {
+                if (layerMask0[r][c]) layer0Positions.push({ r, c });
+            }
+        }
+        this.shuffleArray(layer0Positions);
+        const fillerPositionSet = new Set();
+        for (let i = 0; i < Math.min(numFillers, layer0Positions.length); i++) {
+            fillerPositionSet.add(`${layer0Positions[i].r}-${layer0Positions[i].c}`);
+        }
+
+        this.shuffleArray(regularCards);
+        this.shuffleArray(goldCards);
+
+        // Hand pile = gold/category cards (face-down draw pile)
+        this.handPile = goldCards;
+        this.handDisplay = [];
+
+        // Distribute cards into 5x5 grid layers (fillers at layer 0 only)
         this.cards = [];
         this.cardMap = {};
         this.cleared = [];
-        let cardIndex = 0;
+        this._prevCleared = {};
+        let regularIdx = 0;
+        let fillerIdx = 0;
 
         for (let r = 0; r < 5; r++) {
             this.cleared[r] = [];
@@ -346,14 +367,20 @@ class Game {
             for (let r = 0; r < layerMask.length; r++) {
                 for (let c = 0; c < layerMask[r].length; c++) {
                     if (!layerMask[r][c]) continue;
-                    if (cardIndex >= allCards.length) break;
+                    let card;
+                    if (L === 0 && fillerPositionSet.has(`${r}-${c}`) && fillerIdx < fillerCards.length) {
+                        card = fillerCards[fillerIdx++];
+                    } else {
+                        if (regularIdx >= regularCards.length) continue;
+                        card = regularCards[regularIdx++];
+                    }
                     const key = `${L}-${r}-${c}`;
                     const cardObj = {
                         id: this.cards.length,
                         layer: L,
                         row: r,
                         col: c,
-                        card: allCards[cardIndex++],
+                        card: card,
                         faceUp: false,
                         removed: false,
                         justFlipped: false,
@@ -366,7 +393,6 @@ class Game {
 
         this.buildCoveringRelationships();
         this.updateFaceUpStates();
-        this.ensureGoldOnTop();
     }
 
     // ── Covering Relationships ───────────────────────────────
@@ -381,24 +407,18 @@ class Game {
             this.covers[key] = [];
         }
 
+        // 1-to-1 covering: card at (L,R,C) only covers (L-1,R,C)
         for (const card of this.cards) {
             if (card.layer === 0) continue;
             const L = card.layer;
             const R = card.row;
             const C = card.col;
             const upperKey = `${L}-${R}-${C}`;
+            const lowerKey = `${L - 1}-${R}-${C}`;
 
-            const coveredPositions = [
-                [L - 1, R, C], [L - 1, R, C + 1],
-                [L - 1, R + 1, C], [L - 1, R + 1, C + 1]
-            ];
-
-            for (const [cl, cr, cc] of coveredPositions) {
-                const lowerKey = `${cl}-${cr}-${cc}`;
-                if (this.cardMap[lowerKey]) {
-                    this.coveredBy[lowerKey].push(upperKey);
-                    this.covers[upperKey].push(lowerKey);
-                }
+            if (this.cardMap[lowerKey]) {
+                this.coveredBy[lowerKey].push(upperKey);
+                this.covers[upperKey].push(lowerKey);
             }
         }
     }
@@ -423,21 +443,6 @@ class Game {
         }
     }
 
-    ensureGoldOnTop() {
-        const faceUpCards = this.cards.filter(c => !c.removed && c.faceUp);
-        if (faceUpCards.some(c => c.card.type === 'gold')) return;
-
-        const buriedGold = this.cards.find(c => !c.removed && !c.faceUp && c.card.type === 'gold');
-        if (!buriedGold) return;
-
-        const swapTarget = faceUpCards.find(c => c.card.type !== 'gold');
-        if (!swapTarget) return;
-
-        const temp = buriedGold.card;
-        buriedGold.card = swapTarget.card;
-        swapTarget.card = temp;
-    }
-
     // ── Level Flow ───────────────────────────────────────────
 
     nextLevel() {
@@ -454,7 +459,8 @@ class Game {
 
     showLevelSelect() {
         this.levelGridEl.innerHTML = '';
-        for (let i = 1; i <= MAX_LEVEL; i++) {
+        const levels = [...this.availableLevels].sort((a, b) => a - b);
+        for (const i of levels) {
             const btn = document.createElement('button');
             btn.className = 'level-btn' + (i === this.level ? ' current' : '');
             btn.textContent = i;
@@ -487,12 +493,21 @@ class Game {
             this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
         );
 
+        // 1. Any face-up basic card matches an active slot category?
         for (const cardObj of this.cards) {
             if (cardObj.removed || !cardObj.faceUp) continue;
-            const top = cardObj.card;
-            if (top.type === 'gold' && hasEmptySlot) return true;
-            if (top.type === 'regular' && activeKeys.has(top.category)) return true;
+            if (cardObj.card.type === 'regular' && activeKeys.has(cardObj.card.category)) return true;
         }
+
+        // 2. Hand pile has cards to flip?
+        if (this.handPile.length > 0) return true;
+
+        // 3. Display has cards + empty slot available?
+        if (this.handDisplay.length > 0 && hasEmptySlot) return true;
+
+        // 4. Can recycle (pile empty, display non-empty)?
+        if (this.handPile.length === 0 && this.handDisplay.length > 0) return true;
+
         return false;
     }
 
@@ -520,6 +535,7 @@ class Game {
     render() {
         this.renderTimer();
         this.renderSlots();
+        this.renderHandArea();
         this.renderPyramid();
         this.updateBingoCount();
     }
@@ -556,26 +572,63 @@ class Game {
     renderSlots() {
         this.collectorsEl.innerHTML = '';
         for (let i = 0; i < this.maxSlots; i++) {
-            const slot = this.slots[i];
-            const div = document.createElement('div');
-
-            if (slot === null) {
-                div.className = 'slot-card empty';
-                div.innerHTML = `<span class="slot-empty-icon">?</span>`;
-            } else {
-                const isFull = slot.collected >= slot.target;
-                const slotColor = this.categoryColorMap[slot.key] || '';
-                div.className = 'slot-card active ' + slotColor + (isFull ? ' full' : '');
-                div.innerHTML = `
-                    <span class="cat-name">${slot.name}</span>
-                    <span class="cat-progress">${slot.collected}/${slot.target}</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width:${slot.target ? (slot.collected / slot.target * 100) : 0}%"></div>
-                    </div>
-                `;
-            }
-            this.collectorsEl.appendChild(div);
+            this.collectorsEl.appendChild(this._buildSlotWrapper(i));
         }
+        this._renderCompletedBadge();
+    }
+
+    _buildSlotWrapper(i) {
+        const slot = this.slots[i];
+        const wrapper = document.createElement('div');
+        wrapper.className = 'slot-wrapper';
+
+        if (slot === null) {
+            // Empty slot
+            const div = document.createElement('div');
+            div.className = 'slot-card empty';
+            div.innerHTML = `<img class="slot-empty-img" src="res/Panel/empty_slot.png" alt="Empty">`;
+            wrapper.appendChild(div);
+        } else if (slot.collected === 0) {
+            // Category placed, 0 collected
+            const label = document.createElement('div');
+            label.className = 'slot-label';
+            label.textContent = slot.name;
+            wrapper.appendChild(label);
+
+            const div = document.createElement('div');
+            div.className = 'slot-card category-placed';
+            div.innerHTML = `<img class="slot-bg-img" src="res/Panel/category_card_1.png" alt="">`;
+            wrapper.appendChild(div);
+        } else {
+            // Collecting: label above + card with last collected image + progress
+            const label = document.createElement('div');
+            label.className = 'slot-label';
+            label.textContent = slot.name;
+            wrapper.appendChild(label);
+
+            const isFull = slot.collected >= slot.target;
+            const div = document.createElement('div');
+            div.className = 'slot-card collecting' + (isFull ? ' full' : '');
+
+            let cardContent = `<span class="cat-progress">${slot.collected}/${slot.target}</span>`;
+            if (slot.lastCard) {
+                if (slot.lastCard.isText) {
+                    cardContent += `<span class="slot-card-text">${slot.lastCard.name}</span>`;
+                } else if (slot.lastCard.image) {
+                    cardContent += `<img class="slot-card-img" src="${slot.lastCard.image}" alt="${slot.lastCard.name}">`;
+                }
+            }
+            div.innerHTML = cardContent;
+            wrapper.appendChild(div);
+        }
+
+        return wrapper;
+    }
+
+    _renderCompletedBadge() {
+        // Remove existing badge if any
+        const existing = this.collectorsEl.querySelector('.collector-done-badge');
+        if (existing) existing.remove();
 
         if (this.completedCount > 0) {
             const badge = document.createElement('div');
@@ -586,37 +639,49 @@ class Game {
         }
     }
 
+    /** Update only a single slot element without rebuilding the entire collector area */
+    updateSlot(slotIdx) {
+        const oldWrapper = this.collectorsEl.children[slotIdx];
+        if (!oldWrapper) return;
+        const newWrapper = this._buildSlotWrapper(slotIdx);
+        this.collectorsEl.replaceChild(newWrapper, oldWrapper);
+        this._renderCompletedBadge();
+    }
+
     getCardPosition(layer, row, col) {
         const containerW = getContainerInnerWidth();
-        const layerCols = 5 - layer;
-        const layerWidth = layerCols * CARD_W + (layerCols - 1) * GAP_X;
-        const layerOffsetX = (containerW - layerWidth) / 2;
+        // All layers share the same 5x5 grid with small visual offset per layer
+        const gridWidth = 5 * CARD_W + 4 * GAP_X;
+        const gridOffsetX = (containerW - gridWidth) / 2;
 
-        // Upper layers shift DOWN so they visually overlap lower layers
-        const layerY = layer * VERTICAL_OVERLAP;
-
-        const x = layerOffsetX + col * (CARD_W + GAP_X);
-        const y = layerY + row * (CARD_H + GAP_Y);
+        const x = gridOffsetX + col * (CARD_W + GAP_X) + layer * STACK_OFFSET_X;
+        const y = row * (CARD_H + GAP_Y) + layer * STACK_OFFSET_Y;
 
         return { x, y };
     }
 
     computePyramidHeight() {
-        // Find the maximum bottom edge across all layers
-        let maxBottom = 0;
-        for (let L = 0; L < this.currentNumLayers; L++) {
-            const rows = 5 - L;
-            const layerY = L * VERTICAL_OVERLAP;
-            const bottom = layerY + rows * (CARD_H + GAP_Y) - GAP_Y;
-            if (bottom > maxBottom) maxBottom = bottom;
+        // Height = 5-row grid + topmost layer offset
+        const topLayer = this.currentNumLayers - 1;
+        const bottom = 5 * (CARD_H + GAP_Y) - GAP_Y + topLayer * STACK_OFFSET_Y;
+        return bottom;
+    }
+
+    getStackCountAt(row, col) {
+        let count = 0;
+        for (const card of this.cards) {
+            if (!card.removed && card.row === row && card.col === col) count++;
         }
-        return maxBottom;
+        return count;
     }
 
     renderPyramid() {
         this.gridEl.innerHTML = '';
         const pyramidHeight = this.computePyramidHeight();
         this.gridEl.style.height = pyramidHeight + 'px';
+
+        // Track which cells already had marks before this render
+        if (!this._prevCleared) this._prevCleared = {};
 
         // Render cleared marks for bottom layer
         for (let r = 0; r < 5; r++) {
@@ -628,6 +693,12 @@ class Game {
                     if (this.isCellInBingo(r, c)) {
                         mark.classList.add('bingo-cell');
                     }
+                    // Only animate newly cleared cells
+                    const cellKey = r + ',' + c;
+                    if (this._prevCleared[cellKey]) {
+                        mark.classList.add('no-anim');
+                    }
+                    this._prevCleared[cellKey] = true;
                     mark.style.left = pos.x + 'px';
                     mark.style.top = pos.y + 'px';
                     mark.style.zIndex = '1';
@@ -659,46 +730,44 @@ class Game {
             const inner = document.createElement('div');
             inner.className = 'card-inner';
 
-            // Only render the visible face to avoid opacity-based stacking issues
-            if (cardObj.faceUp) {
-                // Front face
-                const face = document.createElement('div');
-                const goldClass = cardObj.card.type === 'gold' ? ' gold-card' : '';
-                const colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
-                face.className = `card-face${goldClass}${colorClass}`;
-
-                if (cardObj.card.type === 'gold') {
-                    // Gold card: category name on gold background
-                    face.innerHTML = `
-                        <span class="card-name">${cardObj.card.name}</span>
-                    `;
-                } else if (cardObj.card.isText) {
-                    // Text card: show text label
-                    face.innerHTML = `
-                        <span class="card-text">${cardObj.card.name}</span>
-                    `;
-                } else {
-                    // Image card
-                    face.innerHTML = `
-                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
-                    `;
-                }
-                inner.appendChild(face);
+            // Always render front face — all cards are visible face-up
+            const face = document.createElement('div');
+            let colorClass;
+            if (cardObj.card.type === 'filler') {
+                colorClass = ' ' + FILLER_COLOR_DEF.name;
             } else {
-                // Back face
-                const back = document.createElement('div');
-                back.className = 'card-back';
-                inner.appendChild(back);
+                colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
             }
+            face.className = `card-face${colorClass}`;
+
+            if (cardObj.card.isText) {
+                face.innerHTML = `
+                    <span class="card-text">${cardObj.card.name}</span>
+                `;
+            } else {
+                face.innerHTML = `
+                    <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
+                `;
+            }
+
+            // Stack count badge (only on top/face-up card)
+            if (cardObj.faceUp) {
+                const stackCount = this.getStackCountAt(cardObj.row, cardObj.col);
+                if (stackCount > 1) {
+                    const badge = document.createElement('span');
+                    badge.className = 'stack-count-badge';
+                    badge.textContent = stackCount;
+                    face.appendChild(badge);
+                }
+            }
+
+            inner.appendChild(face);
 
             el.appendChild(inner);
 
-            // 2D flip animation for newly uncovered cards
-            if (cardObj.justFlipped) {
-                el.classList.add('flipping');
-                setTimeout(() => el.classList.remove('flipping'), 500);
-                cardObj.justFlipped = false;
-            }
+            // Clear justFlipped without playing animation —
+            // revealed cards should appear instantly, not flip.
+            cardObj.justFlipped = false;
 
             this.gridEl.appendChild(el);
         }
@@ -726,55 +795,138 @@ class Game {
         const cardObj = this.cards.find(c => c.id === cardId);
         if (!cardObj || cardObj.removed || !cardObj.faceUp) return;
 
-        if (cardObj.card.type === 'gold') {
-            this.onGoldCardClick(cardObj);
+        // Handle filler cards and regular cards
+        if (cardObj.card.type === 'filler') {
+            this.onFillerCardClick(cardObj);
         } else {
             this.onRegularCardClick(cardObj);
         }
     }
 
-    onGoldCardClick(cardObj) {
+    // ── Hand Area Interactions ────────────────────────────────
+
+    onHandPileClick() {
+        if (this.isAnimating) return;
+
+        if (this.handPile.length > 0) {
+            // Flip top card from pile to display
+            const card = this.handPile.pop();
+            this.handDisplay.push(card);
+            this.moveHistory.push({ action: 'flip_hand', card: { ...card } });
+            this.renderHandArea();
+            this.checkDeadState();
+        } else if (this.handDisplay.length > 0) {
+            // Recycle: reverse display back into pile (Klondike-style, no shuffle)
+            this.moveHistory.push({
+                action: 'recycle',
+                displaySnapshot: this.handDisplay.map(c => ({ ...c })),
+            });
+            this.handPile = this.handDisplay.reverse();
+            this.handDisplay = [];
+            this.renderHandArea();
+            this.checkDeadState();
+        }
+    }
+
+    onHandDisplayClick() {
+        if (this.isAnimating) return;
+        if (this.handDisplay.length === 0) return;
+
         const emptySlotIdx = this.findEmptySlot();
         if (emptySlotIdx === -1) {
-            this.shakeCardById(cardObj.id);
+            // Shake the display area
+            this.handDisplayEl.classList.add('no-match-hand');
+            setTimeout(() => this.handDisplayEl.classList.remove('no-match-hand'), 400);
+            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
+            this.renderTimer();
+            // Floating penalty above the hand display card
+            const topCard = this.handDisplayEl.querySelector('.hand-display-card.topmost');
+            if (topCard) {
+                const penaltyEl = document.createElement('span');
+                penaltyEl.className = 'time-penalty-card';
+                penaltyEl.textContent = `-${this.penaltyTime}s`;
+                topCard.appendChild(penaltyEl);
+                setTimeout(() => penaltyEl.remove(), 1000);
+            }
             return;
         }
 
+        const card = this.handDisplay.pop();
+
         this.moveHistory.push({
-            action: 'place_gold',
-            cardId: cardObj.id,
-            card: { ...cardObj.card },
+            action: 'place_from_display',
+            card: { ...card },
             slotIndex: emptySlotIdx,
-            layer: cardObj.layer,
-            row: cardObj.row,
-            col: cardObj.col,
         });
 
-        this.isAnimating = true;
+        this.slots[emptySlotIdx] = {
+            key: card.category,
+            name: card.name,
+            collected: 0,
+            target: this.categoryTargets[card.category] || 0,
+            lastCard: null,
+        };
 
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
-        if (cardEl) cardEl.classList.add('removing');
+        this.renderSlots();
+        this.renderHandArea();
+        this.checkDeadState();
+    }
 
-        setTimeout(() => {
-            cardObj.removed = true;
+    renderHandArea() {
+        if (!this.handPileEl || !this.handDisplayEl) return;
+        this.handPileEl.innerHTML = '';
+        this.handDisplayEl.innerHTML = '';
 
-            if (cardObj.layer === 0) {
-                this.cleared[cardObj.row][cardObj.col] = true;
+        // Remove old label if present, then add fresh label
+        const handArea = document.getElementById('hand-area');
+        const oldLabel = handArea.querySelector('.hand-area-label');
+        if (oldLabel) oldLabel.remove();
+        const label = document.createElement('span');
+        label.className = 'hand-area-label';
+        const totalHand = this.handPile.length + this.handDisplay.length;
+        label.textContent = totalHand > 0 ? `DRAW` : '';
+        handArea.insertBefore(label, handArea.firstChild);
+
+        // Pile rendering
+        if (this.handPile.length > 0) {
+            // Show stacked card backs (up to 3 visual) + count badge
+            const showCount = Math.min(this.handPile.length, 3);
+            for (let i = 0; i < showCount; i++) {
+                const cardBack = document.createElement('div');
+                cardBack.className = 'hand-pile-card';
+                cardBack.style.left = (i * 2) + 'px';
+                cardBack.style.top = (-i * 2) + 'px';
+                this.handPileEl.appendChild(cardBack);
             }
+            if (this.handPile.length > 1) {
+                const badge = document.createElement('span');
+                badge.className = 'hand-pile-badge';
+                badge.textContent = this.handPile.length;
+                this.handPileEl.appendChild(badge);
+            }
+        } else if (this.handDisplay.length > 0) {
+            // Show recover icon
+            const recoverImg = document.createElement('img');
+            recoverImg.className = 'recover-icon';
+            recoverImg.src = 'res/Panel/recover.png';
+            recoverImg.alt = 'Recycle';
+            this.handPileEl.appendChild(recoverImg);
+        }
 
-            this.updateFaceUpStates();
-
-            this.slots[emptySlotIdx] = {
-                key: cardObj.card.category,
-                name: cardObj.card.name,
-                collected: 0,
-                target: this.categoryTargets[cardObj.card.category] || 0,
-            };
-
-            this.isAnimating = false;
-            this.render();
-            this.checkDeadState();
-        }, 400);
+        // Display rendering: show top 3 cards fanned out
+        const displayCount = this.handDisplay.length;
+        const showMax = Math.min(displayCount, 3);
+        for (let i = 0; i < showMax; i++) {
+            const idx = displayCount - showMax + i;
+            const card = this.handDisplay[idx];
+            const cardEl = document.createElement('div');
+            const colorClass = this.categoryColorMap[card.category] || '';
+            const isTop = (i === showMax - 1);
+            cardEl.className = `hand-display-card ${colorClass}${isTop ? ' topmost' : ''}`;
+            cardEl.style.left = (i * 18) + 'px';
+            cardEl.innerHTML = `<span class="hand-card-name">${card.name}</span>`;
+            this.handDisplayEl.appendChild(cardEl);
+        }
     }
 
     onRegularCardClick(cardObj) {
@@ -798,46 +950,88 @@ class Game {
             layer: cardObj.layer,
             row: cardObj.row,
             col: cardObj.col,
+            previousLastCard: slot.lastCard ? { ...slot.lastCard } : null,
         });
 
         this.isAnimating = true;
 
         const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
-        if (cardEl) cardEl.classList.add('removing');
+        const slotWrapper = this.collectorsEl.children[slotIdx];
+        const slotCardEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
 
-        const slotEl = this.collectorsEl.children[slotIdx];
-        setTimeout(() => {
-            if (slotEl) {
-                slotEl.classList.add('receiving');
-                setTimeout(() => slotEl.classList.remove('receiving'), 400);
-            }
-        }, 200);
+        // Fly animation from card to slot
+        if (cardEl && slotCardEl) {
+            const sourceRect = cardEl.getBoundingClientRect();
+            const targetRect = slotCardEl.getBoundingClientRect();
+            const cardHTML = cardEl.querySelector('.card-inner').innerHTML;
+            cardEl.style.visibility = 'hidden';
 
-        setTimeout(() => {
-            cardObj.removed = true;
+            this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
+                this._finishRegularCollect(cardObj, slot, slotIdx);
+            });
+        } else {
+            setTimeout(() => {
+                this._finishRegularCollect(cardObj, slot, slotIdx);
+            }, 400);
+        }
+    }
 
-            if (cardObj.layer === 0) {
-                this.cleared[cardObj.row][cardObj.col] = true;
-            }
+    _finishRegularCollect(cardObj, slot, slotIdx) {
+        cardObj.removed = true;
 
-            this.updateFaceUpStates();
-            slot.collected++;
+        if (cardObj.layer === 0) {
+            this.cleared[cardObj.row][cardObj.col] = true;
+        }
 
-            if (slot.collected >= slot.target) {
-                this.completeSlot(slotIdx);
-            }
+        this.updateFaceUpStates();
+        slot.collected++;
+        slot.lastCard = { ...cardObj.card };
 
-            this.isAnimating = false;
-            this.render();
+        if (slot.collected >= slot.target) {
+            this.completeSlot(slotIdx);
+        }
 
-            const lines = this.findBingoLines();
-            if (lines.length >= this.bingosNeeded) {
-                setTimeout(() => this.onWin(), 500);
-                return;
-            }
+        this.isAnimating = false;
 
-            this.checkDeadState();
-        }, 400);
+        // Only re-render the pyramid and the changed slot — not the entire UI
+        this.renderPyramid();
+        this.updateSlot(slotIdx);
+        this.updateBingoCount();
+
+        // Receiving animation on the updated slot
+        const slotWrapper = this.collectorsEl.children[slotIdx];
+        const newSlotEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
+        if (newSlotEl) {
+            newSlotEl.classList.add('receiving');
+            setTimeout(() => newSlotEl.classList.remove('receiving'), 400);
+        }
+
+        const lines = this.findBingoLines();
+        if (lines.length >= this.bingosNeeded) {
+            setTimeout(() => this.onWin(), 500);
+            return;
+        }
+
+        this.checkDeadState();
+    }
+
+    // ── Filler Card Interaction ──────────────────────────────
+
+    onFillerCardClick(cardObj) {
+        // Fillers are non-removable — shake + time penalty
+        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
+        if (cardEl) {
+            cardEl.classList.add('no-match');
+            setTimeout(() => cardEl.classList.remove('no-match'), 400);
+            // Floating penalty above the card
+            const penaltyEl = document.createElement('span');
+            penaltyEl.className = 'time-penalty-card';
+            penaltyEl.textContent = `-${this.penaltyTime}s`;
+            cardEl.appendChild(penaltyEl);
+            setTimeout(() => penaltyEl.remove(), 1000);
+        }
+        this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
+        this.renderTimer();
     }
 
     completeSlot(slotIdx) {
@@ -850,17 +1044,16 @@ class Game {
         if (cardEl) {
             cardEl.classList.add('no-match');
             setTimeout(() => cardEl.classList.remove('no-match'), 400);
+            // Floating penalty above the card
+            const penaltyEl = document.createElement('span');
+            penaltyEl.className = 'time-penalty-card';
+            penaltyEl.textContent = `-${this.penaltyTime}s`;
+            cardEl.appendChild(penaltyEl);
+            setTimeout(() => penaltyEl.remove(), 1000);
         }
-        // Penalty: lose 10 seconds for invalid click
-        this.timeLeft = Math.max(0, this.timeLeft - 10);
+        // Penalty: lose time for invalid click
+        this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
         this.renderTimer();
-        // Floating penalty animation
-        const timerDisplay = document.getElementById('timer-display');
-        const penaltyEl = document.createElement('span');
-        penaltyEl.className = 'time-penalty';
-        penaltyEl.textContent = '-10s';
-        timerDisplay.appendChild(penaltyEl);
-        setTimeout(() => penaltyEl.remove(), 1000);
     }
 
     // ── Bingo Logic ──────────────────────────────────────────
@@ -901,6 +1094,7 @@ class Game {
     shuffle() {
         if (this.isAnimating) return;
 
+        // Only swap card data among face-up grid positions
         const clickableCards = this.cards.filter(c => !c.removed && c.faceUp);
         const cardDatas = clickableCards.map(c => ({ ...c.card }));
         this.shuffleArray(cardDatas);
@@ -909,7 +1103,6 @@ class Game {
             cardObj.card = cardDatas[i];
         });
 
-        this.ensureGoldOnTop();
         this.render();
         this.checkDeadState();
     }
@@ -917,16 +1110,7 @@ class Game {
     showHint() {
         if (this.isAnimating) return;
 
-        if (this.findEmptySlot() !== -1) {
-            for (const cardObj of this.cards) {
-                if (cardObj.removed || !cardObj.faceUp) continue;
-                if (cardObj.card.type === 'gold') {
-                    this.highlightCardById(cardObj.id);
-                    return;
-                }
-            }
-        }
-
+        // Priority 1: matching basic card in grid
         const activeKeys = new Set(
             this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
         );
@@ -936,6 +1120,27 @@ class Game {
                 this.highlightCardById(cardObj.id);
                 return;
             }
+        }
+
+        // Priority 2: place display card into empty slot
+        if (this.handDisplay.length > 0 && this.findEmptySlot() !== -1) {
+            this.handDisplayEl.classList.add('hint-highlight-hand');
+            setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
+            return;
+        }
+
+        // Priority 3: flip from pile
+        if (this.handPile.length > 0) {
+            this.handPileEl.classList.add('hint-highlight-hand');
+            setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
+            return;
+        }
+
+        // Priority 4: recycle
+        if (this.handPile.length === 0 && this.handDisplay.length > 0) {
+            this.handPileEl.classList.add('hint-highlight-hand');
+            setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
+            return;
         }
     }
 
@@ -953,17 +1158,16 @@ class Game {
 
         const move = this.moveHistory.pop();
 
-        const cardObj = this.cards.find(c => c.id === move.cardId);
-        cardObj.removed = false;
-        cardObj.card = move.card;
+        if (move.action === 'collect_regular') {
+            // Restore card to grid, decrement slot
+            const cardObj = this.cards.find(c => c.id === move.cardId);
+            cardObj.removed = false;
+            cardObj.card = move.card;
 
-        if (move.layer === 0) {
-            this.cleared[move.row][move.col] = false;
-        }
+            if (move.layer === 0) {
+                this.cleared[move.row][move.col] = false;
+            }
 
-        if (move.action === 'place_gold') {
-            this.slots[move.slotIndex] = null;
-        } else if (move.action === 'collect_regular') {
             if (this.slots[move.slotIndex] === null) {
                 this.completedCount--;
                 const catKey = move.card.category;
@@ -972,15 +1176,64 @@ class Game {
                     name: CATEGORIES[catKey].name,
                     collected: this.categoryTargets[catKey] - 1,
                     target: this.categoryTargets[catKey],
+                    lastCard: move.previousLastCard || null,
                 };
             } else {
                 this.slots[move.slotIndex].collected--;
+                this.slots[move.slotIndex].lastCard = move.previousLastCard || null;
             }
+
+            this.updateFaceUpStates();
+        } else if (move.action === 'place_from_display') {
+            // Clear slot, push card back to display
+            this.slots[move.slotIndex] = null;
+            this.handDisplay.push(move.card);
+        } else if (move.action === 'flip_hand') {
+            // Pop from display, push back to pile
+            this.handDisplay.pop();
+            this.handPile.push(move.card);
+        } else if (move.action === 'recycle') {
+            // Restore display from saved snapshot, clear pile
+            this.handDisplay = move.displaySnapshot.map(c => ({ ...c }));
+            this.handPile = [];
         }
 
-        // Recalculate face-up states (restored card may re-cover cards below)
-        this.updateFaceUpStates();
-        this.render();
+        // Only re-render what changed
+        if (move.action === 'collect_regular') {
+            this.render();
+        } else {
+            this.renderSlots();
+            this.renderHandArea();
+        }
+    }
+
+    // ── Fly Animation ──────────────────────────────────────────
+
+    flyCard(sourceRect, targetRect, cardHTML, duration = 400) {
+        return new Promise(resolve => {
+            const clone = document.createElement('div');
+            clone.className = 'flying-card';
+            clone.innerHTML = cardHTML;
+            clone.style.left = sourceRect.left + 'px';
+            clone.style.top = sourceRect.top + 'px';
+            clone.style.width = sourceRect.width + 'px';
+            clone.style.height = sourceRect.height + 'px';
+            document.body.appendChild(clone);
+
+            // Force layout before starting transition
+            clone.offsetHeight;
+
+            clone.style.transition = `all ${duration}ms ease-in-out`;
+            clone.style.left = targetRect.left + 'px';
+            clone.style.top = targetRect.top + 'px';
+            clone.style.width = targetRect.width + 'px';
+            clone.style.height = targetRect.height + 'px';
+
+            setTimeout(() => {
+                clone.remove();
+                resolve();
+            }, duration);
+        });
     }
 
     // ── Utility ──────────────────────────────────────────────
