@@ -1,2975 +1,391 @@
 [
   {
+    "handPile": [
+      {
+        "category": "Help_word",
+        "name": "Help",
+        "type": "gold",
+        "isText": true
+      },
+      {
+        "category": "Fruits",
+        "name": "Fruits",
+        "type": "gold",
+        "isText": false
+      },
+      {
+        "category": "Holiday_word",
+        "name": "Holiday",
+        "type": "gold",
+        "isText": true
+      },
+      {
+        "category": "Artworks_word",
+        "name": "Artworks",
+        "type": "gold",
+        "isText": true
+      }
+    ],
     "config": {
-      "bingosNeeded": 1,
       "maxSlots": 3,
-      "timeLimit": 460,
-      "penaltyTime": 5
+      "penaltyTime": 2,
+      "bingosNeeded": 1,
+      "timeLimit": 100
+    },
+    "categoryTargets": {
+      "Artworks_word": 3,
+      "Holiday_word": 3,
+      "Fruits": 8,
+      "Help_word": 3
     },
     "cards": [
       {
-        "layer": 0,
         "row": 0,
-        "col": 0,
         "card": {
+          "category": "Help_word",
+          "name": "Support",
           "type": "regular",
-          "category": "Build",
-          "name": "Museum",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        }
+          "image": null,
+          "isText": true
+        },
+        "layer": 2,
+        "col": 0
       },
       {
-        "layer": 0,
         "row": 0,
-        "col": 1,
         "card": {
+          "category": "Chess",
+          "name": "Rook",
           "type": "filler",
+          "image": "res/Item/chess_rook_2.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Chess",
+          "name": "Queen",
+          "type": "filler",
+          "image": "res/Item/chess_queen_5.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Fruits",
+          "name": "Peach",
+          "type": "regular",
+          "image": "res/Item/fruits_peach_6.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Help_word",
+          "name": "Assist",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Furniture",
+          "name": "Desk",
+          "type": "filler",
+          "image": "res/Item/furniture_desk_4.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Fruits",
+          "name": "Apple",
+          "type": "regular",
+          "image": "res/Item/fruits_apple_4.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Fruits",
+          "name": "Kiwi",
+          "type": "regular",
+          "image": "res/Item/fruits_kiwi_2.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Holiday_word",
+          "name": "New Year",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Artworks_word",
+          "name": "Painting",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Fruits",
+          "name": "Banana",
+          "type": "regular",
+          "image": "res/Item/fruits_banana_3.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Hello_word",
+          "name": "Hi",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Fruits",
+          "name": "Pineapple",
+          "type": "regular",
+          "image": "res/Item/fruits_pineapple_7.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Holiday_word",
+          "name": "Easter",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Holiday_word",
+          "name": "Flag Day",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 2
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Chess",
+          "name": "Bishop",
+          "type": "filler",
+          "image": "res/Item/chess_bishop_4.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Heart_word",
+          "name": "Passion",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Food_word",
+          "name": "Fries",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Fruits",
+          "name": "Orange",
+          "type": "regular",
+          "image": "res/Item/fruits_orange_1.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 3,
+        "card": {
           "category": "Chess",
           "name": "Pawn",
+          "type": "filler",
           "image": "res/Item/chess_pawn_1.png",
           "isText": false
-        }
+        },
+        "layer": 0,
+        "col": 0
       },
       {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Flour",
-          "image": "res/Item/baking_flour_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Turban",
-          "image": "res/Item/hats_turban_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Burger",
-          "name": "Sauce",
-          "image": "res/Item/burger_sauce_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Butter",
-          "image": "res/Item/baking_butter_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Panama hat",
-          "image": "res/Item/hats_panamahat_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Vanilla extract",
-          "image": "res/Item/baking_vanillaextract_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Museum",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Yeast",
-          "image": "res/Item/baking_yeast_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Sombrero",
-          "image": "res/Item/hats_sombrero_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Parrot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Beret",
-          "image": "res/Item/hats_beret_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Sugar",
-          "image": "res/Item/baking_sugar_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
         "row": 3,
-        "col": 0,
         "card": {
+          "category": "Fruits",
+          "name": "Pomegranate",
           "type": "regular",
-          "category": "Build",
-          "name": "Factory",
-          "image": "res/Item/build_factory_6.png",
+          "image": "res/Item/fruits_pomegranate_5.png",
           "isText": false
-        }
+        },
+        "layer": 0,
+        "col": 1
       },
       {
-        "layer": 0,
         "row": 3,
-        "col": 1,
         "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Mall",
-          "image": "res/Item/build_mall_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Visor",
-          "image": "res/Item/hats_visor_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Eggs",
-          "image": "res/Item/baking_eggs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Kepi",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Library",
-          "image": "res/Item/build_library_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Kepi",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Museum",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Sugar",
-          "image": "res/Item/baking_sugar_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Cleaning",
-          "name": "Bin",
-          "image": "res/Item/cleaning_bin_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Parrot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Hamster",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Kepi",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Cat",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Library",
-          "image": "res/Item/build_library_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Parrot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Hamster",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Mall",
-          "image": "res/Item/build_mall_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Cat",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Parrot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Cream",
-          "image": "res/Item/baking_cream_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Hamster",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Hospital",
-          "image": "res/Item/build_hospital_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Vanilla extract",
-          "image": "res/Item/baking_vanillaextract_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Beret",
-          "image": "res/Item/hats_beret_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Stadium",
-          "image": "res/Item/build_stadium_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Visor",
-          "image": "res/Item/hats_visor_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Eggs",
-          "image": "res/Item/baking_eggs_2.png",
-          "isText": false
-        }
-      }
-    ],
-    "categoryTargets": {
-      "Baking": 10,
-      "Hats": 10,
-      "Build": 10,
-      "Pets_word": 13
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Baking",
-        "name": "Baking",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Build",
-        "name": "Build",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Pets_word",
-        "name": "Pets",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hats",
-        "name": "Hats",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 3,
-      "timeLimit": 460,
-      "penaltyTime": 5
-    },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Bed",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Wardrobe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Gingerbread house",
-          "image": "res/Item/xmas_gingerbreadhouse_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Star",
-          "image": "res/Item/icons_star_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Red rose",
-          "image": "res/Item/vampire_redrose_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Envelope icon",
-          "image": "res/Item/icons_envelopeicon_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Lock icon",
-          "image": "res/Item/icons_lockicon_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Cross",
-          "image": "res/Item/icons_cross_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
+          "category": "Furniture",
           "name": "Chair",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Wardrobe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
           "type": "filler",
-          "category": "Chair",
-          "name": "Cushion",
-          "image": "res/Item/chair_cushion_1.png",
+          "image": "res/Item/furniture_chair_3.png",
           "isText": false
-        }
+        },
+        "layer": 0,
+        "col": 2
       },
       {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
+        "row": 3,
         "card": {
+          "category": "Help_word",
+          "name": "Donate",
           "type": "regular",
-          "category": "Furniture_word",
-          "name": "Bed",
           "image": null,
           "isText": true
-        }
+        },
+        "layer": 0,
+        "col": 3
       },
       {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
+        "row": 3,
         "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Chair",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Chair",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
+          "category": "Chess",
+          "name": "Knight",
           "type": "filler",
-          "category": "Sailor",
-          "name": "Flag",
-          "image": "res/Item/sailor_flag_2.png",
+          "image": "res/Item/chess_knight_3.png",
           "isText": false
-        }
+        },
+        "layer": 0,
+        "col": 4
       },
       {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
+        "row": 4,
         "card": {
+          "category": "Fruits",
+          "name": "Watermelon",
           "type": "regular",
-          "category": "Icons",
-          "name": "Arrow",
-          "image": "res/Item/icons_arrow_4.png",
+          "image": "res/Item/fruits_watermelon_8.png",
           "isText": false
-        }
+        },
+        "layer": 0,
+        "col": 0
       },
       {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
+        "row": 4,
         "card": {
+          "category": "Artworks_word",
+          "name": "Photo",
           "type": "regular",
-          "category": "Furniture_word",
-          "name": "Table",
           "image": null,
           "isText": true
-        }
+        },
+        "layer": 0,
+        "col": 1
       },
       {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
+        "row": 4,
         "card": {
+          "category": "OK sign_word",
+          "name": "Consent",
           "type": "filler",
-          "category": "Pairs",
-          "name": "Wings",
-          "image": "res/Item/pairs_wings_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Wardrobe",
           "image": null,
           "isText": true
-        }
+        },
+        "layer": 0,
+        "col": 2
       },
       {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Candy cane",
-          "image": "res/Item/xmas_candycane_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
         "row": 4,
-        "col": 0,
         "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Fangs",
-          "image": "res/Item/vampire_fangs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Circle",
-          "image": "res/Item/icons_circle_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Wardrobe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Table",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Red rose",
-          "image": "res/Item/vampire_redrose_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Candle and candlestick",
-          "image": "res/Item/vampire_candleandcandlestick_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Checkmark",
-          "image": "res/Item/icons_checkmark_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Sofa",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Bed",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Coffin",
-          "image": "res/Item/vampire_coffin_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Fangs",
-          "image": "res/Item/vampire_fangs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Candy cane",
-          "image": "res/Item/xmas_candycane_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Table",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Fairy lights",
-          "image": "res/Item/xmas_fairylights_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Fangs",
-          "image": "res/Item/vampire_fangs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Gothic castle",
-          "image": "res/Item/vampire_gothiccastle_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Circle",
-          "image": "res/Item/icons_circle_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Furniture_word",
-          "name": "Table",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Vampire",
-          "name": "Garlic",
-          "image": "res/Item/vampire_garlic_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Reindeer",
-          "image": "res/Item/xmas_reindeer_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Fairy lights",
-          "image": "res/Item/xmas_fairylights_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Circle",
-          "image": "res/Item/icons_circle_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Lock icon",
-          "image": "res/Item/icons_lockicon_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      }
-    ],
-    "categoryTargets": {
-      "Vampire": 9,
-      "Furniture_word": 15,
-      "Xmas": 9,
-      "Icons": 10
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Furniture_word",
-        "name": "Furniture",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Vampire",
-        "name": "Vampire",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Xmas",
-        "name": "Xmas",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 3,
-      "timeLimit": 460,
-      "penaltyTime": 5
-    },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Drone",
-          "image": "res/Item/charger_drone_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Hamster",
-          "image": "res/Item/rodents_hamster_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Smartwatch",
-          "image": "res/Item/charger_smartwatch_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Marmot",
-          "image": "res/Item/rodents_marmot_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
+          "category": "Heart_word",
+          "name": "Romance",
           "type": "filler",
-          "category": "Veggie",
-          "name": "Eggplant",
-          "image": "res/Item/veggie_eggplant_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Hamster",
-          "image": "res/Item/rodents_hamster_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Digital camera",
-          "image": "res/Item/charger_digitalcamera_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Laptop",
-          "image": "res/Item/charger_laptop_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Squirrel",
-          "image": "res/Item/rodents_squirrel_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Yellow rose",
-          "image": "res/Item/yellow_yellowrose_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Banana",
-          "image": "res/Item/yellow_banana_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Squirrel",
-          "image": "res/Item/rodents_squirrel_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Diamond",
-          "image": "res/Item/gemstone_diamond_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Ruby",
-          "image": "res/Item/gemstone_ruby_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Sapphire",
-          "image": "res/Item/gemstone_sapphire_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Hamster",
-          "image": "res/Item/rodents_hamster_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Laptop",
-          "image": "res/Item/charger_laptop_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Egypt",
-          "name": "Pyramid",
-          "image": "res/Item/egypt_pyramid_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Marmot",
-          "image": "res/Item/rodents_marmot_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Electric car",
-          "image": "res/Item/charger_electriccar_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Hamster",
-          "image": "res/Item/rodents_hamster_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Digital camera",
-          "image": "res/Item/charger_digitalcamera_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Emerald",
-          "image": "res/Item/gemstone_emerald_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Eco_items",
-          "name": "LED light",
-          "image": "res/Item/ecoitems_ledlight_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Opal",
-          "image": "res/Item/gemstone_opal_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Banana",
-          "image": "res/Item/yellow_banana_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Garnet",
-          "image": "res/Item/gemstone_garnet_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Sapphire",
-          "image": "res/Item/gemstone_sapphire_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Cheese",
-          "image": "res/Item/yellow_cheese_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Guinea pig",
-          "image": "res/Item/rodents_guineapig_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Laptop",
-          "image": "res/Item/charger_laptop_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Emerald",
-          "image": "res/Item/gemstone_emerald_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Rat",
-          "image": "res/Item/rodents_rat_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Lemon",
-          "image": "res/Item/yellow_lemon_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Nutria",
-          "image": "res/Item/rodents_nutria_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Garnet",
-          "image": "res/Item/gemstone_garnet_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Beaver",
-          "image": "res/Item/rodents_beaver_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Crystal",
-          "image": "res/Item/gemstone_crystal_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Capybara",
-          "image": "res/Item/rodents_capybara_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Banana",
-          "image": "res/Item/yellow_banana_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Yellow",
-          "name": "Gold",
-          "image": "res/Item/yellow_gold_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Gemstone",
-          "name": "Garnet",
-          "image": "res/Item/gemstone_garnet_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Rat",
-          "image": "res/Item/rodents_rat_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Digital camera",
-          "image": "res/Item/charger_digitalcamera_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Charger",
-          "name": "Bluetooth headphones",
-          "image": "res/Item/charger_bluetoothheadphones_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents",
-          "name": "Beaver",
-          "image": "res/Item/rodents_beaver_1.png",
-          "isText": false
-        }
-      }
-    ],
-    "categoryTargets": {
-      "Gemstone": 11,
-      "Charger": 10,
-      "Yellow": 7,
-      "Rodents": 15
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Charger",
-        "name": "Charger",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Rodents",
-        "name": "Rodents",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Gemstone",
-        "name": "Gemstone",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Yellow",
-        "name": "Yellow",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 3,
-      "timeLimit": 460,
-      "penaltyTime": 5
-    },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Christmas gift",
-          "image": "res/Item/xmas_christmasgift_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Keys",
-          "name": "Car",
-          "image": "res/Item/keys_car_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sheet music",
-          "image": "res/Item/arts_sheetmusic_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Butter",
-          "image": "res/Item/baking_butter_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Reindeer",
-          "image": "res/Item/xmas_reindeer_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Camera",
-          "image": "res/Item/arts_camera_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sheet music",
-          "image": "res/Item/arts_sheetmusic_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Gloves",
-          "image": "res/Item/garments_gloves_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Sugar",
-          "image": "res/Item/baking_sugar_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sheet music",
-          "image": "res/Item/arts_sheetmusic_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Mask",
-          "image": "res/Item/arts_mask_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Dress",
-          "image": "res/Item/garments_dress_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Shirt",
-          "image": "res/Item/garments_shirt_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Gloves",
-          "image": "res/Item/garments_gloves_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Candy cane",
-          "image": "res/Item/xmas_candycane_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Cream",
-          "image": "res/Item/baking_cream_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Panties",
-          "image": "res/Item/garments_panties_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Landmark",
-          "name": "Pyramids",
-          "image": "res/Item/landmark_pyramids_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Shirt",
-          "image": "res/Item/garments_shirt_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Deck",
-          "name": "Ace of Hearts",
-          "image": "res/Item/deck_aceofhearts_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Gloves",
-          "image": "res/Item/garments_gloves_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Flour",
-          "image": "res/Item/baking_flour_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Flour",
-          "image": "res/Item/baking_flour_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Pants",
-          "image": "res/Item/garments_pants_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sheet music",
-          "image": "res/Item/arts_sheetmusic_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Skirt",
-          "image": "res/Item/garments_skirt_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Skirt",
-          "image": "res/Item/garments_skirt_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Eggs",
-          "image": "res/Item/baking_eggs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Gingerbread house",
-          "image": "res/Item/xmas_gingerbreadhouse_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Christmas gift",
-          "image": "res/Item/xmas_christmasgift_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Shirt",
-          "image": "res/Item/garments_shirt_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Coat",
-          "image": "res/Item/garments_coat_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sheet music",
-          "image": "res/Item/arts_sheetmusic_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Christmas tree",
-          "image": "res/Item/xmas_christmastree_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Yeast",
-          "image": "res/Item/baking_yeast_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Pants",
-          "image": "res/Item/garments_pants_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Sculpture",
-          "image": "res/Item/arts_sculpture_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Eggs",
-          "image": "res/Item/baking_eggs_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Garments",
-          "name": "Pants",
-          "image": "res/Item/garments_pants_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Vanilla extract",
-          "image": "res/Item/baking_vanillaextract_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Chocolate chips",
-          "image": "res/Item/baking_chocolatechips_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Baking",
-          "name": "Vanilla extract",
-          "image": "res/Item/baking_vanillaextract_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Arts",
-          "name": "Mask",
-          "image": "res/Item/arts_mask_8.png",
-          "isText": false
-        }
-      }
-    ],
-    "categoryTargets": {
-      "Arts": 9,
-      "Garments": 14,
-      "Xmas": 9,
-      "Baking": 11
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Baking",
-        "name": "Baking",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Xmas",
-        "name": "Xmas",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Arts",
-        "name": "Arts",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Garments",
-        "name": "Garments",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 3,
-      "timeLimit": 460,
-      "penaltyTime": 5
-    },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Basket",
-          "image": "res/Item/picnic_basket_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Ants",
-          "image": "res/Item/picnic_ants_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
           "image": null,
           "isText": true
-        }
+        },
+        "layer": 0,
+        "col": 3
       },
       {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Egypt",
-          "name": "Scarab",
-          "image": "res/Item/egypt_scarab_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Envelope icon",
-          "image": "res/Item/icons_envelopeicon_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Envelope icon",
-          "image": "res/Item/icons_envelopeicon_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Cross",
-          "image": "res/Item/icons_cross_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Envelope icon",
-          "image": "res/Item/icons_envelopeicon_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Day",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Cheese",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Veggie",
-          "name": "Potato",
-          "image": "res/Item/veggie_potato_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Week",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Map",
-          "name": "India",
-          "image": "res/Item/map_india_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Heart",
-          "image": "res/Item/icons_heart_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Sauce",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Year",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Bun",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
         "row": 4,
-        "col": 0,
         "card": {
+          "category": "Artworks_word",
+          "name": "Drawing",
           "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
+          "image": null,
+          "isText": true
+        },
         "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Month",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Ants",
-          "image": "res/Item/picnic_ants_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Day",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Sauce",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Star",
-          "image": "res/Item/icons_star_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Month",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Checkmark",
-          "image": "res/Item/icons_checkmark_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Lock icon",
-          "image": "res/Item/icons_lockicon_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Ants",
-          "image": "res/Item/picnic_ants_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Bun",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Checkmark",
-          "image": "res/Item/icons_checkmark_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Beef",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Cheese",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Burger_word",
-          "name": "Bun",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Basket",
-          "image": "res/Item/picnic_basket_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Sun",
-          "image": "res/Item/picnic_sun_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Envelope icon",
-          "image": "res/Item/icons_envelopeicon_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Icons",
-          "name": "Cross",
-          "image": "res/Item/icons_cross_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Grass",
-          "image": "res/Item/picnic_grass_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Calendar_word",
-          "name": "Year",
-          "image": null,
-          "isText": true
-        }
-      }
-    ],
-    "categoryTargets": {
-      "Picnic": 12,
-      "Calendar_word": 7,
-      "Icons": 11,
-      "Burger_word": 13
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Calendar_word",
-        "name": "Calendar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Burger_word",
-        "name": "Burger",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Picnic",
-        "name": "Picnic",
-        "isText": false
+        "col": 4
       }
     ],
     "handDisplay": []

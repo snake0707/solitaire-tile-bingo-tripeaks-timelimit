@@ -2,32 +2,32 @@
   {
     "handPile": [
       {
-        "category": "Hats",
-        "name": "Hats",
+        "category": "Arctic_word",
+        "name": "Arctic",
+        "type": "gold",
+        "isText": true
+      },
+      {
+        "category": "Zodiac",
+        "name": "Zodiac",
         "type": "gold",
         "isText": false
       },
       {
-        "category": "Snow_word",
-        "name": "Snow",
+        "category": "Fuels_word",
+        "name": "Fuels",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Date_word",
-        "name": "Date",
+        "category": "Street_word",
+        "name": "Street",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Fishing_word",
-        "name": "Fishing",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Seasons_word",
-        "name": "Seasons",
+        "category": "Dairy_word",
+        "name": "Dairy",
         "type": "gold",
         "isText": true
       }
@@ -36,22 +36,22 @@
       "maxSlots": 5,
       "penaltyTime": 3,
       "bingosNeeded": 1,
-      "timeLimit": 105
+      "timeLimit": 90
     },
     "categoryTargets": {
-      "Snow_word": 3,
-      "Fishing_word": 3,
-      "Hats": 8,
-      "Date_word": 3,
-      "Seasons_word": 4
+      "Street_word": 4,
+      "Zodiac": 3,
+      "Dairy_word": 3,
+      "Arctic_word": 4,
+      "Fuels_word": 5
     },
     "cards": [
       {
         "row": 0,
         "card": {
-          "category": "Date_word",
-          "name": "Tuxedo",
-          "type": "regular",
+          "category": "Injuries_word",
+          "name": "Fracture",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -61,10 +61,10 @@
       {
         "row": 0,
         "card": {
-          "category": "Chair",
-          "name": "Throne",
+          "category": "Toolbox",
+          "name": "Drill",
           "type": "filler",
-          "image": "res/Item/chair_throne_2.png",
+          "image": "res/Item/toolbox_drill_3.png",
           "isText": false
         },
         "layer": 0,
@@ -73,8 +73,8 @@
       {
         "row": 0,
         "card": {
-          "category": "Seasons_word",
-          "name": "Summer",
+          "category": "Arctic_word",
+          "name": "Snowy owl",
           "type": "regular",
           "image": null,
           "isText": true
@@ -85,10 +85,10 @@
       {
         "row": 0,
         "card": {
-          "category": "Chair",
-          "name": "Beanbag",
+          "category": "Toolbox",
+          "name": "Adhesive tape",
           "type": "filler",
-          "image": "res/Item/chair_beanbag_8.png",
+          "image": "res/Item/toolbox_adhesivetape_4.png",
           "isText": false
         },
         "layer": 0,
@@ -97,9 +97,9 @@
       {
         "row": 0,
         "card": {
-          "category": "Fame_word",
-          "name": "Renown",
-          "type": "filler",
+          "category": "Arctic_word",
+          "name": "Polar bear",
+          "type": "regular",
           "image": null,
           "isText": true
         },
@@ -109,8 +109,8 @@
       {
         "row": 0,
         "card": {
-          "category": "Material_word",
-          "name": "Glass",
+          "category": "Lie_word",
+          "name": "Mislead",
           "type": "filler",
           "image": null,
           "isText": true
@@ -121,8 +121,116 @@
       {
         "row": 0,
         "card": {
-          "category": "Fishing_word",
-          "name": "Rod",
+          "category": "Zodiac",
+          "name": "Aries",
+          "type": "regular",
+          "image": "res/Item/zodiac_aries_1.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Street_word",
+          "name": "Bike",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 4
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Unite_word",
+          "name": "League",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Fitness_word",
+          "name": "Yoga",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Unite_word",
+          "name": "Union",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Street_word",
+          "name": "Corner",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 1
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Veggie",
+          "name": "Cabbage",
+          "type": "filler",
+          "image": "res/Item/veggie_cabbage_2.png",
+          "isText": false
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Shoes",
+          "name": "Oxfords",
+          "type": "filler",
+          "image": "res/Item/shoes_oxfords_4.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 2
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Wheel_word",
+          "name": "Hubcap",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Street_word",
+          "name": "Brick",
           "type": "regular",
           "image": null,
           "isText": true
@@ -131,118 +239,10 @@
         "col": 3
       },
       {
-        "row": 0,
-        "card": {
-          "category": "Hats",
-          "name": "Turban",
-          "type": "regular",
-          "image": "res/Item/hats_turban_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Citrus_word",
-          "name": "Lime",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
         "row": 1,
         "card": {
-          "category": "Hats",
-          "name": "Kepi",
-          "type": "regular",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Duster",
-          "type": "filler",
-          "image": "res/Item/cleaning_duster_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Autumn",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Racing_word",
-          "name": "Speedway",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Cap",
-          "type": "regular",
-          "image": "res/Item/hats_cap_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camping_word",
-          "name": "Hammock",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Snow_word",
-          "name": "Flake",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Winter",
+          "category": "Dairy_word",
+          "name": "Butter",
           "type": "regular",
           "image": null,
           "isText": true
@@ -253,8 +253,8 @@
       {
         "row": 1,
         "card": {
-          "category": "Camping_word",
-          "name": "Tent",
+          "category": "Wheel_word",
+          "name": "Steer",
           "type": "filler",
           "image": null,
           "isText": true
@@ -265,9 +265,21 @@
       {
         "row": 2,
         "card": {
-          "category": "Snow_word",
-          "name": "Iceberg",
+          "category": "Dairy_word",
+          "name": "Yogurt",
           "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Wheel_word",
+          "name": "Fortune",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -277,11 +289,23 @@
       {
         "row": 2,
         "card": {
-          "category": "Cleaning",
-          "name": "Broom",
+          "category": "Fuels_word",
+          "name": "Kerosene",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Festival_word",
+          "name": "Diwali",
           "type": "filler",
-          "image": "res/Item/cleaning_broom_1.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
         "layer": 0,
         "col": 1
@@ -289,8 +313,8 @@
       {
         "row": 2,
         "card": {
-          "category": "Device_word",
-          "name": "Heater",
+          "category": "Legends_word",
+          "name": "Tale",
           "type": "filler",
           "image": null,
           "isText": true
@@ -301,11 +325,11 @@
       {
         "row": 2,
         "card": {
-          "category": "Hats",
-          "name": "Visor",
+          "category": "Fuels_word",
+          "name": "Gasoline",
           "type": "regular",
-          "image": "res/Item/hats_visor_5.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
         "layer": 0,
         "col": 3
@@ -313,8 +337,8 @@
       {
         "row": 2,
         "card": {
-          "category": "Fame_word",
-          "name": "Popular",
+          "category": "Navigate_word",
+          "name": "Sextant",
           "type": "filler",
           "image": null,
           "isText": true
@@ -325,9 +349,21 @@
       {
         "row": 3,
         "card": {
-          "category": "Seasons_word",
-          "name": "Spring",
+          "category": "Fuels_word",
+          "name": "Coal",
           "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Legends_word",
+          "name": "Fable",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -337,8 +373,8 @@
       {
         "row": 3,
         "card": {
-          "category": "Fishing_word",
-          "name": "Bait",
+          "category": "Street_word",
+          "name": "Driver",
           "type": "regular",
           "image": null,
           "isText": true
@@ -349,11 +385,11 @@
       {
         "row": 3,
         "card": {
-          "category": "Hats",
-          "name": "Sombrero",
+          "category": "Fuels_word",
+          "name": "Diesel",
           "type": "regular",
-          "image": "res/Item/hats_sombrero_7.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
         "layer": 0,
         "col": 2
@@ -361,11 +397,11 @@
       {
         "row": 3,
         "card": {
-          "category": "Hats",
-          "name": "Hat",
+          "category": "Fuels_word",
+          "name": "Propane",
           "type": "regular",
-          "image": "res/Item/hats_hat_4.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
         "layer": 1,
         "col": 3
@@ -373,11 +409,11 @@
       {
         "row": 3,
         "card": {
-          "category": "Hats",
-          "name": "Panama hat",
+          "category": "Arctic_word",
+          "name": "Reindeer",
           "type": "regular",
-          "image": "res/Item/hats_panamahat_8.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
         "layer": 0,
         "col": 3
@@ -385,11 +421,11 @@
       {
         "row": 3,
         "card": {
-          "category": "Device_word",
-          "name": "Dryer",
-          "type": "filler",
-          "image": null,
-          "isText": true
+          "category": "Zodiac",
+          "name": "Gemini",
+          "type": "regular",
+          "image": "res/Item/zodiac_gemini_3.png",
+          "isText": false
         },
         "layer": 0,
         "col": 4
@@ -397,11 +433,11 @@
       {
         "row": 4,
         "card": {
-          "category": "Hats",
-          "name": "Beret",
-          "type": "regular",
-          "image": "res/Item/hats_beret_2.png",
-          "isText": false
+          "category": "Legends_word",
+          "name": "Epic",
+          "type": "filler",
+          "image": null,
+          "isText": true
         },
         "layer": 0,
         "col": 0
@@ -409,9 +445,9 @@
       {
         "row": 4,
         "card": {
-          "category": "Snow_word",
-          "name": "Sleet",
-          "type": "regular",
+          "category": "Wheel_word",
+          "name": "Tire",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -421,9 +457,9 @@
       {
         "row": 4,
         "card": {
-          "category": "Date_word",
-          "name": "Couple",
-          "type": "regular",
+          "category": "Injuries_word",
+          "name": "Sprain",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -433,8 +469,20 @@
       {
         "row": 4,
         "card": {
-          "category": "Date_word",
-          "name": "Flowers",
+          "category": "Zodiac",
+          "name": "Taurus",
+          "type": "regular",
+          "image": "res/Item/zodiac_taurus_2.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 3
+      },
+      {
+        "row": 4,
+        "card": {
+          "category": "Arctic_word",
+          "name": "Walrus",
           "type": "regular",
           "image": null,
           "isText": true
@@ -445,23 +493,11 @@
       {
         "row": 4,
         "card": {
-          "category": "Fishing_word",
-          "name": "Bobber",
+          "category": "Dairy_word",
+          "name": "Cream",
           "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Chair",
-          "name": "Cushion",
-          "type": "filler",
-          "image": "res/Item/chair_cushion_1.png",
-          "isText": false
         },
         "layer": 0,
         "col": 4

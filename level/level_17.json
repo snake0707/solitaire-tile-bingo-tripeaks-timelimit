@@ -2,63 +2,82 @@
   {
     "handPile": [
       {
-        "category": "Racing_word",
-        "name": "Racing",
+        "category": "Footwear_word",
+        "name": "Footwear",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Defense_word",
-        "name": "Defense",
+        "category": "Landmark_word",
+        "name": "Landmark",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Crown_word",
-        "name": "Crown",
+        "category": "Chess_word",
+        "name": "Chess",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Cleaning",
-        "name": "Cleaning",
+        "category": "Build",
+        "name": "Build",
         "type": "gold",
         "isText": false
       },
       {
-        "category": "Fame_word",
-        "name": "Fame",
+        "category": "Folklore",
+        "name": "Folklore",
+        "type": "gold",
+        "isText": false
+      },
+      {
+        "category": "Explorer_word",
+        "name": "Explorer",
         "type": "gold",
         "isText": true
       },
       {
-        "category": "Camping_word",
-        "name": "Camping",
+        "category": "Pills_word",
+        "name": "Pills",
         "type": "gold",
         "isText": true
       }
     ],
     "config": {
-      "maxSlots": 3,
+      "maxSlots": 5,
       "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 120
+      "timeLimit": 130
     },
     "categoryTargets": {
-      "Fame_word": 4,
-      "Racing_word": 3,
-      "Defense_word": 4,
-      "Crown_word": 3,
-      "Camping_word": 3,
-      "Cleaning": 8
+      "Pills_word": 3,
+      "Footwear_word": 6,
+      "Chess_word": 4,
+      "Folklore": 3,
+      "Build": 8,
+      "Landmark_word": 4,
+      "Explorer_word": 3
     },
     "cards": [
       {
         "row": 0,
         "card": {
-          "category": "Fame_word",
-          "name": "Renown",
+          "category": "Build",
+          "name": "Library",
           "type": "regular",
+          "image": "res/Item/build_library_1.png",
+          "isText": false
+        },
+        "layer": 2,
+        "col": 0
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Islands_word",
+          "name": "Crete",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -68,9 +87,9 @@
       {
         "row": 0,
         "card": {
-          "category": "Racing_word",
-          "name": "Speedway",
-          "type": "regular",
+          "category": "Islands_word",
+          "name": "Hawaii",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -80,11 +99,23 @@
       {
         "row": 0,
         "card": {
-          "category": "Cleaning",
-          "name": "Dustpan",
+          "category": "Pills_word",
+          "name": "Capsules",
           "type": "regular",
-          "image": "res/Item/cleaning_dustpan_8.png",
-          "isText": false
+          "image": null,
+          "isText": true
+        },
+        "layer": 2,
+        "col": 1
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Harbor_word",
+          "name": "Bay",
+          "type": "filler",
+          "image": null,
+          "isText": true
         },
         "layer": 1,
         "col": 1
@@ -92,9 +123,9 @@
       {
         "row": 0,
         "card": {
-          "category": "Defense_word",
-          "name": "Patrol",
-          "type": "regular",
+          "category": "Harbor_word",
+          "name": "Vessel",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -104,116 +135,20 @@
       {
         "row": 0,
         "card": {
-          "category": "Cleaning",
-          "name": "Broom",
+          "category": "Chess_word",
+          "name": "Bishop",
           "type": "regular",
-          "image": "res/Item/cleaning_broom_1.png",
-          "isText": false
+          "image": null,
+          "isText": true
         },
-        "layer": 0,
+        "layer": 2,
         "col": 2
       },
       {
         "row": 0,
         "card": {
-          "category": "Cleaning",
-          "name": "Duster",
-          "type": "regular",
-          "image": "res/Item/cleaning_duster_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Defense_word",
-          "name": "Guard",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cleaning",
-          "name": "Sponge",
-          "type": "regular",
-          "image": "res/Item/cleaning_sponge_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Racing_word",
-          "name": "Finish",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Fame_word",
-          "name": "Famous",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Sumo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Bin",
-          "type": "regular",
-          "image": "res/Item/cleaning_bin_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Judo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Snowy owl",
+          "category": "No bones_word",
+          "name": "Spider",
           "type": "filler",
           "image": null,
           "isText": true
@@ -222,274 +157,418 @@
         "col": 2
       },
       {
-        "row": 1,
+        "row": 0,
         "card": {
-          "category": "Combat_word",
-          "name": "Kung fu",
+          "category": "Drupes",
+          "name": "Apricot",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camping_word",
-          "name": "Campfire",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Racing_word",
-          "name": "Pit stop",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Mop",
-          "type": "regular",
-          "image": "res/Item/cleaning_mop_2.png",
+          "image": "res/Item/drupes_apricot_1.png",
           "isText": false
         },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Savate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Crown_word",
-          "name": "King",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Combat_word",
-          "name": "Karate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Kerosene",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Sledding",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Crown_word",
-          "name": "Emperor",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Defense_word",
-          "name": "Security",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
         "col": 2
       },
       {
-        "row": 2,
+        "row": 0,
         "card": {
-          "category": "Fame_word",
-          "name": "Popular",
+          "category": "Explorer_word",
+          "name": "Vespucci",
           "type": "regular",
           "image": null,
           "isText": true
         },
-        "layer": 1,
+        "layer": 2,
         "col": 3
       },
       {
-        "row": 2,
+        "row": 0,
         "card": {
-          "category": "Sliding_word",
-          "name": "Skating",
+          "category": "Picnic",
+          "name": "Blanket",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Cozy_word",
-          "name": "Snug",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Skeleton",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Zodiac",
-          "name": "Aries",
-          "type": "filler",
-          "image": "res/Item/zodiac_aries_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Justice_word",
-          "name": "Law",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Camping_word",
-          "name": "Tent",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Defense_word",
-          "name": "CCTV",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fame_word",
-          "name": "Iconic",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Justice_word",
-          "name": "Court",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Cleaning",
-          "name": "Vacuum",
-          "type": "regular",
-          "image": "res/Item/cleaning_vacuum_3.png",
+          "image": "res/Item/picnic_blanket_1.png",
           "isText": false
         },
         "layer": 1,
         "col": 3
       },
       {
+        "row": 0,
+        "card": {
+          "category": "Ballet_word",
+          "name": "Barre",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Folklore",
+          "name": "Troll",
+          "type": "regular",
+          "image": "res/Item/folklore_troll_1.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 4
+      },
+      {
+        "row": 0,
+        "card": {
+          "category": "Landmark_word",
+          "name": "Big Ben",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Build",
+          "name": "Factory",
+          "type": "regular",
+          "image": "res/Item/build_factory_6.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Leader_word",
+          "name": "Lincoln",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Chess_word",
+          "name": "Rook",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 1
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Leader_word",
+          "name": "Kennedy",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Chess_word",
+          "name": "Queen",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 2
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Leader_word",
+          "name": "Obama",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Build",
+          "name": "Stadium",
+          "type": "regular",
+          "image": "res/Item/build_stadium_7.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 3
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Leader_word",
+          "name": "Biden",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Chess_word",
+          "name": "Pawn",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 4
+      },
+      {
+        "row": 1,
+        "card": {
+          "category": "Footwear_word",
+          "name": "Loafers",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Pills_word",
+          "name": "Lozenges",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Landmark_word",
+          "name": "Colosseum",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Build",
+          "name": "School building",
+          "type": "regular",
+          "image": "res/Item/build_schoolbuilding_4.png",
+          "isText": false
+        },
+        "layer": 2,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Footwear_word",
+          "name": "Uggs",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Footwear_word",
+          "name": "Sandals",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Folklore",
+          "name": "Ogre",
+          "type": "regular",
+          "image": "res/Item/folklore_ogre_3.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 2
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Footwear_word",
+          "name": "Clogs",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Build",
+          "name": "Museum",
+          "type": "regular",
+          "image": "res/Item/build_museum_2.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 3
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Landmark_word",
+          "name": "Pyramids",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 3
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Build",
+          "name": "Hospital",
+          "type": "regular",
+          "image": "res/Item/build_hospital_3.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 4
+      },
+      {
+        "row": 2,
+        "card": {
+          "category": "Landmark_word",
+          "name": "Sphinx",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 4
+      },
+      {
         "row": 3,
         "card": {
-          "category": "Gym_word",
-          "name": "Dumbbell",
+          "category": "Explorer_word",
+          "name": "Columbus",
+          "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Makeup_word",
+          "name": "Palette",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 0
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Pastry",
+          "name": "Cake",
+          "type": "filler",
+          "image": "res/Item/pastry_cake_3.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 1
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Makeup_word",
+          "name": "Serum",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 1
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Build",
+          "name": "Mall",
+          "type": "regular",
+          "image": "res/Item/build_mall_8.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 2
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Warriors_word",
+          "name": "Samurai",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 0,
+        "col": 2
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Build",
+          "name": "Hotel",
+          "type": "regular",
+          "image": "res/Item/build_hotel_5.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 3
+      },
+      {
+        "row": 3,
+        "card": {
+          "category": "Rice_word",
+          "name": "Paella",
           "type": "filler",
           "image": null,
           "isText": true
@@ -500,9 +579,9 @@
       {
         "row": 3,
         "card": {
-          "category": "Gym_word",
-          "name": "Barbell",
-          "type": "filler",
+          "category": "Pills_word",
+          "name": "Tablets",
+          "type": "regular",
           "image": null,
           "isText": true
         },
@@ -512,9 +591,9 @@
       {
         "row": 3,
         "card": {
-          "category": "Gym_word",
-          "name": "Air bike",
-          "type": "filler",
+          "category": "Footwear_word",
+          "name": "Sneakers",
+          "type": "regular",
           "image": null,
           "isText": true
         },
@@ -524,9 +603,21 @@
       {
         "row": 4,
         "card": {
-          "category": "Crown_word",
-          "name": "Maharaja",
+          "category": "Explorer_word",
+          "name": "Magellan",
           "type": "regular",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 0
+      },
+      {
+        "row": 4,
+        "card": {
+          "category": "Rice_word",
+          "name": "Congee",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -536,10 +627,10 @@
       {
         "row": 4,
         "card": {
-          "category": "Cleaning",
-          "name": "Bucket",
-          "type": "regular",
-          "image": "res/Item/cleaning_bucket_6.png",
+          "category": "Picnic",
+          "name": "Sandwich",
+          "type": "filler",
+          "image": "res/Item/picnic_sandwich_3.png",
           "isText": false
         },
         "layer": 1,
@@ -548,8 +639,8 @@
       {
         "row": 4,
         "card": {
-          "category": "Fuels_word",
-          "name": "Gasoline",
+          "category": "Sculpt_word",
+          "name": "Bust",
           "type": "filler",
           "image": null,
           "isText": true
@@ -560,8 +651,8 @@
       {
         "row": 4,
         "card": {
-          "category": "Arctic_word",
-          "name": "Walrus",
+          "category": "Harbor_word",
+          "name": "Pier",
           "type": "filler",
           "image": null,
           "isText": true
@@ -572,8 +663,8 @@
       {
         "row": 4,
         "card": {
-          "category": "Dairy_word",
-          "name": "Yogurt",
+          "category": "PhD_word",
+          "name": "Thesis",
           "type": "filler",
           "image": null,
           "isText": true
@@ -584,9 +675,21 @@
       {
         "row": 4,
         "card": {
-          "category": "Camping_word",
-          "name": "Hammock",
-          "type": "regular",
+          "category": "Rice_word",
+          "name": "Risotto",
+          "type": "filler",
+          "image": null,
+          "isText": true
+        },
+        "layer": 1,
+        "col": 3
+      },
+      {
+        "row": 4,
+        "card": {
+          "category": "PhD_word",
+          "name": "Degree",
+          "type": "filler",
           "image": null,
           "isText": true
         },
@@ -596,9 +699,21 @@
       {
         "row": 4,
         "card": {
-          "category": "Fuels_word",
-          "name": "Coal",
-          "type": "filler",
+          "category": "Folklore",
+          "name": "Goblin",
+          "type": "regular",
+          "image": "res/Item/folklore_goblin_2.png",
+          "isText": false
+        },
+        "layer": 1,
+        "col": 4
+      },
+      {
+        "row": 4,
+        "card": {
+          "category": "Footwear_word",
+          "name": "Slippers",
+          "type": "regular",
           "image": null,
           "isText": true
         },
