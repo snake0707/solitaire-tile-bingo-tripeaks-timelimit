@@ -41,18 +41,24 @@
 
 <script>
 (function () {
-  // ── Build itemIdMap from CATEGORIES ──────────────────────────────
-  // Maps item.id → { category (key), name, image, isText }
-  const itemIdMap = {};
+  // ── Build ID maps from CATEGORIES ──────────────────────────────
+  // basicIdMap: config basic card ID (e.g. "ASIA_WORD_LANDMASS_10") → item info
+  // catConfigIdMap: config category ID (e.g. "WORD_LANDMASS_10") → { catKey, catObj }
+  const basicIdMap = {};
+  const catConfigIdMap = {};
   for (const [catKey, catObj] of Object.entries(CATEGORIES)) {
+    if (catObj.configId) {
+      catConfigIdMap[catObj.configId] = { catKey, catObj };
+    }
     for (const item of catObj.items) {
-      itemIdMap[item.id] = {
-        category: catObj.name,
-        categoryKey: catKey,
-        name: item.name,
-        image: item.image,
-        isText: catObj.isText
-      };
+      if (item.configId) {
+        basicIdMap[item.configId] = {
+          categoryKey: catKey,
+          name: item.name,
+          image: item.image,
+          isText: catObj.isText
+        };
+      }
     }
   }
 
@@ -248,22 +254,32 @@
     }
 
     // Determine active categories from category_content
-    // category_content entries are category keys (e.g., "Folklore")
-    // We need to resolve them to category names
-    const activeCategoryNames = new Set();
+    // category_content entries are config category IDs (e.g., "WORD_BOOK_9")
+    // or category keys (e.g., "Book_word") as fallback
+    const activeCatKeys = new Set();
+    const resolvedCatEntries = []; // ordered cat keys for handPile
     for (const catEntry of categoryContent) {
-      const catObj = CATEGORIES[catEntry];
-      if (catObj) {
-        activeCategoryNames.add(catObj.name);
+      let catKey, catObj;
+      if (catConfigIdMap[catEntry]) {
+        // Match by config category ID
+        catKey = catConfigIdMap[catEntry].catKey;
+        catObj = catConfigIdMap[catEntry].catObj;
+      } else if (CATEGORIES[catEntry]) {
+        // Match by category key
+        catKey = catEntry;
+        catObj = CATEGORIES[catEntry];
       } else {
         // Try treating as a category name directly
-        const found = Object.values(CATEGORIES).find(c => c.name === catEntry);
+        const found = Object.entries(CATEGORIES).find(([, c]) => c.name === catEntry);
         if (found) {
-          activeCategoryNames.add(found.name);
+          catKey = found[0];
+          catObj = found[1];
         } else {
           throw new Error('Unknown category in category_content: "' + catEntry + '"');
         }
       }
+      activeCatKeys.add(catKey);
+      resolvedCatEntries.push(catKey);
     }
 
     // Build cards array
@@ -280,14 +296,14 @@
 
       for (let j = 0; j < subArr.length; j++) {
         const itemId = subArr[j];
-        const info = itemIdMap[itemId];
+        const info = basicIdMap[itemId];
         if (!info) {
           throw new Error('Unknown item ID "' + itemId + '" at card_content[' + i + '][' + j + ']');
         }
 
         // Layer: index 0 = topmost = highest layer number
         const layer = (subArr.length - 1) - j;
-        const isActive = activeCategoryNames.has(info.category);
+        const isActive = activeCatKeys.has(info.categoryKey);
         const type = isActive ? 'regular' : 'filler';
 
         cards.push({
@@ -296,7 +312,7 @@
           col: c,
           card: {
             type: type,
-            category: info.category,
+            category: info.categoryKey,
             name: info.name,
             image: info.image,
             isText: info.isText
@@ -304,23 +320,20 @@
         });
 
         if (isActive) {
-          categoryTargets[info.category] = (categoryTargets[info.category] || 0) + 1;
+          categoryTargets[info.categoryKey] = (categoryTargets[info.categoryKey] || 0) + 1;
         }
       }
     }
 
-    // Build handPile from category_content
+    // Build handPile from resolved category entries
     // category_content[0] = first card player sees when flipping
     // handPile uses pop(), so reverse so that first entry ends up on top
     const handPile = [];
-    for (const catEntry of categoryContent) {
-      let catObj = CATEGORIES[catEntry];
-      if (!catObj) {
-        catObj = Object.values(CATEGORIES).find(c => c.name === catEntry);
-      }
+    for (const catKey of resolvedCatEntries) {
+      const catObj = CATEGORIES[catKey];
       handPile.push({
         type: 'gold',
-        category: catObj.name,
+        category: catKey,
         name: catObj.name,
         isText: catObj.isText
       });

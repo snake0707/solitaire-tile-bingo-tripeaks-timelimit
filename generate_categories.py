@@ -162,6 +162,7 @@ def main():
                 'image': image,
                 'name': item_name,
                 'id': item_id,
+                'configId': cid,
             })
 
         if items:
@@ -169,6 +170,7 @@ def main():
                 'isText': is_text,
                 'items': items,
                 'name': cat_display_name,
+                'configId': cat_id,
             }
             print("  %s: %d items (isText=%s)" % (cat_key, len(items), is_text))
 
