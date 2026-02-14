@@ -1072,6 +1072,9 @@ class Game {
             lines.push({ type: 'diag', index: 0, cells: [0,1,2,3,4].map(i => [i, i]) });
         if ([0,1,2,3,4].every(i => this.cleared[i][4 - i]))
             lines.push({ type: 'diag', index: 1, cells: [0,1,2,3,4].map(i => [i, 4 - i]) });
+        // Four corners
+        if (this.cleared[0][0] && this.cleared[0][4] && this.cleared[4][0] && this.cleared[4][4])
+            lines.push({ type: 'corners', index: 0, cells: [[0,0],[0,4],[4,0],[4,4]] });
         return lines;
     }
 
