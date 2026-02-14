@@ -1,664 +1,532 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Justice_word",
-        "name": "Justice",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Sliding_word",
-        "name": "Sliding",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Deck",
-        "name": "Deck",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Luxury_word",
-        "name": "Luxury",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Combat_word",
-        "name": "Combat",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Cozy_word",
-        "name": "Cozy",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Gym_word",
-        "name": "Gym",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 4,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 135
-    },
-    "categoryTargets": {
-      "Deck": 3,
-      "Cozy_word": 3,
-      "Gym_word": 3,
-      "Justice_word": 4,
-      "Sliding_word": 5,
-      "Luxury_word": 4,
-      "Combat_word": 6
+      "maxSlots": 2,
+      "timeLimit": 135,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Unite_word",
-          "name": "Union",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Gasoline",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Skiing",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Combat_word",
-          "name": "Kung fu",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Luxury_word",
-          "name": "Yacht",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Diesel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Zodiac",
-          "name": "Gemini",
-          "type": "filler",
-          "image": "res/Item/zodiac_gemini_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Reindeer",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Deck",
-          "name": "Ace of Hearts",
-          "type": "regular",
-          "image": "res/Item/deck_aceofhearts_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Snowy owl",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Deck",
-          "name": "Queen hearts",
-          "type": "regular",
-          "image": "res/Item/deck_queenhearts_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Walrus",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Luxury_word",
-          "name": "Jewelry",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Judo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gym_word",
-          "name": "Barbell",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Street_word",
-          "name": "Bike",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Street_word",
-          "name": "Corner",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Zodiac",
-          "name": "Aries",
-          "type": "filler",
-          "image": "res/Item/zodiac_aries_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gym_word",
-          "name": "Dumbbell",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Legends_word",
-          "name": "Fable",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Legends_word",
-          "name": "Epic",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Legends_word",
-          "name": "Saga",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Gym_word",
-          "name": "Air bike",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Justice_word",
-          "name": "Law",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Street_word",
-          "name": "Driver",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Toolbox",
-          "name": "Adhesive tape",
-          "type": "filler",
-          "image": "res/Item/toolbox_adhesivetape_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Combat_word",
-          "name": "Savate",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Toolbox",
-          "name": "Drill",
-          "type": "filler",
-          "image": "res/Item/toolbox_drill_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Combat_word",
           "name": "Silat",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 2,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Lie_word",
-          "name": "Mislead",
           "type": "filler",
+          "category": "Arctic_word",
+          "name": "Walrus",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Combat_word",
-          "name": "Karate",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Lie_word",
-          "name": "Falsify",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Cozy_word",
-          "name": "Warm",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Sledding",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Cozy_word",
           "name": "Snug",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Unite_word",
-          "name": "Alliance",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Luxury_word",
-          "name": "Caviar",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Veggie",
-          "name": "Potato",
           "type": "filler",
-          "image": "res/Item/veggie_potato_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Arctic_word",
           "name": "Polar bear",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Veggie",
-          "name": "Cabbage",
-          "type": "filler",
-          "image": "res/Item/veggie_cabbage_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Deck",
-          "name": "King hearts",
           "type": "regular",
-          "image": "res/Item/deck_kinghearts_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Luge",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Luxury_word",
-          "name": "Watch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Justice_word",
-          "name": "Gavel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Combat_word",
-          "name": "Sumo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Justice_word",
           "name": "Court",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Cozy_word",
-          "name": "Comfy",
-          "type": "regular",
+          "type": "filler",
+          "category": "Arctic_word",
+          "name": "Reindeer",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Deck",
+          "name": "Queen hearts",
+          "image": "res/Item/deck_queenhearts_3.png",
+          "isText": false
+        }
+      },
+      {
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 4,
         "card": {
-          "category": "Justice_word",
-          "name": "Scales",
           "type": "regular",
+          "category": "Gym_word",
+          "name": "Dumbbell",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "filler",
+          "category": "Zodiac",
+          "name": "Aries",
+          "image": "res/Item/zodiac_aries_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Deck",
+          "name": "King hearts",
+          "image": "res/Item/deck_kinghearts_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Legends_word",
+          "name": "Epic",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
           "category": "Sliding_word",
           "name": "Skating",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 1,
+        "col": 1,
         "card": {
-          "category": "Sliding_word",
-          "name": "Skeleton",
-          "type": "regular",
+          "type": "filler",
+          "category": "Toolbox",
+          "name": "Wrench",
+          "image": "res/Item/toolbox_wrench_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac",
+          "name": "Gemini",
+          "image": "res/Item/zodiac_gemini_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Unite_word",
+          "name": "Alliance",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Luxury_word",
+          "name": "Caviar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Combat_word",
+          "name": "Kung fu",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Luxury_word",
+          "name": "Watch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Navigate_word",
+          "name": "Sextant",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Luxury_word",
+          "name": "Yacht",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Cozy_word",
+          "name": "Warm",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Deck",
+          "name": "Ace of Hearts",
+          "image": "res/Item/deck_aceofhearts_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sliding_word",
+          "name": "Skiing",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Sliding_word",
+          "name": "Luge",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Fuels_word",
+          "name": "Gasoline",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Sliding_word",
+          "name": "Sledding",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Combat_word",
+          "name": "Judo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Fuels_word",
+          "name": "Diesel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Gym_word",
+          "name": "Air bike",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Cozy_word",
+          "name": "Comfy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Combat_word",
+          "name": "Savate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Justice_word",
+          "name": "Law",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sliding_word",
+          "name": "Skeleton",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Gym_word",
+          "name": "Barbell",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Combat_word",
+          "name": "Sumo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Combat_word",
+          "name": "Karate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Justice_word",
+          "name": "Scales",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Luxury_word",
+          "name": "Jewelry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Justice_word",
+          "name": "Gavel",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Combat_word": 6,
+      "Cozy_word": 3,
+      "Justice_word": 4,
+      "Deck": 3,
+      "Gym_word": 3,
+      "Sliding_word": 5,
+      "Luxury_word": 4
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Justice_word",
+        "name": "Justice",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Deck",
+        "name": "Deck",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Luxury_word",
+        "name": "Luxury",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Combat_word",
+        "name": "Combat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cozy_word",
+        "name": "Cozy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gym_word",
+        "name": "Gym",
+        "isText": true
       }
     ],
     "handDisplay": []

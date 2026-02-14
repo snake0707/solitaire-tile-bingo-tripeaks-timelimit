@@ -1,1158 +1,978 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Artifact_word",
-        "name": "Artifact",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Skincare_word",
-        "name": "Skincare",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Genetics_word",
-        "name": "Genetics",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "House_word",
-        "name": "House",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Drinks",
-        "name": "Drinks",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Birds_word",
-        "name": "Birds",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Medieval_word",
-        "name": "Medieval",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Shapes",
-        "name": "Shapes",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Singing_word",
-        "name": "Singing",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 4,
       "bingosNeeded": 3,
-      "timeLimit": 165
-    },
-    "categoryTargets": {
-      "Birds_word": 8,
-      "Shapes": 3,
-      "Artifact_word": 6,
-      "Singing_word": 8,
-      "Drinks": 4,
-      "Genetics_word": 3,
-      "Skincare_word": 8,
-      "House_word": 3,
-      "Medieval_word": 4
+      "maxSlots": 3,
+      "timeLimit": 165,
+      "penaltyTime": 4
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Birds_word",
-          "name": "Eagle",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Singing_word",
-          "name": "Melody",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 2,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Skincare_word",
-          "name": "Texture",
-          "type": "regular",
+          "type": "filler",
+          "category": "Canines_word",
+          "name": "Jackal",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Artifact_word",
-          "name": "Vase",
-          "type": "regular",
+          "type": "filler",
+          "category": "Organs_word",
+          "name": "Heart",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Medieval_word",
-          "name": "Castle",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Birds_word",
-          "name": "Owl",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Birds_word",
-          "name": "Dove",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Skincare_word",
-          "name": "Blemish",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sailor",
-          "name": "Storm",
           "type": "filler",
-          "image": "res/Item/sailor_storm_3.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Organs_word",
-          "name": "Pancreas",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Organs_word",
-          "name": "Stomach",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Organs_word",
-          "name": "Spleen",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Luxury",
-          "name": "Jewelry",
-          "type": "filler",
-          "image": "res/Item/luxury_jewelry_1.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Organs_word",
-          "name": "Lungs",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
           "category": "Organs_word",
           "name": "Liver",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 3
+        }
       },
       {
+        "layer": 2,
         "row": 0,
+        "col": 1,
         "card": {
-          "category": "Lessons_word",
-          "name": "Geometry",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Shapes",
-          "name": "Oval",
           "type": "regular",
-          "image": "res/Item/shapes_oval_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Birds_word",
-          "name": "Swan",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Genetics_word",
-          "name": "Gene",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Castle_word",
-          "name": "Rampart",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Luxury",
-          "name": "Yacht",
-          "type": "filler",
-          "image": "res/Item/luxury_yacht_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Luxury",
-          "name": "Private jet",
-          "type": "filler",
-          "image": "res/Item/luxury_privatejet_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Luxury",
-          "name": "Classic handbag",
-          "type": "filler",
-          "image": "res/Item/luxury_classichandbag_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Drinks",
-          "name": "Juice",
-          "type": "regular",
-          "image": "res/Item/drinks_juice_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Singing_word",
-          "name": "Aria",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Artifact_word",
-          "name": "Insignia",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Medieval_word",
-          "name": "Kingdom",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pyramids_word",
-          "name": "Ramses",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Tarot",
-          "name": "Fool",
-          "type": "filler",
-          "image": "res/Item/tarot_fool_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Tarot",
-          "name": "Moon",
-          "type": "filler",
-          "image": "res/Item/tarot_moon_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Tarot",
-          "name": "Magician",
-          "type": "filler",
-          "image": "res/Item/tarot_magician_3.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gaits_word",
-          "name": "Trot",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gaits_word",
-          "name": "Canter",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gaits_word",
-          "name": "Gallop",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Drinks",
-          "name": "Soda",
-          "type": "regular",
-          "image": "res/Item/drinks_soda_1.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Artifact_word",
-          "name": "Amulet",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Artifact_word",
-          "name": "Sigil",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Skincare_word",
-          "name": "Cleanser",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Medieval_word",
-          "name": "Knight",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Carriage_word",
-          "name": "Harness",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Earth_word",
-          "name": "Core",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Dungeon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Birds_word",
-          "name": "Heron",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Singing_word",
-          "name": "Soloist",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Genetics_word",
-          "name": "DNA",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Shapes",
-          "name": "Square",
-          "type": "regular",
-          "image": "res/Item/shapes_square_2.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Tower",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Turret",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Bastion",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Saw_word",
-          "name": "Teeth",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Citadel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Stroller",
-          "type": "filler",
-          "image": "res/Item/babies_stroller_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Car seat",
-          "type": "filler",
-          "image": "res/Item/babies_carseat_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Singing_word",
-          "name": "Song",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Skincare_word",
-          "name": "Toner",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "House_word",
-          "name": "Villa",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Saw_word",
-          "name": "Blade",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Babies",
-          "name": "Crib",
-          "type": "filler",
-          "image": "res/Item/babies_crib_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Canines_word",
-          "name": "Wolf",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Birds_word",
-          "name": "Robin",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Birds_word",
-          "name": "Finch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Singing_word",
-          "name": "Humming",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Skincare_word",
-          "name": "Peptides",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Medieval_word",
           "name": "Lord",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 2
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Canines_word",
-          "name": "Dhole",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Canines_word",
-          "name": "Fox",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Lessons_word",
-          "name": "Calculus",
-          "type": "filler",
+          "name": "Algebra",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 3
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Nuclear_word",
-          "name": "Proton",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sailor",
-          "name": "Rope",
-          "type": "filler",
-          "image": "res/Item/sailor_rope_1.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Birds_word",
-          "name": "Vulture",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Artifact_word",
-          "name": "Totem",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Singing_word",
-          "name": "Timbre",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drinks",
-          "name": "Lemonade",
-          "type": "regular",
-          "image": "res/Item/drinks_lemonade_3.png",
+          "type": "filler",
+          "category": "Luxury",
+          "name": "Private jet",
+          "image": "res/Item/luxury_privatejet_5.png",
           "isText": false
-        },
-        "layer": 3,
-        "col": 0
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "regular",
+          "category": "House_word",
+          "name": "Villa",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Luxury",
+          "name": "Watch",
+          "image": "res/Item/luxury_watch_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Pyramids_word",
+          "name": "Anubis",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
           "category": "House_word",
           "name": "Mansion",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 0
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "House_word",
-          "name": "Palace",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Skincare_word",
-          "name": "Pores",
           "type": "regular",
+          "category": "Singing_word",
+          "name": "Soloist",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Texture",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Shapes",
+          "name": "Oval",
+          "image": "res/Item/shapes_oval_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Aria",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Genetics_word",
+          "name": "Gene",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Shapes",
           "name": "Circle",
-          "type": "regular",
           "image": "res/Item/shapes_circle_1.png",
           "isText": false
-        },
-        "layer": 3,
-        "col": 1
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 1,
+        "col": 0,
         "card": {
+          "type": "filler",
+          "category": "Gaits_word",
+          "name": "Trot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Gaits_word",
+          "name": "Gallop",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Medieval_word",
+          "name": "Castle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Carriage_word",
+          "name": "Reins",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Carriage_word",
+          "name": "Coachman",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Earth_word",
+          "name": "Core",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Carriage_word",
+          "name": "Harness",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Castle_word",
+          "name": "Rampart",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Robin",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Eagle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Timbre",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Shapes",
+          "name": "Square",
+          "image": "res/Item/shapes_square_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Humming",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Toner",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Violins_word",
+          "name": "Fret",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Castle_word",
+          "name": "Bastion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Castle_word",
+          "name": "Tower",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Finch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Babies",
+          "name": "Crib",
+          "image": "res/Item/babies_crib_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Canines_word",
+          "name": "Dingo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Genetics_word",
           "name": "Genome",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 1
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Singing_word",
-          "name": "Pitch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 2,
         "card": {
-          "category": "Skincare_word",
-          "name": "Retinol",
-          "type": "regular",
+          "type": "filler",
+          "category": "Canines_word",
+          "name": "Dhole",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 2,
         "card": {
-          "category": "Sailor",
-          "name": "Knot",
           "type": "filler",
-          "image": "res/Item/sailor_knot_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Violins_word",
-          "name": "Paganini",
-          "type": "filler",
+          "category": "Canines_word",
+          "name": "Fox",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "House_word",
+          "name": "Palace",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 3,
         "card": {
-          "category": "Violins_word",
-          "name": "Luthier",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Lessons_word",
-          "name": "Biology",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Concrete_word",
-          "name": "Trowel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Saw_word",
-          "name": "Notch",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drinks",
-          "name": "Espresso",
           "type": "regular",
-          "image": "res/Item/drinks_espresso_2.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Singing_word",
-          "name": "Choir",
-          "type": "regular",
+          "category": "Birds_word",
+          "name": "Owl",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 2,
+        "col": 3,
         "card": {
+          "type": "regular",
           "category": "Artifact_word",
           "name": "Relic",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 2,
+        "col": 4,
         "card": {
-          "category": "Skincare_word",
-          "name": "Serum",
           "type": "regular",
+          "category": "Drinks",
+          "name": "Juice",
+          "image": "res/Item/drinks_juice_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Choir",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Artifact_word",
+          "name": "Totem",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Drinks",
+          "name": "Soda",
+          "image": "res/Item/drinks_soda_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Vulture",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Cleanser",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Heron",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Artifact_word",
+          "name": "Insignia",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Genetics_word",
+          "name": "DNA",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Drinks",
+          "name": "Lemonade",
+          "image": "res/Item/drinks_lemonade_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Artifact_word",
+          "name": "Vase",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Pores",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Drinks",
+          "name": "Espresso",
+          "image": "res/Item/drinks_espresso_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Dove",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Serum",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Blemish",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Melody",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Artifact_word",
+          "name": "Amulet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Birds_word",
+          "name": "Swan",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Nuclear_word",
+          "name": "Proton",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Sailor",
+          "name": "Rope",
+          "image": "res/Item/sailor_rope_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Pitch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Violins_word",
+          "name": "Luthier",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Violins_word",
+          "name": "Paganini",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Castle_word",
+          "name": "Turret",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Saw_word",
+          "name": "Blade",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Saw_word",
+          "name": "Notch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Medieval_word",
+          "name": "Kingdom",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Singing_word",
+          "name": "Song",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Artifact_word",
+          "name": "Sigil",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Medieval_word",
+          "name": "Knight",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Peptides",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Skincare_word",
+          "name": "Retinol",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Medieval_word": 4,
+      "House_word": 3,
+      "Singing_word": 8,
+      "Skincare_word": 8,
+      "Shapes": 3,
+      "Genetics_word": 3,
+      "Birds_word": 8,
+      "Artifact_word": 6,
+      "Drinks": 4
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Artifact_word",
+        "name": "Artifact",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Skincare_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Genetics_word",
+        "name": "Genetics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "House_word",
+        "name": "House",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Drinks",
+        "name": "Drinks",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Birds_word",
+        "name": "Birds",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Medieval_word",
+        "name": "Medieval",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shapes",
+        "name": "Shapes",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Singing_word",
+        "name": "Singing",
+        "isText": true
       }
     ],
     "handDisplay": []

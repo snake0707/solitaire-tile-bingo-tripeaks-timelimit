@@ -1,530 +1,398 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Secret_word",
-        "name": "Secret",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Message_word",
-        "name": "Message",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Meals_word",
-        "name": "Meals",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Present_word",
-        "name": "Present",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Sports",
-        "name": "Sports",
-        "type": "gold",
-        "isText": false
-      }
-    ],
     "config": {
-      "maxSlots": 3,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 105
-    },
-    "categoryTargets": {
-      "Message_word": 4,
-      "Present_word": 3,
-      "Secret_word": 3,
-      "Sports": 8,
-      "Meals_word": 3
+      "maxSlots": 2,
+      "timeLimit": 105,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Meals_word",
-          "name": "Supper",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Play",
-          "name": "Cello",
-          "type": "filler",
-          "image": "res/Item/play_cello_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Present_word",
-          "name": "Today",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Driving_word",
-          "name": "Sign",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sports",
-          "name": "Curling",
-          "type": "regular",
-          "image": "res/Item/sports_curling_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Movement_word",
-          "name": "Jump",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Date_word",
-          "name": "Couple",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Articles_word",
-          "name": "Opinion",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sports",
-          "name": "Soccer",
-          "type": "regular",
-          "image": "res/Item/sports_soccer_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Message_word",
-          "name": "Email",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Date_word",
-          "name": "Flowers",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Sombrero",
-          "type": "filler",
-          "image": "res/Item/hats_sombrero_7.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Wreath_word",
-          "name": "Triumph",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Panama hat",
-          "type": "filler",
-          "image": "res/Item/hats_panamahat_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Beret",
-          "type": "filler",
-          "image": "res/Item/hats_beret_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Autumn",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Cap",
-          "type": "filler",
-          "image": "res/Item/hats_cap_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Date_word",
-          "name": "Tuxedo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sports",
-          "name": "Rugby",
-          "type": "regular",
-          "image": "res/Item/sports_rugby_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Secret_word",
-          "name": "Code",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sports",
-          "name": "Tennis",
-          "type": "regular",
-          "image": "res/Item/sports_tennis_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Snow_word",
-          "name": "Iceberg",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Winter",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fishing_word",
-          "name": "Bobber",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Message_word",
-          "name": "Letter",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Movement_word",
-          "name": "Walk",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Present_word",
-          "name": "Current",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Message_word",
-          "name": "Text",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Meals_word",
-          "name": "Lunch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Secret_word",
-          "name": "Word",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sports",
-          "name": "Boxing",
-          "type": "regular",
-          "image": "res/Item/sports_boxing_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sports",
-          "name": "Table Tennis",
-          "type": "regular",
-          "image": "res/Item/sports_tabletennis_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sports",
-          "name": "Hockey",
-          "type": "regular",
-          "image": "res/Item/sports_hockey_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Secret_word",
-          "name": "Agent",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Sports",
-          "name": "Golf",
-          "type": "regular",
-          "image": "res/Item/sports_golf_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Present_word",
-          "name": "Now",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Hats",
-          "name": "Turban",
-          "type": "filler",
-          "image": "res/Item/hats_turban_6.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Summer",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Message_word",
           "name": "Fax",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Meals_word",
-          "name": "Dinner",
-          "type": "regular",
+          "type": "filler",
+          "category": "Movement_word",
+          "name": "Jump",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Play",
+          "name": "Guitar",
+          "image": "res/Item/play_guitar_7.png",
+          "isText": false
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Snow_word",
+          "name": "Iceberg",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Present_word",
+          "name": "Now",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Meals_word",
+          "name": "Dinner",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Message_word",
+          "name": "Text",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Secret_word",
+          "name": "Agent",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Rugby",
+          "image": "res/Item/sports_rugby_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Play",
+          "name": "Organ",
+          "image": "res/Item/play_organ_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Secret_word",
+          "name": "Word",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Message_word",
+          "name": "Email",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Tennis",
+          "image": "res/Item/sports_tennis_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Present_word",
+          "name": "Today",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Table Tennis",
+          "image": "res/Item/sports_tabletennis_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Meals_word",
+          "name": "Supper",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Hats",
+          "name": "Hat",
+          "image": "res/Item/hats_hat_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Driving_word",
+          "name": "Traffic",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Soccer",
+          "image": "res/Item/sports_soccer_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Boxing",
+          "image": "res/Item/sports_boxing_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Curling",
+          "image": "res/Item/sports_curling_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Present_word",
+          "name": "Current",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Meals_word",
+          "name": "Lunch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Play",
+          "name": "Violin",
+          "image": "res/Item/play_violin_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Message_word",
+          "name": "Letter",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Driving_word",
+          "name": "Car",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Hockey",
+          "image": "res/Item/sports_hockey_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sports",
+          "name": "Golf",
+          "image": "res/Item/sports_golf_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Secret_word",
+          "name": "Code",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Message_word": 4,
+      "Present_word": 3,
+      "Meals_word": 3,
+      "Secret_word": 3,
+      "Sports": 8
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Secret_word",
+        "name": "Secret",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Message_word",
+        "name": "Message",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meals_word",
+        "name": "Meals",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Present_word",
+        "name": "Present",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sports",
+        "name": "Sports",
+        "isText": false
       }
     ],
     "handDisplay": []

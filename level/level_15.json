@@ -1,808 +1,592 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Berry_word",
-        "name": "Berry",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Spiky_word",
-        "name": "Spiky",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Dogs",
-        "name": "Dogs",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Priest_word",
-        "name": "Priest",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Division_word",
-        "name": "Division",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Jobs_word",
-        "name": "Jobs",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "New York_word",
-        "name": "New York",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 150
-    },
-    "categoryTargets": {
-      "Dogs": 5,
-      "New York_word": 6,
-      "Berry_word": 3,
-      "Spiky_word": 3,
-      "Division_word": 4,
-      "Priest_word": 4,
-      "Jobs_word": 8
+      "maxSlots": 2,
+      "timeLimit": 150,
+      "penaltyTime": 3
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Engineer",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Doctor",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Division_word",
-          "name": "City",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dogs",
-          "name": "Spaniel",
-          "type": "regular",
-          "image": "res/Item/dogs_spaniel_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Horror",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Comedy",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Priest_word",
-          "name": "Bible",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "New York_word",
-          "name": "Astoria",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Berry_word",
-          "name": "Barberry",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Drama",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Ship_word",
-          "name": "Galleon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Popcorn",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Ship_word",
-          "name": "Tanker",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Ship_word",
-          "name": "Tugboat",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Cactus",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Muscles_word",
-          "name": "Biceps",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Muscles_word",
-          "name": "Abs",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "New York_word",
-          "name": "Soho",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Division_word",
-          "name": "State",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Mailman",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Dogs",
-          "name": "Poodle",
-          "type": "regular",
-          "image": "res/Item/dogs_poodle_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "New York_word",
-          "name": "Queens",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Berry_word",
-          "name": "Mulberry",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Muscles_word",
-          "name": "Triceps",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Meditate_word",
-          "name": "Mantra",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Priest_word",
-          "name": "Saint",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Meditate_word",
-          "name": "Peace",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hippie_word",
-          "name": "Freedom",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Hippie_word",
-          "name": "Vans",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Eats",
-          "name": "Fries",
-          "type": "filler",
-          "image": "res/Item/eats_fries_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build",
-          "name": "School building",
-          "type": "filler",
-          "image": "res/Item/build_schoolbuilding_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Dogs",
-          "name": "Terrier",
-          "type": "regular",
-          "image": "res/Item/dogs_terrier_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build",
-          "name": "Factory",
-          "type": "filler",
-          "image": "res/Item/build_factory_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Clogs",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "New York_word",
           "name": "Harlem",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 2,
-        "card": {
-          "category": "Division_word",
-          "name": "Region",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Airport_word",
-          "name": "Terminal",
           "type": "filler",
+          "category": "Muscles_word",
+          "name": "Abs",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Footwear_word",
-          "name": "Loafers",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "New York_word",
-          "name": "Bronx",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Big Ben",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dogs",
-          "name": "Beagle",
-          "type": "regular",
-          "image": "res/Item/dogs_beagle_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Pyramids",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Priest_word",
-          "name": "Preacher",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Chess_word",
-          "name": "Rook",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Durian",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Actor",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Division_word",
-          "name": "Country",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Nurse",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "New York_word",
-          "name": "Tribeca",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Slippers",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pills_word",
-          "name": "Lozenges",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Berry_word",
-          "name": "Bilberry",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Explorer_word",
-          "name": "Magellan",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Dogs",
-          "name": "Husky",
-          "type": "regular",
-          "image": "res/Item/dogs_husky_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Explorer_word",
-          "name": "Vespucci",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Priest_word",
-          "name": "Cleric",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Pilot",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Build",
-          "name": "Museum",
-          "type": "filler",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Folklore",
-          "name": "Goblin",
-          "type": "filler",
-          "image": "res/Item/folklore_goblin_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Hedgehog",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Jobs_word",
           "name": "Welder",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Jobs_word",
-          "name": "Plumber",
-          "type": "regular",
+          "type": "filler",
+          "category": "Meditate_word",
+          "name": "Breath",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Plumber",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Hippie_word",
+          "name": "Commune",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Division_word",
+          "name": "Country",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Airport_word",
+          "name": "Terminal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Division_word",
+          "name": "State",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Build",
+          "name": "Library",
+          "image": "res/Item/build_library_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Priest_word",
+          "name": "Cleric",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Footwear_word",
+          "name": "Loafers",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Dogs",
+          "name": "Spaniel",
+          "image": "res/Item/dogs_spaniel_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "New York_word",
+          "name": "Queens",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Engineer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Footwear_word",
+          "name": "Uggs",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Nurse",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Landmark_word",
+          "name": "Colosseum",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Spiky_word",
+          "name": "Cactus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Landmark_word",
+          "name": "Sphinx",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Dogs",
+          "name": "Husky",
+          "image": "res/Item/dogs_husky_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "New York_word",
+          "name": "Astoria",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Doctor",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "New York_word",
+          "name": "Bronx",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Actor",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Division_word",
+          "name": "City",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Mailman",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Spiky_word",
+          "name": "Hedgehog",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Priest_word",
+          "name": "Saint",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Berry_word",
+          "name": "Mulberry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Division_word",
+          "name": "Region",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Berry_word",
+          "name": "Bilberry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Spiky_word",
+          "name": "Durian",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Priest_word",
+          "name": "Preacher",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Dogs",
+          "name": "Poodle",
+          "image": "res/Item/dogs_poodle_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Dogs",
+          "name": "Beagle",
+          "image": "res/Item/dogs_beagle_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Berry_word",
+          "name": "Barberry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "New York_word",
+          "name": "Soho",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Explorer_word",
+          "name": "Columbus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "New York_word",
+          "name": "Tribeca",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Explorer_word",
+          "name": "Magellan",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Jobs_word",
+          "name": "Pilot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Priest_word",
+          "name": "Bible",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Dogs",
+          "name": "Terrier",
+          "image": "res/Item/dogs_terrier_1.png",
+          "isText": false
+        }
+      }
+    ],
+    "categoryTargets": {
+      "New York_word": 6,
+      "Jobs_word": 8,
+      "Division_word": 4,
+      "Priest_word": 4,
+      "Dogs": 5,
+      "Spiky_word": 3,
+      "Berry_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Berry_word",
+        "name": "Berry",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dogs",
+        "name": "Dogs",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Priest_word",
+        "name": "Priest",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Division_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Jobs_word",
+        "name": "Jobs",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "New York_word",
+        "name": "New York",
+        "isText": true
       }
     ],
     "handDisplay": []

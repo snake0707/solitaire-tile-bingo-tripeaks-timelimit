@@ -1,470 +1,398 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Hats",
-        "name": "Hats",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Snow_word",
-        "name": "Snow",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Date_word",
-        "name": "Date",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Fishing_word",
-        "name": "Fishing",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Seasons_word",
-        "name": "Seasons",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 3,
       "bingosNeeded": 1,
-      "timeLimit": 105
-    },
-    "categoryTargets": {
-      "Snow_word": 3,
-      "Fishing_word": 3,
-      "Hats": 8,
-      "Date_word": 3,
-      "Seasons_word": 4
+      "maxSlots": 2,
+      "timeLimit": 105,
+      "penaltyTime": 3
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Date_word",
-          "name": "Tuxedo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Chair",
-          "name": "Throne",
-          "type": "filler",
-          "image": "res/Item/chair_throne_2.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
+          "type": "regular",
           "category": "Seasons_word",
           "name": "Summer",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 1
+        }
       },
       {
+        "layer": 1,
         "row": 0,
+        "col": 1,
         "card": {
-          "category": "Chair",
-          "name": "Beanbag",
-          "type": "filler",
-          "image": "res/Item/chair_beanbag_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fame_word",
-          "name": "Renown",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Material_word",
-          "name": "Glass",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fishing_word",
-          "name": "Rod",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Hats",
-          "name": "Turban",
-          "type": "regular",
-          "image": "res/Item/hats_turban_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Citrus_word",
-          "name": "Lime",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Kepi",
-          "type": "regular",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Duster",
-          "type": "filler",
-          "image": "res/Item/cleaning_duster_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Autumn",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Racing_word",
-          "name": "Speedway",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hats",
-          "name": "Cap",
-          "type": "regular",
-          "image": "res/Item/hats_cap_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camping_word",
-          "name": "Hammock",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Snow_word",
-          "name": "Flake",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Winter",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camping_word",
-          "name": "Tent",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Snow_word",
           "name": "Iceberg",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 2,
+        "layer": 0,
+        "row": 0,
+        "col": 1,
         "card": {
+          "type": "filler",
           "category": "Cleaning",
-          "name": "Broom",
-          "type": "filler",
-          "image": "res/Item/cleaning_broom_1.png",
+          "name": "Duster",
+          "image": "res/Item/cleaning_duster_4.png",
           "isText": false
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 2,
-        "card": {
-          "category": "Device_word",
-          "name": "Heater",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Hats",
-          "name": "Visor",
-          "type": "regular",
-          "image": "res/Item/hats_visor_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fame_word",
-          "name": "Popular",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Seasons_word",
-          "name": "Spring",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fishing_word",
-          "name": "Bait",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Hats",
-          "name": "Sombrero",
-          "type": "regular",
-          "image": "res/Item/hats_sombrero_7.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Hats",
-          "name": "Hat",
-          "type": "regular",
-          "image": "res/Item/hats_hat_4.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Hats",
-          "name": "Panama hat",
           "type": "regular",
-          "image": "res/Item/hats_panamahat_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Device_word",
-          "name": "Dryer",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Hats",
           "name": "Beret",
-          "type": "regular",
           "image": "res/Item/hats_beret_2.png",
           "isText": false
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Snow_word",
-          "name": "Sleet",
-          "type": "regular",
+          "type": "filler",
+          "category": "Camping_word",
+          "name": "Tent",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Date_word",
-          "name": "Couple",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Date_word",
-          "name": "Flowers",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Fishing_word",
-          "name": "Bobber",
-          "type": "regular",
+          "name": "Bait",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "regular",
+          "category": "Date_word",
+          "name": "Tuxedo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Seasons_word",
+          "name": "Autumn",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Chair",
+          "name": "Ottoman",
+          "image": "res/Item/chair_ottoman_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Seasons_word",
+          "name": "Winter",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Cap",
+          "image": "res/Item/hats_cap_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
           "category": "Chair",
           "name": "Cushion",
-          "type": "filler",
           "image": "res/Item/chair_cushion_1.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Snow_word",
+          "name": "Flake",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Visor",
+          "image": "res/Item/hats_visor_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Snow_word",
+          "name": "Sleet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Hat",
+          "image": "res/Item/hats_hat_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Kepi",
+          "image": "res/Item/hats_kepi_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Turban",
+          "image": "res/Item/hats_turban_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Device_word",
+          "name": "Printer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Fishing_word",
+          "name": "Bobber",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Material_word",
+          "name": "Metal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Panama hat",
+          "image": "res/Item/hats_panamahat_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Chair",
+          "name": "Throne",
+          "image": "res/Item/chair_throne_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Fishing_word",
+          "name": "Rod",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Hats",
+          "name": "Sombrero",
+          "image": "res/Item/hats_sombrero_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Seasons_word",
+          "name": "Spring",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Cleaning",
+          "name": "Mop",
+          "image": "res/Item/cleaning_mop_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Date_word",
+          "name": "Couple",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Date_word",
+          "name": "Flowers",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Seasons_word": 4,
+      "Snow_word": 3,
+      "Hats": 8,
+      "Fishing_word": 3,
+      "Date_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Date_word",
+        "name": "Date",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fishing_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
       }
     ],
     "handDisplay": []

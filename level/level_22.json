@@ -1,875 +1,755 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Voices_word",
-        "name": "Voices",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Gamer_word",
-        "name": "Gamer",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Flowers",
-        "name": "Flowers",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Italy_word",
-        "name": "Italy",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Robot_word",
-        "name": "Robot",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Map_word",
-        "name": "Map",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Reptiles",
-        "name": "Reptiles",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Greece_word",
-        "name": "Greece",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 4,
       "bingosNeeded": 2,
-      "timeLimit": 145
-    },
-    "categoryTargets": {
-      "Greece_word": 3,
-      "Flowers": 3,
-      "Robot_word": 6,
-      "Voices_word": 5,
-      "Reptiles": 3,
-      "Italy_word": 4,
-      "Gamer_word": 4,
-      "Map_word": 8
+      "maxSlots": 2,
+      "timeLimit": 145,
+      "penaltyTime": 4
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Robot_word",
-          "name": "Machine",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Robot_word",
-          "name": "Drone",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Voices_word",
-          "name": "Tenor",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Rodents",
-          "name": "Nutria",
-          "type": "filler",
-          "image": "res/Item/rodents_nutria_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coastal_word",
-          "name": "Shingle",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coastal_word",
-          "name": "Crest",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Map_word",
-          "name": "India",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coastal_word",
-          "name": "Sand",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coastal_word",
-          "name": "Breeze",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Guitar_word",
-          "name": "Strings",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Insects_word",
-          "name": "Dragonfly",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Lakes_word",
-          "name": "Titicaca",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Map_word",
-          "name": "Italy",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Lakes_word",
-          "name": "Huron",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Lakes_word",
-          "name": "Ontario",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Map_word",
-          "name": "UK",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hockey_word",
-          "name": "Goal",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Hockey_word",
-          "name": "Penalty",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Robot_word",
-          "name": "Cyborg",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Map_word",
-          "name": "France",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gamer_word",
-          "name": "Score",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Reptiles",
-          "name": "Lizard",
-          "type": "regular",
-          "image": "res/Item/reptiles_lizard_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Guitar_word",
-          "name": "Riffs",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Guitar_word",
-          "name": "Pickups",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Greece_word",
-          "name": "Kappa",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gemstone",
-          "name": "Ruby",
-          "type": "filler",
-          "image": "res/Item/gemstone_ruby_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gemstone",
-          "name": "Diamond",
-          "type": "filler",
-          "image": "res/Item/gemstone_diamond_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Map_word",
-          "name": "Australia",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rivers_word",
-          "name": "Amazon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rivers_word",
-          "name": "Nile",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Robot_word",
-          "name": "Nanobot",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Insects",
-          "name": "Moth",
-          "type": "filler",
-          "image": "res/Item/insects_moth_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Actor_word",
-          "name": "Pitt",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Grammar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Actor_word",
-          "name": "Eastwood",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Army_word",
-          "name": "Colonel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Italy_word",
-          "name": "Milan",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Italy_word",
-          "name": "Venice",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Gamer_word",
-          "name": "Arcade",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Reptiles",
-          "name": "Snake",
-          "type": "regular",
-          "image": "res/Item/reptiles_snake_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Army_word",
-          "name": "Captain",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Army_word",
-          "name": "Private",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Reptiles",
-          "name": "Alligator",
-          "type": "regular",
-          "image": "res/Item/reptiles_alligator_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Camera_word",
-          "name": "Shutter",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rivers_word",
-          "name": "Hudson",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Polyglot",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Flowers",
-          "name": "Tulip",
-          "type": "regular",
-          "image": "res/Item/flowers_tulip_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Scholar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Gamer_word",
-          "name": "Shooter",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Biomes_word",
-          "name": "Tundra",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Voices_word",
-          "name": "Soprano",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Italy_word",
-          "name": "Florence",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Robot_word",
           "name": "Robovac",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Western",
-          "name": "Cowboy hat",
-          "type": "filler",
-          "image": "res/Item/western_cowboyhat_1.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 4
+        "row": 0,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Robot_word",
+          "name": "Machine",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 0,
+        "col": 1,
         "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "France",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Coastal_word",
+          "name": "Crest",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Coastal_word",
+          "name": "Jetty",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Gamer_word",
+          "name": "Score",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Gamer_word",
+          "name": "Shooter",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Greece_word",
+          "name": "Kappa",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Insects_word",
+          "name": "Wasp",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Lakes_word",
+          "name": "Titicaca",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
           "category": "Map_word",
           "name": "USA",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 0
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Map_word",
-          "name": "Cyprus",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Voices_word",
-          "name": "Alto",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 4,
         "card": {
-          "category": "Greece_word",
-          "name": "Sigma",
           "type": "regular",
+          "category": "Gamer_word",
+          "name": "Arcade",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 1
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 1,
+        "col": 0,
         "card": {
+          "type": "regular",
+          "category": "Italy_word",
+          "name": "Milan",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Lakes_word",
+          "name": "Baikal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Guitar_word",
+          "name": "Pickups",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "UK",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Gemstone",
+          "name": "Diamond",
+          "image": "res/Item/gemstone_diamond_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Insects",
+          "name": "Ladybug",
+          "image": "res/Item/insects_ladybug_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Italy_word",
+          "name": "Venice",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Voices_word",
+          "name": "Soprano",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
           "category": "Map_word",
           "name": "Japan",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 1,
+        "col": 3,
         "card": {
-          "category": "Flowers",
-          "name": "Daisy",
-          "type": "regular",
-          "image": "res/Item/flowers_daisy_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Robot_word",
-          "name": "Android",
-          "type": "regular",
+          "type": "filler",
+          "category": "Actor_word",
+          "name": "Crowe",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Flowers",
-          "name": "Lily",
-          "type": "regular",
-          "image": "res/Item/flowers_lily_2.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 2
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Army_word",
+          "name": "Rank",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 1,
+        "col": 4,
         "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "Cyprus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Army_word",
+          "name": "General",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Greece_word",
           "name": "Delta",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 3
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Voices_word",
-          "name": "Bass",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 0,
         "card": {
-          "category": "Italy_word",
-          "name": "Rome",
-          "type": "regular",
+          "type": "filler",
+          "category": "Army_word",
+          "name": "Sergeant",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Gamer_word",
-          "name": "Strategy",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 4
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Reptiles",
+          "name": "Lizard",
+          "image": "res/Item/reptiles_lizard_1.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 2,
+        "col": 1,
         "card": {
+          "type": "filler",
+          "category": "Camera_word",
+          "name": "Flash",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Robot_word",
+          "name": "Cyborg",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Flowers",
+          "name": "Daisy",
+          "image": "res/Item/flowers_daisy_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Voices_word",
+          "name": "Alto",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Camera_word",
+          "name": "Exposure",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Robot_word",
+          "name": "Android",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Camera_word",
+          "name": "Lens",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "Italy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Linguist_word",
+          "name": "Syntax",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Flowers",
+          "name": "Lily",
+          "image": "res/Item/flowers_lily_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Rodents",
+          "name": "Squirrel",
+          "image": "res/Item/rodents_squirrel_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Reptiles",
+          "name": "Snake",
+          "image": "res/Item/reptiles_snake_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Voices_word",
           "name": "Baritone",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Gamer_word",
+          "name": "Strategy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Reptiles",
+          "name": "Alligator",
+          "image": "res/Item/reptiles_alligator_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Rodents",
+          "name": "Beaver",
+          "image": "res/Item/rodents_beaver_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Greece_word",
+          "name": "Sigma",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Views_word",
+          "name": "Dualism",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "India",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Italy_word",
+          "name": "Rome",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Voices_word",
+          "name": "Bass",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Map_word",
+          "name": "Australia",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Biomes_word",
+          "name": "Tundra",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Italy_word",
+          "name": "Florence",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Voices_word",
+          "name": "Tenor",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Robot_word",
+          "name": "Drone",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Western",
+          "name": "Cowboy boots",
+          "image": "res/Item/western_cowboyboots_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Robot_word",
+          "name": "Nanobot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Flowers",
+          "name": "Tulip",
+          "image": "res/Item/flowers_tulip_3.png",
+          "isText": false
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Robot_word": 6,
+      "Map_word": 8,
+      "Gamer_word": 4,
+      "Greece_word": 3,
+      "Italy_word": 4,
+      "Voices_word": 5,
+      "Reptiles": 3,
+      "Flowers": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Voices_word",
+        "name": "Voices",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gamer_word",
+        "name": "Gamer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flowers",
+        "name": "Flowers",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Italy_word",
+        "name": "Italy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Robot_word",
+        "name": "Robot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map_word",
+        "name": "Map",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Reptiles",
+        "name": "Reptiles",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Greece_word",
+        "name": "Greece",
+        "isText": true
       }
     ],
     "handDisplay": []

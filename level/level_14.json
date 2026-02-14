@@ -1,724 +1,532 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Bird",
-        "name": "Bird",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Seafood",
-        "name": "Seafood",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Water_word",
-        "name": "Water",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Pattern_word",
-        "name": "Pattern",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Quest_word",
-        "name": "Quest",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Auction_word",
-        "name": "Auction",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Flowers_word",
-        "name": "Flowers",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 130
-    },
-    "categoryTargets": {
-      "Flowers_word": 4,
-      "Quest_word": 3,
-      "Auction_word": 6,
-      "Bird": 3,
-      "Water_word": 4,
-      "Pattern_word": 6,
-      "Seafood": 3
+      "maxSlots": 2,
+      "timeLimit": 130,
+      "penaltyTime": 3
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Rose",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Auction_word",
-          "name": "Bidder",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Seafood",
-          "name": "Mussel",
-          "type": "regular",
-          "image": "res/Item/seafood_mussel_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Auction_word",
-          "name": "Catalog",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Tulip",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Quest_word",
-          "name": "Pursuit",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Perseus",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Auction_word",
-          "name": "Hammer",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Auction_word",
-          "name": "Bid",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Seafood",
-          "name": "Lobster",
-          "type": "regular",
-          "image": "res/Item/seafood_lobster_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Water_word",
-          "name": "Havasu",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Welder",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Pilot",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Peony",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Plumber",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Engineer",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Scorpius",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "New York_word",
-          "name": "Soho",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "New York_word",
-          "name": "Bronx",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Doctor",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Dogs",
-          "name": "Spaniel",
-          "type": "filler",
-          "image": "res/Item/dogs_spaniel_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Dogs",
-          "name": "Husky",
-          "type": "filler",
-          "image": "res/Item/dogs_husky_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
           "category": "Water_word",
           "name": "Yosemite",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "New York_word",
+          "name": "Astoria",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Auction_word",
-          "name": "Price",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Water_word",
-          "name": "Victoria",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Dogs",
-          "name": "Poodle",
-          "type": "filler",
-          "image": "res/Item/dogs_poodle_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Dogs",
-          "name": "Terrier",
-          "type": "filler",
-          "image": "res/Item/dogs_terrier_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Division_word",
-          "name": "State",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Nurse",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Berry_word",
-          "name": "Mulberry",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Comedy",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Durian",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Lily",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Bird",
-          "name": "Eagle",
-          "type": "regular",
-          "image": "res/Item/bird_eagle_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Actor",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Cactus",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Quest_word",
-          "name": "Inquiry",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Western",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Pattern_word",
           "name": "Serpens",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Ship_word",
-          "name": "Caravel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Pattern_word",
-          "name": "Draco",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Muscles_word",
-          "name": "Abs",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Orion",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Auction_word",
-          "name": "Lot",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Cinema_word",
-          "name": "Horror",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Meditate_word",
-          "name": "Mantra",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Cygnus",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Meditate_word",
-          "name": "Peace",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Water_word",
-          "name": "Niagara",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Hippie_word",
-          "name": "Commune",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Seafood",
-          "name": "Oyster",
-          "type": "regular",
-          "image": "res/Item/seafood_oyster_2.png",
+          "category": "Dogs",
+          "name": "Husky",
+          "image": "res/Item/dogs_husky_5.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Airport_word",
-          "name": "Runway",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Quest_word",
-          "name": "Hunt",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Bird",
           "name": "Swan",
-          "type": "regular",
           "image": "res/Item/bird_swan_3.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "filler",
+          "category": "Dogs",
+          "name": "Terrier",
+          "image": "res/Item/dogs_terrier_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Pattern_word",
+          "name": "Perseus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Spiky_word",
+          "name": "Cactus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Bird",
+          "name": "Eagle",
+          "image": "res/Item/bird_eagle_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Pattern_word",
+          "name": "Cygnus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Spiky_word",
+          "name": "Hedgehog",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Flowers_word",
+          "name": "Lily",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Ship_word",
+          "name": "Galleon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Bird",
           "name": "Dove",
-          "type": "regular",
           "image": "res/Item/bird_dove_1.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Ship_word",
+          "name": "Tugboat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Catalog",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Ship_word",
+          "name": "Tanker",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Seafood",
+          "name": "Oyster",
+          "image": "res/Item/seafood_oyster_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Price",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Quest_word",
+          "name": "Pursuit",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Jobs_word",
+          "name": "Pilot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Pattern_word",
+          "name": "Draco",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Flowers_word",
+          "name": "Rose",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Seafood",
+          "name": "Lobster",
+          "image": "res/Item/seafood_lobster_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Flowers_word",
+          "name": "Tulip",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Lot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Quest_word",
+          "name": "Inquiry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Seafood",
+          "name": "Mussel",
+          "image": "res/Item/seafood_mussel_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Jobs_word",
+          "name": "Mailman",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Pattern_word",
+          "name": "Orion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Water_word",
+          "name": "Victoria",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Quest_word",
+          "name": "Hunt",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Pattern_word",
+          "name": "Scorpius",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Hammer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Bid",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Water_word",
+          "name": "Niagara",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Water_word",
+          "name": "Havasu",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Auction_word",
+          "name": "Bidder",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Flowers_word",
+          "name": "Peony",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Water_word": 4,
+      "Pattern_word": 6,
+      "Bird": 3,
+      "Flowers_word": 4,
+      "Auction_word": 6,
+      "Seafood": 3,
+      "Quest_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Bird",
+        "name": "Bird",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pattern_word",
+        "name": "Pattern",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Quest_word",
+        "name": "Quest",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Auction_word",
+        "name": "Auction",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flowers_word",
+        "name": "Flowers",
+        "isText": true
       }
     ],
     "handDisplay": []

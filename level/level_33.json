@@ -1,1031 +1,875 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Coding_word",
-        "name": "Coding",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Network_word",
-        "name": "Network",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Minds_word",
-        "name": "Minds",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Grammar_word",
-        "name": "Grammar",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Finance_word",
-        "name": "Finance",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Keys",
-        "name": "Keys",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Primates_word",
-        "name": "Primates",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Candy",
-        "name": "Candy",
-        "type": "gold",
-        "isText": false
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 5,
       "bingosNeeded": 3,
-      "timeLimit": 145
-    },
-    "categoryTargets": {
-      "Finance_word": 4,
-      "Primates_word": 8,
-      "Minds_word": 6,
-      "Keys": 3,
-      "Network_word": 5,
-      "Coding_word": 8,
-      "Candy": 4,
-      "Grammar_word": 3
+      "maxSlots": 2,
+      "timeLimit": 145,
+      "penaltyTime": 5
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "3D",
-          "name": "Cone",
-          "type": "filler",
-          "image": "res/Item/3d_cone_3.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Lawn",
-          "name": "Leaf rake",
-          "type": "filler",
-          "image": "res/Item/lawn_leafrake_6.png",
-          "isText": false
-        },
         "layer": 2,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Lawn",
-          "name": "Grass",
-          "type": "filler",
-          "image": "res/Item/lawn_grass_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Breads_word",
-          "name": "Brioche",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Studies_word",
-          "name": "Oxford",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Breads_word",
-          "name": "Tortilla",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Breads_word",
-          "name": "Challah",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Western_word",
-          "name": "Lasso",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Paganism_word",
-          "name": "Altar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Western_word",
-          "name": "Sheriff",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Studies_word",
-          "name": "Sorbonne",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Studies_word",
-          "name": "Yale",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "3D",
-          "name": "Cube",
-          "type": "filler",
-          "image": "res/Item/3d_cube_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Tarot_word",
-          "name": "Fool",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Spicy_word",
-          "name": "Sriracha",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Keys",
-          "name": "Car",
           "type": "regular",
-          "image": "res/Item/keys_car_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Candy",
-          "name": "Fudge",
-          "type": "regular",
-          "image": "res/Item/candy_fudge_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Grammar_word",
-          "name": "Adverb",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Breads_word",
-          "name": "Baguette",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Zodiac_word",
-          "name": "Scorpio",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Families_word",
-          "name": "Ovine",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Zodiac_word",
-          "name": "Leo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Minerals_word",
-          "name": "Quartz",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Minerals_word",
-          "name": "Azurite",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Families_word",
-          "name": "Feline",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Minerals_word",
-          "name": "Marble",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Grape_word",
-          "name": "Riesling",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Families_word",
-          "name": "Equine",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Grape_word",
-          "name": "Merlot",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Alkanes_word",
-          "name": "Ethane",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Primates_word",
-          "name": "Tarsier",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Finance_word",
-          "name": "Income",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Coding_word",
-          "name": "Python",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Primates_word",
-          "name": "Gorilla",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Keys",
-          "name": "Padlock",
-          "type": "regular",
-          "image": "res/Item/keys_padlock_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Network_word",
-          "name": "Ethernet",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Primates_word",
-          "name": "Macaque",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Grammar_word",
-          "name": "Noun",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Finance_word",
-          "name": "Bank",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Primates_word",
-          "name": "Baboon",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Grammar_word",
-          "name": "Verb",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Coding_word",
-          "name": "Java",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Primates_word",
-          "name": "Simian",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Minds_word",
-          "name": "Galileo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Network_word",
-          "name": "Router",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Keys",
-          "name": "Door",
-          "type": "regular",
-          "image": "res/Item/keys_door_1.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Minds_word",
-          "name": "Plato",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Coding_word",
-          "name": "Swift",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Minds_word",
           "name": "Dante",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Grape_word",
-          "name": "Grenache",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Vampire",
-          "name": "Fangs",
-          "type": "filler",
-          "image": "res/Item/vampire_fangs_2.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 0
+        "row": 0,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Breads_word",
+          "name": "Tortilla",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Vampire",
-          "name": "Coffin",
-          "type": "filler",
-          "image": "res/Item/vampire_coffin_3.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Hot dog_word",
-          "name": "Sausage",
           "type": "filler",
+          "category": "Breads_word",
+          "name": "Brioche",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Landmark",
-          "name": "Colosseum",
-          "type": "filler",
-          "image": "res/Item/landmark_colosseum_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Landmark",
-          "name": "Statue of Liberty",
-          "type": "filler",
-          "image": "res/Item/landmark_statueofliberty_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Grape_word",
-          "name": "Shiraz",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Landmark",
-          "name": "Big Ben",
-          "type": "filler",
-          "image": "res/Item/landmark_bigben_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Hot dog_word",
-          "name": "Ketchup",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Minerals_word",
-          "name": "Gypsum",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Prefix_word",
-          "name": "Mega",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Prefix_word",
-          "name": "Deca",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Candy",
-          "name": "Gum",
           "type": "regular",
-          "image": "res/Item/candy_gum_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Coding_word",
-          "name": "SQL",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Coding_word",
-          "name": "Script",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Finance_word",
-          "name": "Money",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Network_word",
-          "name": "Gateway",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Network_word",
-          "name": "Server",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Coding_word",
-          "name": "Bugs",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Candy",
-          "name": "Choco",
-          "type": "regular",
-          "image": "res/Item/candy_choco_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Finance_word",
-          "name": "Expense",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Minds_word",
-          "name": "Socrates",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Primates_word",
-          "name": "Gibbon",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Candy",
-          "name": "Lollipop",
-          "type": "regular",
-          "image": "res/Item/candy_lollipop_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Minds_word",
           "name": "Kant",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 1,
         "card": {
+          "type": "filler",
+          "category": "Western_word",
+          "name": "Sheriff",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Studies_word",
+          "name": "MIT",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Keys",
+          "name": "Car",
+          "image": "res/Item/keys_car_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Candy",
+          "name": "Lollipop",
+          "image": "res/Item/candy_lollipop_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Script",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
           "category": "Primates_word",
           "name": "Lemur",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 3
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Network_word",
-          "name": "Packet",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 3
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Paganism_word",
+          "name": "Totem",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
+          "type": "filler",
+          "category": "Paganism_word",
+          "name": "Altar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Finance_word",
+          "name": "Income",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Candy",
+          "name": "Fudge",
+          "image": "res/Item/candy_fudge_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
           "category": "Coding_word",
           "name": "PHP",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Primates_word",
-          "name": "Mandrill",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
+        "row": 1,
+        "col": 0,
         "card": {
-          "category": "Coding_word",
-          "name": "Ruby",
-          "type": "regular",
+          "type": "filler",
+          "category": "Western_word",
+          "name": "Lasso",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 1,
+        "col": 0,
         "card": {
+          "type": "filler",
+          "category": "Tarot_word",
+          "name": "Magician",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Spicy_word",
+          "name": "Habanero",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Minds_word",
+          "name": "Plato",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac_word",
+          "name": "Taurus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac_word",
+          "name": "Virgo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Gorilla",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Keys",
+          "name": "Padlock",
+          "image": "res/Item/keys_padlock_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Macaque",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac_word",
+          "name": "Scorpio",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac_word",
+          "name": "Aries",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Grammar_word",
+          "name": "Noun",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Finance_word",
+          "name": "Money",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Network_word",
+          "name": "Router",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Grape_word",
+          "name": "Malbec",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Families_word",
+          "name": "Equine",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Families_word",
+          "name": "Murine",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Zodiac_word",
+          "name": "Leo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Families_word",
+          "name": "Canine",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Minerals_word",
+          "name": "Beryl",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Candy",
+          "name": "Choco",
+          "image": "res/Item/candy_choco_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Minds_word",
           "name": "Sartre",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Mandrill",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Grape_word",
+          "name": "Shiraz",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Grape_word",
+          "name": "Muscat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Candy",
+          "name": "Gum",
+          "image": "res/Item/candy_gum_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Network_word",
+          "name": "Gateway",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Python",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "3D",
+          "name": "Cone",
+          "image": "res/Item/3d_cone_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Alkanes_word",
+          "name": "Butane",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Grammar_word",
+          "name": "Adverb",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Landmark",
+          "name": "Colosseum",
+          "image": "res/Item/landmark_colosseum_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Keys",
+          "name": "Door",
+          "image": "res/Item/keys_door_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Finance_word",
+          "name": "Expense",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Breads_word",
+          "name": "Arepa",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Prefix_word",
+          "name": "Mega",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Minds_word",
+          "name": "Socrates",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Minds_word",
+          "name": "Galileo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Java",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Tarsier",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Network_word",
+          "name": "Server",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Grammar_word",
+          "name": "Verb",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Swift",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "SQL",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Simian",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Ruby",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Gibbon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Coding_word",
+          "name": "Bugs",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Finance_word",
+          "name": "Bank",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Primates_word",
+          "name": "Baboon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Network_word",
+          "name": "Ethernet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Network_word",
+          "name": "Packet",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Minds_word": 6,
+      "Keys": 3,
+      "Candy": 4,
+      "Coding_word": 8,
+      "Primates_word": 8,
+      "Finance_word": 4,
+      "Grammar_word": 3,
+      "Network_word": 5
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Network_word",
+        "name": "Network",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Minds_word",
+        "name": "Minds",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grammar_word",
+        "name": "Grammar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Finance_word",
+        "name": "Finance",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Keys",
+        "name": "Keys",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Primates_word",
+        "name": "Primates",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Candy",
+        "name": "Candy",
+        "isText": false
       }
     ],
     "handDisplay": []

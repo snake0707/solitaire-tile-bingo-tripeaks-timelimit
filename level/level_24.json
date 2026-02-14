@@ -1,971 +1,851 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Western",
-        "name": "Western",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Linguist_word",
-        "name": "Linguist",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Camera_word",
-        "name": "Camera",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Rodents",
-        "name": "Rodents",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Views_word",
-        "name": "Views",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Actor_word",
-        "name": "Actor",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Army_word",
-        "name": "Army",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Biomes_word",
-        "name": "Biomes",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 4,
-      "penaltyTime": 4,
       "bingosNeeded": 3,
-      "timeLimit": 155
-    },
-    "categoryTargets": {
-      "Camera_word": 6,
-      "Western": 3,
-      "Army_word": 8,
-      "Actor_word": 8,
-      "Biomes_word": 3,
-      "Views_word": 3,
-      "Linguist_word": 4,
-      "Rodents": 4
+      "maxSlots": 2,
+      "timeLimit": 155,
+      "penaltyTime": 4
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Dances_word",
-          "name": "Salsa",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pirate",
-          "name": "Wooden ship's wheel",
-          "type": "filler",
-          "image": "res/Item/pirate_woodenshipswheel_7.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Pirate",
-          "name": "Cannon",
-          "type": "filler",
-          "image": "res/Item/pirate_cannon_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Shaft_word",
-          "name": "Mine",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pirate",
-          "name": "Treasure chest",
-          "type": "filler",
-          "image": "res/Item/pirate_treasurechest_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pirate",
-          "name": "Jolly Roger",
-          "type": "filler",
-          "image": "res/Item/pirate_jollyroger_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dances_word",
-          "name": "Samba",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Beach",
-          "name": "Seagull",
-          "type": "filler",
-          "image": "res/Item/beach_seagull_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Beach",
-          "name": "Waves",
-          "type": "filler",
-          "image": "res/Item/beach_waves_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
+          "type": "regular",
           "category": "Actor_word",
           "name": "Cruise",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 3
+        }
       },
       {
-        "row": 0,
-        "card": {
-          "category": "Actor_word",
-          "name": "Wahlberg",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Camera_word",
-          "name": "Filter",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 3
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Army_word",
-          "name": "General",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Views_word",
-          "name": "Nihilism",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
           "category": "Army_word",
           "name": "Corporal",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 1,
-        "card": {
-          "category": "Evaluate_word",
-          "name": "Analyze",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Beach",
-          "name": "Sand",
-          "type": "filler",
-          "image": "res/Item/beach_sand_4.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Poetry_word",
-          "name": "Ode",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Anagram_word",
-          "name": "Mate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rap_word",
-          "name": "Punch",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rap_word",
-          "name": "Rhyme",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Haiku",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Beans_word",
-          "name": "Excelsa",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chimera_word",
-          "name": "Lion",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Biomes_word",
-          "name": "Taiga",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Army_word",
-          "name": "Captain",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Views_word",
-          "name": "Stoicism",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Army_word",
-          "name": "Private",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Army_word",
-          "name": "Sergeant",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camera_word",
-          "name": "Lens",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Beach",
-          "name": "Beach chair",
-          "type": "filler",
-          "image": "res/Item/beach_beachchair_7.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Particle_word",
-          "name": "Atom",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Particle_word",
-          "name": "Neutron",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Pirate",
-          "name": "Treasure map",
-          "type": "filler",
-          "image": "res/Item/pirate_treasuremap_6.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Farming_word",
-          "name": "Harvest",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Farming_word",
-          "name": "Grain",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Space",
-          "name": "UFO",
-          "type": "filler",
-          "image": "res/Item/space_ufo_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Farming_word",
-          "name": "Compost",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Farming_word",
-          "name": "Topsoil",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Actor_word",
-          "name": "Pitt",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Army_word",
-          "name": "Major",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Western",
-          "name": "Cowboy boots",
-          "type": "regular",
-          "image": "res/Item/western_cowboyboots_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Actor_word",
-          "name": "Crowe",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Rodents",
-          "name": "Nutria",
-          "type": "regular",
-          "image": "res/Item/rodents_nutria_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Camera_word",
-          "name": "Zoom",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dances_word",
-          "name": "Tango",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Egypt",
-          "name": "Pyramid",
-          "type": "filler",
-          "image": "res/Item/egypt_pyramid_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Egypt",
-          "name": "Nile river",
-          "type": "filler",
-          "image": "res/Item/egypt_nileriver_6.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Egypt",
-          "name": "Sphinx",
-          "type": "filler",
-          "image": "res/Item/egypt_sphinx_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dances_word",
-          "name": "Waltz",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Customs_word",
-          "name": "Import",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Sonnet",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Customs_word",
-          "name": "Border",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Space",
-          "name": "Alien",
-          "type": "filler",
-          "image": "res/Item/space_alien_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Actor_word",
-          "name": "Eastwood",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Syntax",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Rodents",
           "name": "Squirrel",
-          "type": "regular",
           "image": "res/Item/rodents_squirrel_4.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Biomes_word",
-          "name": "Tundra",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Camera_word",
-          "name": "Exposure",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Western",
-          "name": "Lasso",
-          "type": "regular",
-          "image": "res/Item/western_lasso_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Actor_word",
-          "name": "Oldman",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Western",
-          "name": "Cowboy hat",
-          "type": "regular",
-          "image": "res/Item/western_cowboyhat_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Rodents",
-          "name": "Marmot",
-          "type": "regular",
-          "image": "res/Item/rodents_marmot_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Army_word",
           "name": "Rank",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 1
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Views_word",
-          "name": "Dualism",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Linguist_word",
-          "name": "Polyglot",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Actor_word",
-          "name": "DiCaprio",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Camera_word",
-          "name": "Flash",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Scholar",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Biomes_word",
-          "name": "Savanna",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Army_word",
-          "name": "Colonel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Linguist_word",
-          "name": "Grammar",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Actor_word",
           "name": "Hanks",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "Captain",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "DiCaprio",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "Major",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Rodents",
+          "name": "Marmot",
+          "image": "res/Item/rodents_marmot_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Views_word",
+          "name": "Dualism",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Views_word",
+          "name": "Stoicism",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Linguist_word",
+          "name": "Polyglot",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Biomes_word",
+          "name": "Tundra",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Linguist_word",
+          "name": "Grammar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Linguist_word",
+          "name": "Scholar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Hay",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Pirate",
+          "name": "Jolly Roger",
+          "image": "res/Item/pirate_jollyroger_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Pirate",
+          "name": "Treasure chest",
+          "image": "res/Item/pirate_treasurechest_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "Wahlberg",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Camera_word",
+          "name": "Flash",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Equidae_word",
+          "name": "Pony",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Pirate",
+          "name": "Wooden ship's wheel",
+          "image": "res/Item/pirate_woodenshipswheel_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Pirate",
+          "name": "Cannon",
+          "image": "res/Item/pirate_cannon_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "Colonel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Beach",
+          "name": "Beach umbrella",
+          "image": "res/Item/beach_beachumbrella_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Beach",
+          "name": "Buoy",
+          "image": "res/Item/beach_buoy_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "Eastwood",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Camera_word",
+          "name": "Lens",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Camera_word",
+          "name": "Exposure",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Anagram_word",
+          "name": "Meat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Beach",
+          "name": "Sand",
+          "image": "res/Item/beach_sand_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Equidae_word",
+          "name": "Horse",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "Pitt",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "Sergeant",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Linguist_word",
+          "name": "Syntax",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Biomes_word",
+          "name": "Taiga",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Poetry_word",
+          "name": "Ballad",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Beans_word",
+          "name": "Arabica",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Biomes_word",
+          "name": "Savanna",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Particle_word",
+          "name": "Neutron",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Particle_word",
+          "name": "Atom",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Camera_word",
+          "name": "Zoom",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Western",
+          "name": "Lasso",
+          "image": "res/Item/western_lasso_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Views_word",
+          "name": "Nihilism",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Particle_word",
+          "name": "Electron",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Topsoil",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "General",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Rodents",
+          "name": "Nutria",
+          "image": "res/Item/rodents_nutria_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Camera_word",
           "name": "Shutter",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 3,
+        "col": 3,
         "card": {
+          "type": "filler",
+          "category": "Beach",
+          "name": "Beach chair",
+          "image": "res/Item/beach_beachchair_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Harvest",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Egypt",
+          "name": "Mummy",
+          "image": "res/Item/egypt_mummy_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Rap_word",
+          "name": "Rhyme",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Dances_word",
+          "name": "Tango",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "Crowe",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Rodents",
           "name": "Beaver",
-          "type": "regular",
           "image": "res/Item/rodents_beaver_1.png",
           "isText": false
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Egypt",
+          "name": "Sphinx",
+          "image": "res/Item/egypt_sphinx_2.png",
+          "isText": false
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Customs_word",
+          "name": "Border",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Actor_word",
+          "name": "Oldman",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Western",
+          "name": "Cowboy hat",
+          "image": "res/Item/western_cowboyhat_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Western",
+          "name": "Cowboy boots",
+          "image": "res/Item/western_cowboyboots_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Army_word",
+          "name": "Private",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Evaluate_word",
+          "name": "Estimate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Camera_word",
+          "name": "Filter",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Shaft_word",
+          "name": "Mine",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Actor_word": 8,
+      "Army_word": 8,
+      "Rodents": 4,
+      "Views_word": 3,
+      "Linguist_word": 4,
+      "Biomes_word": 3,
+      "Camera_word": 6,
+      "Western": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Western",
+        "name": "Western",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Linguist_word",
+        "name": "Linguist",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rodents",
+        "name": "Rodents",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Views_word",
+        "name": "Views",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Actor_word",
+        "name": "Actor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Biomes_word",
+        "name": "Biomes",
+        "isText": true
       }
     ],
     "handDisplay": []

@@ -1,609 +1,453 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Racing_word",
-        "name": "Racing",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Defense_word",
-        "name": "Defense",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Crown_word",
-        "name": "Crown",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Cleaning",
-        "name": "Cleaning",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Fame_word",
-        "name": "Fame",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Camping_word",
-        "name": "Camping",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 3,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 120
-    },
-    "categoryTargets": {
-      "Fame_word": 4,
-      "Racing_word": 3,
-      "Defense_word": 4,
-      "Crown_word": 3,
-      "Camping_word": 3,
-      "Cleaning": 8
+      "maxSlots": 2,
+      "timeLimit": 120,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Fame_word",
-          "name": "Renown",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Racing_word",
-          "name": "Speedway",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cleaning",
-          "name": "Dustpan",
-          "type": "regular",
-          "image": "res/Item/cleaning_dustpan_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Defense_word",
-          "name": "Patrol",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cleaning",
-          "name": "Broom",
-          "type": "regular",
-          "image": "res/Item/cleaning_broom_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cleaning",
-          "name": "Duster",
-          "type": "regular",
-          "image": "res/Item/cleaning_duster_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Defense_word",
-          "name": "Guard",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cleaning",
-          "name": "Sponge",
-          "type": "regular",
-          "image": "res/Item/cleaning_sponge_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Racing_word",
-          "name": "Finish",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Fame_word",
-          "name": "Famous",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Sumo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Bin",
-          "type": "regular",
-          "image": "res/Item/cleaning_bin_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Judo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Snowy owl",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Kung fu",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Camping_word",
-          "name": "Campfire",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Racing_word",
-          "name": "Pit stop",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Mop",
-          "type": "regular",
-          "image": "res/Item/cleaning_mop_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Savate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Crown_word",
-          "name": "King",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Combat_word",
-          "name": "Karate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Kerosene",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Sledding",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Crown_word",
-          "name": "Emperor",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Defense_word",
-          "name": "Security",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fame_word",
-          "name": "Popular",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Skating",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Cozy_word",
-          "name": "Snug",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Skeleton",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Zodiac",
-          "name": "Aries",
-          "type": "filler",
-          "image": "res/Item/zodiac_aries_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Justice_word",
-          "name": "Law",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Camping_word",
-          "name": "Tent",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Defense_word",
           "name": "CCTV",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 3,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
+          "type": "filler",
+          "category": "Combat_word",
+          "name": "Karate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Fame_word",
+          "name": "Renown",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Justice_word",
+          "name": "Scales",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Fame_word",
           "name": "Iconic",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Justice_word",
-          "name": "Court",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Cleaning",
-          "name": "Vacuum",
-          "type": "regular",
-          "image": "res/Item/cleaning_vacuum_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Gym_word",
-          "name": "Dumbbell",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Gym_word",
-          "name": "Barbell",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Gym_word",
-          "name": "Air bike",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Crown_word",
-          "name": "Maharaja",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Cleaning",
-          "name": "Bucket",
-          "type": "regular",
-          "image": "res/Item/cleaning_bucket_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Gasoline",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Arctic_word",
           "name": "Walrus",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 2
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Mop",
+          "image": "res/Item/cleaning_mop_2.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Dairy_word",
-          "name": "Yogurt",
           "type": "filler",
+          "category": "Street_word",
+          "name": "Corner",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Vacuum",
+          "image": "res/Item/cleaning_vacuum_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Fame_word",
+          "name": "Popular",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Camping_word",
+          "name": "Campfire",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Bin",
+          "image": "res/Item/cleaning_bin_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Defense_word",
+          "name": "Guard",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Combat_word",
+          "name": "Savate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Combat_word",
+          "name": "Kung fu",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Sponge",
+          "image": "res/Item/cleaning_sponge_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Racing_word",
+          "name": "Pit stop",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Defense_word",
+          "name": "Security",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Crown_word",
+          "name": "Emperor",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Crown_word",
+          "name": "Maharaja",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Racing_word",
+          "name": "Finish",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Duster",
+          "image": "res/Item/cleaning_duster_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Deck",
+          "name": "King hearts",
+          "image": "res/Item/deck_kinghearts_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Broom",
+          "image": "res/Item/cleaning_broom_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Bucket",
+          "image": "res/Item/cleaning_bucket_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Defense_word",
+          "name": "Patrol",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Camping_word",
+          "name": "Tent",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Cleaning",
+          "name": "Dustpan",
+          "image": "res/Item/cleaning_dustpan_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
           "category": "Camping_word",
           "name": "Hammock",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
+        "layer": 1,
         "row": 4,
+        "col": 2,
         "card": {
-          "category": "Fuels_word",
-          "name": "Coal",
-          "type": "filler",
+          "type": "regular",
+          "category": "Racing_word",
+          "name": "Speedway",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Combat_word",
+          "name": "Judo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Fame_word",
+          "name": "Famous",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Crown_word",
+          "name": "King",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Defense_word": 4,
+      "Fame_word": 4,
+      "Cleaning": 8,
+      "Camping_word": 3,
+      "Racing_word": 3,
+      "Crown_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Racing_word",
+        "name": "Racing",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Defense_word",
+        "name": "Defense",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cleaning",
+        "name": "Cleaning",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fame_word",
+        "name": "Fame",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camping_word",
+        "name": "Camping",
+        "isText": true
       }
     ],
     "handDisplay": []

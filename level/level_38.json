@@ -1,1031 +1,875 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Language_word",
-        "name": "Language",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Dynasty_word",
-        "name": "Dynasty",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Drum_word",
-        "name": "Drum",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Capitals_word",
-        "name": "Capitals",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Rain",
-        "name": "Rain",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Gym",
-        "name": "Gym",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Eye_word",
-        "name": "Eye",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Shovel_word",
-        "name": "Shovel",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 5,
       "bingosNeeded": 3,
-      "timeLimit": 125
-    },
-    "categoryTargets": {
-      "Dynasty_word": 4,
-      "Rain": 6,
-      "Gym": 5,
-      "Language_word": 8,
-      "Drum_word": 4,
-      "Shovel_word": 3,
-      "Eye_word": 3,
-      "Capitals_word": 8
+      "maxSlots": 2,
+      "timeLimit": 125,
+      "penaltyTime": 5
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Shovel_word",
-          "name": "Dig",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Cairo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Drum_word",
-          "name": "Djembe",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Capitals_word",
-          "name": "Oslo",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Gemstone_word",
-          "name": "Sapphire",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Alloy_word",
-          "name": "Bronze",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Gemstone_word",
-          "name": "Topaz",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "AI_word",
-          "name": "Dataset",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Space_word",
-          "name": "Meteor",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Display_word",
-          "name": "AMOLED",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Display_word",
-          "name": "CRT",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pets_word",
-          "name": "Dog",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "AI_word",
-          "name": "Agent",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pairs",
-          "name": "Skis",
-          "type": "filler",
-          "image": "res/Item/pairs_skis_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pairs",
-          "name": "Socks",
-          "type": "filler",
-          "image": "res/Item/pairs_socks_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Camping",
-          "name": "Campfire",
-          "type": "filler",
-          "image": "res/Item/camping_campfire_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Gemstone_word",
-          "name": "Diamond",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Prisoner_word",
-          "name": "Felon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Planet_word",
-          "name": "Mars",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gym",
-          "name": "Barbell",
-          "type": "regular",
-          "image": "res/Item/gym_barbell_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
           "category": "Capitals_word",
           "name": "Athens",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 0
+        }
       },
       {
-        "row": 1,
-        "card": {
-          "category": "Dynasty_word",
-          "name": "Romanov",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Eye_word",
-          "name": "Iris",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rain",
-          "name": "Cloud",
-          "type": "regular",
-          "image": "res/Item/rain_cloud_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Drum_word",
-          "name": "Tabla",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gym",
-          "name": "Kettlebell",
-          "type": "regular",
-          "image": "res/Item/gym_kettlebell_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
           "category": "Rain",
           "name": "Raincoat",
-          "type": "regular",
           "image": "res/Item/rain_raincoat_2.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 1,
-        "card": {
-          "category": "Drum_word",
-          "name": "Bongo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Gym",
-          "name": "Treadmill",
-          "type": "regular",
-          "image": "res/Item/gym_treadmill_5.png",
-          "isText": false
-        },
         "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Dynasty_word",
-          "name": "Tudor",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Ottawa",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Shovel_word",
-          "name": "Unearth",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Drum_word",
-          "name": "Ashiko",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Language_word",
-          "name": "Danish",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Alloy_word",
-          "name": "Nichrome",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Planet_word",
-          "name": "Jupiter",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Planet_word",
-          "name": "Saturn",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Stars_word",
-          "name": "Polaris",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Space_word",
-          "name": "Nebula",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Space_word",
-          "name": "Aurora",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Gym",
-          "name": "Air bike",
-          "type": "regular",
-          "image": "res/Item/gym_airbike_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Rain",
-          "name": "Umbrella",
-          "type": "regular",
-          "image": "res/Item/rain_umbrella_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Language_word",
-          "name": "English",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Planet_word",
-          "name": "Neptune",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Space_word",
-          "name": "Quasar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Metal_word",
-          "name": "Thulium",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Metal_word",
-          "name": "Rhodium",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Metal_word",
-          "name": "Lutetium",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Metal_word",
-          "name": "Erbium",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Eye_word",
-          "name": "Retina",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Rome",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Polish",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rain",
-          "name": "Lightning",
-          "type": "regular",
-          "image": "res/Item/rain_lightning_6.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Madrid",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Prague",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Gym",
-          "name": "Dumbbell",
-          "type": "regular",
-          "image": "res/Item/gym_dumbbell_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Japanese",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dynasty_word",
-          "name": "Kennedy",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rain",
-          "name": "Puddle",
-          "type": "regular",
-          "image": "res/Item/rain_puddle_4.png",
-          "isText": false
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Hindi",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Italian",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dynasty_word",
-          "name": "Bourbon",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Eye_word",
-          "name": "Pupil",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rain",
-          "name": "Rain boots",
-          "type": "regular",
-          "image": "res/Item/rain_rainboots_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Hebrew",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Planet_word",
-          "name": "Venus",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Metal_word",
-          "name": "Yttrium",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Stars_word",
-          "name": "Rigel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Space_word",
-          "name": "Nova",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Stars_word",
-          "name": "Vega",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Stars_word",
-          "name": "Sirius",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Xmas",
-          "name": "Christmas stocking",
-          "type": "filler",
-          "image": "res/Item/xmas_christmasstocking_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drinks_word",
-          "name": "Soda",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drinks_word",
-          "name": "Juice",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Xmas",
-          "name": "Christmas tree",
-          "type": "filler",
-          "image": "res/Item/xmas_christmastree_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Lock_word",
-          "name": "Trusty",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Mail",
-          "name": "Stamp",
-          "type": "filler",
-          "image": "res/Item/mail_stamp_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Shovel_word",
           "name": "Excavate",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 1,
         "card": {
+          "type": "regular",
+          "category": "Rain",
+          "name": "Umbrella",
+          "image": "res/Item/rain_umbrella_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Dynasty_word",
+          "name": "Kennedy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Prisoner_word",
+          "name": "Detainee",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Alloy_word",
+          "name": "Amalgam",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Alloy_word",
+          "name": "Stellite",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Alloy_word",
+          "name": "Alnico",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Alloy_word",
+          "name": "Bronze",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Alloy_word",
+          "name": "Nitinol",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Gym",
+          "name": "Barbell",
+          "image": "res/Item/gym_barbell_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Capitals_word",
+          "name": "Prague",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Japanese",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Capitals_word",
+          "name": "Rome",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Gemstone_word",
+          "name": "Onyx",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Gemstone_word",
+          "name": "Ruby",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Gym",
+          "name": "Dumbbell",
+          "image": "res/Item/gym_dumbbell_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Italian",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Shovel_word",
+          "name": "Unearth",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Gemstone_word",
+          "name": "Agate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "AI_word",
+          "name": "Cortex",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Pets_word",
+          "name": "Cat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "AI_word",
+          "name": "Matrix",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Display_word",
+          "name": "CRT",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Shovel_word",
+          "name": "Dig",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Drum_word",
+          "name": "Bongo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Capitals_word",
+          "name": "Oslo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Burger_word",
+          "name": "Bun",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Pairs",
+          "name": "Twins",
+          "image": "res/Item/pairs_twins_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Eye_word",
+          "name": "Retina",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Capitals_word",
+          "name": "Madrid",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Hebrew",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Rain",
+          "name": "Lightning",
+          "image": "res/Item/rain_lightning_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Dynasty_word",
+          "name": "Romanov",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Capitals_word",
           "name": "Riyadh",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 2,
+        "col": 3,
         "card": {
-          "category": "Language_word",
-          "name": "Latin",
           "type": "regular",
+          "category": "Capitals_word",
+          "name": "Ottawa",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Pairs",
+          "name": "Socks",
+          "image": "res/Item/pairs_socks_1.png",
+          "isText": false
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Camping",
+          "name": "Tent",
+          "image": "res/Item/camping_tent_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Gym",
+          "name": "Treadmill",
+          "image": "res/Item/gym_treadmill_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Hindi",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Danish",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Eye_word",
+          "name": "Pupil",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Prisoner_word",
+          "name": "Felon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Space_word",
+          "name": "Quasar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Rain",
+          "name": "Cloud",
+          "image": "res/Item/rain_cloud_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Drum_word",
+          "name": "Tabla",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Latin",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Drum_word",
+          "name": "Djembe",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Space_word",
+          "name": "Nova",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Xmas",
+          "name": "Santa",
+          "image": "res/Item/xmas_santa_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Rain",
+          "name": "Puddle",
+          "image": "res/Item/rain_puddle_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Drum_word",
+          "name": "Ashiko",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "English",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Eye_word",
+          "name": "Iris",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Dynasty_word",
+          "name": "Bourbon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Mail",
+          "name": "Letter",
+          "image": "res/Item/mail_letter_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Xmas",
+          "name": "Candy cane",
+          "image": "res/Item/xmas_candycane_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Gym",
+          "name": "Kettlebell",
+          "image": "res/Item/gym_kettlebell_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Dynasty_word",
+          "name": "Tudor",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Language_word",
+          "name": "Polish",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Xmas",
+          "name": "Christmas stocking",
+          "image": "res/Item/xmas_christmasstocking_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Lock_word",
+          "name": "Trusty",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Gym",
+          "name": "Air bike",
+          "image": "res/Item/gym_airbike_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Lock_word",
+          "name": "Sturdy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Rain",
+          "name": "Rain boots",
+          "image": "res/Item/rain_rainboots_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Capitals_word",
+          "name": "Cairo",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Capitals_word": 8,
+      "Rain": 6,
+      "Shovel_word": 3,
+      "Dynasty_word": 4,
+      "Gym": 5,
+      "Language_word": 8,
+      "Drum_word": 4,
+      "Eye_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynasty_word",
+        "name": "Dynasty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Drum_word",
+        "name": "Drum",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Capitals_word",
+        "name": "Capitals",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Gym",
+        "name": "Gym",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Eye_word",
+        "name": "Eye",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shovel_word",
+        "name": "Shovel",
+        "isText": true
       }
     ],
     "handDisplay": []

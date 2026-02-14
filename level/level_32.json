@@ -1,971 +1,815 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Canines_word",
-        "name": "Canines",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Sailor",
-        "name": "Sailor",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Babies",
-        "name": "Babies",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Castle_word",
-        "name": "Castle",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Nuclear_word",
-        "name": "Nuclear",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Concrete_word",
-        "name": "Concrete",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Violins_word",
-        "name": "Violins",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Saw_word",
-        "name": "Saw",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 4,
-      "penaltyTime": 5,
       "bingosNeeded": 3,
-      "timeLimit": 135
-    },
-    "categoryTargets": {
-      "Violins_word": 3,
-      "Concrete_word": 3,
-      "Castle_word": 8,
-      "Canines_word": 6,
-      "Nuclear_word": 4,
-      "Sailor": 4,
-      "Babies": 8,
-      "Saw_word": 3
+      "maxSlots": 2,
+      "timeLimit": 135,
+      "penaltyTime": 5
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Spicy_word",
-          "name": "Wasabi",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Primates_word",
-          "name": "Baboon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Coding_word",
-          "name": "Ruby",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Minds_word",
-          "name": "Dante",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coding_word",
-          "name": "PHP",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coding_word",
-          "name": "Python",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Nuclear_word",
-          "name": "Electron",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Babies",
-          "name": "Car seat",
-          "type": "regular",
-          "image": "res/Item/babies_carseat_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Castle_word",
-          "name": "Moat",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Minds_word",
-          "name": "Kant",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Minds_word",
-          "name": "Sartre",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Network_word",
-          "name": "Server",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Finance_word",
-          "name": "Money",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Network_word",
-          "name": "Ethernet",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Network_word",
-          "name": "Gateway",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Saw_word",
-          "name": "Notch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Castle_word",
-          "name": "Rampart",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sailor",
-          "name": "Rope",
-          "type": "regular",
-          "image": "res/Item/sailor_rope_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Nuclear_word",
-          "name": "Atom",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Castle_word",
-          "name": "Dungeon",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Canines_word",
-          "name": "Fox",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Violins_word",
-          "name": "Luthier",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Babies",
-          "name": "Crib",
-          "type": "regular",
-          "image": "res/Item/babies_crib_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Castle_word",
-          "name": "Bastion",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Saw_word",
-          "name": "Blade",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Canines_word",
-          "name": "Dhole",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Canines_word",
-          "name": "Wolf",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Saw_word",
-          "name": "Teeth",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Canines_word",
-          "name": "Jackal",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sailor",
-          "name": "Storm",
-          "type": "regular",
-          "image": "res/Item/sailor_storm_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Concrete_word",
-          "name": "Screed",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sailor",
-          "name": "Flag",
-          "type": "regular",
-          "image": "res/Item/sailor_flag_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Diaper",
-          "type": "regular",
-          "image": "res/Item/babies_diaper_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Nuclear_word",
-          "name": "Proton",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Baby bowl and soft-tip spoon",
-          "type": "regular",
-          "image": "res/Item/babies_babybowlandsofttipspoon_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Canines_word",
-          "name": "Dingo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Violins_word",
-          "name": "Paganini",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sailor",
-          "name": "Knot",
-          "type": "regular",
-          "image": "res/Item/sailor_knot_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Rattle",
-          "type": "regular",
-          "image": "res/Item/babies_rattle_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Concrete_word",
-          "name": "Trowel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Babies",
-          "name": "Stroller",
-          "type": "regular",
-          "image": "res/Item/babies_stroller_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Castle_word",
-          "name": "Parapet",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Concrete_word",
           "name": "Mix",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 2,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
-          "category": "Babies",
-          "name": "Pacifier",
           "type": "regular",
-          "image": "res/Item/babies_pacifier_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Castle_word",
-          "name": "Turret",
-          "type": "regular",
+          "name": "Bastion",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Studies_word",
-          "name": "Oxford",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Candy",
-          "name": "Lollipop",
-          "type": "filler",
-          "image": "res/Item/candy_lollipop_4.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Candy",
-          "name": "Gum",
-          "type": "filler",
-          "image": "res/Item/candy_gum_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Studies_word",
-          "name": "Sorbonne",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Candy",
-          "name": "Fudge",
-          "type": "filler",
-          "image": "res/Item/candy_fudge_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Grammar_word",
-          "name": "Adverb",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Nuclear_word",
-          "name": "Neutron",
           "type": "regular",
+          "category": "Concrete_word",
+          "name": "Screed",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 2
+        }
       },
       {
-        "row": 3,
+        "layer": 0,
+        "row": 0,
+        "col": 1,
         "card": {
+          "type": "regular",
           "category": "Canines_word",
           "name": "Coyote",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 2,
+        "card": {
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Castle_word",
-          "name": "Tower",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Primates_word",
-          "name": "Gibbon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Keys",
-          "name": "Padlock",
-          "type": "filler",
-          "image": "res/Item/keys_padlock_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Lawn",
-          "name": "Gardening gloves",
-          "type": "filler",
-          "image": "res/Item/lawn_gardeninggloves_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Toys_word",
-          "name": "Doll",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Lawn",
-          "name": "Sprinkler",
-          "type": "filler",
-          "image": "res/Item/lawn_sprinkler_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Breads_word",
-          "name": "Focaccia",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Breads_word",
-          "name": "Baguette",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Breads_word",
-          "name": "Pita",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Breads_word",
-          "name": "Arepa",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Network_word",
-          "name": "Packet",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Paganism_word",
-          "name": "Idol",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Paganism_word",
-          "name": "Altar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Violins_word",
           "name": "Fret",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "filler",
+          "category": "Coding_word",
+          "name": "Ruby",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Coding_word",
+          "name": "Swift",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Dungeon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Canines_word",
+          "name": "Dhole",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Rattle",
+          "image": "res/Item/babies_rattle_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Primates_word",
+          "name": "Tarsier",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Minds_word",
+          "name": "Plato",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Minds_word",
+          "name": "Dante",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Violins_word",
+          "name": "Paganini",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Moat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Violins_word",
+          "name": "Luthier",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Pacifier",
+          "image": "res/Item/babies_pacifier_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Car seat",
+          "image": "res/Item/babies_carseat_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Primates_word",
+          "name": "Lemur",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Network_word",
+          "name": "Router",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Network_word",
+          "name": "Ethernet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Rampart",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sailor",
+          "name": "Knot",
+          "image": "res/Item/sailor_knot_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Canines_word",
+          "name": "Jackal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Spicy_word",
+          "name": "Habanero",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Candy",
+          "name": "Lollipop",
+          "image": "res/Item/candy_lollipop_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Lawn",
+          "name": "Frisbee",
+          "image": "res/Item/lawn_frisbee_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Turret",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Diaper",
+          "image": "res/Item/babies_diaper_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Babies",
           "name": "Bottle",
-          "type": "regular",
           "image": "res/Item/babies_bottle_5.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 2,
+        "col": 1,
         "card": {
+          "type": "regular",
+          "category": "Saw_word",
+          "name": "Blade",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Baby bowl and soft-tip spoon",
+          "image": "res/Item/babies_babybowlandsofttipspoon_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Stroller",
+          "image": "res/Item/babies_stroller_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "3D",
+          "name": "Cone",
+          "image": "res/Item/3d_cone_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Lawn",
+          "name": "Gardening gloves",
+          "image": "res/Item/lawn_gardeninggloves_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Breads_word",
+          "name": "Tortilla",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Nuclear_word",
+          "name": "Electron",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sailor",
+          "name": "Storm",
+          "image": "res/Item/sailor_storm_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Canines_word",
+          "name": "Wolf",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Western_word",
+          "name": "Gambler",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Breads_word",
+          "name": "Focaccia",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Saw_word",
+          "name": "Teeth",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Castle_word",
           "name": "Citadel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
           "type": "regular",
+          "category": "Nuclear_word",
+          "name": "Neutron",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 3,
+        "col": 1,
         "card": {
-          "category": "Primates_word",
-          "name": "Macaque",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Tarot_word",
-          "name": "Fool",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Tarot_word",
-          "name": "Moon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Coding_word",
-          "name": "Java",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "3D",
-          "name": "Cube",
-          "type": "filler",
-          "image": "res/Item/3d_cube_1.png",
+          "type": "regular",
+          "category": "Sailor",
+          "name": "Rope",
+          "image": "res/Item/sailor_rope_1.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 3,
+        "col": 2,
         "card": {
-          "category": "Spicy_word",
-          "name": "Sriracha",
           "type": "filler",
+          "category": "Toys_word",
+          "name": "Spinner",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Breads_word",
+          "name": "Brioche",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Concrete_word",
+          "name": "Trowel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sailor",
+          "name": "Flag",
+          "image": "res/Item/sailor_flag_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Babies",
+          "name": "Crib",
+          "image": "res/Item/babies_crib_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Lawn",
+          "name": "Grass",
+          "image": "res/Item/lawn_grass_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Studies_word",
+          "name": "Oxford",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Parapet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Castle_word",
+          "name": "Tower",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Saw_word",
+          "name": "Notch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Canines_word",
+          "name": "Fox",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Minds_word",
+          "name": "Socrates",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Studies_word",
+          "name": "MIT",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Nuclear_word",
+          "name": "Atom",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Canines_word",
+          "name": "Dingo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Nuclear_word",
+          "name": "Proton",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Paganism_word",
+          "name": "Totem",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Concrete_word": 3,
+      "Castle_word": 8,
+      "Canines_word": 6,
+      "Violins_word": 3,
+      "Babies": 8,
+      "Sailor": 4,
+      "Saw_word": 3,
+      "Nuclear_word": 4
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Canines_word",
+        "name": "Canines",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sailor",
+        "name": "Sailor",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Babies",
+        "name": "Babies",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Castle_word",
+        "name": "Castle",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Nuclear_word",
+        "name": "Nuclear",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Concrete_word",
+        "name": "Concrete",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Violins_word",
+        "name": "Violins",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Saw_word",
+        "name": "Saw",
+        "isText": true
       }
     ],
     "handDisplay": []

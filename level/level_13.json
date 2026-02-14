@@ -1,621 +1,501 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Shoes",
-        "name": "Shoes",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Festival_word",
-        "name": "Festival",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Injuries_word",
-        "name": "Injuries",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Wheel_word",
-        "name": "Wheel",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Map",
-        "name": "Map",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Fitness_word",
-        "name": "Fitness",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 4,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 115
-    },
-    "categoryTargets": {
-      "Shoes": 4,
-      "Map": 3,
-      "Fitness_word": 6,
-      "Wheel_word": 5,
-      "Festival_word": 3,
-      "Injuries_word": 4
+      "maxSlots": 2,
+      "timeLimit": 115,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
+          "type": "regular",
           "category": "Map",
           "name": "Italy",
-          "type": "regular",
           "image": "res/Item/map_italy_1.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "New York_word",
-          "name": "Harlem",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
           "category": "Auction_word",
-          "name": "Hammer",
-          "type": "filler",
+          "name": "Lot",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
+        "layer": 0,
         "row": 0,
+        "col": 1,
         "card": {
-          "category": "Injuries_word",
-          "name": "Bruise",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fitness_word",
-          "name": "Cardio",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Water_word",
-          "name": "Yosemite",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Draco",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Seafood",
-          "name": "Mussel",
-          "type": "filler",
-          "image": "res/Item/seafood_mussel_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Scorpius",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Injuries_word",
-          "name": "Wound",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Wheel_word",
-          "name": "Steer",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Map",
-          "name": "India",
-          "type": "regular",
-          "image": "res/Item/map_india_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Tulip",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Map",
-          "name": "Australia",
-          "type": "regular",
-          "image": "res/Item/map_australia_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Wheel_word",
-          "name": "Axle",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pattern_word",
-          "name": "Serpens",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Flowers_word",
-          "name": "Lily",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Division_word",
-          "name": "State",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Pilot",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Injuries_word",
-          "name": "Fracture",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Festival_word",
-          "name": "Diwali",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fitness_word",
-          "name": "Yoga",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Jobs_word",
-          "name": "Plumber",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Injuries_word",
-          "name": "Sprain",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Shoes",
-          "name": "Flats",
-          "type": "regular",
-          "image": "res/Item/shoes_flats_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Auction_word",
-          "name": "Price",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "New York_word",
-          "name": "Queens",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Festival_word",
-          "name": "Holi",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "New York_word",
-          "name": "Soho",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fitness_word",
-          "name": "Gym",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Shoes",
-          "name": "Oxfords",
-          "type": "regular",
-          "image": "res/Item/shoes_oxfords_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Water_word",
-          "name": "Victoria",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Dogs",
-          "name": "Terrier",
-          "type": "filler",
-          "image": "res/Item/dogs_terrier_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fitness_word",
-          "name": "Jogging",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Shoes",
-          "name": "Heels",
-          "type": "regular",
-          "image": "res/Item/shoes_heels_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Fitness_word",
           "name": "Pilates",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 3
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Division_word",
-          "name": "City",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Festival_word",
-          "name": "Songkran",
           "type": "regular",
+          "category": "Injuries_word",
+          "name": "Bruise",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Division_word",
-          "name": "Country",
-          "type": "filler",
+          "type": "regular",
+          "category": "Fitness_word",
+          "name": "Yoga",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
+          "type": "filler",
+          "category": "Pattern_word",
+          "name": "Orion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Flowers_word",
+          "name": "Rose",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Seafood",
+          "name": "Oyster",
+          "image": "res/Item/seafood_oyster_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Fitness_word",
+          "name": "Jogging",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Jobs_word",
+          "name": "Nurse",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Map",
+          "name": "Australia",
+          "image": "res/Item/map_australia_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Shoes",
+          "name": "Oxfords",
+          "image": "res/Item/shoes_oxfords_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Wheel_word",
-          "name": "Fortune",
+          "name": "Axle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
+          "category": "Shoes",
+          "name": "Flats",
+          "image": "res/Item/shoes_flats_3.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "New York_word",
-          "name": "Astoria",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 1,
+        "col": 3,
         "card": {
-          "category": "Priest_word",
-          "name": "Preacher",
           "type": "filler",
+          "category": "Auction_word",
+          "name": "Catalog",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 1,
+        "col": 3,
         "card": {
+          "type": "filler",
+          "category": "Dogs",
+          "name": "Husky",
+          "image": "res/Item/dogs_husky_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Seafood",
+          "name": "Mussel",
+          "image": "res/Item/seafood_mussel_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Berry_word",
+          "name": "Mulberry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Wheel_word",
           "name": "Hubcap",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Shoes",
-          "name": "Boots",
-          "type": "regular",
-          "image": "res/Item/shoes_boots_1.png",
-          "isText": false
-        },
         "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 0,
         "card": {
-          "category": "Wheel_word",
-          "name": "Tire",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Spiky_word",
-          "name": "Cactus",
           "type": "filler",
+          "category": "Auction_word",
+          "name": "Hammer",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 2,
+        "col": 1,
         "card": {
+          "type": "regular",
+          "category": "Festival_word",
+          "name": "Songkran",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Fitness_word",
           "name": "Workout",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Shoes",
+          "name": "Boots",
+          "image": "res/Item/shoes_boots_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Wheel_word",
+          "name": "Steer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Injuries_word",
+          "name": "Sprain",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Wheel_word",
+          "name": "Tire",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Festival_word",
+          "name": "Holi",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Shoes",
+          "name": "Heels",
+          "image": "res/Item/shoes_heels_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Festival_word",
+          "name": "Diwali",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Map",
+          "name": "India",
+          "image": "res/Item/map_india_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Quest_word",
+          "name": "Inquiry",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Injuries_word",
+          "name": "Wound",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Injuries_word",
+          "name": "Fracture",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Fitness_word",
+          "name": "Cardio",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Wheel_word",
+          "name": "Fortune",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Fitness_word",
+          "name": "Gym",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Auction_word",
+          "name": "Bid",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Map": 3,
+      "Fitness_word": 6,
+      "Injuries_word": 4,
+      "Shoes": 4,
+      "Wheel_word": 5,
+      "Festival_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Shoes",
+        "name": "Shoes",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Festival_word",
+        "name": "Festival",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Injuries_word",
+        "name": "Injuries",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wheel_word",
+        "name": "Wheel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fitness_word",
+        "name": "Fitness",
+        "isText": true
       }
     ],
     "handDisplay": []

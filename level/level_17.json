@@ -1,724 +1,604 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Footwear_word",
-        "name": "Footwear",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Landmark_word",
-        "name": "Landmark",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Chess_word",
-        "name": "Chess",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Build",
-        "name": "Build",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Folklore",
-        "name": "Folklore",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Explorer_word",
-        "name": "Explorer",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Pills_word",
-        "name": "Pills",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 130
-    },
-    "categoryTargets": {
-      "Pills_word": 3,
-      "Footwear_word": 6,
-      "Chess_word": 4,
-      "Folklore": 3,
-      "Build": 8,
-      "Landmark_word": 4,
-      "Explorer_word": 3
+      "maxSlots": 2,
+      "timeLimit": 130,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 1,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Build",
-          "name": "Library",
           "type": "regular",
-          "image": "res/Item/build_library_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Islands_word",
-          "name": "Crete",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Islands_word",
-          "name": "Hawaii",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pills_word",
-          "name": "Capsules",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Harbor_word",
-          "name": "Bay",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Harbor_word",
-          "name": "Vessel",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Chess_word",
-          "name": "Bishop",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "No bones_word",
-          "name": "Spider",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Drupes",
-          "name": "Apricot",
-          "type": "filler",
-          "image": "res/Item/drupes_apricot_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Explorer_word",
-          "name": "Vespucci",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Picnic",
-          "name": "Blanket",
-          "type": "filler",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Ballet_word",
-          "name": "Barre",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Folklore",
-          "name": "Troll",
-          "type": "regular",
-          "image": "res/Item/folklore_troll_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Big Ben",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Build",
-          "name": "Factory",
-          "type": "regular",
-          "image": "res/Item/build_factory_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Leader_word",
-          "name": "Lincoln",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chess_word",
-          "name": "Rook",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Leader_word",
-          "name": "Kennedy",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chess_word",
-          "name": "Queen",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Leader_word",
-          "name": "Obama",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Build",
-          "name": "Stadium",
-          "type": "regular",
-          "image": "res/Item/build_stadium_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Leader_word",
-          "name": "Biden",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chess_word",
-          "name": "Pawn",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Loafers",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Pills_word",
-          "name": "Lozenges",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Colosseum",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build",
-          "name": "School building",
-          "type": "regular",
-          "image": "res/Item/build_schoolbuilding_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Uggs",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Sandals",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Folklore",
-          "name": "Ogre",
-          "type": "regular",
-          "image": "res/Item/folklore_ogre_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Clogs",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build",
-          "name": "Museum",
-          "type": "regular",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Pyramids",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build",
-          "name": "Hospital",
-          "type": "regular",
-          "image": "res/Item/build_hospital_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Landmark_word",
-          "name": "Sphinx",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Explorer_word",
-          "name": "Columbus",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Makeup_word",
-          "name": "Palette",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pastry",
-          "name": "Cake",
-          "type": "filler",
-          "image": "res/Item/pastry_cake_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Makeup_word",
-          "name": "Serum",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Build",
-          "name": "Mall",
-          "type": "regular",
-          "image": "res/Item/build_mall_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Warriors_word",
-          "name": "Samurai",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Build",
-          "name": "Hotel",
-          "type": "regular",
-          "image": "res/Item/build_hotel_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rice_word",
-          "name": "Paella",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pills_word",
-          "name": "Tablets",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Footwear_word",
-          "name": "Sneakers",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Explorer_word",
           "name": "Magellan",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 0
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
+          "type": "filler",
+          "category": "Harbor_word",
+          "name": "Bay",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Warriors_word",
+          "name": "Samurai",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "No bones_word",
+          "name": "Barnacle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Explorer_word",
+          "name": "Columbus",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Drupes",
+          "name": "Cherry",
+          "image": "res/Item/drupes_cherry_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Chess_word",
+          "name": "Pawn",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Drupes",
+          "name": "Peach",
+          "image": "res/Item/drupes_peach_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Landmark_word",
+          "name": "Colosseum",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Makeup_word",
+          "name": "Palette",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Factory",
+          "image": "res/Item/build_factory_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Warriors_word",
+          "name": "Shinobi",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Folklore",
+          "name": "Ogre",
+          "image": "res/Item/folklore_ogre_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Warriors_word",
+          "name": "Ronin",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Hospital",
+          "image": "res/Item/build_hospital_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Rice_word",
+          "name": "Paella",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Folklore",
+          "name": "Troll",
+          "image": "res/Item/folklore_troll_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
           "category": "Rice_word",
           "name": "Congee",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Picnic",
-          "name": "Sandwich",
-          "type": "filler",
-          "image": "res/Item/picnic_sandwich_3.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 1
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Islands_word",
+          "name": "Jamaica",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 1,
+        "col": 4,
         "card": {
+          "type": "filler",
           "category": "Sculpt_word",
           "name": "Bust",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Harbor_word",
-          "name": "Pier",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 0,
         "card": {
-          "category": "PhD_word",
-          "name": "Thesis",
-          "type": "filler",
+          "type": "regular",
+          "category": "Pills_word",
+          "name": "Capsules",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 2
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Wind",
+          "name": "Bugle",
+          "image": "res/Item/wind_bugle_1.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Rice_word",
-          "name": "Risotto",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
+        "row": 2,
+        "col": 1,
         "card": {
-          "category": "PhD_word",
-          "name": "Degree",
-          "type": "filler",
+          "type": "regular",
+          "category": "Chess_word",
+          "name": "Rook",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 2,
+        "col": 1,
         "card": {
+          "type": "filler",
+          "category": "Wind",
+          "name": "Tuba",
+          "image": "res/Item/wind_tuba_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Chess_word",
+          "name": "Queen",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Pills_word",
+          "name": "Tablets",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "School building",
+          "image": "res/Item/build_schoolbuilding_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Stadium",
+          "image": "res/Item/build_stadium_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Landmark_word",
+          "name": "Big Ben",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Museum",
+          "image": "res/Item/build_museum_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Landmark_word",
+          "name": "Sphinx",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Hotel",
+          "image": "res/Item/build_hotel_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Chess_word",
+          "name": "Bishop",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Footwear_word",
+          "name": "Uggs",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Library",
+          "image": "res/Item/build_library_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Footwear_word",
+          "name": "Loafers",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Landmark_word",
+          "name": "Pyramids",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Footwear_word",
+          "name": "Sandals",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Build",
+          "name": "Mall",
+          "image": "res/Item/build_mall_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Footwear_word",
+          "name": "Sneakers",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Explorer_word",
+          "name": "Vespucci",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
           "category": "Folklore",
           "name": "Goblin",
-          "type": "regular",
           "image": "res/Item/folklore_goblin_2.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
+        "layer": 0,
         "row": 4,
+        "col": 3,
         "card": {
+          "type": "regular",
           "category": "Footwear_word",
           "name": "Slippers",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Pills_word",
+          "name": "Lozenges",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Footwear_word",
+          "name": "Clogs",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Explorer_word": 3,
+      "Chess_word": 4,
+      "Landmark_word": 4,
+      "Build": 8,
+      "Folklore": 3,
+      "Pills_word": 3,
+      "Footwear_word": 6
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Landmark_word",
+        "name": "Landmark",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chess_word",
+        "name": "Chess",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Build",
+        "name": "Build",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Folklore",
+        "name": "Folklore",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Explorer_word",
+        "name": "Explorer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pills_word",
+        "name": "Pills",
+        "isText": true
       }
     ],
     "handDisplay": []

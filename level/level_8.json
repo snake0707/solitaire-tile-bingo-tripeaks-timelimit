@@ -1,549 +1,441 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Coast_word",
-        "name": "Coast",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Chair",
-        "name": "Chair",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Device_word",
-        "name": "Device",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Citrus_word",
-        "name": "Citrus",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Material_word",
-        "name": "Material",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Rainy_word",
-        "name": "Rainy",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 3,
-      "penaltyTime": 3,
       "bingosNeeded": 2,
-      "timeLimit": 120
-    },
-    "categoryTargets": {
-      "Chair": 8,
-      "Material_word": 4,
-      "Device_word": 4,
-      "Rainy_word": 3,
-      "Citrus_word": 3,
-      "Coast_word": 3
+      "maxSlots": 2,
+      "timeLimit": 120,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 0,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Chair",
-          "name": "Throne",
           "type": "regular",
-          "image": "res/Item/chair_throne_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Citrus_word",
-          "name": "Pomelo",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Fame_word",
-          "name": "Renown",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Combat_word",
-          "name": "Kung fu",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Defense_word",
-          "name": "Patrol",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Chair",
-          "name": "Recliner",
-          "type": "regular",
-          "image": "res/Item/chair_recliner_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Device_word",
-          "name": "Printer",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Device_word",
-          "name": "Fax",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Coast_word",
-          "name": "Beach",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rainy_word",
-          "name": "Puddles",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Racing_word",
-          "name": "Pit stop",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cleaning",
-          "name": "Bin",
-          "type": "filler",
-          "image": "res/Item/cleaning_bin_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Crown_word",
-          "name": "Emperor",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Defense_word",
-          "name": "Guard",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Karate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chair",
-          "name": "Cushion",
-          "type": "regular",
-          "image": "res/Item/chair_cushion_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Coast_word",
-          "name": "Surf",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Material_word",
-          "name": "Glass",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Combat_word",
-          "name": "Silat",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Chair",
-          "name": "Stool",
-          "type": "regular",
-          "image": "res/Item/chair_stool_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sliding_word",
-          "name": "Luge",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Rainy_word",
-          "name": "Showers",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Luxury_word",
-          "name": "Jewelry",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Material_word",
-          "name": "Plastic",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Justice_word",
-          "name": "Scales",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Chair",
-          "name": "Ottoman",
-          "type": "regular",
-          "image": "res/Item/chair_ottoman_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Deck",
-          "name": "Queen hearts",
-          "type": "filler",
-          "image": "res/Item/deck_queenhearts_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Gym_word",
-          "name": "Air bike",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Racing_word",
-          "name": "Finish",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Device_word",
           "name": "Heater",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Citrus_word",
-          "name": "Lime",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Chair",
-          "name": "Beanbag",
-          "type": "regular",
-          "image": "res/Item/chair_beanbag_8.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Device_word",
-          "name": "Dryer",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Material_word",
-          "name": "Metal",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Rainy_word",
-          "name": "Clouds",
-          "type": "regular",
+          "name": "Puddles",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Citrus_word",
-          "name": "Lemon",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Cleaning",
-          "name": "Broom",
           "type": "filler",
-          "image": "res/Item/cleaning_broom_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Material_word",
-          "name": "Stone",
-          "type": "regular",
+          "category": "Camping_word",
+          "name": "Hammock",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "regular",
+          "category": "Material_word",
+          "name": "Glass",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Crown_word",
+          "name": "Maharaja",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Coast_word",
+          "name": "Surf",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
           "category": "Chair",
           "name": "Loveseat",
-          "type": "regular",
           "image": "res/Item/chair_loveseat_6.png",
           "isText": false
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 4,
         "card": {
-          "category": "Chair",
-          "name": "Armchair",
-          "type": "regular",
-          "image": "res/Item/chair_armchair_5.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Coast_word",
-          "name": "Cliff",
-          "type": "regular",
+          "type": "filler",
+          "category": "Combat_word",
+          "name": "Silat",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Device_word",
+          "name": "Fax",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Cozy_word",
+          "name": "Comfy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Cushion",
+          "image": "res/Item/chair_cushion_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Coast_word",
+          "name": "Cliff",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Coast_word",
+          "name": "Beach",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Material_word",
+          "name": "Stone",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Device_word",
+          "name": "Dryer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Stool",
+          "image": "res/Item/chair_stool_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Material_word",
+          "name": "Metal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Citrus_word",
+          "name": "Lime",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Material_word",
+          "name": "Plastic",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Citrus_word",
+          "name": "Lemon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Cleaning",
+          "name": "Broom",
+          "image": "res/Item/cleaning_broom_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Throne",
+          "image": "res/Item/chair_throne_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Ottoman",
+          "image": "res/Item/chair_ottoman_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Cleaning",
+          "name": "Mop",
+          "image": "res/Item/cleaning_mop_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Rainy_word",
+          "name": "Clouds",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Device_word",
+          "name": "Printer",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Rainy_word",
+          "name": "Showers",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Beanbag",
+          "image": "res/Item/chair_beanbag_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Defense_word",
+          "name": "Security",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Armchair",
+          "image": "res/Item/chair_armchair_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Citrus_word",
+          "name": "Pomelo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Chair",
+          "name": "Recliner",
+          "image": "res/Item/chair_recliner_7.png",
+          "isText": false
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Device_word": 4,
+      "Rainy_word": 3,
+      "Material_word": 4,
+      "Coast_word": 3,
+      "Chair": 8,
+      "Citrus_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Coast_word",
+        "name": "Coast",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chair",
+        "name": "Chair",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Device_word",
+        "name": "Device",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Citrus_word",
+        "name": "Citrus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Material_word",
+        "name": "Material",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rainy_word",
+        "name": "Rainy",
+        "isText": true
       }
     ],
     "handDisplay": []

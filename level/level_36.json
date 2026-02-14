@@ -1,911 +1,755 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Desert",
-        "name": "Desert",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Industry_word",
-        "name": "Industry",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Cultures_word",
-        "name": "Cultures",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Toddler_word",
-        "name": "Toddler",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Build_word",
-        "name": "Build",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Mushroom_word",
-        "name": "Mushroom",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Toys",
-        "name": "Toys",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Violin_word",
-        "name": "Violin",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 3,
-      "penaltyTime": 5,
       "bingosNeeded": 3,
-      "timeLimit": 110
-    },
-    "categoryTargets": {
-      "Build_word": 8,
-      "Desert": 4,
-      "Violin_word": 4,
-      "Industry_word": 3,
-      "Cultures_word": 6,
-      "Toys": 3,
-      "Toddler_word": 3,
-      "Mushroom_word": 6
+      "maxSlots": 2,
+      "timeLimit": 110,
+      "penaltyTime": 5
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Toys",
-          "name": "Kite",
-          "type": "regular",
-          "image": "res/Item/toys_kite_2.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Mushroom_word",
-          "name": "Shiitake",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Mushroom_word",
-          "name": "Enoki",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cultures_word",
-          "name": "Celts",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Mushroom_word",
-          "name": "Truffle",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Toddler_word",
-          "name": "Playpen",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Industry_word",
-          "name": "Steel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Mushroom_word",
-          "name": "Porcini",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Build_word",
-          "name": "Hospital",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cultures_word",
-          "name": "Greeks",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Violin_word",
-          "name": "Cello",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Build_word",
-          "name": "Library",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Desert",
-          "name": "Dunes",
-          "type": "regular",
-          "image": "res/Item/desert_dunes_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cheese_word",
-          "name": "Edam",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Maps_word",
-          "name": "Journey",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cheese_word",
-          "name": "Feta",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Toys",
-          "name": "Teddy bear",
-          "type": "regular",
-          "image": "res/Item/toys_teddybear_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Build_word",
-          "name": "Stadium",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Industry_word",
-          "name": "Produce",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Mushroom_word",
-          "name": "Amanita",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Industry_word",
-          "name": "Goods",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cultures_word",
-          "name": "Aztecs",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Mailman_word",
-          "name": "Seal",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cheese_word",
-          "name": "Brie",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Cheese_word",
-          "name": "Parmesan",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Language_word",
-          "name": "English",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Mailman_word",
-          "name": "Mail",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Mailman_word",
-          "name": "Envelope",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Violin_word",
-          "name": "Oboe",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Purple",
-          "name": "Eggplant",
-          "type": "filler",
-          "image": "res/Item/purple_eggplant_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Purple",
-          "name": "Violet",
-          "type": "filler",
-          "image": "res/Item/purple_violet_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Build_word",
-          "name": "Hotel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Yellow",
-          "name": "Corn",
-          "type": "filler",
-          "image": "res/Item/yellow_corn_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Speak_word",
-          "name": "Argument",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
           "category": "Build_word",
           "name": "Factory",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 2
+        }
       },
       {
-        "row": 2,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Enoki",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Toddler_word",
+          "name": "Playpen",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Maps_word",
+          "name": "Scale",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Cheese_word",
+          "name": "Dorblu",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Amanita",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Cheese_word",
+          "name": "Ricotta",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Cheese_word",
+          "name": "Feta",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Truffle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Purple",
+          "name": "Lavender",
+          "image": "res/Item/purple_lavender_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Yellow",
+          "name": "Corn",
+          "image": "res/Item/yellow_corn_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Violin_word",
+          "name": "Cello",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
           "category": "Desert",
           "name": "Camel",
-          "type": "regular",
           "image": "res/Item/desert_camel_4.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 2
+        }
       },
       {
-        "row": 2,
-        "card": {
-          "category": "Toddler_word",
-          "name": "Nap time",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Rain",
-          "name": "Raincoat",
-          "type": "filler",
-          "image": "res/Item/rain_raincoat_2.png",
-          "isText": false
-        },
         "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
+        "row": 1,
+        "col": 0,
         "card": {
-          "category": "Hair_word",
-          "name": "Coily",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Flu_word",
-          "name": "Pills",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Toys",
-          "name": "Lego",
           "type": "regular",
-          "image": "res/Item/toys_lego_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Flu_word",
-          "name": "Headache",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Flu_word",
-          "name": "Cough",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Rome",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Italian",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Language_word",
-          "name": "Hindi",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Purple",
-          "name": "Plum",
-          "type": "filler",
-          "image": "res/Item/purple_plum_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Ottawa",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Capitals_word",
-          "name": "Athens",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Build_word",
-          "name": "Mall",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Desert",
-          "name": "Oasis",
-          "type": "regular",
-          "image": "res/Item/desert_oasis_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Violin_word",
-          "name": "Flute",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Cultures_word",
-          "name": "Mayans",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Desert",
-          "name": "Cacti",
-          "type": "regular",
-          "image": "res/Item/desert_cacti_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Speak_word",
-          "name": "Debate",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rain",
-          "name": "Umbrella",
-          "type": "filler",
-          "image": "res/Item/rain_umbrella_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rain",
-          "name": "Puddle",
-          "type": "filler",
-          "image": "res/Item/rain_puddle_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Gym",
-          "name": "Barbell",
-          "type": "filler",
-          "image": "res/Item/gym_barbell_2.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Gym",
-          "name": "Air bike",
-          "type": "filler",
-          "image": "res/Item/gym_airbike_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drum_word",
-          "name": "Bongo",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Build_word",
-          "name": "Museum",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Drum_word",
-          "name": "Djembe",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Violin_word",
-          "name": "Clarinet",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Build_word",
           "name": "School building",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 1,
+        "col": 0,
         "card": {
-          "category": "Cultures_word",
-          "name": "Romans",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Mailman_word",
-          "name": "Ink",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Eye_word",
-          "name": "Iris",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Mushroom_word",
-          "name": "Russula",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Cultures_word",
-          "name": "Vikings",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Toddler_word",
           "name": "Pacifier",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Celts",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Museum",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Industry_word",
+          "name": "Steel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Toys",
+          "name": "Teddy bear",
+          "image": "res/Item/toys_teddybear_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Mayans",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Industry_word",
+          "name": "Goods",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Shiitake",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Desert",
+          "name": "Cacti",
+          "image": "res/Item/desert_cacti_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Violin_word",
+          "name": "Clarinet",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Romans",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Toys",
+          "name": "Lego",
+          "image": "res/Item/toys_lego_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Speak_word",
+          "name": "Debate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Hair_word",
+          "name": "Curly",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Mailman_word",
+          "name": "Envelope",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Language_word",
+          "name": "English",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Hospital",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Desert",
+          "name": "Oasis",
+          "image": "res/Item/desert_oasis_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Shovel_word",
+          "name": "Excavate",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Capitals_word",
+          "name": "Oslo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Toys",
+          "name": "Kite",
+          "image": "res/Item/toys_kite_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Desert",
+          "name": "Dunes",
+          "image": "res/Item/desert_dunes_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Industry_word",
+          "name": "Produce",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Stadium",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Rain",
+          "name": "Cloud",
+          "image": "res/Item/rain_cloud_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Russula",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Rain",
+          "name": "Lightning",
+          "image": "res/Item/rain_lightning_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Library",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Gym",
+          "name": "Dumbbell",
+          "image": "res/Item/gym_dumbbell_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Mushroom_word",
+          "name": "Porcini",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Aztecs",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Toddler_word",
+          "name": "Nap time",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Greeks",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Yellow",
+          "name": "Cheese",
+          "image": "res/Item/yellow_cheese_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Dynasty_word",
+          "name": "Romanov",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Mall",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Eye_word",
+          "name": "Pupil",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Violin_word",
+          "name": "Oboe",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Eye_word",
+          "name": "Iris",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Build_word",
+          "name": "Hotel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Shovel_word",
+          "name": "Unearth",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Violin_word",
+          "name": "Flute",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Cultures_word",
+          "name": "Vikings",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Build_word": 8,
+      "Mushroom_word": 6,
+      "Toddler_word": 3,
+      "Violin_word": 4,
+      "Desert": 4,
+      "Cultures_word": 6,
+      "Industry_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Desert",
+        "name": "Desert",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Industry_word",
+        "name": "Industry",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cultures_word",
+        "name": "Cultures",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toddler_word",
+        "name": "Toddler",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Build_word",
+        "name": "Build",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mushroom_word",
+        "name": "Mushroom",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Violin_word",
+        "name": "Violin",
+        "isText": true
       }
     ],
     "handDisplay": []

@@ -1,1031 +1,911 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Beans_word",
-        "name": "Beans",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Pirate",
-        "name": "Pirate",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Beach",
-        "name": "Beach",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Rap_word",
-        "name": "Rap",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Chimera_word",
-        "name": "Chimera",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Particle_word",
-        "name": "Particle",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Equidae_word",
-        "name": "Equidae",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Poetry_word",
-        "name": "Poetry",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 4,
       "bingosNeeded": 3,
-      "timeLimit": 165
-    },
-    "categoryTargets": {
-      "Beach": 8,
-      "Equidae_word": 6,
-      "Chimera_word": 3,
-      "Pirate": 8,
-      "Beans_word": 4,
-      "Rap_word": 4,
-      "Poetry_word": 5,
-      "Particle_word": 3
+      "maxSlots": 2,
+      "timeLimit": 165,
+      "penaltyTime": 4
     },
     "cards": [
       {
+        "layer": 2,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Farming_word",
-          "name": "Harvest",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Farming_word",
-          "name": "Crop",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Farming_word",
-          "name": "Topsoil",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Farming_word",
-          "name": "Fallow",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Plane_word",
-          "name": "Seatbelt",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Farming_word",
-          "name": "Compost",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Egypt",
-          "name": "Mummy",
-          "type": "filler",
-          "image": "res/Item/egypt_mummy_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Egypt",
-          "name": "Sphinx",
-          "type": "filler",
-          "image": "res/Item/egypt_sphinx_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Horse",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Acrostic",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Rap_word",
-          "name": "Lyrics",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Particle_word",
-          "name": "Neutron",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dances_word",
-          "name": "Samba",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dances_word",
-          "name": "Flamenco",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dances_word",
-          "name": "Tango",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Mustang",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Ode",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Pirate",
-          "name": "Cannon",
-          "type": "regular",
-          "image": "res/Item/pirate_cannon_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Egypt",
-          "name": "Scarab",
-          "type": "filler",
-          "image": "res/Item/egypt_scarab_5.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Dances_word",
-          "name": "Rumba",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Customs_word",
-          "name": "Import",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Evaluate_word",
-          "name": "Assess",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Customs_word",
-          "name": "Export",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Space",
-          "name": "Alien",
-          "type": "filler",
-          "image": "res/Item/space_alien_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Mule",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rap_word",
-          "name": "Rhyme",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pirate",
-          "name": "Cutlass",
-          "type": "regular",
-          "image": "res/Item/pirate_cutlass_3.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pirate",
-          "name": "Treasure chest",
-          "type": "regular",
-          "image": "res/Item/pirate_treasurechest_8.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Chimera_word",
-          "name": "Serpent",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Rap_word",
-          "name": "Punch",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Pirate",
-          "name": "Treasure map",
-          "type": "regular",
-          "image": "res/Item/pirate_treasuremap_6.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Energy_word",
-          "name": "Solar",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Space",
-          "name": "Rocket",
-          "type": "filler",
-          "image": "res/Item/space_rocket_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Space",
-          "name": "UFO",
-          "type": "filler",
-          "image": "res/Item/space_ufo_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Plane_word",
-          "name": "Fly",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Space",
-          "name": "Astronaut",
-          "type": "filler",
-          "image": "res/Item/space_astronaut_1.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sea fish",
-          "name": "Tuna",
-          "type": "filler",
-          "image": "res/Item/seafish_tuna_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Egypt",
-          "name": "Pharaoh's mask",
-          "type": "filler",
-          "image": "res/Item/egypt_pharaohsmask_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sea fish",
-          "name": "Stingray",
-          "type": "filler",
-          "image": "res/Item/seafish_stingray_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Sea fish",
-          "name": "Shark",
-          "type": "filler",
-          "image": "res/Item/seafish_shark_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Chimera_word",
-          "name": "Goat",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Pirate",
-          "name": "Wooden ship's wheel",
-          "type": "regular",
-          "image": "res/Item/pirate_woodenshipswheel_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Beans_word",
-          "name": "Excelsa",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Plane_word",
-          "name": "Rudder",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Plane_word",
-          "name": "Aileron",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Plane_word",
-          "name": "Fuselage",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Zebra",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Birthday",
-          "name": "Birthday hat",
-          "type": "filler",
-          "image": "res/Item/birthday_birthdayhat_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Birthday",
-          "name": "Candle",
-          "type": "filler",
-          "image": "res/Item/birthday_candle_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Particle_word",
-          "name": "Atom",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pirate",
-          "name": "Parrot",
-          "type": "regular",
-          "image": "res/Item/pirate_parrot_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beach",
-          "name": "Waves",
-          "type": "regular",
-          "image": "res/Item/beach_waves_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Haiku",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beans_word",
-          "name": "Robusta",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pirate",
-          "name": "Jolly Roger",
-          "type": "regular",
-          "image": "res/Item/pirate_jollyroger_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Poetry_word",
-          "name": "Ballad",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 3,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beach",
-          "name": "Buoy",
-          "type": "regular",
-          "image": "res/Item/beach_buoy_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beans_word",
-          "name": "Arabica",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beach",
-          "name": "Seagull",
-          "type": "regular",
-          "image": "res/Item/beach_seagull_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Pony",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beach",
-          "name": "Sand",
-          "type": "regular",
-          "image": "res/Item/beach_sand_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Beach",
-          "name": "Bay",
-          "type": "regular",
-          "image": "res/Item/beach_bay_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Equidae_word",
-          "name": "Donkey",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Rap_word",
-          "name": "Verse",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Pirate",
-          "name": "Rum",
-          "type": "regular",
-          "image": "res/Item/pirate_rum_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Particle_word",
           "name": "Electron",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 0
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Beans_word",
-          "name": "Liberica",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
+        "row": 0,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Poetry_word",
+          "name": "Acrostic",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 0,
         "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Treasure chest",
+          "image": "res/Item/pirate_treasurechest_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Mustang",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Poetry_word",
+          "name": "Haiku",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Parrot",
+          "image": "res/Item/pirate_parrot_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Zebra",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Jolly Roger",
+          "image": "res/Item/pirate_jollyroger_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Beach",
           "name": "Shells",
-          "type": "regular",
           "image": "res/Item/beach_shells_6.png",
           "isText": false
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Customs_word",
-          "name": "Duty",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Optics_word",
-          "name": "Monocle",
-          "type": "filler",
+          "type": "regular",
+          "category": "Particle_word",
+          "name": "Neutron",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Optics_word",
-          "name": "Glasses",
-          "type": "filler",
+          "type": "regular",
+          "category": "Beans_word",
+          "name": "Excelsa",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Chimera_word",
-          "name": "Lion",
           "type": "regular",
+          "category": "Beans_word",
+          "name": "Arabica",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 4,
         "card": {
-          "category": "Beach",
-          "name": "Beach chair",
           "type": "regular",
-          "image": "res/Item/beach_beachchair_7.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
+          "category": "Rap_word",
+          "name": "Rhyme",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "regular",
           "category": "Beach",
           "name": "Beach umbrella",
-          "type": "regular",
           "image": "res/Item/beach_beachumbrella_8.png",
           "isText": false
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "regular",
+          "category": "Beans_word",
+          "name": "Robusta",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Rap_word",
+          "name": "Punch",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Crop",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Topsoil",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Particle_word",
+          "name": "Atom",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Rap_word",
+          "name": "Lyrics",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Seagull",
+          "image": "res/Item/beach_seagull_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Egypt",
+          "name": "Nile river",
+          "image": "res/Item/egypt_nileriver_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Grain",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Dances_word",
+          "name": "Waltz",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Egypt",
+          "name": "Pharaoh's mask",
+          "image": "res/Item/egypt_pharaohsmask_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Customs_word",
+          "name": "Border",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Space",
+          "name": "UFO",
+          "image": "res/Item/space_ufo_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Poetry_word",
+          "name": "Ode",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Buoy",
+          "image": "res/Item/beach_buoy_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Poetry_word",
           "name": "Sonnet",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 3
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Zen_word",
-          "name": "Rinzai",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 3
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Space",
+          "name": "Astronaut",
+          "image": "res/Item/space_astronaut_1.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 2,
+        "col": 0,
         "card": {
+          "type": "filler",
+          "category": "Anagram_word",
+          "name": "Meat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Chimera_word",
+          "name": "Goat",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Treasure map",
+          "image": "res/Item/pirate_treasuremap_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Birthday",
+          "name": "Cake",
+          "image": "res/Item/birthday_cake_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Anagram_word",
+          "name": "Team",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Shaft_word",
+          "name": "Cart",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Chimera_word",
+          "name": "Serpent",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Sea fish",
+          "name": "Sardine",
+          "image": "res/Item/seafish_sardine_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Sea fish",
+          "name": "Clownfish",
+          "image": "res/Item/seafish_clownfish_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Donkey",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Cutlass",
+          "image": "res/Item/pirate_cutlass_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Waves",
+          "image": "res/Item/beach_waves_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Egypt",
+          "name": "Sphinx",
+          "image": "res/Item/egypt_sphinx_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Sea fish",
+          "name": "Stingray",
+          "image": "res/Item/seafish_stingray_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Sea fish",
+          "name": "Marlin",
+          "image": "res/Item/seafish_marlin_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Chimera_word",
+          "name": "Lion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Wooden ship's wheel",
+          "image": "res/Item/pirate_woodenshipswheel_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Beach chair",
+          "image": "res/Item/beach_beachchair_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Horse",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Plane_word",
+          "name": "Wings",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Plane_word",
+          "name": "Fly",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Sea fish",
+          "name": "Sawfish",
+          "image": "res/Item/seafish_sawfish_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Plane_word",
+          "name": "Seatbelt",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Plane_word",
+          "name": "Aileron",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Mule",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Rum",
+          "image": "res/Item/pirate_rum_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Bay",
+          "image": "res/Item/beach_bay_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Rap_word",
+          "name": "Verse",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Birthday",
+          "name": "Birthday hat",
+          "image": "res/Item/birthday_birthdayhat_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Birthday",
+          "name": "Balloon",
+          "image": "res/Item/birthday_balloon_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Poetry_word",
+          "name": "Ballad",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Pirate",
+          "name": "Cannon",
+          "image": "res/Item/pirate_cannon_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Beach",
+          "name": "Sand",
+          "image": "res/Item/beach_sand_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Energy_word",
+          "name": "Thermal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
           "category": "Dynamics_word",
           "name": "Motion",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Farming_word",
+          "name": "Fallow",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
         "layer": 0,
-        "col": 3
-      },
-      {
         "row": 4,
+        "col": 3,
         "card": {
-          "category": "Optics_word",
-          "name": "Lens",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 4,
-        "card": {
           "category": "Beards_word",
           "name": "Goatee",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
-        "layer": 1,
-        "col": 4
+        }
       },
       {
+        "layer": 1,
         "row": 4,
+        "col": 4,
         "card": {
-          "category": "Beards_word",
-          "name": "Balbo",
-          "type": "filler",
+          "type": "regular",
+          "category": "Equidae_word",
+          "name": "Pony",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Beans_word",
+          "name": "Liberica",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Particle_word": 3,
+      "Poetry_word": 5,
+      "Pirate": 8,
+      "Equidae_word": 6,
+      "Beach": 8,
+      "Beans_word": 4,
+      "Rap_word": 4,
+      "Chimera_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Beans_word",
+        "name": "Beans",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pirate",
+        "name": "Pirate",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Beach",
+        "name": "Beach",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Rap_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chimera_word",
+        "name": "Chimera",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Particle_word",
+        "name": "Particle",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Equidae_word",
+        "name": "Equidae",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Poetry_word",
+        "name": "Poetry",
+        "isText": true
       }
     ],
     "handDisplay": []

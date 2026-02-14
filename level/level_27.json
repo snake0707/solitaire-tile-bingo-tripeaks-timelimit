@@ -1,971 +1,815 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Plane_word",
-        "name": "Plane",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Sea fish",
-        "name": "Sea fish",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Optics_word",
-        "name": "Optics",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Energy_word",
-        "name": "Energy",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Dynamics_word",
-        "name": "Dynamics",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Beards_word",
-        "name": "Beards",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Birthday",
-        "name": "Birthday",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Zen_word",
-        "name": "Zen",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 4,
       "bingosNeeded": 2,
-      "timeLimit": 135
-    },
-    "categoryTargets": {
-      "Sea fish": 8,
-      "Birthday": 6,
-      "Beards_word": 3,
-      "Optics_word": 4,
-      "Dynamics_word": 3,
-      "Zen_word": 3,
-      "Plane_word": 8,
-      "Energy_word": 4
+      "maxSlots": 2,
+      "timeLimit": 135,
+      "penaltyTime": 4
     },
     "cards": [
       {
-        "row": 0,
-        "card": {
-          "category": "Birthday",
-          "name": "Box",
-          "type": "regular",
-          "image": "res/Item/birthday_box_4.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Dynamics_word",
-          "name": "Inertia",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Plane_word",
-          "name": "Cockpit",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Cipher_word",
-          "name": "Decode",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Charger",
-          "name": "Drone",
-          "type": "filler",
-          "image": "res/Item/charger_drone_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Charger",
-          "name": "Laptop",
-          "type": "filler",
-          "image": "res/Item/charger_laptop_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sea fish",
-          "name": "Stingray",
-          "type": "regular",
-          "image": "res/Item/seafish_stingray_7.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Knight_word",
-          "name": "Weapon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Knight_word",
-          "name": "Chivalry",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sea fish",
-          "name": "Cod",
-          "type": "regular",
-          "image": "res/Item/seafish_cod_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Knight_word",
-          "name": "Destrier",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Breeds_word",
-          "name": "Siamese",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Energy_word",
-          "name": "Thermal",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Zen_word",
-          "name": "Rinzai",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Sea fish",
-          "name": "Shark",
-          "type": "regular",
-          "image": "res/Item/seafish_shark_5.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Beards_word",
-          "name": "Ducktail",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Energy_word",
-          "name": "Solar",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sea fish",
-          "name": "Tuna",
-          "type": "regular",
-          "image": "res/Item/seafish_tuna_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Birthday",
-          "name": "Birthday hat",
-          "type": "regular",
-          "image": "res/Item/birthday_birthdayhat_6.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sea fish",
-          "name": "Sawfish",
-          "type": "regular",
-          "image": "res/Item/seafish_sawfish_6.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sea fish",
-          "name": "Marlin",
-          "type": "regular",
-          "image": "res/Item/seafish_marlin_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Beards_word",
-          "name": "Goatee",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Sea fish",
-          "name": "Sardine",
-          "type": "regular",
-          "image": "res/Item/seafish_sardine_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Plane_word",
-          "name": "Fly",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Zen_word",
-          "name": "Dharma",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Plane_word",
-          "name": "Fuselage",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Plane_word",
-          "name": "Seatbelt",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Optics_word",
-          "name": "Monocle",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Plane_word",
-          "name": "Engine",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Plane_word",
-          "name": "Rudder",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Birthday",
-          "name": "Confetti",
-          "type": "regular",
-          "image": "res/Item/birthday_confetti_5.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Breeds_word",
-          "name": "Sphynx",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Breeds_word",
-          "name": "Birman",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Energy_word",
-          "name": "Kinetic",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Opera_word",
-          "name": "Act",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Policies_word",
-          "name": "Tyranny",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Dynamics_word",
-          "name": "Velocity",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Policies_word",
-          "name": "Monarchy",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Policies_word",
-          "name": "Anarchy",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Radiate_word",
-          "name": "X-rays",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Whiskers",
-          "name": "Lion",
-          "type": "filler",
-          "image": "res/Item/whiskers_lion_8.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Whiskers",
-          "name": "Catfish",
-          "type": "filler",
-          "image": "res/Item/whiskers_catfish_7.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Birthday",
-          "name": "Balloon",
-          "type": "regular",
-          "image": "res/Item/birthday_balloon_1.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Whiskers",
-          "name": "Dog",
-          "type": "filler",
-          "image": "res/Item/whiskers_dog_2.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Whiskers",
-          "name": "Squirrel",
-          "type": "filler",
-          "image": "res/Item/whiskers_squirrel_6.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Beards_word",
           "name": "Balbo",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 0,
+        "card": {
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Elements_word",
-          "name": "Hydrogen",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Elements_word",
-          "name": "Carbon",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Transport",
-          "name": "Plane",
-          "type": "filler",
-          "image": "res/Item/transport_plane_3.png",
-          "isText": false
-        },
-        "layer": 2,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Elements_word",
-          "name": "Nitrogen",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Burger",
-          "name": "Beef",
-          "type": "filler",
-          "image": "res/Item/burger_beef_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Zen_word",
-          "name": "Yoga",
-          "type": "regular",
+          "name": "Dharma",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 2,
-        "col": 2
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Foodie_word",
-          "name": "Taste",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Foodie_word",
-          "name": "Hedonism",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Optics_word",
-          "name": "Glasses",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 2,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Foodie_word",
-          "name": "Epicure",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Foodie_word",
-          "name": "Gourmet",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Birthday",
-          "name": "Candle",
-          "type": "regular",
-          "image": "res/Item/birthday_candle_2.png",
+          "category": "Sea fish",
+          "name": "Shark",
+          "image": "res/Item/seafish_shark_5.png",
           "isText": false
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 3,
-        "card": {
-          "category": "Radiate_word",
-          "name": "Decay",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Hormones_word",
-          "name": "Gastrin",
           "type": "filler",
+          "category": "William_word",
+          "name": "Romeo",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Optics_word",
-          "name": "Lens",
-          "type": "regular",
+          "type": "filler",
+          "category": "William_word",
+          "name": "Othello",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 2,
-        "col": 0
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Birthday",
+          "name": "Balloon",
+          "image": "res/Item/birthday_balloon_1.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Dynamics_word",
-          "name": "Motion",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Plane_word",
-          "name": "Wings",
-          "type": "regular",
+          "type": "filler",
+          "category": "William_word",
+          "name": "Henry V",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 0
+        "row": 0,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Charger",
+          "name": "Laptop",
+          "image": "res/Item/charger_laptop_3.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Optics_word",
-          "name": "Spyglass",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
         "layer": 2,
-        "col": 1
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Sawfish",
+          "image": "res/Item/seafish_sawfish_6.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Hormones_word",
-          "name": "Cortisol",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 3,
         "card": {
-          "category": "Hormones_word",
-          "name": "Glucagon",
           "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
+          "category": "Charger",
+          "name": "Digital camera",
+          "image": "res/Item/charger_digitalcamera_4.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 3,
         "card": {
+          "type": "filler",
           "category": "Breeds_word",
-          "name": "Bengal",
-          "type": "filler",
+          "name": "Sphynx",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 2,
-        "col": 2
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Cod",
+          "image": "res/Item/seafish_cod_3.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Hormones_word",
-          "name": "Insulin",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 4,
+        "row": 0,
+        "col": 4,
         "card": {
-          "category": "Mortgage_word",
-          "name": "Rate",
           "type": "filler",
+          "category": "Cipher_word",
+          "name": "Password",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 4,
         "card": {
+          "type": "filler",
+          "category": "Opera_word",
+          "name": "Role",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
           "category": "Birthday",
           "name": "Cake",
-          "type": "regular",
           "image": "res/Item/birthday_cake_3.png",
           "isText": false
-        },
-        "layer": 2,
-        "col": 3
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Alchemy_word",
-          "name": "Cauldron",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 4,
-        "card": {
-          "category": "Yinyang_word",
-          "name": "Duality",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
         "layer": 0,
-        "col": 3
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Dynamics_word",
+          "name": "Velocity",
+          "image": null,
+          "isText": true
+        }
       },
       {
-        "row": 4,
+        "layer": 2,
+        "row": 1,
+        "col": 1,
         "card": {
+          "type": "regular",
+          "category": "Zen_word",
+          "name": "Yoga",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Energy_word",
+          "name": "Solar",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Wings",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Energy_word",
           "name": "Nuclear",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 2,
-        "col": 4
+        }
       },
       {
-        "row": 4,
-        "card": {
-          "category": "Sea fish",
-          "name": "Clownfish",
-          "type": "regular",
-          "image": "res/Item/seafish_clownfish_8.png",
-          "isText": false
-        },
         "layer": 1,
-        "col": 4
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Stingray",
+          "image": "res/Item/seafish_stingray_7.png",
+          "isText": false
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 1,
+        "col": 2,
         "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Seatbelt",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Energy_word",
+          "name": "Kinetic",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Tuna",
+          "image": "res/Item/seafish_tuna_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Optics_word",
+          "name": "Monocle",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Fly",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Rudder",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Optics_word",
+          "name": "Lens",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Dynamics_word",
+          "name": "Inertia",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Policies_word",
+          "name": "Tyranny",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Marlin",
+          "image": "res/Item/seafish_marlin_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Whiskers",
+          "name": "Otter",
+          "image": "res/Item/whiskers_otter_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Whiskers",
+          "name": "Catfish",
+          "image": "res/Item/whiskers_catfish_7.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Optics_word",
+          "name": "Glasses",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
           "category": "Plane_word",
           "name": "Aileron",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Engine",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Zen_word",
+          "name": "Rinzai",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Whiskers",
+          "name": "Seal",
+          "image": "res/Item/whiskers_seal_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Elements_word",
+          "name": "Carbon",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 2,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Beards_word",
+          "name": "Goatee",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Burger",
+          "name": "Cheese",
+          "image": "res/Item/burger_cheese_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Burger",
+          "name": "Bun",
+          "image": "res/Item/burger_bun_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Dynamics_word",
+          "name": "Motion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Foodie_word",
+          "name": "Sybarite",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Energy_word",
+          "name": "Thermal",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Radiate_word",
+          "name": "Fallout",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Birthday",
+          "name": "Box",
+          "image": "res/Item/birthday_box_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Radiate_word",
+          "name": "Decay",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Birthday",
+          "name": "Candle",
+          "image": "res/Item/birthday_candle_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Cockpit",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Birthday",
+          "name": "Confetti",
+          "image": "res/Item/birthday_confetti_5.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Hormones_word",
+          "name": "Cortisol",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Birthday",
+          "name": "Birthday hat",
+          "image": "res/Item/birthday_birthdayhat_6.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Hormones_word",
+          "name": "Gastrin",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Sardine",
+          "image": "res/Item/seafish_sardine_4.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Alchemy_word",
+          "name": "Potion",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Optics_word",
+          "name": "Spyglass",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Alchemy_word",
+          "name": "Elixir",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Beards_word",
+          "name": "Ducktail",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Yinyang_word",
+          "name": "Synergy",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Sea fish",
+          "name": "Clownfish",
+          "image": "res/Item/seafish_clownfish_8.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Plane_word",
+          "name": "Fuselage",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Beards_word": 3,
+      "Zen_word": 3,
+      "Sea fish": 8,
+      "Birthday": 6,
+      "Dynamics_word": 3,
+      "Energy_word": 4,
+      "Plane_word": 8,
+      "Optics_word": 4
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Plane_word",
+        "name": "Plane",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sea fish",
+        "name": "Sea fish",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Optics_word",
+        "name": "Optics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Energy_word",
+        "name": "Energy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamics_word",
+        "name": "Dynamics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beards_word",
+        "name": "Beards",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Birthday",
+        "name": "Birthday",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Zen_word",
+        "name": "Zen",
+        "isText": true
       }
     ],
     "handDisplay": []

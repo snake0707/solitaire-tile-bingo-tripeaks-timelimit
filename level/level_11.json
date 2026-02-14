@@ -1,506 +1,446 @@
 [
   {
-    "handPile": [
-      {
-        "category": "Arctic_word",
-        "name": "Arctic",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Zodiac",
-        "name": "Zodiac",
-        "type": "gold",
-        "isText": false
-      },
-      {
-        "category": "Fuels_word",
-        "name": "Fuels",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Street_word",
-        "name": "Street",
-        "type": "gold",
-        "isText": true
-      },
-      {
-        "category": "Dairy_word",
-        "name": "Dairy",
-        "type": "gold",
-        "isText": true
-      }
-    ],
     "config": {
-      "maxSlots": 5,
-      "penaltyTime": 3,
       "bingosNeeded": 1,
-      "timeLimit": 90
-    },
-    "categoryTargets": {
-      "Street_word": 4,
-      "Zodiac": 3,
-      "Dairy_word": 3,
-      "Arctic_word": 4,
-      "Fuels_word": 5
+      "maxSlots": 2,
+      "timeLimit": 90,
+      "penaltyTime": 3
     },
     "cards": [
       {
+        "layer": 0,
         "row": 0,
+        "col": 0,
         "card": {
-          "category": "Injuries_word",
-          "name": "Fracture",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Toolbox",
-          "name": "Drill",
-          "type": "filler",
-          "image": "res/Item/toolbox_drill_3.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Snowy owl",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Toolbox",
-          "name": "Adhesive tape",
-          "type": "filler",
-          "image": "res/Item/toolbox_adhesivetape_4.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Polar bear",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Lie_word",
-          "name": "Mislead",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Zodiac",
-          "name": "Aries",
-          "type": "regular",
-          "image": "res/Item/zodiac_aries_1.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Street_word",
-          "name": "Bike",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 0,
-        "card": {
-          "category": "Unite_word",
-          "name": "League",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Fitness_word",
-          "name": "Yoga",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Unite_word",
-          "name": "Union",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Street_word",
-          "name": "Corner",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Veggie",
-          "name": "Cabbage",
-          "type": "filler",
-          "image": "res/Item/veggie_cabbage_2.png",
-          "isText": false
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Shoes",
-          "name": "Oxfords",
-          "type": "filler",
-          "image": "res/Item/shoes_oxfords_4.png",
-          "isText": false
-        },
-        "layer": 1,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Wheel_word",
-          "name": "Hubcap",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Street_word",
-          "name": "Brick",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Dairy_word",
-          "name": "Butter",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 4
-      },
-      {
-        "row": 1,
-        "card": {
-          "category": "Wheel_word",
-          "name": "Steer",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Dairy_word",
-          "name": "Yogurt",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Wheel_word",
-          "name": "Fortune",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Kerosene",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Festival_word",
-          "name": "Diwali",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Legends_word",
-          "name": "Tale",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Gasoline",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 2,
-        "card": {
-          "category": "Navigate_word",
-          "name": "Sextant",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 4
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Fuels_word",
           "name": "Coal",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 1,
-        "col": 0
-      },
-      {
-        "row": 3,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Legends_word",
-          "name": "Fable",
-          "type": "filler",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 0
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Street_word",
-          "name": "Driver",
           "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 1
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Diesel",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 2
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Fuels_word",
-          "name": "Propane",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 1,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
-          "category": "Arctic_word",
-          "name": "Reindeer",
-          "type": "regular",
-          "image": null,
-          "isText": true
-        },
-        "layer": 0,
-        "col": 3
-      },
-      {
-        "row": 3,
-        "card": {
           "category": "Zodiac",
           "name": "Gemini",
-          "type": "regular",
           "image": "res/Item/zodiac_gemini_3.png",
           "isText": false
-        },
-        "layer": 0,
-        "col": 4
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 1,
         "card": {
-          "category": "Legends_word",
-          "name": "Epic",
           "type": "filler",
+          "category": "Lie_word",
+          "name": "Falsify",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 0
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 0,
+        "col": 2,
         "card": {
-          "category": "Wheel_word",
-          "name": "Tire",
-          "type": "filler",
+          "type": "regular",
+          "category": "Street_word",
+          "name": "Bike",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 1
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
+          "type": "filler",
+          "category": "Veggie",
+          "name": "Cabbage",
+          "image": "res/Item/veggie_cabbage_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Street_word",
+          "name": "Brick",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Fitness_word",
+          "name": "Workout",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Zodiac",
+          "name": "Aries",
+          "image": "res/Item/zodiac_aries_1.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Unite_word",
+          "name": "Alliance",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Fitness_word",
+          "name": "Pilates",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Dairy_word",
+          "name": "Butter",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "filler",
           "category": "Injuries_word",
           "name": "Sprain",
-          "type": "filler",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 2
+        }
       },
       {
-        "row": 4,
+        "layer": 1,
+        "row": 1,
+        "col": 2,
         "card": {
+          "type": "regular",
+          "category": "Arctic_word",
+          "name": "Snowy owl",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Map",
+          "name": "India",
+          "image": "res/Item/map_india_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Lie_word",
+          "name": "Delude",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Dairy_word",
+          "name": "Yogurt",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Street_word",
+          "name": "Driver",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Fitness_word",
+          "name": "Cardio",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Lie_word",
+          "name": "Mislead",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Street_word",
+          "name": "Corner",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Fuels_word",
+          "name": "Diesel",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Legends_word",
+          "name": "Fable",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Toolbox",
+          "name": "Wrench",
+          "image": "res/Item/toolbox_wrench_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Unite_word",
+          "name": "League",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Arctic_word",
+          "name": "Polar bear",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "regular",
           "category": "Zodiac",
           "name": "Taurus",
-          "type": "regular",
           "image": "res/Item/zodiac_taurus_2.png",
           "isText": false
-        },
-        "layer": 1,
-        "col": 3
+        }
       },
       {
-        "row": 4,
+        "layer": 0,
+        "row": 3,
+        "col": 4,
         "card": {
+          "type": "regular",
           "category": "Arctic_word",
           "name": "Walrus",
-          "type": "regular",
           "image": null,
           "isText": true
-        },
-        "layer": 0,
-        "col": 3
+        }
       },
       {
+        "layer": 0,
         "row": 4,
+        "col": 0,
         "card": {
-          "category": "Dairy_word",
-          "name": "Cream",
           "type": "regular",
+          "category": "Fuels_word",
+          "name": "Gasoline",
           "image": null,
           "isText": true
-        },
+        }
+      },
+      {
         "layer": 0,
-        "col": 4
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Fuels_word",
+          "name": "Kerosene",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Wheel_word",
+          "name": "Hubcap",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "regular",
+          "category": "Fuels_word",
+          "name": "Propane",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Dairy_word",
+          "name": "Cream",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "regular",
+          "category": "Arctic_word",
+          "name": "Reindeer",
+          "image": null,
+          "isText": true
+        }
+      }
+    ],
+    "categoryTargets": {
+      "Fuels_word": 5,
+      "Zodiac": 3,
+      "Street_word": 4,
+      "Dairy_word": 3,
+      "Arctic_word": 4
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Arctic_word",
+        "name": "Arctic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zodiac",
+        "name": "Zodiac",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Street_word",
+        "name": "Street",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dairy_word",
+        "name": "Dairy",
+        "isText": true
       }
     ],
     "handDisplay": []
