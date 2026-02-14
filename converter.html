@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Level Config Converter</title>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="categories.js"></script>
 <script src="level_settings.js"></script>
 <script src="color_settings.js"></script>
@@ -177,6 +178,8 @@
     log('', '');
 
     let errorCount = 0;
+    const zip = new JSZip();
+    let fileCount = 0;
 
     for (const [levelId, rowEntries] of levelMap) {
       log('── level_' + levelId + '.json (' + rowEntries.length + ' layout(s)) ──', 'log-info');
@@ -214,9 +217,11 @@
       }
 
       if (layouts.length > 0) {
+        const filename = 'level_' + levelId + '.json';
         const json = JSON.stringify(layouts, null, 2);
-        downloadFile('level_' + levelId + '.json', json);
-        log('  -> Downloaded level_' + levelId + '.json', 'log-ok');
+        zip.file(filename, json);
+        fileCount++;
+        log('  -> Added ' + filename, 'log-ok');
       }
     }
 
@@ -225,6 +230,21 @@
       log('Done with ' + errorCount + ' error(s).', 'log-warn');
     } else {
       log('Done. All levels converted successfully.', 'log-ok');
+    }
+
+    if (fileCount > 0) {
+      log('Packaging ' + fileCount + ' file(s) into ZIP...', 'log-info');
+      zip.generateAsync({ type: 'blob' }).then(function (blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'levels.zip';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        log('Downloaded levels.zip (' + fileCount + ' files)', 'log-ok');
+      });
     }
   }
 
@@ -348,18 +368,6 @@
     };
   }
 
-  // ── File download helper ─────────────────────────────────────────
-  function downloadFile(filename, content) {
-    const blob = new Blob([content], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
 })();
 </script>
 </body>
