@@ -2,27 +2,63 @@
   {
     "config": {
       "bingosNeeded": 1,
-      "maxSlots": 1,
-      "timeLimit": 100,
+      "maxSlots": 2,
+      "timeLimit": 125,
       "penaltyTime": 2
     },
     "cards": [
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Pointing_word",
+          "name": "Those",
+          "image": null,
+          "isText": true
+        }
+      },
       {
         "layer": 0,
         "row": 0,
         "col": 0,
         "card": {
-          "type": "regular",
-          "category": "Fruits",
-          "name": "Pomegranate",
-          "image": "res/Item/fruits_pomegranate_5.png",
-          "isText": false
+          "type": "filler",
+          "category": "Legends_word",
+          "name": "Fable",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 1,
+        "row": 0,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Legends_word",
+          "name": "Myth",
+          "image": null,
+          "isText": true
         }
       },
       {
         "layer": 0,
         "row": 0,
         "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Unite_word",
+          "name": "Union",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 0,
+        "col": 2,
         "card": {
           "type": "filler",
           "category": "Skin_word",
@@ -34,55 +70,19 @@
       {
         "layer": 0,
         "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Help_word",
-          "name": "Donate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
         "col": 3,
         "card": {
-          "type": "regular",
-          "category": "Fruits",
-          "name": "Peach",
-          "image": "res/Item/fruits_peach_6.png",
-          "isText": false
+          "type": "filler",
+          "category": "Skin_word",
+          "name": "Normal",
+          "image": null,
+          "isText": true
         }
       },
       {
         "layer": 0,
         "row": 0,
         "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Help_word",
-          "name": "Assist",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Chess",
-          "name": "King",
-          "image": "res/Item/chess_king_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
         "card": {
           "type": "regular",
           "category": "Help_word",
@@ -94,79 +94,7 @@
       {
         "layer": 0,
         "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Artworks_word",
-          "name": "Photo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Hello_word",
-          "name": "Hey",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Fruits",
-          "name": "Kiwi",
-          "image": "res/Item/fruits_kiwi_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
         "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Artworks_word",
-          "name": "Drawing",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Food_word",
-          "name": "Fries",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Fruits",
-          "name": "Banana",
-          "image": "res/Item/fruits_banana_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
         "card": {
           "type": "filler",
           "category": "Food_word",
@@ -177,8 +105,20 @@
       },
       {
         "layer": 0,
-        "row": 2,
-        "col": 4,
+        "row": 1,
+        "col": 1,
+        "card": {
+          "type": "regular",
+          "category": "Fruits",
+          "name": "Banana",
+          "image": "res/Item/fruits_banana_3.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 1,
+        "col": 2,
         "card": {
           "type": "regular",
           "category": "Holiday_word",
@@ -189,8 +129,8 @@
       },
       {
         "layer": 0,
-        "row": 3,
-        "col": 0,
+        "row": 1,
+        "col": 3,
         "card": {
           "type": "regular",
           "category": "Holiday_word",
@@ -201,68 +141,56 @@
       },
       {
         "layer": 0,
-        "row": 3,
-        "col": 1,
+        "row": 1,
+        "col": 4,
         "card": {
           "type": "filler",
-          "category": "Chess",
-          "name": "Pawn",
-          "image": "res/Item/chess_pawn_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "OK sign_word",
-          "name": "Consent",
+          "category": "Navigate_word",
+          "name": "Signpost",
           "image": null,
           "isText": true
         }
       },
       {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Fruits",
-          "name": "Pineapple",
-          "image": "res/Item/fruits_pineapple_7.png",
-          "isText": false
-        }
-      },
-      {
         "layer": 0,
-        "row": 3,
-        "col": 3,
+        "row": 2,
+        "col": 0,
         "card": {
           "type": "filler",
-          "category": "Chess",
-          "name": "Knight",
-          "image": "res/Item/chess_knight_3.png",
-          "isText": false
+          "category": "Strength_word",
+          "name": "Force",
+          "image": null,
+          "isText": true
         }
       },
       {
         "layer": 0,
-        "row": 3,
-        "col": 4,
+        "row": 2,
+        "col": 1,
         "card": {
           "type": "regular",
-          "category": "Fruits",
-          "name": "Watermelon",
-          "image": "res/Item/fruits_watermelon_8.png",
-          "isText": false
+          "category": "Help_word",
+          "name": "Donate",
+          "image": null,
+          "isText": true
         }
       },
       {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
+        "layer": 0,
+        "row": 2,
+        "col": 2,
+        "card": {
+          "type": "regular",
+          "category": "Help_word",
+          "name": "Assist",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 2,
+        "col": 3,
         "card": {
           "type": "regular",
           "category": "Fruits",
@@ -273,32 +201,32 @@
       },
       {
         "layer": 0,
-        "row": 4,
-        "col": 0,
+        "row": 2,
+        "col": 4,
         "card": {
           "type": "filler",
-          "category": "Chess",
-          "name": "Bishop",
-          "image": "res/Item/chess_bishop_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Artworks_word",
-          "name": "Painting",
+          "category": "Lie_word",
+          "name": "Falsify",
           "image": null,
           "isText": true
         }
       },
       {
         "layer": 0,
-        "row": 4,
-        "col": 2,
+        "row": 3,
+        "col": 0,
+        "card": {
+          "type": "filler",
+          "category": "Pointing_word",
+          "name": "That",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 1,
         "card": {
           "type": "regular",
           "category": "Fruits",
@@ -309,20 +237,8 @@
       },
       {
         "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Chess",
-          "name": "Rook",
-          "image": "res/Item/chess_rook_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
+        "row": 3,
+        "col": 2,
         "card": {
           "type": "regular",
           "category": "Holiday_word",
@@ -330,21 +246,98 @@
           "image": null,
           "isText": true
         }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Food_word",
+          "name": "Hot dog",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 3,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Unite_word",
+          "name": "League",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 0,
+        "card": {
+          "type": "regular",
+          "category": "Fruits",
+          "name": "Kiwi",
+          "image": "res/Item/fruits_kiwi_2.png",
+          "isText": false
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 1,
+        "card": {
+          "type": "filler",
+          "category": "Food_word",
+          "name": "Pizza",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 2,
+        "card": {
+          "type": "filler",
+          "category": "Pointing_word",
+          "name": "This",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 3,
+        "card": {
+          "type": "filler",
+          "category": "Legends_word",
+          "name": "Tale",
+          "image": null,
+          "isText": true
+        }
+      },
+      {
+        "layer": 0,
+        "row": 4,
+        "col": 4,
+        "card": {
+          "type": "filler",
+          "category": "Food_word",
+          "name": "Fries",
+          "image": null,
+          "isText": true
+        }
       }
     ],
     "categoryTargets": {
-      "Fruits": 8,
       "Help_word": 3,
-      "Artworks_word": 3,
+      "Fruits": 4,
       "Holiday_word": 3
     },
     "handPile": [
-      {
-        "type": "gold",
-        "category": "Help_word",
-        "name": "Help",
-        "isText": true
-      },
       {
         "type": "gold",
         "category": "Fruits",
@@ -353,14 +346,14 @@
       },
       {
         "type": "gold",
-        "category": "Holiday_word",
-        "name": "Holiday",
+        "category": "Help_word",
+        "name": "Help",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Artworks_word",
-        "name": "Artworks",
+        "category": "Holiday_word",
+        "name": "Holiday",
         "isText": true
       }
     ],

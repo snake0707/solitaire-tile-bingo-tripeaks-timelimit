@@ -7523,30 +7523,6 @@ const CATEGORIES = {
         "name": "Bishop",
         "id": "Bishop_Chess",
         "configId": "BISHOP_PIC_CHESS_1"
-      },
-      {
-        "image": "res/Item/chess_queen_5.png",
-        "name": "Queen",
-        "id": "Queen_Chess",
-        "configId": "QUEEN_PIC_CHESS_1"
-      },
-      {
-        "image": "res/Item/chess_king_6.png",
-        "name": "King",
-        "id": "King_Chess",
-        "configId": "KING_PIC_CHESS_1"
-      },
-      {
-        "image": "res/Item/chess_chessboard_7.png",
-        "name": "Chessboard",
-        "id": "Chessboard_Chess",
-        "configId": "CHESSBOARD_PIC_CHESS_1"
-      },
-      {
-        "image": "res/Item/chess_chessclock_8.png",
-        "name": "Chess clock",
-        "id": "Chess_clock_Chess",
-        "configId": "CHESS_CLOCK_PIC_CHESS_1"
       }
     ],
     "name": "Chess",
@@ -7745,30 +7721,6 @@ const CATEGORIES = {
         "name": "Shirt",
         "id": "Shirt_Garments",
         "configId": "SHIRT_PIC_GARMENTS_7"
-      },
-      {
-        "image": "res/Item/garments_panties_5.png",
-        "name": "Panties",
-        "id": "Panties_Garments",
-        "configId": "PANTIES_PIC_GARMENTS_7"
-      },
-      {
-        "image": "res/Item/garments_coat_6.png",
-        "name": "Coat",
-        "id": "Coat_Garments",
-        "configId": "COAT_PIC_GARMENTS_7"
-      },
-      {
-        "image": "res/Item/garments_jacket_7.png",
-        "name": "Jacket",
-        "id": "Jacket_Garments",
-        "configId": "JACKET_PIC_GARMENTS_7"
-      },
-      {
-        "image": "res/Item/garments_skirt_8.png",
-        "name": "Skirt",
-        "id": "Skirt_Garments",
-        "configId": "SKIRT_PIC_GARMENTS_7"
       }
     ],
     "name": "Garments",
@@ -7825,30 +7777,6 @@ const CATEGORIES = {
         "name": "Apple",
         "id": "Apple_Fruits",
         "configId": "APPLE_PIC_FRUITS_9"
-      },
-      {
-        "image": "res/Item/fruits_pomegranate_5.png",
-        "name": "Pomegranate",
-        "id": "Pomegranate_Fruits",
-        "configId": "POMEGRANATE_PIC_FRUITS_9"
-      },
-      {
-        "image": "res/Item/fruits_peach_6.png",
-        "name": "Peach",
-        "id": "Peach_Fruits",
-        "configId": "PEACH_PIC_FRUITS_9"
-      },
-      {
-        "image": "res/Item/fruits_pineapple_7.png",
-        "name": "Pineapple",
-        "id": "Pineapple_Fruits",
-        "configId": "PINEAPPLE_PIC_FRUITS_9"
-      },
-      {
-        "image": "res/Item/fruits_watermelon_8.png",
-        "name": "Watermelon",
-        "id": "Watermelon_Fruits",
-        "configId": "WATERMELON_PIC_FRUITS_9"
       }
     ],
     "name": "Fruits",
