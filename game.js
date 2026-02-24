@@ -50,6 +50,7 @@ class Game {
         this.bingosNeeded = 1;
         this.moveHistory = [];
         this.isAnimating = false;
+        this._pendingBingoCells = new Set();
         this.categoryColorMap = {};
         this.timeLeft = 0;
         this.timerInterval = null;
@@ -147,6 +148,7 @@ class Game {
         this.cardMap = {};
         this.cleared = [];
         this._prevCleared = {};
+        this._pendingBingoCells.clear();
 
         for (let r = 0; r < 5; r++) {
             this.cleared[r] = [];
@@ -583,7 +585,13 @@ class Game {
         wrapper.className = 'slot-wrapper';
 
         if (slot === null) {
-            // Empty slot
+            // Empty slot — invisible placeholder label to reserve height and prevent layout shift
+            const placeholder = document.createElement('div');
+            placeholder.className = 'slot-label';
+            placeholder.style.visibility = 'hidden';
+            placeholder.textContent = '\u00A0';
+            wrapper.appendChild(placeholder);
+
             const div = document.createElement('div');
             div.className = 'slot-card empty';
             div.innerHTML = `<img class="slot-empty-img" src="res/Panel/empty_slot.png" alt="Empty">`;
@@ -690,7 +698,9 @@ class Game {
                     const pos = this.getCardPosition(0, r, c);
                     const mark = document.createElement('div');
                     mark.className = 'cleared-mark-pyramid';
-                    if (this.isCellInBingo(r, c)) {
+                    mark.dataset.row = r;
+                    mark.dataset.col = c;
+                    if (this.isCellInBingo(r, c) && !this._pendingBingoCells.has(r + ',' + c)) {
                         mark.classList.add('bingo-cell');
                     }
                     // Only animate newly cleared cells
@@ -991,7 +1001,21 @@ class Game {
             this.completeSlot(slotIdx);
         }
 
-        this.isAnimating = false;
+        // Snapshot old bingo lines, compute new ones
+        const oldLines = [...this.bingoLines];
+        const newLines = this.findBingoLines();
+        const freshLines = this._findFreshBingoLines(oldLines, newLines);
+
+        // Mark fresh bingo cells as pending so renderPyramid doesn't give them bingo-cell yet
+        this._pendingBingoCells.clear();
+        for (const line of freshLines) {
+            for (const [r, c] of line.cells) {
+                this._pendingBingoCells.add(r + ',' + c);
+            }
+        }
+
+        // Update bingoLines before render so existing bingo cells show correctly
+        this.bingoLines = newLines;
 
         // Only re-render the pyramid and the changed slot — not the entire UI
         this.renderPyramid();
@@ -1006,13 +1030,26 @@ class Game {
             setTimeout(() => newSlotEl.classList.remove('receiving'), 400);
         }
 
-        const lines = this.findBingoLines();
-        if (lines.length >= this.bingosNeeded) {
-            setTimeout(() => this.onWin(), 500);
-            return;
+        if (freshLines.length > 0) {
+            // New BINGO line(s) detected — play animation, then check win
+            this.isAnimating = true;
+            this._animateBingoLines(freshLines).then(() => {
+                this._pendingBingoCells.clear();
+                this.isAnimating = false;
+                if (newLines.length >= this.bingosNeeded) {
+                    setTimeout(() => this.onWin(), 300);
+                } else {
+                    this.checkDeadState();
+                }
+            });
+        } else {
+            this.isAnimating = false;
+            if (newLines.length >= this.bingosNeeded) {
+                setTimeout(() => this.onWin(), 500);
+            } else {
+                this.checkDeadState();
+            }
         }
-
-        this.checkDeadState();
     }
 
     // ── Filler Card Interaction ──────────────────────────────
@@ -1082,6 +1119,67 @@ class Game {
         return this.bingoLines.some(line =>
             line.cells.some(([r, c]) => r === row && c === col)
         );
+    }
+
+    _findFreshBingoLines(oldLines, newLines) {
+        const oldKeys = new Set(oldLines.map(l => l.type + ':' + l.index));
+        return newLines.filter(l => !oldKeys.has(l.type + ':' + l.index));
+    }
+
+    async _animateBingoLines(freshLines) {
+        // Collect all unique cells from fresh lines
+        const cellSet = new Set();
+        const cells = [];
+        for (const line of freshLines) {
+            for (const [r, c] of line.cells) {
+                const key = r + ',' + c;
+                if (!cellSet.has(key)) {
+                    cellSet.add(key);
+                    cells.push([r, c]);
+                }
+            }
+        }
+
+        // Animate each cell to bingo star sequentially
+        for (const [r, c] of cells) {
+            await this._animateCellToBingoStar(r, c);
+        }
+
+        // Show BINGO flash text
+        await this._showBingoFlash();
+    }
+
+    _animateCellToBingoStar(row, col) {
+        return new Promise(resolve => {
+            const mark = this.gridEl.querySelector(
+                `.cleared-mark-pyramid[data-row="${row}"][data-col="${col}"]`
+            );
+            if (mark) {
+                mark.classList.add('bingo-cell', 'bingo-star-pop');
+            }
+            setTimeout(resolve, 200);
+        });
+    }
+
+    _showBingoFlash() {
+        return new Promise(resolve => {
+            const overlay = document.createElement('div');
+            overlay.className = 'bingo-flash-overlay';
+            const text = document.createElement('div');
+            text.className = 'bingo-flash-text';
+            text.textContent = 'BINGO!';
+            overlay.appendChild(text);
+            document.body.appendChild(overlay);
+
+            // After display duration, fade out then remove
+            setTimeout(() => {
+                overlay.classList.add('bingo-flash-exit');
+                setTimeout(() => {
+                    overlay.remove();
+                    resolve();
+                }, 400);
+            }, 800);
+        });
     }
 
     onWin() {

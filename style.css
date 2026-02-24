@@ -998,3 +998,58 @@ body {
         height: 62px;
     }
 }
+
+/* ─── BINGO Star Pop Animation ─────────────────────────── */
+
+.cleared-mark-pyramid.bingo-star-pop {
+    animation: bingoStarPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bingoStarPop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* ─── BINGO Flash Overlay ──────────────────────────────── */
+
+.bingo-flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    animation: fadeIn 0.2s ease;
+}
+
+.bingo-flash-text {
+    font-size: 64px;
+    font-weight: 900;
+    color: #ffd700;
+    text-shadow:
+        0 0 20px rgba(255, 215, 0, 0.8),
+        0 0 40px rgba(255, 165, 0, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.4);
+    letter-spacing: 8px;
+    animation: bingoTextPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bingoTextPop {
+    0% { transform: scale(0.3); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.bingo-flash-exit {
+    animation: bingoFadeOut 0.4s ease forwards;
+}
+
+@keyframes bingoFadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
