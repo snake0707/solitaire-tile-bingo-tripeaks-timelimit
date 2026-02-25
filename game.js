@@ -50,6 +50,7 @@ class Game {
         this.bingosNeeded = 1;
         this.moveHistory = [];
         this.isAnimating = false;
+        this.flyAnimCount = 0;
         this._pendingBingoCells = new Set();
         this.categoryColorMap = {};
         this.timeLeft = 0;
@@ -816,7 +817,7 @@ class Game {
     // ── Hand Area Interactions ────────────────────────────────
 
     onHandPileClick() {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.flyAnimCount > 0) return;
 
         if (this.handPile.length > 0) {
             // Flip top card from pile to display
@@ -839,7 +840,7 @@ class Game {
     }
 
     onHandDisplayClick() {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.flyAnimCount > 0) return;
         if (this.handDisplay.length === 0) return;
 
         const emptySlotIdx = this.findEmptySlot();
@@ -963,26 +964,35 @@ class Game {
             previousLastCard: slot.lastCard ? { ...slot.lastCard } : null,
         });
 
-        this.isAnimating = true;
-
         const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
         const slotWrapper = this.collectorsEl.children[slotIdx];
         const slotCardEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
 
-        // Fly animation from card to slot
+        // Capture animation source/target before model update changes the DOM
+        let sourceRect, targetRect, cardHTML;
         if (cardEl && slotCardEl) {
-            const sourceRect = cardEl.getBoundingClientRect();
-            const targetRect = slotCardEl.getBoundingClientRect();
-            const cardHTML = cardEl.querySelector('.card-inner').innerHTML;
+            sourceRect = cardEl.getBoundingClientRect();
+            targetRect = slotCardEl.getBoundingClientRect();
+            cardHTML = cardEl.querySelector('.card-inner').innerHTML;
             cardEl.style.visibility = 'hidden';
+        }
 
+        // Update model and re-render immediately (don't wait for animation)
+        this._finishRegularCollect(cardObj, slot, slotIdx);
+
+        // Fire-and-forget fly animation (purely visual)
+        if (sourceRect && targetRect) {
+            this.flyAnimCount++;
             this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
-                this._finishRegularCollect(cardObj, slot, slotIdx);
+                this.flyAnimCount--;
+                // Receiving pulse after fly animation arrives
+                const sw = this.collectorsEl.children[slotIdx];
+                const se = sw ? sw.querySelector('.slot-card') : null;
+                if (se) {
+                    se.classList.add('receiving');
+                    setTimeout(() => se.classList.remove('receiving'), 400);
+                }
             });
-        } else {
-            setTimeout(() => {
-                this._finishRegularCollect(cardObj, slot, slotIdx);
-            }, 400);
         }
     }
 
@@ -1022,14 +1032,6 @@ class Game {
         this.updateSlot(slotIdx);
         this.updateBingoCount();
 
-        // Receiving animation on the updated slot
-        const slotWrapper = this.collectorsEl.children[slotIdx];
-        const newSlotEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
-        if (newSlotEl) {
-            newSlotEl.classList.add('receiving');
-            setTimeout(() => newSlotEl.classList.remove('receiving'), 400);
-        }
-
         if (freshLines.length > 0) {
             // New BINGO line(s) detected — play animation, then check win
             this.isAnimating = true;
@@ -1043,7 +1045,6 @@ class Game {
                 }
             });
         } else {
-            this.isAnimating = false;
             if (newLines.length >= this.bingosNeeded) {
                 setTimeout(() => this.onWin(), 500);
             } else {
@@ -1193,7 +1194,7 @@ class Game {
     // ── Tools ────────────────────────────────────────────────
 
     shuffle() {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.flyAnimCount > 0) return;
 
         // Only swap card data among face-up grid positions
         const clickableCards = this.cards.filter(c => !c.removed && c.faceUp);
@@ -1209,7 +1210,7 @@ class Game {
     }
 
     showHint() {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.flyAnimCount > 0) return;
 
         // Priority 1: matching basic card in grid
         const activeKeys = new Set(
@@ -1254,7 +1255,7 @@ class Game {
     }
 
     undo() {
-        if (this.isAnimating) return;
+        if (this.isAnimating || this.flyAnimCount > 0) return;
         if (this.moveHistory.length === 0) return;
 
         const move = this.moveHistory.pop();
