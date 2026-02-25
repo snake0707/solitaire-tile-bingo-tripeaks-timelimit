@@ -25,6 +25,21 @@ const CARD_COLOR_DEFS = [
     { name: 'color-11', hex: '#AD79D2' },  // 紫藤
 ];
 
+// 颜色备份
+// const CARD_COLOR_DEFS = [
+//     { name: 'color-1',  hex: '#A06ED0' },  // 紫藤
+//     { name: 'color-2',  hex: '#E8A448' },  // 琥珀橙
+//     { name: 'color-3',  hex: '#7CC84E' },  // 苹果绿
+//     { name: 'color-4',  hex: '#4AADE0' },  // 天蓝
+//     { name: 'color-5',  hex: '#3EBE90' },  // 翡翠绿
+//     { name: 'color-6',  hex: '#D86EA8' },  // 玫瑰粉
+//     { name: 'color-7',  hex: '#E8806E' },  // 珊瑚红
+//     { name: 'color-8',  hex: '#E0D85C' },  // 柠檬黄
+//     { name: 'color-9',  hex: '#5570C8' },  // 靛蓝
+//     { name: 'color-10', hex: '#EDE482' },  // 柠檬黄
+//     { name: 'color-11', hex: '#AD79D2' },  // 紫藤
+// ];
+
 const FILLER_COLOR_DEF = { name: 'color-filler', hex: '#78909C' };
 
 // ── Helpers ─────────────────────────────────────────────────────
