@@ -397,8 +397,8 @@ def build_layout(row, row_index, categories, basic_id_map, cat_config_id_to_key)
 
     for i in range(25):
         sub_arr = card_content[i]
-        r = i // 5
-        c = i % 5
+        r = i % 5
+        c = i // 5
 
         for j, item_id in enumerate(sub_arr):
             # item_id is a config basic card ID (e.g. 'ASIA_WORD_LANDMASS_10')

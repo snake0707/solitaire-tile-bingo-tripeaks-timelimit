@@ -311,8 +311,8 @@
       if (!Array.isArray(subArr)) {
         throw new Error('card_content[' + i + '] is not an array');
       }
-      const r = Math.floor(i / 5);
-      const c = i % 5;
+      const r = i % 5;
+      const c = Math.floor(i / 5);
 
       for (let j = 0; j < subArr.length; j++) {
         const itemId = subArr[j];
