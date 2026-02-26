@@ -74,7 +74,6 @@ class Game {
         this.handDisplayEl = document.getElementById('hand-display');
         this.handPileEl = document.getElementById('hand-pile');
 
-        document.getElementById('btn-shuffle').addEventListener('click', () => this.shuffle());
         document.getElementById('btn-hint').addEventListener('click', () => this.showHint());
         document.getElementById('btn-undo').addEventListener('click', () => this.undo());
         document.getElementById('btn-next-level').addEventListener('click', () => this.nextLevel());
@@ -598,15 +597,16 @@ class Game {
             div.innerHTML = `<img class="slot-empty-img" src="res/Panel/empty_slot.png" alt="Empty">`;
             wrapper.appendChild(div);
         } else if (slot.collected === 0) {
-            // Category placed, 0 collected
-            const label = document.createElement('div');
-            label.className = 'slot-label';
-            label.textContent = slot.name;
-            wrapper.appendChild(label);
+            // Category placed, 0 collected — hide label until first card collected
+            const placeholder = document.createElement('div');
+            placeholder.className = 'slot-label';
+            placeholder.style.visibility = 'hidden';
+            placeholder.textContent = '\u00A0';
+            wrapper.appendChild(placeholder);
 
             const div = document.createElement('div');
             div.className = 'slot-card category-placed';
-            div.innerHTML = `<img class="slot-bg-img" src="res/Panel/category_card_1.png" alt="">`;
+            div.innerHTML = `<img class="slot-bg-img" src="res/Panel/category_card_1.png" alt=""><span class="slot-card-text">${slot.name}</span>`;
             wrapper.appendChild(div);
         } else {
             // Collecting: label above + card with last collected image + progress
@@ -977,26 +977,38 @@ class Game {
             cardEl.style.visibility = 'hidden';
         }
 
+        // Detect if this collection will complete the slot
+        const isLastCard = (slot.collected + 1 >= slot.target);
+        const hasFlyAnim = !!(sourceRect && targetRect);
+        const deferComplete = isLastCard && hasFlyAnim;
+
         // Update model and re-render immediately (don't wait for animation)
-        this._finishRegularCollect(cardObj, slot, slotIdx);
+        // but defer slot completion if it's the last card with a fly animation
+        this._finishRegularCollect(cardObj, slot, slotIdx, deferComplete);
 
         // Fire-and-forget fly animation (purely visual)
         if (sourceRect && targetRect) {
             this.flyAnimCount++;
             this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
                 this.flyAnimCount--;
-                // Receiving pulse after fly animation arrives
-                const sw = this.collectorsEl.children[slotIdx];
-                const se = sw ? sw.querySelector('.slot-card') : null;
-                if (se) {
-                    se.classList.add('receiving');
-                    setTimeout(() => se.classList.remove('receiving'), 400);
+                if (deferComplete) {
+                    // Last card arrived — now clear the completed slot
+                    this.completeSlot(slotIdx);
+                    this.updateSlot(slotIdx);
+                } else {
+                    // Receiving pulse after fly animation arrives
+                    const sw = this.collectorsEl.children[slotIdx];
+                    const se = sw ? sw.querySelector('.slot-card') : null;
+                    if (se) {
+                        se.classList.add('receiving');
+                        setTimeout(() => se.classList.remove('receiving'), 400);
+                    }
                 }
             });
         }
     }
 
-    _finishRegularCollect(cardObj, slot, slotIdx) {
+    _finishRegularCollect(cardObj, slot, slotIdx, deferComplete = false) {
         cardObj.removed = true;
 
         if (cardObj.layer === 0) {
@@ -1007,7 +1019,7 @@ class Game {
         slot.collected++;
         slot.lastCard = { ...cardObj.card };
 
-        if (slot.collected >= slot.target) {
+        if (!deferComplete && slot.collected >= slot.target) {
             this.completeSlot(slotIdx);
         }
 
@@ -1192,22 +1204,6 @@ class Game {
     }
 
     // ── Tools ────────────────────────────────────────────────
-
-    shuffle() {
-        if (this.isAnimating || this.flyAnimCount > 0) return;
-
-        // Only swap card data among face-up grid positions
-        const clickableCards = this.cards.filter(c => !c.removed && c.faceUp);
-        const cardDatas = clickableCards.map(c => ({ ...c.card }));
-        this.shuffleArray(cardDatas);
-
-        clickableCards.forEach((cardObj, i) => {
-            cardObj.card = cardDatas[i];
-        });
-
-        this.render();
-        this.checkDeadState();
-    }
 
     showHint() {
         if (this.isAnimating || this.flyAnimCount > 0) return;
