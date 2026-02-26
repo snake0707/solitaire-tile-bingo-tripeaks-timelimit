@@ -7497,6 +7497,56 @@ const CATEGORIES = {
     "name": "Genetics",
     "configId": "WORD_GENETICS_1060"
   },
+  "Screen_word": {
+    "isText": true,
+    "items": [
+      {
+        "image": null,
+        "name": "TV",
+        "id": "TV_Screen",
+        "configId": "TV_WORD_SCREEN_1030"
+      },
+      {
+        "image": null,
+        "name": "ATM",
+        "id": "ATM_Screen",
+        "configId": "ATM_WORD_SCREEN_1030"
+      },
+      {
+        "image": null,
+        "name": "E-reader",
+        "id": "E-reader_Screen",
+        "configId": "E_READER_WORD_SCREEN_1030"
+      }
+    ],
+    "name": "Screen",
+    "configId": "WORD_SCREEN_1030"
+  },
+  "Alarm_word": {
+    "isText": true,
+    "items": [
+      {
+        "image": null,
+        "name": "Buzzer",
+        "id": "Buzzer_Alarm",
+        "configId": "BUZZER_WORD_ALARM_1031"
+      },
+      {
+        "image": null,
+        "name": "Beep",
+        "id": "Beep_Alarm",
+        "configId": "BEEP_WORD_ALARM_1031"
+      },
+      {
+        "image": null,
+        "name": "Rush",
+        "id": "Rush_Alarm",
+        "configId": "RUSH_WORD_ALARM_1031"
+      }
+    ],
+    "name": "Alarm",
+    "configId": "WORD_ALARM_1031"
+  },
   "Chess": {
     "isText": false,
     "items": [
