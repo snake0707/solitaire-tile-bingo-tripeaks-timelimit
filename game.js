@@ -501,6 +501,14 @@ class Game {
             if (cardObj.card.type === 'regular' && activeKeys.has(cardObj.card.category)) return true;
         }
 
+        // 1.5. Any face-up gold card on grid + empty slot = valid move
+        if (hasEmptySlot) {
+            for (const cardObj of this.cards) {
+                if (cardObj.removed || !cardObj.faceUp) continue;
+                if (cardObj.card.type === 'gold') return true;
+            }
+        }
+
         // 2. Hand pile has cards to flip?
         if (this.handPile.length > 0) return true;
 
@@ -744,21 +752,36 @@ class Game {
             // Always render front face — all cards are visible face-up
             const face = document.createElement('div');
             let colorClass;
-            if (cardObj.card.type === 'filler') {
+            if (cardObj.card.type === 'gold') {
+                colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
+                face.className = `card-face gold-grid-card${colorClass}`;
+                face.innerHTML = `<span class="card-text">${cardObj.card.name}</span>`;
+            } else if (cardObj.card.type === 'filler') {
                 colorClass = ' ' + FILLER_COLOR_DEF.name;
+                face.className = `card-face${colorClass}`;
+
+                if (cardObj.card.isText) {
+                    face.innerHTML = `
+                        <span class="card-text">${cardObj.card.name}</span>
+                    `;
+                } else {
+                    face.innerHTML = `
+                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
+                    `;
+                }
             } else {
                 colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
-            }
-            face.className = `card-face${colorClass}`;
+                face.className = `card-face${colorClass}`;
 
-            if (cardObj.card.isText) {
-                face.innerHTML = `
-                    <span class="card-text">${cardObj.card.name}</span>
-                `;
-            } else {
-                face.innerHTML = `
-                    <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
-                `;
+                if (cardObj.card.isText) {
+                    face.innerHTML = `
+                        <span class="card-text">${cardObj.card.name}</span>
+                    `;
+                } else {
+                    face.innerHTML = `
+                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
+                    `;
+                }
             }
 
             // Stack count badge (only on top/face-up card)
@@ -806,9 +829,11 @@ class Game {
         const cardObj = this.cards.find(c => c.id === cardId);
         if (!cardObj || cardObj.removed || !cardObj.faceUp) return;
 
-        // Handle filler cards and regular cards
+        // Handle filler cards, gold grid cards, and regular cards
         if (cardObj.card.type === 'filler') {
             this.onFillerCardClick(cardObj);
+        } else if (cardObj.card.type === 'gold') {
+            this.onGoldGridCardClick(cardObj);
         } else {
             this.onRegularCardClick(cardObj);
         }
@@ -1084,6 +1109,108 @@ class Game {
         this.renderTimer();
     }
 
+    // ── Gold Grid Card Interaction ───────────────────────────
+
+    onGoldGridCardClick(cardObj) {
+        const emptySlotIdx = this.findEmptySlot();
+        if (emptySlotIdx === -1) {
+            // No empty slot — shake + penalty (same as filler behavior)
+            this.shakeCardById(cardObj.id);
+            return;
+        }
+
+        // Record move for undo
+        this.moveHistory.push({
+            action: 'collect_gold_grid',
+            cardId: cardObj.id,
+            card: { ...cardObj.card },
+            slotIndex: emptySlotIdx,
+            layer: cardObj.layer,
+            row: cardObj.row,
+            col: cardObj.col,
+        });
+
+        // Capture animation source/target before model update
+        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
+        const slotWrapper = this.collectorsEl.children[emptySlotIdx];
+        const slotCardEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
+
+        let sourceRect, targetRect, cardHTML;
+        if (cardEl && slotCardEl) {
+            sourceRect = cardEl.getBoundingClientRect();
+            targetRect = slotCardEl.getBoundingClientRect();
+            cardHTML = cardEl.querySelector('.card-inner').innerHTML;
+            cardEl.style.visibility = 'hidden';
+        }
+
+        // Update model
+        cardObj.removed = true;
+        if (cardObj.layer === 0) {
+            this.cleared[cardObj.row][cardObj.col] = true;
+        }
+
+        // Create the collection slot
+        this.slots[emptySlotIdx] = {
+            key: cardObj.card.category,
+            name: cardObj.card.name,
+            collected: 0,
+            target: this.categoryTargets[cardObj.card.category] || 0,
+            lastCard: null,
+        };
+
+        this.updateFaceUpStates();
+
+        // Snapshot old bingo lines, compute new ones
+        const oldLines = [...this.bingoLines];
+        const newLines = this.findBingoLines();
+        const freshLines = this._findFreshBingoLines(oldLines, newLines);
+
+        this._pendingBingoCells.clear();
+        for (const line of freshLines) {
+            for (const [r, c] of line.cells) {
+                this._pendingBingoCells.add(r + ',' + c);
+            }
+        }
+        this.bingoLines = newLines;
+
+        this.renderPyramid();
+        this.renderSlots();
+        this.updateBingoCount();
+
+        // Fire fly animation
+        if (sourceRect && targetRect) {
+            this.flyAnimCount++;
+            this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
+                this.flyAnimCount--;
+                const sw = this.collectorsEl.children[emptySlotIdx];
+                const se = sw ? sw.querySelector('.slot-card') : null;
+                if (se) {
+                    se.classList.add('receiving');
+                    setTimeout(() => se.classList.remove('receiving'), 400);
+                }
+            });
+        }
+
+        if (freshLines.length > 0) {
+            this.isAnimating = true;
+            this._animateBingoLines(freshLines).then(() => {
+                this._pendingBingoCells.clear();
+                this.isAnimating = false;
+                if (newLines.length >= this.bingosNeeded) {
+                    setTimeout(() => this.onWin(), 300);
+                } else {
+                    this.checkDeadState();
+                }
+            });
+        } else {
+            if (newLines.length >= this.bingosNeeded) {
+                setTimeout(() => this.onWin(), 500);
+            } else {
+                this.checkDeadState();
+            }
+        }
+    }
+
     completeSlot(slotIdx) {
         this.slots[slotIdx] = null;
         this.completedCount++;
@@ -1220,6 +1347,17 @@ class Game {
             }
         }
 
+        // Priority 1.5: gold card on grid + empty slot
+        if (this.findEmptySlot() !== -1) {
+            for (const cardObj of this.cards) {
+                if (cardObj.removed || !cardObj.faceUp) continue;
+                if (cardObj.card.type === 'gold') {
+                    this.highlightCardById(cardObj.id);
+                    return;
+                }
+            }
+        }
+
         // Priority 2: place display card into empty slot
         if (this.handDisplay.length > 0 && this.findEmptySlot() !== -1) {
             this.handDisplayEl.classList.add('hint-highlight-hand');
@@ -1282,6 +1420,18 @@ class Game {
             }
 
             this.updateFaceUpStates();
+        } else if (move.action === 'collect_gold_grid') {
+            // Restore gold card to grid, clear the slot it created
+            const cardObj = this.cards.find(c => c.id === move.cardId);
+            cardObj.removed = false;
+            cardObj.card = move.card;
+
+            if (move.layer === 0) {
+                this.cleared[move.row][move.col] = false;
+            }
+
+            this.slots[move.slotIndex] = null;
+            this.updateFaceUpStates();
         } else if (move.action === 'place_from_display') {
             // Clear slot, push card back to display
             this.slots[move.slotIndex] = null;
@@ -1297,7 +1447,7 @@ class Game {
         }
 
         // Only re-render what changed
-        if (move.action === 'collect_regular') {
+        if (move.action === 'collect_regular' || move.action === 'collect_gold_grid') {
             this.render();
         } else {
             this.renderSlots();

@@ -391,6 +391,15 @@ def build_layout(row, row_index, categories, basic_id_map, cat_config_id_to_key)
         active_cat_keys.add(cat_key)
         resolved_cat_entries.append(cat_key)
 
+    # Pre-scan card_content for gold/category card IDs placed in the grid
+    grid_gold_cat_keys = set()
+    for i in range(25):
+        for item_id in card_content[i]:
+            if item_id in cat_config_id_to_key:
+                cat_key = cat_config_id_to_key[item_id]
+                grid_gold_cat_keys.add(cat_key)
+                active_cat_keys.add(cat_key)
+
     # Build cards array
     cards = []
     category_targets = {}
@@ -401,14 +410,33 @@ def build_layout(row, row_index, categories, basic_id_map, cat_config_id_to_key)
         c = i // 5
 
         for j, item_id in enumerate(sub_arr):
+            # Layer: index 0 = topmost = highest layer number
+            layer = (len(sub_arr) - 1) - j
+
+            # Check if this is a category/gold card ID (not a basic card)
+            if item_id in cat_config_id_to_key:
+                cat_key = cat_config_id_to_key[item_id]
+                cat_obj = categories[cat_key]
+                cards.append({
+                    'layer': layer,
+                    'row': r,
+                    'col': c,
+                    'card': {
+                        'type': 'gold',
+                        'category': cat_key,
+                        'name': cat_obj['name'],
+                        'isText': cat_obj['isText'],
+                    }
+                })
+                # Gold cards are not collection targets (they create slots)
+                continue
+
             # item_id is a config basic card ID (e.g. 'ASIA_WORD_LANDMASS_10')
             info = basic_id_map.get(item_id)
             if not info:
                 raise ValueError(
                     'Unknown item ID "%s" at card_content[%d][%d]' % (item_id, i, j))
 
-            # Layer: index 0 = topmost = highest layer number
-            layer = (len(sub_arr) - 1) - j
             is_active = info['categoryKey'] in active_cat_keys
             card_type = 'regular' if is_active else 'filler'
 
