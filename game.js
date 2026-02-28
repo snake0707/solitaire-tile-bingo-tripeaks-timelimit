@@ -57,6 +57,7 @@ class Game {
         this.timerInterval = null;
         this.maxSlots = 3;
         this.penaltyTime = 5;
+        this.timePaused = false;
         this.retryBonus = {};
         this.currentNumLayers = 2;
         this.handPile = [];
@@ -76,6 +77,7 @@ class Game {
 
         document.getElementById('btn-hint').addEventListener('click', () => this.showHint());
         document.getElementById('btn-undo').addEventListener('click', () => this.undo());
+        document.getElementById('btn-pause').addEventListener('click', () => this.togglePause());
         document.getElementById('btn-next-level').addEventListener('click', () => this.nextLevel());
         document.getElementById('btn-retry').addEventListener('click', () => this.retry());
         document.getElementById('menu-btn').addEventListener('click', () => this.showLevelSelect());
@@ -556,6 +558,7 @@ class Game {
         this.stopTimer();
         this.renderTimer();
         this.timerInterval = setInterval(() => {
+            if (this.timePaused) return;
             this.timeLeft--;
             this.renderTimer();
             if (this.timeLeft <= 0) {
@@ -570,6 +573,13 @@ class Game {
             clearInterval(this.timerInterval);
             this.timerInterval = null;
         }
+    }
+
+    togglePause() {
+        this.timePaused = !this.timePaused;
+        const btn = document.getElementById('btn-pause');
+        btn.classList.toggle('active', this.timePaused);
+        btn.title = this.timePaused ? 'Resume Timer' : 'Pause Timer';
     }
 
     renderTimer() {
@@ -873,8 +883,10 @@ class Game {
             // Shake the display area
             this.handDisplayEl.classList.add('no-match-hand');
             setTimeout(() => this.handDisplayEl.classList.remove('no-match-hand'), 400);
-            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-            this.renderTimer();
+            if (!this.timePaused) {
+                this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
+                this.renderTimer();
+            }
             // Floating penalty above the hand display card
             const topCard = this.handDisplayEl.querySelector('.hand-display-card.topmost');
             if (topCard) {
@@ -1105,8 +1117,10 @@ class Game {
             cardEl.appendChild(penaltyEl);
             setTimeout(() => penaltyEl.remove(), 1000);
         }
-        this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-        this.renderTimer();
+        if (!this.timePaused) {
+            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
+            this.renderTimer();
+        }
     }
 
     // ── Gold Grid Card Interaction ───────────────────────────
@@ -1229,8 +1243,10 @@ class Game {
             setTimeout(() => penaltyEl.remove(), 1000);
         }
         // Penalty: lose time for invalid click
-        this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-        this.renderTimer();
+        if (!this.timePaused) {
+            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
+            this.renderTimer();
+        }
     }
 
     // ── Bingo Logic ──────────────────────────────────────────
