@@ -123,14 +123,14 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Popcorn",
-        "id": "Popcorn_Cinema",
+        "name": "Action",
+        "id": "Action_Cinema",
         "configId": "POPCORN_WORD_CINEMA_6"
       },
       {
         "image": null,
-        "name": "Ticket",
-        "id": "Ticket_Cinema",
+        "name": "Romance",
+        "id": "Romance_Cinema",
         "configId": "TICKET_WORD_CINEMA_6"
       }
     ],
@@ -613,59 +613,59 @@ const CATEGORIES = {
     "name": "Fish",
     "configId": "WORD_FISH_31"
   },
-  "Map_word": {
+  "Nations_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Italy",
-        "id": "Italy_Map",
+        "id": "Italy_Nations",
         "configId": "ITALY_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "India",
-        "id": "India_Map",
+        "id": "India_Nations",
         "configId": "INDIA_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "Australia",
-        "id": "Australia_Map",
+        "id": "Australia_Nations",
         "configId": "AUSTRALIA_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "France",
-        "id": "France_Map",
+        "id": "France_Nations",
         "configId": "FRANCE_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "USA",
-        "id": "USA_Map",
+        "id": "USA_Nations",
         "configId": "USA_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "UK",
-        "id": "UK_Map",
+        "id": "UK_Nations",
         "configId": "UK_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "Cyprus",
-        "id": "Cyprus_Map",
+        "id": "Cyprus_Nations",
         "configId": "CYPRUS_WORD_MAP_32"
       },
       {
         "image": null,
         "name": "Japan",
-        "id": "Japan_Map",
+        "id": "Japan_Nations",
         "configId": "JAPAN_WORD_MAP_32"
       }
     ],
-    "name": "Map",
+    "name": "Nations",
     "configId": "WORD_MAP_32"
   },
   "Knight_word": {
@@ -1345,8 +1345,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Iceberg",
-        "id": "Iceberg_Snow",
+        "name": "Frost",
+        "id": "Frost_Snow",
         "configId": "ICEBERG_WORD_SNOW_77"
       }
     ],
@@ -1518,8 +1518,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Tuxedo",
-        "id": "Tuxedo_Date",
+        "name": "Wine",
+        "id": "Wine_Date",
         "configId": "TUXEDO_WORD_DATE_87"
       },
       {
@@ -1942,8 +1942,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Dorblu",
-        "id": "Dorblu_Cheese",
+        "name": "Swiss",
+        "id": "Swiss_Cheese",
         "configId": "DORBLU_WORD_CHEESE_108"
       }
     ],
@@ -2703,35 +2703,35 @@ const CATEGORIES = {
     "name": "Rap",
     "configId": "WORD_RAP_151"
   },
-  "Water_word": {
+  "Waterfall_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Niagara",
-        "id": "Niagara_Water",
+        "id": "Niagara_Waterfall",
         "configId": "NIAGARA_WORD_WATER_152"
       },
       {
         "image": null,
         "name": "Victoria",
-        "id": "Victoria_Water",
+        "id": "Victoria_Waterfall",
         "configId": "VICTORIA_WORD_WATER_152"
       },
       {
         "image": null,
         "name": "Yosemite",
-        "id": "Yosemite_Water",
+        "id": "Yosemite_Waterfall",
         "configId": "YOSEMITE_WORD_WATER_152"
       },
       {
         "image": null,
         "name": "Havasu",
-        "id": "Havasu_Water",
+        "id": "Havasu_Waterfall",
         "configId": "HAVASU_WORD_WATER_152"
       }
     ],
-    "name": "Water",
+    "name": "Waterfall",
     "configId": "WORD_WATER_152"
   },
   "Toys_word": {
@@ -3370,47 +3370,47 @@ const CATEGORIES = {
     "name": "Gemstone",
     "configId": "WORD_GEMSTONE_186"
   },
-  "Pattern_word": {
+  "Celestial_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Orion",
-        "id": "Orion_Pattern",
+        "id": "Orion_Celestial",
         "configId": "ORION_WORD_PATTERN_188"
       },
       {
         "image": null,
         "name": "Perseus",
-        "id": "Perseus_Pattern",
+        "id": "Perseus_Celestial",
         "configId": "PERSEUS_WORD_PATTERN_188"
       },
       {
         "image": null,
         "name": "Draco",
-        "id": "Draco_Pattern",
+        "id": "Draco_Celestial",
         "configId": "DRACO_WORD_PATTERN_188"
       },
       {
         "image": null,
         "name": "Scorpius",
-        "id": "Scorpius_Pattern",
+        "id": "Scorpius_Celestial",
         "configId": "SCORPIUS_WORD_PATTERN_188"
       },
       {
         "image": null,
         "name": "Cygnus",
-        "id": "Cygnus_Pattern",
+        "id": "Cygnus_Celestial",
         "configId": "CYGNUS_WORD_PATTERN_188"
       },
       {
         "image": null,
         "name": "Serpens",
-        "id": "Serpens_Pattern",
+        "id": "Serpens_Celestial",
         "configId": "SERPENS_WORD_PATTERN_188"
       }
     ],
-    "name": "Pattern",
+    "name": "Celestial",
     "configId": "WORD_PATTERN_188"
   },
   "Fuels_word": {
@@ -3766,59 +3766,59 @@ const CATEGORIES = {
     "name": "Camping",
     "configId": "WORD_CAMPING_221"
   },
-  "Play_word": {
+  "Music_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Organ",
-        "id": "Organ_Play",
+        "id": "Organ_Music",
         "configId": "ORGAN_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Violin",
-        "id": "Violin_Play",
+        "id": "Violin_Music",
         "configId": "VIOLIN_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Ukulele",
-        "id": "Ukulele_Play",
+        "id": "Ukulele_Music",
         "configId": "UKULELE_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Drum",
-        "id": "Drum_Play",
+        "id": "Drum_Music",
         "configId": "DRUM_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Piano",
-        "id": "Piano_Play",
+        "id": "Piano_Music",
         "configId": "PIANO_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Flute",
-        "id": "Flute_Play",
+        "id": "Flute_Music",
         "configId": "FLUTE_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Guitar",
-        "id": "Guitar_Play",
+        "id": "Guitar_Music",
         "configId": "GUITAR_WORD_PLAY_223"
       },
       {
         "image": null,
         "name": "Cello",
-        "id": "Cello_Play",
+        "id": "Cello_Music",
         "configId": "CELLO_WORD_PLAY_223"
       }
     ],
-    "name": "Play",
+    "name": "Music",
     "configId": "WORD_PLAY_223"
   },
   "Finance_word": {
@@ -4444,8 +4444,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Tungsten",
-        "id": "Tungsten_Alloy",
+        "name": "Pewter",
+        "id": "Pewter_Alloy",
         "configId": "TUNGSTEN_WORD_ALLOY_264"
       },
       {
@@ -4810,29 +4810,29 @@ const CATEGORIES = {
     "name": "PhD",
     "configId": "WORD_PHD_296"
   },
-  "OK sign_word": {
+  "OK_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Consent",
-        "id": "Consent_OK_sign",
+        "id": "Consent_OK",
         "configId": "CONSENT_WORD_OK_SIGN_301"
       },
       {
         "image": null,
         "name": "Okay",
-        "id": "Okay_OK_sign",
+        "id": "Okay_OK",
         "configId": "OKAY_WORD_OK_SIGN_301"
       },
       {
         "image": null,
         "name": "Yes",
-        "id": "Yes_OK_sign",
+        "id": "Yes_OK",
         "configId": "YES_WORD_OK_SIGN_301"
       }
     ],
-    "name": "OK sign",
+    "name": "OK",
     "configId": "WORD_OK_SIGN_301"
   },
   "Justice_word": {
@@ -5255,29 +5255,29 @@ const CATEGORIES = {
     "name": "Rice",
     "configId": "WORD_RICE_342"
   },
-  "Heart_word": {
+  "Love_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Romance",
-        "id": "Romance_Heart",
+        "id": "Romance_Love",
         "configId": "ROMANCE_WORD_HEART_344"
       },
       {
         "image": null,
         "name": "Couple",
-        "id": "Couple_Heart",
+        "id": "Couple_Love",
         "configId": "COUPLE_WORD_HEART_344"
       },
       {
         "image": null,
         "name": "Passion",
-        "id": "Passion_Heart",
+        "id": "Passion_Love",
         "configId": "PASSION_WORD_HEART_344"
       }
     ],
-    "name": "Heart",
+    "name": "Love",
     "configId": "WORD_HEART_344"
   },
   "Hippie_word": {
@@ -5608,29 +5608,29 @@ const CATEGORIES = {
     "name": "Build",
     "configId": "WORD_BUILD_384"
   },
-  "Policies_word": {
+  "Politics_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Monarchy",
-        "id": "Monarchy_Policies",
+        "id": "Monarchy_Politics",
         "configId": "MONARCHY_WORD_POLICIES_394"
       },
       {
         "image": null,
         "name": "Tyranny",
-        "id": "Tyranny_Policies",
+        "id": "Tyranny_Politics",
         "configId": "TYRANNY_WORD_POLICIES_394"
       },
       {
         "image": null,
         "name": "Anarchy",
-        "id": "Anarchy_Policies",
+        "id": "Anarchy_Politics",
         "configId": "ANARCHY_WORD_POLICIES_394"
       }
     ],
-    "name": "Policies",
+    "name": "Politics",
     "configId": "WORD_POLICIES_394"
   },
   "Strength_word": {
@@ -5997,8 +5997,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Word",
-        "id": "Word_Secret",
+        "name": "Identity",
+        "id": "Identity_Secret",
         "configId": "WORD_WORD_SECRET_471"
       }
     ],
@@ -6282,35 +6282,35 @@ const CATEGORIES = {
     "name": "Lie",
     "configId": "WORD_LIE_492"
   },
-  "Violin_word": {
+  "Orchestra_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Oboe",
-        "id": "Oboe_Violin",
+        "id": "Oboe_Orchestra",
         "configId": "OBOE_WORD_VIOLIN_508"
       },
       {
         "image": null,
         "name": "Clarinet",
-        "id": "Clarinet_Violin",
+        "id": "Clarinet_Orchestra",
         "configId": "CLARINET_WORD_VIOLIN_508"
       },
       {
         "image": null,
         "name": "Flute",
-        "id": "Flute_Violin",
+        "id": "Flute_Orchestra",
         "configId": "FLUTE_WORD_VIOLIN_508"
       },
       {
         "image": null,
         "name": "Cello",
-        "id": "Cello_Violin",
+        "id": "Cello_Orchestra",
         "configId": "CELLO_WORD_VIOLIN_508"
       }
     ],
-    "name": "Violin",
+    "name": "Orchestra",
     "configId": "WORD_VIOLIN_508"
   },
   "Anagram_word": {
@@ -6369,29 +6369,29 @@ const CATEGORIES = {
     "name": "Drum",
     "configId": "WORD_DRUM_518"
   },
-  "Wreath_word": {
+  "Winning_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Triumph",
-        "id": "Triumph_Wreath",
+        "id": "Triumph_Winning",
         "configId": "TRIUMPH_WORD_WREATH_544"
       },
       {
         "image": null,
         "name": "Victory",
-        "id": "Victory_Wreath",
+        "id": "Victory_Winning",
         "configId": "VICTORY_WORD_WREATH_544"
       },
       {
         "image": null,
         "name": "Success",
-        "id": "Success_Wreath",
+        "id": "Success_Winning",
         "configId": "SUCCESS_WORD_WREATH_544"
       }
     ],
-    "name": "Wreath",
+    "name": "Winning",
     "configId": "WORD_WREATH_544"
   },
   "Zen_word": {
@@ -6809,8 +6809,8 @@ const CATEGORIES = {
     "items": [
       {
         "image": null,
-        "name": "Brick",
-        "id": "Brick_Street",
+        "name": "Lamp",
+        "id": "Lamp_Street",
         "configId": "BRICK_WORD_STREET_768"
       },
       {
@@ -6952,8 +6952,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Fret",
-        "id": "Fret_Violins",
+        "name": "Bow",
+        "id": "Bow_Violins",
         "configId": "FRET_WORD_VIOLINS_845"
       }
     ],
@@ -7069,8 +7069,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Fortune",
-        "id": "Fortune_Wheel",
+        "name": "Rim",
+        "id": "Rim_Wheel",
         "configId": "FORTUNE_WORD_WHEEL_890"
       }
     ],
@@ -7317,8 +7317,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Kennedy",
-        "id": "Kennedy_Dynasty",
+        "name": "Ottoman",
+        "id": "Ottoman_Dynasty",
         "configId": "KENNEDY_WORD_DYNASTY_991"
       },
       {
@@ -7546,6 +7546,105 @@ const CATEGORIES = {
     ],
     "name": "Alarm",
     "configId": "WORD_ALARM_1031"
+  },
+  "Leaves_word": {
+    "isText": true,
+    "items": [
+      {
+        "image": null,
+        "name": "Maple",
+        "id": "Maple_Leaves",
+        "configId": "MAPLE_WORD_LEAVES_1055"
+      },
+      {
+        "image": null,
+        "name": "Oak",
+        "id": "Oak_Leaves",
+        "configId": "OAK_WORD_LEAVES_1055"
+      },
+      {
+        "image": null,
+        "name": "Palm",
+        "id": "Palm_Leaves",
+        "configId": "PALM_WORD_LEAVES_1055"
+      },
+      {
+        "image": null,
+        "name": "Chestnut",
+        "id": "Chestnut_Leaves",
+        "configId": "CHESTNUT_WORD_LEAVES_1055"
+      },
+      {
+        "image": null,
+        "name": "Ash",
+        "id": "Ash_Leaves",
+        "configId": "ASH_WORD_LEAVES_1055"
+      },
+      {
+        "image": null,
+        "name": "Poplar",
+        "id": "Poplar_Leaves",
+        "configId": "POPLAR_WORD_LEAVES_1055"
+      }
+    ],
+    "name": "Leaves",
+    "configId": "WORD_LEAVES_1055"
+  },
+  "Dishware_word": {
+    "isText": true,
+    "items": [
+      {
+        "image": null,
+        "name": "Plate",
+        "id": "Plate_Dishware",
+        "configId": "PLATE_WORD_DISHWARE_829"
+      },
+      {
+        "image": null,
+        "name": "Cup",
+        "id": "Cup_Dishware",
+        "configId": "CUP_WORD_DISHWARE_829"
+      },
+      {
+        "image": null,
+        "name": "Bowl",
+        "id": "Bowl_Dishware",
+        "configId": "BOWL_WORD_DISHWARE_829"
+      },
+      {
+        "image": null,
+        "name": "Saucer",
+        "id": "Saucer_Dishware",
+        "configId": "SAUCER_WORD_DISHWARE_829"
+      }
+    ],
+    "name": "Dishware",
+    "configId": "WORD_DISHWARE_829"
+  },
+  "Pond_word": {
+    "isText": true,
+    "items": [
+      {
+        "image": null,
+        "name": "Frog",
+        "id": "Frog_Pond",
+        "configId": "FROG_WORD_POND_830"
+      },
+      {
+        "image": null,
+        "name": "Reed",
+        "id": "Reed_Pond",
+        "configId": "REED_WORD_POND_830"
+      },
+      {
+        "image": null,
+        "name": "Duck",
+        "id": "Duck_Pond",
+        "configId": "DUCK_WORD_POND_830"
+      }
+    ],
+    "name": "Pond",
+    "configId": "WORD_POND_830"
   },
   "Chess": {
     "isText": false,
@@ -7942,59 +8041,59 @@ const CATEGORIES = {
     "name": "Hats",
     "configId": "PIC_HATS_11"
   },
-  "Play": {
+  "Music": {
     "isText": false,
     "items": [
       {
         "image": "res/Item/play_organ_1.png",
         "name": "Organ",
-        "id": "Organ_Play",
+        "id": "Organ_Music",
         "configId": "ORGAN_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_violin_2.png",
         "name": "Violin",
-        "id": "Violin_Play",
+        "id": "Violin_Music",
         "configId": "VIOLIN_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_ukulele_3.png",
         "name": "Ukulele",
-        "id": "Ukulele_Play",
+        "id": "Ukulele_Music",
         "configId": "UKULELE_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_drum_4.png",
         "name": "Drum",
-        "id": "Drum_Play",
+        "id": "Drum_Music",
         "configId": "DRUM_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_piano_5.png",
         "name": "Piano",
-        "id": "Piano_Play",
+        "id": "Piano_Music",
         "configId": "PIANO_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_flute_6.png",
         "name": "Flute",
-        "id": "Flute_Play",
+        "id": "Flute_Music",
         "configId": "FLUTE_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_guitar_7.png",
         "name": "Guitar",
-        "id": "Guitar_Play",
+        "id": "Guitar_Music",
         "configId": "GUITAR_PIC_PLAY_12"
       },
       {
         "image": "res/Item/play_cello_8.png",
         "name": "Cello",
-        "id": "Cello_Play",
+        "id": "Cello_Music",
         "configId": "CELLO_PIC_PLAY_12"
       }
     ],
-    "name": "Play",
+    "name": "Music",
     "configId": "PIC_PLAY_12"
   },
   "Cleaning": {
@@ -8827,24 +8926,6 @@ const CATEGORIES = {
         "name": "Pharaoh's mask",
         "id": "Pharaoh's_mask_Egypt",
         "configId": "PHARAOH_S_MASK_PIC_EGYPT_37"
-      },
-      {
-        "image": "res/Item/egypt_mummy_4.png",
-        "name": "Mummy",
-        "id": "Mummy_Egypt",
-        "configId": "MUMMY_PIC_EGYPT_37"
-      },
-      {
-        "image": "res/Item/egypt_scarab_5.png",
-        "name": "Scarab",
-        "id": "Scarab_Egypt",
-        "configId": "SCARAB_PIC_EGYPT_37"
-      },
-      {
-        "image": "res/Item/egypt_nileriver_6.png",
-        "name": "Nile river",
-        "id": "Nile_river_Egypt",
-        "configId": "NILE_RIVER_PIC_EGYPT_37"
       }
     ],
     "name": "Egypt",
@@ -9060,6 +9141,30 @@ const CATEGORIES = {
         "name": "Taxi",
         "id": "Taxi_Transport",
         "configId": "TAXI_PIC_TRANSPORT_42"
+      },
+      {
+        "image": "res/Item/transport_scooter_5.png",
+        "name": "Scooter",
+        "id": "Scooter_Transport",
+        "configId": "SCOOTER_PIC_TRANSPORT_42"
+      },
+      {
+        "image": "res/Item/transport_doubledeckerbus_6.png",
+        "name": "Double-decker bus",
+        "id": "Double-decker_bus_Transport",
+        "configId": "DOUBLE_DECKER_BUS_PIC_TRANSPORT_42"
+      },
+      {
+        "image": "res/Item/transport_motorboat_7.png",
+        "name": "Motorboat",
+        "id": "Motorboat_Transport",
+        "configId": "MOTORBOAT_PIC_TRANSPORT_42"
+      },
+      {
+        "image": "res/Item/transport_hotairballoon_8.png",
+        "name": "Hot air balloon",
+        "id": "Hot_air_balloon_Transport",
+        "configId": "HOT_AIR_BALLOON_PIC_TRANSPORT_42"
       }
     ],
     "name": "Transport",
@@ -9622,6 +9727,36 @@ const CATEGORIES = {
         "name": "Lego",
         "id": "Lego_Toys",
         "configId": "LEGO_PIC_TOYS_58"
+      },
+      {
+        "image": "res/Item/toys_gamepad_4.png",
+        "name": "Gamepad",
+        "id": "Gamepad_Toys",
+        "configId": "GAMEPAD_PIC_TOYS_58"
+      },
+      {
+        "image": "res/Item/toys_spinningtop_5.png",
+        "name": "Spinning top",
+        "id": "Spinning_top_Toys",
+        "configId": "SPINNING_TOP_PIC_TOYS_58"
+      },
+      {
+        "image": "res/Item/toys_jumprope_6.png",
+        "name": "Jump rope",
+        "id": "Jump_rope_Toys",
+        "configId": "JUMP_ROPE_PIC_TOYS_58"
+      },
+      {
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "name": "Jigsaw puzzle",
+        "id": "Jigsaw_puzzle_Toys",
+        "configId": "JIGSAW_PUZZLE_PIC_TOYS_58"
+      },
+      {
+        "image": "res/Item/toys_buildingblocks_8.png",
+        "name": "Building blocks",
+        "id": "Building_blocks_Toys",
+        "configId": "BUILDING_BLOCKS_PIC_TOYS_58"
       }
     ],
     "name": "Toys",
@@ -9684,6 +9819,30 @@ const CATEGORIES = {
         "name": "Cheese",
         "id": "Cheese_Yellow",
         "configId": "CHEESE_PIC_YELLOW_60"
+      },
+      {
+        "image": "res/Item/yellow_rubberduck_5.png",
+        "name": "Rubber duck",
+        "id": "Rubber_duck_Yellow",
+        "configId": "RUBBER_DUCK_PIC_YELLOW_60"
+      },
+      {
+        "image": "res/Item/yellow_lemon_6.png",
+        "name": "Lemon",
+        "id": "Lemon_Yellow",
+        "configId": "LEMON_PIC_YELLOW_60"
+      },
+      {
+        "image": "res/Item/yellow_yellowgemstone_7.png",
+        "name": "Yellow gemstone",
+        "id": "Yellow_gemstone_Yellow",
+        "configId": "YELLOW_GEMSTONE_PIC_YELLOW_60"
+      },
+      {
+        "image": "res/Item/yellow_yellowrose_8.png",
+        "name": "Yellow rose",
+        "id": "Yellow_rose_Yellow",
+        "configId": "YELLOW_ROSE_PIC_YELLOW_60"
       }
     ],
     "name": "Yellow",
@@ -10078,18 +10237,6 @@ const CATEGORIES = {
         "name": "File folder",
         "id": "File_folder_Supplies",
         "configId": "FILE_FOLDER_PIC_SUPPLIES_70"
-      },
-      {
-        "image": "res/Item/supplies_pencil_7.png",
-        "name": "Pencil",
-        "id": "Pencil_Supplies",
-        "configId": "PENCIL_PIC_SUPPLIES_70"
-      },
-      {
-        "image": "res/Item/supplies_calculator_8.png",
-        "name": "Calculator",
-        "id": "Calculator_Supplies",
-        "configId": "CALCULATOR_PIC_SUPPLIES_70"
       }
     ],
     "name": "Supplies",
@@ -10451,30 +10598,6 @@ const CATEGORIES = {
         "name": "Vase",
         "id": "Vase_Decor",
         "configId": "VASE_PIC_DECOR_77"
-      },
-      {
-        "image": "res/Item/decor_wallart_5.png",
-        "name": "Wall art",
-        "id": "Wall_art_Decor",
-        "configId": "WALL_ART_PIC_DECOR_77"
-      },
-      {
-        "image": "res/Item/decor_curtains_6.png",
-        "name": "Curtains",
-        "id": "Curtains_Decor",
-        "configId": "CURTAINS_PIC_DECOR_77"
-      },
-      {
-        "image": "res/Item/decor_throwpillow_7.png",
-        "name": "Throw pillow",
-        "id": "Throw_pillow_Decor",
-        "configId": "THROW_PILLOW_PIC_DECOR_77"
-      },
-      {
-        "image": "res/Item/decor_scentedcandle_8.png",
-        "name": "Scented candle",
-        "id": "Scented_candle_Decor",
-        "configId": "SCENTED_CANDLE_PIC_DECOR_77"
       }
     ],
     "name": "Decor",
