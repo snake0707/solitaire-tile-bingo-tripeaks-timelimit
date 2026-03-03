@@ -3511,14 +3511,14 @@ const CATEGORIES = {
     "items": [
       {
         "image": null,
-        "name": "Kennedy",
-        "id": "Kennedy_Leader",
+        "name": "Washington",
+        "id": "Washington_Leader",
         "configId": "KENNEDY_WORD_LEADER_196"
       },
       {
         "image": null,
-        "name": "Clinton",
-        "id": "Clinton_Leader",
+        "name": "Jefferson",
+        "id": "Jefferson_Leader",
         "configId": "CLINTON_WORD_LEADER_196"
       },
       {
@@ -3529,20 +3529,20 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Reagan",
-        "id": "Reagan_Leader",
+        "name": "Roosevelt",
+        "id": "Roosevelt_Leader",
         "configId": "REAGAN_WORD_LEADER_196"
       },
       {
         "image": null,
-        "name": "Bush",
-        "id": "Bush_Leader",
+        "name": "Wilson",
+        "id": "Wilson_Leader",
         "configId": "BUSH_WORD_LEADER_196"
       },
       {
         "image": null,
-        "name": "Obama",
-        "id": "Obama_Leader",
+        "name": "Jackson",
+        "id": "Jackson_Leader",
         "configId": "OBAMA_WORD_LEADER_196"
       },
       {
@@ -3553,8 +3553,8 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Biden",
-        "id": "Biden_Leader",
+        "name": "Madison",
+        "id": "Madison_Leader",
         "configId": "BIDEN_WORD_LEADER_196"
       }
     ],
@@ -6716,20 +6716,20 @@ const CATEGORIES = {
       },
       {
         "image": null,
-        "name": "Sybarite",
-        "id": "Sybarite_Foodie",
+        "name": "Cuisine",
+        "id": "Cuisine_Foodie",
         "configId": "SYBARITE_WORD_FOODIE_726"
       },
       {
         "image": null,
-        "name": "Hedonism",
-        "id": "Hedonism_Foodie",
+        "name": "Savory",
+        "id": "Savory_Foodie",
         "configId": "HEDONISM_WORD_FOODIE_726"
       },
       {
         "image": null,
-        "name": "Dishes",
-        "id": "Dishes_Foodie",
+        "name": "Delicacy",
+        "id": "Delicacy_Foodie",
         "configId": "DISHES_WORD_FOODIE_726"
       }
     ],
@@ -7127,41 +7127,41 @@ const CATEGORIES = {
     "name": "Prefix",
     "configId": "WORD_PREFIX_922"
   },
-  "Breeds_word": {
+  "Cats_word": {
     "isText": true,
     "items": [
       {
         "image": null,
         "name": "Siamese",
-        "id": "Siamese_Breeds",
+        "id": "Siamese_Cats",
         "configId": "SIAMESE_WORD_BREEDS_940"
       },
       {
         "image": null,
         "name": "Sphynx",
-        "id": "Sphynx_Breeds",
+        "id": "Sphynx_Cats",
         "configId": "SPHYNX_WORD_BREEDS_940"
       },
       {
         "image": null,
         "name": "Birman",
-        "id": "Birman_Breeds",
+        "id": "Birman_Cats",
         "configId": "BIRMAN_WORD_BREEDS_940"
       },
       {
         "image": null,
         "name": "Bengal",
-        "id": "Bengal_Breeds",
+        "id": "Bengal_Cats",
         "configId": "BENGAL_WORD_BREEDS_940"
       },
       {
         "image": null,
         "name": "Angora",
-        "id": "Angora_Breeds",
+        "id": "Angora_Cats",
         "configId": "ANGORA_WORD_BREEDS_940"
       }
     ],
-    "name": "Breeds",
+    "name": "Cats",
     "configId": "WORD_BREEDS_940"
   },
   "Landmark_word": {
