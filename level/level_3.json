@@ -8,18 +8,6 @@
     },
     "cards": [
       {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Present_word",
-          "name": "Now",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
         "layer": 0,
         "row": 0,
         "col": 0,
@@ -48,11 +36,11 @@
         "row": 2,
         "col": 0,
         "card": {
-          "type": "regular",
-          "category": "Chess",
-          "name": "Pawn",
-          "image": "res/Item/chess_pawn_1.png",
-          "isText": false
+          "type": "filler",
+          "category": "Present_word",
+          "name": "Now",
+          "image": null,
+          "isText": true
         }
       },
       {
@@ -108,7 +96,7 @@
         "row": 2,
         "col": 1,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Love_word",
           "name": "Couple",
           "image": null,
@@ -133,10 +121,10 @@
         "col": 1,
         "card": {
           "type": "regular",
-          "category": "Love_word",
-          "name": "Romance",
-          "image": null,
-          "isText": true
+          "category": "Chess",
+          "name": "Pawn",
+          "image": "res/Item/chess_pawn_1.png",
+          "isText": false
         }
       },
       {
@@ -253,8 +241,8 @@
         "col": 3,
         "card": {
           "type": "regular",
-          "category": "Love_word",
-          "name": "Passion",
+          "category": "OK_word",
+          "name": "Yes",
           "image": null,
           "isText": true
         }
@@ -288,9 +276,9 @@
         "row": 2,
         "col": 4,
         "card": {
-          "type": "regular",
-          "category": "OK_word",
-          "name": "Yes",
+          "type": "filler",
+          "category": "Love_word",
+          "name": "Romance",
           "image": null,
           "isText": true
         }
@@ -323,7 +311,6 @@
     "categoryTargets": {
       "Chess": 4,
       "OK_word": 3,
-      "Love_word": 3,
       "Hello_word": 3
     },
     "handPile": [
@@ -337,12 +324,6 @@
         "type": "gold",
         "category": "OK_word",
         "name": "OK",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Love_word",
-        "name": "Love",
         "isText": true
       },
       {
