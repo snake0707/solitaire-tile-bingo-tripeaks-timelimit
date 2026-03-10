@@ -1,7 +1,7 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
+      "bingosNeeded": 1,
       "maxSlots": 2,
       "timeLimit": 130,
       "penaltyTime": 2
@@ -12,7 +12,7 @@
         "row": 0,
         "col": 0,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Skin_word",
           "name": "Oily",
           "image": null,
@@ -72,7 +72,7 @@
         "row": 0,
         "col": 1,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Strength_word",
           "name": "Power",
           "image": null,
@@ -84,7 +84,7 @@
         "row": 1,
         "col": 1,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Strength_word",
           "name": "Force",
           "image": null,
@@ -145,10 +145,10 @@
         "col": 2,
         "card": {
           "type": "regular",
-          "category": "Skin_word",
-          "name": "Normal",
-          "image": null,
-          "isText": true
+          "category": "Furniture",
+          "name": "Table",
+          "image": "res/Item/furniture_table_1.png",
+          "isText": false
         }
       },
       {
@@ -157,8 +157,8 @@
         "col": 2,
         "card": {
           "type": "regular",
-          "category": "Strength_word",
-          "name": "Might",
+          "category": "Food_word",
+          "name": "Hot dog",
           "image": null,
           "isText": true
         }
@@ -192,11 +192,11 @@
         "row": 0,
         "col": 3,
         "card": {
-          "type": "regular",
-          "category": "Furniture",
-          "name": "Table",
-          "image": "res/Item/furniture_table_1.png",
-          "isText": false
+          "type": "filler",
+          "category": "Skin_word",
+          "name": "Normal",
+          "image": null,
+          "isText": true
         }
       },
       {
@@ -252,7 +252,7 @@
         "row": 0,
         "col": 4,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Skin_word",
           "name": "Dry",
           "image": null,
@@ -288,9 +288,9 @@
         "row": 3,
         "col": 4,
         "card": {
-          "type": "regular",
-          "category": "Food_word",
-          "name": "Hot dog",
+          "type": "filler",
+          "category": "Strength_word",
+          "name": "Might",
           "image": null,
           "isText": true
         }
@@ -309,9 +309,7 @@
       }
     ],
     "categoryTargets": {
-      "Skin_word": 3,
       "Food_word": 4,
-      "Strength_word": 3,
       "Furniture": 4
     },
     "handPile": [
@@ -320,18 +318,6 @@
         "category": "Furniture",
         "name": "Furniture",
         "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Strength_word",
-        "name": "Strength",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Skin_word",
-        "name": "Skin",
-        "isText": true
       },
       {
         "type": "gold",

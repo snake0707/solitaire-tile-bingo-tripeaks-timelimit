@@ -72,11 +72,11 @@
         "row": 0,
         "col": 1,
         "card": {
-          "type": "regular",
-          "category": "Chess",
-          "name": "Knight",
-          "image": "res/Item/chess_knight_3.png",
-          "isText": false
+          "type": "filler",
+          "category": "OK_word",
+          "name": "Yes",
+          "image": null,
+          "isText": true
         }
       },
       {
@@ -84,7 +84,7 @@
         "row": 1,
         "col": 1,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "OK_word",
           "name": "Consent",
           "image": null,
@@ -132,9 +132,9 @@
         "row": 0,
         "col": 2,
         "card": {
-          "type": "regular",
-          "category": "Hello_word",
-          "name": "Howdy",
+          "type": "filler",
+          "category": "OK_word",
+          "name": "Okay",
           "image": null,
           "isText": true
         }
@@ -241,10 +241,10 @@
         "col": 3,
         "card": {
           "type": "regular",
-          "category": "OK_word",
-          "name": "Yes",
-          "image": null,
-          "isText": true
+          "category": "Chess",
+          "name": "Knight",
+          "image": "res/Item/chess_knight_3.png",
+          "isText": false
         }
       },
       {
@@ -301,8 +301,8 @@
         "col": 4,
         "card": {
           "type": "regular",
-          "category": "OK_word",
-          "name": "Okay",
+          "category": "Hello_word",
+          "name": "Howdy",
           "image": null,
           "isText": true
         }
@@ -310,27 +310,20 @@
     ],
     "categoryTargets": {
       "Chess": 4,
-      "OK_word": 3,
       "Hello_word": 3
     },
     "handPile": [
       {
         "type": "gold",
-        "category": "Chess",
-        "name": "Chess",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "OK_word",
-        "name": "OK",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Hello_word",
         "name": "Hello",
         "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chess",
+        "name": "Chess",
+        "isText": false
       }
     ],
     "handDisplay": []

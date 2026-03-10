@@ -37,10 +37,10 @@
         "col": 0,
         "card": {
           "type": "regular",
-          "category": "Articles_word",
-          "name": "Opinion",
-          "image": null,
-          "isText": true
+          "category": "Music",
+          "name": "Violin",
+          "image": "res/Item/play_violin_2.png",
+          "isText": false
         }
       },
       {
@@ -84,11 +84,11 @@
         "row": 4,
         "col": 0,
         "card": {
-          "type": "regular",
-          "category": "Music",
-          "name": "Violin",
-          "image": "res/Item/play_violin_2.png",
-          "isText": false
+          "type": "filler",
+          "category": "Articles_word",
+          "name": "Opinion",
+          "image": null,
+          "isText": true
         }
       },
       {
@@ -240,7 +240,7 @@
         "row": 2,
         "col": 3,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Articles_word",
           "name": "Essay",
           "image": null,
@@ -336,7 +336,7 @@
         "row": 3,
         "col": 4,
         "card": {
-          "type": "regular",
+          "type": "filler",
           "category": "Articles_word",
           "name": "Review",
           "image": null,
@@ -369,29 +369,16 @@
       }
     ],
     "categoryTargets": {
-      "Articles_word": 3,
+      "Music": 8,
       "Driving_word": 4,
       "Winning_word": 3,
-      "Music": 8,
       "Landmass_word": 3
     },
     "handPile": [
       {
         "type": "gold",
-        "category": "Driving_word",
-        "name": "Driving",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Winning_word",
-        "name": "Winning",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Articles_word",
-        "name": "Articles",
+        "category": "Landmass_word",
+        "name": "Landmass",
         "isText": true
       },
       {
@@ -402,8 +389,14 @@
       },
       {
         "type": "gold",
-        "category": "Landmass_word",
-        "name": "Landmass",
+        "category": "Driving_word",
+        "name": "Driving",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Winning_word",
+        "name": "Winning",
         "isText": true
       }
     ],
