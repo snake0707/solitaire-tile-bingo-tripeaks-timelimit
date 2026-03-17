@@ -343,6 +343,29 @@ body {
     100% { transform: scaleX(1); }
 }
 
+/* Cards with another card above: remove top border-radius to avoid corner gaps */
+.tableau-card.has-card-above {
+    border-radius: 0 0 8px 8px;
+}
+.tableau-card.has-card-above .card-face {
+    border-radius: 0 0 8px 8px;
+}
+.tableau-card.has-card-above .card-back {
+    border-radius: 0 0 8px 8px;
+}
+.tableau-card.has-card-above .gold-grid-card {
+    border-radius: 0 0 8px 8px;
+}
+/* Covered/face-down cards with card above: no radius at all */
+.tableau-card.has-card-above.covered,
+.tableau-card.has-card-above.covered .card-face,
+.tableau-card.has-card-above.covered .card-back,
+.tableau-card.has-card-above.covered .gold-grid-card,
+.tableau-card.has-card-above.face-down,
+.tableau-card.has-card-above.face-down .card-back {
+    border-radius: 0;
+}
+
 /* ─── Card Face (front) ─────────────────────────────────── */
 
 .card-face {
