@@ -484,7 +484,30 @@ body {
 
 /* Covered face-up cards: full height, covered by cards above via z-index */
 .tableau-card.covered .card-face {
+    justify-content: flex-start;
+    padding-top: 2px;
     box-shadow: none;
+}
+
+.tableau-card.covered .card-name {
+    line-height: 14px;
+}
+
+.tableau-card.covered .card-text {
+    font-size: 8px;
+    line-height: 14px;
+    max-width: 58px;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tableau-card.covered .card-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-top: 0;
 }
 
 .tableau-card.covered .card-back {
