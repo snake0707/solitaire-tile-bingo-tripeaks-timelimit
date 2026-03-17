@@ -603,6 +603,23 @@ solitaire-tile-bingo/
 - **+10 Steps 续关**: game over 弹窗新增 "+10 Steps" 按钮（蓝色渐变），点击后增加 10 步继续游戏
 - **翻译修复**: Bedtime→睡眠, Vehicles→交通工具, Hockey→冰球, Notch→缺口, Wardrobe→服装
 
+### 2026-03-17 - 关卡难度分级：贪心求解 + 难度过滤
+- **目的**: 当前关卡用贪心策略总能通关，缺乏策略深度。新增贪心求解器与 MCTS 对比，实现难度分级
+- **难度判定**: 贪心能赢 = easy，贪心输 + MCTS 赢 = hard
+- **代码改动**:
+  - `generate_levels.py`:
+    - 新增 `greedy_solve()` 函数：独立贪心模拟器，复用 MCTS 的 get_moves/apply_move 逻辑（无 undo），单次前向模拟
+    - 新增 `--difficulty` CLI 参数（`any`/`easy`/`hard`），在 MCTS 前快速过滤
+    - 生成循环：先跑 greedy，再按 difficulty 过滤，最后跑 MCTS
+    - JSON 输出新增元数据：`greedySolvable`、`greedySteps`、`mctsSteps`
+    - 日志增强：显示 greedy 结果和过滤统计
+  - `generator.html`:
+    - 新增 `greedySolve()` JS 版（与 Python 一致）
+    - UI 新增 Difficulty 下拉框（Any/Easy/Hard）
+    - `generateSolvableLayout()` 中同样先 greedy 后 MCTS 过滤
+    - 日志输出增加 greedy 信息
+- **性能影响**: greedy_solve 单次 <5ms，难度过滤在 MCTS 前执行，整体不变慢
+
 ### 2026-03-17 - 关卡初期体验优化（布局质量检查）
 - **问题**: 部分关卡开局需要连续多次翻手牌才能操作，体验差
 - **方案**: 在洗牌后、MCTS 求解前加入 3 项布局质量检查，不合格则重新洗牌

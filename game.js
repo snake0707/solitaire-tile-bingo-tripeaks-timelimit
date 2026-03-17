@@ -1270,14 +1270,6 @@ class Game {
     _renderCompletedBadge() {
         const existing = this.collectorsEl.querySelector('.collector-done-badge');
         if (existing) existing.remove();
-
-        if (this.completedCount > 0) {
-            const badge = document.createElement('div');
-            badge.className = 'collector-done-badge';
-            badge.innerHTML = `<span>${this.completedCount}</span>`;
-            badge.title = `${this.completedCount} categories completed`;
-            this.collectorsEl.appendChild(badge);
-        }
     }
 
     renderTableau() {

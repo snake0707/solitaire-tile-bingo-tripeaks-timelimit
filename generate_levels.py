@@ -479,10 +479,204 @@ def validate_layout(tableau, hand_pile, category_targets, max_slots):
     return True
 
 
+# ── Greedy Solver ─────────────────────────────────────────────────────────
+
+MAX_RECYCLES = 3
+
+
+def greedy_solve(tableau, category_targets, max_steps, max_slots, hand_pile):
+    """Pure greedy simulation: always pick the highest-weight move.
+
+    Returns: { 'won': bool, 'stepsUsed': int, 'recyclesUsed': int }
+    """
+    # Deep clone state
+    st = {
+        'tableau': [[{'card': dict(tc['card']), 'faceUp': tc['faceUp']} for tc in col] for col in tableau],
+        'slots': [None] * max_slots,
+        'stepsLeft': max_steps,
+        'completedCount': 0,
+        'numCategories': len(category_targets),
+        'handPile': [dict(c) for c in hand_pile],
+        'handDisplay': [],
+        'recycleCount': 0,
+    }
+
+    def get_top(col):
+        return col[-1] if col else None
+
+    def auto_flip_col(col):
+        if col and not col[-1]['faceUp']:
+            col[-1]['faceUp'] = True
+
+    def gs_get_moves():
+        moves = []
+        has_empty_slot = any(s is None for s in st['slots'])
+
+        for ci in range(len(st['tableau'])):
+            top = get_top(st['tableau'][ci])
+            if not top or not top['faceUp']:
+                continue
+            if top['card']['type'] == 'regular':
+                for si, s in enumerate(st['slots']):
+                    if s is not None and s['key'] == top['card']['category'] and s['collected'] < s['target']:
+                        moves.append({'type': 'tableau_to_slot', 'colIdx': ci, 'slotIdx': si})
+                        break
+            if top['card']['type'] == 'gold' and has_empty_slot:
+                moves.append({'type': 'tableau_gold_to_slot', 'colIdx': ci})
+
+        if st['handDisplay']:
+            top_card = st['handDisplay'][-1]
+            if top_card['type'] == 'regular':
+                for si, s in enumerate(st['slots']):
+                    if s is not None and s['key'] == top_card['category'] and s['collected'] < s['target']:
+                        moves.append({'type': 'display_to_slot', 'slotIdx': si})
+                        break
+            if top_card['type'] == 'gold' and has_empty_slot:
+                moves.append({'type': 'display_gold_to_slot'})
+
+        for ci in range(len(st['tableau'])):
+            col = st['tableau'][ci]
+            top = get_top(col)
+            if not top or not top['faceUp']:
+                continue
+            # Only allow column moves that uncover a face-down card
+            has_hidden = len(col) >= 2 and not col[-2]['faceUp']
+            if not has_hidden:
+                continue
+            for ti in range(len(st['tableau'])):
+                if ti == ci:
+                    continue
+                if can_stack_on_column(top['card'], st['tableau'][ti]):
+                    moves.append({'type': 'tableau_to_column', 'srcCol': ci, 'dstCol': ti})
+
+        if st['handDisplay']:
+            top_card = st['handDisplay'][-1]
+            for ti in range(len(st['tableau'])):
+                if can_stack_on_column(top_card, st['tableau'][ti]):
+                    moves.append({'type': 'display_to_column', 'dstCol': ti})
+
+        if st['handPile']:
+            moves.append({'type': 'flip_hand'})
+
+        if not st['handPile'] and st['handDisplay'] and st['recycleCount'] < MAX_RECYCLES:
+            moves.append({'type': 'recycle'})
+
+        return moves
+
+    def gs_get_move_weight(move):
+        mt = move['type']
+        if mt in ('tableau_to_slot', 'tableau_gold_to_slot', 'display_to_slot', 'display_gold_to_slot'):
+            return 100
+        if mt == 'tableau_to_column':
+            return 50
+        if mt == 'display_to_column':
+            return 20
+        if mt == 'flip_hand':
+            return 20
+        return 10
+
+    def gs_greedy_choice(moves):
+        best_weight = -1
+        candidates = []
+        for m in moves:
+            w = gs_get_move_weight(m)
+            if w > best_weight:
+                best_weight = w
+                candidates = [m]
+            elif w == best_weight:
+                candidates.append(m)
+        if len(candidates) == 1:
+            return candidates[0]
+        return candidates[random.randint(0, len(candidates) - 1)]
+
+    def gs_apply_move(move):
+        if move['type'] == 'tableau_to_slot':
+            st['stepsLeft'] -= 1
+            col = st['tableau'][move['colIdx']]
+            col.pop()
+            slot = st['slots'][move['slotIdx']]
+            slot['collected'] += 1
+            if slot['collected'] >= slot['target']:
+                st['slots'][move['slotIdx']] = None
+                st['completedCount'] += 1
+            auto_flip_col(col)
+
+        elif move['type'] == 'tableau_gold_to_slot':
+            st['stepsLeft'] -= 1
+            col = st['tableau'][move['colIdx']]
+            tc = col.pop()
+            empty_idx = next(i for i, s in enumerate(st['slots']) if s is None)
+            st['slots'][empty_idx] = {
+                'key': tc['card']['category'],
+                'collected': 0,
+                'target': category_targets.get(tc['card']['category'], 0),
+            }
+            auto_flip_col(col)
+
+        elif move['type'] == 'display_to_slot':
+            st['stepsLeft'] -= 1
+            st['handDisplay'].pop()
+            slot = st['slots'][move['slotIdx']]
+            slot['collected'] += 1
+            if slot['collected'] >= slot['target']:
+                st['slots'][move['slotIdx']] = None
+                st['completedCount'] += 1
+
+        elif move['type'] == 'display_gold_to_slot':
+            st['stepsLeft'] -= 1
+            card = st['handDisplay'].pop()
+            empty_idx = next(i for i, s in enumerate(st['slots']) if s is None)
+            st['slots'][empty_idx] = {
+                'key': card['category'],
+                'collected': 0,
+                'target': category_targets.get(card['category'], 0),
+            }
+
+        elif move['type'] == 'tableau_to_column':
+            st['stepsLeft'] -= 1
+            src_col = st['tableau'][move['srcCol']]
+            tc = src_col.pop()
+            st['tableau'][move['dstCol']].append(tc)
+            auto_flip_col(src_col)
+
+        elif move['type'] == 'display_to_column':
+            st['stepsLeft'] -= 1
+            card = st['handDisplay'].pop()
+            st['tableau'][move['dstCol']].append({'card': card, 'faceUp': True})
+
+        elif move['type'] == 'flip_hand':
+            st['stepsLeft'] -= 1
+            card = st['handPile'].pop()
+            st['handDisplay'].append(card)
+
+        elif move['type'] == 'recycle':
+            st['stepsLeft'] -= 1
+            st['handPile'] = list(reversed(st['handDisplay']))
+            st['handDisplay'] = []
+            st['recycleCount'] += 1
+
+    # Main greedy loop
+    while st['stepsLeft'] > 0:
+        if st['completedCount'] >= st['numCategories']:
+            steps_used = max_steps - st['stepsLeft']
+            return {'won': True, 'stepsUsed': steps_used, 'recyclesUsed': st['recycleCount']}
+        moves = gs_get_moves()
+        if not moves:
+            break
+        move = gs_greedy_choice(moves)
+        gs_apply_move(move)
+
+    # Check win after loop (might have completed on last move)
+    if st['completedCount'] >= st['numCategories']:
+        steps_used = max_steps - st['stepsLeft']
+        return {'won': True, 'stepsUsed': steps_used, 'recyclesUsed': st['recycleCount']}
+
+    return {'won': False, 'stepsUsed': -1, 'recyclesUsed': st['recycleCount']}
+
+
 # ── MCTS Solver (Monte Carlo Tree Search) ───────────────────────────────────
 
 MAX_NODES = 2000000
-MAX_RECYCLES = 3
 DEFAULT_MCTS_ITERATIONS = 5000
 
 
@@ -1159,6 +1353,9 @@ def main():
                         help='Max ratio of stepsUsed/maxSteps to accept (default: 1.0, disabled)')
     parser.add_argument('--mcts-iterations', type=int, default=DEFAULT_MCTS_ITERATIONS,
                         help='MCTS iteration count per solve (default: %d)' % DEFAULT_MCTS_ITERATIONS)
+    parser.add_argument('--difficulty', type=str, default='any',
+                        choices=['any', 'easy', 'hard'],
+                        help='easy=greedy wins, hard=greedy fails + MCTS wins (default: any)')
     args = parser.parse_args()
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -1253,6 +1450,7 @@ def main():
         layouts = []
         total_attempts = 0
         validate_skips = 0
+        greedy_skips = 0
         for li in range(args.layouts):
             found = False
             for attempt in range(args.attempts):
@@ -1262,6 +1460,20 @@ def main():
                 # 布局质量检查（快速，<1ms）
                 if not validate_layout(gen['tableau'], gen['handPile'], gen['categoryTargets'], cfg['maxSlots']):
                     validate_skips += 1
+                    continue
+
+                # 贪心求解（快速，<5ms）
+                greedy = greedy_solve(
+                    gen['tableau'], gen['categoryTargets'],
+                    max_steps, cfg['maxSlots'], gen['handPile']
+                )
+
+                # 难度过滤（在 MCTS 之前，节省时间）
+                if args.difficulty == 'easy' and not greedy['won']:
+                    greedy_skips += 1
+                    continue
+                if args.difficulty == 'hard' and greedy['won']:
+                    greedy_skips += 1
                     continue
 
                 result = verify_solvable(
@@ -1279,12 +1491,19 @@ def main():
                     max_steps_limit = int(max_steps * args.step_max_ratio)
                     if steps_used < min_steps or steps_used > max_steps_limit:
                         continue
-                    print("  Layout %d/%d: solved on attempt %d (%d nodes, %d/%d steps)" % (
-                        li + 1, args.layouts, attempt + 1, result['nodesExplored'], steps_used, max_steps))
+                    greedy_tag = 'YES' if greedy['won'] else 'NO'
+                    greedy_steps_str = '%d/%d steps' % (greedy['stepsUsed'], max_steps) if greedy['won'] else ''
+                    print("  Layout %d/%d: solved on attempt %d (greedy=%s%s, mcts=%d/%d steps)" % (
+                        li + 1, args.layouts, attempt + 1, greedy_tag,
+                        ', ' + greedy_steps_str if greedy_steps_str else '',
+                        steps_used, max_steps))
                     layouts.append({
                         'config': {
                             'maxSlots': cfg['maxSlots'],
                             'maxSteps': max_steps,
+                            'greedySolvable': greedy['won'],
+                            'greedySteps': greedy['stepsUsed'] if greedy['won'] else -1,
+                            'mctsSteps': steps_used,
                         },
                         'tableau': gen['tableau'],
                         'categoryTargets': gen['categoryTargets'],
@@ -1297,8 +1516,8 @@ def main():
             if not found:
                 print("  Layout %d/%d: FAILED after %d attempts" % (li + 1, args.layouts, args.attempts))
 
-        if validate_skips > 0:
-            print("  (validate_layout filtered %d/%d attempts)" % (validate_skips, total_attempts))
+        if validate_skips > 0 or greedy_skips > 0:
+            print("  (filtered: %d validate, %d greedy / %d total attempts)" % (validate_skips, greedy_skips, total_attempts))
 
         if not layouts:
             print("  FAILED: no solvable layouts found!")

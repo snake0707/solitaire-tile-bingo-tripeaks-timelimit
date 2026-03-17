@@ -133,6 +133,16 @@
             <input type="number" id="layouts-per-level" value="5" min="1" max="20">
             <label for="mcts-iterations">MCTS Iterations</label>
             <input type="number" id="mcts-iterations" value="5000" min="100" max="50000" step="500">
+            <div class="row">
+                <div>
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty">
+                        <option value="any">Any</option>
+                        <option value="easy">Easy (greedy wins)</option>
+                        <option value="hard">Hard (greedy fails)</option>
+                    </select>
+                </div>
+            </div>
             <button id="btn-generate">Generate Levels</button>
         </div>
         <div class="progress-container">
@@ -877,6 +887,184 @@ function validateLayout(tableau, handPile, categoryTargets, maxSlots) {
 
 // ─── Generator Logic ───────────────────────────────────────────────
 
+// ─── Greedy Solver ────────────────────────────────────────────────
+
+function greedySolve(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
+    const MAX_RECYCLES_GS = 3;
+
+    // Deep clone state
+    const st = {
+        tableau: tableau.map(col => col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp }))),
+        slots: new Array(maxSlots).fill(null),
+        stepsLeft: maxSteps,
+        completedCount: 0,
+        numCategories: Object.keys(categoryTargets).length,
+        handPile: [...handPile].map(c => ({ ...c })),
+        handDisplay: [],
+        recycleCount: 0,
+    };
+
+    function getTop(col) { return col.length > 0 ? col[col.length - 1] : null; }
+
+    function autoFlipCol(col) {
+        if (col.length > 0 && !col[col.length - 1].faceUp) {
+            col[col.length - 1].faceUp = true;
+        }
+    }
+
+    function canStack(card, col) {
+        if (col.length === 0) return true;
+        const top = col[col.length - 1];
+        if (top.card.type === 'gold') return false;
+        return card.category === top.card.category;
+    }
+
+    function gsGetMoves() {
+        const moves = [];
+        const hasEmptySlot = st.slots.some(s => s === null);
+
+        for (let ci = 0; ci < st.tableau.length; ci++) {
+            const top = getTop(st.tableau[ci]);
+            if (!top || !top.faceUp) continue;
+            if (top.card.type === 'regular') {
+                const si = st.slots.findIndex(s => s !== null && s.key === top.card.category && s.collected < s.target);
+                if (si !== -1) moves.push({ type: 'tableau_to_slot', colIdx: ci, slotIdx: si });
+            }
+            if (top.card.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'tableau_gold_to_slot', colIdx: ci });
+            }
+        }
+
+        if (st.handDisplay.length > 0) {
+            const topCard = st.handDisplay[st.handDisplay.length - 1];
+            if (topCard.type === 'regular') {
+                const si = st.slots.findIndex(s => s !== null && s.key === topCard.category && s.collected < s.target);
+                if (si !== -1) moves.push({ type: 'display_to_slot', slotIdx: si });
+            }
+            if (topCard.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'display_gold_to_slot' });
+            }
+        }
+
+        for (let ci = 0; ci < st.tableau.length; ci++) {
+            const col = st.tableau[ci];
+            const top = getTop(col);
+            if (!top || !top.faceUp) continue;
+            // Only allow column moves that uncover a face-down card
+            const hasHidden = col.length >= 2 && !col[col.length - 2].faceUp;
+            if (!hasHidden) continue;
+            for (let ti = 0; ti < st.tableau.length; ti++) {
+                if (ti === ci) continue;
+                if (canStack(top.card, st.tableau[ti])) {
+                    moves.push({ type: 'tableau_to_column', srcCol: ci, dstCol: ti });
+                }
+            }
+        }
+
+        if (st.handDisplay.length > 0) {
+            const topCard = st.handDisplay[st.handDisplay.length - 1];
+            for (let ti = 0; ti < st.tableau.length; ti++) {
+                if (canStack(topCard, st.tableau[ti])) {
+                    moves.push({ type: 'display_to_column', dstCol: ti });
+                }
+            }
+        }
+
+        if (st.handPile.length > 0) {
+            moves.push({ type: 'flip_hand' });
+        }
+
+        if (st.handPile.length === 0 && st.handDisplay.length > 0 && st.recycleCount < MAX_RECYCLES_GS) {
+            moves.push({ type: 'recycle' });
+        }
+
+        return moves;
+    }
+
+    function gsMoveWeight(move) {
+        const mt = move.type;
+        if (mt === 'tableau_to_slot' || mt === 'tableau_gold_to_slot' || mt === 'display_to_slot' || mt === 'display_gold_to_slot') return 100;
+        if (mt === 'tableau_to_column') return 50;
+        if (mt === 'display_to_column') return 20;
+        if (mt === 'flip_hand') return 20;
+        return 10;
+    }
+
+    function gsGreedyChoice(moves) {
+        let bestWeight = -1;
+        let candidates = [];
+        for (const m of moves) {
+            const w = gsMoveWeight(m);
+            if (w > bestWeight) { bestWeight = w; candidates = [m]; }
+            else if (w === bestWeight) { candidates.push(m); }
+        }
+        return candidates.length === 1 ? candidates[0] : candidates[Math.floor(Math.random() * candidates.length)];
+    }
+
+    function gsApplyMove(move) {
+        if (move.type === 'tableau_to_slot') {
+            st.stepsLeft--;
+            const col = st.tableau[move.colIdx];
+            col.pop();
+            const slot = st.slots[move.slotIdx];
+            slot.collected++;
+            if (slot.collected >= slot.target) { st.slots[move.slotIdx] = null; st.completedCount++; }
+            autoFlipCol(col);
+        } else if (move.type === 'tableau_gold_to_slot') {
+            st.stepsLeft--;
+            const col = st.tableau[move.colIdx];
+            const tc = col.pop();
+            const ei = st.slots.findIndex(s => s === null);
+            st.slots[ei] = { key: tc.card.category, collected: 0, target: categoryTargets[tc.card.category] || 0 };
+            autoFlipCol(col);
+        } else if (move.type === 'display_to_slot') {
+            st.stepsLeft--;
+            st.handDisplay.pop();
+            const slot = st.slots[move.slotIdx];
+            slot.collected++;
+            if (slot.collected >= slot.target) { st.slots[move.slotIdx] = null; st.completedCount++; }
+        } else if (move.type === 'display_gold_to_slot') {
+            st.stepsLeft--;
+            const card = st.handDisplay.pop();
+            const ei = st.slots.findIndex(s => s === null);
+            st.slots[ei] = { key: card.category, collected: 0, target: categoryTargets[card.category] || 0 };
+        } else if (move.type === 'tableau_to_column') {
+            st.stepsLeft--;
+            const tc = st.tableau[move.srcCol].pop();
+            st.tableau[move.dstCol].push(tc);
+            autoFlipCol(st.tableau[move.srcCol]);
+        } else if (move.type === 'display_to_column') {
+            st.stepsLeft--;
+            const card = st.handDisplay.pop();
+            st.tableau[move.dstCol].push({ card, faceUp: true });
+        } else if (move.type === 'flip_hand') {
+            st.stepsLeft--;
+            st.handDisplay.push(st.handPile.pop());
+        } else if (move.type === 'recycle') {
+            st.stepsLeft--;
+            st.handPile = [...st.handDisplay].reverse();
+            st.handDisplay = [];
+            st.recycleCount++;
+        }
+    }
+
+    // Main greedy loop
+    while (st.stepsLeft > 0) {
+        if (st.completedCount >= st.numCategories) {
+            return { won: true, stepsUsed: maxSteps - st.stepsLeft, recyclesUsed: st.recycleCount };
+        }
+        const moves = gsGetMoves();
+        if (moves.length === 0) break;
+        gsApplyMove(gsGreedyChoice(moves));
+    }
+    if (st.completedCount >= st.numCategories) {
+        return { won: true, stepsUsed: maxSteps - st.stepsLeft, recyclesUsed: st.recycleCount };
+    }
+    return { won: false, stepsUsed: -1, recyclesUsed: st.recycleCount };
+}
+
+// ─── Layout Generation ────────────────────────────────────────────
+
 function generateSolvableLayout(level) {
     const config = getLevelSettings(level);
     const catDefs = LEVEL_CARD_DEFS[level];
@@ -890,9 +1078,11 @@ function generateSolvableLayout(level) {
     const stepMinRatio = parseFloat(document.getElementById('step-min-ratio').value) || 0.0;
     const stepMaxRatio = parseFloat(document.getElementById('step-max-ratio').value) || 1.0;
     const mctsIter = parseInt(document.getElementById('mcts-iterations').value) || 5000;
+    const difficulty = document.getElementById('difficulty').value;
 
     const maxAttempts = 200;
     let totalNodes = 0;
+    let greedySkips = 0;
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
         const gen = generateCards(level);
@@ -901,6 +1091,13 @@ function generateSolvableLayout(level) {
         if (!validateLayout(gen.tableau, gen.handPile, gen.categoryTargets, config.maxSlots)) {
             continue;
         }
+
+        // 贪心求解（快速，<5ms）
+        const greedy = greedySolve(gen.tableau, gen.categoryTargets, maxSteps, config.maxSlots, gen.handPile);
+
+        // 难度过滤（在 MCTS 之前）
+        if (difficulty === 'easy' && !greedy.won) { greedySkips++; continue; }
+        if (difficulty === 'hard' && greedy.won) { greedySkips++; continue; }
 
         const result = verifySolvable(
             gen.tableau, gen.categoryTargets,
@@ -919,6 +1116,9 @@ function generateSolvableLayout(level) {
                     config: {
                         maxSlots: config.maxSlots,
                         maxSteps: maxSteps,
+                        greedySolvable: greedy.won,
+                        greedySteps: greedy.won ? greedy.stepsUsed : -1,
+                        mctsSteps: stepsUsed,
                     },
                     tableau: gen.tableau.map(col => col.map(tc => ({
                         card: { ...tc.card },
@@ -932,10 +1132,13 @@ function generateSolvableLayout(level) {
                 totalNodes,
                 stepsUsed,
                 maxSteps,
+                greedyWon: greedy.won,
+                greedySteps: greedy.won ? greedy.stepsUsed : -1,
+                greedySkips,
             };
         }
     }
-    return { layout: null, attempts: maxAttempts, totalNodes };
+    return { layout: null, attempts: maxAttempts, totalNodes, greedySkips };
 }
 
 function downloadJSON(filename, data) {
@@ -1001,9 +1204,10 @@ btnGenerate.addEventListener('click', async () => {
                 if (result.layout) {
                     layouts.push(result.layout);
                     const totalCards = result.layout.tableau.reduce((s, c) => s + c.length, 0);
-                    log(`  Layout ${i + 1}: OK (${totalCards} tableau + ${result.layout.handPile.length} hand, ${result.stepsUsed}/${result.maxSteps} steps, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
+                    const greedyTag = result.greedyWon ? `YES, ${result.greedySteps}/${result.maxSteps}` : 'NO';
+                    log(`  Layout ${i + 1}: OK (${totalCards} tableau + ${result.layout.handPile.length} hand, greedy=${greedyTag}, mcts=${result.stepsUsed}/${result.maxSteps} steps, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
                 } else {
-                    log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes explored)`);
+                    log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes, ${result.greedySkips || 0} greedy-filtered)`);
                 }
             } catch (e) {
                 log(`  Layout ${i + 1}: ERROR - ${e.message}`);
