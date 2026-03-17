@@ -343,29 +343,6 @@ body {
     100% { transform: scaleX(1); }
 }
 
-/* Cards with another card above: remove top border-radius to avoid corner gaps */
-.tableau-card.has-card-above {
-    border-radius: 0 0 8px 8px;
-}
-.tableau-card.has-card-above .card-face {
-    border-radius: 0 0 8px 8px;
-}
-.tableau-card.has-card-above .card-back {
-    border-radius: 0 0 8px 8px;
-}
-.tableau-card.has-card-above .gold-grid-card {
-    border-radius: 0 0 8px 8px;
-}
-/* Covered/face-down cards with card above: no radius at all */
-.tableau-card.has-card-above.covered,
-.tableau-card.has-card-above.covered .card-face,
-.tableau-card.has-card-above.covered .card-back,
-.tableau-card.has-card-above.covered .gold-grid-card,
-.tableau-card.has-card-above.face-down,
-.tableau-card.has-card-above.face-down .card-back {
-    border-radius: 0;
-}
-
 /* ─── Card Face (front) ─────────────────────────────────── */
 
 .card-face {
@@ -447,9 +424,8 @@ body {
     background: none !important;
 }
 
-/* Covered gold cards: remove bottom border/shadow bleed */
+/* Covered gold cards */
 .tableau-card.covered .gold-grid-card {
-    border-radius: 0;
     box-shadow: none;
 }
 
@@ -506,48 +482,17 @@ body {
     );
 }
 
-/* Covered face-up cards: clip to visible 20px sliver, like face-down */
-.tableau-card.covered {
-    height: 20px;
-    overflow: hidden;
-    border-radius: 0;
-}
-
+/* Covered face-up cards: full height, covered by cards above via z-index */
 .tableau-card.covered .card-face {
-    height: 70px;
-    justify-content: flex-start;
-    padding-top: 3px;
-    border-radius: 0;
     box-shadow: none;
 }
 
 .tableau-card.covered .card-back {
-    height: 70px;
-    border-radius: 0;
     box-shadow: none;
 }
 
-.tableau-card.covered .card-name {
-    line-height: 14px;
-}
-
-.tableau-card.covered .card-img {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    margin-top: 1px;
-}
-
-/* Face-down cards in tableau show only 20px sliver */
-.tableau-card.face-down {
-    height: 20px;
-    overflow: hidden;
-    border-radius: 0;
-}
-
+/* Face-down cards in tableau: full height, covered by cards above via z-index */
 .tableau-card.face-down .card-back {
-    height: 70px;
-    border-radius: 0;
     box-shadow: none;
 }
 

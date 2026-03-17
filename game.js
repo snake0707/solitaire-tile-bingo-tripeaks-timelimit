@@ -1305,11 +1305,6 @@ class Game {
                 const inner = document.createElement('div');
                 inner.className = 'card-inner';
 
-                // Cards that are not the first in column have cards above them
-                if (pos > 0) {
-                    el.classList.add('has-card-above');
-                }
-
                 if (!tc.faceUp) {
                     el.classList.add('face-down');
                     const back = document.createElement('div');
