@@ -1,452 +1,2384 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 125,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 130
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Vacuum",
-          "image": "res/Item/cleaning_vacuum_3.png",
-          "isText": false
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "South",
+            "image": "res/Item/shoes_derbies_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Kombucha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Screen_word",
-          "name": "TV",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Loan",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fog_word",
+            "name": "Fog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Haze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Brown",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Defense_word",
-          "name": "Patrol",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Flash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Smog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Transport",
+            "name": "Combine",
+            "image": "res/Item/transport_train_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "English",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bank_word",
+            "name": "Bank",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Screen_word",
-          "name": "ATM",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beverage_word",
+            "name": "Beverage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Italian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Camera_word",
+            "name": "Camera",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Credit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "West",
+            "image": "res/Item/shoes_monks_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Snow_word",
+            "name": "Sleet",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Racing_word",
-          "name": "Speedway",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Defense_word",
-          "name": "Guard",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Sliding_word",
-          "name": "Skeleton",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Racing_word",
-          "name": "Pit stop",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Crown_word",
-          "name": "King",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Arctic_word",
-          "name": "Polar bear",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Broom",
-          "image": "res/Item/cleaning_broom_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Camping_word",
-          "name": "Hammock",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Defense_word",
-          "name": "CCTV",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Defense_word",
-          "name": "Security",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Dustpan",
-          "image": "res/Item/cleaning_dustpan_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Camping_word",
-          "name": "Campfire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Bin",
-          "image": "res/Item/cleaning_bin_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Duster",
-          "image": "res/Item/cleaning_duster_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Screen_word",
-          "name": "E-reader",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Bucket",
-          "image": "res/Item/cleaning_bucket_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Crown_word",
-          "name": "Emperor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Fame_word",
-          "name": "Popular",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Crown_word",
-          "name": "Maharaja",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Fame_word",
-          "name": "Iconic",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Mop",
-          "image": "res/Item/cleaning_mop_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alarm_word",
-          "name": "Buzzer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Camping_word",
-          "name": "Tent",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Racing_word",
-          "name": "Finish",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Sliding_word",
-          "name": "Luge",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Fame_word",
-          "name": "Renown",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Fame_word",
-          "name": "Famous",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Cleaning",
-          "name": "Sponge",
-          "image": "res/Item/cleaning_sponge_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Alarm_word",
-          "name": "Beep",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Cleaning": 8,
-      "Defense_word": 4,
-      "Racing_word": 3,
-      "Crown_word": 3,
-      "Camping_word": 3,
-      "Fame_word": 4
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Shoes": 4,
+      "Transport": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Racing_word",
-        "name": "Racing",
+        "type": "regular",
+        "category": "Transport",
+        "name": "Pickup",
+        "image": "res/Item/transport_scooter_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Khaki",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Defense_word",
-        "name": "Defense",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Cerise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Crown_word",
-        "name": "Crown",
+        "category": "Snow_word",
+        "name": "Snow",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Cleaning",
-        "name": "Cleaning",
+        "category": "Shoes",
+        "name": "Shoes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Trailer",
+        "image": "res/Item/transport_hotairballoon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Transport",
+        "name": "Transport",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Truck",
+        "image": "res/Item/transport_taxi_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "North",
+        "image": "res/Item/shoes_boots_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Cactus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "East",
+        "image": "res/Item/shoes_brogues_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "East",
+            "image": "res/Item/shoes_brogues_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Red",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Green",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Camera_word",
+            "name": "Camera",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Language_word",
+            "name": "Language",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "South",
+            "image": "res/Item/shoes_derbies_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "West",
+            "image": "res/Item/shoes_monks_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Cerise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Hebrew",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Italian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Haze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Japanese",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Durian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Hedgehog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Tea",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Zoom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Milk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Water",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Shoes": 4,
+      "Transport": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shoes",
+        "name": "Shoes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Pickup",
+        "image": "res/Item/transport_scooter_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fog_word",
+        "name": "Fog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Khaki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "North",
+        "image": "res/Item/shoes_boots_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Trailer",
+        "image": "res/Item/transport_hotairballoon_8.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Fame_word",
-        "name": "Fame",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Kombucha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Combine",
+        "image": "res/Item/transport_train_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Truck",
+        "image": "res/Item/transport_taxi_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "English",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Cactus",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Camping_word",
-        "name": "Camping",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Transport",
+        "name": "Transport",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "English",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Cactus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Mist",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bank_word",
+            "name": "Bank",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Haze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Hindi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Transport",
+            "name": "Trailer",
+            "image": "res/Item/transport_hotairballoon_8.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Green",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fog_word",
+            "name": "Fog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Italian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Cerise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Camera_word",
+            "name": "Camera",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Deposit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Exposure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Hedgehog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Matcha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "White",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Khaki",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Shoes": 4,
+      "Transport": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Pickup",
+        "image": "res/Item/transport_scooter_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Truck",
+        "image": "res/Item/transport_taxi_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shoes",
+        "name": "Shoes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Combine",
+        "image": "res/Item/transport_train_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Transport",
+        "name": "Transport",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "South",
+        "image": "res/Item/shoes_derbies_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Kombucha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "East",
+        "image": "res/Item/shoes_brogues_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "North",
+        "image": "res/Item/shoes_boots_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "West",
+        "image": "res/Item/shoes_monks_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Latin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Haze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Cerise",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Flash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spiky_word",
+            "name": "Spiky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Green",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shoes",
+            "name": "Shoes",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Account",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Khaki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Durian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Kombucha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beverage_word",
+            "name": "Beverage",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Red",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "White",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "English",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Snow_word",
+            "name": "Iceberg",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fog_word",
+            "name": "Fog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Transport",
+            "name": "Pickup",
+            "image": "res/Item/transport_scooter_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Shoes": 4,
+      "Transport": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Truck",
+        "image": "res/Item/transport_taxi_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "North",
+        "image": "res/Item/shoes_boots_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Italian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "East",
+        "image": "res/Item/shoes_brogues_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Trailer",
+        "image": "res/Item/transport_hotairballoon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Cactus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Transport",
+        "name": "Transport",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "West",
+        "image": "res/Item/shoes_monks_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Combine",
+        "image": "res/Item/transport_train_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "South",
+        "image": "res/Item/shoes_derbies_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "West",
+            "image": "res/Item/shoes_monks_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Credit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Deposit",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Black",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Snow_word",
+            "name": "Sleet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoes",
+            "name": "North",
+            "image": "res/Item/shoes_boots_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Smog",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Cerise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "ATM",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Filter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Hebrew",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Mist",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fog_word",
+            "name": "Fog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Milk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Zoom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Transport",
+            "name": "Trailer",
+            "image": "res/Item/transport_hotairballoon_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Palette_word",
+            "name": "Palette",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Shoes": 4,
+      "Transport": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Italian",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Transport",
+        "name": "Transport",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Khaki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "East",
+        "image": "res/Item/shoes_brogues_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Cactus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shoes",
+        "name": "Shoes",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "English",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Haze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoes",
+        "name": "South",
+        "image": "res/Item/shoes_derbies_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Pickup",
+        "image": "res/Item/transport_scooter_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Combine",
+        "image": "res/Item/transport_train_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Transport",
+        "name": "Truck",
+        "image": "res/Item/transport_taxi_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Kombucha",
         "isText": true
       }
     ],

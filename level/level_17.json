@@ -1,604 +1,1440 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 130,
-      "penaltyTime": 3
+      "maxSlots": 3,
+      "maxSteps": 75
     },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Library",
-          "image": "res/Item/build_library_1.png",
-          "isText": false
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Gibbon",
+            "image": "res/Item/whiskers_seal_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Mandrill",
+            "image": "res/Item/whiskers_squirrel_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Punch",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Landmark_word",
-          "name": "Sphinx",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Baboon",
+            "image": "res/Item/whiskers_walrus_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sushi_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Victoria",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Sicily",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Macaque",
+            "image": "res/Item/whiskers_lion_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Gorilla",
+            "image": "res/Item/whiskers_dog_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Yo-yo",
+            "image": "res/Item/toys_jumprope_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Spinner",
+            "image": "res/Item/toys_spinningtop_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Simian",
+            "image": "res/Item/whiskers_otter_5.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Hotel",
-          "image": "res/Item/build_hotel_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Jamaica",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Wheel_word",
-          "name": "Tire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Harbor_word",
-          "name": "Pier",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Explorer_word",
-          "name": "Vespucci",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Wheel_word",
-          "name": "Axle",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Museum",
-          "image": "res/Item/build_museum_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Sneakers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Chess_word",
-          "name": "Pawn",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Leader_word",
-          "name": "Roosevelt",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Folklore",
-          "name": "Ogre",
-          "image": "res/Item/folklore_ogre_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Leader_word",
-          "name": "Washington",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Stadium",
-          "image": "res/Item/build_stadium_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Serum",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Landmark_word",
-          "name": "Colosseum",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Sponge",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Factory",
-          "image": "res/Item/build_factory_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Landmark_word",
-          "name": "Pyramids",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pills_word",
-          "name": "Lozenges",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Peel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Mall",
-          "image": "res/Item/build_mall_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Present_word",
-          "name": "Current",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "Hospital",
-          "image": "res/Item/build_hospital_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Present_word",
-          "name": "Now",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Pills_word",
-          "name": "Capsules",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Sculpt_word",
-          "name": "Figurine",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Build",
-          "name": "School building",
-          "image": "res/Item/build_schoolbuilding_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Slippers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Explorer_word",
-          "name": "Magellan",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Chess_word",
-          "name": "Queen",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Clogs",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Folklore",
-          "name": "Goblin",
-          "image": "res/Item/folklore_goblin_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Sandals",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Chess_word",
-          "name": "Rook",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Uggs",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Explorer_word",
-          "name": "Columbus",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Footwear_word",
-          "name": "Loafers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Landmark_word",
-          "name": "Big Ben",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "PhD_word",
-          "name": "Degree",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Pills_word",
-          "name": "Tablets",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Folklore",
-          "name": "Troll",
-          "image": "res/Item/folklore_troll_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Chess_word",
-          "name": "Bishop",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Build": 8,
-      "Landmark_word": 4,
-      "Explorer_word": 3,
-      "Footwear_word": 6,
-      "Chess_word": 4,
-      "Folklore": 3,
-      "Pills_word": 3
+      "Whiskers": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Tarsier",
+        "image": "res/Item/whiskers_cat_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Script",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rap_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Lemur",
+        "image": "res/Item/whiskers_catfish_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Whiskers",
+        "name": "Whiskers",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Yosemite",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Maki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Punch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Mandrill",
+            "image": "res/Item/whiskers_squirrel_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Python",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Bugs",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Yosemite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Spinner",
+            "image": "res/Item/toys_spinningtop_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Simian",
+            "image": "res/Item/whiskers_otter_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Nigiri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "SQL",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Whiskers": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
     },
     "handPile": [
       {
         "type": "gold",
-        "category": "Footwear_word",
-        "name": "Footwear",
+        "category": "Whiskers",
+        "name": "Whiskers",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Script",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Landmark_word",
-        "name": "Landmark",
+        "category": "Rap_word",
+        "name": "Rap",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Chess_word",
-        "name": "Chess",
+        "category": "Sushi_word",
+        "name": "Sushi",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Build",
-        "name": "Build",
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Macaque",
+        "image": "res/Item/whiskers_lion_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gibbon",
+        "image": "res/Item/whiskers_seal_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gorilla",
+        "image": "res/Item/whiskers_dog_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Lemur",
+        "image": "res/Item/whiskers_catfish_7.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Folklore",
-        "name": "Folklore",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_jumprope_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Baboon",
+        "image": "res/Item/whiskers_walrus_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Tarsier",
+        "image": "res/Item/whiskers_cat_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coding_word",
+            "name": "Coding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rap_word",
+            "name": "Rap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Script",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Ruby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Punch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Doll",
+            "image": "res/Item/toys_jigsawpuzzle_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sushi_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Macaque",
+            "image": "res/Item/whiskers_lion_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Havasu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Lyrics",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "PHP",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Whiskers": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Whiskers",
+        "name": "Whiskers",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Chirashi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gibbon",
+        "image": "res/Item/whiskers_seal_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Yosemite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Lemur",
+        "image": "res/Item/whiskers_catfish_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Baboon",
+        "image": "res/Item/whiskers_walrus_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Mandrill",
+        "image": "res/Item/whiskers_squirrel_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_spinningtop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_jumprope_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Simian",
+        "image": "res/Item/whiskers_otter_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Tarsier",
+        "image": "res/Item/whiskers_cat_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gorilla",
+        "image": "res/Item/whiskers_dog_2.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Explorer_word",
-        "name": "Explorer",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Macaque",
+            "image": "res/Item/whiskers_lion_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Mandrill",
+            "image": "res/Item/whiskers_squirrel_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Victoria",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Punch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Maki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coding_word",
+            "name": "Coding",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "SQL",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Script",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Whiskers",
+            "name": "Whiskers",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Nigiri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Java",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Whiskers": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Chirashi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Lemur",
+        "image": "res/Item/whiskers_catfish_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Pills_word",
-        "name": "Pills",
+        "category": "Rap_word",
+        "name": "Rap",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Tarsier",
+        "image": "res/Item/whiskers_cat_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_jumprope_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_spinningtop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gorilla",
+        "image": "res/Item/whiskers_dog_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Baboon",
+        "image": "res/Item/whiskers_walrus_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sushi_word",
+        "name": "Sushi",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Yosemite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gibbon",
+        "image": "res/Item/whiskers_seal_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Simian",
+        "image": "res/Item/whiskers_otter_5.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "PHP",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Lyrics",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Lemur",
+            "image": "res/Item/whiskers_catfish_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Tarsier",
+            "image": "res/Item/whiskers_cat_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rap_word",
+            "name": "Rap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Yosemite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Spinner",
+            "image": "res/Item/toys_spinningtop_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Whiskers",
+            "name": "Baboon",
+            "image": "res/Item/whiskers_walrus_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Ruby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Python",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Yo-yo",
+            "image": "res/Item/toys_jumprope_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Whiskers": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Punch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Whiskers",
+        "name": "Whiskers",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Macaque",
+        "image": "res/Item/whiskers_lion_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Script",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Mandrill",
+        "image": "res/Item/whiskers_squirrel_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gorilla",
+        "image": "res/Item/whiskers_dog_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Gibbon",
+        "image": "res/Item/whiskers_seal_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sushi_word",
+        "name": "Sushi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Whiskers",
+        "name": "Simian",
+        "image": "res/Item/whiskers_otter_5.png",
+        "isText": false
       }
     ],
     "handDisplay": []

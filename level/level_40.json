@@ -1,977 +1,2454 @@
 [
   {
     "config": {
-      "bingosNeeded": 3,
-      "maxSlots": 3,
-      "timeLimit": 140,
-      "penaltyTime": 5
+      "maxSlots": 4,
+      "maxSteps": 135
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Terrain",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "AMOLED",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Eclipse",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "OLED",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "Plasma",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Pulsar",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "LED",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Globe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Santa",
-          "image": "res/Item/xmas_santa_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Mail",
-          "name": "Stamp",
-          "image": "res/Item/mail_stamp_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Candy cane",
-          "image": "res/Item/xmas_candycane_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Yttrium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Symphony_word",
-          "name": "Overture",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Atlas",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Asteroid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Landmark",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "PhD_word",
-          "name": "Degree",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "PhD_word",
-          "name": "Thesis",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Lock_word",
-          "name": "Sturdy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Gemstone_word",
-          "name": "Diamond",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Agent",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Doctor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Chatbot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Hello_word",
-          "name": "Hi",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Lutetium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Lock_word",
-          "name": "Secure",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Holmium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Symphony_word",
-          "name": "Harmony",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Hello_word",
-          "name": "Howdy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Hello_word",
-          "name": "Hey",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Drinks_word",
-          "name": "Lemonade",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Pets_word",
-          "name": "Cat",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Border",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Burger_word",
-          "name": "Cheese",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Prisoner_word",
-          "name": "Detainee",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Erbium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mail",
-          "name": "Letter",
-          "image": "res/Item/mail_letter_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Nova",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Drinks_word",
-          "name": "Juice",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Journey",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Quasar",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Scale",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Mailman",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Pilot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Drinks_word",
-          "name": "Espresso",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Engineer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "PhD_word",
-          "name": "Research",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Christmas tree",
-          "image": "res/Item/xmas_christmastree_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Xmas",
-          "name": "Christmas stocking",
-          "image": "res/Item/xmas_christmasstocking_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Nebula",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Drinks_word",
-          "name": "Soda",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "OK_word",
-          "name": "Yes",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Justice_word",
-          "name": "Law",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "LCD",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Maps_word",
-          "name": "Contour",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Meteor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Thulium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Farming_word",
-          "name": "Hay",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Farming_word",
-          "name": "Harvest",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Symphony_word",
-          "name": "Melody",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Europium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Space_word",
-          "name": "Aurora",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Lock_word",
-          "name": "Trusty",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "OK_word",
-          "name": "Consent",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "OK_word",
-          "name": "Okay",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Display_word",
-          "name": "CRT",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Dynasty_word",
-          "name": "Bourbon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Dynasty_word",
-          "name": "Romanov",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Mail",
-          "name": "Parcel",
-          "image": "res/Item/mail_parcel_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Iridium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Metal_word",
-          "name": "Rhodium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Welder",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Medieval_word",
-          "name": "Knight",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Shovel_word",
-          "name": "Excavate",
-          "image": null,
-          "isText": true
-        }
-      }
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Firefly",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Show",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Florence",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Italy_word",
+            "name": "Italy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Dentin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Rome",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "This",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Crater",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Night_word",
+            "name": "Night",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Baton",
+            "image": "res/Item/deck_aceofhearts_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Ash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Badge",
+            "image": "res/Item/deck_7hearts_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Heat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Applause",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Theater_word",
+            "name": "Theater",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Agape",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Venice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Premolar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Anterior",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Decor",
+            "name": "Decor",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
     ],
     "categoryTargets": {
-      "Maps_word": 8,
-      "Display_word": 6,
-      "Space_word": 8,
-      "Xmas": 4,
-      "Mail": 3,
-      "Metal_word": 8,
-      "Symphony_word": 3,
-      "Lock_word": 3,
-      "Drinks_word": 4
+      "Love_word": 8,
+      "Theater_word": 8,
+      "Teeth_word": 8,
+      "Deck": 6,
+      "Volcano_word": 6,
+      "Italy_word": 4,
+      "Decor": 4,
+      "Night_word": 4,
+      "Pointing_word": 3,
+      "Skin_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Space_word",
-        "name": "Space",
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "Those",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Empathy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Handcuff",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Fondness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Switch",
+        "image": "res/Item/decor_throwpillow_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Kiss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Audience",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Mail",
-        "name": "Mail",
+        "category": "Skin_word",
+        "name": "Skin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Volcano_word",
+        "name": "Volcano",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Eruption",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "That",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Cord",
+        "image": "res/Item/decor_curtains_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Playbill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Curtain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Love_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Incisor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Bulb",
+        "image": "res/Item/decor_wallclock_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Oily",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Molar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Milan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Officer",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Lava",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Normal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Owl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Enamel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pointing_word",
+        "name": "Pointing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Plug",
+        "image": "res/Item/decor_photoframe_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Arrest",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Actors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Scene",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Cupid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Uniform",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Stage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Root",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Dry",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Teeth_word",
+        "name": "Teeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Cusp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Devotion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Moon",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 135
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Curtain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Plug",
+            "image": "res/Item/decor_photoframe_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Root",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Devotion",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Applause",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Stage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Actors",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Firefly",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "That",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Heart",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Switch",
+            "image": "res/Item/decor_throwpillow_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Fondness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Officer",
+            "image": "res/Item/deck_9hearts_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Florence",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Skin_word",
+            "name": "Dry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pointing_word",
+            "name": "Pointing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Venice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Kiss",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Theater_word",
+            "name": "Theater",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Love_word": 8,
+      "Theater_word": 8,
+      "Teeth_word": 8,
+      "Deck": 6,
+      "Volcano_word": 6,
+      "Italy_word": 4,
+      "Decor": 4,
+      "Night_word": 4,
+      "Pointing_word": 3,
+      "Skin_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Dentin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Crater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Incisor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Playbill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Heat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "Those",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Owl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Arrest",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Handcuff",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Molar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Show",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Ash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Cupid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Badge",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Bulb",
+        "image": "res/Item/decor_wallclock_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Lava",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Empathy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Skin_word",
+        "name": "Skin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Enamel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Eruption",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Teeth_word",
+        "name": "Teeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Anterior",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Decor",
+        "name": "Decor",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Metal_word",
-        "name": "Metal",
+        "category": "Italy_word",
+        "name": "Italy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Cord",
+        "image": "res/Item/decor_curtains_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Agape",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Rome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Scene",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Milan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Oily",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Normal",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Lock_word",
-        "name": "Lock",
+        "category": "Volcano_word",
+        "name": "Volcano",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Maps_word",
-        "name": "Maps",
+        "category": "Night_word",
+        "name": "Night",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Xmas",
-        "name": "Xmas",
+        "category": "Love_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "This",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Premolar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Audience",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Cusp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Uniform",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Baton",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 135
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Skin_word",
+            "name": "Skin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Devotion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Rome",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Stage",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "This",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "That",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Cupid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Officer",
+            "image": "res/Item/deck_9hearts_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Premolar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Badge",
+            "image": "res/Item/deck_7hearts_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Cord",
+            "image": "res/Item/decor_curtains_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Soulmate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Molar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Switch",
+            "image": "res/Item/decor_throwpillow_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Skin_word",
+            "name": "Dry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Venice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Milan",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Heat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Incisor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Plug",
+            "image": "res/Item/decor_photoframe_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Fondness",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Love_word": 8,
+      "Theater_word": 8,
+      "Teeth_word": 8,
+      "Deck": 6,
+      "Volcano_word": 6,
+      "Italy_word": 4,
+      "Decor": 4,
+      "Night_word": 4,
+      "Pointing_word": 3,
+      "Skin_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Kiss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Darkness",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Volcano_word",
+        "name": "Volcano",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pointing_word",
+        "name": "Pointing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Scene",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Agape",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Theater_word",
+        "name": "Theater",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Love_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Eruption",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "Those",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Cusp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Dentin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Night_word",
+        "name": "Night",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Normal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Anterior",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Arrest",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Enamel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Owl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Show",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Curtain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Baton",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Playbill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Empathy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Italy_word",
+        "name": "Italy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Firefly",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Oily",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Crater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Ash",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Teeth_word",
+        "name": "Teeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Uniform",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Bulb",
+        "image": "res/Item/decor_wallclock_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Handcuff",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Applause",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Actors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Lava",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Root",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Florence",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Audience",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Decor",
+        "name": "Decor",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 135
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Volcano_word",
+            "name": "Volcano",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Soulmate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Audience",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Devotion",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Theater_word",
+            "name": "Theater",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Skin_word",
+            "name": "Normal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Decor",
+            "name": "Decor",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Cusp",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Decor",
+            "name": "Plug",
+            "image": "res/Item/decor_photoframe_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Love_word",
+            "name": "Love",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Agape",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Stage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "Those",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Firefly",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "That",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Kiss",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Officer",
+            "image": "res/Item/deck_9hearts_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Skin_word",
+            "name": "Oily",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Applause",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Teeth_word",
+            "name": "Teeth",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Love_word": 8,
+      "Theater_word": 8,
+      "Teeth_word": 8,
+      "Deck": 6,
+      "Volcano_word": 6,
+      "Italy_word": 4,
+      "Decor": 4,
+      "Night_word": 4,
+      "Pointing_word": 3,
+      "Skin_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Eruption",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Show",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Fondness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Enamel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Scene",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Playbill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Actors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Anterior",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Root",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Incisor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Molar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Cord",
+        "image": "res/Item/decor_curtains_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Handcuff",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Dentin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Curtain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Bulb",
+        "image": "res/Item/decor_wallclock_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Lava",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Uniform",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Baton",
+        "image": "res/Item/deck_aceofhearts_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Symphony_word",
-        "name": "Symphony",
+        "category": "Italy_word",
+        "name": "Italy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Premolar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Venice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pointing_word",
+        "name": "This",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Display_word",
-        "name": "Display",
+        "category": "Night_word",
+        "name": "Night",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Badge",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Cupid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Switch",
+        "image": "res/Item/decor_throwpillow_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Heat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Ash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Fire",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Drinks_word",
-        "name": "Drinks",
+        "category": "Skin_word",
+        "name": "Skin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Arrest",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Florence",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Crater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Dry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Rome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Empathy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Milan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Owl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pointing_word",
+        "name": "Pointing",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 135
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Uniform",
+            "image": "res/Item/deck_queenhearts_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "That",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Night_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Fire",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Decor",
+            "name": "Decor",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Cupid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "This",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Applause",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Venice",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Italy_word",
+            "name": "Milan",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pointing_word",
+            "name": "Those",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Ash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Crater",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Love_word",
+            "name": "Love",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Theater_word",
+            "name": "Show",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Dentin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Devotion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Theater_word",
+            "name": "Theater",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teeth_word",
+            "name": "Anterior",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Love_word",
+            "name": "Agape",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Volcano_word",
+            "name": "Heat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Skin_word",
+            "name": "Oily",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Love_word": 8,
+      "Theater_word": 8,
+      "Teeth_word": 8,
+      "Deck": 6,
+      "Volcano_word": 6,
+      "Italy_word": 4,
+      "Decor": 4,
+      "Night_word": 4,
+      "Pointing_word": 3,
+      "Skin_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Cord",
+        "image": "res/Item/decor_curtains_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Dry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Actors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Audience",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Deck",
+        "name": "Deck",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Playbill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Kiss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Firefly",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pointing_word",
+        "name": "Pointing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Cusp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Lava",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Italy_word",
+        "name": "Italy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Curtain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Skin_word",
+        "name": "Normal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Fondness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Switch",
+        "image": "res/Item/decor_throwpillow_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Badge",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Owl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Rome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Volcano_word",
+        "name": "Eruption",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Night_word",
+        "name": "Night",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Italy_word",
+        "name": "Florence",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Premolar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Stage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Molar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Handcuff",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Incisor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Skin_word",
+        "name": "Skin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Bulb",
+        "image": "res/Item/decor_wallclock_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Theater_word",
+        "name": "Scene",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Volcano_word",
+        "name": "Volcano",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Night_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Teeth_word",
+        "name": "Teeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Decor",
+        "name": "Plug",
+        "image": "res/Item/decor_photoframe_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Arrest",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Baton",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Officer",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Root",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Love_word",
+        "name": "Empathy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teeth_word",
+        "name": "Enamel",
         "isText": true
       }
     ],

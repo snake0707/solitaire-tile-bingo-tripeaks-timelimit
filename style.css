@@ -52,132 +52,71 @@ body {
     cursor: pointer;
 }
 
-/* Goals Bar */
-#goals-bar {
+#btn-zh {
+    position: absolute;
+    left: 0;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+#btn-zh.active {
+    background: rgba(255, 200, 0, 0.5);
+    border: 2px solid #ffd700;
+    color: #fff;
+}
+
+/* Steps Bar */
+#steps-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 6px 12px;
     margin-bottom: 10px;
 }
 
-#goals-left {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.goals-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #ffd700;
-    letter-spacing: 1px;
-}
-
-.bingo-mini-icon {
-    background: linear-gradient(135deg, #ff6b35, #e94560);
-    color: #fff;
-    font-size: 9px;
-    font-weight: 800;
-    padding: 3px 6px;
-    border-radius: 4px;
-    letter-spacing: 0.5px;
-}
-
-#bingo-count {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-#goals-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#category-indicator {
-    display: flex;
-    gap: 4px;
-}
-
-/* Timer display */
-#timer-display {
+#steps-display {
     display: flex;
     align-items: center;
     gap: 4px;
     background: rgba(255,255,255,0.12);
     padding: 3px 10px;
     border-radius: 12px;
-    position: relative;
 }
 
-#timer-icon {
+#steps-icon {
     font-size: 14px;
 }
 
-#timer-count {
+#steps-count {
     font-size: 15px;
     font-weight: 700;
     color: #fff;
-    min-width: 36px;
+    min-width: 24px;
     text-align: center;
 }
 
-#timer-count.low {
+#steps-count.low {
     color: #ff5252;
-    animation: timerPulse 0.6s ease infinite alternate;
+    animation: stepsPulse 0.6s ease infinite alternate;
 }
 
-@keyframes timerPulse {
+@keyframes stepsPulse {
     from { transform: scale(1); }
     to { transform: scale(1.15); }
 }
 
-.time-penalty {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    color: #ff5252;
-    font-size: 14px;
-    font-weight: 700;
-    pointer-events: none;
-    animation: floatUp 1s ease-out forwards;
-}
+/* ─── Slot Area ─────────────────────────────────────────── */
 
-/* Penalty text floating above a card */
-.time-penalty-card {
-    position: absolute;
-    top: -4px;
-    left: 50%;
-    color: #ff5252;
-    font-size: 16px;
-    font-weight: 800;
-    pointer-events: none;
-    z-index: 100;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    animation: floatUp 1s ease-out forwards;
-}
-
-@keyframes floatUp {
-    0% { opacity: 1; transform: translateX(-50%) translateY(0); }
-    100% { opacity: 0; transform: translateX(-50%) translateY(-30px); }
-}
-
-.cat-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-}
-
-.cat-dot.active {
-    background: #4caf50;
-}
-
-/* Slot Area */
 #collectors {
     display: flex;
     gap: 6px;
@@ -187,7 +126,6 @@ body {
     flex-wrap: nowrap;
 }
 
-/* Slot wrapper (label + card) */
 .slot-wrapper {
     display: flex;
     flex-direction: column;
@@ -195,7 +133,6 @@ body {
     gap: 2px;
 }
 
-/* Slot label (category name above card) */
 .slot-label {
     background: linear-gradient(135deg, #ffb300, #ff8f00);
     color: #fff;
@@ -208,7 +145,6 @@ body {
     text-align: center;
 }
 
-/* Base slot card — fixed size matching pyramid cards */
 .slot-card {
     width: 60px;
     height: 70px;
@@ -234,11 +170,13 @@ body {
     object-fit: contain;
 }
 
-/* Category placed state (gold card placed, 0 collected) */
 .slot-card.category-placed {
     background: transparent;
     border: none;
     position: relative;
+}
+
+.slot-card.category-placed.animate-in {
     animation: slotPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -262,7 +200,16 @@ body {
     max-width: 54px;
 }
 
-/* Collecting state — shows last collected card + progress */
+.slot-card.category-placed .cat-progress {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #5d4037;
+    z-index: 1;
+}
+
 .slot-card.collecting {
     background: url('res/Panel/basic_cards_1.png') center/cover no-repeat;
     border: 2px solid #e0c060;
@@ -331,37 +278,54 @@ body {
 }
 
 .collector-done-badge span::before {
-    content: '✓';
+    content: '\2713';
     margin-right: 1px;
 }
 
-/* ─── Pyramid Card Area ─────────────────────────────────── */
+/* ─── Tableau (Solitaire Columns) ─────────────────────────── */
 
-#bingo-grid {
-    position: relative;
-    width: 100%;
+#tableau {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
     margin-bottom: 8px;
-    isolation: isolate; /* establish stacking context root */
-    /* height set dynamically by JS */
+    min-height: 200px;
+    padding: 4px 0;
 }
 
-/* ─── Pyramid Card ──────────────────────────────────────── */
+.tableau-column {
+    position: relative;
+    min-width: 60px;
+    min-height: 90px;
+    flex-shrink: 0;
+}
 
-.pyramid-card {
+.tableau-column.empty-column {
+    border: 2px dashed rgba(255,255,255,0.25);
+    border-radius: 8px;
+    width: 60px;
+    height: 70px;
+}
+
+.tableau-card {
     position: absolute;
     width: 60px;
     height: 70px;
     border-radius: 8px;
-    cursor: pointer;
+    left: 0;
 }
 
-.pyramid-card:active:not(.face-down) {
-    transform: scale(0.93);
-}
-
-.pyramid-card.face-down {
+.tableau-card.face-down {
     cursor: default;
+    touch-action: auto;
 }
+
+.tableau-card.face-up {
+    cursor: grab;
+    touch-action: none;
+}
+
+/* Sealed indicator removed — gold cards look normal, column just can't receive more cards */
 
 .card-inner {
     position: relative;
@@ -369,10 +333,8 @@ body {
     height: 100%;
 }
 
-/* Only the visible face is rendered in the DOM — no opacity toggling needed */
-
-/* Flip reveal animation (2D scaleX) */
-.pyramid-card.flipping .card-inner {
+/* Flip reveal animation */
+.tableau-card.flipping .card-inner {
     animation: cardFlip2D 0.5s ease;
 }
 
@@ -400,7 +362,6 @@ body {
     overflow: hidden;
 }
 
-/* Semi-transparent color overlay (behind card content) */
 .card-face::before {
     content: '';
     position: absolute;
@@ -452,10 +413,7 @@ body {
     z-index: 1;
 }
 
-/* Color variants are injected by color_settings.js */
-
-/* ─── Gold Grid Card (category card placed in grid) ────── */
-
+/* Gold/Category card in tableau */
 .gold-grid-card {
     background: url('res/Panel/category_card_1.png') center/cover no-repeat;
     border: 2px solid #ffd700;
@@ -464,6 +422,33 @@ body {
 
 .gold-grid-card::before {
     background: none !important;
+}
+
+/* Covered gold cards: remove bottom border/shadow bleed */
+.tableau-card.covered .gold-grid-card {
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
+}
+
+/* Gold card 0/n counter (tableau + hand display) */
+.gold-counter {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #5d4037;
+    z-index: 1;
+}
+
+/* Hand covered gold card counter */
+.hand-covered-counter {
+    position: absolute;
+    bottom: 2px;
+    left: 1px;
+    font-size: 7px;
+    font-weight: 800;
+    color: #5d4037;
 }
 
 /* ─── Card Back (face-down) ─────────────────────────────── */
@@ -498,47 +483,54 @@ body {
     );
 }
 
-/* ─── Cleared Marks (bottom layer) ──────────────────────── */
+/* Covered face-up cards: clip to visible 20px sliver, like face-down */
+.tableau-card.covered {
+    height: 20px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
 
-.cleared-mark-pyramid {
-    position: absolute;
-    width: 60px;
+.tableau-card.covered .card-face {
     height: 70px;
-    border-radius: 8px;
-    background: linear-gradient(145deg, #4caf50, #2e7d32);
-    border: 2px solid #1b5e20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(76,175,80,0.4);
-    animation: markPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    justify-content: flex-start;
+    padding-top: 3px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
 }
 
-.cleared-mark-pyramid::after {
-    content: '✓';
-    font-size: 24px;
-    color: #fff;
-    font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+.tableau-card.covered .card-back {
+    height: 70px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
 }
 
-.cleared-mark-pyramid.no-anim {
-    animation: none;
+.tableau-card.covered .card-name {
+    line-height: 14px;
 }
 
-.cleared-mark-pyramid.bingo-cell {
-    background: linear-gradient(145deg, #ffd700, #ff8f00);
-    border-color: #e65100;
-    box-shadow: 0 0 12px rgba(255,215,0,0.6);
+.tableau-card.covered .card-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-top: 1px;
 }
 
-.cleared-mark-pyramid.bingo-cell::after {
-    content: '★';
+/* Face-down cards in tableau show only 20px sliver */
+.tableau-card.face-down {
+    height: 20px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.tableau-card.face-down .card-back {
+    height: 70px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
 }
 
 /* ─── Card Animations ───────────────────────────────────── */
 
-.pyramid-card.removing {
+.tableau-card.removing {
     animation: cardFly 0.4s ease-in forwards;
     pointer-events: none;
 }
@@ -549,12 +541,7 @@ body {
     100% { transform: scale(0.2) translateY(-80px); opacity: 0; }
 }
 
-@keyframes markPop {
-    0% { transform: scale(0); }
-    100% { transform: scale(1); }
-}
-
-.pyramid-card.no-match {
+.tableau-card.no-match {
     animation: shake 0.4s ease;
 }
 
@@ -578,12 +565,12 @@ body {
 }
 
 /* Hint highlight */
-.pyramid-card.hint-highlight {
+.tableau-card.hint-highlight {
     z-index: 9999 !important;
     animation: hintBounce 0.6s ease infinite alternate;
 }
 
-.pyramid-card.hint-highlight .card-face {
+.tableau-card.hint-highlight .card-face {
     border: 2px solid #ffd700;
     box-shadow: 0 0 20px rgba(255,215,0,1), 0 0 40px rgba(255,215,0,0.6);
     animation: hintGlow 0.6s ease infinite alternate;
@@ -639,10 +626,7 @@ body {
 
 #win-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
@@ -651,9 +635,7 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
-#win-overlay.hidden {
-    display: none;
-}
+#win-overlay.hidden { display: none; }
 
 #win-dialog {
     background: linear-gradient(145deg, #fff, #f5f5f5);
@@ -664,42 +646,23 @@ body {
     animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#win-dialog h2 {
-    font-size: 28px;
-    color: #e94560;
-    margin-bottom: 10px;
-}
-
-#win-dialog p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-}
+#win-dialog h2 { font-size: 28px; color: #e94560; margin-bottom: 10px; }
+#win-dialog p { font-size: 16px; color: #555; margin-bottom: 20px; }
 
 #btn-next-level {
     background: linear-gradient(135deg, #4caf50, #2e7d32);
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 25px;
-    cursor: pointer;
+    color: #fff; border: none;
+    padding: 12px 30px; font-size: 16px; font-weight: 700;
+    border-radius: 25px; cursor: pointer;
     box-shadow: 0 4px 12px rgba(76,175,80,0.4);
     transition: transform 0.15s;
 }
-
-#btn-next-level:active {
-    transform: scale(0.95);
-}
+#btn-next-level:active { transform: scale(0.95); }
 
 /* Lose Overlay */
 #lose-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
@@ -708,9 +671,7 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
-#lose-overlay.hidden {
-    display: none;
-}
+#lose-overlay.hidden { display: none; }
 
 #lose-dialog {
     background: linear-gradient(145deg, #fff, #f5f5f5);
@@ -721,53 +682,38 @@ body {
     animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#lose-dialog h2 {
-    font-size: 28px;
-    color: #e53935;
-    margin-bottom: 10px;
-}
+#lose-dialog h2 { font-size: 28px; color: #e53935; margin-bottom: 10px; }
+#lose-dialog p { font-size: 16px; color: #555; margin-bottom: 20px; }
 
-#lose-dialog p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
+#btn-continue {
+    background: linear-gradient(135deg, #42a5f5, #1565c0);
+    color: #fff; border: none;
+    padding: 12px 30px; font-size: 16px; font-weight: 700;
+    border-radius: 25px; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(21,101,192,0.4);
+    transition: transform 0.15s;
+    margin-right: 10px;
 }
+#btn-continue:active { transform: scale(0.95); }
 
 #btn-retry {
     background: linear-gradient(135deg, #ff9800, #e65100);
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 25px;
-    cursor: pointer;
+    color: #fff; border: none;
+    padding: 12px 30px; font-size: 16px; font-weight: 700;
+    border-radius: 25px; cursor: pointer;
     box-shadow: 0 4px 12px rgba(255,152,0,0.4);
     transition: transform 0.15s;
 }
+#btn-retry:active { transform: scale(0.95); }
 
-#btn-retry:active {
-    transform: scale(0.95);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes popIn {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 
 /* ─── Level Select Overlay ──────────────────────────────── */
 
 #level-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.7);
     display: flex;
     align-items: center;
@@ -776,9 +722,7 @@ body {
     animation: fadeIn 0.3s ease;
 }
 
-#level-overlay.hidden {
-    display: none;
-}
+#level-overlay.hidden { display: none; }
 
 #level-dialog {
     background: linear-gradient(145deg, #fff, #f5f5f5);
@@ -789,19 +733,22 @@ body {
     animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     max-width: 320px;
     width: 90%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 
-#level-dialog h2 {
-    font-size: 22px;
-    color: #2956c4;
-    margin-bottom: 16px;
-}
+#level-dialog h2 { font-size: 22px; color: #2956c4; margin-bottom: 16px; }
 
 #level-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     margin-bottom: 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-height: 0;
 }
 
 .level-btn {
@@ -817,13 +764,8 @@ body {
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.level-btn:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.level-btn:active {
-    transform: scale(0.92);
-}
+.level-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.level-btn:active { transform: scale(0.92); }
 
 .level-btn.current {
     background: linear-gradient(145deg, #ffd54f, #ffb300);
@@ -833,39 +775,12 @@ body {
 
 #btn-close-levels {
     background: rgba(0,0,0,0.08);
-    color: #666;
-    border: none;
-    padding: 10px 28px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 20px;
-    cursor: pointer;
+    color: #666; border: none;
+    padding: 10px 28px; font-size: 14px; font-weight: 600;
+    border-radius: 20px; cursor: pointer;
     transition: background 0.2s;
 }
-
-#btn-close-levels:hover {
-    background: rgba(0,0,0,0.15);
-}
-
-/* ─── Stack Count Badge ─────────────────────────────────── */
-
-.stack-count-badge {
-    position: absolute;
-    bottom: 2px;
-    right: 4px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    min-width: 16px;
-    height: 16px;
-    line-height: 16px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 0 3px;
-    z-index: 2;
-    pointer-events: none;
-}
+#btn-close-levels:hover { background: rgba(0,0,0,0.15); }
 
 /* ─── Hand Card Area ───────────────────────────────────── */
 
@@ -945,7 +860,7 @@ body {
     width: 60px;
     height: 70px;
     border-radius: 8px;
-    background: url('res/Panel/category_card_1.png') center/cover no-repeat;
+    background: url('res/Panel/basic_cards_1.png') center/cover no-repeat;
     box-shadow: 0 2px 4px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
@@ -956,7 +871,8 @@ body {
 
 .hand-display-card.topmost {
     pointer-events: auto;
-    cursor: pointer;
+    cursor: grab;
+    touch-action: none;
     box-shadow: 0 2px 6px rgba(255,179,0,0.5);
 }
 
@@ -966,9 +882,12 @@ body {
     color: #5d4037;
     text-align: center;
     max-width: 54px;
+    word-break: break-word;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.2;
 }
 
 /* Hand area hint highlight */
@@ -981,9 +900,79 @@ body {
     to { filter: brightness(1.3) drop-shadow(0 0 16px rgba(255,215,0,1)); transform: scale(1.08); }
 }
 
+/* Hand display covered card content */
+.hand-covered-inner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hand-covered-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 8px;
+    font-weight: 700;
+    color: #5d4037;
+    line-height: 18px;
+    max-height: 64px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.hand-covered-img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
 /* No-match shake for hand display */
 #hand-display.no-match-hand {
     animation: shake 0.4s ease;
+}
+
+/* ─── Drag and Drop ───────────────────────────────────────── */
+
+.drag-clone {
+    position: fixed;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.dragging-source {
+    display: none;
+}
+
+.slot-card.drop-target {
+    box-shadow: 0 0 12px rgba(255,215,0,0.8), 0 0 24px rgba(255,215,0,0.4);
+    border: 2px solid #ffd700 !important;
+    animation: dropTargetPulse 0.5s ease infinite alternate;
+}
+
+.tableau-column.drop-target {
+    box-shadow: 0 0 12px rgba(100,200,255,0.8);
+    border-radius: 8px;
+    background: rgba(100,200,255,0.15);
+}
+
+.tableau-column.empty-column.drop-target {
+    border-color: rgba(100,200,255,0.8);
+    background: rgba(100,200,255,0.2);
+}
+
+@keyframes dropTargetPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
 }
 
 /* ─── Flying Card Animation ────────────────────────────── */
@@ -1034,59 +1023,18 @@ body {
         width: 52px;
         height: 62px;
     }
-}
-
-/* ─── BINGO Star Pop Animation ─────────────────────────── */
-
-.cleared-mark-pyramid.bingo-star-pop {
-    animation: bingoStarPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes bingoStarPop {
-    0% { transform: scale(1); }
-    40% { transform: scale(1.3); }
-    100% { transform: scale(1); }
-}
-
-/* ─── BINGO Flash Overlay ──────────────────────────────── */
-
-.bingo-flash-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    animation: fadeIn 0.2s ease;
-}
-
-.bingo-flash-text {
-    font-size: 64px;
-    font-weight: 900;
-    color: #ffd700;
-    text-shadow:
-        0 0 20px rgba(255, 215, 0, 0.8),
-        0 0 40px rgba(255, 165, 0, 0.5),
-        0 4px 8px rgba(0, 0, 0, 0.4);
-    letter-spacing: 8px;
-    animation: bingoTextPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes bingoTextPop {
-    0% { transform: scale(0.3); opacity: 0; }
-    60% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-.bingo-flash-exit {
-    animation: bingoFadeOut 0.4s ease forwards;
-}
-
-@keyframes bingoFadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    .tableau-card {
+        width: 52px;
+        height: 62px;
+    }
+    .tableau-column {
+        min-width: 52px;
+    }
+    .tableau-column.empty-column {
+        width: 52px;
+        height: 62px;
+    }
+    #tableau {
+        gap: 3px;
+    }
 }

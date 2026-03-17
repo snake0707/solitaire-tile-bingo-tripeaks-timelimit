@@ -1,398 +1,1385 @@
 [
   {
     "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 2,
-      "timeLimit": 125,
-      "penaltyTime": 3
+      "maxSlots": 3,
+      "maxSteps": 75
     },
-    "cards": [
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Fishing_word",
-          "name": "Bait",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Discount",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Gas",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Fishing_word",
-          "name": "Rod",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Coupon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sauces_word",
+            "name": "Ketchup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Solid",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Material_word",
-          "name": "Glass",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cozy_word",
+            "name": "Warm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Muffin",
+            "image": "res/Item/pastry_strudel_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "10 hearts",
+            "image": "res/Item/deck_8hearts_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Kepi",
-          "image": "res/Item/hats_kepi_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Defense_word",
-          "name": "Security",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Turban",
-          "image": "res/Item/hats_turban_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Material_word",
-          "name": "Stone",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Legs_word",
-          "name": "Knee",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Citrus_word",
-          "name": "Pomelo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Seasons_word",
-          "name": "Autumn",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Seasons_word",
-          "name": "Spring",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Material_word",
-          "name": "Metal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Hat",
-          "image": "res/Item/hats_hat_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Fishing_word",
-          "name": "Bobber",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Material_word",
-          "name": "Plastic",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Citrus_word",
-          "name": "Lemon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Cap",
-          "image": "res/Item/hats_cap_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Rainy_word",
-          "name": "Showers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Visor",
-          "image": "res/Item/hats_visor_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Legs_word",
-          "name": "Ankle",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Sombrero",
-          "image": "res/Item/hats_sombrero_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Defense_word",
-          "name": "Patrol",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Legs_word",
-          "name": "Thigh",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Seasons_word",
-          "name": "Winter",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Seasons_word",
-          "name": "Summer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Beret",
-          "image": "res/Item/hats_beret_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Citrus_word",
-          "name": "Lime",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hats",
-          "name": "Panama hat",
-          "image": "res/Item/hats_panamahat_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Device_word",
-          "name": "Dryer",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Fishing_word": 3,
-      "Hats": 8,
-      "Legs_word": 3,
-      "Citrus_word": 3,
-      "Seasons_word": 4
+      "Deck": 8,
+      "Pastry": 7,
+      "Shopping_word": 4,
+      "Sauces_word": 4,
+      "Phase_word": 3,
+      "Cozy_word": 3
     },
     "handPile": [
       {
+        "type": "regular",
+        "category": "Deck",
+        "name": "7 hearts",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Liquid",
+        "isText": true
+      },
+      {
         "type": "gold",
-        "category": "Hats",
-        "name": "Hats",
+        "category": "Shopping_word",
+        "name": "Shopping",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Aioli",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Macaron",
+        "image": "res/Item/pastry_brownie_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Donut",
+        "image": "res/Item/pastry_profiterole_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Legs_word",
-        "name": "Legs",
+        "category": "Cozy_word",
+        "name": "Cozy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Eclair",
+        "image": "res/Item/pastry_tart_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "King hearts",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Snug",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Tabasco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Ace",
+        "image": "res/Item/deck_10hearts_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sauces_word",
+        "name": "Sauces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sweets",
+        "image": "res/Item/pastry_cake_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "8 hearts",
+        "image": "res/Item/deck_jackhearts_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sorbet",
+        "image": "res/Item/pastry_brioche_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Tiramisu",
+        "image": "res/Item/pastry_pie_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Comfy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Mustard",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Citrus_word",
-        "name": "Citrus",
+        "category": "Pastry",
+        "name": "Pastry",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Phase_word",
+        "name": "Phase",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Sale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Queen hearts",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Jack hearts",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "9 hearts",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Sweets",
+            "image": "res/Item/pastry_cake_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Deck",
+            "name": "Deck",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Donut",
+            "image": "res/Item/pastry_profiterole_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Liquid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Discount",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pastry",
+            "name": "Pastry",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Price",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Solid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "10 hearts",
+            "image": "res/Item/deck_8hearts_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Deck": 8,
+      "Pastry": 7,
+      "Shopping_word": 4,
+      "Sauces_word": 4,
+      "Phase_word": 3,
+      "Cozy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Aioli",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Coupon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "King hearts",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Phase_word",
+        "name": "Phase",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Comfy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Eclair",
+        "image": "res/Item/pastry_tart_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shopping_word",
+        "name": "Shopping",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Mustard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Snug",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Queen hearts",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sauces_word",
+        "name": "Sauces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Macaron",
+        "image": "res/Item/pastry_brownie_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Warm",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Fishing_word",
-        "name": "Fishing",
+        "category": "Cozy_word",
+        "name": "Cozy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Jack hearts",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Sale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Muffin",
+        "image": "res/Item/pastry_strudel_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Tabasco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Tiramisu",
+        "image": "res/Item/pastry_pie_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "9 hearts",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "7 hearts",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Ace",
+        "image": "res/Item/deck_10hearts_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "8 hearts",
+        "image": "res/Item/deck_jackhearts_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sorbet",
+        "image": "res/Item/pastry_brioche_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Ketchup",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Gas",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Tiramisu",
+            "image": "res/Item/pastry_pie_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Phase_word",
+            "name": "Phase",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "10 hearts",
+            "image": "res/Item/deck_8hearts_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cozy_word",
+            "name": "Cozy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Discount",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Sweets",
+            "image": "res/Item/pastry_cake_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pastry",
+            "name": "Pastry",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sauces_word",
+            "name": "Ketchup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "8 hearts",
+            "image": "res/Item/deck_jackhearts_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Deck": 8,
+      "Pastry": 7,
+      "Shopping_word": 4,
+      "Sauces_word": 4,
+      "Phase_word": 3,
+      "Cozy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Deck",
+        "name": "Deck",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Jack hearts",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sauces_word",
+        "name": "Sauces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Liquid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Muffin",
+        "image": "res/Item/pastry_strudel_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Snug",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Queen hearts",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sorbet",
+        "image": "res/Item/pastry_brioche_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Solid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Ace",
+        "image": "res/Item/deck_10hearts_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "7 hearts",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "King hearts",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "9 hearts",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shopping_word",
+        "name": "Shopping",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Aioli",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Tabasco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Coupon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Warm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Gas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Macaron",
+        "image": "res/Item/pastry_brownie_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Comfy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Sale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Mustard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Donut",
+        "image": "res/Item/pastry_profiterole_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Eclair",
+        "image": "res/Item/pastry_tart_5.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Coupon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sauces_word",
+            "name": "Sauces",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Price",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Sorbet",
+            "image": "res/Item/pastry_brioche_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pastry",
+            "name": "Muffin",
+            "image": "res/Item/pastry_strudel_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "7 hearts",
+            "image": "res/Item/deck_kinghearts_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cozy_word",
+            "name": "Snug",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "King hearts",
+            "image": "res/Item/deck_7hearts_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cozy_word",
+            "name": "Comfy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Deck": 8,
+      "Pastry": 7,
+      "Shopping_word": 4,
+      "Sauces_word": 4,
+      "Phase_word": 3,
+      "Cozy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Discount",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Donut",
+        "image": "res/Item/pastry_profiterole_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Queen hearts",
+        "image": "res/Item/deck_9hearts_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "10 hearts",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Tiramisu",
+        "image": "res/Item/pastry_pie_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Solid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Macaron",
+        "image": "res/Item/pastry_brownie_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sweets",
+        "image": "res/Item/pastry_cake_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Aioli",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Seasons_word",
-        "name": "Seasons",
+        "category": "Cozy_word",
+        "name": "Cozy",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Eclair",
+        "image": "res/Item/pastry_tart_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Deck",
+        "name": "Deck",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Sale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Liquid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Tabasco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Gas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "8 hearts",
+        "image": "res/Item/deck_jackhearts_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Ketchup",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pastry",
+        "name": "Pastry",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Phase_word",
+        "name": "Phase",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Ace",
+        "image": "res/Item/deck_10hearts_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Mustard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Jack hearts",
+        "image": "res/Item/deck_aceofhearts_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Warm",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shopping_word",
+        "name": "Shopping",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "9 hearts",
+        "image": "res/Item/deck_queenhearts_3.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Solid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Phase_word",
+            "name": "Liquid",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "9 hearts",
+            "image": "res/Item/deck_queenhearts_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cozy_word",
+            "name": "Snug",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Queen hearts",
+            "image": "res/Item/deck_9hearts_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Price",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shopping_word",
+            "name": "Shopping",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shopping_word",
+            "name": "Coupon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Deck",
+            "name": "Jack hearts",
+            "image": "res/Item/deck_aceofhearts_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Deck": 8,
+      "Pastry": 7,
+      "Shopping_word": 4,
+      "Sauces_word": 4,
+      "Phase_word": 3,
+      "Cozy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Sale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Muffin",
+        "image": "res/Item/pastry_strudel_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sauces_word",
+        "name": "Sauces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Warm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Ketchup",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Eclair",
+        "image": "res/Item/pastry_tart_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Deck",
+        "name": "Deck",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shopping_word",
+        "name": "Discount",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "Ace",
+        "image": "res/Item/deck_10hearts_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "10 hearts",
+        "image": "res/Item/deck_8hearts_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Tiramisu",
+        "image": "res/Item/pastry_pie_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Aioli",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Mustard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sauces_word",
+        "name": "Tabasco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sorbet",
+        "image": "res/Item/pastry_brioche_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "King hearts",
+        "image": "res/Item/deck_7hearts_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Phase_word",
+        "name": "Gas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Donut",
+        "image": "res/Item/pastry_profiterole_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Phase_word",
+        "name": "Phase",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cozy_word",
+        "name": "Cozy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "7 hearts",
+        "image": "res/Item/deck_kinghearts_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Deck",
+        "name": "8 hearts",
+        "image": "res/Item/deck_jackhearts_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Pastry",
+        "name": "Pastry",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Sweets",
+        "image": "res/Item/pastry_cake_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cozy_word",
+        "name": "Comfy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pastry",
+        "name": "Macaron",
+        "image": "res/Item/pastry_brownie_8.png",
+        "isText": false
       }
     ],
     "handDisplay": []

@@ -1,731 +1,2505 @@
 [
   {
     "config": {
-      "bingosNeeded": 3,
-      "maxSlots": 2,
-      "timeLimit": 165,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 130
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Fog_word",
-          "name": "Mist",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Finish",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_usa_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Shiraz",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Racing_word",
+            "name": "Racing",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Farming_word",
-          "name": "Topsoil",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Baking",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Shiitake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Russula",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Stroller",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Cucumber",
+            "image": "res/Item/veggie_cucumber_6.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Farming_word",
-          "name": "Grain",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Rattle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Onion",
+            "image": "res/Item/veggie_onion_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Enoki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Apache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Muscat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Speedway",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Movement_word",
-          "name": "Jump",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Navajo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_uk_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Amanita",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Sioux",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Help_word",
+            "name": "Help",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_france_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Reindeer",
+            "image": "res/Item/space_marsrover_8.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Grouper",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Brain_word",
-          "name": "Cortex",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Sardine",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Movement_word",
-          "name": "Walk",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Farming_word",
-          "name": "Paddock",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Painting_word",
-          "name": "Acrylic",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Painting_word",
-          "name": "Gouache",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Painting_word",
-          "name": "Fresco",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Elect_word",
-          "name": "Campaign",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Beaver",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Memes_word",
-          "name": "Satire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Strings",
-          "name": "Guitar",
-          "image": "res/Item/strings_guitar_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Mackerel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Goldfish",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Perch",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Leather_word",
-          "name": "Cowhide",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "France",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Strings",
-          "name": "Violin",
-          "image": "res/Item/strings_violin_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Robot_word",
-          "name": "Android",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Squirrel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Marmot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Pharmacy",
-          "image": "res/Item/mall_pharmacy_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Credit card",
-          "image": "res/Item/mall_creditcard_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Janitor",
-          "image": "res/Item/mall_janitor_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Fog_word",
-          "name": "Smog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Capybara",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Marlin",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Bookstore",
-          "image": "res/Item/mall_bookstore_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Security",
-          "image": "res/Item/mall_security_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Tuna",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Nutria",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Movement_word",
-          "name": "Kick",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Robot_word",
-          "name": "Machine",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Strings",
-          "name": "Viola",
-          "image": "res/Item/strings_viola_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Fitting room",
-          "image": "res/Item/mall_fittingroom_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Fog_word",
-          "name": "Haze",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Rodents_word",
-          "name": "Rat",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Strings",
-          "name": "Cello",
-          "image": "res/Item/strings_cello_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Voices_word",
-          "name": "Tenor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Fish_word",
-          "name": "Eel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Gamer_word",
-          "name": "Score",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Leather_word",
-          "name": "Nubuck",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Gamer_word",
-          "name": "Strategy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Brain_word",
-          "name": "Lobe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Paper bag",
-          "image": "res/Item/mall_paperbag_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Fog_word",
-          "name": "Vapor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Mall",
-          "name": "Cash",
-          "image": "res/Item/mall_cash_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Brain_word",
-          "name": "Gyrus",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Greece_word",
-          "name": "Kappa",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Leather_word",
-          "name": "Suede",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Greece_word",
-          "name": "Delta",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Fog_word": 4,
-      "Movement_word": 3,
-      "Fish_word": 8,
-      "Brain_word": 3,
-      "Rodents_word": 6,
-      "Strings": 4,
-      "Leather_word": 3,
-      "Mall": 8
+      "Hobby_word": 8,
+      "Map": 8,
+      "Veggie": 8,
+      "Grape_word": 6,
+      "Mushroom_word": 6,
+      "Tribes_word": 4,
+      "Space": 4,
+      "Babies_word": 4,
+      "Racing_word": 3,
+      "Help_word": 3
     },
     "handPile": [
       {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Assist",
+        "isText": true
+      },
+      {
         "type": "gold",
-        "category": "Mall",
-        "name": "Mall",
+        "category": "Hobby_word",
+        "name": "Hobby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Riesling",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mushroom_word",
+        "name": "Mushroom",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Space",
+        "name": "Space",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Cooking",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grape_word",
+        "name": "Grape",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Potato",
+        "image": "res/Item/veggie_potato_3.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Rodents_word",
-        "name": "Rodents",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Knitting",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Brain_word",
-        "name": "Brain",
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Grenache",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Strings",
-        "name": "Strings",
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Carrot",
+        "image": "res/Item/veggie_carrot_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Donate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Blogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Diaper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Cherokee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Reading",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Truffle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Support",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Porcini",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Pit stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cabbage",
+        "image": "res/Item/veggie_cabbage_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Polar bear",
+        "image": "res/Item/space_spacestation_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_australia_3.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Leather_word",
-        "name": "Leather",
+        "category": "Babies_word",
+        "name": "Babies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Broccoli",
+        "image": "res/Item/veggie_broccoli_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Crib",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Eggplant",
+        "image": "res/Item/veggie_eggplant_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Walrus",
+        "image": "res/Item/space_rocket_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Tribes_word",
+        "name": "Tribes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Malbec",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Merlot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Snowy owl",
+        "image": "res/Item/space_saturn_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Beetroot",
+        "image": "res/Item/veggie_beetroot_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Veggie",
+        "name": "Veggie",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Enoki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Pit stop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_india_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Russula",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Broccoli",
+            "image": "res/Item/veggie_broccoli_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Grape_word",
+            "name": "Grape",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Amanita",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Reading",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Cherokee",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Walrus",
+            "image": "res/Item/space_rocket_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Fishing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_italy_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Tribes_word",
+            "name": "Tribes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Stroller",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Apache",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Baking",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Running",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Polar bear",
+            "image": "res/Item/space_spacestation_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Riesling",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hobby_word",
+            "name": "Hobby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Snowy owl",
+            "image": "res/Item/space_saturn_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Grenache",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Hobby_word": 8,
+      "Map": 8,
+      "Veggie": 8,
+      "Grape_word": 6,
+      "Mushroom_word": 6,
+      "Tribes_word": 4,
+      "Space": 4,
+      "Babies_word": 4,
+      "Racing_word": 3,
+      "Help_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Shiraz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Potato",
+        "image": "res/Item/veggie_potato_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Finish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Blogging",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Fish_word",
-        "name": "Fish",
+        "category": "Veggie",
+        "name": "Veggie",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mushroom_word",
+        "name": "Mushroom",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Movement_word",
-        "name": "Movement",
+        "category": "Space",
+        "name": "Space",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Eggplant",
+        "image": "res/Item/veggie_eggplant_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Porcini",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Donate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Merlot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Sioux",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Fog_word",
-        "name": "Fog",
+        "category": "Help_word",
+        "name": "Help",
         "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Rattle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Truffle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Cooking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cucumber",
+        "image": "res/Item/veggie_cucumber_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Speedway",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Racing_word",
+        "name": "Racing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Shiitake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Beetroot",
+        "image": "res/Item/veggie_beetroot_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Knitting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Onion",
+        "image": "res/Item/veggie_onion_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cabbage",
+        "image": "res/Item/veggie_cabbage_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Carrot",
+        "image": "res/Item/veggie_carrot_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Support",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Assist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_australia_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Crib",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Babies_word",
+        "name": "Babies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Diaper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Reindeer",
+        "image": "res/Item/space_marsrover_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Navajo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Malbec",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Muscat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Reindeer",
+            "image": "res/Item/space_marsrover_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Amanita",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Navajo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Sioux",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_uk_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Shiitake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Malbec",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_france_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Baking",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Snowy owl",
+            "image": "res/Item/space_saturn_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Help_word",
+            "name": "Assist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Reading",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Crib",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Fishing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Cabbage",
+            "image": "res/Item/veggie_cabbage_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Map",
+            "name": "Map",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Onion",
+            "image": "res/Item/veggie_onion_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_usa_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Finish",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_spain_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mushroom_word",
+            "name": "Mushroom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Apache",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Hobby_word": 8,
+      "Map": 8,
+      "Veggie": 8,
+      "Grape_word": 6,
+      "Mushroom_word": 6,
+      "Tribes_word": 4,
+      "Space": 4,
+      "Babies_word": 4,
+      "Racing_word": 3,
+      "Help_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grape_word",
+        "name": "Grape",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Enoki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Rattle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Speedway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Beetroot",
+        "image": "res/Item/veggie_beetroot_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Cherokee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Diaper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Stroller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Porcini",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Knitting",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Space",
+        "name": "Space",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Babies_word",
+        "name": "Babies",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Tribes_word",
+        "name": "Tribes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Broccoli",
+        "image": "res/Item/veggie_broccoli_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Walrus",
+        "image": "res/Item/space_rocket_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Help_word",
+        "name": "Help",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hobby_word",
+        "name": "Hobby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Pit stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Eggplant",
+        "image": "res/Item/veggie_eggplant_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Racing_word",
+        "name": "Racing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Riesling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_australia_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Support",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Grenache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Muscat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Potato",
+        "image": "res/Item/veggie_potato_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Carrot",
+        "image": "res/Item/veggie_carrot_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cucumber",
+        "image": "res/Item/veggie_cucumber_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Donate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Shiraz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Polar bear",
+        "image": "res/Item/space_spacestation_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Blogging",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Veggie",
+        "name": "Veggie",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Cooking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Truffle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Russula",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Merlot",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mushroom_word",
+            "name": "Mushroom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Rattle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Cabbage",
+            "image": "res/Item/veggie_cabbage_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Help_word",
+            "name": "Help",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Pit stop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Beetroot",
+            "image": "res/Item/veggie_beetroot_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Racing_word",
+            "name": "Racing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hobby_word",
+            "name": "Hobby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Cooking",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Shiraz",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Grenache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Walrus",
+            "image": "res/Item/space_rocket_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Tribes_word",
+            "name": "Tribes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Snowy owl",
+            "image": "res/Item/space_saturn_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Russula",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Speedway",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_italy_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Apache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Help_word",
+            "name": "Support",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Carrot",
+            "image": "res/Item/veggie_carrot_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Potato",
+            "image": "res/Item/veggie_potato_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Help_word",
+            "name": "Assist",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Hobby_word": 8,
+      "Map": 8,
+      "Veggie": 8,
+      "Grape_word": 6,
+      "Mushroom_word": 6,
+      "Tribes_word": 4,
+      "Space": 4,
+      "Babies_word": 4,
+      "Racing_word": 3,
+      "Help_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Blogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Navajo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Enoki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Broccoli",
+        "image": "res/Item/veggie_broccoli_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Riesling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cucumber",
+        "image": "res/Item/veggie_cucumber_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Cherokee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Eggplant",
+        "image": "res/Item/veggie_eggplant_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Malbec",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Grape_word",
+        "name": "Grape",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Muscat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Truffle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Reading",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Space",
+        "name": "Space",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Sioux",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Veggie",
+        "name": "Veggie",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Merlot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Amanita",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Finish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Reindeer",
+        "image": "res/Item/space_marsrover_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Diaper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_australia_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Knitting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Donate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Shiitake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Crib",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Polar bear",
+        "image": "res/Item/space_spacestation_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Babies_word",
+        "name": "Babies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Stroller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Porcini",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Onion",
+        "image": "res/Item/veggie_onion_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Baking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Truffle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mushroom_word",
+            "name": "Mushroom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Reindeer",
+            "image": "res/Item/space_marsrover_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Carrot",
+            "image": "res/Item/veggie_carrot_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Shiitake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tribes_word",
+            "name": "Sioux",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hobby_word",
+            "name": "Running",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_uk_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Eggplant",
+            "image": "res/Item/veggie_eggplant_8.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Space",
+            "name": "Space",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hobby_word",
+            "name": "Hobby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mushroom_word",
+            "name": "Amanita",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Racing_word",
+            "name": "Racing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Potato",
+            "image": "res/Item/veggie_potato_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Babies_word",
+            "name": "Crib",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Help_word",
+            "name": "Support",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space",
+            "name": "Polar bear",
+            "image": "res/Item/space_spacestation_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Racing_word",
+            "name": "Finish",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Veggie",
+            "name": "Broccoli",
+            "image": "res/Item/veggie_broccoli_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grape_word",
+            "name": "Shiraz",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_france_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "0",
+            "image": "res/Item/map_japan_8.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Hobby_word": 8,
+      "Map": 8,
+      "Veggie": 8,
+      "Grape_word": 6,
+      "Mushroom_word": 6,
+      "Tribes_word": 4,
+      "Space": 4,
+      "Babies_word": 4,
+      "Racing_word": 3,
+      "Help_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Walrus",
+        "image": "res/Item/space_rocket_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Onion",
+        "image": "res/Item/veggie_onion_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Babies_word",
+        "name": "Babies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cabbage",
+        "image": "res/Item/veggie_cabbage_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Reading",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Speedway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Apache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Donate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Porcini",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_australia_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Cooking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Merlot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Rattle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Cherokee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Diaper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Babies_word",
+        "name": "Stroller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Cucumber",
+        "image": "res/Item/veggie_cucumber_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Help_word",
+        "name": "Help",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Grenache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Knitting",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Veggie",
+        "name": "Veggie",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Help_word",
+        "name": "Assist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Blogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Racing_word",
+        "name": "Pit stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hobby_word",
+        "name": "Baking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Enoki",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grape_word",
+        "name": "Grape",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "0",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Riesling",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Muscat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Tribes_word",
+        "name": "Tribes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tribes_word",
+        "name": "Navajo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grape_word",
+        "name": "Malbec",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Veggie",
+        "name": "Beetroot",
+        "image": "res/Item/veggie_beetroot_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mushroom_word",
+        "name": "Russula",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space",
+        "name": "Snowy owl",
+        "image": "res/Item/space_saturn_5.png",
+        "isText": false
       }
     ],
     "handDisplay": []

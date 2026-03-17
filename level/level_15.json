@@ -1,579 +1,2424 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 150,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 130
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Danish",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Chopin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Gouache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Strauss",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Parody",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Auction_word",
-          "name": "Hammer",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Satire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Like_word",
+            "name": "Like",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Approve",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Ink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spicy_word",
+            "name": "Sriracha",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Dogs",
-          "name": "Beagle",
-          "image": "res/Item/dogs_beagle_2.png",
-          "isText": false
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Mozart",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Prank",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Luxury",
+            "name": "Luxury",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Caviar",
+            "image": "res/Item/luxury_yacht_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Thursday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Biomes_word",
+            "name": "Biomes",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Meditate_word",
-          "name": "Zen",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Position_word",
+            "name": "CEO",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Love",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Adore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Sunday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spicy_word",
+            "name": "Wasabi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Computer_word",
+            "name": "Computer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Stand-up",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Tribeca",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Dogs",
-          "name": "Husky",
-          "image": "res/Item/dogs_husky_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Hebrew",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Meditate_word",
-          "name": "Breath",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Division_word",
-          "name": "City",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Hippie_word",
-          "name": "Freedom",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Latin",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Footwear_word",
-          "name": "Sneakers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Division_word",
-          "name": "State",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Footwear_word",
-          "name": "Loafers",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Italian",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Dogs",
-          "name": "Poodle",
-          "image": "res/Item/dogs_poodle_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Berry_word",
-          "name": "Mulberry",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Soho",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Dogs",
-          "name": "Terrier",
-          "image": "res/Item/dogs_terrier_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Dogs",
-          "name": "Spaniel",
-          "image": "res/Item/dogs_spaniel_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Footwear_word",
-          "name": "Uggs",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Bronx",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Seasons_word",
-          "name": "Autumn",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Queens",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Priest_word",
-          "name": "Bible",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Explorer_word",
-          "name": "Columbus",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Priest_word",
-          "name": "Preacher",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Priest_word",
-          "name": "Saint",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Spiky_word",
-          "name": "Cactus",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Astoria",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "New York_word",
-          "name": "Harlem",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Berry_word",
-          "name": "Bilberry",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Japanese",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Spiky_word",
-          "name": "Durian",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Hindi",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Spiky_word",
-          "name": "Hedgehog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "Polish",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Division_word",
-          "name": "Region",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Priest_word",
-          "name": "Cleric",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Berry_word",
-          "name": "Barberry",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Division_word",
-          "name": "Country",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Auction_word",
-          "name": "Lot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Language_word",
-          "name": "English",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Language_word": 8,
-      "Dogs": 5,
-      "New York_word": 6,
-      "Division_word": 4,
-      "Berry_word": 3,
-      "Priest_word": 4,
-      "Spiky_word": 3
+      "Comedy_word": 8,
+      "Composer_word": 8,
+      "Computer_word": 8,
+      "Days_word": 6,
+      "Like_word": 6,
+      "Position_word": 4,
+      "Luxury": 4,
+      "Coloring_word": 4,
+      "Biomes_word": 3,
+      "Spicy_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Berry_word",
-        "name": "Berry",
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Manager",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Spiky_word",
-        "name": "Spiky",
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Monday",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Dogs",
-        "name": "Dogs",
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Jewelry",
+        "image": "res/Item/luxury_jewelry_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Priest_word",
-        "name": "Priest",
+        "category": "Spicy_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Taiga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Brahms",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Wagner",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Division_word",
-        "name": "Division",
+        "category": "Position_word",
+        "name": "Position",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Language_word",
-        "name": "Language",
+        "category": "Coloring_word",
+        "name": "Coloring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Admire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Lead",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "New York_word",
-        "name": "New York",
+        "category": "Composer_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comedy_word",
+        "name": "Comedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Comedian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Vivaldi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "SSD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Pun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Bach",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Habanero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Saturday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Schubert",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Watch",
+        "image": "res/Item/luxury_watch_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "RAM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Friday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Monitor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Tuesday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Humor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Savanna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Keyboard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Enjoy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Tundra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Crayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "CPU",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Intern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Drive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Irony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Prefer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Days_word",
+        "name": "Days",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "GPU",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Yacht",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Biomes_word",
+            "name": "Biomes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Adore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "GPU",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Tuesday",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Approve",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "Mouse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "RAM",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Jewelry",
+            "image": "res/Item/luxury_jewelry_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Pun",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Caviar",
+            "image": "res/Item/luxury_yacht_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Comedian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Watch",
+            "image": "res/Item/luxury_watch_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Monday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Strauss",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Days_word",
+            "name": "Days",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Crayon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Tundra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Luxury",
+            "name": "Luxury",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Savanna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Schubert",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Ink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Position_word",
+            "name": "CEO",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Comedy_word": 8,
+      "Composer_word": 8,
+      "Computer_word": 8,
+      "Days_word": 6,
+      "Like_word": 6,
+      "Position_word": 4,
+      "Luxury": 4,
+      "Coloring_word": 4,
+      "Biomes_word": 3,
+      "Spicy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Thursday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Irony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Prefer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Vivaldi",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Position_word",
+        "name": "Position",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Bach",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Humor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comedy_word",
+        "name": "Comedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Parody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Drive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Monitor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Saturday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "CPU",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Composer_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Wagner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Wasabi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Lead",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Mozart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Sriracha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Yacht",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Taiga",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Like_word",
+        "name": "Like",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Prank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Stand-up",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Computer_word",
+        "name": "Computer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Satire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Sunday",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coloring_word",
+        "name": "Coloring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Admire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spicy_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Chopin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Friday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Intern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "SSD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Brahms",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Habanero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Enjoy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Keyboard",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Position_word",
+            "name": "Position",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Position_word",
+            "name": "Lead",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Schubert",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "GPU",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Adore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Jewelry",
+            "image": "res/Item/luxury_jewelry_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "RAM",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Biomes_word",
+            "name": "Biomes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "CPU",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Chopin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Saturday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Irony",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Position_word",
+            "name": "CEO",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Comedy_word",
+            "name": "Comedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Like_word",
+            "name": "Like",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Wagner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Admire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spicy_word",
+            "name": "Wasabi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Brahms",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Days_word",
+            "name": "Days",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spicy_word",
+            "name": "Habanero",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Gouache",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Comedy_word": 8,
+      "Composer_word": 8,
+      "Computer_word": 8,
+      "Days_word": 6,
+      "Like_word": 6,
+      "Position_word": 4,
+      "Luxury": 4,
+      "Coloring_word": 4,
+      "Biomes_word": 3,
+      "Spicy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Monitor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Intern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Composer_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Computer_word",
+        "name": "Computer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "SSD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Humor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Keyboard",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coloring_word",
+        "name": "Coloring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Mozart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Drive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Tundra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Monday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Vivaldi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Tuesday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Caviar",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Pun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Prank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Stand-up",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Savanna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Satire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spicy_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Strauss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Sriracha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Sunday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Comedian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Taiga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Crayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Friday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Yacht",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Thursday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Approve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Enjoy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luxury",
+        "name": "Luxury",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Parody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Watch",
+        "image": "res/Item/luxury_watch_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Prefer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Bach",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coloring_word",
+            "name": "Coloring",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Admire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "SSD",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Composer_word",
+            "name": "Composer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Enjoy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Parody",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Tundra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "GPU",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Position_word",
+            "name": "Position",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Caviar",
+            "image": "res/Item/luxury_yacht_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Chopin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Stand-up",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Savanna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Days_word",
+            "name": "Days",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Taiga",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Vivaldi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Friday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Wagner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Prank",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Paint",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Gouache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Crayon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Comedy_word": 8,
+      "Composer_word": 8,
+      "Computer_word": 8,
+      "Days_word": 6,
+      "Like_word": 6,
+      "Position_word": 4,
+      "Luxury": 4,
+      "Coloring_word": 4,
+      "Biomes_word": 3,
+      "Spicy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Sriracha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Drive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Wasabi",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luxury",
+        "name": "Luxury",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Sunday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Brahms",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Irony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Strauss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Jewelry",
+        "image": "res/Item/luxury_jewelry_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Keyboard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Intern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Prefer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Comedian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Monday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Yacht",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Like_word",
+        "name": "Like",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Approve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Biomes_word",
+        "name": "Biomes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Lead",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Pun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Schubert",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Thursday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Saturday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Watch",
+        "image": "res/Item/luxury_watch_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Bach",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spicy_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Satire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comedy_word",
+        "name": "Comedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Monitor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Mozart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Habanero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "CEO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "CPU",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Tuesday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Adore",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "RAM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Humor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Computer_word",
+        "name": "Computer",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Thursday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Enjoy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "Mouse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Comedian",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Wagner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coloring_word",
+            "name": "Ink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Days_word",
+            "name": "Sunday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "SSD",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Vivaldi",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Satire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spicy_word",
+            "name": "Habanero",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Humor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luxury",
+            "name": "Watch",
+            "image": "res/Item/luxury_watch_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Like_word",
+            "name": "Prefer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "CPU",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Position_word",
+            "name": "Intern",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Biomes_word",
+            "name": "Savanna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Stand-up",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spicy_word",
+            "name": "Spicy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Composer_word",
+            "name": "Schubert",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comedy_word",
+            "name": "Pun",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Computer_word",
+            "name": "GPU",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Comedy_word": 8,
+      "Composer_word": 8,
+      "Computer_word": 8,
+      "Days_word": 6,
+      "Like_word": 6,
+      "Position_word": 4,
+      "Luxury": 4,
+      "Coloring_word": 4,
+      "Biomes_word": 3,
+      "Spicy_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Taiga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Strauss",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Admire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Drive",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luxury",
+        "name": "Luxury",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Love",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Friday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Wasabi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Biomes_word",
+        "name": "Tundra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Irony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Crayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Parody",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Composer_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Mozart",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Days_word",
+        "name": "Days",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coloring_word",
+        "name": "Coloring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Monday",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comedy_word",
+        "name": "Comedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coloring_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Adore",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Monitor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "RAM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Brahms",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Computer_word",
+        "name": "Computer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Yacht",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Chopin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Caviar",
+        "image": "res/Item/luxury_yacht_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spicy_word",
+        "name": "Sriracha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comedy_word",
+        "name": "Prank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "CEO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Saturday",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Biomes_word",
+        "name": "Biomes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Days_word",
+        "name": "Tuesday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luxury",
+        "name": "Jewelry",
+        "image": "res/Item/luxury_jewelry_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Position_word",
+        "name": "Lead",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Composer_word",
+        "name": "Bach",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Like_word",
+        "name": "Approve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Computer_word",
+        "name": "Keyboard",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Position_word",
+        "name": "Position",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Like_word",
+        "name": "Like",
         "isText": true
       }
     ],

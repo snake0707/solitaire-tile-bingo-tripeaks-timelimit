@@ -1,22 +1,22 @@
 /**
- * Solitaire Tile Bingo – v5.0 (Same-Position Stacking + Hand Card Area)
+ * Solitaire Tile – v7.0 (SAJLike)
  *
- * Cards are arranged in a 5x5 grid with stacked layers (1-on-1 covering).
- * Gold/category cards are in a Klondike-style hand area (draw pile + display).
- * The bottom layer is a 5x5 grid used for BINGO detection.
+ * Traditional solitaire-style gameplay:
+ * - Tableau columns with face-down/face-up cards
+ * - Hand pile (draw pile) + display area (max 3)
+ * - Collector slots (category card first, then basic cards)
+ * - Same-category stacking on columns; category card seals column
+ * - No Bingo, no Filler cards
  */
 
-// ─── Data (loaded from categories.js) ────────────────────────
+// ─── Constants ────────────────────────────────────────────────
 
 const MAX_SLOTS = 5;
-const LEVEL_SCAN_MAX = 50; // Upper bound for scanning level JSON files
-
-// ─── Layout Constants ────────────────────────────────────────
-
+const LEVEL_SCAN_MAX = 50;
 const CARD_W = 60;
 const CARD_H = 70;
-const GAP_X = 4;
-const GAP_Y = 3;
+const FACE_DOWN_H = 20; // visible height of face-down card in column
+const FACE_UP_OFFSET = 20; // visible height of face-up card before next card overlaps
 
 function getContainerInnerWidth() {
     const container = document.getElementById('game-container');
@@ -27,46 +27,39 @@ function getContainerInnerWidth() {
     return 376;
 }
 
-// ─── Layout Constants (stacking offsets) ─────────────────────
-
-// All layers are 5x5 grids (same-position stacking: 1-on-1 covering)
-const STACK_OFFSET_X = 3;
-const STACK_OFFSET_Y = 5;
-
 // ─── Game ────────────────────────────────────────────────────
 
 class Game {
     constructor() {
         this.level = 1;
-        this.cards = [];
-        this.cardMap = {};
-        this.coveredBy = {};
-        this.covers = {};
-        this.cleared = [];
-        this._prevCleared = {};
+        this.tableau = [];        // Array<Array<TableauCard>>
         this.slots = [];
         this.completedCount = 0;
-        this.bingoLines = [];
-        this.bingosNeeded = 1;
+        this.numCategories = 0;
         this.moveHistory = [];
         this.isAnimating = false;
         this.flyAnimCount = 0;
-        this._pendingBingoCells = new Set();
         this.categoryColorMap = {};
-        this.timeLeft = 0;
-        this.timerInterval = null;
+        this.categoryTargets = {};
         this.maxSlots = 3;
-        this.penaltyTime = 5;
-        this.timePaused = false;
         this.retryBonus = {};
-        this.currentNumLayers = 2;
         this.handPile = [];
         this.handDisplay = [];
 
-        this.gridEl = document.getElementById('bingo-grid');
-        this.timerEl = document.getElementById('timer-count');
+        // Chinese mode
+        this.zhMode = false;
+
+        // Step system
+        this.stepsLeft = 0;
+        this.maxSteps = 40;
+
+        // Drag system
+        this.dragState = null;
+
+        // DOM refs
+        this.tableauEl = document.getElementById('tableau');
+        this.stepsEl = document.getElementById('steps-count');
         this.collectorsEl = document.getElementById('collectors');
-        this.bingoCountEl = document.getElementById('bingo-count');
         this.levelLabelEl = document.getElementById('level-label');
         this.winOverlay = document.getElementById('win-overlay');
         this.loseOverlay = document.getElementById('lose-overlay');
@@ -77,31 +70,15 @@ class Game {
 
         document.getElementById('btn-hint').addEventListener('click', () => this.showHint());
         document.getElementById('btn-undo').addEventListener('click', () => this.undo());
-        document.getElementById('btn-pause').addEventListener('click', () => this.togglePause());
         document.getElementById('btn-next-level').addEventListener('click', () => this.nextLevel());
         document.getElementById('btn-retry').addEventListener('click', () => this.retry());
+        document.getElementById('btn-continue').addEventListener('click', () => this.continueWithSteps());
         document.getElementById('menu-btn').addEventListener('click', () => this.showLevelSelect());
         document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
+        document.getElementById('btn-zh').addEventListener('click', () => this.toggleZhMode());
 
-        // Event delegation for pyramid cards (single listener instead of per-card)
+        // Hand pile: click to flip (not drag)
         this._lastTouchTime = 0;
-        this.gridEl.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            this._lastTouchTime = Date.now();
-            const cardEl = e.target.closest('.pyramid-card');
-            if (cardEl && !cardEl.classList.contains('face-down')) {
-                this.onPyramidCardClick(Number(cardEl.dataset.cardId));
-            }
-        });
-        this.gridEl.addEventListener('click', (e) => {
-            if (Date.now() - this._lastTouchTime < 500) return;
-            const cardEl = e.target.closest('.pyramid-card');
-            if (cardEl && !cardEl.classList.contains('face-down')) {
-                this.onPyramidCardClick(Number(cardEl.dataset.cardId));
-            }
-        });
-
-        // Hand area event listeners (with null safety for cached HTML)
         if (this.handPileEl) {
             this.handPileEl.addEventListener('touchend', (e) => {
                 e.preventDefault();
@@ -113,23 +90,659 @@ class Game {
                 this.onHandPileClick();
             });
         }
-        if (this.handDisplayEl) {
-            this.handDisplayEl.addEventListener('touchend', (e) => {
-                e.preventDefault();
-                this._lastTouchTime = Date.now();
-                const topCard = e.target.closest('.hand-display-card.topmost');
-                if (topCard) this.onHandDisplayClick();
+
+        this.initDragSystem();
+
+        this.levelData = {};
+        this.availableLevels = new Set();
+        this.init();
+    }
+
+    // ── Drag System ─────────────────────────────────────────────
+
+    initDragSystem() {
+        document.addEventListener('pointerdown', (e) => this.onDragStart(e));
+        document.addEventListener('pointermove', (e) => this.onDragMove(e));
+        document.addEventListener('pointerup', (e) => this.onDragEnd(e));
+        document.addEventListener('pointercancel', (e) => this.onDragEnd(e));
+    }
+
+    onDragStart(e) {
+        if (this.isAnimating || this.flyAnimCount > 0) return;
+        if (this.dragState) return;
+
+        const target = document.elementFromPoint(e.clientX, e.clientY);
+        if (!target) return;
+
+        let cardData = null;
+        let sourceType = null;
+        let sourceInfo = null;
+        let sourceEl = null;
+
+        // Check tableau cards (any face-up card — drags all cards from that position down)
+        // When same-category cards are stacked together, auto-expand to drag them all
+        const tableauCard = target.closest('.tableau-card');
+        if (tableauCard && tableauCard.classList.contains('face-up')) {
+            const colIdx = Number(tableauCard.dataset.colIdx);
+            let posIdx = Number(tableauCard.dataset.posIdx);
+            const col = this.tableau[colIdx];
+            if (col && posIdx < col.length) {
+                // Expand downward: include consecutive same-category face-up cards
+                const clickedCategory = col[posIdx].card.category;
+                while (posIdx > 0
+                    && col[posIdx - 1].faceUp
+                    && col[posIdx - 1].card.category === clickedCategory) {
+                    posIdx--;
+                }
+                const tc = col[posIdx];
+                cardData = tc;
+                sourceType = 'tableau';
+                sourceInfo = { colIdx, posIdx };
+                // Use the element of the expanded start position
+                sourceEl = this.tableauEl.querySelector(
+                    `.tableau-card[data-col-idx="${colIdx}"][data-pos-idx="${posIdx}"]`
+                ) || tableauCard;
+            }
+        }
+
+        // Check hand display top card
+        if (!cardData) {
+            const handCard = target.closest('.hand-display-card.topmost');
+            if (handCard && this.handDisplay.length > 0) {
+                const topCard = this.handDisplay[this.handDisplay.length - 1];
+                cardData = { card: topCard, _isHandDisplay: true };
+                sourceType = 'hand_display';
+                sourceInfo = {};
+                sourceEl = handCard;
+            }
+        }
+
+        if (!cardData || !sourceEl) return;
+
+        e.preventDefault();
+
+        const rect = sourceEl.getBoundingClientRect();
+        const dragCount = sourceType === 'tableau'
+            ? this.tableau[sourceInfo.colIdx].length - sourceInfo.posIdx
+            : 1;
+
+        // Create drag clone (multi-card stack for tableau)
+        const clone = document.createElement('div');
+        clone.className = 'drag-clone';
+        if (dragCount > 1) {
+            // Build stacked clone showing all cards being dragged
+            clone.style.position = 'fixed';
+            clone.style.width = CARD_W + 'px';
+            const stackHeight = (dragCount - 1) * FACE_UP_OFFSET + CARD_H;
+            clone.style.height = stackHeight + 'px';
+            clone.style.left = rect.left + 'px';
+            clone.style.top = rect.top + 'px';
+            const col = this.tableau[sourceInfo.colIdx];
+            for (let i = 0; i < dragCount; i++) {
+                const idx = sourceInfo.posIdx + i;
+                const srcCardEl = this.tableauEl.querySelector(
+                    `.tableau-card[data-col-idx="${sourceInfo.colIdx}"][data-pos-idx="${idx}"]`
+                );
+                if (srcCardEl) {
+                    const cardClone = srcCardEl.cloneNode(true);
+                    cardClone.style.position = 'absolute';
+                    cardClone.style.left = '0';
+                    cardClone.style.top = (i * FACE_UP_OFFSET) + 'px';
+                    cardClone.style.width = CARD_W + 'px';
+                    cardClone.style.height = CARD_H + 'px';
+                    cardClone.classList.remove('covered', 'dragging-source');
+                    clone.appendChild(cardClone);
+                    srcCardEl.style.display = 'none';
+                }
+            }
+        } else {
+            // Single card (tableau or hand display) — clone the whole element
+            const cardClone = sourceEl.cloneNode(true);
+            cardClone.style.position = 'relative';
+            cardClone.style.top = '0';
+            cardClone.style.left = '0';
+            cardClone.style.width = '100%';
+            cardClone.style.height = '100%';
+            clone.appendChild(cardClone);
+            clone.style.width = rect.width + 'px';
+            clone.style.height = rect.height + 'px';
+            clone.style.left = rect.left + 'px';
+            clone.style.top = rect.top + 'px';
+            sourceEl.style.display = 'none';
+        }
+
+        // Reveal the card below the dragged card(s) — expand to full size
+        if (sourceType === 'tableau' && sourceInfo.posIdx > 0) {
+            const revealIdx = sourceInfo.posIdx - 1;
+            const revealEl = this.tableauEl.querySelector(
+                `.tableau-card[data-col-idx="${sourceInfo.colIdx}"][data-pos-idx="${revealIdx}"]`
+            );
+            if (revealEl) {
+                if (revealEl.classList.contains('covered')) {
+                    revealEl.classList.remove('covered');
+                }
+                if (revealEl.classList.contains('face-down')) {
+                    // Expand face-down card to show full card back
+                    revealEl.style.height = CARD_H + 'px';
+                    revealEl.style.borderRadius = '8px';
+                    const backEl = revealEl.querySelector('.card-back');
+                    if (backEl) {
+                        backEl.style.borderRadius = '8px';
+                        backEl.style.boxShadow = '';
+                    }
+                }
+                revealEl.style.height = CARD_H + 'px';
+                revealEl.style.overflow = '';
+            }
+        }
+
+        document.body.appendChild(clone);
+
+        this.dragState = {
+            cardData,
+            sourceType,
+            sourceInfo,
+            sourceEl,
+            clone,
+            dragCount,
+            sourceRect: rect,
+            startX: e.clientX,
+            startY: e.clientY,
+            offsetX: e.clientX - rect.left,
+            offsetY: e.clientY - rect.top,
+            hasMoved: false,
+        };
+
+        this._highlightDropTargets(cardData, sourceType, sourceInfo);
+    }
+
+    onDragMove(e) {
+        if (!this.dragState) return;
+        e.preventDefault();
+
+        const { clone, offsetX, offsetY } = this.dragState;
+        clone.style.left = (e.clientX - offsetX) + 'px';
+        clone.style.top = (e.clientY - offsetY) + 'px';
+
+        const dx = e.clientX - this.dragState.startX;
+        const dy = e.clientY - this.dragState.startY;
+        if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+            this.dragState.hasMoved = true;
+        }
+    }
+
+    onDragEnd(e) {
+        if (!this.dragState) return;
+
+        const { cardData, sourceType, sourceInfo, sourceEl, clone, dragCount, sourceRect, hasMoved } = this.dragState;
+
+        this._clearDropTargets();
+
+        if (!hasMoved) {
+            clone.remove();
+            this.dragState = null;
+            // Re-render to restore hidden cards
+            this.render();
+            return;
+        }
+
+        const dropResult = this._checkDrop(e.clientX, e.clientY, cardData, sourceType, sourceInfo);
+
+        if (dropResult.success) {
+            const targetRect = dropResult.targetRect;
+            clone.style.transition = 'all 0.2s ease-out';
+            clone.style.left = targetRect.left + 'px';
+            clone.style.top = targetRect.top + 'px';
+            clone.style.width = targetRect.width + 'px';
+            clone.style.height = targetRect.height + 'px';
+
+            setTimeout(() => {
+                clone.remove();
+                this.handleDrop(cardData, sourceType, sourceInfo, dropResult);
+            }, 200);
+        } else {
+            // Snap back to saved source position
+            clone.style.transition = 'all 0.25s ease-out';
+            clone.style.left = sourceRect.left + 'px';
+            clone.style.top = sourceRect.top + 'px';
+            setTimeout(() => {
+                clone.remove();
+                // Re-render to restore all hidden cards
+                this.render();
+            }, 250);
+        }
+
+        this.dragState = null;
+    }
+
+    _highlightDropTargets(cardData, sourceType, sourceInfo) {
+        const card = cardData._isHandDisplay ? cardData.card : cardData.card;
+        if (!card) return;
+
+        // Determine drag count
+        const dragCount = sourceType === 'tableau'
+            ? this.tableau[sourceInfo.colIdx].length - sourceInfo.posIdx
+            : 1;
+
+        // Highlight valid collector slots
+        const slotWrappers = this.collectorsEl.children;
+        for (let i = 0; i < this.maxSlots; i++) {
+            const wrapper = slotWrappers[i];
+            if (!wrapper) continue;
+            const slotCardEl = wrapper.querySelector('.slot-card');
+            if (!slotCardEl) continue;
+
+            if (dragCount === 1) {
+                // Single card: original logic
+                const slot = this.slots[i];
+                if (card.type === 'gold' && slot === null) {
+                    slotCardEl.classList.add('drop-target');
+                } else if (card.type === 'regular' && slot !== null &&
+                           slot.key === card.category && slot.collected < slot.target) {
+                    slotCardEl.classList.add('drop-target');
+                }
+            } else if (sourceType === 'tableau') {
+                // Multi-card: check stack compatibility
+                if (this._canMultiDropToSlot(sourceInfo.colIdx, sourceInfo.posIdx, i)) {
+                    slotCardEl.classList.add('drop-target');
+                }
+            }
+        }
+
+        // Highlight valid tableau columns
+        const colEls = this.tableauEl.querySelectorAll('.tableau-column');
+        for (let i = 0; i < this.tableau.length; i++) {
+            // Don't highlight source column
+            if (sourceType === 'tableau' && sourceInfo.colIdx === i) continue;
+            if (this.canStackOnColumn(card, i)) {
+                colEls[i]?.classList.add('drop-target');
+            }
+        }
+    }
+
+    _clearDropTargets() {
+        document.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
+    }
+
+    _checkDrop(x, y, cardData, sourceType, sourceInfo) {
+        const card = cardData._isHandDisplay ? cardData.card : cardData.card;
+        if (!card) return { success: false };
+
+        // Determine drag count
+        const dragCount = sourceType === 'tableau'
+            ? this.tableau[sourceInfo.colIdx].length - sourceInfo.posIdx
+            : 1;
+
+        // Check collector slots
+        const slotWrappers = this.collectorsEl.children;
+        for (let i = 0; i < this.maxSlots; i++) {
+            const wrapper = slotWrappers[i];
+            if (!wrapper) continue;
+            const slotCardEl = wrapper.querySelector('.slot-card');
+            if (!slotCardEl) continue;
+
+            const rect = slotCardEl.getBoundingClientRect();
+            const expanded = {
+                left: rect.left - 15, right: rect.right + 15,
+                top: rect.top - 15, bottom: rect.bottom + 15,
+            };
+
+            if (x >= expanded.left && x <= expanded.right &&
+                y >= expanded.top && y <= expanded.bottom) {
+                if (this._isValidSlotDrop(card, sourceType, sourceInfo, dragCount, i)) {
+                    return { success: true, targetType: 'slot', slotIdx: i, targetRect: rect };
+                }
+            }
+        }
+
+        // Check tableau columns
+        const colEls = this.tableauEl.querySelectorAll('.tableau-column');
+        for (let i = 0; i < this.tableau.length; i++) {
+            if (sourceType === 'tableau' && sourceInfo.colIdx === i) continue;
+            const colEl = colEls[i];
+            if (!colEl) continue;
+
+            const rect = colEl.getBoundingClientRect();
+            const expanded = {
+                left: rect.left - 8, right: rect.right + 8,
+                top: rect.top - 8, bottom: rect.bottom + 8,
+            };
+
+            if (x >= expanded.left && x <= expanded.right &&
+                y >= expanded.top && y <= expanded.bottom) {
+                if (this.canStackOnColumn(card, i)) {
+                    // Use a card-sized rect at the drop position (bottom of column)
+                    const cardRect = {
+                        left: rect.left,
+                        top: rect.bottom - CARD_H,
+                        width: CARD_W,
+                        height: CARD_H,
+                    };
+                    return { success: true, targetType: 'column', colIdx: i, targetRect: cardRect };
+                }
+            }
+        }
+
+        return { success: false };
+    }
+
+    // ── Stacking Rules ──────────────────────────────────────────
+
+    canStackOnColumn(card, colIdx) {
+        const col = this.tableau[colIdx];
+        if (!col || col.length === 0) return true; // empty column accepts anything
+
+        const topCard = col[col.length - 1];
+        // If top card is a category (gold) card = sealed, nothing can stack
+        if (topCard.card.type === 'gold') return false;
+
+        // Both regular and gold cards can stack if same category
+        return card.category === topCard.card.category;
+    }
+
+    // Check if a single card can drop to a slot (used by _isValidSlotDrop)
+    _isValidSlotDrop(card, sourceType, sourceInfo, dragCount, slotIdx) {
+        if (dragCount === 1) {
+            // Single card: original logic
+            const slot = this.slots[slotIdx];
+            if (card.type === 'gold' && slot === null) return true;
+            if (card.type === 'regular' && slot !== null &&
+                slot.key === card.category && slot.collected < slot.target) return true;
+            return false;
+        }
+        // Multi-card: delegate to multi check
+        if (sourceType === 'tableau') {
+            return this._canMultiDropToSlot(sourceInfo.colIdx, sourceInfo.posIdx, slotIdx);
+        }
+        return false;
+    }
+
+    // Check if a multi-card stack from tableau can drop to a slot
+    _canMultiDropToSlot(colIdx, posIdx, slotIdx) {
+        const col = this.tableau[colIdx];
+        const cards = col.slice(posIdx); // bottom-to-top of dragged stack
+        if (cards.length <= 1) return false;
+
+        const topCard = cards[cards.length - 1]; // visual top = last card in array
+        const slot = this.slots[slotIdx];
+
+        // Case 1: Top card is gold, slot is empty → create slot + collect regulars
+        if (topCard.card.type === 'gold' && slot === null) {
+            const cat = topCard.card.category;
+            // All other cards must be regular of the same category
+            return cards.slice(0, -1).every(c => c.card.type === 'regular' && c.card.category === cat);
+        }
+
+        // Case 2: All cards are regular, matching existing slot with enough room
+        if (slot !== null && slot.collected < slot.target) {
+            const cat = slot.key;
+            const allRegularMatch = cards.every(c => c.card.type === 'regular' && c.card.category === cat);
+            if (allRegularMatch && slot.collected + cards.length <= slot.target) return true;
+        }
+
+        return false;
+    }
+
+    // ── Drop Handler ────────────────────────────────────────────
+
+    handleDrop(cardData, sourceType, sourceInfo, dropResult) {
+        if (dropResult.targetType === 'slot') {
+            this._handleDropToSlot(cardData, sourceType, sourceInfo, dropResult.slotIdx);
+        } else if (dropResult.targetType === 'column') {
+            this._handleDropToColumn(cardData, sourceType, sourceInfo, dropResult.colIdx);
+        }
+    }
+
+    _handleDropToSlot(cardData, sourceType, sourceInfo, slotIdx) {
+        const card = cardData._isHandDisplay ? cardData.card : cardData.card;
+
+        // Check for multi-card drop from tableau
+        if (sourceType === 'tableau') {
+            const col = this.tableau[sourceInfo.colIdx];
+            const dragCount = col.length - sourceInfo.posIdx;
+
+            if (dragCount > 1) {
+                this._handleMultiDropToSlot(sourceInfo.colIdx, sourceInfo.posIdx, slotIdx);
+                return;
+            }
+        }
+
+        if (card.type === 'gold') {
+            // Gold card → create slot
+            if (sourceType === 'tableau') {
+                const col = this.tableau[sourceInfo.colIdx];
+                const removed = col.pop();
+                const autoFlipped = this.autoFlipColumn(sourceInfo.colIdx);
+
+                this.moveHistory.push({
+                    action: 'move_tableau_to_slot',
+                    colIdx: sourceInfo.colIdx,
+                    tableauCard: { ...removed, card: { ...removed.card } },
+                    slotIdx,
+                    slotWasNull: true,
+                    autoFlipped,
+                });
+
+                this.slots[slotIdx] = {
+                    key: card.category,
+                    name: card.name,
+                    zhName: card.zhName || '',
+                    collected: 0,
+                    target: this.categoryTargets[card.category] || 0,
+                    lastCard: null,
+                    _animateIn: true,
+                };
+            } else if (sourceType === 'hand_display') {
+                const displayCard = this.handDisplay.pop();
+                this.moveHistory.push({
+                    action: 'move_display_to_slot',
+                    card: { ...displayCard },
+                    slotIdx,
+                    slotWasNull: true,
+                });
+
+                this.slots[slotIdx] = {
+                    key: displayCard.category,
+                    name: displayCard.name,
+                    zhName: displayCard.zhName || '',
+                    collected: 0,
+                    target: this.categoryTargets[displayCard.category] || 0,
+                    lastCard: null,
+                    _animateIn: true,
+                };
+            }
+        } else if (card.type === 'regular') {
+            // Regular card → match to slot
+            const slot = this.slots[slotIdx];
+            const previousLastCard = slot.lastCard ? { ...slot.lastCard } : null;
+
+            if (sourceType === 'tableau') {
+                const col = this.tableau[sourceInfo.colIdx];
+                const removed = col.pop();
+                const autoFlipped = this.autoFlipColumn(sourceInfo.colIdx);
+
+                this.moveHistory.push({
+                    action: 'move_tableau_to_slot',
+                    colIdx: sourceInfo.colIdx,
+                    tableauCard: { ...removed, card: { ...removed.card } },
+                    slotIdx,
+                    slotWasNull: false,
+                    previousCollected: slot.collected,
+                    previousLastCard,
+                    autoFlipped,
+                });
+
+                slot.collected++;
+                slot.lastCard = { ...card };
+                if (slot.collected >= slot.target) {
+                    this.completeSlot(slotIdx);
+                }
+            } else if (sourceType === 'hand_display') {
+                const displayCard = this.handDisplay.pop();
+                this.moveHistory.push({
+                    action: 'move_display_to_slot',
+                    card: { ...displayCard },
+                    slotIdx,
+                    slotWasNull: false,
+                    previousCollected: slot.collected,
+                    previousLastCard,
+                });
+
+                slot.collected++;
+                slot.lastCard = { ...displayCard };
+                if (slot.collected >= slot.target) {
+                    this.completeSlot(slotIdx);
+                }
+            }
+        }
+
+        this.decrementStep();
+        this.render();
+        this.checkWinOrDead();
+    }
+
+    _handleMultiDropToSlot(colIdx, posIdx, slotIdx) {
+        const col = this.tableau[colIdx];
+        const cards = col.slice(posIdx); // snapshot before splice
+        const topCard = cards[cards.length - 1];
+        const slot = this.slots[slotIdx];
+
+        // Save state for undo
+        const removedCards = col.splice(posIdx);
+        const autoFlipped = this.autoFlipColumn(colIdx);
+
+        if (topCard.card.type === 'gold' && slot === null) {
+            // Case: gold on top + regulars below → create slot and collect regulars
+            const cat = topCard.card.category;
+            const regularCount = removedCards.length - 1;
+
+            this.slots[slotIdx] = {
+                key: cat,
+                name: topCard.card.name,
+                zhName: topCard.card.zhName || '',
+                collected: regularCount,
+                target: this.categoryTargets[cat] || 0,
+                lastCard: regularCount > 0 ? { ...removedCards[regularCount - 1].card } : null,
+                _animateIn: true,
+            };
+
+            this.moveHistory.push({
+                action: 'move_multi_tableau_to_slot',
+                colIdx,
+                slotIdx,
+                removedCards: removedCards.map(tc => ({ id: tc.id, card: { ...tc.card }, faceUp: tc.faceUp })),
+                slotWasNull: true,
+                autoFlipped,
+                count: removedCards.length,
             });
-            this.handDisplayEl.addEventListener('click', (e) => {
-                if (Date.now() - this._lastTouchTime < 500) return;
-                const topCard = e.target.closest('.hand-display-card.topmost');
-                if (topCard) this.onHandDisplayClick();
+
+            if (this.slots[slotIdx].collected >= this.slots[slotIdx].target) {
+                this.completeSlot(slotIdx);
+            }
+        } else if (slot !== null) {
+            // Case: all regulars → add to existing slot
+            const previousCollected = slot.collected;
+            const previousLastCard = slot.lastCard ? { ...slot.lastCard } : null;
+
+            slot.collected += removedCards.length;
+            slot.lastCard = { ...removedCards[removedCards.length - 1].card };
+
+            this.moveHistory.push({
+                action: 'move_multi_tableau_to_slot',
+                colIdx,
+                slotIdx,
+                removedCards: removedCards.map(tc => ({ id: tc.id, card: { ...tc.card }, faceUp: tc.faceUp })),
+                slotWasNull: false,
+                previousCollected,
+                previousLastCard,
+                autoFlipped,
+                count: removedCards.length,
+            });
+
+            if (slot.collected >= slot.target) {
+                this.completeSlot(slotIdx);
+            }
+        }
+
+        this.decrementStep();
+        this.render();
+        this.checkWinOrDead();
+    }
+
+    _handleDropToColumn(cardData, sourceType, sourceInfo, targetColIdx) {
+        const card = cardData._isHandDisplay ? cardData.card : cardData.card;
+
+        if (sourceType === 'tableau') {
+            const srcCol = this.tableau[sourceInfo.colIdx];
+            const dragCount = srcCol.length - sourceInfo.posIdx;
+
+            if (dragCount > 1) {
+                // Multi-card move: splice all cards from posIdx to end
+                const removedCards = srcCol.splice(sourceInfo.posIdx);
+                const autoFlipped = this.autoFlipColumn(sourceInfo.colIdx);
+
+                const newCards = [];
+                for (const tc of removedCards) {
+                    const newTC = { id: this._nextCardId++, card: { ...tc.card }, faceUp: true };
+                    this.tableau[targetColIdx].push(newTC);
+                    newCards.push(newTC);
+                }
+
+                this.moveHistory.push({
+                    action: 'move_multi_tableau_to_column',
+                    srcColIdx: sourceInfo.colIdx,
+                    targetColIdx,
+                    removedCards: removedCards.map(tc => ({ id: tc.id, card: { ...tc.card }, faceUp: tc.faceUp })),
+                    newCardIds: newCards.map(tc => tc.id),
+                    autoFlipped,
+                    count: dragCount,
+                });
+            } else {
+                // Single card move
+                const removed = srcCol.pop();
+                const autoFlipped = this.autoFlipColumn(sourceInfo.colIdx);
+
+                const newTC = { id: this._nextCardId++, card: { ...card }, faceUp: true };
+                this.tableau[targetColIdx].push(newTC);
+
+                this.moveHistory.push({
+                    action: 'move_tableau_to_column',
+                    srcColIdx: sourceInfo.colIdx,
+                    targetColIdx,
+                    tableauCard: { ...removed, card: { ...removed.card } },
+                    newCardId: newTC.id,
+                    autoFlipped,
+                });
+            }
+        } else if (sourceType === 'hand_display') {
+            const displayCard = this.handDisplay.pop();
+
+            const newTC = { id: this._nextCardId++, card: { ...displayCard }, faceUp: true };
+            this.tableau[targetColIdx].push(newTC);
+
+            this.moveHistory.push({
+                action: 'move_display_to_column',
+                card: { ...displayCard },
+                targetColIdx,
+                newCardId: newTC.id,
             });
         }
 
-        this.levelData = {};
-        this.availableLevels = new Set(Object.keys(LEVEL_SETTINGS).map(Number));
-        this.init();
+        this.decrementStep();
+        this.render();
+        this.checkWinOrDead();
+    }
+
+    autoFlipColumn(colIdx) {
+        const col = this.tableau[colIdx];
+        if (col.length === 0) return false;
+        const topCard = col[col.length - 1];
+        if (!topCard.faceUp) {
+            topCard.faceUp = true;
+            topCard.justFlipped = true;
+            return true;
+        }
+        return false;
     }
 
     // ── Layout Restore ─────────────────────────────────────────
@@ -138,53 +751,67 @@ class Game {
         this.completedCount = 0;
         this.slots = new Array(this.maxSlots).fill(null);
         this.categoryTargets = { ...layout.categoryTargets };
-        // Collect all active categories from grid cards (exclude fillers) and hand pile
-        const gridCatKeys = layout.cards.filter(c => c.card.type !== 'filler').map(c => c.card.category);
-        const handCatKeys = (layout.handPile || []).map(c => c.category);
-        const activeCatKeys = [...new Set([...gridCatKeys, ...handCatKeys])];
+
+        // Build color map from all cards
+        const allCatKeys = new Set();
+        if (layout.tableau) {
+            for (const col of layout.tableau) {
+                for (const tc of col) {
+                    if (tc.card.category) allCatKeys.add(tc.card.category);
+                }
+            }
+        }
+        if (layout.cards) {
+            for (const c of layout.cards) {
+                if (c.card.category) allCatKeys.add(c.card.category);
+            }
+        }
+        (layout.handPile || []).forEach(c => { if (c.category) allCatKeys.add(c.category); });
+
         this.categoryColorMap = {};
-        activeCatKeys.forEach((key, i) => {
+        [...allCatKeys].forEach((key, i) => {
             this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
         });
-        this.cards = [];
-        this.cardMap = {};
-        this.cleared = [];
-        this._prevCleared = {};
-        this._pendingBingoCells.clear();
 
-        for (let r = 0; r < 5; r++) {
-            this.cleared[r] = [];
-            for (let c = 0; c < 5; c++) {
-                this.cleared[r][c] = false;
+        this._nextCardId = 0;
+
+        // Restore tableau
+        if (layout.tableau) {
+            // New format: tableau is Array<Array<{card, faceUp}>>
+            this.tableau = layout.tableau.map(col =>
+                col.map(tc => ({
+                    id: this._nextCardId++,
+                    card: { ...tc.card },
+                    faceUp: tc.faceUp !== undefined ? tc.faceUp : true,
+                    justFlipped: false,
+                }))
+            );
+        } else if (layout.cards) {
+            // Legacy conversion: cards with colIndex/position
+            const colMap = {};
+            for (const c of layout.cards) {
+                const ci = c.colIndex !== undefined ? c.colIndex : (c.col !== undefined ? c.col : 0);
+                if (!colMap[ci]) colMap[ci] = [];
+                colMap[ci].push(c);
+            }
+            this.tableau = [];
+            const colIndices = Object.keys(colMap).map(Number).sort((a, b) => a - b);
+            for (const ci of colIndices) {
+                const cards = colMap[ci].sort((a, b) => (a.position || 0) - (b.position || 0));
+                this.tableau.push(cards.map((c, idx) => ({
+                    id: this._nextCardId++,
+                    card: { ...c.card },
+                    faceUp: idx === cards.length - 1, // bottom card face-up
+                    justFlipped: false,
+                })));
             }
         }
 
-        for (const saved of layout.cards) {
-            const key = `${saved.layer}-${saved.row}-${saved.col}`;
-            const cardObj = {
-                id: this.cards.length,
-                layer: saved.layer,
-                row: saved.row,
-                col: saved.col,
-                card: { ...saved.card },
-                faceUp: false,
-                removed: false,
-                justFlipped: false,
-            };
-            this.cards.push(cardObj);
-            this.cardMap[key] = cardObj;
-        }
-
-        // Restore hand pile and display
         this.handPile = (layout.handPile || []).map(c => ({ ...c }));
         this.handDisplay = (layout.handDisplay || []).map(c => ({ ...c }));
-
-        this.buildCoveringRelationships();
-        this.updateFaceUpStates();
     }
 
     async init() {
-        // Fetch level JSON files (scan up to LEVEL_SCAN_MAX, 404s are silently ignored)
         const cacheBust = Date.now();
         const fetches = [];
         for (let lv = 1; lv <= LEVEL_SCAN_MAX; lv++) {
@@ -213,51 +840,45 @@ class Game {
     // ── Level Setup ──────────────────────────────────────────
 
     startLevel(level) {
-        this.stopTimer();
         this.level = level;
         this.moveHistory = [];
-        this.bingoLines = [];
         this.levelLabelEl.textContent = `Level ${level}`;
+        this._nextCardId = 0;
 
         const baseConfig = getLevelSettings(level);
         const layouts = this.levelData[level];
         let config = baseConfig;
         let selectedLayout = null;
 
-        // Try to load from pre-generated level data
         if (layouts && layouts.length > 0) {
             const idx = Math.floor(Math.random() * layouts.length);
             selectedLayout = layouts[idx];
-            // Per-layout config overrides defaults
             if (selectedLayout.config) {
                 config = { ...baseConfig, ...selectedLayout.config };
             }
         }
 
-        this.bingosNeeded = config.bingosNeeded;
-        this.currentNumLayers = config.numLayers;
+        this.numCategories = config.numCategories;
         this.maxSlots = config.maxSlots;
-        this.penaltyTime = config.penaltyTime;
 
         const bonus = this.retryBonus[level] || 0;
-        this.timeLeft = config.timeLimit + bonus;
+        this.maxSteps = config.maxSteps + bonus;
+        this.stepsLeft = this.maxSteps;
 
         if (selectedLayout) {
             this.restoreLayout(selectedLayout);
         } else {
-            // Fallback: generate on-the-fly (unverified)
             this.completedCount = 0;
             this.slots = new Array(this.maxSlots).fill(null);
             this.generateCards(config);
         }
 
+        this.injectZhNames(level);
         this.render();
-        this.startTimer();
         setTimeout(() => this.checkDeadState(), 100);
     }
 
     generateCards(config) {
-        // Pick categories
         const shuffledCats = this.shuffleArray([...ALL_CATEGORY_KEYS]);
         const activeCatKeys = shuffledCats.slice(0, config.numCategories);
 
@@ -266,7 +887,7 @@ class Game {
             this.categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
         });
 
-        // Gold/category cards go to hand pile, regular cards go to grid
+        // Build gold and regular cards (no fillers)
         const goldCards = [];
         const regularCards = [];
         const regularCountPerCat = {};
@@ -296,13 +917,19 @@ class Game {
 
         this.categoryTargets = { ...regularCountPerCat };
 
-        // Pad regular cards to fill grid positions (minus filler slots)
-        const regularPositions = config.totalPositions - (config.numFillers || 0);
-        while (regularCards.length < regularPositions) {
+        // Total cards needed = tableau + hand pile
+        const totalColumnCards = config.totalColumnCards;
+        const handPileSize = Math.max(config.numCategories, Math.round(totalColumnCards * 0.4));
+        const totalNeeded = totalColumnCards + handPileSize;
+
+        const allCards = [...regularCards, ...goldCards];
+
+        // Pad if needed
+        while (allCards.length < totalNeeded) {
             const catKey = activeCatKeys[Math.floor(Math.random() * activeCatKeys.length)];
             const cat = CATEGORIES[catKey];
             const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-            regularCards.push({
+            allCards.push({
                 type: 'regular',
                 category: catKey,
                 name: item.name,
@@ -313,137 +940,50 @@ class Game {
             this.categoryTargets[catKey] = regularCountPerCat[catKey];
         }
 
-        // Generate filler cards from non-active categories
-        const fillerCards = [];
-        const inactiveCatKeys = ALL_CATEGORY_KEYS.filter(k => !activeCatKeys.includes(k));
-        const numFillers = config.numFillers || 0;
-        for (let i = 0; i < numFillers && inactiveCatKeys.length > 0; i++) {
-            const catKey = inactiveCatKeys[Math.floor(Math.random() * inactiveCatKeys.length)];
-            const cat = CATEGORIES[catKey];
-            const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-            fillerCards.push({
-                type: 'filler',
-                category: catKey,
-                name: item.name,
-                image: item.image,
-                isText: cat.isText,
-            });
-        }
+        this.shuffleArray(allCards);
 
-        // Determine which layer-0 positions get fillers
-        const layer0Positions = [];
-        const layerMask0 = config.layout[0];
-        for (let r = 0; r < layerMask0.length; r++) {
-            for (let c = 0; c < layerMask0[r].length; c++) {
-                if (layerMask0[r][c]) layer0Positions.push({ r, c });
-            }
-        }
-        this.shuffleArray(layer0Positions);
-        const fillerPositionSet = new Set();
-        for (let i = 0; i < Math.min(numFillers, layer0Positions.length); i++) {
-            fillerPositionSet.add(`${layer0Positions[i].r}-${layer0Positions[i].c}`);
-        }
+        // Split: first totalColumnCards go to tableau, rest to hand pile
+        const tableauCards = allCards.slice(0, totalColumnCards);
+        const handCards = allCards.slice(totalColumnCards);
 
-        this.shuffleArray(regularCards);
-        this.shuffleArray(goldCards);
-
-        // Hand pile = gold/category cards (face-down draw pile)
-        this.handPile = goldCards;
+        this.handPile = handCards;
         this.handDisplay = [];
 
-        // Distribute cards into 5x5 grid layers (fillers at layer 0 only)
-        this.cards = [];
-        this.cardMap = {};
-        this.cleared = [];
-        this._prevCleared = {};
-        let regularIdx = 0;
-        let fillerIdx = 0;
+        // Distribute to columns
+        this.tableau = [];
+        this._nextCardId = 0;
+        let cardIdx = 0;
 
-        for (let r = 0; r < 5; r++) {
-            this.cleared[r] = [];
-            for (let c = 0; c < 5; c++) {
-                this.cleared[r][c] = false;
+        for (let ci = 0; ci < config.numColumns; ci++) {
+            const colSize = config.columnSizes[ci];
+            const col = [];
+            for (let pos = 0; pos < colSize; pos++) {
+                if (cardIdx >= tableauCards.length) break;
+                const card = tableauCards[cardIdx++];
+                const isFaceUp = (pos === colSize - 1); // only bottom card face-up
+                col.push({
+                    id: this._nextCardId++,
+                    card,
+                    faceUp: isFaceUp,
+                    justFlipped: false,
+                });
             }
-        }
-
-        for (let L = 0; L < config.numLayers; L++) {
-            const layerMask = config.layout[L];
-            for (let r = 0; r < layerMask.length; r++) {
-                for (let c = 0; c < layerMask[r].length; c++) {
-                    if (!layerMask[r][c]) continue;
-                    let card;
-                    if (L === 0 && fillerPositionSet.has(`${r}-${c}`) && fillerIdx < fillerCards.length) {
-                        card = fillerCards[fillerIdx++];
-                    } else {
-                        if (regularIdx >= regularCards.length) continue;
-                        card = regularCards[regularIdx++];
-                    }
-                    const key = `${L}-${r}-${c}`;
-                    const cardObj = {
-                        id: this.cards.length,
-                        layer: L,
-                        row: r,
-                        col: c,
-                        card: card,
-                        faceUp: false,
-                        removed: false,
-                        justFlipped: false,
-                    };
-                    this.cards.push(cardObj);
-                    this.cardMap[key] = cardObj;
-                }
-            }
-        }
-
-        this.buildCoveringRelationships();
-        this.updateFaceUpStates();
-    }
-
-    // ── Covering Relationships ───────────────────────────────
-
-    buildCoveringRelationships() {
-        this.coveredBy = {};
-        this.covers = {};
-
-        for (const card of this.cards) {
-            const key = `${card.layer}-${card.row}-${card.col}`;
-            this.coveredBy[key] = [];
-            this.covers[key] = [];
-        }
-
-        // 1-to-1 covering: card at (L,R,C) only covers (L-1,R,C)
-        for (const card of this.cards) {
-            if (card.layer === 0) continue;
-            const L = card.layer;
-            const R = card.row;
-            const C = card.col;
-            const upperKey = `${L}-${R}-${C}`;
-            const lowerKey = `${L - 1}-${R}-${C}`;
-
-            if (this.cardMap[lowerKey]) {
-                this.coveredBy[lowerKey].push(upperKey);
-                this.covers[upperKey].push(lowerKey);
-            }
+            this.tableau.push(col);
         }
     }
 
-    isCardFaceUp(key) {
-        const coveringKeys = this.coveredBy[key] || [];
-        return coveringKeys.every(ck => {
-            const coverCard = this.cardMap[ck];
-            return !coverCard || coverCard.removed;
-        });
+    // ── Step System ─────────────────────────────────────────
+
+    renderSteps() {
+        this.stepsEl.textContent = this.stepsLeft;
+        this.stepsEl.classList.toggle('low', this.stepsLeft <= 5);
     }
 
-    updateFaceUpStates() {
-        for (const card of this.cards) {
-            if (card.removed) continue;
-            const key = `${card.layer}-${card.row}-${card.col}`;
-            const wasFaceUp = card.faceUp;
-            card.faceUp = this.isCardFaceUp(key);
-            if (!wasFaceUp && card.faceUp) {
-                card.justFlipped = true;
-            }
+    decrementStep() {
+        this.stepsLeft--;
+        this.renderSteps();
+        if (this.stepsLeft <= 0) {
+            this.onLose('No more steps!');
         }
     }
 
@@ -457,8 +997,15 @@ class Game {
 
     retry() {
         this.loseOverlay.classList.add('hidden');
-        this.retryBonus[this.level] = (this.retryBonus[this.level] || 0) + 30;
+        this.retryBonus[this.level] = (this.retryBonus[this.level] || 0) + 5;
         this.startLevel(this.level);
+    }
+
+    continueWithSteps() {
+        this.loseOverlay.classList.add('hidden');
+        this.stepsLeft += 10;
+        this.maxSteps += 10;
+        this.renderSteps();
     }
 
     showLevelSelect() {
@@ -484,9 +1031,23 @@ class Game {
         this.levelOverlay.classList.add('hidden');
     }
 
-    // ── Dead State Detection ─────────────────────────────────
+    // ── Win / Dead State ─────────────────────────────────────
+
+    checkWinOrDead() {
+        if (this.checkWin()) return;
+        this.checkDeadState();
+    }
+
+    checkWin() {
+        if (this.completedCount >= this.numCategories) {
+            setTimeout(() => this.onWin(), 300);
+            return true;
+        }
+        return false;
+    }
 
     checkDeadState() {
+        if (this.stepsLeft <= 0) return;
         if (this.hasValidMoves()) return;
         setTimeout(() => this.onLose(), 300);
     }
@@ -497,39 +1058,64 @@ class Game {
             this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
         );
 
-        // 1. Any face-up basic card matches an active slot category?
-        for (const cardObj of this.cards) {
-            if (cardObj.removed || !cardObj.faceUp) continue;
-            if (cardObj.card.type === 'regular' && activeKeys.has(cardObj.card.category)) return true;
+        // 1. Tableau bottom cards → slot
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            const topCard = col[col.length - 1];
+            if (!topCard.faceUp) continue;
+            if (topCard.card.type === 'gold' && topCard.card.type !== 'sealed') {
+                if (hasEmptySlot) return true;
+            }
+            if (topCard.card.type === 'regular' && activeKeys.has(topCard.card.category)) return true;
         }
 
-        // 1.5. Any face-up gold card on grid + empty slot = valid move
-        if (hasEmptySlot) {
-            for (const cardObj of this.cards) {
-                if (cardObj.removed || !cardObj.faceUp) continue;
-                if (cardObj.card.type === 'gold') return true;
+        // 2. Tableau face-up cards → other columns (including multi-card moves)
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            // Check every face-up card as a potential drag start
+            for (let p = 0; p < col.length; p++) {
+                if (!col[p].faceUp) continue;
+                for (let ti = 0; ti < this.tableau.length; ti++) {
+                    if (ti === ci) continue;
+                    if (this.canStackOnColumn(col[p].card, ti)) return true;
+                }
             }
         }
 
-        // 2. Hand pile has cards to flip?
+        // 3. Hand display → slot or column
+        if (this.handDisplay.length > 0) {
+            const topCard = this.handDisplay[this.handDisplay.length - 1];
+            if (topCard.type === 'gold' && hasEmptySlot) return true;
+            if (topCard.type === 'regular' && activeKeys.has(topCard.category)) return true;
+            // Hand display → column
+            for (let ti = 0; ti < this.tableau.length; ti++) {
+                if (this.canStackOnColumn(topCard, ti)) return true;
+            }
+        }
+
+        // 4. Flip from hand pile
         if (this.handPile.length > 0) return true;
 
-        // 3. Display has cards + empty slot available?
-        if (this.handDisplay.length > 0 && hasEmptySlot) return true;
-
-        // 4. Can recycle (pile empty, display non-empty)?
-        if (this.handPile.length === 0 && this.handDisplay.length > 0) return true;
+        // 5. Recycle (costs 1 step now)
+        if (this.handPile.length === 0 && this.handDisplay.length > 0 && this.stepsLeft > 1) return true;
 
         return false;
     }
 
     onLose(reason) {
-        this.stopTimer();
         const msg = reason || 'No more moves available!';
-        const bonus = (this.retryBonus[this.level] || 0) + 30;
+        const bonus = (this.retryBonus[this.level] || 0) + 5;
         document.getElementById('lose-message').textContent =
-            `${msg} Retry with +${bonus}s time.`;
+            `${msg} Retry with +${bonus} steps.`;
         this.loseOverlay.classList.remove('hidden');
+    }
+
+    onWin() {
+        document.getElementById('win-message').textContent =
+            `All categories collected! Level ${this.level} complete!`;
+        this.winOverlay.classList.remove('hidden');
     }
 
     // ── Slot Helpers ─────────────────────────────────────────
@@ -538,55 +1124,83 @@ class Game {
         return this.slots.findIndex(s => s === null);
     }
 
-    findSlotByCategory(catKey) {
-        return this.slots.findIndex(s => s !== null && s.key === catKey);
+    completeSlot(slotIdx) {
+        this.slots[slotIdx] = null;
+        this.completedCount++;
     }
 
     // ── Rendering ────────────────────────────────────────────
 
+    // ── Chinese Mode ───────────────────────────────────────────
+
+    getDisplayName(card) {
+        return this.zhMode && card.zhName ? card.zhName : card.name;
+    }
+
+    toggleZhMode() {
+        this.zhMode = !this.zhMode;
+        const btn = document.getElementById('btn-zh');
+        if (btn) btn.classList.toggle('active', this.zhMode);
+        // Update slot zhName display
+        for (const slot of this.slots) {
+            if (slot && slot.lastCard) {
+                slot.lastCard._displayName = this.getDisplayName(slot.lastCard);
+            }
+        }
+        this.render();
+    }
+
+    injectZhNames(level) {
+        if (typeof LEVEL_CARD_DEFS === 'undefined') return;
+        const defs = LEVEL_CARD_DEFS[level];
+        if (!defs) return;
+
+        // Build lookup tables
+        const wordZhMap = {};    // {category + '|' + name: zh}
+        const catZhMap = {};     // {categoryName: zhCategoryName}
+        for (const cat of defs) {
+            if (cat.zhCategoryName) catZhMap[cat.categoryName] = cat.zhCategoryName;
+            const catKey = cat.isImage ? cat.categoryName : cat.categoryName + '_word';
+            if (cat.cardWords) {
+                for (const w of cat.cardWords) {
+                    const name = typeof w === 'string' ? w : w.name;
+                    const zh = typeof w === 'string' ? '' : (w.zh || '');
+                    if (zh) wordZhMap[catKey + '|' + name] = zh;
+                }
+            }
+        }
+
+        // Inject into all cards
+        const injectCard = (card) => {
+            if (!card) return;
+            if (card.type === 'gold') {
+                // Gold card: category name → zhCategoryName
+                const baseCat = card.category.replace(/_word$/, '');
+                card.zhName = catZhMap[baseCat] || '';
+            } else {
+                // Regular card: lookup by category + name
+                card.zhName = wordZhMap[card.category + '|' + card.name] || '';
+            }
+        };
+
+        // Tableau cards
+        for (const col of this.tableau) {
+            for (const tc of col) {
+                injectCard(tc.card);
+            }
+        }
+        // Hand pile + display
+        for (const c of this.handPile) injectCard(c);
+        for (const c of this.handDisplay) injectCard(c);
+    }
+
+    // ── Rendering ──────────────────────────────────────────────
+
     render() {
-        this.renderTimer();
+        this.renderSteps();
         this.renderSlots();
         this.renderHandArea();
-        this.renderPyramid();
-        this.updateBingoCount();
-    }
-
-    // ── Timer ───────────────────────────────────────────────
-
-    startTimer() {
-        this.stopTimer();
-        this.renderTimer();
-        this.timerInterval = setInterval(() => {
-            if (this.timePaused) return;
-            this.timeLeft--;
-            this.renderTimer();
-            if (this.timeLeft <= 0) {
-                this.stopTimer();
-                this.onLose('Time\'s up!');
-            }
-        }, 1000);
-    }
-
-    stopTimer() {
-        if (this.timerInterval) {
-            clearInterval(this.timerInterval);
-            this.timerInterval = null;
-        }
-    }
-
-    togglePause() {
-        this.timePaused = !this.timePaused;
-        const btn = document.getElementById('btn-pause');
-        btn.classList.toggle('active', this.timePaused);
-        btn.title = this.timePaused ? 'Resume Timer' : 'Pause Timer';
-    }
-
-    renderTimer() {
-        const mins = Math.floor(this.timeLeft / 60);
-        const secs = this.timeLeft % 60;
-        this.timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
-        this.timerEl.classList.toggle('low', this.timeLeft <= 30);
+        this.renderTableau();
     }
 
     renderSlots() {
@@ -603,7 +1217,6 @@ class Game {
         wrapper.className = 'slot-wrapper';
 
         if (slot === null) {
-            // Empty slot — invisible placeholder label to reserve height and prevent layout shift
             const placeholder = document.createElement('div');
             placeholder.className = 'slot-label';
             placeholder.style.visibility = 'hidden';
@@ -615,7 +1228,7 @@ class Game {
             div.innerHTML = `<img class="slot-empty-img" src="res/Panel/empty_slot.png" alt="Empty">`;
             wrapper.appendChild(div);
         } else if (slot.collected === 0) {
-            // Category placed, 0 collected — hide label until first card collected
+            const slotDisplayName = this.zhMode && slot.zhName ? slot.zhName : slot.name;
             const placeholder = document.createElement('div');
             placeholder.className = 'slot-label';
             placeholder.style.visibility = 'hidden';
@@ -623,14 +1236,15 @@ class Game {
             wrapper.appendChild(placeholder);
 
             const div = document.createElement('div');
-            div.className = 'slot-card category-placed';
-            div.innerHTML = `<img class="slot-bg-img" src="res/Panel/category_card_1.png" alt=""><span class="slot-card-text">${slot.name}</span>`;
+            div.className = 'slot-card category-placed' + (slot._animateIn ? ' animate-in' : '');
+            if (slot._animateIn) slot._animateIn = false;
+            div.innerHTML = `<img class="slot-bg-img" src="res/Panel/category_card_1.png" alt=""><span class="cat-progress">0/${slot.target}</span><span class="slot-card-text">${slotDisplayName}</span>`;
             wrapper.appendChild(div);
         } else {
-            // Collecting: label above + card with last collected image + progress
+            const slotDisplayName = this.zhMode && slot.zhName ? slot.zhName : slot.name;
             const label = document.createElement('div');
             label.className = 'slot-label';
-            label.textContent = slot.name;
+            label.textContent = slotDisplayName;
             wrapper.appendChild(label);
 
             const isFull = slot.collected >= slot.target;
@@ -639,10 +1253,11 @@ class Game {
 
             let cardContent = `<span class="cat-progress">${slot.collected}/${slot.target}</span>`;
             if (slot.lastCard) {
+                const lastCardDisplayName = this.getDisplayName(slot.lastCard);
                 if (slot.lastCard.isText) {
-                    cardContent += `<span class="slot-card-text">${slot.lastCard.name}</span>`;
+                    cardContent += `<span class="slot-card-text">${lastCardDisplayName}</span>`;
                 } else if (slot.lastCard.image) {
-                    cardContent += `<img class="slot-card-img" src="${slot.lastCard.image}" alt="${slot.lastCard.name}">`;
+                    cardContent += `<img class="slot-card-img" src="${slot.lastCard.image}" alt="${lastCardDisplayName}">`;
                 }
             }
             div.innerHTML = cardContent;
@@ -653,7 +1268,6 @@ class Game {
     }
 
     _renderCompletedBadge() {
-        // Remove existing badge if any
         const existing = this.collectorsEl.querySelector('.collector-done-badge');
         if (existing) existing.remove();
 
@@ -666,258 +1280,130 @@ class Game {
         }
     }
 
-    /** Update only a single slot element without rebuilding the entire collector area */
-    updateSlot(slotIdx) {
-        const oldWrapper = this.collectorsEl.children[slotIdx];
-        if (!oldWrapper) return;
-        const newWrapper = this._buildSlotWrapper(slotIdx);
-        this.collectorsEl.replaceChild(newWrapper, oldWrapper);
-        this._renderCompletedBadge();
-    }
+    renderTableau() {
+        this.tableauEl.innerHTML = '';
 
-    getCardPosition(layer, row, col) {
-        const containerW = getContainerInnerWidth();
-        // All layers share the same 5x5 grid with small visual offset per layer
-        const gridWidth = 5 * CARD_W + 4 * GAP_X;
-        const gridOffsetX = (containerW - gridWidth) / 2;
-
-        const x = gridOffsetX + col * (CARD_W + GAP_X) + layer * STACK_OFFSET_X;
-        const y = row * (CARD_H + GAP_Y) + layer * STACK_OFFSET_Y;
-
-        return { x, y };
-    }
-
-    computePyramidHeight() {
-        // Height = 5-row grid + topmost layer offset
-        const topLayer = this.currentNumLayers - 1;
-        const bottom = 5 * (CARD_H + GAP_Y) - GAP_Y + topLayer * STACK_OFFSET_Y;
-        return bottom;
-    }
-
-    getStackCountAt(row, col) {
-        let count = 0;
-        for (const card of this.cards) {
-            if (!card.removed && card.row === row && card.col === col) count++;
-        }
-        return count;
-    }
-
-    renderPyramid() {
-        this.gridEl.innerHTML = '';
-        const pyramidHeight = this.computePyramidHeight();
-        this.gridEl.style.height = pyramidHeight + 'px';
-
-        // Track which cells already had marks before this render
-        if (!this._prevCleared) this._prevCleared = {};
-
-        // Render cleared marks for bottom layer
-        for (let r = 0; r < 5; r++) {
-            for (let c = 0; c < 5; c++) {
-                if (this.cleared[r][c]) {
-                    const pos = this.getCardPosition(0, r, c);
-                    const mark = document.createElement('div');
-                    mark.className = 'cleared-mark-pyramid';
-                    mark.dataset.row = r;
-                    mark.dataset.col = c;
-                    if (this.isCellInBingo(r, c) && !this._pendingBingoCells.has(r + ',' + c)) {
-                        mark.classList.add('bingo-cell');
-                    }
-                    // Only animate newly cleared cells
-                    const cellKey = r + ',' + c;
-                    if (this._prevCleared[cellKey]) {
-                        mark.classList.add('no-anim');
-                    }
-                    this._prevCleared[cellKey] = true;
-                    mark.style.left = pos.x + 'px';
-                    mark.style.top = pos.y + 'px';
-                    mark.style.zIndex = '1';
-                    this.gridEl.appendChild(mark);
-                }
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            const colEl = document.createElement('div');
+            colEl.className = 'tableau-column';
+            if (col.length === 0) {
+                colEl.classList.add('empty-column');
             }
-        }
+            colEl.dataset.colIdx = ci;
 
-        // Render all non-removed cards, sorted by layer (lower first)
-        const sortedCards = [...this.cards].filter(c => !c.removed)
-            .sort((a, b) => a.layer - b.layer || a.row - b.row || a.col - b.col);
+            let topOffset = 0;
+            for (let pos = 0; pos < col.length; pos++) {
+                const tc = col[pos];
+                const el = document.createElement('div');
+                el.className = 'tableau-card';
+                el.dataset.colIdx = ci;
+                el.dataset.posIdx = pos;
+                el.style.top = topOffset + 'px';
+                el.style.zIndex = pos + 1;
 
-        for (const cardObj of sortedCards) {
-            const pos = this.getCardPosition(cardObj.layer, cardObj.row, cardObj.col);
-            const zIndex = cardObj.layer * 100 + cardObj.row * 10 + cardObj.col;
+                const inner = document.createElement('div');
+                inner.className = 'card-inner';
 
-            const el = document.createElement('div');
-            el.className = 'pyramid-card';
-            el.dataset.cardId = cardObj.id;
-            el.style.left = pos.x + 'px';
-            el.style.top = pos.y + 'px';
-            el.style.zIndex = zIndex;
-
-            if (!cardObj.faceUp) {
-                el.classList.add('face-down');
-            }
-
-            // Inner container for flip
-            const inner = document.createElement('div');
-            inner.className = 'card-inner';
-
-            // Always render front face — all cards are visible face-up
-            const face = document.createElement('div');
-            let colorClass;
-            if (cardObj.card.type === 'gold') {
-                colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
-                face.className = `card-face gold-grid-card${colorClass}`;
-                face.innerHTML = `<span class="card-text">${cardObj.card.name}</span>`;
-            } else if (cardObj.card.type === 'filler') {
-                colorClass = ' ' + FILLER_COLOR_DEF.name;
-                face.className = `card-face${colorClass}`;
-
-                if (cardObj.card.isText) {
-                    face.innerHTML = `
-                        <span class="card-text">${cardObj.card.name}</span>
-                    `;
+                if (!tc.faceUp) {
+                    el.classList.add('face-down');
+                    const back = document.createElement('div');
+                    back.className = 'card-back';
+                    inner.appendChild(back);
+                    topOffset += FACE_DOWN_H;
                 } else {
-                    face.innerHTML = `
-                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
-                    `;
-                }
-            } else {
-                colorClass = ' ' + (this.categoryColorMap[cardObj.card.category] || '');
-                face.className = `card-face${colorClass}`;
+                    el.classList.add('face-up');
+                    el.style.touchAction = 'none';
 
-                if (cardObj.card.isText) {
-                    face.innerHTML = `
-                        <span class="card-text">${cardObj.card.name}</span>
-                    `;
-                } else {
-                    face.innerHTML = `
-                        <img class="card-img" src="${cardObj.card.image}" alt="${cardObj.card.name}">
-                    `;
+                    if (tc.justFlipped) {
+                        el.classList.add('flipping');
+                        tc.justFlipped = false;
+                    }
+
+                    // Check if this card is sealed (gold card that seals the column)
+                    if (tc.card.type === 'gold' && pos === col.length - 1) {
+                        el.classList.add('sealed');
+                    }
+
+                    // Non-last face-up cards are partially covered
+                    const isCovered = pos < col.length - 1;
+                    if (isCovered) {
+                        el.classList.add('covered');
+                    }
+
+                    const face = document.createElement('div');
+                    const displayName = this.getDisplayName(tc.card);
+
+                    if (tc.card.type === 'gold') {
+                        face.className = 'card-face gold-grid-card';
+                        const goldTarget = this.categoryTargets[tc.card.category] || 0;
+                        const goldCounter = `<span class="gold-counter">0/${goldTarget}</span>`;
+                        if (isCovered) {
+                            face.innerHTML = `${goldCounter}<span class="card-name">${displayName}</span>`;
+                        } else {
+                            face.innerHTML = `${goldCounter}<span class="card-text">${displayName}</span>`;
+                        }
+                    } else {
+                        face.className = 'card-face';
+                        if (isCovered) {
+                            if (tc.card.isText) {
+                                face.innerHTML = `<span class="card-name">${displayName}</span>`;
+                            } else {
+                                face.innerHTML = `<img class="card-img" src="${tc.card.image}" alt="${displayName}">`;
+                            }
+                        } else if (tc.card.isText) {
+                            face.innerHTML = `<span class="card-text">${displayName}</span>`;
+                        } else {
+                            face.innerHTML = `<img class="card-img" src="${tc.card.image}" alt="${displayName}">`;
+                        }
+                    }
+
+                    inner.appendChild(face);
+                    // Non-last face-up cards: show only top portion; last card: full height
+                    if (pos < col.length - 1) {
+                        topOffset += FACE_UP_OFFSET;
+                    } else {
+                        topOffset += CARD_H;
+                    }
                 }
+
+                el.appendChild(inner);
+                colEl.appendChild(el);
             }
 
-            // Stack count badge (only on top/face-up card)
-            if (cardObj.faceUp) {
-                const stackCount = this.getStackCountAt(cardObj.row, cardObj.col);
-                if (stackCount > 1) {
-                    const badge = document.createElement('span');
-                    badge.className = 'stack-count-badge';
-                    badge.textContent = stackCount;
-                    face.appendChild(badge);
-                }
+            // Set column height = total offset accumulated
+            if (col.length > 0) {
+                colEl.style.height = topOffset + 'px';
             }
 
-            inner.appendChild(face);
-
-            el.appendChild(inner);
-
-            // Clear justFlipped without playing animation —
-            // revealed cards should appear instantly, not flip.
-            cardObj.justFlipped = false;
-
-            this.gridEl.appendChild(el);
+            this.tableauEl.appendChild(colEl);
         }
     }
 
-    updateBingoCount() {
-        const lines = this.findBingoLines();
-        this.bingoLines = lines;
-        this.bingoCountEl.textContent = `${lines.length} / ${this.bingosNeeded}`;
-
-        const indicator = document.getElementById('category-indicator');
-        indicator.innerHTML = '';
-        for (let i = 0; i < this.bingosNeeded; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'cat-dot' + (i < lines.length ? ' active' : '');
-            indicator.appendChild(dot);
-        }
-    }
-
-    // ── Card Interaction ─────────────────────────────────────
-
-    onPyramidCardClick(cardId) {
-        if (this.isAnimating) return;
-
-        const cardObj = this.cards.find(c => c.id === cardId);
-        if (!cardObj || cardObj.removed || !cardObj.faceUp) return;
-
-        // Handle filler cards, gold grid cards, and regular cards
-        if (cardObj.card.type === 'filler') {
-            this.onFillerCardClick(cardObj);
-        } else if (cardObj.card.type === 'gold') {
-            this.onGoldGridCardClick(cardObj);
-        } else {
-            this.onRegularCardClick(cardObj);
-        }
-    }
-
-    // ── Hand Area Interactions ────────────────────────────────
+    // ── Hand Area ────────────────────────────────────────────
 
     onHandPileClick() {
         if (this.isAnimating || this.flyAnimCount > 0) return;
 
         if (this.handPile.length > 0) {
-            // Flip top card from pile to display
             const card = this.handPile.pop();
             this.handDisplay.push(card);
             this.moveHistory.push({ action: 'flip_hand', card: { ...card } });
+            this.decrementStep(); // flip costs 1 step
             this.renderHandArea();
             this.checkDeadState();
         } else if (this.handDisplay.length > 0) {
-            // Recycle: reverse display back into pile (Klondike-style, no shuffle)
+            // Recycle: costs 1 step (changed from 0)
             this.moveHistory.push({
                 action: 'recycle',
                 displaySnapshot: this.handDisplay.map(c => ({ ...c })),
             });
-            this.handPile = this.handDisplay.reverse();
+            this.handPile = [...this.handDisplay].reverse();
             this.handDisplay = [];
+            this.decrementStep(); // recycle costs 1 step
             this.renderHandArea();
             this.checkDeadState();
         }
-    }
-
-    onHandDisplayClick() {
-        if (this.isAnimating || this.flyAnimCount > 0) return;
-        if (this.handDisplay.length === 0) return;
-
-        const emptySlotIdx = this.findEmptySlot();
-        if (emptySlotIdx === -1) {
-            // Shake the display area
-            this.handDisplayEl.classList.add('no-match-hand');
-            setTimeout(() => this.handDisplayEl.classList.remove('no-match-hand'), 400);
-            if (!this.timePaused) {
-                this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-                this.renderTimer();
-            }
-            // Floating penalty above the hand display card
-            const topCard = this.handDisplayEl.querySelector('.hand-display-card.topmost');
-            if (topCard) {
-                const penaltyEl = document.createElement('span');
-                penaltyEl.className = 'time-penalty-card';
-                penaltyEl.textContent = `-${this.penaltyTime}s`;
-                topCard.appendChild(penaltyEl);
-                setTimeout(() => penaltyEl.remove(), 1000);
-            }
-            return;
-        }
-
-        const card = this.handDisplay.pop();
-
-        this.moveHistory.push({
-            action: 'place_from_display',
-            card: { ...card },
-            slotIndex: emptySlotIdx,
-        });
-
-        this.slots[emptySlotIdx] = {
-            key: card.category,
-            name: card.name,
-            collected: 0,
-            target: this.categoryTargets[card.category] || 0,
-            lastCard: null,
-        };
-
-        this.renderSlots();
-        this.renderHandArea();
-        this.checkDeadState();
     }
 
     renderHandArea() {
@@ -925,7 +1411,6 @@ class Game {
         this.handPileEl.innerHTML = '';
         this.handDisplayEl.innerHTML = '';
 
-        // Remove old label if present, then add fresh label
         const handArea = document.getElementById('hand-area');
         const oldLabel = handArea.querySelector('.hand-area-label');
         if (oldLabel) oldLabel.remove();
@@ -937,7 +1422,6 @@ class Game {
 
         // Pile rendering
         if (this.handPile.length > 0) {
-            // Show stacked card backs (up to 3 visual) + count badge
             const showCount = Math.min(this.handPile.length, 3);
             for (let i = 0; i < showCount; i++) {
                 const cardBack = document.createElement('div');
@@ -953,7 +1437,6 @@ class Game {
                 this.handPileEl.appendChild(badge);
             }
         } else if (this.handDisplay.length > 0) {
-            // Show recover icon
             const recoverImg = document.createElement('img');
             recoverImg.className = 'recover-icon';
             recoverImg.src = 'res/Panel/recover.png';
@@ -961,434 +1444,184 @@ class Game {
             this.handPileEl.appendChild(recoverImg);
         }
 
-        // Display rendering: show top 3 cards fanned out
+        // Display rendering — topmost card at left, covered cards to the right
         const displayCount = this.handDisplay.length;
         const showMax = Math.min(displayCount, 3);
         for (let i = 0; i < showMax; i++) {
             const idx = displayCount - showMax + i;
             const card = this.handDisplay[idx];
             const cardEl = document.createElement('div');
-            const colorClass = this.categoryColorMap[card.category] || '';
+            const isGold = card.type === 'gold';
             const isTop = (i === showMax - 1);
-            cardEl.className = `hand-display-card ${colorClass}${isTop ? ' topmost' : ''}`;
-            cardEl.style.left = (i * 18) + 'px';
-            cardEl.innerHTML = `<span class="hand-card-name">${card.name}</span>`;
+            const isCovered = !isTop;
+            cardEl.className = `hand-display-card${isTop ? ' topmost' : ''}`;
+            if (isGold) {
+                cardEl.style.background = `url('res/Panel/category_card_1.png') center/cover no-repeat`;
+                cardEl.style.border = '2px solid #ffd700';
+            }
+            // Reverse layout: topmost (last i) at left=0, older cards shift right
+            const reversePos = showMax - 1 - i;
+            cardEl.style.left = (reversePos * 18) + 'px';
+            cardEl.style.zIndex = i;  // topmost gets highest z-index
+            cardEl.style.touchAction = 'none';
+
+            const inner = document.createElement('div');
+
+            if (isCovered) {
+                // Covered card: show content in left 18px strip (CSS handles sizing)
+                inner.className = 'card-inner hand-covered-inner';
+                const coveredName = this.getDisplayName(card);
+                if (card.type === 'gold') {
+                    // Gold card covered: just show name, no counter
+                    inner.innerHTML = `<span class="hand-covered-text">${coveredName}</span>`;
+                } else if (!card.isText && card.image) {
+                    inner.innerHTML = `<img class="hand-covered-img" src="${card.image}" alt="${coveredName}">`;
+                } else {
+                    inner.innerHTML = `<span class="hand-covered-text">${coveredName}</span>`;
+                }
+            } else if (isGold) {
+                inner.className = 'card-inner';
+                inner.style.width = '100%';
+                inner.style.height = '100%';
+                inner.style.display = 'flex';
+                inner.style.flexDirection = 'column';
+                inner.style.alignItems = 'center';
+                inner.style.justifyContent = 'center';
+                const goldTarget = this.categoryTargets[card.category] || 0;
+                const goldName = this.getDisplayName(card);
+                inner.innerHTML = `<span class="gold-counter">0/${goldTarget}</span><span class="hand-card-name">${goldName}</span>`;
+            } else {
+                inner.className = 'card-inner';
+                inner.style.width = '100%';
+                inner.style.height = '100%';
+                inner.style.display = 'flex';
+                inner.style.flexDirection = 'column';
+                inner.style.alignItems = 'center';
+                inner.style.justifyContent = 'center';
+                if (card.isText) {
+                    inner.innerHTML = `<span class="hand-card-name">${this.getDisplayName(card)}</span>`;
+                } else if (card.image) {
+                    inner.innerHTML = `<img class="card-img" src="${card.image}" alt="${this.getDisplayName(card)}" style="width:40px;height:48px;object-fit:contain;pointer-events:none;">`;
+                } else {
+                    inner.innerHTML = `<span class="hand-card-name">${this.getDisplayName(card)}</span>`;
+                }
+            }
+
+            cardEl.appendChild(inner);
             this.handDisplayEl.appendChild(cardEl);
         }
     }
 
-    onRegularCardClick(cardObj) {
-        const slotIdx = this.findSlotByCategory(cardObj.card.category);
-        if (slotIdx === -1) {
-            this.shakeCardById(cardObj.id);
-            return;
-        }
-
-        const slot = this.slots[slotIdx];
-        if (slot.collected >= slot.target) {
-            this.shakeCardById(cardObj.id);
-            return;
-        }
-
-        this.moveHistory.push({
-            action: 'collect_regular',
-            cardId: cardObj.id,
-            card: { ...cardObj.card },
-            slotIndex: slotIdx,
-            layer: cardObj.layer,
-            row: cardObj.row,
-            col: cardObj.col,
-            previousLastCard: slot.lastCard ? { ...slot.lastCard } : null,
-        });
-
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
-        const slotWrapper = this.collectorsEl.children[slotIdx];
-        const slotCardEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
-
-        // Capture animation source/target before model update changes the DOM
-        let sourceRect, targetRect, cardHTML;
-        if (cardEl && slotCardEl) {
-            sourceRect = cardEl.getBoundingClientRect();
-            targetRect = slotCardEl.getBoundingClientRect();
-            cardHTML = cardEl.querySelector('.card-inner').innerHTML;
-            cardEl.style.visibility = 'hidden';
-        }
-
-        // Detect if this collection will complete the slot
-        const isLastCard = (slot.collected + 1 >= slot.target);
-        const hasFlyAnim = !!(sourceRect && targetRect);
-        const deferComplete = isLastCard && hasFlyAnim;
-
-        // Update model and re-render immediately (don't wait for animation)
-        // but defer slot completion if it's the last card with a fly animation
-        this._finishRegularCollect(cardObj, slot, slotIdx, deferComplete);
-
-        // Fire-and-forget fly animation (purely visual)
-        if (sourceRect && targetRect) {
-            this.flyAnimCount++;
-            this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
-                this.flyAnimCount--;
-                if (deferComplete) {
-                    // Last card arrived — now clear the completed slot
-                    this.completeSlot(slotIdx);
-                    this.updateSlot(slotIdx);
-                } else {
-                    // Receiving pulse after fly animation arrives
-                    const sw = this.collectorsEl.children[slotIdx];
-                    const se = sw ? sw.querySelector('.slot-card') : null;
-                    if (se) {
-                        se.classList.add('receiving');
-                        setTimeout(() => se.classList.remove('receiving'), 400);
-                    }
-                }
-            });
-        }
-    }
-
-    _finishRegularCollect(cardObj, slot, slotIdx, deferComplete = false) {
-        cardObj.removed = true;
-
-        if (cardObj.layer === 0) {
-            this.cleared[cardObj.row][cardObj.col] = true;
-        }
-
-        this.updateFaceUpStates();
-        slot.collected++;
-        slot.lastCard = { ...cardObj.card };
-
-        if (!deferComplete && slot.collected >= slot.target) {
-            this.completeSlot(slotIdx);
-        }
-
-        // Snapshot old bingo lines, compute new ones
-        const oldLines = [...this.bingoLines];
-        const newLines = this.findBingoLines();
-        const freshLines = this._findFreshBingoLines(oldLines, newLines);
-
-        // Mark fresh bingo cells as pending so renderPyramid doesn't give them bingo-cell yet
-        this._pendingBingoCells.clear();
-        for (const line of freshLines) {
-            for (const [r, c] of line.cells) {
-                this._pendingBingoCells.add(r + ',' + c);
-            }
-        }
-
-        // Update bingoLines before render so existing bingo cells show correctly
-        this.bingoLines = newLines;
-
-        // Only re-render the pyramid and the changed slot — not the entire UI
-        this.renderPyramid();
-        this.updateSlot(slotIdx);
-        this.updateBingoCount();
-
-        if (freshLines.length > 0) {
-            // New BINGO line(s) detected — play animation, then check win
-            this.isAnimating = true;
-            this._animateBingoLines(freshLines).then(() => {
-                this._pendingBingoCells.clear();
-                this.isAnimating = false;
-                if (newLines.length >= this.bingosNeeded) {
-                    setTimeout(() => this.onWin(), 300);
-                } else {
-                    this.checkDeadState();
-                }
-            });
-        } else {
-            if (newLines.length >= this.bingosNeeded) {
-                setTimeout(() => this.onWin(), 500);
-            } else {
-                this.checkDeadState();
-            }
-        }
-    }
-
-    // ── Filler Card Interaction ──────────────────────────────
-
-    onFillerCardClick(cardObj) {
-        // Fillers are non-removable — shake + time penalty
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
-        if (cardEl) {
-            cardEl.classList.add('no-match');
-            setTimeout(() => cardEl.classList.remove('no-match'), 400);
-            // Floating penalty above the card
-            const penaltyEl = document.createElement('span');
-            penaltyEl.className = 'time-penalty-card';
-            penaltyEl.textContent = `-${this.penaltyTime}s`;
-            cardEl.appendChild(penaltyEl);
-            setTimeout(() => penaltyEl.remove(), 1000);
-        }
-        if (!this.timePaused) {
-            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-            this.renderTimer();
-        }
-    }
-
-    // ── Gold Grid Card Interaction ───────────────────────────
-
-    onGoldGridCardClick(cardObj) {
-        const emptySlotIdx = this.findEmptySlot();
-        if (emptySlotIdx === -1) {
-            // No empty slot — shake + penalty (same as filler behavior)
-            this.shakeCardById(cardObj.id);
-            return;
-        }
-
-        // Record move for undo
-        this.moveHistory.push({
-            action: 'collect_gold_grid',
-            cardId: cardObj.id,
-            card: { ...cardObj.card },
-            slotIndex: emptySlotIdx,
-            layer: cardObj.layer,
-            row: cardObj.row,
-            col: cardObj.col,
-        });
-
-        // Capture animation source/target before model update
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardObj.id}"]`);
-        const slotWrapper = this.collectorsEl.children[emptySlotIdx];
-        const slotCardEl = slotWrapper ? slotWrapper.querySelector('.slot-card') : null;
-
-        let sourceRect, targetRect, cardHTML;
-        if (cardEl && slotCardEl) {
-            sourceRect = cardEl.getBoundingClientRect();
-            targetRect = slotCardEl.getBoundingClientRect();
-            cardHTML = cardEl.querySelector('.card-inner').innerHTML;
-            cardEl.style.visibility = 'hidden';
-        }
-
-        // Update model
-        cardObj.removed = true;
-        if (cardObj.layer === 0) {
-            this.cleared[cardObj.row][cardObj.col] = true;
-        }
-
-        // Create the collection slot
-        this.slots[emptySlotIdx] = {
-            key: cardObj.card.category,
-            name: cardObj.card.name,
-            collected: 0,
-            target: this.categoryTargets[cardObj.card.category] || 0,
-            lastCard: null,
-        };
-
-        this.updateFaceUpStates();
-
-        // Snapshot old bingo lines, compute new ones
-        const oldLines = [...this.bingoLines];
-        const newLines = this.findBingoLines();
-        const freshLines = this._findFreshBingoLines(oldLines, newLines);
-
-        this._pendingBingoCells.clear();
-        for (const line of freshLines) {
-            for (const [r, c] of line.cells) {
-                this._pendingBingoCells.add(r + ',' + c);
-            }
-        }
-        this.bingoLines = newLines;
-
-        this.renderPyramid();
-        this.renderSlots();
-        this.updateBingoCount();
-
-        // Fire fly animation
-        if (sourceRect && targetRect) {
-            this.flyAnimCount++;
-            this.flyCard(sourceRect, targetRect, cardHTML).then(() => {
-                this.flyAnimCount--;
-                const sw = this.collectorsEl.children[emptySlotIdx];
-                const se = sw ? sw.querySelector('.slot-card') : null;
-                if (se) {
-                    se.classList.add('receiving');
-                    setTimeout(() => se.classList.remove('receiving'), 400);
-                }
-            });
-        }
-
-        if (freshLines.length > 0) {
-            this.isAnimating = true;
-            this._animateBingoLines(freshLines).then(() => {
-                this._pendingBingoCells.clear();
-                this.isAnimating = false;
-                if (newLines.length >= this.bingosNeeded) {
-                    setTimeout(() => this.onWin(), 300);
-                } else {
-                    this.checkDeadState();
-                }
-            });
-        } else {
-            if (newLines.length >= this.bingosNeeded) {
-                setTimeout(() => this.onWin(), 500);
-            } else {
-                this.checkDeadState();
-            }
-        }
-    }
-
-    completeSlot(slotIdx) {
-        this.slots[slotIdx] = null;
-        this.completedCount++;
-    }
-
-    shakeCardById(cardId) {
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardId}"]`);
-        if (cardEl) {
-            cardEl.classList.add('no-match');
-            setTimeout(() => cardEl.classList.remove('no-match'), 400);
-            // Floating penalty above the card
-            const penaltyEl = document.createElement('span');
-            penaltyEl.className = 'time-penalty-card';
-            penaltyEl.textContent = `-${this.penaltyTime}s`;
-            cardEl.appendChild(penaltyEl);
-            setTimeout(() => penaltyEl.remove(), 1000);
-        }
-        // Penalty: lose time for invalid click
-        if (!this.timePaused) {
-            this.timeLeft = Math.max(0, this.timeLeft - this.penaltyTime);
-            this.renderTimer();
-        }
-    }
-
-    // ── Bingo Logic ──────────────────────────────────────────
-
-    findBingoLines() {
-        const lines = [];
-        for (let r = 0; r < 5; r++) {
-            if (this.cleared[r].every(v => v))
-                lines.push({ type: 'row', index: r, cells: [0,1,2,3,4].map(c => [r, c]) });
-        }
-        for (let c = 0; c < 5; c++) {
-            if ([0,1,2,3,4].every(r => this.cleared[r][c]))
-                lines.push({ type: 'col', index: c, cells: [0,1,2,3,4].map(r => [r, c]) });
-        }
-        if ([0,1,2,3,4].every(i => this.cleared[i][i]))
-            lines.push({ type: 'diag', index: 0, cells: [0,1,2,3,4].map(i => [i, i]) });
-        if ([0,1,2,3,4].every(i => this.cleared[i][4 - i]))
-            lines.push({ type: 'diag', index: 1, cells: [0,1,2,3,4].map(i => [i, 4 - i]) });
-        // Four corners
-        if (this.cleared[0][0] && this.cleared[0][4] && this.cleared[4][0] && this.cleared[4][4])
-            lines.push({ type: 'corners', index: 0, cells: [[0,0],[0,4],[4,0],[4,4]] });
-        return lines;
-    }
-
-    isCellInBingo(row, col) {
-        return this.bingoLines.some(line =>
-            line.cells.some(([r, c]) => r === row && c === col)
-        );
-    }
-
-    _findFreshBingoLines(oldLines, newLines) {
-        const oldKeys = new Set(oldLines.map(l => l.type + ':' + l.index));
-        return newLines.filter(l => !oldKeys.has(l.type + ':' + l.index));
-    }
-
-    async _animateBingoLines(freshLines) {
-        // Collect all unique cells from fresh lines
-        const cellSet = new Set();
-        const cells = [];
-        for (const line of freshLines) {
-            for (const [r, c] of line.cells) {
-                const key = r + ',' + c;
-                if (!cellSet.has(key)) {
-                    cellSet.add(key);
-                    cells.push([r, c]);
-                }
-            }
-        }
-
-        // Animate each cell to bingo star sequentially
-        for (const [r, c] of cells) {
-            await this._animateCellToBingoStar(r, c);
-        }
-
-        // Show BINGO flash text
-        await this._showBingoFlash();
-    }
-
-    _animateCellToBingoStar(row, col) {
-        return new Promise(resolve => {
-            const mark = this.gridEl.querySelector(
-                `.cleared-mark-pyramid[data-row="${row}"][data-col="${col}"]`
-            );
-            if (mark) {
-                mark.classList.add('bingo-cell', 'bingo-star-pop');
-            }
-            setTimeout(resolve, 200);
-        });
-    }
-
-    _showBingoFlash() {
-        return new Promise(resolve => {
-            const overlay = document.createElement('div');
-            overlay.className = 'bingo-flash-overlay';
-            const text = document.createElement('div');
-            text.className = 'bingo-flash-text';
-            text.textContent = 'BINGO!';
-            overlay.appendChild(text);
-            document.body.appendChild(overlay);
-
-            // After display duration, fade out then remove
-            setTimeout(() => {
-                overlay.classList.add('bingo-flash-exit');
-                setTimeout(() => {
-                    overlay.remove();
-                    resolve();
-                }, 400);
-            }, 800);
-        });
-    }
-
-    onWin() {
-        this.stopTimer();
-        const lines = this.bingoLines.length;
-        document.getElementById('win-message').textContent =
-            `You got ${lines} BINGO line${lines > 1 ? 's' : ''}! Level ${this.level} complete!`;
-        this.winOverlay.classList.remove('hidden');
-    }
-
-    // ── Tools ────────────────────────────────────────────────
+    // ── Hint ────────────────────────────────────────────────
 
     showHint() {
         if (this.isAnimating || this.flyAnimCount > 0) return;
 
-        // Priority 1: matching basic card in grid
         const activeKeys = new Set(
             this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
         );
-        for (const cardObj of this.cards) {
-            if (cardObj.removed || !cardObj.faceUp) continue;
-            if (cardObj.card.type === 'regular' && activeKeys.has(cardObj.card.category)) {
-                this.highlightCardById(cardObj.id);
+        const hasEmptySlot = this.findEmptySlot() !== -1;
+
+        // Priority 1: Tableau card matches collector slot
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            const topCard = col[col.length - 1];
+            if (!topCard.faceUp) continue;
+            if (topCard.card.type === 'regular' && activeKeys.has(topCard.card.category)) {
+                this._highlightTableauCard(ci, col.length - 1);
                 return;
             }
         }
 
-        // Priority 1.5: gold card on grid + empty slot
-        if (this.findEmptySlot() !== -1) {
-            for (const cardObj of this.cards) {
-                if (cardObj.removed || !cardObj.faceUp) continue;
-                if (cardObj.card.type === 'gold') {
-                    this.highlightCardById(cardObj.id);
+        // Priority 2: Gold card + empty slot
+        if (hasEmptySlot) {
+            for (let ci = 0; ci < this.tableau.length; ci++) {
+                const col = this.tableau[ci];
+                if (col.length === 0) continue;
+                const topCard = col[col.length - 1];
+                if (!topCard.faceUp) continue;
+                if (topCard.card.type === 'gold') {
+                    this._highlightTableauCard(ci, col.length - 1);
                     return;
                 }
             }
         }
 
-        // Priority 2: place display card into empty slot
-        if (this.handDisplay.length > 0 && this.findEmptySlot() !== -1) {
-            this.handDisplayEl.classList.add('hint-highlight-hand');
-            setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
-            return;
+        // Priority 3: Hand display matches
+        if (this.handDisplay.length > 0) {
+            const topCard = this.handDisplay[this.handDisplay.length - 1];
+            if (topCard.type === 'gold' && hasEmptySlot) {
+                this.handDisplayEl.classList.add('hint-highlight-hand');
+                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
+                return;
+            }
+            if (topCard.type === 'regular' && activeKeys.has(topCard.category)) {
+                this.handDisplayEl.classList.add('hint-highlight-hand');
+                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
+                return;
+            }
         }
 
-        // Priority 3: flip from pile
+        // Priority 4: Hand display top card can stack on a tableau column
+        //   Prefer non-empty columns first, then empty columns
+        if (this.handDisplay.length > 0) {
+            const topCard = this.handDisplay[this.handDisplay.length - 1];
+            let found = false;
+            // First pass: non-empty columns
+            for (let ti = 0; ti < this.tableau.length; ti++) {
+                if (this.tableau[ti].length > 0 && this.canStackOnColumn(topCard, ti)) {
+                    found = true;
+                    break;
+                }
+            }
+            // Second pass: empty columns
+            if (!found) {
+                for (let ti = 0; ti < this.tableau.length; ti++) {
+                    if (this.tableau[ti].length === 0 && this.canStackOnColumn(topCard, ti)) {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (found) {
+                this.handDisplayEl.classList.add('hint-highlight-hand');
+                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
+                return;
+            }
+        }
+
+        // Priority 5: Tableau inter-column moves (including multi-card)
+        //   Suggest any valid move between columns
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            // Find the deepest face-up card in the column
+            let deepestFaceUp = col.length - 1;
+            for (let p = 0; p < col.length; p++) {
+                if (col[p].faceUp) { deepestFaceUp = p; break; }
+            }
+            // Try moving from each face-up position
+            for (let startPos = deepestFaceUp; startPos < col.length; startPos++) {
+                const moveCard = col[startPos];
+                for (let ti = 0; ti < this.tableau.length; ti++) {
+                    if (ti === ci) continue;
+                    if (this.canStackOnColumn(moveCard.card, ti)) {
+                        this._highlightTableauCard(ci, startPos);
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Priority 6: Flip hand
         if (this.handPile.length > 0) {
             this.handPileEl.classList.add('hint-highlight-hand');
             setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
             return;
         }
 
-        // Priority 4: recycle
+        // Priority 7: Recycle
         if (this.handPile.length === 0 && this.handDisplay.length > 0) {
             this.handPileEl.classList.add('hint-highlight-hand');
             setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
@@ -1396,13 +1629,17 @@ class Game {
         }
     }
 
-    highlightCardById(cardId) {
-        const cardEl = this.gridEl.querySelector(`[data-card-id="${cardId}"]`);
+    _highlightTableauCard(colIdx, posIdx) {
+        const cardEl = this.tableauEl.querySelector(
+            `.tableau-card[data-col-idx="${colIdx}"][data-pos-idx="${posIdx}"]`
+        );
         if (cardEl) {
             cardEl.classList.add('hint-highlight');
             setTimeout(() => cardEl.classList.remove('hint-highlight'), 2000);
         }
     }
+
+    // ── Undo ────────────────────────────────────────────────
 
     undo() {
         if (this.isAnimating || this.flyAnimCount > 0) return;
@@ -1410,65 +1647,180 @@ class Game {
 
         const move = this.moveHistory.pop();
 
-        if (move.action === 'collect_regular') {
-            // Restore card to grid, decrement slot
-            const cardObj = this.cards.find(c => c.id === move.cardId);
-            cardObj.removed = false;
-            cardObj.card = move.card;
-
-            if (move.layer === 0) {
-                this.cleared[move.row][move.col] = false;
+        if (move.action === 'move_tableau_to_slot') {
+            // Undo auto-flip
+            if (move.autoFlipped) {
+                const col = this.tableau[move.colIdx];
+                if (col.length > 0) {
+                    col[col.length - 1].faceUp = false;
+                }
             }
+            // Restore card to source column
+            this.tableau[move.colIdx].push({
+                id: move.tableauCard.id,
+                card: { ...move.tableauCard.card },
+                faceUp: true,
+                justFlipped: false,
+            });
 
-            if (this.slots[move.slotIndex] === null) {
-                this.completedCount--;
-                const catKey = move.card.category;
-                this.slots[move.slotIndex] = {
-                    key: catKey,
-                    name: CATEGORIES[catKey].name,
-                    collected: this.categoryTargets[catKey] - 1,
-                    target: this.categoryTargets[catKey],
-                    lastCard: move.previousLastCard || null,
-                };
+            if (move.slotWasNull) {
+                // Was a gold card creating a slot
+                this.slots[move.slotIdx] = null;
             } else {
-                this.slots[move.slotIndex].collected--;
-                this.slots[move.slotIndex].lastCard = move.previousLastCard || null;
+                // Was a regular card collecting
+                if (this.slots[move.slotIdx] === null) {
+                    // Slot was completed
+                    this.completedCount--;
+                    const catKey = move.tableauCard.card.category;
+                    this.slots[move.slotIdx] = {
+                        key: catKey,
+                        name: CATEGORIES[catKey].name,
+                        zhName: move.tableauCard.card.zhName || '',
+                        collected: move.previousCollected,
+                        target: this.categoryTargets[catKey],
+                        lastCard: move.previousLastCard || null,
+                    };
+                } else {
+                    this.slots[move.slotIdx].collected = move.previousCollected;
+                    this.slots[move.slotIdx].lastCard = move.previousLastCard || null;
+                }
+            }
+            this.stepsLeft++;
+
+        } else if (move.action === 'move_multi_tableau_to_slot') {
+            // Undo auto-flip
+            if (move.autoFlipped) {
+                const col = this.tableau[move.colIdx];
+                if (col.length > 0) {
+                    col[col.length - 1].faceUp = false;
+                }
             }
 
-            this.updateFaceUpStates();
-        } else if (move.action === 'collect_gold_grid') {
-            // Restore gold card to grid, clear the slot it created
-            const cardObj = this.cards.find(c => c.id === move.cardId);
-            cardObj.removed = false;
-            cardObj.card = move.card;
-
-            if (move.layer === 0) {
-                this.cleared[move.row][move.col] = false;
+            // Restore all cards to source column
+            for (const tc of move.removedCards) {
+                this.tableau[move.colIdx].push({
+                    id: tc.id,
+                    card: { ...tc.card },
+                    faceUp: tc.faceUp,
+                    justFlipped: false,
+                });
             }
 
-            this.slots[move.slotIndex] = null;
-            this.updateFaceUpStates();
-        } else if (move.action === 'place_from_display') {
-            // Clear slot, push card back to display
-            this.slots[move.slotIndex] = null;
+            if (move.slotWasNull) {
+                // Slot was created by gold card — remove it entirely
+                if (this.slots[move.slotIdx] === null) {
+                    // Slot was completed
+                    this.completedCount--;
+                }
+                this.slots[move.slotIdx] = null;
+            } else {
+                // Slot existed — restore previous collected count
+                if (this.slots[move.slotIdx] === null) {
+                    // Slot was completed
+                    this.completedCount--;
+                    const catKey = move.removedCards[0].card.category;
+                    this.slots[move.slotIdx] = {
+                        key: catKey,
+                        name: CATEGORIES[catKey].name,
+                        zhName: move.removedCards[0].card.zhName || '',
+                        collected: move.previousCollected,
+                        target: this.categoryTargets[catKey],
+                        lastCard: move.previousLastCard || null,
+                    };
+                } else {
+                    this.slots[move.slotIdx].collected = move.previousCollected;
+                    this.slots[move.slotIdx].lastCard = move.previousLastCard || null;
+                }
+            }
+            this.stepsLeft++;
+
+        } else if (move.action === 'move_display_to_slot') {
+            if (move.slotWasNull) {
+                this.slots[move.slotIdx] = null;
+            } else {
+                if (this.slots[move.slotIdx] === null) {
+                    this.completedCount--;
+                    const catKey = move.card.category;
+                    this.slots[move.slotIdx] = {
+                        key: catKey,
+                        name: CATEGORIES[catKey].name,
+                        zhName: move.card.zhName || '',
+                        collected: move.previousCollected,
+                        target: this.categoryTargets[catKey],
+                        lastCard: move.previousLastCard || null,
+                    };
+                } else {
+                    this.slots[move.slotIdx].collected = move.previousCollected;
+                    this.slots[move.slotIdx].lastCard = move.previousLastCard || null;
+                }
+            }
             this.handDisplay.push(move.card);
+            this.stepsLeft++;
+
+        } else if (move.action === 'move_tableau_to_column') {
+            // Remove from target column
+            const targetCol = this.tableau[move.targetColIdx];
+            targetCol.pop();
+
+            // Undo auto-flip
+            if (move.autoFlipped) {
+                const srcCol = this.tableau[move.srcColIdx];
+                if (srcCol.length > 0) {
+                    srcCol[srcCol.length - 1].faceUp = false;
+                }
+            }
+
+            // Restore to source column
+            this.tableau[move.srcColIdx].push({
+                id: move.tableauCard.id,
+                card: { ...move.tableauCard.card },
+                faceUp: true,
+                justFlipped: false,
+            });
+            this.stepsLeft++;
+
+        } else if (move.action === 'move_multi_tableau_to_column') {
+            // Remove all moved cards from target column
+            const targetCol = this.tableau[move.targetColIdx];
+            targetCol.splice(targetCol.length - move.count);
+
+            // Undo auto-flip
+            if (move.autoFlipped) {
+                const srcCol = this.tableau[move.srcColIdx];
+                if (srcCol.length > 0) {
+                    srcCol[srcCol.length - 1].faceUp = false;
+                }
+            }
+
+            // Restore all cards to source column
+            for (const tc of move.removedCards) {
+                this.tableau[move.srcColIdx].push({
+                    id: tc.id,
+                    card: { ...tc.card },
+                    faceUp: tc.faceUp,
+                    justFlipped: false,
+                });
+            }
+            this.stepsLeft++;
+
+        } else if (move.action === 'move_display_to_column') {
+            const targetCol = this.tableau[move.targetColIdx];
+            targetCol.pop();
+            this.handDisplay.push(move.card);
+            this.stepsLeft++;
+
         } else if (move.action === 'flip_hand') {
-            // Pop from display, push back to pile
             this.handDisplay.pop();
             this.handPile.push(move.card);
+            this.stepsLeft++;
+
         } else if (move.action === 'recycle') {
-            // Restore display from saved snapshot, clear pile
             this.handDisplay = move.displaySnapshot.map(c => ({ ...c }));
             this.handPile = [];
+            this.stepsLeft++; // recycle now costs 1 step, so restore
         }
 
-        // Only re-render what changed
-        if (move.action === 'collect_regular' || move.action === 'collect_gold_grid') {
-            this.render();
-        } else {
-            this.renderSlots();
-            this.renderHandArea();
-        }
+        this.render();
     }
 
     // ── Fly Animation ──────────────────────────────────────────
@@ -1484,7 +1836,6 @@ class Game {
             clone.style.height = sourceRect.height + 'px';
             document.body.appendChild(clone);
 
-            // Force layout before starting transition
             clone.offsetHeight;
 
             clone.style.transition = `all ${duration}ms ease-in-out`;

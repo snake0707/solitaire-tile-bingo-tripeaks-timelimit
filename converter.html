@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Level Config Converter</title>
+<title>Level Config Converter (SAJLike)</title>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script src="categories.js"></script>
@@ -28,7 +28,7 @@
 </style>
 </head>
 <body>
-<h1>Level Config Converter</h1>
+<h1>Level Config Converter (SAJLike)</h1>
 
 <div class="panel">
   <div class="row">
@@ -43,8 +43,6 @@
 <script>
 (function () {
   // ── Build ID maps from CATEGORIES ──────────────────────────────
-  // basicIdMap: config basic card ID (e.g. "ASIA_WORD_LANDMASS_10") → item info
-  // catConfigIdMap: config category ID (e.g. "WORD_LANDMASS_10") → { catKey, catObj }
   const basicIdMap = {};
   const catConfigIdMap = {};
   for (const [catKey, catObj] of Object.entries(CATEGORIES)) {
@@ -63,19 +61,15 @@
     }
   }
 
-  // ── Parse bracket notation (unquoted) into nested arrays ─────────
-  // Handles formats like: [[Pizza_Food,Bed_Furniture_1],[Cat_Pets]]
-  // and flat: [Furniture_word,Pets_word,Food_word]
+  // ── Parse bracket notation ─────────────────────────────────────
   function parseBracketArray(str) {
     str = str.trim();
     if (str[0] !== '[') throw new Error('Expected "[", got: ' + str[0]);
 
-    // Detect nested vs flat: nested starts with [[
     const isNested = str[1] === '[';
     if (isNested) {
-      // Remove outer brackets
       if (str[str.length - 1] !== ']') throw new Error('Missing closing "]"');
-      const inner = str.slice(1, -1); // strip outer []
+      const inner = str.slice(1, -1);
       const result = [];
       let depth = 0;
       let start = -1;
@@ -93,13 +87,11 @@
       }
       return result;
     } else {
-      // Flat array: [a,b,c]
       const inner = str.slice(1, -1).trim();
       return inner.length === 0 ? [] : inner.split(',').map(s => s.trim());
     }
   }
 
-  // Number of metadata rows after the header row (types, descriptions, access tags, references)
   const METADATA_ROWS = 4;
 
   // ── Logging helpers ──────────────────────────────────────────────
@@ -150,7 +142,6 @@
       log('Columns: ' + Object.keys(allRows[0]).join(', '), 'log-info');
     }
 
-    // Skip metadata rows (types, descriptions, access tags, references)
     const rows = allRows.slice(METADATA_ROWS);
     log('Data rows: ' + rows.length, 'log-info');
 
@@ -159,12 +150,11 @@
       return;
     }
 
-    // Group rows by level_id, preserving order
-    const levelMap = new Map(); // level_id → [row, ...]
+    // Group rows by level_id
+    const levelMap = new Map();
     for (let r = 0; r < rows.length; r++) {
       const row = rows[r];
       const levelId = row.level_id;
-      // spreadsheet row = header(1) + metadata(4) + data index + 1
       const sheetRow = METADATA_ROWS + r + 2;
       if (levelId == null) {
         log('Sheet row ' + sheetRow + ': missing level_id, skipping', 'log-warn');
@@ -190,26 +180,23 @@
         try {
           const layout = buildLayout(row, rowIndex);
 
-          // Per-row config: read bingo_num, slot_cnt, level_time, deduct_time from the same row
-          // Fall back to level_settings.js defaults when empty
+          // Per-row config overrides
           const rowConfig = {
-            bingosNeeded: cfg.bingosNeeded,
             maxSlots: cfg.maxSlots,
-            timeLimit: cfg.timeLimit,
-            penaltyTime: cfg.penaltyTime,
+            maxSteps: cfg.maxSteps,
           };
-          if (row.bingo_num != null && row.bingo_num !== '') rowConfig.bingosNeeded = Number(row.bingo_num);
           if (row.slot_cnt != null && row.slot_cnt !== '') rowConfig.maxSlots = Number(row.slot_cnt);
-          if (row.level_time != null && row.level_time !== '') rowConfig.timeLimit = Number(row.level_time);
-          if (row.deduct_time != null && row.deduct_time !== '') rowConfig.penaltyTime = Number(row.deduct_time);
+          if (row.max_steps != null && row.max_steps !== '') rowConfig.maxSteps = Number(row.max_steps);
+          if (row.level_time != null && row.level_time !== '' && rowConfig.maxSteps === cfg.maxSteps) {
+            rowConfig.maxSteps = Number(row.level_time);
+          }
           layout.config = rowConfig;
 
           layouts.push(layout);
-          const cardCount = layout.cards.length;
+          const totalCards = layout.tableau.reduce((s, col) => s + col.length, 0);
           const cats = Object.keys(layout.categoryTargets).join(', ');
-          log('  Layout from row ' + rowIndex + ': ' + cardCount + ' cards, categories: ' + cats, 'log-ok');
-          log('    config: bingo=' + rowConfig.bingosNeeded + ' slots=' + rowConfig.maxSlots +
-              ' time=' + rowConfig.timeLimit + ' penalty=' + rowConfig.penaltyTime, 'log-ok');
+          log('  Layout from row ' + rowIndex + ': ' + totalCards + ' tableau cards, categories: ' + cats, 'log-ok');
+          log('    config: slots=' + rowConfig.maxSlots + ' steps=' + rowConfig.maxSteps, 'log-ok');
         } catch (err) {
           log('  Row ' + rowIndex + ' ERROR: ' + err.message, 'log-err');
           errorCount++;
@@ -248,9 +235,10 @@
     }
   }
 
-  // ── Build one layout from a spreadsheet row ──────────────────────
+  // ── Build one layout from a spreadsheet row (SAJLike format) ──────
+  // card_content is now a nested array where each sub-array is a column's cards
+  // e.g., [[card1,card2,card3],[card4,card5],[card6]]
   function buildLayout(row, rowIndex) {
-    // Parse bracket-notation fields (unquoted arrays)
     let cardContent, categoryContent;
     try {
       const raw = String(row.card_content || '');
@@ -265,35 +253,26 @@
       throw new Error('Invalid category_content: ' + e.message);
     }
 
-    if (!Array.isArray(cardContent) || cardContent.length !== 25) {
-      throw new Error('card_content must be an array of 25 sub-arrays, got ' +
-        (Array.isArray(cardContent) ? cardContent.length : typeof cardContent));
+    if (!Array.isArray(cardContent) || cardContent.length === 0) {
+      throw new Error('card_content must be a non-empty nested array of columns');
     }
     if (!Array.isArray(categoryContent) || categoryContent.length === 0) {
       throw new Error('category_content must be a non-empty array');
     }
 
-    // Determine active categories from category_content
-    // category_content entries are config category IDs (e.g., "WORD_BOOK_9")
-    // or category keys (e.g., "Book_word") as fallback
+    // Determine active categories
     const activeCatKeys = new Set();
-    const resolvedCatEntries = []; // ordered cat keys for handPile
+    const resolvedCatEntries = [];
     for (const catEntry of categoryContent) {
-      let catKey, catObj;
+      let catKey;
       if (catConfigIdMap[catEntry]) {
-        // Match by config category ID
         catKey = catConfigIdMap[catEntry].catKey;
-        catObj = catConfigIdMap[catEntry].catObj;
       } else if (CATEGORIES[catEntry]) {
-        // Match by category key
         catKey = catEntry;
-        catObj = CATEGORIES[catEntry];
       } else {
-        // Try treating as a category name directly
         const found = Object.entries(CATEGORIES).find(([, c]) => c.name === catEntry);
         if (found) {
           catKey = found[0];
-          catObj = found[1];
         } else {
           throw new Error('Unknown category in category_content: "' + catEntry + '"');
         }
@@ -302,52 +281,70 @@
       resolvedCatEntries.push(catKey);
     }
 
-    // Build cards array
-    const cards = [];
+    // Pre-scan for gold card IDs
+    for (const colCards of cardContent) {
+      for (const itemId of colCards) {
+        if (catConfigIdMap[itemId]) {
+          activeCatKeys.add(catConfigIdMap[itemId].catKey);
+        }
+      }
+    }
+
+    // Build tableau columns
+    const tableau = [];
     const categoryTargets = {};
 
-    for (let i = 0; i < 25; i++) {
-      const subArr = cardContent[i];
-      if (!Array.isArray(subArr)) {
-        throw new Error('card_content[' + i + '] is not an array');
+    for (let colIdx = 0; colIdx < cardContent.length; colIdx++) {
+      const colCards = cardContent[colIdx];
+      if (!Array.isArray(colCards)) {
+        throw new Error('card_content[' + colIdx + '] is not an array');
       }
-      const r = i % 5;
-      const c = Math.floor(i / 5);
 
-      for (let j = 0; j < subArr.length; j++) {
-        const itemId = subArr[j];
-        const info = basicIdMap[itemId];
-        if (!info) {
-          throw new Error('Unknown item ID "' + itemId + '" at card_content[' + i + '][' + j + ']');
+      const column = [];
+      for (let posIdx = 0; posIdx < colCards.length; posIdx++) {
+        const itemId = colCards[posIdx];
+        const isFaceUp = (posIdx === colCards.length - 1);
+
+        // Check if it's a category/gold card
+        if (catConfigIdMap[itemId]) {
+          const { catKey, catObj } = catConfigIdMap[itemId];
+          column.push({
+            card: {
+              type: 'gold',
+              category: catKey,
+              name: catObj.name,
+              isText: catObj.isText,
+            },
+            faceUp: isFaceUp,
+          });
+          continue;
         }
 
-        // Layer: index 0 = topmost = highest layer number
-        const layer = (subArr.length - 1) - j;
-        const isActive = activeCatKeys.has(info.categoryKey);
-        const type = isActive ? 'regular' : 'filler';
+        const info = basicIdMap[itemId];
+        if (!info) {
+          throw new Error('Unknown item ID "' + itemId + '" at column ' + colIdx + ' position ' + posIdx);
+        }
 
-        cards.push({
-          layer: layer,
-          row: r,
-          col: c,
+        const isActive = activeCatKeys.has(info.categoryKey);
+        column.push({
           card: {
-            type: type,
+            type: 'regular',
             category: info.categoryKey,
             name: info.name,
             image: info.image,
-            isText: info.isText
-          }
+            isText: info.isText,
+          },
+          faceUp: isFaceUp,
         });
 
         if (isActive) {
           categoryTargets[info.categoryKey] = (categoryTargets[info.categoryKey] || 0) + 1;
         }
       }
+      tableau.push(column);
     }
 
     // Build handPile from resolved category entries
-    // category_content[0] = first card player sees when flipping
-    // handPile uses pop(), so reverse so that first entry ends up on top
     const handPile = [];
     for (const catKey of resolvedCatEntries) {
       const catObj = CATEGORIES[catKey];
@@ -355,16 +352,16 @@
         type: 'gold',
         category: catKey,
         name: catObj.name,
-        isText: catObj.isText
+        isText: catObj.isText,
       });
     }
     handPile.reverse();
 
     return {
-      cards: cards,
-      categoryTargets: categoryTargets,
-      handPile: handPile,
-      handDisplay: []
+      tableau,
+      categoryTargets,
+      handPile,
+      handDisplay: [],
     };
   }
 

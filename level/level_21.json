@@ -1,699 +1,2073 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 140,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 170
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Bracelet",
-          "image": "res/Item/jewelry_bracelet_4.png",
-          "isText": false
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Turnout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Train_word",
+            "name": "Carriage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Mattress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gemstone_word",
+            "name": "Gemstone",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "Emperor",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "India",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Knife",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Orion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Groom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Kerosene",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Campaign",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wedding_word",
+            "name": "Wedding",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "Japan",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Bride",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Ceremony",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Opal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Voter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Ballot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Cygnus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Paddock",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Serpens",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Train_word",
+            "name": "Train",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Memoir",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bed_word",
+            "name": "Bed",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Oyster",
+            "image": "res/Item/seafood_oyster_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Thriller",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Prose",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "Maharaja",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "France",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "USA",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Memes_word",
-          "name": "Trolling",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Robot_word",
-          "name": "Robovac",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Italy_word",
-          "name": "Milan",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Aircraft_word",
-          "name": "Jetliner",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Italy_word",
-          "name": "Venice",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Gamer_word",
-          "name": "Strategy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Aircraft_word",
-          "name": "Airplane",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Necklace",
-          "image": "res/Item/jewelry_necklace_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Memes_word",
-          "name": "Satire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Egypt_word",
-          "name": "Papyrus",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Locket",
-          "image": "res/Item/jewelry_locket_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Harvest",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Painting_word",
-          "name": "Gouache",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Crop",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Diamond ring",
-          "image": "res/Item/jewelry_diamondring_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Egypt_word",
-          "name": "Pyramid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Elect_word",
-          "name": "Turnout",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Painting_word",
-          "name": "Acrylic",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Aircraft_word",
-          "name": "Glider",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Greece_word",
-          "name": "Delta",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Anklet",
-          "image": "res/Item/jewelry_anklet_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Greece_word",
-          "name": "Kappa",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Painting_word",
-          "name": "Oil",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Coastal_word",
-          "name": "Shingle",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Coastal_word",
-          "name": "Tide",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Coastal_word",
-          "name": "Sand",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Elect_word",
-          "name": "Ballot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Fallow",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Painting_word",
-          "name": "Tempera",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Topsoil",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Coastal_word",
-          "name": "Groyne",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Elect_word",
-          "name": "Voter",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Coastal_word",
-          "name": "Surfing",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Dances_word",
-          "name": "Rumba",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Lakes_word",
-          "name": "Baikal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Jewelry",
-          "name": "Earring",
-          "image": "res/Item/jewelry_earring_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Lakes_word",
-          "name": "Michigan",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Elect_word",
-          "name": "Campaign",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Compost",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Painting_word",
-          "name": "Fresco",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Lakes_word",
-          "name": "Ontario",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Memes_word",
-          "name": "Parody",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Hockey_word",
-          "name": "Puck",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Hay",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Hockey_word",
-          "name": "Rink",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Egypt_word",
-          "name": "Pharaoh",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Guitar_word",
-          "name": "Chords",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Egypt_word",
-          "name": "Scarab",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Farming_word",
-          "name": "Grain",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Jewelry": 6,
-      "Farming_word": 8,
-      "Memes_word": 3,
-      "Aircraft_word": 3,
-      "Egypt_word": 4,
-      "Painting_word": 5,
-      "Elect_word": 4
+      "Sharp_word": 8,
+      "Seafood": 8,
+      "Gemstone_word": 8,
+      "Books_word": 8,
+      "Pattern_word": 6,
+      "Wedding_word": 6,
+      "Fuels_word": 5,
+      "Bed_word": 5,
+      "Coffee_word": 4,
+      "Elect_word": 4,
+      "Crown_word": 3,
+      "Train_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Painting_word",
-        "name": "Painting",
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Sheet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Pillow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Diamond",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Poetry",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Farming_word",
-        "name": "Farming",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Razor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "King",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Track",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Egypt_word",
-        "name": "Egypt",
+        "category": "Coffee_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Lobster",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Books_word",
+        "name": "Books",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Gasoline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Crab",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Topaz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Axe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Sapphire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sharp_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Propane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scissors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Prawn",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Coal",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Elect_word",
+        "name": "Elect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Lungo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Garnet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Latte",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Rail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Stinger",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Blanket",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fiction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Plaid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Vows",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Draco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Onyx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Shrimp",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Proposal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Agate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scalpel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Perseus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Mussel",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Scallop",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Scorpius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Espresso",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Squid",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fantasy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Diesel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Mocha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pattern_word",
+        "name": "Pattern",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 170
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Lungo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Gasoline",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Turnout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Plaid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gemstone_word",
+            "name": "Gemstone",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Books_word",
+            "name": "Books",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coffee_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Shrimp",
+            "image": "res/Item/seafood_shrimp_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Groom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Diamond",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Topaz",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Squid",
+            "image": "res/Item/seafood_squid_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Scorpius",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Scallop",
+            "image": "res/Item/seafood_scallop_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Memoir",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "Emperor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Latte",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Sheet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Mocha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Kerosene",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Train_word",
+            "name": "Rail",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Ceremony",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Axe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Mattress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Ballot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Elect_word",
+            "name": "Elect",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sharp_word": 8,
+      "Seafood": 8,
+      "Gemstone_word": 8,
+      "Books_word": 8,
+      "Pattern_word": 6,
+      "Wedding_word": 6,
+      "Fuels_word": 5,
+      "Bed_word": 5,
+      "Coffee_word": 4,
+      "Elect_word": 4,
+      "Crown_word": 3,
+      "Train_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Poetry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Prose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Diesel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "King",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Prawn",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Cygnus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Lobster",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Vows",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Serpens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Track",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wedding_word",
+        "name": "Wedding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Draco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Propane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Proposal",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Train_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fiction",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pattern_word",
+        "name": "Pattern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Garnet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Espresso",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Sapphire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Mussel",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Razor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "Maharaja",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Altar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Orion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Bride",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bed_word",
+        "name": "Bed",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sharp_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scissors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Perseus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Pillow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scalpel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fantasy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Opal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Crab",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Campaign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Agate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Carriage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Blanket",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Knife",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Voter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Thriller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Onyx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Coal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Oyster",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Stinger",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 170
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "Maharaja",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Ballot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Axe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gemstone_word",
+            "name": "Gemstone",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Blanket",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Opal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pattern_word",
+            "name": "Pattern",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Garnet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Razor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Vows",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Draco",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Perseus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Sapphire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Scissors",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Onyx",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Stinger",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Needle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Thriller",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Mattress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bed_word",
+            "name": "Bed",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Novel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Kerosene",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Gasoline",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Sheet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Cygnus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Serpens",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sharp_word": 8,
+      "Seafood": 8,
+      "Gemstone_word": 8,
+      "Books_word": 8,
+      "Pattern_word": 6,
+      "Wedding_word": 6,
+      "Fuels_word": 5,
+      "Bed_word": 5,
+      "Coffee_word": 4,
+      "Elect_word": 4,
+      "Crown_word": 3,
+      "Train_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Topaz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Proposal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Pillow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coffee_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Bride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Ceremony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scalpel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Memoir",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Coal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Oyster",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Altar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Groom",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wedding_word",
+        "name": "Wedding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Scallop",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Lungo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Mussel",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Espresso",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Crab",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Squid",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Prose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Propane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Shrimp",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fiction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fantasy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Lobster",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Agate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Train_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sharp_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Diesel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Books_word",
+        "name": "Books",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Turnout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Poetry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "Emperor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Knife",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Diamond",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Orion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Carriage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "King",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Latte",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Track",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Prawn",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Rail",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Elect_word",
+        "name": "Elect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Voter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Scorpius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Campaign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Mocha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Plaid",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 170
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Opal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Voter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Prose",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Ceremony",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Mussel",
+            "image": "res/Item/seafood_mussel_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Prawn",
+            "image": "res/Item/seafood_squid_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Diesel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Groom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fuels_word",
+            "name": "Kerosene",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Perseus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Pillow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coffee_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Train_word",
+            "name": "Track",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Serpens",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Orion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Latte",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Tragedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Plaid",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Vows",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Mocha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Train_word",
+            "name": "Train",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Topaz",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "Emperor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Fantasy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Crab",
+            "image": "res/Item/seafood_crab_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Lobster",
+            "image": "res/Item/seafood_lobster_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sharp_word": 8,
+      "Seafood": 8,
+      "Gemstone_word": 8,
+      "Books_word": 8,
+      "Pattern_word": 6,
+      "Wedding_word": 6,
+      "Fuels_word": 5,
+      "Bed_word": 5,
+      "Coffee_word": 4,
+      "Elect_word": 4,
+      "Crown_word": 3,
+      "Train_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Espresso",
         "isText": true
       },
       {
@@ -704,20 +2078,917 @@
       },
       {
         "type": "gold",
-        "category": "Aircraft_word",
-        "name": "Aircraft",
+        "category": "Gemstone_word",
+        "name": "Gemstone",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Garnet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Scorpius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Razor",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Jewelry",
-        "name": "Jewelry",
+        "category": "Bed_word",
+        "name": "Bed",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scalpel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Stinger",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Rail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Gasoline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Coal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Proposal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fiction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Onyx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Sheet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wedding_word",
+        "name": "Wedding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Altar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Turnout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Shrimp",
+        "image": "res/Item/seafood_shrimp_8.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Memes_word",
-        "name": "Memes",
+        "category": "Sharp_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scissors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Oyster",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Poetry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Mattress",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Draco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "Maharaja",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Bride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Axe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Sapphire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Scallop",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Knife",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Carriage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Agate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Blanket",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Squid",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Memoir",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "King",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Campaign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Thriller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Lungo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Propane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Ballot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pattern_word",
+        "name": "Pattern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Cygnus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Books_word",
+        "name": "Books",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Diamond",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 170
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Ballot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Draco",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Garnet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Elect_word",
+            "name": "Turnout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Sheet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Agate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Proposal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coffee_word",
+            "name": "Espresso",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Saw",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Poetry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gemstone_word",
+            "name": "Gemstone",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Crown_word",
+            "name": "King",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pattern_word",
+            "name": "Cygnus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Pillow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bed_word",
+            "name": "Mattress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Books_word",
+            "name": "Books",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sharp_word",
+            "name": "Razor",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Train_word",
+            "name": "Track",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Scallop",
+            "image": "res/Item/seafood_scallop_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gemstone_word",
+            "name": "Sapphire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coffee_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Seafood",
+            "name": "Seafood",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Elect_word",
+            "name": "Elect",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Books_word",
+            "name": "Memoir",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wedding_word",
+            "name": "Ceremony",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sharp_word": 8,
+      "Seafood": 8,
+      "Gemstone_word": 8,
+      "Books_word": 8,
+      "Pattern_word": 6,
+      "Wedding_word": 6,
+      "Fuels_word": 5,
+      "Bed_word": 5,
+      "Coffee_word": 4,
+      "Elect_word": 4,
+      "Crown_word": 3,
+      "Train_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Voter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scalpel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fantasy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Knife",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Carriage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Diesel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Blanket",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Elect_word",
+        "name": "Campaign",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Crown_word",
+        "name": "Crown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Prawn",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Stinger",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pattern_word",
+        "name": "Pattern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Kerosene",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Opal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Thriller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Oyster",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Vows",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Bride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Lobster",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Coal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Squid",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Scissors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sharp_word",
+        "name": "Axe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Lungo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wedding_word",
+        "name": "Wedding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "Maharaja",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Orion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Crab",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Latte",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wedding_word",
+        "name": "Groom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Fiction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Diamond",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bed_word",
+        "name": "Bed",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Perseus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Onyx",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Train_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Topaz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Scorpius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gemstone_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Train_word",
+        "name": "Rail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Shrimp",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Mussel",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Propane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Prose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Crown_word",
+        "name": "Emperor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fuels_word",
+        "name": "Gasoline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pattern_word",
+        "name": "Serpens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bed_word",
+        "name": "Plaid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fuels_word",
+        "name": "Fuels",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sharp_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Books_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coffee_word",
+        "name": "Mocha",
         "isText": true
       }
     ],

@@ -1,615 +1,3024 @@
 [
   {
     "config": {
-      "bingosNeeded": 1,
-      "maxSlots": 2,
-      "timeLimit": 130,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 180
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Eats",
-          "name": "Fries",
-          "image": "res/Item/eats_fries_3.png",
-          "isText": false
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Rave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Door",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Beat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Speakers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Wings",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Tugboat",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Seatbelt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Capybara",
+            "image": "res/Item/rodents_capybara_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "DJ_word",
+            "name": "DJ",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Cook",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Disaster_word",
+            "name": "Tsunami",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Syringe",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Meditate_word",
-          "name": "Zen",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Squirrel",
+            "image": "res/Item/rodents_squirrel_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hospital_word",
+            "name": "Hospital",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Inhaler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Peach",
+            "image": "res/Item/fruits_peach_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "SUV",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Articles_word",
+            "name": "Opinion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Disaster_word",
+            "name": "Disaster",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Winning_word",
-          "name": "Triumph",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Rat",
+            "image": "res/Item/rodents_rat_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Roof",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Kiwi",
+            "image": "res/Item/fruits_kiwi_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Patient",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Marmot",
+            "image": "res/Item/rodents_marmot_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Nutria",
+            "image": "res/Item/rodents_nutria_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Articles_word",
+            "name": "Review",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Pill",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Muscles_word",
-          "name": "Biceps",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Landmark_word",
-          "name": "Colosseum",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Hippie_word",
-          "name": "Vans",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Landmark_word",
-          "name": "Pyramids",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Frigate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Chess_word",
-          "name": "Pawn",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Meditate_word",
-          "name": "Peace",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Chess_word",
-          "name": "Bishop",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Muscles_word",
-          "name": "Deltoids",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Eats",
-          "name": "Taco",
-          "image": "res/Item/eats_taco_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Hippie_word",
-          "name": "Freedom",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Pills_word",
-          "name": "Lozenges",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Caravel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Pills_word",
-          "name": "Capsules",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Hammer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Winning_word",
-          "name": "Victory",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Lot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Iceland",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Muscles_word",
-          "name": "Abs",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Ibiza",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Hippie_word",
-          "name": "Commune",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Catalog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Jamaica",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Meditate_word",
-          "name": "Mantra",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Sicily",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Bid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Harbor_word",
-          "name": "Wharf",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Eats",
-          "name": "Pizza",
-          "image": "res/Item/eats_pizza_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Harbor_word",
-          "name": "Coast",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Tanker",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Ballet_word",
-          "name": "Pointe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Airport_word",
-          "name": "Runway",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Galleon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Price",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Disaster_word",
-          "name": "Tornado",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Muscles_word",
-          "name": "Triceps",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Meditate_word",
-          "name": "Breath",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Footwear_word",
-          "name": "Sandals",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Airport_word",
-          "name": "Gate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Auction_word",
-          "name": "Bidder",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Airport_word",
-          "name": "Terminal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Ship_word",
-          "name": "Brig",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Eats": 3,
-      "Ship_word": 6,
-      "Meditate_word": 4,
-      "Muscles_word": 4,
-      "Hippie_word": 3,
-      "Auction_word": 6,
-      "Airport_word": 3
+      "Fruits": 8,
+      "Hospital_word": 8,
+      "Plane_word": 8,
+      "Kitchen_word": 8,
+      "Rodents": 6,
+      "DJ_word": 6,
+      "Car type_word": 5,
+      "Building_word": 5,
+      "Energy_word": 4,
+      "Myths_word": 4,
+      "Articles_word": 3,
+      "Disaster_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Hippie_word",
-        "name": "Hippie",
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Vinyl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Hades",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Toaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Ointment",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Oven",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Thermal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Nuclear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Essay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Solar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Floor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fuselage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Odin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Setlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Sink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Window",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Care",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
+        "category": "Fruits",
+        "name": "Fruits",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Ship_word",
-        "name": "Ship",
+        "category": "Kitchen_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Guava",
+        "image": "res/Item/fruits_pomegranate_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Beaver",
+        "image": "res/Item/rodents_beaver_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Party",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Wagon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Zeus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Cockpit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Freezer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Kettle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apricot",
+        "image": "res/Item/fruits_watermelon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Kinetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Blender",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Rudder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Vaccine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Surgeon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tornado",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Banana",
+        "image": "res/Item/fruits_banana_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Car type_word",
+        "name": "Car type",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Muscles_word",
-        "name": "Muscles",
+        "category": "Rodents",
+        "name": "Rodents",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Pineapple",
+        "image": "res/Item/fruits_pineapple_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Engine",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Airport_word",
-        "name": "Airport",
+        "category": "Building_word",
+        "name": "Building",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fly",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apple",
+        "image": "res/Item/fruits_apple_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Wall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Mixer",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Auction_word",
-        "name": "Auction",
+        "category": "Articles_word",
+        "name": "Articles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Flood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Van",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Meditate_word",
-        "name": "Meditate",
+        "category": "Energy_word",
+        "name": "Energy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Plane_word",
+        "name": "Plane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Roadster",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Myths_word",
+        "name": "Myths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Aileron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Coupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Thor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Orange",
+        "image": "res/Item/fruits_orange_1.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 180
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Mixer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Kettle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Articles_word",
+            "name": "Essay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Cockpit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Speakers",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Kiwi",
+            "image": "res/Item/fruits_kiwi_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Patient",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Myths_word",
+            "name": "Hades",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rodents",
+            "name": "Rodents",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Wall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Engine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Nuclear",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Articles_word",
+            "name": "Articles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Window",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Rudder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Plane_word",
+            "name": "Plane",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Wings",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Energy_word",
+            "name": "Energy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Vaccine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fruits",
+            "name": "Fruits",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Toaster",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Kinetic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Floor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Car type_word",
+            "name": "Car type",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Myths_word",
+            "name": "Myths",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Beat",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fruits": 8,
+      "Hospital_word": 8,
+      "Plane_word": 8,
+      "Kitchen_word": 8,
+      "Rodents": 6,
+      "DJ_word": 6,
+      "Car type_word": 5,
+      "Building_word": 5,
+      "Energy_word": 4,
+      "Myths_word": 4,
+      "Articles_word": 3,
+      "Disaster_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apple",
+        "image": "res/Item/fruits_apple_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Beaver",
+        "image": "res/Item/rodents_beaver_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Blender",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Rave",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kitchen_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Setlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Coupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Surgeon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apricot",
+        "image": "res/Item/fruits_watermelon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Oven",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Review",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Flood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Solar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Syringe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Wagon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Guava",
+        "image": "res/Item/fruits_pomegranate_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Banana",
+        "image": "res/Item/fruits_banana_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Sink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Zeus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Cook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Aileron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Vinyl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Care",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Freezer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Orange",
+        "image": "res/Item/fruits_orange_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Door",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Building_word",
+        "name": "Building",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fly",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Peach",
+        "image": "res/Item/fruits_peach_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Inhaler",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Odin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Roof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Opinion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tsunami",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Pill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Pineapple",
+        "image": "res/Item/fruits_pineapple_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Disaster_word",
+        "name": "Disaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Marmot",
+        "image": "res/Item/rodents_marmot_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fuselage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Thor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "SUV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Rat",
+        "image": "res/Item/rodents_rat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Thermal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Van",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "DJ_word",
+        "name": "DJ",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Squirrel",
+        "image": "res/Item/rodents_squirrel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Party",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Roadster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Capybara",
+        "image": "res/Item/rodents_capybara_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Ointment",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hospital_word",
+        "name": "Hospital",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Nutria",
+        "image": "res/Item/rodents_nutria_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tornado",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 180
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "Coupe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Articles_word",
+            "name": "Opinion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Vinyl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Engine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Energy_word",
+            "name": "Energy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Syringe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Roof",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Apple",
+            "image": "res/Item/fruits_apple_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Oven",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Banana",
+            "image": "res/Item/fruits_banana_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Plane_word",
+            "name": "Plane",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Myths_word",
+            "name": "Zeus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "DJ_word",
+            "name": "DJ",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Blender",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Thermal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Seatbelt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Fuselage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Speakers",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Vaccine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Mixer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Beaver",
+            "image": "res/Item/rodents_beaver_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Guava",
+            "image": "res/Item/fruits_pomegranate_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Solar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "Wagon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Inhaler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Nutria",
+            "image": "res/Item/rodents_nutria_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fruits": 8,
+      "Hospital_word": 8,
+      "Plane_word": 8,
+      "Kitchen_word": 8,
+      "Rodents": 6,
+      "DJ_word": 6,
+      "Car type_word": 5,
+      "Building_word": 5,
+      "Energy_word": 4,
+      "Myths_word": 4,
+      "Articles_word": 3,
+      "Disaster_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Orange",
+        "image": "res/Item/fruits_orange_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Disaster_word",
+        "name": "Disaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Window",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Review",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Aileron",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fruits",
+        "name": "Fruits",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Beat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Cook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Wings",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tsunami",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Sink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "SUV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Peach",
+        "image": "res/Item/fruits_peach_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Party",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Nuclear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Odin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Capybara",
+        "image": "res/Item/rodents_capybara_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Rodents",
+        "name": "Rodents",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Toaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Surgeon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Setlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Floor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Thor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Ointment",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Van",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Rave",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Building_word",
+        "name": "Building",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kitchen_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Articles_word",
+        "name": "Articles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Hades",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Flood",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hospital_word",
+        "name": "Hospital",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Patient",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Pill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Rat",
+        "image": "res/Item/rodents_rat_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Myths_word",
+        "name": "Myths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Kettle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Pineapple",
+        "image": "res/Item/fruits_pineapple_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Kiwi",
+        "image": "res/Item/fruits_kiwi_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tornado",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Freezer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Squirrel",
+        "image": "res/Item/rodents_squirrel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Care",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Kinetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Essay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Rudder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apricot",
+        "image": "res/Item/fruits_watermelon_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Car type_word",
+        "name": "Car type",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Door",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fly",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Marmot",
+        "image": "res/Item/rodents_marmot_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Roadster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Cockpit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Wall",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 180
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Sink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Syringe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Disaster_word",
+            "name": "Tornado",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Kiwi",
+            "image": "res/Item/fruits_kiwi_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rodents",
+            "name": "Rodents",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Nuclear",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Vaccine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Engine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Thermal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "DJ_word",
+            "name": "DJ",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "SUV",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Articles_word",
+            "name": "Review",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Oven",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hospital_word",
+            "name": "Hospital",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "Wagon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Pill",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Myths_word",
+            "name": "Myths",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kitchen_word",
+            "name": "Freezer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Fly",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Vinyl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Myths_word",
+            "name": "Thor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Party",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Plane_word",
+            "name": "Plane",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Building_word",
+            "name": "Building",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Inhaler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Aileron",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fruits": 8,
+      "Hospital_word": 8,
+      "Plane_word": 8,
+      "Kitchen_word": 8,
+      "Rodents": 6,
+      "DJ_word": 6,
+      "Car type_word": 5,
+      "Building_word": 5,
+      "Energy_word": 4,
+      "Myths_word": 4,
+      "Articles_word": 3,
+      "Disaster_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Capybara",
+        "image": "res/Item/rodents_capybara_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Patient",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Squirrel",
+        "image": "res/Item/rodents_squirrel_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Energy_word",
+        "name": "Energy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Roadster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apple",
+        "image": "res/Item/fruits_apple_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Essay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Beaver",
+        "image": "res/Item/rodents_beaver_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Door",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Beat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Rudder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Care",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Guava",
+        "image": "res/Item/fruits_pomegranate_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Cockpit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Zeus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Ointment",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Odin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Car type_word",
+        "name": "Car type",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Toaster",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kitchen_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Rat",
+        "image": "res/Item/rodents_rat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Orange",
+        "image": "res/Item/fruits_orange_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Mixer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Floor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Window",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Speakers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Hades",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Banana",
+        "image": "res/Item/fruits_banana_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Disaster_word",
+        "name": "Disaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Marmot",
+        "image": "res/Item/rodents_marmot_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Kettle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Wings",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tsunami",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Fuselage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Van",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Pineapple",
+        "image": "res/Item/fruits_pineapple_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Solar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Kinetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Surgeon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Nutria",
+        "image": "res/Item/rodents_nutria_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Peach",
+        "image": "res/Item/fruits_peach_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Blender",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Flood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Wall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Coupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Roof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Setlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apricot",
+        "image": "res/Item/fruits_watermelon_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fruits",
+        "name": "Fruits",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Rave",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Cook",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Articles_word",
+        "name": "Articles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Opinion",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 180
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rodents",
+            "name": "Rodents",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Speakers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Rave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Fly",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fruits",
+            "name": "Fruits",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Energy_word",
+            "name": "Solar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Myths_word",
+            "name": "Zeus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Car type_word",
+            "name": "Car type",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Door",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Plane_word",
+            "name": "Plane",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Vinyl",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rodents",
+            "name": "Marmot",
+            "image": "res/Item/rodents_marmot_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "Coupe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Car type_word",
+            "name": "Wagon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hospital_word",
+            "name": "Pill",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Window",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Setlist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plane_word",
+            "name": "Fuselage",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Apple",
+            "image": "res/Item/fruits_apple_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "DJ_word",
+            "name": "DJ",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Disaster_word",
+            "name": "Flood",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Myths_word",
+            "name": "Hades",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fruits",
+            "name": "Orange",
+            "image": "res/Item/fruits_orange_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Disaster_word",
+            "name": "Tornado",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Building_word",
+            "name": "Floor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "DJ_word",
+            "name": "Party",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fruits": 8,
+      "Hospital_word": 8,
+      "Plane_word": 8,
+      "Kitchen_word": 8,
+      "Rodents": 6,
+      "DJ_word": 6,
+      "Car type_word": 5,
+      "Building_word": 5,
+      "Energy_word": 4,
+      "Myths_word": 4,
+      "Articles_word": 3,
+      "Disaster_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Hospital_word",
+        "name": "Hospital",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Care",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Syringe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Sink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Review",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Building_word",
+        "name": "Building",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Energy_word",
+        "name": "Energy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Articles_word",
+        "name": "Articles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Toaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Peach",
+        "image": "res/Item/fruits_peach_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Capybara",
+        "image": "res/Item/rodents_capybara_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Cockpit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Ointment",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Banana",
+        "image": "res/Item/fruits_banana_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Vaccine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Aileron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Squirrel",
+        "image": "res/Item/rodents_squirrel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Blender",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Van",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Nutria",
+        "image": "res/Item/rodents_nutria_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Thermal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Nuclear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Wall",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Disaster_word",
+        "name": "Disaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "SUV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Apricot",
+        "image": "res/Item/fruits_watermelon_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Myths_word",
+        "name": "Myths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Freezer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Essay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Surgeon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Inhaler",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Odin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Oven",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Car type_word",
+        "name": "Roadster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Pineapple",
+        "image": "res/Item/fruits_pineapple_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Building_word",
+        "name": "Roof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Cook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Wings",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Disaster_word",
+        "name": "Tsunami",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Kiwi",
+        "image": "res/Item/fruits_kiwi_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Beaver",
+        "image": "res/Item/rodents_beaver_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Kitchen_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Engine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hospital_word",
+        "name": "Patient",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Energy_word",
+        "name": "Kinetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Myths_word",
+        "name": "Thor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Kettle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kitchen_word",
+        "name": "Mixer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Articles_word",
+        "name": "Opinion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rodents",
+        "name": "Rat",
+        "image": "res/Item/rodents_rat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fruits",
+        "name": "Guava",
+        "image": "res/Item/fruits_pomegranate_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "DJ_word",
+        "name": "Beat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plane_word",
+        "name": "Rudder",
         "isText": true
       }
     ],

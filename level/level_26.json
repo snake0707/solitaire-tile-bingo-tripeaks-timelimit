@@ -1,754 +1,3514 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 150,
-      "penaltyTime": 4
+      "maxSlots": 5,
+      "maxSteps": 200
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Space",
-          "name": "Rocket",
-          "image": "res/Item/space_rocket_2.png",
-          "isText": false
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Macaw",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Division_word",
+            "name": "State",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Vega",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Porcine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Speak_word",
+            "name": "Speak",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Plane_word",
-          "name": "Aileron",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Actress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Caprine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Families_word",
+            "name": "Families",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Stars_word",
+            "name": "Stars",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Murine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Bovine",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Plane_word",
-          "name": "Cockpit",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Angles_word",
+            "name": "Angles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bird",
+            "name": "Bird",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Alkaid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Curly",
+            "image": "res/Item/hats_kepi_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Mistral",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Wellness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Division_word",
+            "name": "City",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Guitar",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Journal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Massage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Meatloaf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Zephyr",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Sauna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Gale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Rigel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Brochure",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Plane_word",
-          "name": "Engine",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Lorikeet",
+            "image": "res/Item/bird_dove_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Budgie",
+            "image": "res/Item/bird_robin_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Curry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Right",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Otello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spa_word",
+            "name": "Spa",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Neural",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Altair",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Recap",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Iceland",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Space",
-          "name": "Astronaut",
-          "image": "res/Item/space_astronaut_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Jamaica",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Energy_word",
-          "name": "Thermal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Organ",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Opera_word",
-          "name": "Act",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Opera_word",
-          "name": "Diva",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "Notebook",
-          "image": "res/Item/supplies_notebook_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "William_word",
-          "name": "Macbeth",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "William_word",
-          "name": "Henry V",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Maple",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "Rubber Stamp",
-          "image": "res/Item/supplies_rubberstamp_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Customs_word",
-          "name": "Duty",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Violin",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Piano",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "File folder",
-          "image": "res/Item/supplies_filefolder_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Chestnut",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Drum",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Customs_word",
-          "name": "Border",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Flute",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Ash",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "William_word",
-          "name": "Tempest",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Space",
-          "name": "UFO",
-          "image": "res/Item/space_ufo_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Knight_word",
-          "name": "Armor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Evaluate_word",
-          "name": "Estimate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Knight_word",
-          "name": "Weapon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Ukulele",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Cats_word",
-          "name": "Angora",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Music_word",
-          "name": "Cello",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Cipher_word",
-          "name": "Encode",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Poplar",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Crete",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Customs_word",
-          "name": "Import",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Islands_word",
-          "name": "Hawaii",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Space",
-          "name": "Alien",
-          "image": "res/Item/space_alien_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alarm_word",
-          "name": "Rush",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "Paperclip",
-          "image": "res/Item/supplies_paperclip_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alarm_word",
-          "name": "Buzzer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Evaluate_word",
-          "name": "Analyze",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alarm_word",
-          "name": "Beep",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "Stapler",
-          "image": "res/Item/supplies_stapler_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Evaluate_word",
-          "name": "Assess",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Oak",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Shaft_word",
-          "name": "Pickaxe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Phase_word",
-          "name": "Gas",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Leaves_word",
-          "name": "Palm",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Phase_word",
-          "name": "Solid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Phase_word",
-          "name": "Liquid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Customs_word",
-          "name": "Export",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Shaft_word",
-          "name": "Cart",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Supplies",
-          "name": "Tape dispenser",
-          "image": "res/Item/supplies_tapedispenser_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Shaft_word",
-          "name": "Mine",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Space": 4,
-      "Music_word": 8,
-      "Supplies": 6,
-      "Leaves_word": 6,
-      "Customs_word": 4,
-      "Evaluate_word": 3,
-      "Shaft_word": 3,
-      "Phase_word": 3
+      "Operas_word": 8,
+      "Wind_word": 8,
+      "Families_word": 8,
+      "Spa_word": 8,
+      "Stars_word": 6,
+      "Bird": 6,
+      "AI_word": 6,
+      "Dishes_word": 5,
+      "Series_word": 5,
+      "Angles_word": 4,
+      "Division_word": 4,
+      "Read_word": 4,
+      "Speak_word": 3,
+      "Hats": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Shaft_word",
-        "name": "Shaft",
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Article",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Chatbot",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Phase_word",
-        "name": "Phase",
+        "category": "Wind_word",
+        "name": "Wind",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Sirocco",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Space",
-        "name": "Space",
+        "category": "AI_word",
+        "name": "AI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Sirius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Region",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Peeling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Parakeet",
+        "image": "res/Item/bird_owl_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Episode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Goulash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Straight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Season",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Lasagna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Eclectus",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Tosca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Wavy",
+        "image": "res/Item/hats_panamahat_8.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Evaluate_word",
-        "name": "Evaluate",
+        "category": "Series_word",
+        "name": "Series",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Fidelio",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Squall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Argument",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Obtuse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Carmen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Acute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Dataset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Faust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Feline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Matrix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Pedicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Wozzeck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Manicure",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Supplies",
-        "name": "Supplies",
+        "category": "Operas_word",
+        "name": "Operas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Agent",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dishes_word",
+        "name": "Dishes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Magazine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Polaris",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Ovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Breeze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Chinook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Debate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Cockatoo",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Aida",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Division_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Canine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Equine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Coily",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Read_word",
+        "name": "Read",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Waxing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Dialogue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Fandom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Turandot",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 200
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Breeze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Budgie",
+            "image": "res/Item/bird_robin_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Chatbot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Curry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Journal",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Caprine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Turandot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Families_word",
+            "name": "Families",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hats",
+            "name": "Hats",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Division_word",
+            "name": "Division",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Chinook",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Cockatoo",
+            "image": "res/Item/bird_swan_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Cortex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Beauty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Otello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Vega",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Brochure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Wozzeck",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Right",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Neural",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Goulash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Massage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Sauna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speak_word",
+            "name": "Argument",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Eclectus",
+            "image": "res/Item/bird_heron_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Porcine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Read_word",
+            "name": "Read",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Fidelio",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Stars_word",
+            "name": "Stars",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wind_word",
+            "name": "Wind",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Manicure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Wellness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Rigel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Obtuse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Zephyr",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Operas_word": 8,
+      "Wind_word": 8,
+      "Families_word": 8,
+      "Spa_word": 8,
+      "Stars_word": 6,
+      "Bird": 6,
+      "AI_word": 6,
+      "Dishes_word": 5,
+      "Series_word": 5,
+      "Angles_word": 4,
+      "Division_word": 4,
+      "Read_word": 4,
+      "Speak_word": 3,
+      "Hats": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Feline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Squall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Polaris",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bird",
+        "name": "Bird",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Murine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Article",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Speak_word",
+        "name": "Speak",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "AI_word",
+        "name": "AI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Faust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Fandom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Season",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Peeling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Actress",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Ovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Mistral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Debate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Equine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Pedicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Acute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Lasagna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Matrix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Macaw",
+        "image": "res/Item/bird_eagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Region",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Angles_word",
+        "name": "Angles",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Operas_word",
+        "name": "Operas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Canine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Parakeet",
+        "image": "res/Item/bird_owl_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Episode",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spa_word",
+        "name": "Spa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Tosca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Altair",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dishes_word",
+        "name": "Dishes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Alkaid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Waxing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Sirocco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Magazine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Wavy",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Lorikeet",
+        "image": "res/Item/bird_dove_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Carmen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Straight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Meatloaf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "State",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Coily",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Dialogue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Curly",
+        "image": "res/Item/hats_kepi_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Sirius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Bovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "City",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Aida",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Recap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Series_word",
+        "name": "Series",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Dataset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Agent",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 200
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bird",
+            "name": "Bird",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Beauty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Waxing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Brochure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Aida",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Curry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hats",
+            "name": "Hats",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Altair",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Read_word",
+            "name": "Read",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Vega",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Wozzeck",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Angles_word",
+            "name": "Angles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Dataset",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Actress",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Article",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Right",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Operas_word",
+            "name": "Operas",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Agent",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spa_word",
+            "name": "Spa",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Acute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Chatbot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Straight",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speak_word",
+            "name": "Argument",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Dishes_word",
+            "name": "Dishes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Neural",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Alkaid",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Series_word",
+            "name": "Series",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Macaw",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Fidelio",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speak_word",
+            "name": "Debate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Recap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Speak_word",
+            "name": "Speak",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Parakeet",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Meatloaf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Lorikeet",
+            "image": "res/Item/bird_dove_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Operas_word": 8,
+      "Wind_word": 8,
+      "Families_word": 8,
+      "Spa_word": 8,
+      "Stars_word": 6,
+      "Bird": 6,
+      "AI_word": 6,
+      "Dishes_word": 5,
+      "Series_word": 5,
+      "Angles_word": 4,
+      "Division_word": 4,
+      "Read_word": 4,
+      "Speak_word": 3,
+      "Hats": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Matrix",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "AI_word",
+        "name": "AI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Wavy",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Otello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Magazine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Fandom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Division_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Feline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Rigel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Ovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Canine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Stars_word",
+        "name": "Stars",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Dialogue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Caprine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Chinook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Massage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Pedicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Coily",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Sauna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Squall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Lasagna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Faust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Carmen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Equine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Journal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Mistral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Episode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Manicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Sirius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Obtuse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Wellness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Sirocco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "City",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Bovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Tosca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Porcine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Eclectus",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Cockatoo",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Budgie",
+        "image": "res/Item/bird_robin_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Turandot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Families_word",
+        "name": "Families",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Season",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Breeze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Goulash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Region",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Polaris",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Murine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "State",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wind_word",
+        "name": "Wind",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Peeling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Curly",
+        "image": "res/Item/hats_kepi_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Zephyr",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 200
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Ovine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Read_word",
+            "name": "Read",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Stars_word",
+            "name": "Stars",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Straight",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Series_word",
+            "name": "Series",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spa_word",
+            "name": "Spa",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Altair",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Cockatoo",
+            "image": "res/Item/bird_swan_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wind_word",
+            "name": "Wind",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Parakeet",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Matrix",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Division_word",
+            "name": "City",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Dishes_word",
+            "name": "Dishes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Sauna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Acute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Macaw",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Agent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Goulash",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Rigel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Polaris",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Curry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Gale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Neural",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Division_word",
+            "name": "Division",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Aida",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Wellness",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Sirocco",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Angles_word",
+            "name": "Angles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Manicure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Faust",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Breeze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Chatbot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Squall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Wavy",
+            "image": "res/Item/hats_panamahat_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hats",
+            "name": "Hats",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Operas_word": 8,
+      "Wind_word": 8,
+      "Families_word": 8,
+      "Spa_word": 8,
+      "Stars_word": 6,
+      "Bird": 6,
+      "AI_word": 6,
+      "Dishes_word": 5,
+      "Series_word": 5,
+      "Angles_word": 4,
+      "Division_word": 4,
+      "Read_word": 4,
+      "Speak_word": 3,
+      "Hats": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Obtuse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "State",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Eclectus",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Peeling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Lasagna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Caprine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Feline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Article",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Otello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Debate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Equine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Canine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Families_word",
+        "name": "Families",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Massage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Curly",
+        "image": "res/Item/hats_kepi_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Chinook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Fandom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Dataset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Sirius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Porcine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Vega",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Turandot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bird",
+        "name": "Bird",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Murine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Episode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Coily",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Right",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Carmen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Meatloaf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Waxing",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Speak_word",
+        "name": "Speak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Fidelio",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "AI_word",
+        "name": "AI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Season",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Lorikeet",
+        "image": "res/Item/bird_dove_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Alkaid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Operas_word",
+        "name": "Operas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Wozzeck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Recap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Pedicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Region",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Argument",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Zephyr",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Dialogue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Bovine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Journal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Brochure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Magazine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Actress",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Budgie",
+        "image": "res/Item/bird_robin_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Mistral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Tosca",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 200
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Straight",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Cockatoo",
+            "image": "res/Item/bird_swan_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Families_word",
+            "name": "Families",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Fandom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Lasagna",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Wellness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Chatbot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dishes_word",
+            "name": "Meatloaf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Division_word",
+            "name": "Region",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Equine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Bovine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Feline",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Right",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Operas_word",
+            "name": "Carmen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Magazine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Ovine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Angles_word",
+            "name": "Angles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Parakeet",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Read_word",
+            "name": "Brochure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Pedicure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Alkaid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Stars_word",
+            "name": "Rigel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Waxing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spa_word",
+            "name": "Massage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "AI_word",
+            "name": "Matrix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Operas_word",
+            "name": "Operas",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Dishes_word",
+            "name": "Dishes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Speak_word",
+            "name": "Speak",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Series_word",
+            "name": "Episode",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Families_word",
+            "name": "Caprine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Angles_word",
+            "name": "Obtuse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Chinook",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Stars_word",
+            "name": "Stars",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wind_word",
+            "name": "Squall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird",
+            "name": "Budgie",
+            "image": "res/Item/bird_robin_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Operas_word": 8,
+      "Wind_word": 8,
+      "Families_word": 8,
+      "Spa_word": 8,
+      "Stars_word": 6,
+      "Bird": 6,
+      "AI_word": 6,
+      "Dishes_word": 5,
+      "Series_word": 5,
+      "Angles_word": 4,
+      "Division_word": 4,
+      "Read_word": 4,
+      "Speak_word": 3,
+      "Hats": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Sauna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Wozzeck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "City",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Debate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Music_word",
-        "name": "Music",
+        "category": "Read_word",
+        "name": "Read",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Lorikeet",
+        "image": "res/Item/bird_dove_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Division_word",
+        "name": "State",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Dialogue",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Leaves_word",
-        "name": "Leaves",
+        "category": "Series_word",
+        "name": "Series",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Journal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Porcine",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Customs_word",
-        "name": "Customs",
+        "category": "AI_word",
+        "name": "AI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Manicure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Neural",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Altair",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Sirocco",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spa_word",
+        "name": "Spa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Curly",
+        "image": "res/Item/hats_kepi_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Eclectus",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speak_word",
+        "name": "Argument",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Division_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Coily",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Read_word",
+        "name": "Article",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Turandot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Faust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Mistral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Actress",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Agent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Goulash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Canine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Sirius",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Aida",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Wavy",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Angles_word",
+        "name": "Acute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spa_word",
+        "name": "Peeling",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Breeze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Season",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Series_word",
+        "name": "Recap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dishes_word",
+        "name": "Curry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird",
+        "name": "Macaw",
+        "image": "res/Item/bird_eagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Vega",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Tosca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "AI_word",
+        "name": "Dataset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Gale",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wind_word",
+        "name": "Wind",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Fidelio",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Operas_word",
+        "name": "Otello",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bird",
+        "name": "Bird",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Stars_word",
+        "name": "Polaris",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Families_word",
+        "name": "Murine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wind_word",
+        "name": "Zephyr",
         "isText": true
       }
     ],

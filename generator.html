@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solitaire Tile Bingo - Level Generator</title>
+    <title>Solitaire Tile - Level Generator (SAJLike)</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -107,20 +107,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Level Generator</h1>
+        <h1>Level Generator (SAJLike)</h1>
         <div class="config">
             <div class="row">
                 <div>
                     <label for="start-level">Start Level</label>
-                    <input type="number" id="start-level" value="1" min="1" max="10">
+                    <input type="number" id="start-level" value="1" min="1" max="108">
                 </div>
                 <div>
                     <label for="num-levels">Number of Levels</label>
-                    <input type="number" id="num-levels" value="2" min="1" max="10">
+                    <input type="number" id="num-levels" value="2" min="1" max="108">
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="step-min-ratio">Step Min Ratio</label>
+                    <input type="number" id="step-min-ratio" value="0.0" min="0" max="1" step="0.05">
+                </div>
+                <div>
+                    <label for="step-max-ratio">Step Max Ratio</label>
+                    <input type="number" id="step-max-ratio" value="1.0" min="0" max="1" step="0.05">
                 </div>
             </div>
             <label for="layouts-per-level">Layouts per Level</label>
             <input type="number" id="layouts-per-level" value="5" min="1" max="20">
+            <label for="mcts-iterations">MCTS Iterations</label>
+            <input type="number" id="mcts-iterations" value="5000" min="100" max="50000" step="500">
             <button id="btn-generate">Generate Levels</button>
         </div>
         <div class="progress-container">
@@ -132,12 +144,9 @@
         <div id="log"></div>
     </div>
 
-<script src="categories.js"></script>
+<script src="level_card_defs.js"></script>
 <script src="level_settings.js"></script>
-<script src="color_settings.js"></script>
 <script>
-// ─── Data ────────────────────────────────────────────────────────────────
-
 // ─── Generation Logic ──────────────────────────────────────────────
 
 function shuffleArray(arr) {
@@ -148,285 +157,247 @@ function shuffleArray(arr) {
     return arr;
 }
 
-function generateCards(config) {
-    const shuffledCats = shuffleArray([...ALL_CATEGORY_KEYS]);
-    const activeCatKeys = shuffledCats.slice(0, config.numCategories);
+function generateCards(level) {
+    const config = getLevelSettings(level);
+    const catDefs = LEVEL_CARD_DEFS[level];
+    if (!catDefs) {
+        throw new Error('No card definitions found for level ' + level);
+    }
 
-    const categoryColorMap = {};
-    activeCatKeys.forEach((key, i) => {
-        categoryColorMap[key] = CARD_COLORS[i % CARD_COLORS.length];
-    });
-
-    // Separate gold (hand pile) and regular (grid) cards
     const goldCards = [];
     const regularCards = [];
-    const regularCountPerCat = {};
+    const categoryTargets = {};
 
-    activeCatKeys.forEach(catKey => {
-        const cat = CATEGORIES[catKey];
+    for (const def of catDefs) {
+        const catKey = def.isImage ? def.categoryName : def.categoryName + '_word';
+
+        // Gold card
         goldCards.push({
             type: 'gold',
             category: catKey,
-            name: cat.name,
-            isText: cat.isText,
+            name: def.categoryName,
+            isText: !def.isImage,
         });
 
-        const shuffledItems = shuffleArray([...cat.items]);
-        const count = Math.min(config.cardsPerCategory, shuffledItems.length);
-        regularCountPerCat[catKey] = count;
-        for (let i = 0; i < count; i++) {
-            regularCards.push({
-                type: 'regular',
-                category: catKey,
-                name: shuffledItems[i].name,
-                image: shuffledItems[i].image,
-                isText: cat.isText,
-            });
-        }
-    });
-
-    const categoryTargets = { ...regularCountPerCat };
-
-    // Pad regular cards to fill grid positions (minus filler slots)
-    const regularPositions = config.totalPositions - (config.numFillers || 0);
-    while (regularCards.length < regularPositions) {
-        const catKey = activeCatKeys[Math.floor(Math.random() * activeCatKeys.length)];
-        const cat = CATEGORIES[catKey];
-        const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-        regularCards.push({
-            type: 'regular',
-            category: catKey,
-            name: item.name,
-            image: item.image,
-            isText: cat.isText,
-        });
-        regularCountPerCat[catKey]++;
-        categoryTargets[catKey] = regularCountPerCat[catKey];
-    }
-
-    // Generate filler cards from non-active categories
-    const fillerCards = [];
-    const inactiveCatKeys = ALL_CATEGORY_KEYS.filter(k => !activeCatKeys.includes(k));
-    const numFillers = config.numFillers || 0;
-    for (let i = 0; i < numFillers && inactiveCatKeys.length > 0; i++) {
-        const catKey = inactiveCatKeys[Math.floor(Math.random() * inactiveCatKeys.length)];
-        const cat = CATEGORIES[catKey];
-        const item = cat.items[Math.floor(Math.random() * cat.items.length)];
-        fillerCards.push({
-            type: 'filler',
-            category: catKey,
-            name: item.name,
-            image: item.image,
-            isText: cat.isText,
-        });
-    }
-
-    // Determine which layer-0 positions get fillers
-    const layer0Positions = [];
-    const layerMask0 = config.layout[0];
-    for (let r = 0; r < layerMask0.length; r++) {
-        for (let c = 0; c < layerMask0[r].length; c++) {
-            if (layerMask0[r][c]) layer0Positions.push({ r, c });
-        }
-    }
-    shuffleArray(layer0Positions);
-    const fillerPositionSet = new Set();
-    for (let i = 0; i < Math.min(numFillers, layer0Positions.length); i++) {
-        fillerPositionSet.add(`${layer0Positions[i].r}-${layer0Positions[i].c}`);
-    }
-
-    shuffleArray(regularCards);
-    shuffleArray(goldCards);
-
-    // Build grid cards (fillers at layer 0 only)
-    const cards = [];
-    const cardMap = {};
-    let regularIdx = 0;
-    let fillerIdx = 0;
-
-    for (let L = 0; L < config.numLayers; L++) {
-        const layerMask = config.layout[L];
-        for (let r = 0; r < layerMask.length; r++) {
-            for (let c = 0; c < layerMask[r].length; c++) {
-                if (!layerMask[r][c]) continue;
-                let card;
-                if (L === 0 && fillerPositionSet.has(`${r}-${c}`) && fillerIdx < fillerCards.length) {
-                    card = fillerCards[fillerIdx++];
-                } else {
-                    if (regularIdx >= regularCards.length) continue;
-                    card = regularCards[regularIdx++];
-                }
-                const key = `${L}-${r}-${c}`;
-                const cardObj = {
-                    id: cards.length,
-                    layer: L,
-                    row: r,
-                    col: c,
-                    card: card,
-                    faceUp: false,
-                    removed: false,
-                };
-                cards.push(cardObj);
-                cardMap[key] = cardObj;
+        // Regular cards
+        categoryTargets[catKey] = def.cardWords.length;
+        for (const word of def.cardWords) {
+            if (def.isImage) {
+                regularCards.push({
+                    type: 'regular',
+                    category: catKey,
+                    name: word.name,
+                    image: word.image,
+                    isText: false,
+                });
+            } else {
+                const wordName = typeof word === 'string' ? word : word.name;
+                regularCards.push({
+                    type: 'regular',
+                    category: catKey,
+                    name: wordName,
+                    isText: true,
+                });
             }
         }
     }
 
-    // Build 1-to-1 covering relationships
-    const coveredBy = {};
-    for (const card of cards) {
-        const key = `${card.layer}-${card.row}-${card.col}`;
-        coveredBy[key] = [];
-    }
-    for (const card of cards) {
-        if (card.layer === 0) continue;
-        const L = card.layer;
-        const R = card.row;
-        const C = card.col;
-        const upperKey = `${L}-${R}-${C}`;
-        const lowerKey = `${L - 1}-${R}-${C}`;
-        if (cardMap[lowerKey]) {
-            coveredBy[lowerKey].push(upperKey);
+    const allCards = [...regularCards, ...goldCards];
+    shuffleArray(allCards);
+
+    const totalColumnCards = config.totalColumnCards;
+    const tableauCards = allCards.slice(0, totalColumnCards);
+    const handCards = allCards.slice(totalColumnCards);
+
+    // Build tableau columns
+    const tableau = [];
+    let cardIdx = 0;
+    for (let ci = 0; ci < config.numColumns; ci++) {
+        const colSize = config.columnSizes[ci];
+        const col = [];
+        for (let pos = 0; pos < colSize; pos++) {
+            if (cardIdx >= tableauCards.length) break;
+            const card = tableauCards[cardIdx++];
+            const isFaceUp = (pos === colSize - 1);
+            col.push({ card, faceUp: isFaceUp });
         }
+        tableau.push(col);
     }
 
-    // Update face-up states
-    for (const card of cards) {
-        if (card.removed) continue;
-        const key = `${card.layer}-${card.row}-${card.col}`;
-        const coveringKeys = coveredBy[key] || [];
-        card.faceUp = coveringKeys.every(ck => {
-            const cc = cardMap[ck];
-            return !cc || cc.removed;
-        });
-    }
-
-    // handPile = gold cards (shuffled), handDisplay starts empty
-    const handPile = goldCards;
-
-    return { cards, cardMap, coveredBy, categoryTargets, categoryColorMap, handPile };
+    return { tableau, categoryTargets, handPile: handCards };
 }
 
-// ─── DFS Solver (new mechanics) ──────────────────────────────────────
+// ─── Heuristic Solver (SAJLike solitaire rules) ──────────────────────────
 
-function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded, maxMoves, maxSlots, handPile) {
-    const result = { solvable: false, nodesExplored: 0 };
+function canStackOnColumn(card, col) {
+    if (col.length === 0) return true;
+    const topCard = col[col.length - 1];
+    if (topCard.card.type === 'gold') return false; // sealed
+    return card.category === topCard.card.category;
+}
+
+function verifySolvable(tableau, categoryTargets, maxSteps, maxSlots, handPile, mctsIterations) {
+    if (mctsIterations === undefined) mctsIterations = 5000;
+
+    // Deep clone state
     const state = {
-        removed: new Set(),
+        tableau: tableau.map(col => col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp }))),
         slots: new Array(maxSlots).fill(null),
-        cleared: Array.from({ length: 5 }, () => Array(5).fill(false)),
-        movesLeft: maxMoves,
+        stepsLeft: maxSteps,
         completedCount: 0,
-        handPile: [...handPile],       // copy
+        numCategories: Object.keys(categoryTargets).length,
+        handPile: [...handPile].map(c => ({ ...c })),
         handDisplay: [],
         recycleCount: 0,
     };
 
     let nodesExplored = 0;
-    const MAX_NODES = 800000;
+    const MAX_NODES = 2000000;
     const MAX_RECYCLES = 3;
+    const EXPLORATION_C = 1.414;
+    let bestSteps = null;
 
-    function simIsFaceUp(cardObj) {
-        if (state.removed.has(cardObj.id)) return false;
-        const key = `${cardObj.layer}-${cardObj.row}-${cardObj.col}`;
-        const coveringKeys = coveredBy[key] || [];
-        return coveringKeys.every(ck => {
-            const cc = cardMap[ck];
-            return !cc || state.removed.has(cc.id);
-        });
-    }
-
-    function countBingoLines() {
-        let count = 0;
-        for (let r = 0; r < 5; r++) {
-            if (state.cleared[r].every(v => v)) count++;
-        }
-        for (let c = 0; c < 5; c++) {
-            if ([0, 1, 2, 3, 4].every(r => state.cleared[r][c])) count++;
-        }
-        if ([0, 1, 2, 3, 4].every(i => state.cleared[i][i])) count++;
-        if ([0, 1, 2, 3, 4].every(i => state.cleared[i][4 - i])) count++;
-        return count;
+    function getTopCard(col) {
+        if (col.length === 0) return null;
+        return col[col.length - 1];
     }
 
     function getMoves() {
         const moves = [];
         const hasEmptySlot = state.slots.some(s => s === null);
 
-        // Move type: collect_regular — face-up basic card matching active slot
-        for (const cardObj of cards) {
-            if (state.removed.has(cardObj.id)) continue;
-            if (!simIsFaceUp(cardObj)) continue;
-            if (cardObj.card.type === 'regular') {
+        // Tableau top cards → slot
+        for (let ci = 0; ci < state.tableau.length; ci++) {
+            const top = getTopCard(state.tableau[ci]);
+            if (!top || !top.faceUp) continue;
+
+            if (top.card.type === 'regular') {
                 const slotIdx = state.slots.findIndex(
-                    s => s !== null && s.key === cardObj.card.category && s.collected < s.target
+                    s => s !== null && s.key === top.card.category && s.collected < s.target
                 );
                 if (slotIdx !== -1) {
-                    moves.push({ type: 'collect_regular', cardObj, slotIndex: slotIdx });
+                    moves.push({ type: 'tableau_to_slot', colIdx: ci, slotIdx });
+                }
+            }
+            if (top.card.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'tableau_gold_to_slot', colIdx: ci });
+            }
+        }
+
+        // Hand display → slot
+        if (state.handDisplay.length > 0) {
+            const topCard = state.handDisplay[state.handDisplay.length - 1];
+            if (topCard.type === 'regular') {
+                const slotIdx = state.slots.findIndex(
+                    s => s !== null && s.key === topCard.category && s.collected < s.target
+                );
+                if (slotIdx !== -1) {
+                    moves.push({ type: 'display_to_slot', slotIdx });
+                }
+            }
+            if (topCard.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'display_gold_to_slot' });
+            }
+        }
+
+        // Tableau → column
+        for (let ci = 0; ci < state.tableau.length; ci++) {
+            const col = state.tableau[ci];
+            const top = getTopCard(col);
+            if (!top || !top.faceUp) continue;
+            for (let ti = 0; ti < state.tableau.length; ti++) {
+                if (ti === ci) continue;
+                if (canStackOnColumn(top.card, state.tableau[ti])) {
+                    moves.push({ type: 'tableau_to_column', srcCol: ci, dstCol: ti });
                 }
             }
         }
 
-        // Move type: place_from_display — top display card into empty slot
-        if (state.handDisplay.length > 0 && hasEmptySlot) {
-            moves.push({ type: 'place_from_display' });
+        // Hand display → column
+        if (state.handDisplay.length > 0) {
+            const topCard = state.handDisplay[state.handDisplay.length - 1];
+            for (let ti = 0; ti < state.tableau.length; ti++) {
+                if (canStackOnColumn(topCard, state.tableau[ti])) {
+                    moves.push({ type: 'display_to_column', dstCol: ti });
+                }
+            }
         }
 
-        // Move type: flip_hand — flip top pile card to display
+        // Flip hand
         if (state.handPile.length > 0) {
             moves.push({ type: 'flip_hand' });
         }
 
-        // Move type: recycle — reverse display back into pile (limited)
+        // Recycle (costs 1 step)
         if (state.handPile.length === 0 && state.handDisplay.length > 0 && state.recycleCount < MAX_RECYCLES) {
             moves.push({ type: 'recycle' });
         }
 
-        // Priority: collect_regular first, then place, flip, recycle last
-        const priority = { collect_regular: 0, place_from_display: 1, flip_hand: 2, recycle: 3 };
-        moves.sort((a, b) => {
-            const pa = priority[a.type];
-            const pb = priority[b.type];
-            if (pa !== pb) return pa - pb;
-            // Among regular collects, prefer ones closer to completion
-            if (a.type === 'collect_regular' && b.type === 'collect_regular') {
-                const aRemain = state.slots[a.slotIndex].target - state.slots[a.slotIndex].collected;
-                const bRemain = state.slots[b.slotIndex].target - state.slots[b.slotIndex].collected;
-                return aRemain - bRemain;
-            }
-            return 0;
-        });
-
         return moves;
+    }
+
+    function autoFlip(col) {
+        if (col.length > 0 && !col[col.length - 1].faceUp) {
+            col[col.length - 1].faceUp = true;
+            return true;
+        }
+        return false;
     }
 
     function applyMove(move) {
         const undo = { type: move.type };
-        state.movesLeft--;
 
-        if (move.type === 'collect_regular') {
-            undo.cardId = move.cardObj.id;
-            undo.layer = move.cardObj.layer;
-            undo.row = move.cardObj.row;
-            undo.col = move.cardObj.col;
-            state.removed.add(move.cardObj.id);
+        if (move.type === 'tableau_to_slot') {
+            state.stepsLeft--;
+            const col = state.tableau[move.colIdx];
+            const tc = col.pop();
+            undo.colIdx = move.colIdx;
+            undo.tc = tc;
+            undo.slotIdx = move.slotIdx;
 
-            if (move.cardObj.layer === 0) {
-                state.cleared[move.cardObj.row][move.cardObj.col] = true;
-                undo.clearedCell = true;
-            }
-
-            const slot = state.slots[move.slotIndex];
-            undo.slotIndex = move.slotIndex;
+            const slot = state.slots[move.slotIdx];
             undo.prevCollected = slot.collected;
             slot.collected++;
             if (slot.collected >= slot.target) {
-                undo.completedSlot = { key: slot.key, collected: undo.prevCollected, target: slot.target };
-                state.slots[move.slotIndex] = null;
+                undo.completed = { ...slot };
+                state.slots[move.slotIdx] = null;
                 state.completedCount++;
-                undo.completedCategory = true;
             }
-        } else if (move.type === 'place_from_display') {
+            undo.flipped = autoFlip(col);
+
+        } else if (move.type === 'tableau_gold_to_slot') {
+            state.stepsLeft--;
+            const col = state.tableau[move.colIdx];
+            const tc = col.pop();
+            undo.colIdx = move.colIdx;
+            undo.tc = tc;
+
+            const emptyIdx = state.slots.findIndex(s => s === null);
+            state.slots[emptyIdx] = {
+                key: tc.card.category,
+                collected: 0,
+                target: categoryTargets[tc.card.category] || 0,
+            };
+            undo.slotIdx = emptyIdx;
+            undo.flipped = autoFlip(col);
+
+        } else if (move.type === 'display_to_slot') {
+            state.stepsLeft--;
+            const card = state.handDisplay.pop();
+            undo.card = card;
+            undo.slotIdx = move.slotIdx;
+
+            const slot = state.slots[move.slotIdx];
+            undo.prevCollected = slot.collected;
+            slot.collected++;
+            if (slot.collected >= slot.target) {
+                undo.completed = { ...slot };
+                state.slots[move.slotIdx] = null;
+                state.completedCount++;
+            }
+
+        } else if (move.type === 'display_gold_to_slot') {
+            state.stepsLeft--;
             const card = state.handDisplay.pop();
             undo.card = card;
             const emptyIdx = state.slots.findIndex(s => s === null);
@@ -435,12 +406,33 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
                 collected: 0,
                 target: categoryTargets[card.category] || 0,
             };
-            undo.slotIndex = emptyIdx;
+            undo.slotIdx = emptyIdx;
+
+        } else if (move.type === 'tableau_to_column') {
+            state.stepsLeft--;
+            const srcCol = state.tableau[move.srcCol];
+            const tc = srcCol.pop();
+            undo.srcCol = move.srcCol;
+            undo.dstCol = move.dstCol;
+            undo.tc = tc;
+            state.tableau[move.dstCol].push(tc);
+            undo.flipped = autoFlip(srcCol);
+
+        } else if (move.type === 'display_to_column') {
+            state.stepsLeft--;
+            const card = state.handDisplay.pop();
+            undo.card = card;
+            undo.dstCol = move.dstCol;
+            state.tableau[move.dstCol].push({ card, faceUp: true });
+
         } else if (move.type === 'flip_hand') {
+            state.stepsLeft--;
             const card = state.handPile.pop();
             state.handDisplay.push(card);
             undo.card = card;
+
         } else if (move.type === 'recycle') {
+            state.stepsLeft--;
             undo.displaySnapshot = [...state.handDisplay];
             state.handPile = [...state.handDisplay].reverse();
             state.handDisplay = [];
@@ -451,91 +443,495 @@ function verifySolvable(cards, cardMap, coveredBy, categoryTargets, bingosNeeded
     }
 
     function undoMove(undo) {
-        state.movesLeft++;
-
-        if (undo.type === 'collect_regular') {
-            state.removed.delete(undo.cardId);
-            if (undo.clearedCell) {
-                state.cleared[undo.row][undo.col] = false;
-            }
-            if (undo.completedCategory) {
+        if (undo.type === 'tableau_to_slot') {
+            state.stepsLeft++;
+            if (undo.flipped) state.tableau[undo.colIdx][state.tableau[undo.colIdx].length - 1].faceUp = false;
+            state.tableau[undo.colIdx].push(undo.tc);
+            if (undo.completed) {
                 state.completedCount--;
-                state.slots[undo.slotIndex] = undo.completedSlot;
+                state.slots[undo.slotIdx] = undo.completed;
+                state.slots[undo.slotIdx].collected = undo.prevCollected;
             } else {
-                state.slots[undo.slotIndex].collected--;
+                state.slots[undo.slotIdx].collected--;
             }
-        } else if (undo.type === 'place_from_display') {
-            state.slots[undo.slotIndex] = null;
+
+        } else if (undo.type === 'tableau_gold_to_slot') {
+            state.stepsLeft++;
+            if (undo.flipped) state.tableau[undo.colIdx][state.tableau[undo.colIdx].length - 1].faceUp = false;
+            state.tableau[undo.colIdx].push(undo.tc);
+            state.slots[undo.slotIdx] = null;
+
+        } else if (undo.type === 'display_to_slot') {
+            state.stepsLeft++;
+            if (undo.completed) {
+                state.completedCount--;
+                state.slots[undo.slotIdx] = undo.completed;
+                state.slots[undo.slotIdx].collected = undo.prevCollected;
+            } else {
+                state.slots[undo.slotIdx].collected--;
+            }
             state.handDisplay.push(undo.card);
+
+        } else if (undo.type === 'display_gold_to_slot') {
+            state.stepsLeft++;
+            state.slots[undo.slotIdx] = null;
+            state.handDisplay.push(undo.card);
+
+        } else if (undo.type === 'tableau_to_column') {
+            state.stepsLeft++;
+            state.tableau[undo.dstCol].pop();
+            if (undo.flipped) state.tableau[undo.srcCol][state.tableau[undo.srcCol].length - 1].faceUp = false;
+            state.tableau[undo.srcCol].push(undo.tc);
+
+        } else if (undo.type === 'display_to_column') {
+            state.stepsLeft++;
+            state.tableau[undo.dstCol].pop();
+            state.handDisplay.push(undo.card);
+
         } else if (undo.type === 'flip_hand') {
+            state.stepsLeft++;
             state.handDisplay.pop();
             state.handPile.push(undo.card);
+
         } else if (undo.type === 'recycle') {
+            state.stepsLeft++;
             state.handDisplay = undo.displaySnapshot;
             state.handPile = [];
             state.recycleCount--;
         }
     }
 
-    function solve() {
-        nodesExplored++;
-        if (nodesExplored > MAX_NODES) return false;
+    // ── MCTS Implementation ──────────────────────────────────────────
 
-        if (countBingoLines() >= bingosNeeded) return true;
-        if (state.movesLeft <= 0) return false;
-
-        const moves = getMoves();
-        if (moves.length === 0) return false;
-
-        for (const move of moves) {
-            const undo = applyMove(move);
-            if (solve()) return true;
-            undoMove(undo);
-        }
-
-        return false;
+    function createNode(parent, move, depth) {
+        return {
+            parent,
+            move,
+            children: [],
+            untriedMoves: null,
+            visits: 0,
+            wins: 0,
+            totalSteps: 0,
+            depth,
+        };
     }
 
-    result.solvable = solve();
-    result.nodesExplored = nodesExplored;
-    return result;
+    function ucb1(node, parentVisits) {
+        if (node.visits === 0) return Infinity;
+        const exploit = node.wins / node.visits;
+        const explore = EXPLORATION_C * Math.sqrt(Math.log(parentVisits) / node.visits);
+        return exploit + explore;
+    }
+
+    function bestChild(node) {
+        const pv = node.visits;
+        let best = null;
+        let bestVal = -1;
+        for (const c of node.children) {
+            const v = ucb1(c, pv);
+            if (v > bestVal) {
+                bestVal = v;
+                best = c;
+            }
+        }
+        return best;
+    }
+
+    function initUntriedMoves(node) {
+        if (node.untriedMoves === null) {
+            node.untriedMoves = getMoves();
+            shuffleArray(node.untriedMoves);
+        }
+    }
+
+    function getMoveWeight(move) {
+        const mt = move.type;
+        if (mt === 'tableau_to_slot' || mt === 'tableau_gold_to_slot' || mt === 'display_to_slot' || mt === 'display_gold_to_slot') {
+            return 100;
+        }
+        if (mt === 'tableau_to_column') return 50;
+        if (mt === 'display_to_column') return 20;
+        if (mt === 'flip_hand') return 20;
+        return 10; // recycle
+    }
+
+    function greedyRolloutChoice(moves) {
+        let bestWeight = -1;
+        let candidates = [];
+        for (const m of moves) {
+            const w = getMoveWeight(m);
+            if (w > bestWeight) {
+                bestWeight = w;
+                candidates = [m];
+            } else if (w === bestWeight) {
+                candidates.push(m);
+            }
+        }
+        if (candidates.length === 1) return candidates[0];
+        return candidates[Math.floor(Math.random() * candidates.length)];
+    }
+
+    function rollout() {
+        const rolloutUndos = [];
+        let won = false;
+        while (state.stepsLeft > 0) {
+            if (state.completedCount >= state.numCategories) {
+                won = true;
+                break;
+            }
+            const moves = getMoves();
+            if (moves.length === 0) break;
+            const move = greedyRolloutChoice(moves);
+            rolloutUndos.push(applyMove(move));
+            nodesExplored++;
+        }
+        const stepsUsed = maxSteps - state.stepsLeft;
+        for (let i = rolloutUndos.length - 1; i >= 0; i--) {
+            undoMove(rolloutUndos[i]);
+        }
+        return { won, stepsUsed };
+    }
+
+    function mctsIterate(root) {
+        // SELECT
+        let node = root;
+        const pathUndos = [];
+        while (node.untriedMoves !== null && node.untriedMoves.length === 0 && node.children.length > 0) {
+            node = bestChild(node);
+            pathUndos.push(applyMove(node.move));
+            nodesExplored++;
+        }
+
+        // Check if already won
+        if (state.completedCount >= state.numCategories) {
+            const stepsUsed = maxSteps - state.stepsLeft;
+            if (bestSteps === null || stepsUsed < bestSteps) bestSteps = stepsUsed;
+            let n = node;
+            while (n !== null) {
+                n.visits++;
+                n.wins++;
+                n.totalSteps += stepsUsed;
+                n = n.parent;
+            }
+            for (let i = pathUndos.length - 1; i >= 0; i--) undoMove(pathUndos[i]);
+            return;
+        }
+
+        // EXPAND
+        initUntriedMoves(node);
+        if (node.untriedMoves.length > 0) {
+            const move = node.untriedMoves.pop();
+            const child = createNode(node, move, node.depth + 1);
+            node.children.push(child);
+            pathUndos.push(applyMove(move));
+            nodesExplored++;
+            node = child;
+        }
+
+        // SIMULATE
+        const { won, stepsUsed } = rollout();
+        if (won && (bestSteps === null || stepsUsed < bestSteps)) {
+            bestSteps = stepsUsed;
+        }
+
+        // BACKPROPAGATE
+        let n = node;
+        while (n !== null) {
+            n.visits++;
+            if (won) {
+                n.wins++;
+                n.totalSteps += stepsUsed;
+            }
+            n = n.parent;
+        }
+
+        // Undo path
+        for (let i = pathUndos.length - 1; i >= 0; i--) {
+            undoMove(pathUndos[i]);
+        }
+    }
+
+    const root = createNode(null, null, 0);
+    initUntriedMoves(root);
+
+    for (let iter = 0; iter < mctsIterations; iter++) {
+        mctsIterate(root);
+        if (nodesExplored > MAX_NODES) break;
+    }
+
+    const solvable = bestSteps !== null;
+    return {
+        solvable,
+        nodesExplored,
+        stepsUsed: solvable ? bestSteps : 0,
+    };
+}
+
+// ─── Layout Quality Validation ────────────────────────────────────
+
+function tryGreedyDrag(simTableau, simDisplay, simSlots, categoryTargets) {
+    // Priority 1: face-up tableau card → matching slot (collect)
+    for (let ci = 0; ci < simTableau.length; ci++) {
+        const col = simTableau[ci];
+        if (!col.length || !col[col.length - 1].faceUp) continue;
+        const card = col[col.length - 1].card;
+        if (card.type === 'regular') {
+            for (let si = 0; si < simSlots.length; si++) {
+                const s = simSlots[si];
+                if (s !== null && s.key === card.category && s.collected < s.target) {
+                    col.pop();
+                    s.collected++;
+                    if (s.collected >= s.target) simSlots[si] = null;
+                    if (col.length && !col[col.length - 1].faceUp) col[col.length - 1].faceUp = true;
+                    return true;
+                }
+            }
+        }
+    }
+
+    // Priority 1b: face-up tableau gold → empty slot
+    for (let ci = 0; ci < simTableau.length; ci++) {
+        const col = simTableau[ci];
+        if (!col.length || !col[col.length - 1].faceUp) continue;
+        const card = col[col.length - 1].card;
+        if (card.type === 'gold') {
+            for (let si = 0; si < simSlots.length; si++) {
+                if (simSlots[si] === null) {
+                    col.pop();
+                    simSlots[si] = {
+                        key: card.category,
+                        collected: 0,
+                        target: categoryTargets[card.category] || 0,
+                    };
+                    if (col.length && !col[col.length - 1].faceUp) col[col.length - 1].faceUp = true;
+                    return true;
+                }
+            }
+        }
+    }
+
+    // Priority 1c: hand display top → matching slot
+    if (simDisplay.length > 0) {
+        const top = simDisplay[simDisplay.length - 1];
+        if (top.type === 'regular') {
+            for (let si = 0; si < simSlots.length; si++) {
+                const s = simSlots[si];
+                if (s !== null && s.key === top.category && s.collected < s.target) {
+                    simDisplay.pop();
+                    s.collected++;
+                    if (s.collected >= s.target) simSlots[si] = null;
+                    return true;
+                }
+            }
+        }
+        if (top.type === 'gold') {
+            for (let si = 0; si < simSlots.length; si++) {
+                if (simSlots[si] === null) {
+                    simDisplay.pop();
+                    simSlots[si] = {
+                        key: top.category,
+                        collected: 0,
+                        target: categoryTargets[top.category] || 0,
+                    };
+                    return true;
+                }
+            }
+        }
+    }
+
+    // Priority 2: tableau → same-category column (stack)
+    for (let ci = 0; ci < simTableau.length; ci++) {
+        const col = simTableau[ci];
+        if (!col.length || !col[col.length - 1].faceUp) continue;
+        const card = col[col.length - 1].card;
+        if (card.type === 'gold') continue;
+        for (let ti = 0; ti < simTableau.length; ti++) {
+            if (ti === ci || !simTableau[ti].length) continue;
+            const topTc = simTableau[ti][simTableau[ti].length - 1];
+            if (topTc.card.type === 'gold') continue;
+            if (card.category === topTc.card.category) {
+                const tc = col.pop();
+                simTableau[ti].push(tc);
+                if (col.length && !col[col.length - 1].faceUp) col[col.length - 1].faceUp = true;
+                return true;
+            }
+        }
+    }
+
+    // Priority 3: hand display → column (stack)
+    if (simDisplay.length > 0) {
+        const top = simDisplay[simDisplay.length - 1];
+        for (let ti = 0; ti < simTableau.length; ti++) {
+            if (!simTableau[ti].length) {
+                simDisplay.pop();
+                simTableau[ti].push({ card: top, faceUp: true });
+                return true;
+            }
+            const topTc = simTableau[ti][simTableau[ti].length - 1];
+            if (topTc.card.type === 'gold') continue;
+            if (top.category === topTc.card.category) {
+                simDisplay.pop();
+                simTableau[ti].push({ card: top, faceUp: true });
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+function validateLayout(tableau, handPile, categoryTargets, maxSlots) {
+    // ── 条件 3：金牌可及性 ──
+    let goldAccessible = false;
+    for (const col of tableau) {
+        if (col.length && col[col.length - 1].faceUp && col[col.length - 1].card.type === 'gold') {
+            goldAccessible = true;
+            break;
+        }
+    }
+    if (!goldAccessible) {
+        for (let i = 0; i < Math.min(5, handPile.length); i++) {
+            if (handPile[i].type === 'gold') {
+                goldAccessible = true;
+                break;
+            }
+        }
+    }
+    if (!goldAccessible) return false;
+
+    // ── 条件 1：开局可操作 ──
+    const faceUpCards = []; // [{colIdx, card}]
+    for (let ci = 0; ci < tableau.length; ci++) {
+        const col = tableau[ci];
+        if (col.length && col[col.length - 1].faceUp) {
+            faceUpCards.push({ colIdx: ci, card: col[col.length - 1].card });
+        }
+    }
+
+    let hasImmediateMove = false;
+
+    for (let i = 0; i < faceUpCards.length; i++) {
+        const { card: cardI } = faceUpCards[i];
+        if (cardI.type === 'gold') {
+            hasImmediateMove = true;
+            break;
+        }
+        for (let j = 0; j < faceUpCards.length; j++) {
+            if (i !== j && cardI.category === faceUpCards[j].card.category) {
+                hasImmediateMove = true;
+                break;
+            }
+        }
+        if (hasImmediateMove) break;
+    }
+
+    if (!hasImmediateMove) {
+        for (let k = 0; k < Math.min(2, handPile.length); k++) {
+            const card = handPile[k];
+            if (card.type === 'gold') {
+                hasImmediateMove = true;
+                break;
+            }
+            for (const fu of faceUpCards) {
+                if (card.category === fu.card.category) {
+                    hasImmediateMove = true;
+                    break;
+                }
+            }
+            if (hasImmediateMove) break;
+        }
+    }
+
+    if (!hasImmediateMove) return false;
+
+    // ── 条件 2：前期流畅性（贪心模拟）──
+    const simTableau = tableau.map(col => col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp })));
+    const simHand = handPile.map(c => ({ ...c }));
+    const simDisplay = [];
+    const simSlots = new Array(maxSlots).fill(null);
+
+    let dragCount = 0;
+    let consecFlips = 0;
+
+    for (let step = 0; step < 20; step++) {
+        if (dragCount >= 5) break;
+
+        const didDrag = tryGreedyDrag(simTableau, simDisplay, simSlots, categoryTargets);
+
+        if (didDrag) {
+            dragCount++;
+            consecFlips = 0;
+        } else {
+            if (simHand.length > 0) {
+                simDisplay.push(simHand.shift());
+                consecFlips++;
+                if (consecFlips > 3) return false;
+            } else {
+                break;
+            }
+        }
+    }
+
+    return true;
 }
 
 // ─── Generator Logic ───────────────────────────────────────────────
 
 function generateSolvableLayout(level) {
     const config = getLevelSettings(level);
+    const catDefs = LEVEL_CARD_DEFS[level];
+    if (!catDefs) {
+        throw new Error('No card definitions found for level ' + level);
+    }
+
+    // Use maxSteps from level_settings.js (configured in Excel)
+    const maxSteps = config.maxSteps;
+
+    const stepMinRatio = parseFloat(document.getElementById('step-min-ratio').value) || 0.0;
+    const stepMaxRatio = parseFloat(document.getElementById('step-max-ratio').value) || 1.0;
+    const mctsIter = parseInt(document.getElementById('mcts-iterations').value) || 5000;
+
     const maxAttempts = 200;
     let totalNodes = 0;
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
-        const gen = generateCards(config);
+        const gen = generateCards(level);
+
+        // 布局质量检查
+        if (!validateLayout(gen.tableau, gen.handPile, gen.categoryTargets, config.maxSlots)) {
+            continue;
+        }
+
         const result = verifySolvable(
-            gen.cards, gen.cardMap, gen.coveredBy,
-            gen.categoryTargets, config.bingosNeeded,
-            config.totalPositions + gen.handPile.length * 2, // generous move budget
-            config.maxSlots, gen.handPile
+            gen.tableau, gen.categoryTargets,
+            maxSteps, config.maxSlots, gen.handPile, mctsIter
         );
         totalNodes += result.nodesExplored;
         if (result.solvable) {
+            const stepsUsed = result.stepsUsed;
+            const minSteps = Math.floor(maxSteps * stepMinRatio);
+            const maxStepsLimit = Math.floor(maxSteps * stepMaxRatio);
+            if (stepsUsed < minSteps || stepsUsed > maxStepsLimit) {
+                continue;
+            }
             return {
                 layout: {
                     config: {
-                        bingosNeeded: config.bingosNeeded,
                         maxSlots: config.maxSlots,
-                        timeLimit: config.timeLimit,
-                        penaltyTime: config.penaltyTime,
+                        maxSteps: maxSteps,
                     },
-                    cards: gen.cards.map(c => ({
-                        layer: c.layer, row: c.row, col: c.col,
-                        card: { ...c.card },
-                    })),
+                    tableau: gen.tableau.map(col => col.map(tc => ({
+                        card: { ...tc.card },
+                        faceUp: tc.faceUp,
+                    }))),
                     categoryTargets: { ...gen.categoryTargets },
                     handPile: gen.handPile.map(c => ({ ...c })),
                     handDisplay: [],
                 },
                 attempts: attempt + 1,
                 totalNodes,
+                stepsUsed,
+                maxSteps,
             };
         }
     }
@@ -586,20 +982,32 @@ btnGenerate.addEventListener('click', async () => {
     for (let lv = startLevel; lv < startLevel + numLevels; lv++) {
         const layouts = [];
         const cfg = getLevelSettings(lv);
-        log(`\n--- Level ${lv} (${cfg.numLayers}L, ${cfg.totalPositions} grid cards, ${cfg.maxSlots} slots, ${cfg.bingosNeeded} bingos, ${cfg.numCategories} cats, ${cfg.timeLimit}s) ---`);
+        const catDefs = LEVEL_CARD_DEFS[lv];
+        if (!catDefs) {
+            log(`\n--- Level ${lv}: NO CARD DEFINITIONS FOUND, skipping ---`);
+            completed += layoutsPerLevel;
+            continue;
+        }
+        const catNames = catDefs.map(d => d.categoryName).join(', ');
+        log(`\n--- Level ${lv} (${cfg.numColumns} cols, ${cfg.totalColumnCards} tableau cards, ${cfg.maxSlots} slots, ${catDefs.length} cats: ${catNames}) ---`);
 
         for (let i = 0; i < layoutsPerLevel; i++) {
             setProgress((completed / totalWork) * 100, `Level ${lv}: layout ${i + 1}/${layoutsPerLevel}`);
 
-            // Yield to keep UI responsive
             await new Promise(r => setTimeout(r, 0));
 
-            const result = generateSolvableLayout(lv);
-            if (result.layout) {
-                layouts.push(result.layout);
-                log(`  Layout ${i + 1}: OK (${result.layout.cards.length} grid + ${result.layout.handPile.length} hand, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
-            } else {
-                log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes explored)`);
+            try {
+                const result = generateSolvableLayout(lv);
+                if (result.layout) {
+                    layouts.push(result.layout);
+                    const totalCards = result.layout.tableau.reduce((s, c) => s + c.length, 0);
+                    log(`  Layout ${i + 1}: OK (${totalCards} tableau + ${result.layout.handPile.length} hand, ${result.stepsUsed}/${result.maxSteps} steps, ${result.attempts} attempts, ${result.totalNodes.toLocaleString()} nodes)`);
+                } else {
+                    log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.totalNodes.toLocaleString()} nodes explored)`);
+                }
+            } catch (e) {
+                log(`  Layout ${i + 1}: ERROR - ${e.message}`);
+                console.error(e);
             }
             completed++;
         }

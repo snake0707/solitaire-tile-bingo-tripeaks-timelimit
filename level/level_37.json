@@ -1,814 +1,1419 @@
 [
   {
     "config": {
-      "bingosNeeded": 3,
-      "maxSlots": 2,
-      "timeLimit": 115,
-      "penaltyTime": 5
+      "maxSlots": 3,
+      "maxSteps": 75
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Flu_word",
-          "name": "Cough",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Sidebar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "UI_word",
+            "name": "UI",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Reflect",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Amalgam",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hippie_word",
+            "name": "Freedom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Tennis_word",
+            "name": "Tennis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Checkbox",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Glow",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Decor",
-          "name": "Rug",
-          "image": "res/Item/decor_rug_3.png",
-          "isText": false
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Icon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Ogre",
+            "image": "res/Item/halloween_blackcat_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hippie_word",
+            "name": "Hippie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hippie_word",
+            "name": "Vans",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Mule",
+            "image": "res/Item/rain_lightning_6.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Pets_word",
-          "name": "Dog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Phase_word",
-          "name": "Gas",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Riyadh",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Ricotta",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Cairo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Madrid",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Flu_word",
-          "name": "Pills",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Bronze",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Gemstone_word",
-          "name": "Opal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Dynasty_word",
-          "name": "Ottoman",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Eye_word",
-          "name": "Iris",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Gouda",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Shovel_word",
-          "name": "Dig",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Shovel_word",
-          "name": "Excavate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Swiss",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Brass",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Speak_word",
-          "name": "Debate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Athens",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Nations_word",
-          "name": "Japan",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Gemstone_word",
-          "name": "Sapphire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Stellite",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Pewter",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Parmesan",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Gemstone_word",
-          "name": "Agate",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Cortex",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Seal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Chatbot",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Agent",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Stamp",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "AI_word",
-          "name": "Matrix",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Flu_word",
-          "name": "Headache",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Nitinol",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Letter",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Speak_word",
-          "name": "Argument",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Purple",
-          "name": "Eggplant",
-          "image": "res/Item/purple_eggplant_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Nichrome",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Stars_word",
-          "name": "Sirius",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Mail",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Stars_word",
-          "name": "Polaris",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Envelope",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Stars_word",
-          "name": "Altair",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Feta",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Burger_word",
-          "name": "Sauce",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Alloy_word",
-          "name": "Alnico",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Purple",
-          "name": "Violet",
-          "image": "res/Item/purple_violet_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Mailman_word",
-          "name": "Ink",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Prisoner_word",
-          "name": "Detainee",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hair_word",
-          "name": "Coily",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Decor",
-          "name": "Photo frame",
-          "image": "res/Item/decor_photoframe_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Cheddar",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Edam",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Decor",
-          "name": "Vase",
-          "image": "res/Item/decor_vase_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hair_word",
-          "name": "Wavy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Decor",
-          "name": "Wall clock",
-          "image": "res/Item/decor_wallclock_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Cheese_word",
-          "name": "Brie",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Purple",
-          "name": "Lavender",
-          "image": "res/Item/purple_lavender_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Purple",
-          "name": "Plum",
-          "image": "res/Item/purple_plum_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Hair_word",
-          "name": "Curly",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Speak_word",
-          "name": "Dialogue",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Flu_word": 3,
-      "Alloy_word": 8,
-      "Decor": 4,
-      "Cheese_word": 8,
-      "Speak_word": 3,
-      "Mailman_word": 6,
-      "Purple": 4,
-      "Hair_word": 3
+      "UI_word": 8,
+      "Light_word": 8,
+      "Halloween": 4,
+      "Tennis_word": 4,
+      "Hippie_word": 3,
+      "Rain": 3
     },
     "handPile": [
       {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Sunlight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Clay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Commune",
+        "isText": true
+      },
+      {
         "type": "gold",
-        "category": "Decor",
-        "name": "Decor",
+        "category": "Halloween",
+        "name": "Halloween",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Beacon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Switch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Donkey",
+        "image": "res/Item/rain_rainboots_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Torch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Carpet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Toggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Dragon",
+        "image": "res/Item/halloween_candybucket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Beast",
+        "image": "res/Item/halloween_witchhat_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Hard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Garland",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Vampire",
+        "image": "res/Item/halloween_jackolantern_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Speak_word",
-        "name": "Speak",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Photon",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Purple",
-        "name": "Purple",
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Grass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Neon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Slider",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Button",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Zebra",
+        "image": "res/Item/rain_rainbow_7.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Cheese_word",
-        "name": "Cheese",
+        "category": "Light_word",
+        "name": "Light",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tennis_word",
+            "name": "Clay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Toggle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Switch",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Tennis_word",
+            "name": "Tennis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Slider",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Neon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Beacon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Icon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Button",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Halloween",
+            "name": "Halloween",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Mule",
+            "image": "res/Item/rain_lightning_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Glow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "UI_word": 8,
+      "Light_word": 8,
+      "Halloween": 4,
+      "Tennis_word": 4,
+      "Hippie_word": 3,
+      "Rain": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Vans",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Hair_word",
-        "name": "Hair",
+        "category": "UI_word",
+        "name": "UI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Vampire",
+        "image": "res/Item/halloween_jackolantern_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Carpet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Grass",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Alloy_word",
-        "name": "Alloy",
+        "category": "Hippie_word",
+        "name": "Hippie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Beast",
+        "image": "res/Item/halloween_witchhat_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Sidebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Commune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Reflect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Torch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Hard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Checkbox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Ogre",
+        "image": "res/Item/halloween_blackcat_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Photon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Garland",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Zebra",
+        "image": "res/Item/rain_rainbow_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Donkey",
+        "image": "res/Item/rain_rainboots_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Freedom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Sunlight",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Dragon",
+        "image": "res/Item/halloween_candybucket_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Light_word",
+        "name": "Light",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Sunlight",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Icon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Beast",
+            "image": "res/Item/halloween_witchhat_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Donkey",
+            "image": "res/Item/rain_rainboots_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Garland",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Zebra",
+            "image": "res/Item/rain_rainbow_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Mule",
+            "image": "res/Item/rain_lightning_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tennis_word",
+            "name": "Grass",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Dragon",
+            "image": "res/Item/halloween_candybucket_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hippie_word",
+            "name": "Commune",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Neon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Vampire",
+            "image": "res/Item/halloween_jackolantern_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "UI_word": 8,
+      "Light_word": 8,
+      "Halloween": 4,
+      "Tennis_word": 4,
+      "Hippie_word": 3,
+      "Rain": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Ogre",
+        "image": "res/Item/halloween_blackcat_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Halloween",
+        "name": "Halloween",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Hippie_word",
+        "name": "Hippie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Reflect",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Mailman_word",
-        "name": "Mailman",
+        "category": "Tennis_word",
+        "name": "Tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Glow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Hard",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "UI_word",
+        "name": "UI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Torch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Light_word",
+        "name": "Light",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Carpet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Clay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Freedom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Photon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Button",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Toggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Beacon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Checkbox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Switch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Slider",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Vans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Sidebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Menu",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Donkey",
+            "image": "res/Item/rain_rainboots_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Light_word",
+            "name": "Light",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Icon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Garland",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Sidebar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Switch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tennis_word",
+            "name": "Clay",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Toggle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Slider",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Mule",
+            "image": "res/Item/rain_lightning_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Reflect",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hippie_word",
+            "name": "Hippie",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "UI_word": 8,
+      "Light_word": 8,
+      "Halloween": 4,
+      "Tennis_word": 4,
+      "Hippie_word": 3,
+      "Rain": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Vans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Zebra",
+        "image": "res/Item/rain_rainbow_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Torch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Dragon",
+        "image": "res/Item/halloween_candybucket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Beast",
+        "image": "res/Item/halloween_witchhat_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Carpet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Hard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Sunlight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Commune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Button",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Vampire",
+        "image": "res/Item/halloween_jackolantern_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Neon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Grass",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "UI_word",
+        "name": "UI",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Halloween",
+        "name": "Halloween",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Checkbox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Freedom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Beacon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Ogre",
+        "image": "res/Item/halloween_blackcat_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Tennis_word",
+        "name": "Tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Photon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Glow",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Vampire",
+            "image": "res/Item/halloween_jackolantern_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Glow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Tennis_word",
+            "name": "Tennis",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Checkbox",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Toggle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "UI_word",
+            "name": "Button",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Ogre",
+            "image": "res/Item/halloween_blackcat_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tennis_word",
+            "name": "Hard",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Light_word",
+            "name": "Photon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Halloween",
+            "name": "Dragon",
+            "image": "res/Item/halloween_candybucket_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Light_word",
+            "name": "Light",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rain",
+            "name": "Zebra",
+            "image": "res/Item/rain_rainbow_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "UI_word": 8,
+      "Light_word": 8,
+      "Halloween": 4,
+      "Tennis_word": 4,
+      "Hippie_word": 3,
+      "Rain": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Torch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Carpet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Neon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Grass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Beacon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Vans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Donkey",
+        "image": "res/Item/rain_rainboots_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Hippie_word",
+        "name": "Hippie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Switch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rain",
+        "name": "Mule",
+        "image": "res/Item/rain_lightning_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Sidebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Commune",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Halloween",
+        "name": "Halloween",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Slider",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "UI_word",
+        "name": "UI",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tennis_word",
+        "name": "Clay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Halloween",
+        "name": "Beast",
+        "image": "res/Item/halloween_witchhat_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rain",
+        "name": "Rain",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Reflect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "UI_word",
+        "name": "Icon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Sunlight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Light_word",
+        "name": "Garland",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hippie_word",
+        "name": "Freedom",
         "isText": true
       }
     ],

@@ -1,814 +1,1424 @@
 [
   {
     "config": {
-      "bingosNeeded": 3,
-      "maxSlots": 2,
-      "timeLimit": 135,
-      "penaltyTime": 5
+      "maxSlots": 3,
+      "maxSteps": 75
     },
-    "cards": [
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Primates_word",
-          "name": "Lemur",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moon_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Sandwich",
+            "image": "res/Item/seafood_crab_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "No entry",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Primates_word",
-          "name": "Tarsier",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Kebab",
+            "image": "res/Item/seafood_mussel_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Pizza",
+            "image": "res/Item/seafood_conch_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fall_word",
+            "name": "Fall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Route",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Primates_word",
-          "name": "Baboon",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fans_word",
+            "name": "Fans",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Gibbous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Hot dog",
+            "image": "res/Item/seafood_squid_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Nuclear_word",
-          "name": "Atom",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Sailor",
-          "name": "Rope",
-          "image": "res/Item/sailor_rope_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Nuclear_word",
-          "name": "Electron",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Primates_word",
-          "name": "Simian",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Coding_word",
-          "name": "Python",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Saw_word",
-          "name": "Notch",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Coding_word",
-          "name": "PHP",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Coding_word",
-          "name": "Java",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Violins_word",
-          "name": "Bow",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Minds_word",
-          "name": "Sartre",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Minds_word",
-          "name": "Kant",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Western_word",
-          "name": "Cowboy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Finance_word",
-          "name": "Bank",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Grammar_word",
-          "name": "Verb",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Saw_word",
-          "name": "Blade",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Dhole",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Fox",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Bastion",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Western_word",
-          "name": "Saloon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Western_word",
-          "name": "Rodeo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Concrete_word",
-          "name": "Mix",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Western_word",
-          "name": "Lasso",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Tarot_word",
-          "name": "Fool",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Studies_word",
-          "name": "Yale",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Moat",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Stroller",
-          "image": "res/Item/babies_stroller_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Parapet",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Jackal",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Violins_word",
-          "name": "Paganini",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Diaper",
-          "image": "res/Item/babies_diaper_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Pacifier",
-          "image": "res/Item/babies_pacifier_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Nuclear_word",
-          "name": "Neutron",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Citadel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Car seat",
-          "image": "res/Item/babies_carseat_8.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Dungeon",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Sailor",
-          "name": "Knot",
-          "image": "res/Item/sailor_knot_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Rattle",
-          "image": "res/Item/babies_rattle_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Violins_word",
-          "name": "Luthier",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Crib",
-          "image": "res/Item/babies_crib_7.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Rampart",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Sailor",
-          "name": "Storm",
-          "image": "res/Item/sailor_storm_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Concrete_word",
-          "name": "Screed",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Coyote",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Nuclear_word",
-          "name": "Proton",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Sailor",
-          "name": "Flag",
-          "image": "res/Item/sailor_flag_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Baby bowl and soft-tip spoon",
-          "image": "res/Item/babies_babybowlandsofttipspoon_6.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Tower",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Dingo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Babies",
-          "name": "Bottle",
-          "image": "res/Item/babies_bottle_5.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Paganism_word",
-          "name": "Totem",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Studies_word",
-          "name": "Sorbonne",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Saw_word",
-          "name": "Teeth",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Canines_word",
-          "name": "Wolf",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Studies_word",
-          "name": "Stanford",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Paganism_word",
-          "name": "Ritual",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Concrete_word",
-          "name": "Trowel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Spicy_word",
-          "name": "Sriracha",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Castle_word",
-          "name": "Turret",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Toys_word",
-          "name": "Yo-yo",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Nuclear_word": 4,
-      "Sailor": 4,
-      "Saw_word": 3,
-      "Violins_word": 3,
-      "Canines_word": 6,
-      "Castle_word": 8,
-      "Concrete_word": 3,
-      "Babies": 8
+      "Seafood": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Canines_word",
-        "name": "Canines",
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Crescent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Sailor",
-        "name": "Sailor",
+        "category": "Seafood",
+        "name": "Seafood",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "New",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Lane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Rotate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Arrow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burrito",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Consent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Fries",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Taco",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Yield",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burger",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Rotate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fans_word",
+            "name": "Fans",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Pumpkin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Burger",
+            "image": "res/Item/seafood_lobster_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Okay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Arrow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Distance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Path",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Gibbous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Course",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moon_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Seafood": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Whirl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fall_word",
+        "name": "Fall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Yield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Route",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Pizza",
+        "image": "res/Item/seafood_conch_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Kebab",
+        "image": "res/Item/seafood_mussel_3.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Babies",
-        "name": "Babies",
+        "category": "Seafood",
+        "name": "Seafood",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Castle_word",
-        "name": "Castle",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Fries",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Sandwich",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Nuclear_word",
-        "name": "Nuclear",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Crescent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "No entry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Lane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Hot dog",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Consent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "New",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burrito",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Taco",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Taco",
+            "image": "res/Item/seafood_scallop_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Sandwich",
+            "image": "res/Item/seafood_crab_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Acorn",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Seafood",
+            "name": "Seafood",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Pizza",
+            "image": "res/Item/seafood_conch_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Distance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "New",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moon_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fall_word",
+            "name": "Fall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Course",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Crescent",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Seafood": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burger",
+        "image": "res/Item/seafood_lobster_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Yield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Yes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Fries",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Concrete_word",
-        "name": "Concrete",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Kebab",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Lane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Hot dog",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "No entry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Arrow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Rotate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Violins_word",
-        "name": "Violins",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burrito",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Gibbous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Consent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Route",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Hayride",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Seafood",
+            "name": "Seafood",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "OK sign_word",
+            "name": "OK sign",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Sandwich",
+            "image": "res/Item/seafood_crab_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Crescent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Burger",
+            "image": "res/Item/seafood_lobster_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Rotate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Fries",
+            "image": "res/Item/seafood_shrimp_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Gibbous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Yield",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "No entry",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Seafood": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Kebab",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Lane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Saw_word",
-        "name": "Saw",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Pizza",
+        "image": "res/Item/seafood_conch_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fall_word",
+        "name": "Fall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "New",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Hot dog",
+        "image": "res/Item/seafood_squid_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burrito",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Consent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Route",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Yes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Arrow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Moon_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Taco",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Burger",
+            "image": "res/Item/seafood_lobster_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "OK sign_word",
+            "name": "OK sign",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Rotate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Pizza",
+            "image": "res/Item/seafood_conch_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seafood",
+            "name": "Hot dog",
+            "image": "res/Item/seafood_squid_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Full",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Crescent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Consent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fall_word",
+            "name": "Fall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Seafood",
+            "name": "Seafood",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Seafood": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Kebab",
+        "image": "res/Item/seafood_mussel_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Burrito",
+        "image": "res/Item/seafood_oyster_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Yield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Gibbous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Taco",
+        "image": "res/Item/seafood_scallop_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "No entry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Sandwich",
+        "image": "res/Item/seafood_crab_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Route",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "New",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Arrow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seafood",
+        "name": "Fries",
+        "image": "res/Item/seafood_shrimp_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Moon_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Lane",
         "isText": true
       }
     ],

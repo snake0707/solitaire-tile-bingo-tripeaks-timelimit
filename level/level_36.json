@@ -1,706 +1,2077 @@
 [
   {
     "config": {
-      "bingosNeeded": 3,
-      "maxSlots": 2,
-      "timeLimit": 110,
-      "penaltyTime": 5
+      "maxSlots": 4,
+      "maxSteps": 210
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Enoki",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Table",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Saw",
+            "image": "res/Item/toolbox_saw_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Compost",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Topsoil",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Fresco",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Truffle",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Lipstick",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rice_word",
+            "name": "Rice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Planning",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Edison",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Newton",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Sledding",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Factory",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Congee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Heart_word",
+            "name": "Heart",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Paddock",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Fallow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beauty_word",
+            "name": "Beauty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Hay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Desert",
+            "name": "Desert",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Mall",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Perfume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Harvest",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Luge",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Index",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Bazaar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Painting_word",
+            "name": "Painting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Pebble",
+            "image": "res/Item/desert_camel_4.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Library",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Museum",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "School building",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Mayans",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Egypt",
-          "name": "Sphinx",
-          "image": "res/Item/egypt_sphinx_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Vikings",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Shiitake",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Industry_word",
-          "name": "Goods",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Hotel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Desert",
-          "name": "Dunes",
-          "image": "res/Item/desert_dunes_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Orchestra_word",
-          "name": "Flute",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Toddler_word",
-          "name": "Pacifier",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Industry_word",
-          "name": "Produce",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Amanita",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Desert",
-          "name": "Cacti",
-          "image": "res/Item/desert_cacti_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 2,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Orchestra_word",
-          "name": "Cello",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Industry_word",
-          "name": "Steel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Greeks",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Hospital",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Toddler_word",
-          "name": "Nap time",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Aztecs",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Egypt",
-          "name": "Pharaoh's mask",
-          "image": "res/Item/egypt_pharaohsmask_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Desert",
-          "name": "Camel",
-          "image": "res/Item/desert_camel_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Build_word",
-          "name": "Stadium",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Toddler_word",
-          "name": "Playpen",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Orchestra_word",
-          "name": "Oboe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Romans",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Desert",
-          "name": "Oasis",
-          "image": "res/Item/desert_oasis_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Porcini",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Cultures_word",
-          "name": "Celts",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Doctor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alloy_word",
-          "name": "Pewter",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alloy_word",
-          "name": "Nitinol",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Hair_word",
-          "name": "Wavy",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alloy_word",
-          "name": "Bronze",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Cheese_word",
-          "name": "Swiss",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 2,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Egypt",
-          "name": "Pyramid",
-          "image": "res/Item/egypt_pyramid_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Cheese_word",
-          "name": "Edam",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Mailman_word",
-          "name": "Mail",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Alloy_word",
-          "name": "Amalgam",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Mailman_word",
-          "name": "Stamp",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Mushroom_word",
-          "name": "Russula",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Jobs_word",
-          "name": "Nurse",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Orchestra_word",
-          "name": "Clarinet",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Oslo",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Riyadh",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Capitals_word",
-          "name": "Prague",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Lessons_word",
-          "name": "Algebra",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Lessons_word",
-          "name": "Geometry",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Alloy_word",
-          "name": "Brass",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Medieval_word",
-          "name": "Kingdom",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Eye_word",
-          "name": "Retina",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Shovel_word",
-          "name": "Dig",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Mushroom_word": 6,
-      "Build_word": 8,
-      "Cultures_word": 6,
-      "Egypt": 3,
-      "Industry_word": 3,
-      "Desert": 4,
-      "Orchestra_word": 4,
-      "Toddler_word": 3
+      "Farming_word": 8,
+      "Science_word": 8,
+      "Beauty_word": 8,
+      "Toolbox": 8,
+      "Manager_word": 6,
+      "Library_word": 6,
+      "Sliding_word": 5,
+      "Painting_word": 5,
+      "Markets_word": 4,
+      "Rice_word": 4,
+      "Desert": 3,
+      "Heart_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Einstein",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Science_word",
+        "name": "Science",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Clamp",
+        "image": "res/Item/toolbox_clamp_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Author",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Schedule",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Chisel",
+        "image": "res/Item/toolbox_chisel_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Tempera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skating",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Crop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Mascara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Grain",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Farming_word",
+        "name": "Farming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skeleton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Drill",
+        "image": "res/Item/toolbox_drill_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Darwin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Boulder",
+        "image": "res/Item/desert_dunes_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Deadline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Couple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Faraday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Galilei",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Priority",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Shelf",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toolbox",
+        "name": "Toolbox",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Lamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Hammer",
+        "image": "res/Item/toolbox_hammer_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Oil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Pliers",
+        "image": "res/Item/toolbox_pliers_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Adhesive tape",
+        "image": "res/Item/toolbox_adhesivetape_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Eyeliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Tesla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Vendor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Sales",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Manager_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Delegate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Romance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Acrylic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Wrench",
+        "image": "res/Item/toolbox_wrench_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Passion",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Primer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Library_word",
+        "name": "Library",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Gravel",
+        "image": "res/Item/desert_leatherwatercanteen_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Blusher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Bohr",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Risotto",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Tasklist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Stall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Cleanser",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Markets_word",
+        "name": "Markets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skiing",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 210
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Congee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Markets_word",
+            "name": "Markets",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Tempera",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Hammer",
+            "image": "res/Item/toolbox_hammer_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Perfume",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Painting_word",
+            "name": "Painting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Stall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Risotto",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Toolbox",
+            "name": "Toolbox",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Pliers",
+            "image": "res/Item/toolbox_pliers_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Author",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Luge",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rice_word",
+            "name": "Rice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Couple",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Skating",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Boulder",
+            "image": "res/Item/desert_dunes_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Delegate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Sales",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Priority",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Vendor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Manager_word",
+            "name": "Manager",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Book",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Cleanser",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Passion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Mascara",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Farming_word": 8,
+      "Science_word": 8,
+      "Beauty_word": 8,
+      "Toolbox": 8,
+      "Manager_word": 6,
+      "Library_word": 6,
+      "Sliding_word": 5,
+      "Painting_word": 5,
+      "Markets_word": 4,
+      "Rice_word": 4,
+      "Desert": 3,
+      "Heart_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Compost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Clamp",
+        "image": "res/Item/toolbox_clamp_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Crop",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Heart_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Faraday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Adhesive tape",
+        "image": "res/Item/toolbox_adhesivetape_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Tasklist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Blusher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Grain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Gravel",
+        "image": "res/Item/desert_leatherwatercanteen_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Planning",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Lamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skiing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Einstein",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Topsoil",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Science_word",
+        "name": "Science",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Acrylic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Fallow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Deadline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Saw",
+        "image": "res/Item/toolbox_saw_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Edison",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Romance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Eyeliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Table",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Fresco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Oil",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Desert",
+        "name": "Desert",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Harvest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skeleton",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Farming_word",
+        "name": "Farming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Bazaar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Pebble",
+        "image": "res/Item/desert_camel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Shelf",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beauty_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Chisel",
+        "image": "res/Item/toolbox_chisel_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Schedule",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Newton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Primer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Paddock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Galilei",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Tesla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Sledding",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Darwin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Hay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Drill",
+        "image": "res/Item/toolbox_drill_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Lipstick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Wrench",
+        "image": "res/Item/toolbox_wrench_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Library_word",
+        "name": "Library",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Bohr",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 210
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Romance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Fallow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Mascara",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Grain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Planning",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Tempera",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Lamp",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Desert",
+            "name": "Desert",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Sledding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Adhesive tape",
+            "image": "res/Item/toolbox_adhesivetape_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Cleanser",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Paddock",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Sales",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Saw",
+            "image": "res/Item/toolbox_saw_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Wrench",
+            "image": "res/Item/toolbox_wrench_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Priority",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Couple",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Crop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Shelf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Oil",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Library_word",
+            "name": "Library",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Chisel",
+            "image": "res/Item/toolbox_chisel_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Clamp",
+            "image": "res/Item/toolbox_clamp_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Faraday",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Newton",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Farming_word": 8,
+      "Science_word": 8,
+      "Beauty_word": 8,
+      "Toolbox": 8,
+      "Manager_word": 6,
+      "Library_word": 6,
+      "Sliding_word": 5,
+      "Painting_word": 5,
+      "Markets_word": 4,
+      "Rice_word": 4,
+      "Desert": 3,
+      "Heart_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Galilei",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Vendor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Heart_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Pebble",
+        "image": "res/Item/desert_camel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Primer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Science_word",
+        "name": "Science",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Delegate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rice_word",
+        "name": "Rice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Fresco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Darwin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Bohr",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Tesla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Einstein",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Schedule",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Eyeliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Bazaar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Edison",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Risotto",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Luge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Lipstick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Deadline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Perfume",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Manager_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Topsoil",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beauty_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skeleton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Harvest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Compost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toolbox",
+        "name": "Toolbox",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Painting_word",
+        "name": "Painting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Table",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Pliers",
+        "image": "res/Item/toolbox_pliers_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Gravel",
+        "image": "res/Item/desert_leatherwatercanteen_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Passion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skiing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Blusher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Acrylic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Tasklist",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Markets_word",
+        "name": "Markets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Boulder",
+        "image": "res/Item/desert_dunes_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Stall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Author",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Hay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Drill",
+        "image": "res/Item/toolbox_drill_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skating",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Farming_word",
+        "name": "Farming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Congee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Hammer",
+        "image": "res/Item/toolbox_hammer_8.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 210
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Painting_word",
+            "name": "Painting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Gravel",
+            "image": "res/Item/desert_leatherwatercanteen_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Harvest",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Paddock",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Deadline",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Farming_word",
+            "name": "Farming",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Risotto",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Lipstick",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Boulder",
+            "image": "res/Item/desert_dunes_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Skiing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Manager_word",
+            "name": "Manager",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Clamp",
+            "image": "res/Item/toolbox_clamp_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Sledding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Galilei",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Grain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Chisel",
+            "image": "res/Item/toolbox_chisel_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Stall",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Romance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Topsoil",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rice_word",
+            "name": "Rice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Pebble",
+            "image": "res/Item/desert_camel_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Fallow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Eyeliner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Schedule",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Sales",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Farming_word": 8,
+      "Science_word": 8,
+      "Beauty_word": 8,
+      "Toolbox": 8,
+      "Manager_word": 6,
+      "Library_word": 6,
+      "Sliding_word": 5,
+      "Painting_word": 5,
+      "Markets_word": 4,
+      "Rice_word": 4,
+      "Desert": 3,
+      "Heart_word": 3
     },
     "handPile": [
       {
@@ -710,45 +2081,929 @@
         "isText": false
       },
       {
-        "type": "gold",
-        "category": "Industry_word",
-        "name": "Industry",
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Compost",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Cultures_word",
-        "name": "Cultures",
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Author",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Toddler_word",
-        "name": "Toddler",
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Blusher",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Build_word",
-        "name": "Build",
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Tasklist",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Mushroom_word",
-        "name": "Mushroom",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Egypt",
-        "name": "Egypt",
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Pliers",
+        "image": "res/Item/toolbox_pliers_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Orchestra_word",
-        "name": "Orchestra",
+        "category": "Beauty_word",
+        "name": "Beauty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Darwin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Mascara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Drill",
+        "image": "res/Item/toolbox_drill_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Einstein",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Acrylic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Science_word",
+        "name": "Science",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Delegate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Bohr",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Vendor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Bazaar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Heart_word",
+        "name": "Heart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Fresco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Couple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Newton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Paella",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Primer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Hammer",
+        "image": "res/Item/toolbox_hammer_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Library_word",
+        "name": "Library",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Priority",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Cleanser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Wrench",
+        "image": "res/Item/toolbox_wrench_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Saw",
+        "image": "res/Item/toolbox_saw_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Luge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Shelf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Tempera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Passion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skating",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Markets_word",
+        "name": "Markets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Edison",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Faraday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Perfume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Planning",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Crop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Oil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skeleton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Tesla",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toolbox",
+        "name": "Toolbox",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Adhesive tape",
+        "image": "res/Item/toolbox_adhesivetape_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Hay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Lamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Table",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Congee",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 210
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Chisel",
+            "image": "res/Item/toolbox_chisel_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Crop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Couple",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Delegate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Tempera",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Library_word",
+            "name": "Book",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Congee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beauty_word",
+            "name": "Beauty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert",
+            "name": "Pebble",
+            "image": "res/Item/desert_camel_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rice_word",
+            "name": "Paella",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Blusher",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Adhesive tape",
+            "image": "res/Item/toolbox_adhesivetape_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Painting_word",
+            "name": "Oil",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beauty_word",
+            "name": "Perfume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Heart_word",
+            "name": "Heart",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sliding_word",
+            "name": "Luge",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Compost",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Farming_word",
+            "name": "Grain",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toolbox",
+            "name": "Clamp",
+            "image": "res/Item/toolbox_clamp_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heart_word",
+            "name": "Romance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Manager_word",
+            "name": "Planning",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rice_word",
+            "name": "Rice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Markets_word",
+            "name": "Vendor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Einstein",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Science_word",
+            "name": "Edison",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Science_word",
+            "name": "Science",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Farming_word": 8,
+      "Science_word": 8,
+      "Beauty_word": 8,
+      "Toolbox": 8,
+      "Manager_word": 6,
+      "Library_word": 6,
+      "Sliding_word": 5,
+      "Painting_word": 5,
+      "Markets_word": 4,
+      "Rice_word": 4,
+      "Desert": 3,
+      "Heart_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Stall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Sledding",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Library_word",
+        "name": "Library",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Lamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Hammer",
+        "image": "res/Item/toolbox_hammer_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Table",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Sushi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Hay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Fallow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skiing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Bazaar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Tasklist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Boulder",
+        "image": "res/Item/desert_dunes_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Paddock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Cleanser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert",
+        "name": "Gravel",
+        "image": "res/Item/desert_leatherwatercanteen_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Manager_word",
+        "name": "Manager",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Bohr",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toolbox",
+        "name": "Toolbox",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Topsoil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Fresco",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Markets_word",
+        "name": "Markets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Gouache",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Mascara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Shelf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Galilei",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Tesla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Author",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sliding_word",
+        "name": "Sliding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Newton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Painting_word",
+        "name": "Acrylic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Priority",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Painting_word",
+        "name": "Painting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Pliers",
+        "image": "res/Item/toolbox_pliers_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Schedule",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Saw",
+        "image": "res/Item/toolbox_saw_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Eyeliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Lipstick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Farming_word",
+        "name": "Harvest",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Desert",
+        "name": "Desert",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Markets_word",
+        "name": "Sales",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Darwin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Skincare",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Manager_word",
+        "name": "Deadline",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Wrench",
+        "image": "res/Item/toolbox_wrench_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heart_word",
+        "name": "Passion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skeleton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beauty_word",
+        "name": "Primer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sliding_word",
+        "name": "Skating",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toolbox",
+        "name": "Drill",
+        "image": "res/Item/toolbox_drill_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Library_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Farming_word",
+        "name": "Farming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rice_word",
+        "name": "Risotto",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Science_word",
+        "name": "Faraday",
         "isText": true
       }
     ],

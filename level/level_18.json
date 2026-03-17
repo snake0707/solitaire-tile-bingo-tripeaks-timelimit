@@ -1,663 +1,2449 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 140,
-      "penaltyTime": 3
+      "maxSlots": 4,
+      "maxSteps": 130
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Jamaica",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Cocktail",
+            "image": "res/Item/garments_dress_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Captain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Peace",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Denali",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Pier",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gym",
+            "name": "Barbell",
+            "image": "res/Item/gym_barbell_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Plate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Scholar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Fork",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Climb",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Sicily",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Summit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Gown",
+            "image": "res/Item/garments_skirt_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Polyglot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Breath",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Linguist_word",
+            "name": "Linguist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Sad",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Leader_word",
-          "name": "Adams",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Popular",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Corporal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Upset",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Syntax",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Happy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Sergeant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Garments",
+            "name": "Garments",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Ibiza",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Blush",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Iceland",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Marina",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Bay",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Peel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Barbados",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Vessel",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Wheel_word",
-          "name": "Steer",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Makeup_word",
-          "name": "Powder",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Ballet_word",
-          "name": "Barre",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Warriors_word",
-          "name": "Samurai",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Ballet_word",
-          "name": "Pointe",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Wheel_word",
-          "name": "Rim",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Disaster_word",
-          "name": "Tsunami",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Sculpt_word",
-          "name": "Bust",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Coast",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Drupes",
-          "name": "Peach",
-          "image": "res/Item/drupes_peach_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Wheel_word",
-          "name": "Hubcap",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "PhD_word",
-          "name": "Research",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Harbor_word",
-          "name": "Wharf",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Fish_word",
-          "name": "Perch",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Bali",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Drupes",
-          "name": "Cherry",
-          "image": "res/Item/drupes_cherry_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Ballet_word",
-          "name": "Tutu",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "filler",
-          "category": "Fish_word",
-          "name": "Marlin",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Hawaii",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Sandwich",
-          "image": "res/Item/picnic_sandwich_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Drupes",
-          "name": "Apricot",
-          "image": "res/Item/drupes_apricot_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Fish_word",
-          "name": "Tuna",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Drupes",
-          "name": "Plum",
-          "image": "res/Item/drupes_plum_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Fish_word",
-          "name": "Goldfish",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Islands_word",
-          "name": "Crete",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Basket",
-          "image": "res/Item/picnic_basket_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Fog_word",
-          "name": "Vapor",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "filler",
-          "category": "Fish_word",
-          "name": "Grouper",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Disaster_word",
-          "name": "Flood",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Blanket",
-          "image": "res/Item/picnic_blanket_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Wheel_word",
-          "name": "Axle",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Fog_word",
-          "name": "Smog",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Wheel_word",
-          "name": "Tire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Fog_word",
-          "name": "Haze",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Disaster_word",
-          "name": "Tornado",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Picnic",
-          "name": "Ants",
-          "image": "res/Item/picnic_ants_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Sculpt_word",
-          "name": "Monument",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Movement_word",
-          "name": "Jump",
-          "image": null,
-          "isText": true
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Islands_word": 8,
-      "Harbor_word": 6,
-      "Wheel_word": 5,
-      "Ballet_word": 3,
-      "Disaster_word": 3,
-      "Drupes": 4,
-      "Picnic": 4
+      "Mountain_word": 8,
+      "Army_word": 8,
+      "Emotions_word": 8,
+      "Garments": 6,
+      "Utensils_word": 6,
+      "Meditate_word": 4,
+      "Fame_word": 4,
+      "Linguist_word": 4,
+      "Holiday_word": 3,
+      "Gym": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Picnic",
-        "name": "Picnic",
+        "type": "regular",
+        "category": "Gym",
+        "name": "Dumbbell",
+        "image": "res/Item/gym_dumbbell_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Drupes",
-        "name": "Drupes",
+        "category": "Mountain_word",
+        "name": "Mountain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "General",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Famous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Private",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fame_word",
+        "name": "Fame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Joyful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Sundress",
+        "image": "res/Item/garments_panties_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Grammar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Elated",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Angry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Alps",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Rank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Peeler",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Bodycon",
+        "image": "res/Item/garments_coat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Andes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Psyche",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Renown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Tunic",
+        "image": "res/Item/garments_gloves_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Mantra",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Utensils_word",
+        "name": "Utensils",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Etna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Ladle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "Easter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Air bike",
+        "image": "res/Item/gym_airbike_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Major",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Whisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Spoon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Mini",
+        "image": "res/Item/garments_pants_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Everest",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gym",
+        "name": "Gym",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "Flag Day",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Iconic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meditate_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Fuji",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Emotions_word",
+        "name": "Emotions",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "New Year",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Holiday_word",
+        "name": "Holiday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Colonel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Excited",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Etna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Mantra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Denali",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Elated",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Cocktail",
+            "image": "res/Item/garments_dress_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Plate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gym",
+            "name": "Air bike",
+            "image": "res/Item/gym_airbike_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "General",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Emotions_word",
+            "name": "Emotions",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Famous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Psyche",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Fuji",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "Easter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gym",
+            "name": "Gym",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Climb",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Excited",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Colonel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Corporal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Peeler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Popular",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Grammar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Captain",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Mountain_word": 8,
+      "Army_word": 8,
+      "Emotions_word": 8,
+      "Garments": 6,
+      "Utensils_word": 6,
+      "Meditate_word": 4,
+      "Fame_word": 4,
+      "Linguist_word": 4,
+      "Holiday_word": 3,
+      "Gym": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Whisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Barbell",
+        "image": "res/Item/gym_barbell_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Tunic",
+        "image": "res/Item/garments_gloves_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Renown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Summit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Breath",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Happy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Garments",
+        "name": "Garments",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Wheel_word",
-        "name": "Wheel",
+        "category": "Fame_word",
+        "name": "Fame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Everest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Rank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Polyglot",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Ballet_word",
-        "name": "Ballet",
+        "category": "Utensils_word",
+        "name": "Utensils",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Gown",
+        "image": "res/Item/garments_skirt_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Iconic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Mini",
+        "image": "res/Item/garments_pants_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Bodycon",
+        "image": "res/Item/garments_coat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Angry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Joyful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Ladle",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Islands_word",
-        "name": "Islands",
+        "category": "Holiday_word",
+        "name": "Holiday",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Harbor_word",
-        "name": "Harbor",
+        "category": "Mountain_word",
+        "name": "Mountain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Alps",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "Flag Day",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Syntax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Fork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Spoon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Andes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Sad",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Sergeant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Upset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Zen",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Disaster_word",
-        "name": "Disaster",
+        "category": "Meditate_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Major",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Dumbbell",
+        "image": "res/Item/gym_dumbbell_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Peace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Scholar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Sundress",
+        "image": "res/Item/garments_panties_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "New Year",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Linguist_word",
+        "name": "Linguist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Private",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Zen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gym",
+            "name": "Air bike",
+            "image": "res/Item/gym_airbike_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Popular",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Psyche",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Spoon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Fuji",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Alps",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Mantra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Rank",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Tunic",
+            "image": "res/Item/garments_gloves_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Mini",
+            "image": "res/Item/garments_pants_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gym",
+            "name": "Dumbbell",
+            "image": "res/Item/gym_dumbbell_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Polyglot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Scholar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Excited",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Bodycon",
+            "image": "res/Item/garments_coat_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Emotions_word",
+            "name": "Emotions",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Angry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gym",
+            "name": "Gym",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Breath",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Linguist_word",
+            "name": "Linguist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mountain_word",
+            "name": "Mountain",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Mountain_word": 8,
+      "Army_word": 8,
+      "Emotions_word": 8,
+      "Garments": 6,
+      "Utensils_word": 6,
+      "Meditate_word": 4,
+      "Fame_word": 4,
+      "Linguist_word": 4,
+      "Holiday_word": 3,
+      "Gym": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "Flag Day",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Elated",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Syntax",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Holiday_word",
+        "name": "Holiday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Barbell",
+        "image": "res/Item/gym_barbell_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Iconic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Major",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meditate_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Whisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Fork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Renown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Peace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Colonel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fame_word",
+        "name": "Fame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Sundress",
+        "image": "res/Item/garments_panties_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Ladle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "General",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Andes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Cocktail",
+        "image": "res/Item/garments_dress_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Etna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Everest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Sergeant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Grammar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Garments",
+        "name": "Garments",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Upset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Private",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Plate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "New Year",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "Easter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Famous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Captain",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Utensils_word",
+        "name": "Utensils",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Gown",
+        "image": "res/Item/garments_skirt_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Summit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Corporal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Sad",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Peeler",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Joyful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Happy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Denali",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "General",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fame_word",
+            "name": "Fame",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Private",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Everest",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Famous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Linguist_word",
+            "name": "Linguist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Happy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Plate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Utensils_word",
+            "name": "Utensils",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Peeler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Sergeant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "Flag Day",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Psyche",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Whisk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Popular",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Peace",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Zen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Scholar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Iconic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "Easter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Linguist_word",
+            "name": "Polyglot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gym",
+            "name": "Gym",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Mountain_word": 8,
+      "Army_word": 8,
+      "Emotions_word": 8,
+      "Garments": 6,
+      "Utensils_word": 6,
+      "Meditate_word": 4,
+      "Fame_word": 4,
+      "Linguist_word": 4,
+      "Holiday_word": 3,
+      "Gym": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Air bike",
+        "image": "res/Item/gym_airbike_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Dumbbell",
+        "image": "res/Item/gym_dumbbell_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Emotions_word",
+        "name": "Emotions",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Grammar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Garments",
+        "name": "Garments",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Ladle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Bodycon",
+        "image": "res/Item/garments_coat_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Cocktail",
+        "image": "res/Item/garments_dress_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Holiday_word",
+        "name": "New Year",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Rank",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Holiday_word",
+        "name": "Holiday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Tunic",
+        "image": "res/Item/garments_gloves_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mountain_word",
+        "name": "Mountain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Alps",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Breath",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Elated",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Joyful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Angry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Gown",
+        "image": "res/Item/garments_skirt_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Sundress",
+        "image": "res/Item/garments_panties_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Barbell",
+        "image": "res/Item/gym_barbell_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Denali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Fuji",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Summit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Spoon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Syntax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Sad",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Andes",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meditate_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Upset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Corporal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Mini",
+        "image": "res/Item/garments_pants_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Etna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Renown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Excited",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Fork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Major",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Mantra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Captain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Colonel",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Alps",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Sundress",
+            "image": "res/Item/garments_panties_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Captain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Cocktail",
+            "image": "res/Item/garments_dress_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "Easter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Tunic",
+            "image": "res/Item/garments_gloves_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meditate_word",
+            "name": "Mantra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gym",
+            "name": "Dumbbell",
+            "image": "res/Item/gym_dumbbell_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Utensils_word",
+            "name": "Peeler",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Corporal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Iconic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Everest",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Army_word",
+            "name": "Sergeant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "New Year",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mountain_word",
+            "name": "Mountain",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fame_word",
+            "name": "Famous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Andes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Garments",
+            "name": "Bodycon",
+            "image": "res/Item/garments_coat_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Joyful",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mountain_word",
+            "name": "Climb",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Emotions_word",
+            "name": "Angry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Holiday_word",
+            "name": "Flag Day",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Mountain_word": 8,
+      "Army_word": 8,
+      "Emotions_word": 8,
+      "Garments": 6,
+      "Utensils_word": 6,
+      "Meditate_word": 4,
+      "Fame_word": 4,
+      "Linguist_word": 4,
+      "Holiday_word": 3,
+      "Gym": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Whisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Renown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Fork",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Linguist_word",
+        "name": "Linguist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Excited",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Army_word",
+        "name": "Army",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Utensils_word",
+        "name": "Utensils",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Sad",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Polyglot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Gown",
+        "image": "res/Item/garments_skirt_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Grammar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Upset",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Ladle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Scholar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Rank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Spoon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fame_word",
+        "name": "Fame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Barbell",
+        "image": "res/Item/gym_barbell_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Peace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Garments",
+        "name": "Mini",
+        "image": "res/Item/garments_pants_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Meditate_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Denali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Psyche",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Fuji",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gym",
+        "name": "Air bike",
+        "image": "res/Item/gym_airbike_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Holiday_word",
+        "name": "Holiday",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "General",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Summit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Utensils_word",
+        "name": "Plate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gym",
+        "name": "Gym",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meditate_word",
+        "name": "Breath",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Garments",
+        "name": "Garments",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Happy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Emotions_word",
+        "name": "Elated",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fame_word",
+        "name": "Popular",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Emotions_word",
+        "name": "Emotions",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Colonel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mountain_word",
+        "name": "Etna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Linguist_word",
+        "name": "Syntax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Major",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Army_word",
+        "name": "Private",
         "isText": true
       }
     ],

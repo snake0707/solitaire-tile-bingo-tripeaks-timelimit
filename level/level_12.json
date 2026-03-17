@@ -1,441 +1,1445 @@
 [
   {
     "config": {
-      "bingosNeeded": 2,
-      "maxSlots": 2,
-      "timeLimit": 100,
-      "penaltyTime": 3
+      "maxSlots": 3,
+      "maxSteps": 75
     },
-    "cards": [
-      {
-        "layer": 1,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Legends_word",
-          "name": "Myth",
-          "image": null,
-          "isText": true
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Tortilla",
+            "image": "res/Item/baking_sugar_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Gyrus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bag type_word",
+            "name": "Bag type",
+            "isText": true
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Fitness_word",
-          "name": "Jogging",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shapes",
+            "name": "Shapes",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Arepa",
+            "image": "res/Item/baking_yeast_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Lobe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Brioche",
+            "image": "res/Item/baking_cream_8.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 1,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Lie_word",
-          "name": "Mislead",
-          "image": null,
-          "isText": true
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Study",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Desks",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shapes",
+            "name": "Octagon",
+            "image": "res/Item/shapes_octagon_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Words_word",
+            "name": "Jumble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Baguette",
+            "image": "res/Item/baking_vanillaextract_7.png",
+            "isText": false
+          },
+          "faceUp": true
         }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "No bones_word",
-          "name": "Worm",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Legends_word",
-          "name": "Fable",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "No bones_word",
-          "name": "Spider",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Cinema_word",
-          "name": "Horror",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Injuries_word",
-          "name": "Sprain",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "regular",
-          "category": "Toolbox",
-          "name": "Wrench",
-          "image": "res/Item/toolbox_wrench_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 0,
-        "card": {
-          "type": "filler",
-          "category": "Wheel_word",
-          "name": "Tire",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Navigate_word",
-          "name": "Signpost",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Legends_word",
-          "name": "Saga",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Cinema_word",
-          "name": "Action",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 1,
-        "card": {
-          "type": "filler",
-          "category": "Fitness_word",
-          "name": "Workout",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 1,
-        "card": {
-          "type": "regular",
-          "category": "Legends_word",
-          "name": "Tale",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Lie_word",
-          "name": "Falsify",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Unite_word",
-          "name": "League",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Toolbox",
-          "name": "Pliers",
-          "image": "res/Item/toolbox_pliers_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Navigate_word",
-          "name": "Sextant",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 2,
-        "card": {
-          "type": "regular",
-          "category": "Navigate_word",
-          "name": "Compass",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Toolbox",
-          "name": "Drill",
-          "image": "res/Item/toolbox_drill_3.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Veggie",
-          "name": "Broccoli",
-          "image": "res/Item/veggie_broccoli_1.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 1,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Lie_word",
-          "name": "Deceive",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Unite_word",
-          "name": "Union",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Legends_word",
-          "name": "Epic",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 1,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Toolbox",
-          "name": "Adhesive tape",
-          "image": "res/Item/toolbox_adhesivetape_4.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 3,
-        "card": {
-          "type": "regular",
-          "category": "Unite_word",
-          "name": "Alliance",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 0,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Celestial_word",
-          "name": "Scorpius",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 1,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Veggie",
-          "name": "Cabbage",
-          "image": "res/Item/veggie_cabbage_2.png",
-          "isText": false
-        }
-      },
-      {
-        "layer": 0,
-        "row": 2,
-        "col": 4,
-        "card": {
-          "type": "filler",
-          "category": "Flowers_word",
-          "name": "Rose",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 3,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Lie_word",
-          "name": "Delude",
-          "image": null,
-          "isText": true
-        }
-      },
-      {
-        "layer": 0,
-        "row": 4,
-        "col": 4,
-        "card": {
-          "type": "regular",
-          "category": "Veggie",
-          "name": "Potato",
-          "image": "res/Item/veggie_potato_3.png",
-          "isText": false
-        }
-      }
+      ]
     ],
     "categoryTargets": {
-      "Legends_word": 5,
-      "Lie_word": 4,
-      "Toolbox": 4,
-      "Navigate_word": 3,
-      "Unite_word": 3,
-      "Veggie": 3
+      "School_word": 8,
+      "Baking": 8,
+      "Shapes": 4,
+      "Words_word": 4,
+      "Bag type_word": 3,
+      "Brain_word": 3
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Unite_word",
-        "name": "Unite",
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Pouch",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Veggie",
-        "name": "Veggie",
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Satchel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Boggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Scrabble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Clutch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Pita",
+        "image": "res/Item/baking_chocolatechips_6.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Legends_word",
-        "name": "Legends",
+        "category": "Brain_word",
+        "name": "Brain",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Toolbox",
-        "name": "Toolbox",
+        "type": "regular",
+        "category": "School_word",
+        "name": "Homework",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Focaccia",
+        "image": "res/Item/baking_butter_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Ciabatta",
+        "image": "res/Item/baking_eggs_2.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Lie_word",
-        "name": "Lie",
+        "category": "Words_word",
+        "name": "Words",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Circle",
+        "image": "res/Item/shapes_circle_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Teacher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Oval",
+        "image": "res/Item/shapes_oval_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Baking",
+        "name": "Baking",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Challah",
+        "image": "res/Item/baking_flour_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Exams",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Wordle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Grade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Student",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Navigate_word",
-        "name": "Navigate",
+        "category": "School_word",
+        "name": "School",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Square",
+        "image": "res/Item/shapes_square_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Lesson",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Focaccia",
+            "image": "res/Item/baking_butter_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Study",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Words_word",
+            "name": "Words",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Brioche",
+            "image": "res/Item/baking_cream_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Teacher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Arepa",
+            "image": "res/Item/baking_yeast_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shapes",
+            "name": "Octagon",
+            "image": "res/Item/shapes_octagon_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Baking",
+            "name": "Baking",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Grade",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bag type_word",
+            "name": "Clutch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Cortex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Desks",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "School_word": 8,
+      "Baking": 8,
+      "Shapes": 4,
+      "Words_word": 4,
+      "Bag type_word": 3,
+      "Brain_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Wordle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Oval",
+        "image": "res/Item/shapes_oval_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Gyrus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Jumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Boggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Lesson",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Square",
+        "image": "res/Item/shapes_square_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Brain_word",
+        "name": "Brain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Circle",
+        "image": "res/Item/shapes_circle_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Challah",
+        "image": "res/Item/baking_flour_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Baguette",
+        "image": "res/Item/baking_vanillaextract_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shapes",
+        "name": "Shapes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Exams",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Ciabatta",
+        "image": "res/Item/baking_eggs_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Tortilla",
+        "image": "res/Item/baking_sugar_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Scrabble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Satchel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Pouch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bag type_word",
+        "name": "Bag type",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Homework",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Lobe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Pita",
+        "image": "res/Item/baking_chocolatechips_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "School_word",
+        "name": "School",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Student",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Student",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Pita",
+            "image": "res/Item/baking_chocolatechips_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bag type_word",
+            "name": "Satchel",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bag type_word",
+            "name": "Bag type",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Arepa",
+            "image": "res/Item/baking_yeast_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Words_word",
+            "name": "Scrabble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Cortex",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Challah",
+            "image": "res/Item/baking_flour_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Desks",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Words_word",
+            "name": "Boggle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Focaccia",
+            "image": "res/Item/baking_butter_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Brain_word",
+            "name": "Brain",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "School_word": 8,
+      "Baking": 8,
+      "Shapes": 4,
+      "Words_word": 4,
+      "Bag type_word": 3,
+      "Brain_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Ciabatta",
+        "image": "res/Item/baking_eggs_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Brioche",
+        "image": "res/Item/baking_cream_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Pouch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Lesson",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Teacher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Square",
+        "image": "res/Item/shapes_square_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Clutch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Words_word",
+        "name": "Words",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Exams",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Circle",
+        "image": "res/Item/shapes_circle_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shapes",
+        "name": "Shapes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Wordle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Tortilla",
+        "image": "res/Item/baking_sugar_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Lobe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Jumble",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Baking",
+        "name": "Baking",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Homework",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Octagon",
+        "image": "res/Item/shapes_octagon_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Grade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Oval",
+        "image": "res/Item/shapes_oval_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Study",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "School_word",
+        "name": "School",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Gyrus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Baguette",
+        "image": "res/Item/baking_vanillaextract_7.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Tortilla",
+            "image": "res/Item/baking_sugar_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Ciabatta",
+            "image": "res/Item/baking_eggs_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bag type_word",
+            "name": "Bag type",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Brain_word",
+            "name": "Brain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shapes",
+            "name": "Circle",
+            "image": "res/Item/shapes_circle_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bag type_word",
+            "name": "Pouch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Lobe",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Teacher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shapes",
+            "name": "Oval",
+            "image": "res/Item/shapes_oval_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Brioche",
+            "image": "res/Item/baking_cream_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shapes",
+            "name": "Shapes",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Focaccia",
+            "image": "res/Item/baking_butter_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "School_word": 8,
+      "Baking": 8,
+      "Shapes": 4,
+      "Words_word": 4,
+      "Bag type_word": 3,
+      "Brain_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Square",
+        "image": "res/Item/shapes_square_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Arepa",
+        "image": "res/Item/baking_yeast_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Octagon",
+        "image": "res/Item/shapes_octagon_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Challah",
+        "image": "res/Item/baking_flour_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Scrabble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Study",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Boggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Lesson",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Satchel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Pita",
+        "image": "res/Item/baking_chocolatechips_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Jumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Gyrus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "School_word",
+        "name": "School",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Baguette",
+        "image": "res/Item/baking_vanillaextract_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Baking",
+        "name": "Baking",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Words_word",
+        "name": "Words",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Desks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Student",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Wordle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Grade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Clutch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Homework",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Exams",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 75
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Brioche",
+            "image": "res/Item/baking_cream_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "School_word",
+            "name": "School",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Words_word",
+            "name": "Scrabble",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Ciabatta",
+            "image": "res/Item/baking_eggs_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bag type_word",
+            "name": "Bag type",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bag type_word",
+            "name": "Satchel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Study",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Brain_word",
+            "name": "Gyrus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Words_word",
+            "name": "Boggle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "School_word",
+            "name": "Student",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baking",
+            "name": "Pita",
+            "image": "res/Item/baking_chocolatechips_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Baking",
+            "name": "Baking",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "School_word": 8,
+      "Baking": 8,
+      "Shapes": 4,
+      "Words_word": 4,
+      "Bag type_word": 3,
+      "Brain_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Square",
+        "image": "res/Item/shapes_square_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Challah",
+        "image": "res/Item/baking_flour_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Lesson",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Arepa",
+        "image": "res/Item/baking_yeast_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Focaccia",
+        "image": "res/Item/baking_butter_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Cortex",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Words_word",
+        "name": "Words",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Brain_word",
+        "name": "Brain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Wordle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Exams",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Brain_word",
+        "name": "Lobe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Tortilla",
+        "image": "res/Item/baking_sugar_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Homework",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Words_word",
+        "name": "Jumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Grade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Octagon",
+        "image": "res/Item/shapes_octagon_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Clutch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Oval",
+        "image": "res/Item/shapes_oval_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shapes",
+        "name": "Shapes",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Desks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "School_word",
+        "name": "Teacher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shapes",
+        "name": "Circle",
+        "image": "res/Item/shapes_circle_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bag type_word",
+        "name": "Pouch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baking",
+        "name": "Baguette",
+        "image": "res/Item/baking_vanillaextract_7.png",
+        "isText": false
       }
     ],
     "handDisplay": []
