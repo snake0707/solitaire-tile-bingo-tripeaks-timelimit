@@ -416,8 +416,8 @@ body {
 /* Gold/Category card in tableau */
 .gold-grid-card {
     background: url('res/Panel/category_card_1.png') center/cover no-repeat;
-    border: 2px solid #ffd700;
-    box-shadow: 0 0 6px rgba(255, 215, 0, 0.5), 0 2px 4px rgba(0,0,0,0.15);
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .gold-grid-card::before {
@@ -426,7 +426,7 @@ body {
 
 /* Covered gold cards: remove bottom border/shadow bleed */
 .tableau-card.covered .gold-grid-card {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     box-shadow: none;
 }
 
@@ -487,20 +487,20 @@ body {
 .tableau-card.covered {
     height: 20px;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
 }
 
 .tableau-card.covered .card-face {
     height: 70px;
     justify-content: flex-start;
     padding-top: 3px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     box-shadow: none;
 }
 
 .tableau-card.covered .card-back {
     height: 70px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     box-shadow: none;
 }
 
@@ -519,12 +519,12 @@ body {
 .tableau-card.face-down {
     height: 20px;
     overflow: hidden;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
 }
 
 .tableau-card.face-down .card-back {
     height: 70px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0;
     box-shadow: none;
 }
 
