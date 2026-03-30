@@ -53,6 +53,9 @@ class Game {
         this.stepsLeft = 0;
         this.maxSteps = 40;
 
+        // Soft deadlock tracking
+        this.cardSeenSinceLastDrag = new Set();
+
         // Drag system
         this.dragState = null;
 
@@ -63,6 +66,7 @@ class Game {
         this.levelLabelEl = document.getElementById('level-label');
         this.winOverlay = document.getElementById('win-overlay');
         this.loseOverlay = document.getElementById('lose-overlay');
+        this.softDeadlockOverlay = document.getElementById('soft-deadlock-overlay');
         this.levelOverlay = document.getElementById('level-overlay');
         this.levelGridEl = document.getElementById('level-grid');
         this.handDisplayEl = document.getElementById('hand-display');
@@ -73,6 +77,8 @@ class Game {
         document.getElementById('btn-next-level').addEventListener('click', () => this.nextLevel());
         document.getElementById('btn-retry').addEventListener('click', () => this.retry());
         document.getElementById('btn-continue').addEventListener('click', () => this.continueWithSteps());
+        document.getElementById('btn-sd-retry').addEventListener('click', () => this.retry());
+        document.getElementById('btn-sd-rescue').addEventListener('click', () => this.rescue());
         document.getElementById('menu-btn').addEventListener('click', () => this.showLevelSelect());
         document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
         document.getElementById('btn-zh').addEventListener('click', () => this.toggleZhMode());
@@ -596,6 +602,7 @@ class Game {
             }
         }
 
+        this.cardSeenSinceLastDrag.clear();
         this.decrementStep();
         this.render();
         this.checkWinOrDead();
@@ -664,6 +671,7 @@ class Game {
             }
         }
 
+        this.cardSeenSinceLastDrag.clear();
         this.decrementStep();
         this.render();
         this.checkWinOrDead();
@@ -728,6 +736,7 @@ class Game {
             });
         }
 
+        this.cardSeenSinceLastDrag.clear();
         this.decrementStep();
         this.render();
         this.checkWinOrDead();
@@ -874,6 +883,7 @@ class Game {
         }
 
         this.injectZhNames(level);
+        this.cardSeenSinceLastDrag = new Set();
         this.render();
         setTimeout(() => this.checkDeadState(), 100);
     }
@@ -997,6 +1007,7 @@ class Game {
 
     retry() {
         this.loseOverlay.classList.add('hidden');
+        this.softDeadlockOverlay.classList.add('hidden');
         this.retryBonus[this.level] = (this.retryBonus[this.level] || 0) + 5;
         this.startLevel(this.level);
     }
@@ -1102,6 +1113,98 @@ class Game {
         if (this.handPile.length === 0 && this.handDisplay.length > 0 && this.stepsLeft > 1) return true;
 
         return false;
+    }
+
+    isSoftDeadlock() {
+        const totalHandCards = this.handPile.length + this.handDisplay.length;
+        if (totalHandCards === 0) return false;
+        if (this.cardSeenSinceLastDrag.size < totalHandCards) return false;
+
+        const hasEmptySlot = this.findEmptySlot() !== -1;
+        const activeKeys = new Set(
+            this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
+        );
+
+        // Check tableau bottom cards → slot
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            const topCard = col[col.length - 1];
+            if (!topCard.faceUp) continue;
+            if (topCard.card.type === 'gold' && topCard.card.type !== 'sealed') {
+                if (hasEmptySlot) return false;
+            }
+            if (topCard.card.type === 'regular' && activeKeys.has(topCard.card.category)) return false;
+        }
+
+        // Check tableau face-up cards → other columns
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            const col = this.tableau[ci];
+            if (col.length === 0) continue;
+            for (let p = 0; p < col.length; p++) {
+                if (!col[p].faceUp) continue;
+                for (let ti = 0; ti < this.tableau.length; ti++) {
+                    if (ti === ci) continue;
+                    if (this.canStackOnColumn(col[p].card, ti)) return false;
+                }
+            }
+        }
+
+        // Check all hand cards → slot or column
+        const allHandCards = [...this.handDisplay, ...this.handPile];
+        for (const card of allHandCards) {
+            if (card.type === 'gold' && hasEmptySlot) return false;
+            if (card.type === 'regular' && activeKeys.has(card.category)) return false;
+            for (let ti = 0; ti < this.tableau.length; ti++) {
+                if (this.canStackOnColumn(card, ti)) return false;
+            }
+        }
+
+        return true;
+    }
+
+    onSoftDeadlock() {
+        this.softDeadlockOverlay.classList.remove('hidden');
+    }
+
+    rescue() {
+        // 1. Find all active slots (have a category, not yet completed)
+        const activeSlots = [];
+        for (let i = 0; i < this.slots.length; i++) {
+            if (this.slots[i] !== null && this.slots[i].collected < this.slots[i].target) {
+                activeSlots.push(i);
+            }
+        }
+        if (activeSlots.length === 0) return;
+
+        // 2. Randomly pick one
+        const slotIdx = activeSlots[Math.floor(Math.random() * activeSlots.length)];
+        const slot = this.slots[slotIdx];
+        const categoryKey = slot.key;
+
+        // 3. Remove all cards of this category from tableau (including face-down)
+        for (let ci = 0; ci < this.tableau.length; ci++) {
+            this.tableau[ci] = this.tableau[ci].filter(tc => tc.card.category !== categoryKey);
+            // Auto-flip top card if it's now face-down
+            this.autoFlipColumn(ci);
+        }
+
+        // 4. Remove all cards of this category from hand
+        this.handDisplay = this.handDisplay.filter(c => c.category !== categoryKey);
+        this.handPile = this.handPile.filter(c => c.category !== categoryKey);
+
+        // 5. Complete the category (free the slot)
+        this.completeSlot(slotIdx);
+
+        // 6. Reset seen tracking (board state changed)
+        this.cardSeenSinceLastDrag.clear();
+
+        // 7. Close the soft deadlock overlay
+        this.softDeadlockOverlay.classList.add('hidden');
+
+        // 8. Re-render and check win/dead
+        this.render();
+        this.checkWinOrDead();
     }
 
     onLose(reason) {
@@ -1380,9 +1483,15 @@ class Game {
         if (this.handPile.length > 0) {
             const card = this.handPile.pop();
             this.handDisplay.push(card);
+            this.cardSeenSinceLastDrag.add(card);
             this.moveHistory.push({ action: 'flip_hand', card: { ...card } });
             this.decrementStep(); // flip costs 1 step
+            if (this.stepsLeft <= 0) return; // already lost via decrementStep
             this.renderHandArea();
+            if (this.isSoftDeadlock()) {
+                setTimeout(() => this.onSoftDeadlock(), 300);
+                return;
+            }
             this.checkDeadState();
         } else if (this.handDisplay.length > 0) {
             // Recycle: costs 1 step (changed from 0)

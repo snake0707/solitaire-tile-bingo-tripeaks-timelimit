@@ -194,6 +194,230 @@ solitaire-tile-bingo/
 
 ## 九、开发日志
 
+### 2026-03-26 - 软卡关检测（Soft Deadlock Detection）
+
+- **背景**: 玩家可能遇到"软卡关"——牌柱无法拖动，手牌中也没有任何一张能放到收集槽或牌柱上，只能不断翻牌消耗步数
+- **检测机制**: 用 `cardSeenSinceLastDrag` Set 追踪玩家自上次成功拖动以来翻看过的手牌
+  - 翻牌时 add(card)，成功拖动时 clear()，recycle 时不清空（跨周期累积）
+  - 当所有手牌都被翻看过后，调用 `isSoftDeadlock()` 客观判定：
+    1. 牌柱无可拖动操作（底牌→槽、面朝上牌→其他列）
+    2. 所有手牌（handPile + handDisplay）均无法放入收集槽或牌柱
+  - 三个条件同时满足才触发
+- **弹窗**: 新增 `#soft-deadlock-overlay` 弹窗，标题 "Stuck!"，描述 "No moves left to complete this level."
+  - **Rescue 按钮**（绿色）：随机选一个已在收集槽中的类别，自动收集桌面牌柱（含暗牌）+手牌中该类别所有卡牌，完成类别并释放槽位。不消耗步数，可多次使用
+  - **Retry 按钮**（橙色）：重开关卡
+- **修改文件**: `game.js`（状态变量、isSoftDeadlock、onSoftDeadlock、rescue、翻牌/拖动追踪）、`index.html`（弹窗HTML）、`style.css`（弹窗样式）
+
+### 2026-03-25 - resolve_image() 改为固定映射机制
+
+- **背景**: `resolve_image()` 原有"名称匹配+随机分配"机制，149 个 word 依赖随机分配，结果不确定；C 类 8 个类别名和前缀不一致（如 Eco→ecoitems）导致匹配失败
+- **方案**: 配置驱动 — 从 Excel 导出 JSON 配置，Python 读取配置实现固定映射
+- **改动**:
+  - 新增 `config/image_mapping.json`：包含 `prefixMap`（7 条 C 类名→前缀映射）和 `imageMap`（487 条 word→image 固定映射）
+  - 从 `config/all_image_cards.xlsx`「所有图片牌」sheet 导出
+  - `generate_levels.py`:
+    - 新增 `IMAGE_PREFIX_MAP`（从 JSON 加载）、`IMAGE_MAPPING_CONFIG`、`_load_image_mapping()`
+    - `get_image_prefix()` 支持 C 类名→前缀映射
+    - `resolve_image()` 优先查固定映射，找不到再走原有 fallback 逻辑（兼容新增类别）
+- **验证**: `--levels 1-5 --layouts 1 --seed 42` 全部通过
+- **注意**: 固定映射基于 v3 merged 数据，当前生成仍读 v2 Excel，完全生效需切换数据源
+
+### 2026-03-25 - C 类类别名称更新 + 不复用确认
+
+- **C 类类别名称更新**: 20 个 C 类映射中，14 个改用前缀名作为 categoryName（首字母大写），6 个保持原名（Baby, Birds, Sea fish, Deserts, Decorate, Gems）
+  - 特殊：`ecoitems` 前缀用 `Eco` 代替（更简短）
+  - 详见 `config/c_class_name_changes.md`
+- **用户确认不复用**: 5 个 word 不使用已有同名图片，需新画
+  - Bottle(Milk/Lv103)、Boots(Cowboy/Lv64)、Lion(Big cats/Lv51)、Lion(Chimera/Lv81)、Walrus(Arctic/Lv20)
+- **最终数据**: E 类需新画 **456 张**
+- **更新文件**: `level_config_v3_merged.xlsx`、`all_image_cards.xlsx`、`new_images_list.xlsx`、`new_images_proposal.md`、`c_class_name_changes.md`(新)
+
+### 2026-03-25 - C 类前缀映射优化 + 复用标记修正
+
+- **C 类映射优化**: `babies→Baby`(100%名称匹配) 替换 `babies→Cuties`(0%)；`desert→Deserts`(100%) 替换 `desert→Sand`(25%)
+- **复用标记修正**: "复用A/C"仅限 word 在对应前缀下有精确名称匹配图片的情况，随机分配的不算复用。修正了 14 个错误标记（如 Beast、Sausage、Pen 等）
+- **所有图片牌修正**: 新增「匹配方式」列，A/C 类通过模拟 `resolve_image()` 完整分配（名称匹配+随机分配），修复了如 Armrest→chair_armchair_5.png 等随机分配记录缺失的问题
+- **现有图片清单**: A/C 使用次数拆分为 A类/C类/E类引用三列，新增「是否使用」列（A类+未使用=1，C类/E类待确认）
+- **待办**: C 类映射的类别名可能需要部分调整（游戏显示原 categoryName 而非前缀名），待用户确认卡牌情况后修改
+- **最终数据**: E 类 118 个类别，需新画 **451 张**
+- **更新文件**: `new_images_list.xlsx`、`new_images_proposal.md`、`all_image_cards.xlsx`
+
+### 2026-03-24 - v3 merged 补全 + 图片使用分析（全104关）
+
+- **问题发现**: v3 原始文件 Level 58-104 的 categoryName 为 None、英文列全空（只有中文翻译）
+- **修复**: 重新合并 `level_config_v3_merged.xlsx`
+  - **数据源修正**: 从 v2 `card_old` 页签（竞品原始数据）补全，而非 `card` 页签（我们改过名的版本）
+  - 精确名称匹配: 550 行（card_old 类别名与 v3 高度一致）
+  - 编号匹配: 472 行（58-104关无 categoryName 的行）
+  - 最终: 1022/1022 行全部有 categoryName + 英文 + 中文
+- **内容差异处理**（17 行 v3 中文与 card_old 英文主题不同）:
+  - 使用 card_old 英文: 6 行（60-6 Thriller, 70-1 Mascots, 81-12 Jupiter, 88-1 US State, 90-3 Names, 90-4 Hobbies）
+  - 使用 v3 中文翻译为英文: 13 行（59-2 Comics, 59-3 Sports, 59-5 Ecology, 60-8 Wall, 62-5 Reporter, 65-8 Backpack, 66-2 Baby birds, 72-3 X-ray, 91-4 Debris, 91-13 Day, 91-14 X-word, 99-8 Engineer, 101-12 Costume）
+  - 详见 `config/v2_v3_content_diff_decisions.md`
+- **图片分析**（基于 card_old 类别名，198 个图片类别）:
+  - A 类（直接复用前缀）: 60 个 → 0 新图
+  - C 类（空闲前缀映射）: 20 个 → 0 新图（全部 20 个空闲前缀分配完毕，优先 8-word 大类别）
+  - E 类（全新）: 118 个，599 个 word 槽位
+    - 跨类别同名 word 共用: -81
+    - 复用 A/C 已有图片: -70
+    - 已有同名图片可复用: -16
+    - **实际需新画: 432 张**
+- **更新文件**:
+  - `config/level_config_v3_merged.xlsx` — 完整 104 关数据（基于 card_old）
+  - `config/new_images_proposal.md` — A/C/E 分类方案 + 新图需求
+  - `config/new_images_list.xlsx` — 新增图片清单（`需新增` sheet 列出 432 张）
+  - `config/v2_v3_content_diff_decisions.md` — 17 行内容差异及处理决策
+  - `config/v2_v3_diff_report.md` — v2 vs v3 逐关差异对比
+  - `config/category_reuse_report.md` — 图片类别复用统计
+
+### 2026-03-24 - 求解器新增 tableau_multi_to_column 多张列→列操作
+
+- **背景**: 求解器只有单张 `tableau_to_column`，但游戏中同类别连续明牌可一次拖到另一列。导致求解器把 1 步拆成多步，步数计算和策略判断不准确
+- **改动**:
+  - `generate_levels.py`: 两套求解器（backtracking + MCTS）的 `get_moves()`/`apply_move()`/`undo_move()` 新增 `tableau_multi_to_column` 操作
+    - 检测连续同类别明牌 ≥2 张，用底部卡牌检查目标列可叠放性
+    - 权重与单张 `tableau_to_column` 相同逻辑（揭暗牌=4，不揭=2）
+    - `empty_move_stats()` 新增 `colMultiToCol` 统计项
+    - `classify_move()` 新增映射
+    - `format_stats()` 标签更新：`列→列` → `列→列(单)` + `列→列(多)`
+  - `generator.html`: MCTS + Backtracking 两套求解器同步修改
+  - `solve_debug.py`: 同步新增多张列→列操作生成、权重、执行和描述输出
+- **moveStats 新增字段**: `colMultiToCol`（原 `colToCol` 改名为单张专用）
+- **验证**: `--levels 1-5 --layouts 1 --seed 42` 全部通过，`列→列(多)` 操作在实际求解中被使用
+
+### 2026-03-23 - v3 关卡配置合并（补充中文翻译）
+
+- **背景**: 收到竞品最新关卡数据 `level_config_v3_260323.xlsx`（104关），card 页签中文列（类别中文 + 中文-1~8）基本为空，需从 v2 补充
+- **匹配策略**:
+  - 精确匹配: `level + categoryName` → 487 行
+  - 模糊匹配: 同 level 不同 categoryName 但 word 列表高度重叠（≥2 词）→ 62 行（v3 改了类别名，如 Animals↔Whiskers, Emoji↔Icons, Seats↔Chair）
+  - 无匹配: 2 行（Level 4 Grandma, Level 20 90s 原始已有中文）
+- **结果**: 550/551 行已填充中文，1 行留空（Grandma），英文列 v3 本身完整无需补填
+- **输出文件**: `config/level_config_v3_merged.xlsx`
+
+### 2026-03-23 - 求解器与游戏操作差异分析（待修复）
+
+- **背景**: 对比 `solve_debug.py` 输出的求解步骤与实际游戏操作，发现求解器存在两个与游戏不一致的问题
+- **问题 1: `tableau_multi_to_slot` 权重不区分完成度**
+  - 多张牌从列拖入槽位时，"直接完成类别（释放槽位）"和"部分填充（占着槽位）"的权重都是 `HIGH_PRIORITY × PLACE_TO_HOME_MUL = 12`
+  - 随机 tiebreak 可能选出次优操作（如选了 4/8 的 Books 而非 5/5 的 Bed）
+  - **应修复**: 给"完成类别"的操作更高权重
+- **问题 2: 缺少 `tableau_multi_to_column` 操作**
+  - 求解器只实现了单张的 `tableau_to_column`（列→列），但游戏中同类别连续明牌可以一起拖到另一列
+  - 导致求解器把本应 1 步的多张列间拖动拆成多步，影响步数计算和策略判断
+  - 例: 列 2 有 [↑Sheet, ↑Pillow]（同属 Bed_word），游戏中可一次拖到列 1 并揭开暗牌，但求解器需要 2 步
+  - `generate_levels.py` 和 `generator.html` 两端都缺少此操作
+  - **应修复**: 新增 `tableau_multi_to_column` 操作类型，与 `tableau_multi_to_slot` 类似逻辑
+- **状态**: 已记录，暂不修复
+
+### 2026-03-20 - 求解器重构：贪心+MCTS → 优先策略+均等策略（仿竞品）
+
+- **背景**: 竞品使用「PriorityStrategy（贪心+回溯决策树）」+「EqualityStrategy（无偏好DFS+回溯）」两轮策略验证关卡可解性。我们之前使用「纯贪心（无回溯）」+「MCTS」
+- **改动**:
+  - `generate_levels.py`:
+    - 删除 `greedy_solve()` 函数
+    - 新增决策树常量: `MAX_TREE_DEPTH=4`, `MAX_POSSIBLE_MOVES=50`, `MAX_SOLVER_STEPS=500`
+    - 新增权重系统: `LOW/NORMAL/HIGH_PRIORITY × PLACE_TO_HOME/PLAY_STACK/STOCK_MUL`
+    - 新增 `solve_level()` 函数: 闭包模式，内含 `get_moves()`/`apply_move()`/`undo_move()` + `solve_with_backtracking(use_priority)` + 两轮策略编排
+    - 核心算法: 栈式决策树，深度 < MAX_TREE_DEPTH 时枚举候选+回溯，深度 = MAX_TREE_DEPTH 时贪心播放
+    - Priority 策略: 按权重排序候选操作; Equality 策略: 保持原序（DFS）
+    - 生成主循环改为调用 `solve_level()`, 难度过滤改为 easy=priority通过, hard=equality通过
+    - 洗牌改为 10 轮
+    - `verify_solvable()` (MCTS) 保留但不调用，加注释说明
+  - `generator.html`: 镜像 Python 端所有改动
+    - 新增常量和 `getPriorityWeight()`/`solveLevel()`
+    - 删除 `greedySolve()`，保留 `verifySolvable()`
+    - 移除 MCTS Iterations UI 输入框
+    - 更新日志输出格式
+- **JSON 输出格式变更**:
+  ```json
+  "config": {
+    "maxSlots": 4,
+    "maxSteps": 120,
+    "strategyType": "priority",
+    "solverSteps": 117,
+    "moveStats": { ... }
+  }
+  ```
+  旧字段 `greedySolvable`/`greedySteps`/`mctsSteps`/`greedyMoveStats`/`mctsMoveStats` 已移除
+- **验证**: `--levels 1-5 --layouts 1 --seed 42`, 4/5 关通过 (Level 3 在 200 次尝试内未找到符合步数范围的解)
+
+### 2026-03-19 - 图片牌复用分析 + 图片映射逻辑梳理
+
+- **背景**: 分析关卡配置中图片类别和具体图片的复用情况
+- **图片映射逻辑** (`resolve_image()` in `generate_levels.py`):
+  - 每个图片类别在 `res/Item/` 下有 8 张 PNG，命名 `{prefix}_{itemname}_{number}.png`
+  - Excel 同一类别在不同关卡可配不同 word 名（远超 8 个，如 Toolbox 30 个 word / 8 张图）
+  - 映射步骤: ① 非 random 类别按 `word.lower().replace(' ','')` 匹配图片 itemname ② 匹配不到则从未用图片中随机分配 ③ random 类别（baking, toys, xmas, deck）跳过名称匹配直接分配
+  - 映射确定性: `--export-defs` 用固定 seed=42，每关卡重置 `used_images`
+  - `level_card_defs.js` 中图片类别 cardWords 已预解析好 `image` 字段
+- **复用统计结果**（基于 `level_card_defs.js` 中实际 PNG 路径）:
+  - 80 个图片类别，79 个出现在 ≥2 个关卡（复用最多: Toolbox 6次, Hats 5次）
+  - 去重 597 张 PNG 被使用，其中 374 张（63%）跨关卡复用
+  - 复用最多: toolbox_chisel_6.png / hats_panamahat_8.png（各 5 个关卡）
+- **输出报告**: `config/category_reuse_report.md`、`config/image_file_reuse_report.md`
+
+### 2026-03-19 - 竞品前101关图片需求分析 + 新增图片方案
+
+- **背景**: 竞品（card_old sheet）前101关的图片类别完全不重复（186个槽位=186个不同类别），分析如何用最少的新图片实现相同效果
+- **分析过程**:
+  1. 将竞品186个图片类别与我们已有的80个前缀（640张PNG）交叉匹配
+  2. 按复用程度分为 A/B/C/D/E 五类
+  3. 统计竞品中跨类别重复的卡牌名（同一word出现在不同类别），确认竞品本身也大量复用同一图片
+  4. 利用「跨类别同名word共用图片」+「D/E类word复用A/B/C已有图片」两个策略进一步压缩需求
+- **五类分类方案**:
+  - **A. 直接复用已有前缀**（61个）: 竞品类别名=我们的图片前缀，resolve_image 自动分配，0新图
+  - **B. 跨前缀映射**（3个）: Birds→bird, Baby→babies, Gems→gemstone，0新图
+  - **C. 未使用前缀覆盖**（15个）: 16个空闲前缀中15个映射到主题相近的类别（ecoitems无对应），0新图
+    - 高匹配: icons→Emoji, screen→Desktop, supplies→Schools, desert→Sand, strings→Violin
+    - 中匹配: halloween→Monsters, egypt→Titles, mall→Pay, arts→Canvas, purple→Lipstick, decor→Decorate, medical→Age, survival→Compass
+    - 低匹配: space→Elements, utensils→Sandwich
+  - **D. 前缀冲突**（3个）: Seats/Violin/Bugs 可映射前缀已被A类占用
+  - **E. 全新类别**（104个）: 无可复用前缀
+- **D+E类图片优化**:
+  - 原始需求: 565张（每类别每张独立画）
+  - 跨类别同名word去重: -50张（112个word跨类别重复，如Zebra出现在4个类别只需画1次）
+  - 复用A/B/C已有图片: -59张（D/E中的word在A/B/C类别已有对应图片）
+  - **最终需新画: 456张**
+- **竞品跨类别重复统计**: 112个卡牌名出现在不同图片类别中
+  - 4类别: Zebra（Hoof/Horse/Equidae/Hoofed）
+  - 3类别: Boots, Duck, Flute, Goat, Hat, Horse, Jacket, Olive, Pliers, Sausage, Skirt, Wrench, Yacht 等14个
+  - 2类别: 97个
+- **类别名称相似组合**: 18组（如 Hoof/Hoofed, Hair/Hairs, Vehicle/Vehicles, Toolbox/Tools 等）
+- **输出文档**:
+  - `config/new_images_proposal.md` — 新增图片方案（A/B/C/D/E分类，每个类别的去重/复用详情）
+  - `config/cross_category_duplicates.md` — 跨类别重复分析（名称相似、内容重叠、重复word清单）
+  - `config/unused_images_inventory.md` — 空闲图片资源清单（186张未使用图片）
+  - `config/category_reuse_report.md` — 当前关卡的类别复用报告
+  - `config/image_file_reuse_report.md` — 当前关卡的图片文件复用报告
+
+### 2026-03-19 - 求解器新增多张拖动操作 + 7种操作类型统计
+
+- **需求**: 在生成关卡时，统计贪心/MCTS求解器中7种基本操作类型的数量
+- **7种操作类型**:
+  1. `colSingleToSlot` — 列顶牌→收集槽（单张）
+  2. `colMultiToSlot` — 列→收集槽（多张拖动）【新增】
+  3. `colToCol` — 列牌→另一列（叠放）
+  4. `handToSlot` — 手牌展示区顶牌→收集槽
+  5. `handToCol` — 手牌展示区顶牌→列
+  6. `flip` — 翻手牌
+  7. `recycle` — 回收手牌
+- **改动文件**:
+  - `generate_levels.py`:
+    - 新增 `empty_move_stats()` / `classify_move()` 辅助函数
+    - `greedy_solve()`: `gs_get_moves` 新增 `tableau_multi_to_slot` 操作（连续同类别明牌多张拖动），权重150（高于单张100）；主循环中计数操作类型；返回值新增 `moveStats`
+    - `verify_solvable()`: MCTS 的 `get_moves` / `apply_move` / `undo_move` 同步新增多张拖动；rollout 和 iterate 追踪最优解路径的操作序列；返回值新增 `moveStats`
+    - 终端输出每个 layout 的 greedy/mcts 操作统计
+    - JSON 输出 config 中新增 `greedyMoveStats` / `mctsMoveStats`
+  - `generator.html`:
+    - 新增 `emptyMoveStats()` / `classifyMove()` 全局函数
+    - `greedySolve()` / `verifySolvable()`: 同步 Python 端所有改动
+    - 日志输出新增操作统计行
+    - 关卡 JSON config 新增 `greedyMoveStats` / `mctsMoveStats`
+- **多张拖动逻辑**: 从列底部连续同类别明牌一次性拖到收集槽
+  - Case A: 金牌在顶 + 下方普通牌 → 开槽 + 收集，1步
+  - Case B: 全部普通牌 → 匹配已开槽，1步
+
 ### 2026-03-16 - MCTS 求解器替换 DFS 求解器
 
 - **需求**: DFS 求解器按固定优先级找第一条可行路径就停止，`stepsUsed` 远大于最优解。用 MCTS（蒙特卡洛树搜索）替换，得到更接近最优的步数
