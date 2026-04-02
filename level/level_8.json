@@ -2,44 +2,27 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 116,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 7,
+        "colMultiToCol": 0,
+        "handToSlot": 30,
+        "handToCol": 16,
+        "flip": 46,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Sculpt_word",
-            "name": "Bust",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Boxing_word",
-            "name": "Referee",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Measure_word",
-            "name": "Measure",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Tuxedo_word",
-            "name": "Cufflink",
+            "category": "Desert_word",
+            "name": "Gobi",
             "isText": true
           },
           "faceUp": false
@@ -56,17 +39,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ship_word",
-            "name": "Tanker",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mailman_word",
-            "name": "Ink",
+            "category": "Desert_word",
+            "name": "Mojave",
             "isText": true
           },
           "faceUp": true
@@ -76,431 +50,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Desert_word",
-            "name": "Gobi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Zodiac",
-            "name": "Taurus",
-            "image": "res/Item/zodiac_taurus_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Zodiac",
-            "name": "Pisces",
-            "image": "res/Item/zodiac_cancer_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mailman_word",
-            "name": "Mailman",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Atacama",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Caravel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Zodiac",
-            "name": "Scorpio",
-            "image": "res/Item/zodiac_sagittarius_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Toolbox",
-            "name": "Toolbox",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Boxing_word",
-            "name": "Uppercut",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sculpt_word",
-            "name": "Monument",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Sahara",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Zodiac": 8,
-      "Bathroom_word": 8,
-      "Desert_word": 8,
-      "Ship_word": 6,
-      "Mailman_word": 6,
-      "Sculpt_word": 4,
-      "Boxing_word": 4,
-      "Measure_word": 4,
-      "Tuxedo_word": 3,
-      "Toolbox": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Lapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Libra",
-        "image": "res/Item/zodiac_libra_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Galleon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Virgo",
-        "image": "res/Item/zodiac_virgo_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Pencil",
-        "image": "res/Item/toolbox_clamp_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Sparring",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Zodiac",
-        "name": "Zodiac",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Soap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Mojave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shower",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Boxing_word",
-        "name": "Boxing",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tugboat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Frigate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Figurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Book",
-        "image": "res/Item/toolbox_hammer_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Razor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Leo",
-        "image": "res/Item/zodiac_leo_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Kalahari",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Mail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Bow tie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shampoo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Towel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Aries",
-        "image": "res/Item/zodiac_aries_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Seal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Karakum",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Tuxedo_word",
-        "name": "Tuxedo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Brig",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shaver",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Inches",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Namib",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Yards",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sculpt_word",
-        "name": "Sculpt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Feet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Lotion",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ship_word",
-        "name": "Ship",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Statue",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Desert_word",
-        "name": "Desert",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Guitar",
-        "image": "res/Item/toolbox_chisel_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Miles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Gemini",
-        "image": "res/Item/zodiac_gemini_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Stamp",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Knockout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Letter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Envelope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Tanami",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Bathtub",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toolbox",
-            "name": "Guitar",
-            "image": "res/Item/toolbox_chisel_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sculpt_word",
-            "name": "Monument",
+            "category": "Measure_word",
+            "name": "Inches",
             "isText": true
           },
           "faceUp": false
@@ -509,13 +60,11 @@
           "card": {
             "type": "regular",
             "category": "Boxing_word",
-            "name": "Uppercut",
+            "name": "Referee",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "gold",
@@ -529,25 +78,7 @@
           "card": {
             "type": "regular",
             "category": "Ship_word",
-            "name": "Caravel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Tugboat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mailman_word",
-            "name": "Envelope",
+            "name": "Galleon",
             "isText": true
           },
           "faceUp": true
@@ -557,28 +88,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sculpt_word",
-            "name": "Bust",
+            "category": "Tuxedo_word",
+            "name": "Lapel",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Galleon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Zodiac",
-            "name": "Libra",
-            "image": "res/Item/zodiac_libra_7.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -586,27 +98,7 @@
           "card": {
             "type": "regular",
             "category": "Measure_word",
-            "name": "Inches",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mailman_word",
-            "name": "Mailman",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Gobi",
+            "name": "Feet",
             "isText": true
           },
           "faceUp": false
@@ -614,26 +106,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Mailman_word",
-            "name": "Stamp",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Tanami",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mailman_word",
-            "name": "Seal",
+            "category": "Ship_word",
+            "name": "Caravel",
             "isText": true
           },
           "faceUp": false
@@ -643,6 +117,62 @@
             "type": "regular",
             "category": "Bathroom_word",
             "name": "Soap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wooden",
+            "name": "Wooden",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Knockout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mailman_word",
+            "name": "Letter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ship_word",
+            "name": "Brig",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tuxedo_word",
+            "name": "Cufflink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mailman_word",
+            "name": "Ink",
             "isText": true
           },
           "faceUp": false
@@ -669,15 +199,9 @@
       "Boxing_word": 4,
       "Measure_word": 4,
       "Tuxedo_word": 3,
-      "Toolbox": 3
+      "Wooden": 3
     },
     "handPile": [
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Brig",
-        "isText": true
-      },
       {
         "type": "regular",
         "category": "Zodiac",
@@ -686,15 +210,70 @@
         "isText": false
       },
       {
-        "type": "gold",
-        "category": "Boxing_word",
-        "name": "Boxing",
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Bust",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Boxing_word",
-        "name": "Sparring",
+        "category": "Zodiac",
+        "name": "Libra",
+        "image": "res/Item/zodiac_libra_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shaver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Sahara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Stamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shampoo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ship_word",
+        "name": "Ship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Bathtub",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shower",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Atacama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tugboat",
         "isText": true
       },
       {
@@ -705,32 +284,100 @@
       },
       {
         "type": "regular",
-        "category": "Boxing_word",
-        "name": "Referee",
+        "category": "Bathroom_word",
+        "name": "Razor",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Mailman_word",
-        "name": "Ink",
+        "name": "Seal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Kalahari",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Sparring",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Toolbox",
-        "name": "Toolbox",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Cufflink",
+        "category": "Sculpt_word",
+        "name": "Sculpt",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Monument",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Leo",
+        "image": "res/Item/zodiac_leo_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Scorpio",
+        "image": "res/Item/zodiac_cancer_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Measure_word",
-        "name": "Feet",
+        "name": "Yards",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tanker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Frigate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Mail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Lotion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Uppercut",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Tanami",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Measure_word",
+        "name": "Measure",
         "isText": true
       },
       {
@@ -742,7 +389,26 @@
       {
         "type": "regular",
         "category": "Bathroom_word",
-        "name": "Bathtub",
+        "name": "Towel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Bow tie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Guitar",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mailman_word",
+        "name": "Mailman",
         "isText": true
       },
       {
@@ -755,31 +421,38 @@
       {
         "type": "regular",
         "category": "Sculpt_word",
-        "name": "Statue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
         "name": "Figurine",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shower",
+        "category": "Wooden",
+        "name": "Book",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Zodiac",
+        "name": "Zodiac",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Envelope",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Ship_word",
-        "name": "Ship",
+        "category": "Tuxedo_word",
+        "name": "Tuxedo",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Sculpt_word",
-        "name": "Sculpt",
+        "category": "Boxing_word",
+        "name": "Boxing",
         "isText": true
       },
       {
@@ -790,57 +463,8 @@
       },
       {
         "type": "regular",
-        "category": "Mailman_word",
-        "name": "Mail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Kalahari",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Letter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tanker",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Sahara",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Razor",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Tuxedo_word",
-        "name": "Tuxedo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Scorpio",
-        "image": "res/Item/zodiac_sagittarius_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Bathroom_word",
-        "name": "Bathroom",
+        "category": "Sculpt_word",
+        "name": "Statue",
         "isText": true
       },
       {
@@ -852,109 +476,17 @@
       },
       {
         "type": "regular",
-        "category": "Toolbox",
-        "name": "Pencil",
-        "image": "res/Item/toolbox_clamp_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Bow tie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Towel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Lapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Zodiac",
         "name": "Pisces",
-        "image": "res/Item/zodiac_cancer_4.png",
+        "image": "res/Item/zodiac_sagittarius_8.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Toolbox",
-        "name": "Book",
-        "image": "res/Item/toolbox_hammer_8.png",
+        "category": "Wooden",
+        "name": "Pencil",
+        "image": "",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Yards",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shaver",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Frigate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Leo",
-        "image": "res/Item/zodiac_leo_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Lotion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Knockout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Mojave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shampoo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Zodiac",
-        "name": "Zodiac",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Measure_word",
-        "name": "Measure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Atacama",
-        "isText": true
       }
     ],
     "handDisplay": []
@@ -962,19 +494,22 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 4,
+        "colToCol": 11,
+        "colMultiToCol": 0,
+        "handToSlot": 34,
+        "handToCol": 12,
+        "flip": 46,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Frigate",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -987,20 +522,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Zodiac",
-            "name": "Taurus",
-            "image": "res/Item/zodiac_taurus_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mailman_word",
-            "name": "Mailman",
+            "category": "Sculpt_word",
+            "name": "Figurine",
             "isText": true
           },
           "faceUp": false
@@ -1008,8 +531,38 @@
         {
           "card": {
             "type": "gold",
-            "category": "Toolbox",
-            "name": "Toolbox",
+            "category": "Desert_word",
+            "name": "Desert",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sculpt_word",
+            "name": "Bust",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mailman_word",
+            "name": "Seal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Aries",
+            "image": "res/Item/zodiac_aries_1.png",
             "isText": false
           },
           "faceUp": false
@@ -1017,18 +570,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Toolbox",
-            "name": "Guitar",
-            "image": "res/Item/toolbox_chisel_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Ship_word",
-            "name": "Ship",
+            "category": "Bathroom_word",
+            "name": "Bathtub",
             "isText": true
           },
           "faceUp": true
@@ -1037,9 +580,67 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Tuxedo_word",
-            "name": "Tuxedo",
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Karakum",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Scorpio",
+            "image": "res/Item/zodiac_cancer_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bathroom_word",
+            "name": "Shampoo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wooden",
+            "name": "Pencil",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Referee",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Knockout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sculpt_word",
+            "name": "Statue",
             "isText": true
           },
           "faceUp": false
@@ -1048,8 +649,442 @@
           "card": {
             "type": "regular",
             "category": "Desert_word",
-            "name": "Sahara",
+            "name": "Tanami",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mailman_word",
+            "name": "Envelope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Namib",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Wooden",
+            "name": "Guitar",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Zodiac": 8,
+      "Bathroom_word": 8,
+      "Desert_word": 8,
+      "Ship_word": 6,
+      "Mailman_word": 6,
+      "Sculpt_word": 4,
+      "Boxing_word": 4,
+      "Measure_word": 4,
+      "Tuxedo_word": 3,
+      "Wooden": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Cufflink",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Boxing_word",
+        "name": "Boxing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Lapel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Frigate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Tuxedo_word",
+        "name": "Tuxedo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Sparring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tanker",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sculpt_word",
+        "name": "Sculpt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Bow tie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Mojave",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zodiac",
+        "name": "Zodiac",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Galleon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Stamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Kalahari",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wooden",
+        "name": "Wooden",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Mail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Sahara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Taurus",
+        "image": "res/Item/zodiac_taurus_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Gemini",
+        "image": "res/Item/zodiac_gemini_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shaver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Atacama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Caravel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tugboat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Razor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Gobi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Measure_word",
+        "name": "Feet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Lotion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Libra",
+        "image": "res/Item/zodiac_libra_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Measure_word",
+        "name": "Yards",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Brig",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Measure_word",
+        "name": "Measure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Virgo",
+        "image": "res/Item/zodiac_virgo_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Measure_word",
+        "name": "Inches",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ship_word",
+        "name": "Ship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Measure_word",
+        "name": "Miles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Soap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Leo",
+        "image": "res/Item/zodiac_leo_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Book",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Towel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Pisces",
+        "image": "res/Item/zodiac_sagittarius_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Monument",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bathroom_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shower",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mailman_word",
+        "name": "Mailman",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 11,
+        "colMultiToCol": 0,
+        "handToSlot": 27,
+        "handToCol": 19,
+        "flip": 46,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sculpt_word",
+            "name": "Figurine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sculpt_word",
+            "name": "Statue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mailman_word",
+            "name": "Mail",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Kalahari",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Atacama",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Mojave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Desert_word",
+            "name": "Desert",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Boxing_word",
+            "name": "Boxing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Virgo",
+            "image": "res/Item/zodiac_virgo_6.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1065,18 +1100,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Bathtub",
+            "category": "Ship_word",
+            "name": "Tanker",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Sculpt_word",
-            "name": "Sculpt",
-            "isText": true
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Pisces",
+            "image": "res/Item/zodiac_sagittarius_8.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -1085,17 +1121,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Mailman_word",
-            "name": "Stamp",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Lotion",
+            "category": "Boxing_word",
+            "name": "Sparring",
             "isText": true
           },
           "faceUp": false
@@ -1104,16 +1131,7 @@
           "card": {
             "type": "regular",
             "category": "Ship_word",
-            "name": "Galleon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bathroom_word",
-            "name": "Bathroom",
+            "name": "Tugboat",
             "isText": true
           },
           "faceUp": false
@@ -1121,18 +1139,35 @@
         {
           "card": {
             "type": "regular",
-            "category": "Toolbox",
-            "name": "Pencil",
-            "image": "res/Item/toolbox_clamp_7.png",
-            "isText": false
+            "category": "Boxing_word",
+            "name": "Referee",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Boxing_word",
-            "name": "Boxing",
+            "type": "regular",
+            "category": "Measure_word",
+            "name": "Yards",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bathroom_word",
+            "name": "Razor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Tuxedo_word",
+            "name": "Lapel",
             "isText": true
           },
           "faceUp": true
@@ -1149,9 +1184,15 @@
       "Boxing_word": 4,
       "Measure_word": 4,
       "Tuxedo_word": 3,
-      "Toolbox": 3
+      "Wooden": 3
     },
     "handPile": [
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Bathtub",
+        "isText": true
+      },
       {
         "type": "regular",
         "category": "Sculpt_word",
@@ -1159,9 +1200,114 @@
         "isText": true
       },
       {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Leo",
+        "image": "res/Item/zodiac_leo_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shower",
+        "isText": true
+      },
+      {
         "type": "gold",
+        "category": "Sculpt_word",
+        "name": "Sculpt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Bow tie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Knockout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Aries",
+        "image": "res/Item/zodiac_aries_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Galleon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ship_word",
+        "name": "Ship",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mailman_word",
+        "name": "Mailman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Seal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bathroom_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Book",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Frigate",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Measure_word",
-        "name": "Measure",
+        "name": "Miles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Cufflink",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Wooden",
+        "name": "Wooden",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Towel",
         "isText": true
       },
       {
@@ -1185,87 +1331,21 @@
       },
       {
         "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Soap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Referee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Statue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Figurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Knockout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Monument",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tanker",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Yards",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Letter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Seal",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Zodiac",
-        "name": "Scorpio",
-        "image": "res/Item/zodiac_sagittarius_8.png",
+        "name": "Taurus",
+        "image": "res/Item/zodiac_taurus_2.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Bow tie",
+        "category": "Bathroom_word",
+        "name": "Shaver",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Desert_word",
-        "name": "Namib",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Gobi",
+        "category": "Boxing_word",
+        "name": "Uppercut",
         "isText": true
       },
       {
@@ -1276,70 +1356,39 @@
       },
       {
         "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shaver",
+        "category": "Desert_word",
+        "name": "Sahara",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Pisces",
-        "image": "res/Item/zodiac_cancer_4.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Desert_word",
-        "name": "Atacama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Lapel",
+        "name": "Namib",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Mailman_word",
-        "name": "Ink",
+        "name": "Letter",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Desert_word",
-        "name": "Tanami",
+        "category": "Bathroom_word",
+        "name": "Lotion",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Cufflink",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Inches",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Desert_word",
-        "name": "Desert",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Book",
-        "image": "res/Item/toolbox_hammer_8.png",
+        "category": "Wooden",
+        "name": "Guitar",
+        "image": "",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Desert_word",
-        "name": "Mojave",
+        "name": "Gobi",
         "isText": true
       },
       {
@@ -1357,45 +1406,8 @@
       },
       {
         "type": "regular",
-        "category": "Boxing_word",
-        "name": "Sparring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Virgo",
-        "image": "res/Item/zodiac_virgo_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Mailman_word",
-        "name": "Mail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Miles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Towel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shower",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Razor",
+        "name": "Stamp",
         "isText": true
       },
       {
@@ -1406,23 +1418,9 @@
       },
       {
         "type": "regular",
-        "category": "Zodiac",
-        "name": "Leo",
-        "image": "res/Item/zodiac_leo_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tugboat",
+        "category": "Sculpt_word",
+        "name": "Monument",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Aries",
-        "image": "res/Item/zodiac_aries_1.png",
-        "isText": false
       },
       {
         "type": "gold",
@@ -1432,8 +1430,46 @@
       },
       {
         "type": "regular",
+        "category": "Measure_word",
+        "name": "Inches",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Scorpio",
+        "image": "res/Item/zodiac_cancer_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Pencil",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Tuxedo_word",
+        "name": "Tuxedo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Soap",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Desert_word",
-        "name": "Kalahari",
+        "name": "Tanami",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Measure_word",
+        "name": "Measure",
         "isText": true
       }
     ],
@@ -1442,15 +1478,37 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 118,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 5,
+        "colToCol": 8,
+        "colMultiToCol": 0,
+        "handToSlot": 29,
+        "handToCol": 17,
+        "flip": 46,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Ship_word",
-            "name": "Frigate",
+            "category": "Wooden",
+            "name": "Pencil",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Sparring",
             "isText": true
           },
           "faceUp": false
@@ -1459,8 +1517,38 @@
           "card": {
             "type": "regular",
             "category": "Zodiac",
-            "name": "Virgo",
-            "image": "res/Item/zodiac_virgo_6.png",
+            "name": "Libra",
+            "image": "res/Item/zodiac_libra_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Desert_word",
+            "name": "Karakum",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Measure_word",
+            "name": "Miles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Gemini",
+            "image": "res/Item/zodiac_gemini_3.png",
             "isText": false
           },
           "faceUp": false
@@ -1468,41 +1556,14 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Bathtub",
+            "category": "Measure_word",
+            "name": "Feet",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Shaver",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mailman_word",
-            "name": "Stamp",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Tuxedo_word",
-            "name": "Lapel",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -1510,10 +1571,26 @@
             "name": "Razor",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bathroom_word",
+            "name": "Soap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wooden",
+            "name": "Wooden",
+            "isText": false
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -1525,38 +1602,10 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Mailman_word",
-            "name": "Seal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
             "category": "Mailman_word",
             "name": "Mailman",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Measure_word",
-            "name": "Measure",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Zodiac",
-            "name": "Leo",
-            "image": "res/Item/zodiac_leo_5.png",
-            "isText": false
           },
           "faceUp": true
         }
@@ -1565,26 +1614,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Boxing_word",
-            "name": "Referee",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Galleon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Zodiac",
-            "name": "Pisces",
+            "name": "Scorpio",
             "image": "res/Item/zodiac_cancer_4.png",
             "isText": false
           },
@@ -1592,27 +1623,45 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Tuxedo_word",
-            "name": "Cufflink",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Mojave",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
+            "category": "Zodiac",
+            "name": "Zodiac",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Knockout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Ship_word",
-            "name": "Ship",
+            "name": "Brig",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Measure_word",
+            "name": "Yards",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Measure_word",
+            "name": "Inches",
             "isText": true
           },
           "faceUp": true
@@ -1629,25 +1678,46 @@
       "Boxing_word": 4,
       "Measure_word": 4,
       "Tuxedo_word": 3,
-      "Toolbox": 3
+      "Wooden": 3
     },
     "handPile": [
       {
         "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Soap",
+        "category": "Desert_word",
+        "name": "Kalahari",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Statue",
+        "category": "Zodiac",
+        "name": "Aries",
+        "image": "res/Item/zodiac_aries_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Book",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Virgo",
+        "image": "res/Item/zodiac_virgo_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Namib",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Mailman_word",
-        "name": "Ink",
+        "category": "Ship_word",
+        "name": "Galleon",
         "isText": true
       },
       {
@@ -1658,8 +1728,32 @@
       },
       {
         "type": "regular",
-        "category": "Desert_word",
-        "name": "Tanami",
+        "category": "Sculpt_word",
+        "name": "Statue",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Measure_word",
+        "name": "Measure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Uppercut",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Letter",
         "isText": true
       },
       {
@@ -1670,20 +1764,20 @@
       },
       {
         "type": "regular",
-        "category": "Mailman_word",
-        "name": "Envelope",
+        "category": "Desert_word",
+        "name": "Mojave",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Toolbox",
-        "name": "Toolbox",
-        "isText": false
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shaver",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Bust",
+        "category": "Ship_word",
+        "name": "Frigate",
         "isText": true
       },
       {
@@ -1694,39 +1788,14 @@
       },
       {
         "type": "regular",
-        "category": "Zodiac",
-        "name": "Libra",
-        "image": "res/Item/zodiac_libra_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Karakum",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Bathroom_word",
-        "name": "Bathroom",
+        "name": "Shampoo",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shower",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Inches",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Boxing_word",
-        "name": "Boxing",
+        "category": "Mailman_word",
+        "name": "Seal",
         "isText": true
       },
       {
@@ -1737,14 +1806,56 @@
       },
       {
         "type": "regular",
-        "category": "Ship_word",
-        "name": "Tanker",
+        "category": "Bathroom_word",
+        "name": "Lotion",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Measure_word",
-        "name": "Feet",
+        "category": "Mailman_word",
+        "name": "Mail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Envelope",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sculpt_word",
+        "name": "Sculpt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Stamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Towel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Lapel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Tanami",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Tuxedo_word",
+        "name": "Tuxedo",
         "isText": true
       },
       {
@@ -1755,60 +1866,10 @@
       },
       {
         "type": "regular",
-        "category": "Measure_word",
-        "name": "Yards",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Scorpio",
-        "image": "res/Item/zodiac_sagittarius_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Figurine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Zodiac",
-        "name": "Zodiac",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Letter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
+        "category": "Wooden",
         "name": "Guitar",
-        "image": "res/Item/toolbox_chisel_6.png",
+        "image": "",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Towel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Pencil",
-        "image": "res/Item/toolbox_clamp_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Sculpt_word",
-        "name": "Sculpt",
-        "isText": true
       },
       {
         "type": "regular",
@@ -1820,13 +1881,69 @@
       {
         "type": "regular",
         "category": "Bathroom_word",
-        "name": "Lotion",
+        "name": "Bathtub",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Boxing_word",
-        "name": "Knockout",
+        "name": "Referee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tanker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Figurine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Bust",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bathroom_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Pisces",
+        "image": "res/Item/zodiac_sagittarius_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Boxing_word",
+        "name": "Boxing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Leo",
+        "image": "res/Item/zodiac_leo_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Ship_word",
+        "name": "Ship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shower",
         "isText": true
       },
       {
@@ -1837,83 +1954,14 @@
       },
       {
         "type": "regular",
-        "category": "Zodiac",
-        "name": "Gemini",
-        "image": "res/Item/zodiac_gemini_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Ship_word",
         "name": "Tugboat",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Boxing_word",
-        "name": "Uppercut",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Book",
-        "image": "res/Item/toolbox_hammer_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Aries",
-        "image": "res/Item/zodiac_aries_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Sparring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shampoo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Miles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Brig",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Namib",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Mail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Kalahari",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Tuxedo_word",
-        "name": "Tuxedo",
+        "name": "Cufflink",
         "isText": true
       }
     ],
@@ -1922,53 +1970,27 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 119,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 6,
+        "colToCol": 11,
+        "colMultiToCol": 0,
+        "handToSlot": 31,
+        "handToCol": 15,
+        "flip": 46,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Ship_word",
-            "name": "Caravel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Bathtub",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ship_word",
-            "name": "Frigate",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Boxing_word",
-            "name": "Uppercut",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Boxing_word",
-            "name": "Knockout",
+            "category": "Measure_word",
+            "name": "Yards",
             "isText": true
           },
           "faceUp": false
@@ -1985,9 +2007,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Tuxedo_word",
-            "name": "Bow tie",
-            "isText": true
+            "category": "Zodiac",
+            "name": "Taurus",
+            "image": "res/Item/zodiac_taurus_2.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -1997,25 +2020,7 @@
           "card": {
             "type": "regular",
             "category": "Bathroom_word",
-            "name": "Soap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Mojave",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Desert_word",
-            "name": "Kalahari",
+            "name": "Lotion",
             "isText": true
           },
           "faceUp": false
@@ -2032,8 +2037,17 @@
         {
           "card": {
             "type": "gold",
-            "category": "Tuxedo_word",
-            "name": "Tuxedo",
+            "category": "Ship_word",
+            "name": "Ship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Boxing_word",
+            "name": "Sparring",
             "isText": true
           },
           "faceUp": true
@@ -2043,8 +2057,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Mailman_word",
-            "name": "Stamp",
+            "category": "Tuxedo_word",
+            "name": "Cufflink",
             "isText": true
           },
           "faceUp": false
@@ -2052,13 +2066,42 @@
         {
           "card": {
             "type": "regular",
+            "category": "Measure_word",
+            "name": "Miles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ship_word",
+            "name": "Caravel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Zodiac",
-            "name": "Leo",
-            "image": "res/Item/zodiac_leo_5.png",
+            "name": "Zodiac",
             "isText": false
           },
           "faceUp": false
         },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zodiac",
+            "name": "Aries",
+            "image": "res/Item/zodiac_aries_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
@@ -2070,9 +2113,9 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Razor",
+            "type": "gold",
+            "category": "Boxing_word",
+            "name": "Boxing",
             "isText": true
           },
           "faceUp": false
@@ -2080,8 +2123,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bathroom_word",
-            "name": "Shaver",
+            "category": "Desert_word",
+            "name": "Atacama",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Desert_word",
+            "name": "Desert",
             "isText": true
           },
           "faceUp": false
@@ -2089,9 +2141,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sculpt_word",
-            "name": "Bust",
-            "isText": true
+            "category": "Wooden",
+            "name": "Pencil",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Wooden",
+            "name": "Wooden",
+            "isText": false
           },
           "faceUp": true
         }
@@ -2107,126 +2169,9 @@
       "Boxing_word": 4,
       "Measure_word": 4,
       "Tuxedo_word": 3,
-      "Toolbox": 3
+      "Wooden": 3
     },
     "handPile": [
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Miles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Pencil",
-        "image": "res/Item/toolbox_clamp_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Sahara",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Envelope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Scorpio",
-        "image": "res/Item/zodiac_sagittarius_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Measure_word",
-        "name": "Measure",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mailman_word",
-        "name": "Mailman",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sculpt_word",
-        "name": "Sculpt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tanker",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Tugboat",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ship_word",
-        "name": "Ship",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Toolbox",
-        "name": "Toolbox",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Tuxedo_word",
-        "name": "Cufflink",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Ink",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Measure_word",
-        "name": "Yards",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Namib",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Pisces",
-        "image": "res/Item/zodiac_cancer_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Boxing_word",
-        "name": "Boxing",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sculpt_word",
-        "name": "Statue",
-        "isText": true
-      },
       {
         "type": "regular",
         "category": "Sculpt_word",
@@ -2234,97 +2179,15 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Guitar",
-        "image": "res/Item/toolbox_chisel_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Gobi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Virgo",
-        "image": "res/Item/zodiac_virgo_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Brig",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Desert_word",
-        "name": "Tanami",
-        "isText": true
-      },
-      {
-        "type": "regular",
+        "type": "gold",
         "category": "Tuxedo_word",
-        "name": "Lapel",
+        "name": "Tuxedo",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shampoo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Seal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Boxing_word",
-        "name": "Sparring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toolbox",
-        "name": "Book",
-        "image": "res/Item/toolbox_hammer_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Ship_word",
-        "name": "Galleon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Zodiac",
-        "name": "Gemini",
-        "image": "res/Item/zodiac_gemini_3.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Desert_word",
-        "name": "Karakum",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mailman_word",
-        "name": "Letter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bathroom_word",
-        "name": "Shower",
+        "name": "Sahara",
         "isText": true
       },
       {
@@ -2336,53 +2199,164 @@
       },
       {
         "type": "regular",
+        "category": "Desert_word",
+        "name": "Karakum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Scorpio",
+        "image": "res/Item/zodiac_cancer_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Measure_word",
         "name": "Inches",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shaver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Galleon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tugboat",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Desert_word",
-        "name": "Atacama",
+        "name": "Mojave",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Zodiac",
-        "name": "Aries",
-        "image": "res/Item/zodiac_aries_1.png",
+        "name": "Virgo",
+        "image": "res/Item/zodiac_virgo_6.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Uppercut",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Bathroom_word",
-        "name": "Lotion",
+        "name": "Shower",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Zodiac",
-        "name": "Zodiac",
-        "isText": false
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Stamp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Tanker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Seal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Shampoo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Bust",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Zodiac",
-        "name": "Taurus",
-        "image": "res/Item/zodiac_taurus_2.png",
+        "name": "Pisces",
+        "image": "res/Item/zodiac_sagittarius_8.png",
         "isText": false
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Guitar",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Kalahari",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Lapel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Tuxedo_word",
+        "name": "Bow tie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Ink",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Bathroom_word",
-        "name": "Bathroom",
+        "name": "Bathtub",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Razor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sculpt_word",
+        "name": "Statue",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Desert_word",
-        "name": "Desert",
+        "category": "Measure_word",
+        "name": "Measure",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Leo",
+        "image": "res/Item/zodiac_leo_5.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -2391,10 +2365,96 @@
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "Mailman_word",
+        "name": "Mailman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Boxing_word",
+        "name": "Knockout",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bathroom_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Frigate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bathroom_word",
+        "name": "Soap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Tanami",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
         "type": "regular",
         "category": "Mailman_word",
         "name": "Mail",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Gobi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ship_word",
+        "name": "Brig",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Wooden",
+        "name": "Book",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sculpt_word",
+        "name": "Sculpt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mailman_word",
+        "name": "Envelope",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Desert_word",
+        "name": "Namib",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zodiac",
+        "name": "Gemini",
+        "image": "res/Item/zodiac_gemini_3.png",
+        "isText": false
       }
     ],
     "handDisplay": []

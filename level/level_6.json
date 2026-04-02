@@ -2,24 +2,60 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 165
+      "maxSteps": 156,
+      "strategyType": "priority",
+      "solverSteps": 163,
+      "solverMaxSteps": 166,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 5,
+        "handToSlot": 22,
+        "handToCol": 34,
+        "flip": 78,
+        "recycle": 1
+      },
+      "solver2Steps": 168,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Horror_word",
-            "name": "Fear",
-            "isText": true
+            "category": "Sports",
+            "name": "Rugby",
+            "image": "res/Item/sports_rugby_6.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Driving_word",
-            "name": "Car",
+            "category": "Sports",
+            "name": "Golf",
+            "image": "res/Item/sports_golf_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Footwear_word",
+            "name": "Slippers",
             "isText": true
           },
           "faceUp": false
@@ -27,8 +63,19 @@
         {
           "card": {
             "type": "gold",
-            "category": "Explorer_word",
-            "name": "Explorer",
+            "category": "Furniture",
+            "name": "Furniture",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Footwear_word",
+            "name": "Sneakers",
             "isText": true
           },
           "faceUp": false
@@ -36,14 +83,12 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fingers_word",
-            "name": "Little",
+            "category": "Horror_word",
+            "name": "Monster",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -55,116 +100,30 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Trees_word",
-            "name": "Trees",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Horror_word",
-            "name": "Vampire",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
             "category": "Footwear_word",
-            "name": "Sandals",
+            "name": "Clogs",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Furniture",
-            "name": "Desk",
-            "image": "res/Item/furniture_desk_4.png",
-            "isText": false
+            "type": "gold",
+            "category": "Explorer_word",
+            "name": "Explorer",
+            "isText": true
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Driving_word",
-            "name": "Road",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Boxing",
-            "image": "res/Item/sports_boxing_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Engineer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Driving_word",
-            "name": "Driving",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
             "category": "Reptiles",
             "name": "Chameleon",
             "image": "res/Item/reptiles_chameleon_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Nurse",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Welder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Curling",
-            "image": "res/Item/sports_curling_7.png",
             "isText": false
           },
           "faceUp": false
@@ -181,18 +140,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Reptiles",
-            "name": "Lizard",
-            "image": "res/Item/reptiles_lizard_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Trees_word",
-            "name": "Maple",
+            "name": "Spruce",
             "isText": true
           },
           "faceUp": false
@@ -200,452 +149,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bakery_word",
-            "name": "Yeast",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Furniture",
-            "name": "Furniture",
+            "category": "Sports",
+            "name": "Tennis",
+            "image": "res/Item/sports_tennis_4.png",
             "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Trees_word": 8,
-      "Jobs_word": 8,
-      "Reptiles": 7,
-      "Sports": 7,
-      "Horror_word": 6,
-      "Footwear_word": 6,
-      "Furniture": 5,
-      "Fingers_word": 5,
-      "Driving_word": 4,
-      "Bakery_word": 4,
-      "Explorer_word": 3,
-      "Movement_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Middle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Traffic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Sequoia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Loafers",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Footwear_word",
-        "name": "Footwear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Table",
-        "image": "res/Item/furniture_table_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Slippers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Bed",
-        "image": "res/Item/furniture_bed_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Gecko",
-        "image": "res/Item/reptiles_gecko_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Rugby",
-        "image": "res/Item/sports_rugby_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Pine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Hockey",
-        "image": "res/Item/sports_hockey_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Soccer",
-        "image": "res/Item/sports_soccer_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Monster",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Jobs_word",
-        "name": "Jobs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Turtle",
-        "image": "res/Item/reptiles_turtle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Golf",
-        "image": "res/Item/sports_golf_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Baobab",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Kick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Snake",
-        "image": "res/Item/reptiles_snake_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Flour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Curse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Thumb",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Reptiles",
-        "name": "Reptiles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Elm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Doctor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Magellan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Jump",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Horror_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Sign",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Ghost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Plumber",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Zombie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Vespucci",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Spruce",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Eggs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Clogs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Index",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Cedar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Columbus",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bakery_word",
-        "name": "Bakery",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Mailman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Uggs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fingers_word",
-        "name": "Fingers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sneakers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Actor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Ring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Iguana",
-        "image": "res/Item/reptiles_iguana_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Alligator",
-        "image": "res/Item/reptiles_alligator_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Walk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Oak",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Movement_word",
-        "name": "Movement",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Tennis",
-        "image": "res/Item/sports_tennis_4.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 165
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Trees_word",
-            "name": "Cedar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Horror_word",
-            "name": "Vampire",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Furniture",
-            "name": "Sofa",
-            "image": "res/Item/furniture_sofa_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fingers_word",
-            "name": "Index",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fingers_word",
-            "name": "Middle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Horror_word",
-            "name": "Ghost",
-            "isText": true
           },
           "faceUp": false
         },
@@ -662,17 +169,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Explorer_word",
-            "name": "Magellan",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Footwear_word",
-            "name": "Clogs",
+            "category": "Trees_word",
+            "name": "Sequoia",
             "isText": true
           },
           "faceUp": true
@@ -681,78 +179,10 @@
       [
         {
           "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Tennis",
-            "image": "res/Item/sports_tennis_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Rugby",
-            "image": "res/Item/sports_rugby_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fingers_word",
-            "name": "Thumb",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Reptiles",
-            "name": "Alligator",
-            "image": "res/Item/reptiles_alligator_3.png",
+            "name": "Reptiles",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Trees_word",
-            "name": "Pine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Explorer_word",
-            "name": "Vespucci",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Driving_word",
-            "name": "Car",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Trees_word",
-            "name": "Spruce",
-            "isText": true
           },
           "faceUp": false
         },
@@ -760,27 +190,8 @@
           "card": {
             "type": "regular",
             "category": "Furniture",
-            "name": "Table",
-            "image": "res/Item/furniture_table_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Horror_word",
-            "name": "Horror",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Curling",
-            "image": "res/Item/sports_curling_7.png",
+            "name": "Bed",
+            "image": "res/Item/furniture_bed_5.png",
             "isText": false
           },
           "faceUp": false
@@ -797,392 +208,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Footwear_word",
-            "name": "Loafers",
+            "category": "Trees_word",
+            "name": "Pine",
             "isText": true
           },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Trees_word": 8,
-      "Jobs_word": 8,
-      "Reptiles": 7,
-      "Sports": 7,
-      "Horror_word": 6,
-      "Footwear_word": 6,
-      "Furniture": 5,
-      "Fingers_word": 5,
-      "Driving_word": 4,
-      "Bakery_word": 4,
-      "Explorer_word": 3,
-      "Movement_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Fingers_word",
-        "name": "Fingers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Maple",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bakery_word",
-        "name": "Bakery",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Iguana",
-        "image": "res/Item/reptiles_iguana_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Hockey",
-        "image": "res/Item/sports_hockey_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Sign",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Nurse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Columbus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Boxing",
-        "image": "res/Item/sports_boxing_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Eggs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Traffic",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Reptiles",
-        "name": "Reptiles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sneakers",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Explorer_word",
-        "name": "Explorer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Walk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sandals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Gecko",
-        "image": "res/Item/reptiles_gecko_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Furniture",
-        "name": "Furniture",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Lizard",
-        "image": "res/Item/reptiles_lizard_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Slippers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Snake",
-        "image": "res/Item/reptiles_snake_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Mailman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Fear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Little",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Uggs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Curse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Ring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Chameleon",
-        "image": "res/Item/reptiles_chameleon_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Oak",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Doctor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Road",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Sequoia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Plumber",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Zombie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Soccer",
-        "image": "res/Item/sports_soccer_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Flour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Jump",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Welder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Desk",
-        "image": "res/Item/furniture_desk_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Driving_word",
-        "name": "Driving",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Yeast",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sports",
-        "name": "Sports",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Elm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Actor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Monster",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Golf",
-        "image": "res/Item/sports_golf_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Footwear_word",
-        "name": "Footwear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Engineer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Pilot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Baobab",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Bed",
-        "image": "res/Item/furniture_bed_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Jobs_word",
-        "name": "Jobs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Kick",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Trees_word",
-        "name": "Trees",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 165
-    },
-    "tableau": [
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
-            "category": "Trees_word",
-            "name": "Oak",
+            "category": "Fingers_word",
+            "name": "Thumb",
             "isText": true
           },
           "faceUp": false
@@ -1204,25 +240,423 @@
             "name": "Sign",
             "isText": true
           },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Trees_word": 8,
+      "Jobs_word": 8,
+      "Reptiles": 7,
+      "Sports": 7,
+      "Horror_word": 6,
+      "Footwear_word": 6,
+      "Furniture": 5,
+      "Fingers_word": 5,
+      "Driving_word": 4,
+      "Bakery_word": 4,
+      "Explorer_word": 3,
+      "Movement_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Maple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Sofa",
+        "image": "res/Item/furniture_sofa_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Driving_word",
+        "name": "Driving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Baobab",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Kick",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fingers_word",
+        "name": "Fingers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Gecko",
+        "image": "res/Item/reptiles_gecko_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Sandals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Magellan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Uggs",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Horror_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Actor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Iguana",
+        "image": "res/Item/reptiles_iguana_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Alligator",
+        "image": "res/Item/reptiles_alligator_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Vampire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Boxing",
+        "image": "res/Item/sports_boxing_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Jobs_word",
+        "name": "Jobs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Desk",
+        "image": "res/Item/furniture_desk_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Loafers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Welder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Yeast",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Plumber",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Flour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Curse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Table",
+        "image": "res/Item/furniture_table_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Trees_word",
+        "name": "Trees",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Mailman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Vespucci",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Cedar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Walk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Snake",
+        "image": "res/Item/reptiles_snake_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Little",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Ghost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Elm",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bakery_word",
+        "name": "Bakery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Lizard",
+        "image": "res/Item/reptiles_lizard_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Soccer",
+        "image": "res/Item/sports_soccer_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Zombie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Fear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Traffic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Curling",
+        "image": "res/Item/sports_curling_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Ring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Nurse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Eggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Doctor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Middle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Oak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Jump",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Road",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Columbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Engineer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Car",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 156,
+      "strategyType": "priority",
+      "solverSteps": 164,
+      "solverMaxSteps": 166,
+      "moveStats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 8,
+        "colToCol": 3,
+        "colMultiToCol": 8,
+        "handToSlot": 26,
+        "handToCol": 30,
+        "flip": 72,
+        "recycle": 1
+      },
+      "solver2Steps": 159,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Horror_word",
+            "name": "Monster",
+            "isText": true
+          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Trees_word",
-            "name": "Cedar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Furniture",
-            "name": "Bed",
-            "image": "res/Item/furniture_bed_5.png",
+            "category": "Reptiles",
+            "name": "Chameleon",
+            "image": "res/Item/reptiles_chameleon_5.png",
             "isText": false
           },
           "faceUp": false
@@ -1230,37 +664,17 @@
         {
           "card": {
             "type": "regular",
+            "category": "Jobs_word",
+            "name": "Nurse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Driving_word",
-            "name": "Traffic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Reptiles",
-            "name": "Iguana",
-            "image": "res/Item/reptiles_iguana_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Reptiles",
-            "name": "Lizard",
-            "image": "res/Item/reptiles_lizard_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Explorer_word",
-            "name": "Explorer",
+            "name": "Driving",
             "isText": true
           },
           "faceUp": true
@@ -1270,26 +684,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Trees_word",
-            "name": "Spruce",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Doctor",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Trees_word",
-            "name": "Trees",
+            "category": "Bakery_word",
+            "name": "Flour",
             "isText": true
           },
           "faceUp": false
@@ -1298,58 +694,8 @@
           "card": {
             "type": "regular",
             "category": "Sports",
-            "name": "Boxing",
-            "image": "res/Item/sports_boxing_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Plumber",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Movement_word",
-            "name": "Kick",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Golf",
-            "image": "res/Item/sports_golf_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Soccer",
-            "image": "res/Item/sports_soccer_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Rugby",
-            "image": "res/Item/sports_rugby_6.png",
+            "name": "Hockey",
+            "image": "res/Item/sports_hockey_1.png",
             "isText": false
           },
           "faceUp": false
@@ -1366,18 +712,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Horror_word",
-            "name": "Vampire",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Horror_word",
-            "name": "Monster",
-            "isText": true
+            "category": "Sports",
+            "name": "Soccer",
+            "image": "res/Item/sports_soccer_2.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1390,551 +728,8 @@
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Trees_word": 8,
-      "Jobs_word": 8,
-      "Reptiles": 7,
-      "Sports": 7,
-      "Horror_word": 6,
-      "Footwear_word": 6,
-      "Furniture": 5,
-      "Fingers_word": 5,
-      "Driving_word": 4,
-      "Bakery_word": 4,
-      "Explorer_word": 3,
-      "Movement_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Table",
-        "image": "res/Item/furniture_table_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Mailman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Uggs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Ring",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fingers_word",
-        "name": "Fingers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Jump",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Pilot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Index",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Thumb",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Clogs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Baobab",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Middle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Flour",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Driving_word",
-        "name": "Driving",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Little",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Chameleon",
-        "image": "res/Item/reptiles_chameleon_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Vespucci",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Furniture",
-        "name": "Furniture",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Fear",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Jobs_word",
-        "name": "Jobs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Tennis",
-        "image": "res/Item/sports_tennis_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Nurse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Snake",
-        "image": "res/Item/reptiles_snake_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Welder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Alligator",
-        "image": "res/Item/reptiles_alligator_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Turtle",
-        "image": "res/Item/reptiles_turtle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Elm",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Footwear_word",
-        "name": "Footwear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Engineer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Zombie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Yeast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Actor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Eggs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Walk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bakery_word",
-        "name": "Bakery",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Desk",
-        "image": "res/Item/furniture_desk_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Car",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Maple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Road",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Ghost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sneakers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Slippers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Magellan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Gecko",
-        "image": "res/Item/reptiles_gecko_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Pine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Curling",
-        "image": "res/Item/sports_curling_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Loafers",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sports",
-        "name": "Sports",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Movement_word",
-        "name": "Movement",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Curse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Columbus",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Reptiles",
-        "name": "Reptiles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Sequoia",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 165
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Hockey",
-            "image": "res/Item/sports_hockey_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Footwear_word",
-            "name": "Clogs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Plumber",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Pilot",
-            "isText": true
-          },
-          "faceUp": true
-        }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Driving_word",
-            "name": "Road",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Furniture",
-            "name": "Chair",
-            "image": "res/Item/furniture_chair_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Furniture",
-            "name": "Furniture",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Footwear_word",
-            "name": "Sandals",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Footwear_word",
-            "name": "Footwear",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Movement_word",
-            "name": "Kick",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Trees_word",
-            "name": "Spruce",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jobs_word",
-            "name": "Welder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Movement_word",
-            "name": "Movement",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fingers_word",
-            "name": "Middle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Reptiles",
-            "name": "Reptiles",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Horror_word",
-            "name": "Ghost",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sports",
-            "name": "Rugby",
-            "image": "res/Item/sports_rugby_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bakery_word",
-            "name": "Milk",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -1947,8 +742,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Driving_word",
-            "name": "Driving",
+            "category": "Fingers_word",
+            "name": "Fingers",
             "isText": true
           },
           "faceUp": false
@@ -1956,8 +751,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Footwear_word",
-            "name": "Uggs",
+            "category": "Reptiles",
+            "name": "Iguana",
+            "image": "res/Item/reptiles_iguana_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Trees_word",
+            "name": "Trees",
             "isText": true
           },
           "faceUp": false
@@ -1968,6 +773,85 @@
             "category": "Explorer_word",
             "name": "Magellan",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Furniture",
+            "name": "Table",
+            "image": "res/Item/furniture_table_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports",
+            "name": "Boxing",
+            "image": "res/Item/sports_boxing_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Explorer_word",
+            "name": "Explorer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Lizard",
+            "image": "res/Item/reptiles_lizard_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Pine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports",
+            "name": "Curling",
+            "image": "res/Item/sports_curling_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Driving_word",
+            "name": "Car",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Turtle",
+            "image": "res/Item/reptiles_turtle_7.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -1990,40 +874,69 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Fingers_word",
-        "name": "Index",
+        "category": "Furniture",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Bakery_word",
+        "name": "Bakery",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Horror_word",
-        "name": "Vampire",
+        "name": "Zombie",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Driving_word",
-        "name": "Car",
+        "category": "Bakery_word",
+        "name": "Eggs",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Golf",
-        "image": "res/Item/sports_golf_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Soccer",
-        "image": "res/Item/sports_soccer_2.png",
+        "type": "gold",
+        "category": "Furniture",
+        "name": "Furniture",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Jobs_word",
-        "name": "Mailman",
+        "name": "Engineer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Curse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Maple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Vespucci",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
         "isText": true
       },
       {
@@ -2042,16 +955,22 @@
       },
       {
         "type": "regular",
-        "category": "Trees_word",
-        "name": "Baobab",
+        "category": "Sports",
+        "name": "Golf",
+        "image": "res/Item/sports_golf_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Middle",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sports",
-        "name": "Curling",
-        "image": "res/Item/sports_curling_7.png",
-        "isText": false
+        "category": "Jobs_word",
+        "name": "Mailman",
+        "isText": true
       },
       {
         "type": "regular",
@@ -2061,14 +980,27 @@
       },
       {
         "type": "regular",
-        "category": "Bakery_word",
-        "name": "Flour",
+        "category": "Reptiles",
+        "name": "Alligator",
+        "image": "res/Item/reptiles_alligator_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Traffic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Trees_word",
-        "name": "Cedar",
+        "category": "Fingers_word",
+        "name": "Little",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Uggs",
         "isText": true
       },
       {
@@ -2079,27 +1011,14 @@
       },
       {
         "type": "regular",
-        "category": "Reptiles",
-        "name": "Iguana",
-        "image": "res/Item/reptiles_iguana_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Pine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fingers_word",
-        "name": "Fingers",
+        "category": "Footwear_word",
+        "name": "Sneakers",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Driving_word",
-        "name": "Sign",
+        "category": "Bakery_word",
+        "name": "Yeast",
         "isText": true
       },
       {
@@ -2111,21 +1030,38 @@
       },
       {
         "type": "regular",
-        "category": "Reptiles",
-        "name": "Chameleon",
-        "image": "res/Item/reptiles_chameleon_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Horror_word",
-        "name": "Horror",
+        "category": "Fingers_word",
+        "name": "Thumb",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Trees_word",
-        "name": "Trees",
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Walk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Doctor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Plumber",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Columbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Welder",
         "isText": true
       },
       {
@@ -2137,76 +1073,26 @@
       },
       {
         "type": "regular",
-        "category": "Bakery_word",
-        "name": "Yeast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Nurse",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bakery_word",
-        "name": "Bakery",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Vespucci",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Zombie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Jump",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Lizard",
-        "image": "res/Item/reptiles_lizard_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Curse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Actor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Doctor",
+        "category": "Trees_word",
+        "name": "Oak",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Driving_word",
-        "name": "Traffic",
+        "name": "Road",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Clogs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Kick",
         "isText": true
       },
       {
@@ -2217,59 +1103,33 @@
       },
       {
         "type": "regular",
-        "category": "Reptiles",
-        "name": "Alligator",
-        "image": "res/Item/reptiles_alligator_3.png",
+        "category": "Horror_word",
+        "name": "Fear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Ghost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Jobs_word",
+        "name": "Jobs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Rugby",
+        "image": "res/Item/sports_rugby_6.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Maple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Turtle",
-        "image": "res/Item/reptiles_turtle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Thumb",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sneakers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Table",
-        "image": "res/Item/furniture_table_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Oak",
-        "isText": true
       },
       {
         "type": "regular",
         "category": "Trees_word",
         "name": "Sequoia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Little",
         "isText": true
       },
       {
@@ -2281,38 +1141,44 @@
       },
       {
         "type": "regular",
-        "category": "Explorer_word",
-        "name": "Columbus",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Jobs_word",
-        "name": "Jobs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Explorer_word",
-        "name": "Explorer",
+        "name": "Actor",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bakery_word",
-        "name": "Eggs",
+        "category": "Trees_word",
+        "name": "Spruce",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Horror_word",
-        "name": "Fear",
+        "category": "Trees_word",
+        "name": "Cedar",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Movement_word",
-        "name": "Walk",
+        "name": "Jump",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Movement_word",
+        "name": "Movement",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Pilot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Index",
         "isText": true
       },
       {
@@ -2322,23 +1188,35 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Monster",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Boxing",
-        "image": "res/Item/sports_boxing_3.png",
+        "type": "gold",
+        "category": "Reptiles",
+        "name": "Reptiles",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Jobs_word",
-        "name": "Engineer",
+        "category": "Trees_word",
+        "name": "Baobab",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Vampire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Sofa",
+        "image": "res/Item/furniture_sofa_2.png",
+        "isText": false
       }
     ],
     "handDisplay": []
@@ -2346,15 +1224,59 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 165
+      "maxSteps": 156,
+      "strategyType": "priority",
+      "solverSteps": 164,
+      "solverMaxSteps": 166,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 9,
+        "colMultiToCol": 5,
+        "handToSlot": 31,
+        "handToCol": 25,
+        "flip": 75,
+        "recycle": 1
+      },
+      "solver2Steps": 171,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Horror_word",
-            "name": "Zombie",
+            "category": "Furniture",
+            "name": "Desk",
+            "image": "res/Item/furniture_desk_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Driving_word",
+            "name": "Car",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fingers_word",
+            "name": "Fingers",
             "isText": true
           },
           "faceUp": false
@@ -2362,9 +1284,49 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fingers_word",
-            "name": "Ring",
+            "category": "Jobs_word",
+            "name": "Doctor",
             "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Pine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Snake",
+            "image": "res/Item/reptiles_snake_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Footwear_word",
+            "name": "Sandals",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports",
+            "name": "Golf",
+            "image": "res/Item/sports_golf_5.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -2375,15 +1337,6 @@
             "name": "Rugby",
             "image": "res/Item/sports_rugby_6.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Trees_word",
-            "name": "Baobab",
-            "isText": true
           },
           "faceUp": true
         }
@@ -2402,8 +1355,8 @@
           "card": {
             "type": "regular",
             "category": "Sports",
-            "name": "Tennis",
-            "image": "res/Item/sports_tennis_4.png",
+            "name": "Boxing",
+            "image": "res/Item/sports_boxing_3.png",
             "isText": false
           },
           "faceUp": false
@@ -2411,47 +1364,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Footwear_word",
-            "name": "Uggs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bakery_word",
-            "name": "Bakery",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Movement_word",
-            "name": "Movement",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fingers_word",
-            "name": "Index",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Explorer_word",
-            "name": "Columbus",
-            "isText": true
+            "category": "Sports",
+            "name": "Soccer",
+            "image": "res/Item/sports_soccer_2.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -2459,8 +1375,8 @@
           "card": {
             "type": "regular",
             "category": "Reptiles",
-            "name": "Turtle",
-            "image": "res/Item/reptiles_turtle_7.png",
+            "name": "Lizard",
+            "image": "res/Item/reptiles_lizard_1.png",
             "isText": false
           },
           "faceUp": false
@@ -2468,26 +1384,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Trees_word",
-            "name": "Sequoia",
-            "isText": true
+            "category": "Reptiles",
+            "name": "Chameleon",
+            "image": "res/Item/reptiles_chameleon_5.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Jobs_word",
-            "name": "Mailman",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Movement_word",
-            "name": "Jump",
+            "category": "Fingers_word",
+            "name": "Middle",
             "isText": true
           },
           "faceUp": true
@@ -2498,7 +1406,52 @@
           "card": {
             "type": "regular",
             "category": "Driving_word",
-            "name": "Traffic",
+            "name": "Road",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fingers_word",
+            "name": "Little",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Baobab",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Maple",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Actor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Movement_word",
+            "name": "Walk",
             "isText": true
           },
           "faceUp": false
@@ -2507,27 +1460,453 @@
           "card": {
             "type": "regular",
             "category": "Sports",
-            "name": "Golf",
-            "image": "res/Item/sports_golf_5.png",
+            "name": "Curling",
+            "image": "res/Item/sports_curling_7.png",
             "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Trees_word": 8,
+      "Jobs_word": 8,
+      "Reptiles": 7,
+      "Sports": 7,
+      "Horror_word": 6,
+      "Footwear_word": 6,
+      "Furniture": 5,
+      "Fingers_word": 5,
+      "Driving_word": 4,
+      "Bakery_word": 4,
+      "Explorer_word": 3,
+      "Movement_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Vespucci",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Jobs_word",
+        "name": "Jobs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Loafers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Traffic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Clogs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Pilot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Trees_word",
+        "name": "Trees",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Turtle",
+        "image": "res/Item/reptiles_turtle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Alligator",
+        "image": "res/Item/reptiles_alligator_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Jump",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Zombie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Sneakers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Vampire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Uggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Yeast",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Ring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Iguana",
+        "image": "res/Item/reptiles_iguana_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Oak",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Movement_word",
+        "name": "Movement",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bakery_word",
+        "name": "Bakery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Monster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Kick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Plumber",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Mailman",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Furniture",
+        "name": "Furniture",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Columbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Eggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Welder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Flour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Gecko",
+        "image": "res/Item/reptiles_gecko_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Cedar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Slippers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Fear",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Explorer_word",
+        "name": "Explorer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Magellan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Thumb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Curse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Elm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Sequoia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Table",
+        "image": "res/Item/furniture_table_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Horror_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Hockey",
+        "image": "res/Item/sports_hockey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Bed",
+        "image": "res/Item/furniture_bed_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Nurse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Ghost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Reptiles",
+        "name": "Reptiles",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Sofa",
+        "image": "res/Item/furniture_sofa_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Driving_word",
+        "name": "Driving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Tennis",
+        "image": "res/Item/sports_tennis_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Engineer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Spruce",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 156,
+      "strategyType": "priority",
+      "solverSteps": 156,
+      "solverMaxSteps": 166,
+      "moveStats": {
+        "colSingleToSlot": 20,
+        "colMultiToSlot": 8,
+        "colToCol": 10,
+        "colMultiToCol": 6,
+        "handToSlot": 28,
+        "handToCol": 28,
+        "flip": 56,
+        "recycle": 0
+      },
+      "solver2Steps": -1,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {}
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fingers_word",
+            "name": "Fingers",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Reptiles",
-            "name": "Alligator",
-            "image": "res/Item/reptiles_alligator_3.png",
-            "isText": false
+            "category": "Horror_word",
+            "name": "Curse",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Horror_word",
-            "name": "Horror",
+            "type": "regular",
+            "category": "Bakery_word",
+            "name": "Flour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bakery_word",
+            "name": "Yeast",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Baobab",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Driving_word",
+            "name": "Car",
             "isText": true
           },
           "faceUp": false
@@ -2543,9 +1922,66 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "Bakery_word",
+            "name": "Bakery",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Maple",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Lizard",
+            "image": "res/Item/reptiles_lizard_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fingers_word",
+            "name": "Thumb",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Driving_word",
+            "name": "Sign",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Movement_word",
+            "name": "Walk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "regular",
             "category": "Jobs_word",
-            "name": "Engineer",
+            "name": "Mailman",
             "isText": true
           },
           "faceUp": false
@@ -2553,8 +1989,686 @@
         {
           "card": {
             "type": "gold",
+            "category": "Horror_word",
+            "name": "Horror",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Horror_word",
+            "name": "Zombie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Alligator",
+            "image": "res/Item/reptiles_alligator_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Furniture",
+            "name": "Desk",
+            "image": "res/Item/furniture_desk_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Plumber",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bakery_word",
+            "name": "Milk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Furniture",
+            "name": "Table",
+            "image": "res/Item/furniture_table_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Furniture",
+            "name": "Furniture",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Trees_word": 8,
+      "Jobs_word": 8,
+      "Reptiles": 7,
+      "Sports": 7,
+      "Horror_word": 6,
+      "Footwear_word": 6,
+      "Furniture": 5,
+      "Fingers_word": 5,
+      "Driving_word": 4,
+      "Bakery_word": 4,
+      "Explorer_word": 3,
+      "Movement_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Uggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Little",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Ring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Elm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Turtle",
+        "image": "res/Item/reptiles_turtle_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Trees_word",
+        "name": "Trees",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Columbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Tennis",
+        "image": "res/Item/sports_tennis_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Eggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Cedar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Welder",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Sequoia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Chameleon",
+        "image": "res/Item/reptiles_chameleon_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Curling",
+        "image": "res/Item/sports_curling_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Engineer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Explorer_word",
+        "name": "Explorer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Nurse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Road",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Magellan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Soccer",
+        "image": "res/Item/sports_soccer_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Vampire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Jump",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Fear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Bed",
+        "image": "res/Item/furniture_bed_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Hockey",
+        "image": "res/Item/sports_hockey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Sandals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Kick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Clogs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Rugby",
+        "image": "res/Item/sports_rugby_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Ghost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sports",
+        "name": "Sports",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Vespucci",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Middle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Oak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Traffic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Pilot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Iguana",
+        "image": "res/Item/reptiles_iguana_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Golf",
+        "image": "res/Item/sports_golf_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Sneakers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Pine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Loafers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Driving_word",
+        "name": "Driving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Sofa",
+        "image": "res/Item/furniture_sofa_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Gecko",
+        "image": "res/Item/reptiles_gecko_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Movement_word",
+        "name": "Movement",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Doctor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Actor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Index",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Boxing",
+        "image": "res/Item/sports_boxing_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Slippers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Reptiles",
+        "name": "Reptiles",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Spruce",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Snake",
+        "image": "res/Item/reptiles_snake_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Monster",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 156,
+      "strategyType": "priority",
+      "solverSteps": 163,
+      "solverMaxSteps": 166,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 8,
+        "colToCol": 8,
+        "colMultiToCol": 5,
+        "handToSlot": 37,
+        "handToCol": 19,
+        "flip": 77,
+        "recycle": 1
+      },
+      "solver2Steps": 171,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Mailman",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Footwear_word",
-            "name": "Footwear",
+            "name": "Slippers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fingers_word",
+            "name": "Index",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bakery_word",
+            "name": "Milk",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Horror_word",
+            "name": "Curse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Nurse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Footwear_word",
+            "name": "Sandals",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Movement_word",
+            "name": "Kick",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fingers_word",
+            "name": "Middle",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Pilot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fingers_word",
+            "name": "Little",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports",
+            "name": "Rugby",
+            "image": "res/Item/sports_rugby_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bakery_word",
+            "name": "Flour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Oak",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Driving_word",
+            "name": "Driving",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Doctor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Reptiles",
+            "name": "Lizard",
+            "image": "res/Item/reptiles_lizard_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports",
+            "name": "Tennis",
+            "image": "res/Item/sports_tennis_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Movement_word",
+            "name": "Movement",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bakery_word",
+            "name": "Bakery",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Jobs_word",
+            "name": "Actor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Trees_word",
+            "name": "Elm",
             "isText": true
           },
           "faceUp": true
@@ -2578,6 +2692,112 @@
     "handPile": [
       {
         "type": "regular",
+        "category": "Footwear_word",
+        "name": "Clogs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Ring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Welder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Vampire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Uggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Maple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Sign",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Reptiles",
+        "name": "Reptiles",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Magellan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Baobab",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Monster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Gecko",
+        "image": "res/Item/reptiles_gecko_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Table",
+        "image": "res/Item/furniture_table_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Fear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Bed",
+        "image": "res/Item/furniture_bed_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Sofa",
+        "image": "res/Item/furniture_sofa_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Road",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Sports",
         "name": "Curling",
         "image": "res/Item/sports_curling_7.png",
@@ -2585,15 +2805,78 @@
       },
       {
         "type": "regular",
-        "category": "Sports",
-        "name": "Boxing",
-        "image": "res/Item/sports_boxing_3.png",
+        "category": "Reptiles",
+        "name": "Snake",
+        "image": "res/Item/reptiles_snake_2.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Fingers_word",
-        "name": "Little",
+        "category": "Reptiles",
+        "name": "Chameleon",
+        "image": "res/Item/reptiles_chameleon_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Footwear_word",
+        "name": "Footwear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Walk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Spruce",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Driving_word",
+        "name": "Traffic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Engineer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Trees_word",
+        "name": "Trees",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Hockey",
+        "image": "res/Item/sports_hockey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Sequoia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Alligator",
+        "image": "res/Item/reptiles_alligator_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Yeast",
         "isText": true
       },
       {
@@ -2605,8 +2888,127 @@
       },
       {
         "type": "regular",
+        "category": "Reptiles",
+        "name": "Turtle",
+        "image": "res/Item/reptiles_turtle_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Explorer_word",
+        "name": "Explorer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Cedar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Columbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bakery_word",
+        "name": "Eggs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Loafers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Jobs_word",
+        "name": "Jobs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Movement_word",
+        "name": "Jump",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jobs_word",
+        "name": "Plumber",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fingers_word",
+        "name": "Thumb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Footwear_word",
+        "name": "Sneakers",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Horror_word",
-        "name": "Vampire",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Ghost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture",
+        "name": "Desk",
+        "image": "res/Item/furniture_desk_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Boxing",
+        "image": "res/Item/sports_boxing_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Reptiles",
+        "name": "Iguana",
+        "image": "res/Item/reptiles_iguana_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Horror_word",
+        "name": "Zombie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports",
+        "name": "Golf",
+        "image": "res/Item/sports_golf_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Explorer_word",
+        "name": "Vespucci",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Trees_word",
+        "name": "Pine",
         "isText": true
       },
       {
@@ -2619,163 +3021,7 @@
       {
         "type": "regular",
         "category": "Driving_word",
-        "name": "Sign",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Furniture",
-        "name": "Furniture",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sports",
-        "name": "Hockey",
-        "image": "res/Item/sports_hockey_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Yeast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Gecko",
-        "image": "res/Item/reptiles_gecko_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Plumber",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Table",
-        "image": "res/Item/furniture_table_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Nurse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sandals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Slippers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Actor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Lizard",
-        "image": "res/Item/reptiles_lizard_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Elm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Welder",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Explorer_word",
-        "name": "Explorer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Kick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Road",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Movement_word",
-        "name": "Walk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Doctor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Chameleon",
-        "image": "res/Item/reptiles_chameleon_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Vespucci",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Thumb",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Jobs_word",
-        "name": "Pilot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Oak",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Eggs",
+        "name": "Car",
         "isText": true
       },
       {
@@ -2785,146 +3031,16 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Curse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Monster",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Flour",
-        "isText": true
-      },
-      {
         "type": "gold",
-        "category": "Reptiles",
-        "name": "Reptiles",
+        "category": "Sports",
+        "name": "Sports",
         "isText": false
       },
       {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Clogs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fingers_word",
-        "name": "Middle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Maple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Explorer_word",
-        "name": "Magellan",
-        "isText": true
-      },
-      {
-        "type": "regular",
+        "type": "gold",
         "category": "Furniture",
-        "name": "Desk",
-        "image": "res/Item/furniture_desk_4.png",
+        "name": "Furniture",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Cedar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture",
-        "name": "Bed",
-        "image": "res/Item/furniture_bed_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Loafers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Driving_word",
-        "name": "Car",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Driving_word",
-        "name": "Driving",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bakery_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Trees_word",
-        "name": "Trees",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Fear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Pine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Iguana",
-        "image": "res/Item/reptiles_iguana_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Footwear_word",
-        "name": "Sneakers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Reptiles",
-        "name": "Snake",
-        "image": "res/Item/reptiles_snake_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Trees_word",
-        "name": "Spruce",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Horror_word",
-        "name": "Ghost",
-        "isText": true
       }
     ],
     "handDisplay": []

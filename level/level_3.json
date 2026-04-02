@@ -4,14 +4,485 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 122,
+      "solverSteps": 128,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 0,
+        "handToSlot": 26,
+        "handToCol": 17,
+        "flip": 62,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fishing_word",
+            "name": "Fishing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Foggy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Beak",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Velvet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Rabbit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Ferret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Satin",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Drinks",
+            "name": "Lemonade",
+            "image": "res/Item/drinks_lemonade_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Autumn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fishing_word",
+            "name": "Bobber",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Artifact",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Degu",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Drinks",
+            "name": "Drinks",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Windy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Chess",
+            "name": "Chess",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Summer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Sunny",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Weather_word",
+            "name": "Weather",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Museum_word": 7,
+      "Fabrics_word": 7,
+      "Writer_word": 7,
+      "Pets_word": 6,
+      "Weather_word": 6,
+      "Drinks": 4,
+      "Chess": 4,
+      "Seasons_word": 4,
+      "Bird_word": 3,
+      "Fishing_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Tolkien",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Winter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Stormy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Bishop",
+        "image": "res/Item/chess_bishop_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Picture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pets_word",
+        "name": "Pets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "London",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fabrics_word",
+        "name": "Fabrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Soda",
+        "image": "res/Item/drinks_soda_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Cat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Museum_word",
+        "name": "Museum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Curator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Twain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Rod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Felt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Wilde",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bird_word",
+        "name": "Bird",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Flannel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Spring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Hall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Rook",
+        "image": "res/Item/chess_rook_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Dog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Writer_word",
+        "name": "Writer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Juice",
+        "image": "res/Item/drinks_juice_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Pawn",
+        "image": "res/Item/chess_pawn_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Faulkner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Hamster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Rainy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Dickens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Queen",
+        "image": "res/Item/chess_queen_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Orwell",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Linen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Exhibit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Snowy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Display",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Espresso",
+        "image": "res/Item/drinks_espresso_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bait",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Wing",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 127,
       "moveStats": {
         "colSingleToSlot": 11,
-        "colMultiToSlot": 7,
-        "colToCol": 9,
-        "colMultiToCol": 9,
-        "handToSlot": 25,
-        "handToCol": 18,
+        "colMultiToSlot": 8,
+        "colToCol": 22,
+        "colMultiToCol": 0,
+        "handToSlot": 26,
+        "handToCol": 17,
         "flip": 43,
         "recycle": 0
       }
@@ -21,18 +492,37 @@
         {
           "card": {
             "type": "regular",
-            "category": "Drinks",
-            "name": "Juice",
-            "isText": false,
-            "image": "res/Item/drinks_juice_4.png"
+            "category": "Weather_word",
+            "name": "Foggy",
+            "isText": true
           },
           "faceUp": false
         },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Writer_word",
+            "name": "Dickens",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Spring",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
             "category": "Museum_word",
-            "name": "Display",
+            "name": "Hall",
             "isText": true
           },
           "faceUp": false
@@ -40,9 +530,29 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fabrics_word",
-            "name": "Silk",
+            "category": "Chess",
+            "name": "Rook",
+            "image": "res/Item/chess_rook_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Beak",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Drinks",
+            "name": "Espresso",
+            "image": "res/Item/drinks_espresso_2.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -60,75 +570,35 @@
         {
           "card": {
             "type": "regular",
+            "category": "Writer_word",
+            "name": "Wilde",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Display",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Stormy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Fishing_word",
             "name": "Bait",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Seasons_word",
-            "name": "Winter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Bishop",
-            "isText": false,
-            "image": "res/Item/chess_bishop_4.png"
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fishing_word",
-            "name": "Bobber",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Drinks",
-            "name": "Lemonade",
-            "isText": false,
-            "image": "res/Item/drinks_lemonade_3.png"
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Seasons_word",
-            "name": "Summer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Writer_word",
-            "name": "Tolkien",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fishing_word",
-            "name": "Fishing",
             "isText": true
           },
           "faceUp": true
@@ -139,16 +609,7 @@
           "card": {
             "type": "regular",
             "category": "Pets_word",
-            "name": "Rabbit",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Seasons_word",
-            "name": "Spring",
+            "name": "Ferret",
             "isText": true
           },
           "faceUp": false
@@ -157,16 +618,7 @@
           "card": {
             "type": "regular",
             "category": "Writer_word",
-            "name": "Wilde",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Seasons_word",
-            "name": "Seasons",
+            "name": "Orwell",
             "isText": true
           },
           "faceUp": false
@@ -174,10 +626,28 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Rook",
-            "isText": false,
-            "image": "res/Item/chess_rook_2.png"
+            "category": "Weather_word",
+            "name": "Sunny",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Drinks",
+            "name": "Lemonade",
+            "image": "res/Item/drinks_lemonade_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Velvet",
+            "isText": true
           },
           "faceUp": false
         },
@@ -206,64 +676,70 @@
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Museum_word",
-        "name": "Museum",
-        "isText": true
-      },
-      {
         "type": "regular",
-        "category": "Fishing_word",
-        "name": "Rod",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Drinks",
-        "name": "Espresso",
-        "isText": false,
-        "image": "res/Item/drinks_espresso_2.png"
+        "category": "Chess",
+        "name": "Queen",
+        "image": "res/Item/chess_queen_5.png",
+        "isText": false
       },
       {
         "type": "gold",
-        "category": "Fabrics_word",
-        "name": "Fabrics",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Weather_word",
-        "name": "Stormy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bird_word",
-        "name": "Beak",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Museum_word",
-        "name": "Curator",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Museum_word",
-        "name": "Artifact",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Weather_word",
-        "name": "Sunny",
+        "name": "Weather",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Writer_word",
-        "name": "Twain",
+        "name": "Faulkner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Windy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Winter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Summer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Picture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fishing_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bobber",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Drinks",
+        "name": "Drinks",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Rabbit",
         "isText": true
       },
       {
@@ -275,13 +751,50 @@
       {
         "type": "regular",
         "category": "Museum_word",
-        "name": "Exhibit",
+        "name": "Artifact",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Flannel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Writer_word",
+        "name": "Writer",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Writer_word",
-        "name": "Faulkner",
+        "name": "Tolkien",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Curator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Pawn",
+        "image": "res/Item/chess_pawn_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Degu",
         "isText": true
       },
       {
@@ -294,39 +807,8 @@
         "type": "regular",
         "category": "Drinks",
         "name": "Soda",
-        "isText": false,
-        "image": "res/Item/drinks_soda_1.png"
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Pawn",
-        "isText": false,
-        "image": "res/Item/chess_pawn_1.png"
-      },
-      {
-        "type": "regular",
-        "category": "Writer_word",
-        "name": "London",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fabrics_word",
-        "name": "Cotton",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Writer_word",
-        "name": "Orwell",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Museum_word",
-        "name": "Picture",
-        "isText": true
+        "image": "res/Item/drinks_soda_1.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -337,21 +819,8 @@
       {
         "type": "regular",
         "category": "Pets_word",
-        "name": "Degu",
+        "name": "Dog",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Queen",
-        "isText": false,
-        "image": "res/Item/chess_queen_5.png"
-      },
-      {
-        "type": "gold",
-        "category": "Drinks",
-        "name": "Drinks",
-        "isText": false
       },
       {
         "type": "regular",
@@ -361,8 +830,415 @@
       },
       {
         "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Bishop",
+        "image": "res/Item/chess_bishop_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Juice",
+        "image": "res/Item/drinks_juice_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Museum_word",
+        "name": "Museum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Exhibit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pets_word",
+        "name": "Pets",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fabrics_word",
+        "name": "Fabrics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Weather_word",
-        "name": "Foggy",
+        "name": "Rainy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Linen",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chess",
+        "name": "Chess",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Autumn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Rod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Twain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Wing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "London",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Felt",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 25,
+        "colMultiToCol": 0,
+        "handToSlot": 31,
+        "handToCol": 12,
+        "flip": 43,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Windy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Wing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Felt",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Writer_word",
+            "name": "Faulkner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pets_word",
+            "name": "Pets",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Cat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Hamster",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Silk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Velvet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Stormy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Picture",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bird_word",
+            "name": "Bird",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Drinks",
+            "name": "Lemonade",
+            "image": "res/Item/drinks_lemonade_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Flannel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Spring",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Tail",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Foggy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Museum_word": 7,
+      "Fabrics_word": 7,
+      "Writer_word": 7,
+      "Pets_word": 6,
+      "Weather_word": 6,
+      "Drinks": 4,
+      "Chess": 4,
+      "Seasons_word": 4,
+      "Bird_word": 3,
+      "Fishing_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Display",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "London",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Rabbit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Wilde",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Sunny",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Rainy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Exhibit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Weather_word",
+        "name": "Weather",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Twain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Bishop",
+        "image": "res/Item/chess_bishop_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fishing_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bait",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Artifact",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Degu",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Writer_word",
+        "name": "Writer",
         "isText": true
       },
       {
@@ -374,49 +1250,81 @@
       {
         "type": "regular",
         "category": "Pets_word",
-        "name": "Ferret",
+        "name": "Dog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Drinks",
+        "name": "Drinks",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Soda",
+        "image": "res/Item/drinks_soda_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Juice",
+        "image": "res/Item/drinks_juice_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Summer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Dickens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Curator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Rod",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Fabrics_word",
-        "name": "Velvet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Weather_word",
-        "name": "Rainy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pets_word",
-        "name": "Dog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Weather_word",
-        "name": "Windy",
+        "name": "Cotton",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Chess",
-        "name": "Chess",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bird_word",
-        "name": "Wing",
+        "category": "Museum_word",
+        "name": "Museum",
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Tolkien",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Weather_word",
-        "name": "Weather",
+        "name": "Snowy",
         "isText": true
       },
       {
@@ -427,26 +1335,41 @@
       },
       {
         "type": "regular",
-        "category": "Bird_word",
-        "name": "Tail",
-        "isText": true
+        "category": "Chess",
+        "name": "Queen",
+        "image": "res/Item/chess_queen_5.png",
+        "isText": false
       },
       {
         "type": "regular",
-        "category": "Fabrics_word",
-        "name": "Flannel",
+        "category": "Chess",
+        "name": "Rook",
+        "image": "res/Item/chess_rook_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Ferret",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Writer_word",
-        "name": "Dickens",
+        "name": "Orwell",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Pets_word",
-        "name": "Pets",
+        "type": "regular",
+        "category": "Chess",
+        "name": "Pawn",
+        "image": "res/Item/chess_pawn_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bobber",
         "isText": true
       },
       {
@@ -457,14 +1380,975 @@
       },
       {
         "type": "regular",
+        "category": "Drinks",
+        "name": "Espresso",
+        "image": "res/Item/drinks_espresso_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fabrics_word",
+        "name": "Fabrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Beak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Satin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chess",
+        "name": "Chess",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 5,
+        "colToCol": 19,
+        "colMultiToCol": 0,
+        "handToSlot": 32,
+        "handToCol": 11,
+        "flip": 43,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Hall",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Hamster",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Drinks",
+            "name": "Drinks",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Beak",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fishing_word",
+            "name": "Bobber",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Writer_word",
+            "name": "Tolkien",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Ferret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Rabbit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Windy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Sunny",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bird_word",
+            "name": "Bird",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Chess",
+            "name": "Queen",
+            "image": "res/Item/chess_queen_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Writer_word",
+            "name": "Writer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fishing_word",
+            "name": "Bait",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Artifact",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Rainy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Cat",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Museum_word": 7,
+      "Fabrics_word": 7,
+      "Writer_word": 7,
+      "Pets_word": 6,
+      "Weather_word": 6,
+      "Drinks": 4,
+      "Chess": 4,
+      "Seasons_word": 4,
+      "Bird_word": 3,
+      "Fishing_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Weather_word",
+        "name": "Weather",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Faulkner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Satin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fishing_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Summer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Chess",
+        "name": "Chess",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Degu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Snowy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Stormy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Lemonade",
+        "image": "res/Item/drinks_lemonade_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Twain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Rod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fabrics_word",
+        "name": "Fabrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "London",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Linen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Curator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Dickens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Spring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Pawn",
+        "image": "res/Item/chess_pawn_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Fabrics_word",
         "name": "Felt",
         "isText": true
       },
       {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Picture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Exhibit",
+        "isText": true
+      },
+      {
         "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Autumn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Bishop",
+        "image": "res/Item/chess_bishop_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Museum_word",
+        "name": "Museum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Espresso",
+        "image": "res/Item/drinks_espresso_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Foggy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Rook",
+        "image": "res/Item/chess_rook_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Display",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Juice",
+        "image": "res/Item/drinks_juice_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Flannel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Velvet",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Writer_word",
-        "name": "Writer",
+        "name": "Orwell",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Soda",
+        "image": "res/Item/drinks_soda_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Wilde",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Dog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pets_word",
+        "name": "Pets",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Wing",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 17,
+        "colMultiToCol": 0,
+        "handToSlot": 29,
+        "handToCol": 14,
+        "flip": 43,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Chess",
+            "name": "Pawn",
+            "image": "res/Item/chess_pawn_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Writer_word",
+            "name": "Writer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Writer_word",
+            "name": "London",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Cat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Drinks",
+            "name": "Soda",
+            "image": "res/Item/drinks_soda_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Weather_word",
+            "name": "Stormy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Hamster",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Chess",
+            "name": "Queen",
+            "image": "res/Item/chess_queen_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bird_word",
+            "name": "Wing",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Chess",
+            "name": "Chess",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Degu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Rabbit",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Spring",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Picture",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seasons_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Museum_word",
+            "name": "Display",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fabrics_word",
+            "name": "Linen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pets_word",
+            "name": "Pets",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Museum_word": 7,
+      "Fabrics_word": 7,
+      "Writer_word": 7,
+      "Pets_word": 6,
+      "Weather_word": 6,
+      "Drinks": 4,
+      "Chess": 4,
+      "Seasons_word": 4,
+      "Bird_word": 3,
+      "Fishing_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Hall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Beak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Rod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Snowy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Windy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Summer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Weather_word",
+        "name": "Weather",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Felt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Lemonade",
+        "image": "res/Item/drinks_lemonade_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Foggy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seasons_word",
+        "name": "Seasons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Juice",
+        "image": "res/Item/drinks_juice_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bird_word",
+        "name": "Bird",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Drinks",
+        "name": "Espresso",
+        "image": "res/Item/drinks_espresso_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Satin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Dickens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Tolkien",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Rook",
+        "image": "res/Item/chess_rook_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fishing_word",
+        "name": "Fishing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Orwell",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Artifact",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Dog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bird_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Twain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Faulkner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Velvet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seasons_word",
+        "name": "Autumn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Ferret",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Sunny",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bobber",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Museum_word",
+        "name": "Museum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Exhibit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Weather_word",
+        "name": "Rainy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fabrics_word",
+        "name": "Fabrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Chess",
+        "name": "Bishop",
+        "image": "res/Item/chess_bishop_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fabrics_word",
+        "name": "Flannel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Drinks",
+        "name": "Drinks",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fishing_word",
+        "name": "Bait",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Museum_word",
+        "name": "Curator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Writer_word",
+        "name": "Wilde",
         "isText": true
       }
     ],

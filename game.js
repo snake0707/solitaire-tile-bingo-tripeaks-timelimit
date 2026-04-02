@@ -12,7 +12,7 @@
 // ─── Constants ────────────────────────────────────────────────
 
 const MAX_SLOTS = 5;
-const LEVEL_SCAN_MAX = 50;
+const LEVEL_SCAN_MAX = 104;
 const CARD_W = 60;
 const CARD_H = 70;
 const FACE_DOWN_H = 20; // visible height of face-down card in column
@@ -873,6 +873,7 @@ class Game {
         const bonus = this.retryBonus[level] || 0;
         this.maxSteps = config.maxSteps + bonus;
         this.stepsLeft = this.maxSteps;
+        this.solverSteps = config.solverSteps || null;
 
         if (selectedLayout) {
             this.restoreLayout(selectedLayout);
@@ -987,14 +988,22 @@ class Game {
     renderSteps() {
         this.stepsEl.textContent = this.stepsLeft;
         this.stepsEl.classList.toggle('low', this.stepsLeft <= 5);
+        // Show solverSteps next to step count
+        let solverEl = document.getElementById('solver-steps');
+        if (!solverEl) {
+            solverEl = document.createElement('span');
+            solverEl.id = 'solver-steps';
+            solverEl.style.cssText = 'font-size:12px;color:#999;margin-left:4px;';
+            this.stepsEl.parentNode.appendChild(solverEl);
+        }
+        solverEl.textContent = this.solverSteps != null ? `(AI:${this.solverSteps})` : '';
     }
 
     decrementStep() {
         this.stepsLeft--;
         this.renderSteps();
-        if (this.stepsLeft <= 0) {
-            this.onLose('No more steps!');
-        }
+        // Don't trigger loss here — let checkWinOrDead() handle it
+        // so that winning on the last step takes priority over losing.
     }
 
     // ── Level Flow ───────────────────────────────────────────
@@ -1046,6 +1055,10 @@ class Game {
 
     checkWinOrDead() {
         if (this.checkWin()) return;
+        if (this.stepsLeft <= 0) {
+            this.onLose('No more steps!');
+            return;
+        }
         this.checkDeadState();
     }
 
@@ -1361,6 +1374,8 @@ class Game {
                     cardContent += `<span class="slot-card-text">${lastCardDisplayName}</span>`;
                 } else if (slot.lastCard.image) {
                     cardContent += `<img class="slot-card-img" src="${slot.lastCard.image}" alt="${lastCardDisplayName}">`;
+                } else {
+                    cardContent += `<span class="slot-card-text">${slot.lastCard.name}</span>`;
                 }
             }
             div.innerHTML = cardContent;
@@ -1443,13 +1458,17 @@ class Game {
                         if (isCovered) {
                             if (tc.card.isText) {
                                 face.innerHTML = `<span class="card-name">${displayName}</span>`;
-                            } else {
+                            } else if (tc.card.image) {
                                 face.innerHTML = `<img class="card-img" src="${tc.card.image}" alt="${displayName}">`;
+                            } else {
+                                face.innerHTML = `<span class="card-name">${tc.card.name}</span>`;
                             }
                         } else if (tc.card.isText) {
                             face.innerHTML = `<span class="card-text">${displayName}</span>`;
-                        } else {
+                        } else if (tc.card.image) {
                             face.innerHTML = `<img class="card-img" src="${tc.card.image}" alt="${displayName}">`;
+                        } else {
+                            face.innerHTML = `<span class="card-text">${tc.card.name}</span>`;
                         }
                     }
 
@@ -1486,7 +1505,10 @@ class Game {
             this.cardSeenSinceLastDrag.add(card);
             this.moveHistory.push({ action: 'flip_hand', card: { ...card } });
             this.decrementStep(); // flip costs 1 step
-            if (this.stepsLeft <= 0) return; // already lost via decrementStep
+            if (this.stepsLeft <= 0) {
+                this.onLose('No more steps!');
+                return;
+            }
             this.renderHandArea();
             if (this.isSoftDeadlock()) {
                 setTimeout(() => this.onSoftDeadlock(), 300);
@@ -1502,6 +1524,11 @@ class Game {
             this.handPile = [...this.handDisplay].reverse();
             this.handDisplay = [];
             this.decrementStep(); // recycle costs 1 step
+            if (this.stepsLeft <= 0) {
+                this.onLose('No more steps!');
+                this.renderHandArea();
+                return;
+            }
             this.renderHandArea();
             this.checkDeadState();
         }
@@ -1577,6 +1604,8 @@ class Game {
                     inner.innerHTML = `<span class="hand-covered-text">${coveredName}</span>`;
                 } else if (!card.isText && card.image) {
                     inner.innerHTML = `<img class="hand-covered-img" src="${card.image}" alt="${coveredName}">`;
+                } else if (!card.isText && !card.image) {
+                    inner.innerHTML = `<span class="hand-covered-text">${card.name}</span>`;
                 } else {
                     inner.innerHTML = `<span class="hand-covered-text">${coveredName}</span>`;
                 }
@@ -1604,7 +1633,7 @@ class Game {
                 } else if (card.image) {
                     inner.innerHTML = `<img class="card-img" src="${card.image}" alt="${this.getDisplayName(card)}" style="width:40px;height:48px;object-fit:contain;pointer-events:none;">`;
                 } else {
-                    inner.innerHTML = `<span class="hand-card-name">${this.getDisplayName(card)}</span>`;
+                    inner.innerHTML = `<span class="hand-card-name">${card.name}</span>`;
                 }
             }
 
@@ -1615,118 +1644,528 @@ class Game {
 
     // ── Hint ────────────────────────────────────────────────
 
-    showHint() {
-        if (this.isAnimating || this.flyAnimCount > 0) return;
+    // ── Hint: 4-layer weighted tree search (HINT_AND_SOLVER_DESIGN.md §1) ──
 
-        const activeKeys = new Set(
-            this.slots.filter(s => s !== null && s.collected < s.target).map(s => s.key)
-        );
-        const hasEmptySlot = this.findEmptySlot() !== -1;
+    /**
+     * Clone the current game state for simulation.
+     * Returns a lightweight state object (no DOM, no history).
+     */
+    _cloneState() {
+        return {
+            tableau: this.tableau.map(col =>
+                col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp }))
+            ),
+            slots: this.slots.map(s => s === null ? null : { ...s }),
+            handPile: this.handPile.map(c => ({ ...c })),
+            handDisplay: this.handDisplay.map(c => ({ ...c })),
+            completedCount: this.completedCount,
+            numCategories: this.numCategories,
+        };
+    }
 
-        // Priority 1: Tableau card matches collector slot
-        for (let ci = 0; ci < this.tableau.length; ci++) {
-            const col = this.tableau[ci];
+    /**
+     * Enumerate all legal moves for a cloned state.
+     * Returns array of move objects with type and relevant indices.
+     */
+    _enumerateMoves(st) {
+        const moves = [];
+        const hasEmptySlot = st.slots.some(s => s === null);
+
+        // Tableau → slot (single + multi)
+        for (let ci = 0; ci < st.tableau.length; ci++) {
+            const col = st.tableau[ci];
             if (col.length === 0) continue;
-            const topCard = col[col.length - 1];
-            if (!topCard.faceUp) continue;
-            if (topCard.card.type === 'regular' && activeKeys.has(topCard.card.category)) {
-                this._highlightTableauCard(ci, col.length - 1);
-                return;
+            const top = col[col.length - 1];
+            if (!top.faceUp) continue;
+
+            // Multi-card: consecutive same-category face-up cards from bottom
+            let faceUpStart = col.length - 1;
+            while (faceUpStart > 0 && col[faceUpStart - 1].faceUp &&
+                   col[faceUpStart - 1].card.category === top.card.category) {
+                faceUpStart--;
+            }
+            const multiCount = col.length - faceUpStart;
+
+            if (multiCount >= 2) {
+                // Case A: gold on top of stack + regulars below → empty slot
+                if (col[faceUpStart].card.type === 'gold' && hasEmptySlot) {
+                    moves.push({ type: 'tableau_multi_to_slot', colIdx: ci, startIdx: faceUpStart });
+                }
+                // Case B: all regular → matching existing slot
+                if (col[faceUpStart].card.type === 'regular') {
+                    for (const s of st.slots) {
+                        if (s !== null && s.key === top.card.category && s.collected < s.target) {
+                            moves.push({ type: 'tableau_multi_to_slot', colIdx: ci, startIdx: faceUpStart });
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Single card
+            if (top.card.type === 'regular') {
+                for (const s of st.slots) {
+                    if (s !== null && s.key === top.card.category && s.collected < s.target) {
+                        moves.push({ type: 'tableau_to_slot', colIdx: ci });
+                        break;
+                    }
+                }
+            } else if (top.card.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'tableau_gold_to_slot', colIdx: ci });
             }
         }
 
-        // Priority 2: Gold card + empty slot
-        if (hasEmptySlot) {
-            for (let ci = 0; ci < this.tableau.length; ci++) {
-                const col = this.tableau[ci];
-                if (col.length === 0) continue;
-                const topCard = col[col.length - 1];
-                if (!topCard.faceUp) continue;
-                if (topCard.card.type === 'gold') {
-                    this._highlightTableauCard(ci, col.length - 1);
-                    return;
+        // Hand display → slot
+        if (st.handDisplay.length > 0) {
+            const topCard = st.handDisplay[st.handDisplay.length - 1];
+            if (topCard.type === 'regular') {
+                for (const s of st.slots) {
+                    if (s !== null && s.key === topCard.category && s.collected < s.target) {
+                        moves.push({ type: 'display_to_slot' });
+                        break;
+                    }
+                }
+            } else if (topCard.type === 'gold' && hasEmptySlot) {
+                moves.push({ type: 'display_gold_to_slot' });
+            }
+        }
+
+        // Tableau → column (single + multi)
+        for (let ci = 0; ci < st.tableau.length; ci++) {
+            const col = st.tableau[ci];
+            if (col.length === 0) continue;
+            const top = col[col.length - 1];
+            if (!top.faceUp) continue;
+
+            // Single card to another column
+            for (let ti = 0; ti < st.tableau.length; ti++) {
+                if (ti === ci) continue;
+                if (this._canStackOnClone(top.card, st.tableau[ti])) {
+                    moves.push({ type: 'tableau_to_column', srcCol: ci, dstCol: ti });
+                }
+            }
+
+            // Multi-card: consecutive same-category face-up
+            let faceUpStart = col.length - 1;
+            while (faceUpStart > 0 && col[faceUpStart - 1].faceUp &&
+                   col[faceUpStart - 1].card.category === top.card.category) {
+                faceUpStart--;
+            }
+            if (col.length - faceUpStart >= 2) {
+                for (let ti = 0; ti < st.tableau.length; ti++) {
+                    if (ti === ci) continue;
+                    if (this._canStackOnClone(col[faceUpStart].card, st.tableau[ti])) {
+                        moves.push({ type: 'tableau_multi_to_column', srcCol: ci, dstCol: ti, startIdx: faceUpStart });
+                    }
                 }
             }
         }
 
-        // Priority 3: Hand display matches
-        if (this.handDisplay.length > 0) {
-            const topCard = this.handDisplay[this.handDisplay.length - 1];
-            if (topCard.type === 'gold' && hasEmptySlot) {
-                this.handDisplayEl.classList.add('hint-highlight-hand');
-                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
-                return;
-            }
-            if (topCard.type === 'regular' && activeKeys.has(topCard.category)) {
-                this.handDisplayEl.classList.add('hint-highlight-hand');
-                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
-                return;
+        // Hand display → column
+        if (st.handDisplay.length > 0) {
+            const topCard = st.handDisplay[st.handDisplay.length - 1];
+            for (let ti = 0; ti < st.tableau.length; ti++) {
+                if (this._canStackOnClone(topCard, st.tableau[ti])) {
+                    moves.push({ type: 'display_to_column', dstCol: ti });
+                }
             }
         }
 
-        // Priority 4: Hand display top card can stack on a tableau column
-        //   Prefer non-empty columns first, then empty columns
-        if (this.handDisplay.length > 0) {
-            const topCard = this.handDisplay[this.handDisplay.length - 1];
-            let found = false;
-            // First pass: non-empty columns
-            for (let ti = 0; ti < this.tableau.length; ti++) {
-                if (this.tableau[ti].length > 0 && this.canStackOnColumn(topCard, ti)) {
-                    found = true;
+        // Flip hand
+        if (st.handPile.length > 0) {
+            moves.push({ type: 'flip_hand' });
+        }
+
+        // Recycle
+        if (st.handPile.length === 0 && st.handDisplay.length > 0) {
+            moves.push({ type: 'recycle' });
+        }
+
+        return moves;
+    }
+
+    _canStackOnClone(card, col) {
+        if (col.length === 0) return true;
+        const top = col[col.length - 1];
+        if (top.card.type === 'gold') return false;
+        return card.category === top.card.category;
+    }
+
+    /**
+     * Apply a move on a cloned state. Returns undo info.
+     */
+    _applyMoveOnClone(st, move) {
+        const mt = move.type;
+        const undo = { type: mt };
+
+        if (mt === 'tableau_to_slot') {
+            const col = st.tableau[move.colIdx];
+            const card = col.pop();
+            undo.colIdx = move.colIdx;
+            undo.card = card;
+            undo.flipped = false;
+            // Auto-flip
+            if (col.length > 0 && !col[col.length - 1].faceUp) {
+                col[col.length - 1].faceUp = true;
+                undo.flipped = true;
+            }
+            // Add to slot
+            for (const s of st.slots) {
+                if (s !== null && s.key === card.card.category) {
+                    s.collected++;
+                    undo.slotKey = s.key;
+                    if (s.collected >= s.target) {
+                        const si = st.slots.indexOf(s);
+                        st.slots[si] = null;
+                        st.completedCount++;
+                        undo.completed = si;
+                    }
                     break;
                 }
             }
-            // Second pass: empty columns
-            if (!found) {
-                for (let ti = 0; ti < this.tableau.length; ti++) {
-                    if (this.tableau[ti].length === 0 && this.canStackOnColumn(topCard, ti)) {
-                        found = true;
+        } else if (mt === 'tableau_gold_to_slot') {
+            const col = st.tableau[move.colIdx];
+            const card = col.pop();
+            undo.colIdx = move.colIdx;
+            undo.card = card;
+            undo.flipped = false;
+            if (col.length > 0 && !col[col.length - 1].faceUp) {
+                col[col.length - 1].faceUp = true;
+                undo.flipped = true;
+            }
+            const si = st.slots.findIndex(s => s === null);
+            const target = this.categoryTargets[card.card.category] || 0;
+            st.slots[si] = { key: card.card.category, collected: 0, target };
+            undo.slotIdx = si;
+        } else if (mt === 'tableau_multi_to_slot') {
+            const col = st.tableau[move.colIdx];
+            const removed = col.splice(move.startIdx);
+            undo.colIdx = move.colIdx;
+            undo.removed = removed;
+            undo.flipped = false;
+            if (col.length > 0 && !col[col.length - 1].faceUp) {
+                col[col.length - 1].faceUp = true;
+                undo.flipped = true;
+            }
+            const topCard = removed[removed.length - 1];
+            if (removed[0].card.type === 'gold') {
+                // Gold + regulars → new slot
+                const si = st.slots.findIndex(s => s === null);
+                const target = this.categoryTargets[topCard.card.category] || 0;
+                const collected = removed.length - 1; // exclude gold
+                st.slots[si] = { key: topCard.card.category, collected, target };
+                undo.slotIdx = si;
+                undo.isGold = true;
+                if (collected >= target) {
+                    st.slots[si] = null;
+                    st.completedCount++;
+                    undo.completed = si;
+                }
+            } else {
+                // All regular → existing slot
+                for (const s of st.slots) {
+                    if (s !== null && s.key === topCard.card.category) {
+                        s.collected += removed.length;
+                        undo.slotKey = s.key;
+                        undo.addedCount = removed.length;
+                        if (s.collected >= s.target) {
+                            const si = st.slots.indexOf(s);
+                            st.slots[si] = null;
+                            st.completedCount++;
+                            undo.completed = si;
+                        }
                         break;
                     }
                 }
             }
-            if (found) {
-                this.handDisplayEl.classList.add('hint-highlight-hand');
-                setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
-                return;
-            }
-        }
-
-        // Priority 5: Tableau inter-column moves (including multi-card)
-        //   Suggest any valid move between columns
-        for (let ci = 0; ci < this.tableau.length; ci++) {
-            const col = this.tableau[ci];
-            if (col.length === 0) continue;
-            // Find the deepest face-up card in the column
-            let deepestFaceUp = col.length - 1;
-            for (let p = 0; p < col.length; p++) {
-                if (col[p].faceUp) { deepestFaceUp = p; break; }
-            }
-            // Try moving from each face-up position
-            for (let startPos = deepestFaceUp; startPos < col.length; startPos++) {
-                const moveCard = col[startPos];
-                for (let ti = 0; ti < this.tableau.length; ti++) {
-                    if (ti === ci) continue;
-                    if (this.canStackOnColumn(moveCard.card, ti)) {
-                        this._highlightTableauCard(ci, startPos);
-                        return;
+        } else if (mt === 'display_to_slot') {
+            const card = st.handDisplay.pop();
+            undo.card = card;
+            for (const s of st.slots) {
+                if (s !== null && s.key === card.category) {
+                    s.collected++;
+                    undo.slotKey = s.key;
+                    if (s.collected >= s.target) {
+                        const si = st.slots.indexOf(s);
+                        st.slots[si] = null;
+                        st.completedCount++;
+                        undo.completed = si;
                     }
+                    break;
                 }
             }
+        } else if (mt === 'display_gold_to_slot') {
+            const card = st.handDisplay.pop();
+            undo.card = card;
+            const si = st.slots.findIndex(s => s === null);
+            const target = this.categoryTargets[card.category] || 0;
+            st.slots[si] = { key: card.category, collected: 0, target };
+            undo.slotIdx = si;
+        } else if (mt === 'tableau_to_column') {
+            const src = st.tableau[move.srcCol];
+            const card = src.pop();
+            undo.srcCol = move.srcCol;
+            undo.dstCol = move.dstCol;
+            undo.count = 1;
+            undo.flipped = false;
+            if (src.length > 0 && !src[src.length - 1].faceUp) {
+                src[src.length - 1].faceUp = true;
+                undo.flipped = true;
+            }
+            st.tableau[move.dstCol].push(card);
+        } else if (mt === 'tableau_multi_to_column') {
+            const src = st.tableau[move.srcCol];
+            const cards = src.splice(move.startIdx);
+            undo.srcCol = move.srcCol;
+            undo.dstCol = move.dstCol;
+            undo.count = cards.length;
+            undo.flipped = false;
+            if (src.length > 0 && !src[src.length - 1].faceUp) {
+                src[src.length - 1].faceUp = true;
+                undo.flipped = true;
+            }
+            st.tableau[move.dstCol].push(...cards);
+        } else if (mt === 'display_to_column') {
+            const card = st.handDisplay.pop();
+            undo.dstCol = move.dstCol;
+            undo.card = card;
+            st.tableau[move.dstCol].push({ card, faceUp: true });
+        } else if (mt === 'flip_hand') {
+            const card = st.handPile.pop();
+            st.handDisplay.push(card);
+            undo.card = card;
+        } else if (mt === 'recycle') {
+            undo.displaySnapshot = [...st.handDisplay];
+            st.handPile = st.handDisplay.reverse();
+            st.handDisplay = [];
         }
 
-        // Priority 6: Flip hand
-        if (this.handPile.length > 0) {
-            this.handPileEl.classList.add('hint-highlight-hand');
-            setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
+        return undo;
+    }
+
+    /**
+     * Undo a move on a cloned state.
+     */
+    _undoMoveOnClone(st, undo) {
+        const mt = undo.type;
+
+        if (mt === 'tableau_to_slot') {
+            if (undo.flipped) st.tableau[undo.colIdx][st.tableau[undo.colIdx].length - 1].faceUp = false;
+            st.tableau[undo.colIdx].push(undo.card);
+            if (undo.completed !== undefined) {
+                const target = this.categoryTargets[undo.card.card.category] || 0;
+                st.slots[undo.completed] = { key: undo.slotKey, collected: target, target };
+                st.completedCount--;
+            }
+            if (undo.slotKey) {
+                for (const s of st.slots) {
+                    if (s !== null && s.key === undo.slotKey) { s.collected--; break; }
+                }
+            }
+        } else if (mt === 'tableau_gold_to_slot') {
+            if (undo.flipped) st.tableau[undo.colIdx][st.tableau[undo.colIdx].length - 1].faceUp = false;
+            st.tableau[undo.colIdx].push(undo.card);
+            st.slots[undo.slotIdx] = null;
+        } else if (mt === 'tableau_multi_to_slot') {
+            if (undo.flipped) st.tableau[undo.colIdx][st.tableau[undo.colIdx].length - 1].faceUp = false;
+            st.tableau[undo.colIdx].push(...undo.removed);
+            if (undo.completed !== undefined) {
+                st.completedCount--;
+                if (undo.isGold) {
+                    const target = this.categoryTargets[undo.removed[undo.removed.length - 1].card.category] || 0;
+                    st.slots[undo.completed] = { key: undo.removed[undo.removed.length - 1].card.category, collected: undo.removed.length - 1, target };
+                } else {
+                    const target = this.categoryTargets[undo.slotKey] || 0;
+                    st.slots[undo.completed] = { key: undo.slotKey, collected: target, target };
+                }
+            }
+            if (undo.isGold && undo.completed === undefined) {
+                st.slots[undo.slotIdx] = null;
+            } else if (undo.slotKey && undo.completed === undefined) {
+                for (const s of st.slots) {
+                    if (s !== null && s.key === undo.slotKey) { s.collected -= undo.addedCount; break; }
+                }
+            }
+        } else if (mt === 'display_to_slot') {
+            st.handDisplay.push(undo.card);
+            if (undo.completed !== undefined) {
+                const target = this.categoryTargets[undo.card.category] || 0;
+                st.slots[undo.completed] = { key: undo.slotKey, collected: target, target };
+                st.completedCount--;
+            }
+            if (undo.slotKey) {
+                for (const s of st.slots) {
+                    if (s !== null && s.key === undo.slotKey) { s.collected--; break; }
+                }
+            }
+        } else if (mt === 'display_gold_to_slot') {
+            st.handDisplay.push(undo.card);
+            st.slots[undo.slotIdx] = null;
+        } else if (mt === 'tableau_to_column' || mt === 'tableau_multi_to_column') {
+            const dst = st.tableau[undo.dstCol];
+            const cards = dst.splice(dst.length - undo.count);
+            if (undo.flipped) st.tableau[undo.srcCol][st.tableau[undo.srcCol].length - 1].faceUp = false;
+            st.tableau[undo.srcCol].push(...cards);
+        } else if (mt === 'display_to_column') {
+            st.tableau[undo.dstCol].pop();
+            st.handDisplay.push(undo.card);
+        } else if (mt === 'flip_hand') {
+            st.handDisplay.pop();
+            st.handPile.push(undo.card);
+        } else if (mt === 'recycle') {
+            st.handDisplay = undo.displaySnapshot;
+            st.handPile = [];
+        }
+    }
+
+    /**
+     * Calculate hint weight for a move (HINT_AND_SOLVER_DESIGN.md §1.4).
+     * Range: 1-5.
+     */
+    _getHintWeight(st, move) {
+        const mt = move.type;
+        const freeSlots = st.slots.filter(s => s === null).length;
+
+        // Tableau → slot
+        if (mt === 'tableau_to_slot' || mt === 'tableau_multi_to_slot' || mt === 'tableau_gold_to_slot') {
+            let hasFacedown = false;
+            const col = st.tableau[move.colIdx];
+            if (mt === 'tableau_multi_to_slot') {
+                const si = move.startIdx || 0;
+                hasFacedown = si > 0 && !col[si - 1].faceUp;
+            } else {
+                hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            }
+            if (freeSlots > 1) {
+                return hasFacedown ? 5 : 4;
+            } else {
+                return hasFacedown ? 3 : 2;
+            }
+        }
+
+        // Hand → slot
+        if (mt === 'display_to_slot' || mt === 'display_gold_to_slot') {
+            return freeSlots > 1 ? 4 : 2;
+        }
+
+        // Column moves
+        if (mt === 'tableau_to_column') {
+            const col = st.tableau[move.srcCol];
+            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            const emptiesCol = col.length === 1;
+            if (hasFacedown) return 3;
+            if (emptiesCol) return 2;
+            return 1; // no flip, no clear — low value for hint
+        }
+        if (mt === 'tableau_multi_to_column') {
+            const col = st.tableau[move.srcCol];
+            const hasFacedown = move.startIdx > 0 && !col[move.startIdx - 1].faceUp;
+            const emptiesCol = move.startIdx === 0;
+            if (hasFacedown) return 3;
+            if (emptiesCol) return 2;
+            return 1;
+        }
+
+        // Hand → column
+        if (mt === 'display_to_column') return 2;
+
+        // Flip / recycle
+        if (mt === 'flip_hand') return 1;
+        if (mt === 'recycle') return 1;
+
+        return 1;
+    }
+
+    /**
+     * 4-layer tree search for best hint move.
+     * Returns { bestScore, bestMove } or null.
+     */
+    _hintTreeSearch(st, depth) {
+        if (depth === 0) return { bestScore: 0, bestMove: null };
+
+        const moves = this._enumerateMoves(st);
+        if (moves.length === 0) return { bestScore: 0, bestMove: null };
+
+        let bestScore = -1;
+        let bestMove = null;
+
+        for (const move of moves) {
+            const weight = this._getHintWeight(st, move);
+            const undo = this._applyMoveOnClone(st, move);
+
+            // Check if game won after this move
+            let futureScore = 0;
+            if (st.completedCount < st.numCategories) {
+                const sub = this._hintTreeSearch(st, depth - 1);
+                futureScore = sub.bestScore;
+            }
+
+            const totalScore = weight + futureScore;
+
+            // Tiebreak: prefer moves that reveal face-down cards, then left-to-right
+            if (totalScore > bestScore) {
+                bestScore = totalScore;
+                bestMove = move;
+            } else if (totalScore === bestScore && bestMove) {
+                // Tiebreak 1: prefer revealing face-down
+                const newReveals = this._moveRevealsFacedown(st, move);
+                const oldReveals = this._moveRevealsFacedown(st, bestMove);
+                if (newReveals && !oldReveals) {
+                    bestMove = move;
+                }
+            }
+
+            this._undoMoveOnClone(st, undo);
+        }
+
+        return { bestScore, bestMove };
+    }
+
+    /**
+     * Check if a move would have revealed a face-down card.
+     */
+    _moveRevealsFacedown(st, move) {
+        const mt = move.type;
+        if (mt === 'tableau_to_slot' || mt === 'tableau_gold_to_slot' || mt === 'tableau_to_column') {
+            const col = st.tableau[move.colIdx || move.srcCol];
+            return col.length >= 2 && !col[col.length - 2].faceUp;
+        }
+        if (mt === 'tableau_multi_to_slot' || mt === 'tableau_multi_to_column') {
+            const col = st.tableau[move.colIdx || move.srcCol];
+            const si = move.startIdx || 0;
+            return si > 0 && !col[si - 1].faceUp;
+        }
+        return false;
+    }
+
+    showHint() {
+        if (this.isAnimating || this.flyAnimCount > 0) return;
+
+        // Clone state and run 4-layer tree search
+        const st = this._cloneState();
+        const result = this._hintTreeSearch(st, 4);
+
+        if (!result || !result.bestMove) {
+            // No valid moves found
             return;
         }
 
-        // Priority 7: Recycle
-        if (this.handPile.length === 0 && this.handDisplay.length > 0) {
+        const move = result.bestMove;
+        const mt = move.type;
+
+        // Highlight the suggested move
+        if (mt === 'tableau_to_slot' || mt === 'tableau_gold_to_slot') {
+            this._highlightTableauCard(move.colIdx, this.tableau[move.colIdx].length - 1);
+        } else if (mt === 'tableau_multi_to_slot' || mt === 'tableau_multi_to_column') {
+            this._highlightTableauCard(move.colIdx || move.srcCol, move.startIdx);
+        } else if (mt === 'tableau_to_column') {
+            this._highlightTableauCard(move.srcCol, this.tableau[move.srcCol].length - 1);
+        } else if (mt === 'display_to_slot' || mt === 'display_gold_to_slot' || mt === 'display_to_column') {
+            this.handDisplayEl.classList.add('hint-highlight-hand');
+            setTimeout(() => this.handDisplayEl.classList.remove('hint-highlight-hand'), 2000);
+        } else if (mt === 'flip_hand' || mt === 'recycle') {
             this.handPileEl.classList.add('hint-highlight-hand');
             setTimeout(() => this.handPileEl.classList.remove('hint-highlight-hand'), 2000);
-            return;
         }
     }
 
@@ -1773,9 +2212,10 @@ class Game {
                     // Slot was completed
                     this.completedCount--;
                     const catKey = move.tableauCard.card.category;
+                    const catObj = typeof CATEGORIES !== 'undefined' && CATEGORIES[catKey];
                     this.slots[move.slotIdx] = {
                         key: catKey,
-                        name: CATEGORIES[catKey].name,
+                        name: catObj ? catObj.name : move.tableauCard.card.name,
                         zhName: move.tableauCard.card.zhName || '',
                         collected: move.previousCollected,
                         target: this.categoryTargets[catKey],
@@ -1820,9 +2260,10 @@ class Game {
                     // Slot was completed
                     this.completedCount--;
                     const catKey = move.removedCards[0].card.category;
+                    const catObj = typeof CATEGORIES !== 'undefined' && CATEGORIES[catKey];
                     this.slots[move.slotIdx] = {
                         key: catKey,
-                        name: CATEGORIES[catKey].name,
+                        name: catObj ? catObj.name : move.removedCards[0].card.name,
                         zhName: move.removedCards[0].card.zhName || '',
                         collected: move.previousCollected,
                         target: this.categoryTargets[catKey],
@@ -1842,9 +2283,10 @@ class Game {
                 if (this.slots[move.slotIdx] === null) {
                     this.completedCount--;
                     const catKey = move.card.category;
+                    const catObj = typeof CATEGORIES !== 'undefined' && CATEGORIES[catKey];
                     this.slots[move.slotIdx] = {
                         key: catKey,
-                        name: CATEGORIES[catKey].name,
+                        name: catObj ? catObj.name : move.card.name,
                         zhName: move.card.zhName || '',
                         collected: move.previousCollected,
                         target: this.categoryTargets[catKey],

@@ -2,24 +2,27 @@
   {
     "config": {
       "maxSlots": 5,
-      "maxSteps": 230
+      "maxSteps": 190,
+      "strategyType": "priority",
+      "solverSteps": 196,
+      "moveStats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 14,
+        "colToCol": 21,
+        "colMultiToCol": 0,
+        "handToSlot": 29,
+        "handToCol": 34,
+        "flip": 82,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Worship_word",
-            "name": "Mosque",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Mummy_word",
-            "name": "Pyramid",
+            "name": "Egypt",
             "isText": true
           },
           "faceUp": false
@@ -27,56 +30,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Band_word",
-            "name": "Drummer",
+            "category": "Mouse_word",
+            "name": "Click",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Myth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Hello_word",
-            "name": "Hello",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Goggles",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Pool",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Pirate",
-            "name": "Pirate",
-            "isText": false
           },
           "faceUp": false
         },
@@ -92,8 +48,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Odors_word",
-            "name": "Musky",
+            "category": "Legends_word",
+            "name": "Saga",
             "isText": true
           },
           "faceUp": false
@@ -101,8 +57,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hello_word",
-            "name": "Howdy",
+            "category": "Mouse_word",
+            "name": "Drop",
             "isText": true
           },
           "faceUp": true
@@ -121,8 +77,56 @@
         {
           "card": {
             "type": "regular",
+            "category": "Worship_word",
+            "name": "Mosque",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Mummy_word",
-            "name": "Pharaoh",
+            "name": "Mummy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Abbey",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Scimitar",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Amino_word",
+            "name": "Amino",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Halt",
             "isText": true
           },
           "faceUp": false
@@ -139,176 +143,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Cafe_word",
-            "name": "Drinks",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "River",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Fruity",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Record",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Worm",
-            "image": "res/Item/yellow_yellowgemstone_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Saga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Epic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Squid",
-            "image": "res/Item/yellow_gold_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Queens",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Swim_word",
             "name": "Lake",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Astoria",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Degree",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Worship_word",
-            "name": "Temple",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Swim_word",
-            "name": "Swim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Worship_word",
-            "name": "Shrine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Egypt",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mouse_word",
-            "name": "Drag",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Worship_word",
-            "name": "Worship",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Lysine",
             "isText": true
           },
           "faceUp": false
@@ -325,436 +161,169 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pirate",
-            "name": "Scimitar",
-            "image": "res/Item/pirate_jollyroger_1.png",
-            "isText": false
+            "category": "Band_word",
+            "name": "Bassist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Epic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "PhD_word",
+            "name": "Thesis",
+            "isText": true
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Swim_word": 8,
-      "Amino_word": 8,
-      "Band_word": 8,
-      "Pirate": 8,
-      "Worship_word": 6,
-      "New York_word": 6,
-      "Odors_word": 6,
-      "Yellow": 5,
-      "Cafe_word": 5,
-      "Legends_word": 5,
-      "Pause_word": 4,
-      "Mouse_word": 4,
-      "Mummy_word": 4,
-      "Hello_word": 3,
-      "PhD_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Woody",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Claymore",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Minty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Chapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Cysteine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Valine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Taurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Citrusy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Bassist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Pastry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Rapier",
-        "image": "res/Item/pirate_treasuremap_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Album",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Yellow",
-        "name": "Yellow",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Tyrosine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Abbey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Bronx",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mummy_word",
-        "name": "Mummy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Hold",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mouse_word",
-        "name": "Mouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Thesis",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Katana",
-        "image": "res/Item/pirate_parrot_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Amino_word",
-        "name": "Amino",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pause_word",
-        "name": "Pause",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Odors_word",
-        "name": "Odors",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pond",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falcata",
-        "image": "res/Item/pirate_treasurechest_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Fable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Starfish",
-        "image": "res/Item/yellow_banana_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Vocalist",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Band_word",
-        "name": "Band",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Producer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Glycine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Menu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Research",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Pianist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Leucine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Cap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Stop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falchion",
-        "image": "res/Item/pirate_woodenshipswheel_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Break",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Harlem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Click",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Barista",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Scroll",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Alanine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Tale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Saber",
-        "image": "res/Item/pirate_rum_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Legends_word",
-        "name": "Legends",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Ocean",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Resinous",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "PhD_word",
-        "name": "PhD",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cafe_word",
-        "name": "Cafe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Halt",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New York_word",
-        "name": "New York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Barnacle",
-        "image": "res/Item/yellow_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Meals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Composer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Cutlass",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Spider",
-        "image": "res/Item/yellow_corn_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Tomb",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 5,
-      "maxSteps": 230
-    },
-    "tableau": [
+      ],
       [
         {
           "card": {
             "type": "regular",
             "category": "Hello_word",
-            "name": "Hi",
+            "name": "Howdy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Ocean",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Valine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Bronx",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Squid",
+            "image": "res/Item/insects_dragonfly_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "PhD_word",
+            "name": "Degree",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Jellyfish",
+            "image": "res/Item/insects_mantis_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Barnacle",
+            "image": "res/Item/insects_ant_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Resinous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Shrine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Katana",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Chapel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hello_word",
+            "name": "Hello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Menu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Glycine",
             "isText": true
           },
           "faceUp": false
@@ -775,61 +344,441 @@
             "name": "Lysine",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Swim_word",
-            "name": "Swim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mummy_word",
-            "name": "Mummy",
-            "isText": true
-          },
           "faceUp": true
         }
-      ],
+      ]
+    ],
+    "categoryTargets": {
+      "Swim_word": 8,
+      "Amino_word": 8,
+      "Band_word": 8,
+      "Swords": 8,
+      "Worship_word": 6,
+      "New York_word": 6,
+      "Odors_word": 6,
+      "Insects": 5,
+      "Cafe_word": 5,
+      "Legends_word": 5,
+      "Pause_word": 4,
+      "Mouse_word": 4,
+      "Mummy_word": 4,
+      "Hello_word": 3,
+      "PhD_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pond",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Rapier",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Drummer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Musky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Pianist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Woody",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mouse_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Vocalist",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Swords",
+        "name": "Swords",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Band_word",
+        "name": "Band",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "PhD_word",
+        "name": "PhD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Goggles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Fable",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pharaoh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Leucine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Scroll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Barista",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Alanine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Pastry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Citrusy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Tomb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Meals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Astoria",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Harlem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "River",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Myth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Starfish",
+        "image": "res/Item/insects_ladybug_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Record",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Research",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falchion",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Producer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Worship_word",
+        "name": "Worship",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Odors_word",
+        "name": "Odors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falcata",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Drinks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Album",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Insects",
+        "name": "Insects",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Taurine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "New York_word",
+        "name": "New York",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Claymore",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pyramid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pause_word",
+        "name": "Pause",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Queens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Cutlass",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Swim_word",
+        "name": "Swim",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Snail",
+        "image": "res/Item/insects_cricket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Saber",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pool",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Legends_word",
+        "name": "Legends",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Temple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Hold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Minty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Tyrosine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Tale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Cysteine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Break",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Cap",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 190,
+      "strategyType": "priority",
+      "solverSteps": 203,
+      "moveStats": {
+        "colSingleToSlot": 17,
+        "colMultiToSlot": 10,
+        "colToCol": 26,
+        "colMultiToCol": 0,
+        "handToSlot": 37,
+        "handToCol": 26,
+        "flip": 86,
+        "recycle": 1
+      }
+    },
+    "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Menu",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Barnacle",
-            "image": "res/Item/yellow_cheese_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Pause_word",
-            "name": "Pause",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
             "category": "Odors_word",
-            "name": "Minty",
+            "name": "Woody",
             "isText": true
           },
           "faceUp": false
@@ -837,29 +786,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Band_word",
-            "name": "Pianist",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Drummer",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Worm",
-            "image": "res/Item/yellow_yellowgemstone_7.png",
+            "category": "Swords",
+            "name": "Scimitar",
+            "image": "",
             "isText": false
           },
           "faceUp": false
@@ -867,35 +796,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Band_word",
-            "name": "Album",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Saga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "New York_word",
-            "name": "New York",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mouse_word",
-            "name": "Drag",
+            "category": "Worship_word",
+            "name": "Mosque",
             "isText": true
           },
           "faceUp": false
@@ -911,9 +813,65 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "Swords",
+            "name": "Swords",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
             "type": "regular",
             "category": "Amino_word",
-            "name": "Valine",
+            "name": "Cysteine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pause_word",
+            "name": "Pause",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cafe_word",
+            "name": "Cafe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Leucine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mummy_word",
+            "name": "Pharaoh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Chapel",
             "isText": true
           },
           "faceUp": true
@@ -924,7 +882,7 @@
           "card": {
             "type": "regular",
             "category": "Pause_word",
-            "name": "Break",
+            "name": "Halt",
             "isText": true
           },
           "faceUp": false
@@ -932,8 +890,37 @@
         {
           "card": {
             "type": "regular",
-            "category": "Mummy_word",
-            "name": "Tomb",
+            "category": "New York_word",
+            "name": "Astoria",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Saber",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Claymore",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Click",
             "isText": true
           },
           "faceUp": false
@@ -950,74 +937,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pirate",
-            "name": "Saber",
-            "image": "res/Item/pirate_rum_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Amino_word",
-            "name": "Amino",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Musky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Citrusy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Pharaoh",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
             "category": "Band_word",
             "name": "Composer",
             "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
-            "category": "PhD_word",
-            "name": "Thesis",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Pastry",
+            "category": "Hello_word",
+            "name": "Hey",
             "isText": true
           },
           "faceUp": false
@@ -1026,612 +958,7 @@
           "card": {
             "type": "regular",
             "category": "Mummy_word",
-            "name": "Egypt",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Katana",
-            "image": "res/Item/pirate_parrot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Odors_word",
-            "name": "Odors",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Claymore",
-            "image": "res/Item/pirate_cutlass_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Lake",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mouse_word",
-            "name": "Drop",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Swim_word": 8,
-      "Amino_word": 8,
-      "Band_word": 8,
-      "Pirate": 8,
-      "Worship_word": 6,
-      "New York_word": 6,
-      "Odors_word": 6,
-      "Yellow": 5,
-      "Cafe_word": 5,
-      "Legends_word": 5,
-      "Pause_word": 4,
-      "Mouse_word": 4,
-      "Mummy_word": 4,
-      "Hello_word": 3,
-      "PhD_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Tyrosine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Bassist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Howdy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Meals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Harlem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Taurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Fable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Halt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Record",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Squid",
-        "image": "res/Item/yellow_gold_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Legends_word",
-        "name": "Legends",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Band_word",
-        "name": "Band",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Temple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Sea",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Myth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Soho",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "River",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Cutlass",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Bronx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Starfish",
-        "image": "res/Item/yellow_banana_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Pirate",
-        "name": "Pirate",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Ocean",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Goggles",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Yellow",
-        "name": "Yellow",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Chapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Cysteine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mouse_word",
-        "name": "Mouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Tribeca",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Click",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falchion",
-        "image": "res/Item/pirate_woodenshipswheel_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Astoria",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Pyramid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Epic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Alanine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Leucine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Barista",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Tale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Church",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Rapier",
-        "image": "res/Item/pirate_treasuremap_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Fruity",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falcata",
-        "image": "res/Item/pirate_treasurechest_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Drinks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Degree",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Scimitar",
-        "image": "res/Item/pirate_jollyroger_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Worship_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Mosque",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Shrine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Spider",
-        "image": "res/Item/yellow_corn_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Cap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Queens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Woody",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Producer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "PhD_word",
-        "name": "PhD",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Hold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Research",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pond",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Vocalist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Resinous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Glycine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Abbey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Stop",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 5,
-      "maxSteps": 230
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Katana",
-            "image": "res/Item/pirate_parrot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Valine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Worm",
-            "image": "res/Item/yellow_yellowgemstone_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Resinous",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mouse_word",
-            "name": "Scroll",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Barista",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Legends_word",
-            "name": "Legends",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Producer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Research",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Tomb",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Odors_word",
-            "name": "Odors",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Squid",
-            "image": "res/Item/yellow_gold_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Tyrosine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Woody",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Harlem",
+            "name": "Pyramid",
             "isText": true
           },
           "faceUp": false
@@ -1648,8 +975,27 @@
         {
           "card": {
             "type": "gold",
-            "category": "Yellow",
-            "name": "Yellow",
+            "category": "Legends_word",
+            "name": "Legends",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hello_word",
+            "name": "Howdy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Cutlass",
+            "image": "",
             "isText": false
           },
           "faceUp": false
@@ -1657,8 +1003,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Odors_word",
-            "name": "Citrusy",
+            "category": "Legends_word",
+            "name": "Tale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Vocalist",
             "isText": true
           },
           "faceUp": true
@@ -1668,26 +1023,26 @@
         {
           "card": {
             "type": "regular",
+            "category": "Legends_word",
+            "name": "Fable",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "New York_word",
+            "name": "New York",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Band_word",
-            "name": "Bassist",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Minty",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Drinks",
+            "name": "Drummer",
             "isText": true
           },
           "faceUp": false
@@ -1696,7 +1051,7 @@
           "card": {
             "type": "regular",
             "category": "New York_word",
-            "name": "Soho",
+            "name": "Queens",
             "isText": true
           },
           "faceUp": false
@@ -1704,18 +1059,28 @@
         {
           "card": {
             "type": "regular",
+            "category": "Insects",
+            "name": "Squid",
+            "image": "res/Item/insects_dragonfly_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Amino_word",
-            "name": "Glycine",
+            "name": "Lysine",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Pirate",
-            "name": "Pirate",
-            "isText": false
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Meals",
+            "isText": true
           },
           "faceUp": false
         },
@@ -1731,9 +1096,482 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hello_word",
-            "name": "Howdy",
+            "category": "Swords",
+            "name": "Rapier",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Swim_word": 8,
+      "Amino_word": 8,
+      "Band_word": 8,
+      "Swords": 8,
+      "Worship_word": 6,
+      "New York_word": 6,
+      "Odors_word": 6,
+      "Insects": 5,
+      "Cafe_word": 5,
+      "Legends_word": 5,
+      "Pause_word": 4,
+      "Mouse_word": 4,
+      "Mummy_word": 4,
+      "Hello_word": 3,
+      "PhD_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Citrusy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Lake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Pastry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Ocean",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Research",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Harlem",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Amino_word",
+        "name": "Amino",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mouse_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Sea",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Odors_word",
+        "name": "Odors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Myth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Bassist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Temple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Alanine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Valine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Epic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Abbey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Producer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Soho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Goggles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Resinous",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Band_word",
+        "name": "Band",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falcata",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Bronx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Cap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Insects",
+        "name": "Insects",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falchion",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Worship_word",
+        "name": "Worship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Thesis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Jellyfish",
+        "image": "res/Item/insects_mantis_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Tyrosine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Barista",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Pianist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Record",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Barnacle",
+        "image": "res/Item/insects_ant_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Degree",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Break",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Egypt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Minty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Tribeca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Starfish",
+        "image": "res/Item/insects_ladybug_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mummy_word",
+        "name": "Mummy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Musky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pool",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Church",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "PhD_word",
+        "name": "PhD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pond",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Glycine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Snail",
+        "image": "res/Item/insects_cricket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "River",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Tomb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Taurine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Shrine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Drinks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Katana",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Hold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Saga",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 190,
+      "strategyType": "priority",
+      "solverSteps": 202,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 12,
+        "colToCol": 21,
+        "colMultiToCol": 0,
+        "handToSlot": 44,
+        "handToCol": 19,
+        "flip": 93,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Worship_word",
+            "name": "Worship",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Vocalist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Woody",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Stop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Insects",
+            "name": "Insects",
+            "isText": false
           },
           "faceUp": true
         }
@@ -1741,9 +1579,27 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Pause_word",
-            "name": "Pause",
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Leucine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Glycine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Bassist",
             "isText": true
           },
           "faceUp": false
@@ -1752,7 +1608,16 @@
           "card": {
             "type": "regular",
             "category": "Cafe_word",
-            "name": "Menu",
+            "name": "Barista",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Click",
             "isText": true
           },
           "faceUp": false
@@ -1762,6 +1627,17 @@
             "type": "regular",
             "category": "Legends_word",
             "name": "Saga",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Hold",
             "isText": true
           },
           "faceUp": false
@@ -1779,1433 +1655,8 @@
           "card": {
             "type": "regular",
             "category": "Swim_word",
-            "name": "River",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Leucine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Starfish",
-            "image": "res/Item/yellow_banana_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Tale",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Thesis",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Swim_word": 8,
-      "Amino_word": 8,
-      "Band_word": 8,
-      "Pirate": 8,
-      "Worship_word": 6,
-      "New York_word": 6,
-      "Odors_word": 6,
-      "Yellow": 5,
-      "Cafe_word": 5,
-      "Legends_word": 5,
-      "Pause_word": 4,
-      "Mouse_word": 4,
-      "Mummy_word": 4,
-      "Hello_word": 3,
-      "PhD_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Record",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pond",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Ocean",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Pharaoh",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Myth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Scimitar",
-        "image": "res/Item/pirate_jollyroger_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Sea",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Pianist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Meals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Abbey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Church",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New York_word",
-        "name": "New York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Composer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Goggles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Fruity",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Temple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Vocalist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Click",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mouse_word",
-        "name": "Mouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Astoria",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Amino_word",
-        "name": "Amino",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "PhD_word",
-        "name": "PhD",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Barnacle",
-        "image": "res/Item/yellow_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Spider",
-        "image": "res/Item/yellow_corn_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Queens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Break",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Drummer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hello_word",
-        "name": "Hello",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falchion",
-        "image": "res/Item/pirate_woodenshipswheel_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Shrine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Fable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Pastry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Lake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Lysine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falcata",
-        "image": "res/Item/pirate_treasurechest_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Degree",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Hold",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Band_word",
-        "name": "Band",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Saber",
-        "image": "res/Item/pirate_rum_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Cafe_word",
-        "name": "Cafe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Pyramid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Bronx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Chapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Cysteine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Tribeca",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Cutlass",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Rapier",
-        "image": "res/Item/pirate_treasuremap_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Egypt",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Worship_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Alanine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mummy_word",
-        "name": "Mummy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Epic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Stop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Halt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Taurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Cap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Claymore",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Mosque",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Musky",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 5,
-      "maxSteps": 230
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Queens",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Research",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Composer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Pause_word",
-            "name": "Pause",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Pianist",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Glycine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Degree",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Falchion",
-            "image": "res/Item/pirate_woodenshipswheel_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
             "name": "Lake",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Meals",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Citrusy",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "PhD_word",
-            "name": "PhD",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Pond",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Squid",
-            "image": "res/Item/yellow_gold_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Ocean",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Drummer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Pool",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Cysteine",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Goggles",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Saga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Tomb",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hello_word",
-            "name": "Hey",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Worship_word",
-            "name": "Temple",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Astoria",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Katana",
-            "image": "res/Item/pirate_parrot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Pharaoh",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Legends_word",
-            "name": "Legends",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Claymore",
-            "image": "res/Item/pirate_cutlass_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Album",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Barnacle",
-            "image": "res/Item/yellow_cheese_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Resinous",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Minty",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Tribeca",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Taurine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cafe_word",
-            "name": "Pastry",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Swim_word": 8,
-      "Amino_word": 8,
-      "Band_word": 8,
-      "Pirate": 8,
-      "Worship_word": 6,
-      "New York_word": 6,
-      "Odors_word": 6,
-      "Yellow": 5,
-      "Cafe_word": 5,
-      "Legends_word": 5,
-      "Pause_word": 4,
-      "Mouse_word": 4,
-      "Mummy_word": 4,
-      "Hello_word": 3,
-      "PhD_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Abbey",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Band_word",
-        "name": "Band",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Drinks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Tale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Soho",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Cutlass",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Worm",
-        "image": "res/Item/yellow_yellowgemstone_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Fable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Menu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Thesis",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Leucine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Hold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Rapier",
-        "image": "res/Item/pirate_treasuremap_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Worship_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Swim_word",
-        "name": "Swim",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Mosque",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Bronx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Bassist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Break",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Lysine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mouse_word",
-        "name": "Mouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Alanine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Cap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Valine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Halt",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hello_word",
-        "name": "Hello",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pirate",
-        "name": "Pirate",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Starfish",
-        "image": "res/Item/yellow_banana_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Chapel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "River",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Tyrosine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Egypt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Pyramid",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mummy_word",
-        "name": "Mummy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Click",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Harlem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Musky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Church",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Shrine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Woody",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Fruity",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Scimitar",
-        "image": "res/Item/pirate_jollyroger_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Producer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Sea",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New York_word",
-        "name": "New York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Vocalist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Myth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Spider",
-        "image": "res/Item/yellow_corn_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Stop",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Yellow",
-        "name": "Yellow",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Barista",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Howdy",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Odors_word",
-        "name": "Odors",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Scroll",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cafe_word",
-        "name": "Cafe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Saber",
-        "image": "res/Item/pirate_rum_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Falcata",
-        "image": "res/Item/pirate_treasurechest_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Record",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Amino_word",
-        "name": "Amino",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Epic",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 5,
-      "maxSteps": 230
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Woody",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Falcata",
-            "image": "res/Item/pirate_treasurechest_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "River",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Lake",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Swim_word",
-            "name": "Sea",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Queens",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mouse_word",
-            "name": "Mouse",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Tyrosine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New York_word",
-            "name": "Harlem",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Legends_word",
-            "name": "Saga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Swim_word",
-            "name": "Swim",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Cysteine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Falchion",
-            "image": "res/Item/pirate_woodenshipswheel_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Fruity",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Rapier",
-            "image": "res/Item/pirate_treasuremap_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Hello_word",
-            "name": "Hello",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Amino_word",
-            "name": "Amino",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Mummy_word",
-            "name": "Pharaoh",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Worship_word",
-            "name": "Worship",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Yellow",
-            "name": "Yellow",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pirate",
-            "name": "Katana",
-            "image": "res/Item/pirate_parrot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "PhD_word",
-            "name": "Research",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Band_word",
-            "name": "Pianist",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yellow",
-            "name": "Spider",
-            "image": "res/Item/yellow_corn_2.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -3225,52 +1676,15 @@
             "name": "Tribeca",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Worship_word",
-            "name": "Shrine",
-            "isText": true
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Pause_word",
-            "name": "Hold",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Amino_word",
-            "name": "Valine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Odors_word",
-            "name": "Musky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hello_word",
-            "name": "Howdy",
-            "isText": true
+            "category": "Swords",
+            "name": "Claymore",
+            "image": "",
+            "isText": false
           },
           "faceUp": false
         },
@@ -3281,13 +1695,42 @@
             "name": "Legends",
             "isText": true
           },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "River",
+            "isText": true
+          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "New York_word",
-            "name": "Soho",
+            "category": "Legends_word",
+            "name": "Tale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Scroll",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Resinous",
             "isText": true
           },
           "faceUp": false
@@ -3304,8 +1747,109 @@
         {
           "card": {
             "type": "regular",
-            "category": "Swim_word",
-            "name": "Cap",
+            "category": "Mummy_word",
+            "name": "Pyramid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Pastry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "PhD_word",
+            "name": "PhD",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Meals",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Astoria",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cafe_word",
+            "name": "Cafe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Musky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hello_word",
+            "name": "Hello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Band_word",
+            "name": "Band",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Halt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mouse_word",
+            "name": "Mouse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Menu",
             "isText": true
           },
           "faceUp": true
@@ -3316,11 +1860,770 @@
       "Swim_word": 8,
       "Amino_word": 8,
       "Band_word": 8,
-      "Pirate": 8,
+      "Swords": 8,
       "Worship_word": 6,
       "New York_word": 6,
       "Odors_word": 6,
-      "Yellow": 5,
+      "Insects": 5,
+      "Cafe_word": 5,
+      "Legends_word": 5,
+      "Pause_word": 4,
+      "Mouse_word": 4,
+      "Mummy_word": 4,
+      "Hello_word": 3,
+      "PhD_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Odors_word",
+        "name": "Odors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Tomb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Thesis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Research",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Swim_word",
+        "name": "Swim",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hey",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pause_word",
+        "name": "Pause",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Barnacle",
+        "image": "res/Item/insects_ant_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Jellyfish",
+        "image": "res/Item/insects_mantis_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Squid",
+        "image": "res/Item/insects_dragonfly_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Citrusy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Taurine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Shrine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Cutlass",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Church",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Rapier",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Cap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Alanine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mummy_word",
+        "name": "Mummy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Pianist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Drummer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falchion",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Soho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Scimitar",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Temple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Abbey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Fable",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Starfish",
+        "image": "res/Item/insects_ladybug_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Swords",
+        "name": "Swords",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Ocean",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Saber",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Cysteine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Amino_word",
+        "name": "Amino",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Bronx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Egypt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Sea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pharaoh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Degree",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Myth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Katana",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Howdy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Snail",
+        "image": "res/Item/insects_cricket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Minty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Producer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Harlem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Queens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falcata",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pond",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Mosque",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Lysine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Drinks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Goggles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Pool",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Epic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Record",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Valine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Tyrosine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Album",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Break",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 190,
+      "strategyType": "priority",
+      "solverSteps": 198,
+      "moveStats": {
+        "colSingleToSlot": 20,
+        "colMultiToSlot": 11,
+        "colToCol": 22,
+        "colMultiToCol": 0,
+        "handToSlot": 36,
+        "handToCol": 27,
+        "flip": 81,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Saber",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Myth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Falcata",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Harlem",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Mosque",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Pond",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hello_word",
+            "name": "Howdy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Bassist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Pianist",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Abbey",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Tale",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Click",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Fruity",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Halt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Cap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Katana",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "PhD_word",
+            "name": "Research",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cafe_word",
+            "name": "Cafe",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Lake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mummy_word",
+            "name": "Mummy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Worship_word",
+            "name": "Worship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Chapel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Tribeca",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Valine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Pool",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Epic",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mummy_word",
+            "name": "Tomb",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Tyrosine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pause_word",
+            "name": "Stop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Legends_word",
+            "name": "Legends",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mummy_word",
+            "name": "Pharaoh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Drummer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Squid",
+            "image": "res/Item/insects_dragonfly_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "PhD_word",
+            "name": "Degree",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Record",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Swim_word": 8,
+      "Amino_word": 8,
+      "Band_word": 8,
+      "Swords": 8,
+      "Worship_word": 6,
+      "New York_word": 6,
+      "Odors_word": 6,
+      "Insects": 5,
       "Cafe_word": 5,
       "Legends_word": 5,
       "Pause_word": 4,
@@ -3332,65 +2635,9 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Mouse_word",
-        "name": "Click",
+        "category": "Cafe_word",
+        "name": "Menu",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Vocalist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Starfish",
-        "image": "res/Item/yellow_banana_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Bronx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Egypt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Lysine",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Mummy_word",
-        "name": "Mummy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Odors_word",
-        "name": "Resinous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Taurine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Claymore",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
       },
       {
         "type": "regular",
@@ -3399,15 +2646,47 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Stop",
+        "type": "gold",
+        "category": "Swim_word",
+        "name": "Swim",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Pause_word",
+        "name": "Hold",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Hello_word",
-        "name": "Hey",
+        "name": "Hello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Barnacle",
+        "image": "res/Item/insects_ant_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falchion",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Album",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Alanine",
         "isText": true
       },
       {
@@ -3418,8 +2697,46 @@
       },
       {
         "type": "regular",
-        "category": "Band_word",
-        "name": "Album",
+        "category": "Amino_word",
+        "name": "Taurine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pause_word",
+        "name": "Pause",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Ocean",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Scimitar",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Jellyfish",
+        "image": "res/Item/insects_mantis_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Amino_word",
+        "name": "Amino",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Odors_word",
+        "name": "Odors",
         "isText": true
       },
       {
@@ -3429,11 +2746,28 @@
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "New York_word",
+        "name": "New York",
+        "isText": true
+      },
+      {
         "type": "regular",
-        "category": "Pirate",
-        "name": "Saber",
-        "image": "res/Item/pirate_rum_5.png",
-        "isText": false
+        "category": "New York_word",
+        "name": "Soho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Barista",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Pastry",
+        "isText": true
       },
       {
         "type": "regular",
@@ -3449,247 +2783,14 @@
       },
       {
         "type": "regular",
-        "category": "Cafe_word",
-        "name": "Menu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mummy_word",
-        "name": "Pyramid",
+        "category": "Amino_word",
+        "name": "Cysteine",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Swim_word",
-        "name": "Pool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Record",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Mosque",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Alanine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "PhD_word",
-        "name": "Degree",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Halt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New York_word",
-        "name": "Astoria",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Odors_word",
-        "name": "Odors",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Barista",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Bassist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Leucine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Abbey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Barnacle",
-        "image": "res/Item/yellow_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Composer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Worm",
-        "image": "res/Item/yellow_yellowgemstone_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Pirate",
-        "name": "Pirate",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Drinks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Pond",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pause_word",
-        "name": "Break",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hello_word",
-        "name": "Hi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Tale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Producer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Band_word",
-        "name": "Drummer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "PhD_word",
-        "name": "PhD",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yellow",
-        "name": "Squid",
-        "image": "res/Item/yellow_gold_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mouse_word",
-        "name": "Drag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Band_word",
-        "name": "Band",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Fable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Cutlass",
-        "image": "res/Item/pirate_cutlass_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Amino_word",
-        "name": "Glycine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Worship_word",
-        "name": "Temple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pirate",
-        "name": "Scimitar",
-        "image": "res/Item/pirate_jollyroger_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Swim_word",
-        "name": "Ocean",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cafe_word",
-        "name": "Cafe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Myth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cafe_word",
-        "name": "Pastry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legends_word",
-        "name": "Epic",
+        "name": "Sea",
         "isText": true
       },
       {
@@ -3700,8 +2801,778 @@
       },
       {
         "type": "regular",
+        "category": "Odors_word",
+        "name": "Resinous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Claymore",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Woody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Break",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Cutlass",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Rapier",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mouse_word",
+        "name": "Mouse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Fable",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Starfish",
+        "image": "res/Item/insects_ladybug_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Producer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Swords",
+        "name": "Swords",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Saga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Astoria",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Insects",
+        "name": "Insects",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Mummy_word",
-        "name": "Tomb",
+        "name": "Egypt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Church",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Musky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Snail",
+        "image": "res/Item/insects_cricket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "River",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Bronx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Shrine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Temple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Drinks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Queens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pyramid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Band_word",
+        "name": "Band",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Glycine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Vocalist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Leucine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "PhD_word",
+        "name": "PhD",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Lysine",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 5,
+      "maxSteps": 190,
+      "strategyType": "priority",
+      "solverSteps": 204,
+      "moveStats": {
+        "colSingleToSlot": 18,
+        "colMultiToSlot": 13,
+        "colToCol": 21,
+        "colMultiToCol": 0,
+        "handToSlot": 34,
+        "handToCol": 29,
+        "flip": 88,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Swim_word",
+            "name": "Swim",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Taurine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Record",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Album",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Scroll",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Insects",
+            "name": "Insects",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "PhD_word",
+            "name": "Thesis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Glycine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Astoria",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Katana",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Lysine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Squid",
+            "image": "res/Item/insects_dragonfly_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Drummer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Goggles",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Pond",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Bronx",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Fruity",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Worship_word",
+            "name": "Church",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Odors_word",
+            "name": "Woody",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Queens",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Producer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Tale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Insects",
+            "name": "Jellyfish",
+            "image": "res/Item/insects_mantis_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cafe_word",
+            "name": "Pastry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swords",
+            "name": "Falchion",
+            "image": "",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Cysteine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Sea",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Amino_word",
+            "name": "Alanine",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mouse_word",
+            "name": "Drop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Swim_word",
+            "name": "Lake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mouse_word",
+            "name": "Mouse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legends_word",
+            "name": "Fable",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hello_word",
+            "name": "Hey",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "New York_word",
+            "name": "Soho",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Band_word",
+            "name": "Vocalist",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Swim_word": 8,
+      "Amino_word": 8,
+      "Band_word": 8,
+      "Swords": 8,
+      "Worship_word": 6,
+      "New York_word": 6,
+      "Odors_word": 6,
+      "Insects": 5,
+      "Cafe_word": 5,
+      "Legends_word": 5,
+      "Pause_word": 4,
+      "Mouse_word": 4,
+      "Mummy_word": 4,
+      "Hello_word": 3,
+      "PhD_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Odors_word",
+        "name": "Odors",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Drag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Meals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mouse_word",
+        "name": "Click",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Harlem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Pianist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Valine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Abbey",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Band_word",
+        "name": "Band",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Stop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Rapier",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "New York_word",
+        "name": "New York",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Snail",
+        "image": "res/Item/insects_cricket_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pharaoh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Saber",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Resinous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Myth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Hi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Cap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Barnacle",
+        "image": "res/Item/insects_ant_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Falcata",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Shrine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Saga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "River",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "PhD_word",
+        "name": "PhD",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Legends_word",
+        "name": "Legends",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Cutlass",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Hold",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cafe_word",
+        "name": "Cafe",
         "isText": true
       },
       {
@@ -3712,8 +3583,197 @@
       },
       {
         "type": "regular",
+        "category": "Swim_word",
+        "name": "Pool",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Citrusy",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Worship_word",
-        "name": "Church",
+        "name": "Worship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Egypt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hello_word",
+        "name": "Howdy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Mosque",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Amino_word",
+        "name": "Amino",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Temple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swim_word",
+        "name": "Ocean",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Scimitar",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Bassist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Degree",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Barista",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Pyramid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Worship_word",
+        "name": "Chapel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Leucine",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Swords",
+        "name": "Swords",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Musky",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hello_word",
+        "name": "Hello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New York_word",
+        "name": "Tribeca",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "PhD_word",
+        "name": "Research",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Odors_word",
+        "name": "Minty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mummy_word",
+        "name": "Mummy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legends_word",
+        "name": "Epic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Amino_word",
+        "name": "Tyrosine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Break",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Band_word",
+        "name": "Composer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Swords",
+        "name": "Claymore",
+        "image": "",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pause_word",
+        "name": "Halt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Insects",
+        "name": "Starfish",
+        "image": "res/Item/insects_ladybug_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mummy_word",
+        "name": "Tomb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cafe_word",
+        "name": "Drinks",
         "isText": true
       }
     ],

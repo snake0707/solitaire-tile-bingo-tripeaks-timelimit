@@ -1,7 +1,7 @@
 /**
  * Shared Level Settings for Solitaire Tile (SAJLike)
  *
- * Auto-generated from level_config_v2.xlsx.
+ * Auto-generated from level_config_v3_merged.xlsx.
  * Used by game.js, generator.html, and converter.html.
  */
 
@@ -163,353 +163,368 @@ const LEVEL_SETTINGS = {
     },
     32: {
         maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
+        columnSizes: [3, 4, 5], maxSteps: 70,
+        solveSteps: 61, solveStepMin: 58, solveStepMax: 64,
     },
     33: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 143,
-        solveSteps: 140, solveStepMin: 134, solveStepMax: 146,
+        columnSizes: [4, 5, 6, 7], maxSteps: 118,
+        solveSteps: 116, solveStepMin: 111, solveStepMax: 121,
     },
     34: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 143,
-        solveSteps: 140, solveStepMin: 134, solveStepMax: 146,
+        columnSizes: [4, 5, 6, 7], maxSteps: 133,
+        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
     },
     35: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 148,
-        solveSteps: 145, solveStepMin: 139, solveStepMax: 151,
-    },
-    36: {
-        maxSlots: 4, numCategories: 12, numColumns: 4,
-        columnSizes: [5, 6, 7, 8], maxSteps: 200,
-        solveSteps: 210, solveStepMin: 204, solveStepMax: 216,
-    },
-    37: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    38: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    39: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 143,
-        solveSteps: 140, solveStepMin: 134, solveStepMax: 146,
-    },
-    40: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 138,
-        solveSteps: 135, solveStepMin: 130, solveStepMax: 140,
-    },
-    41: {
-        maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 209,
-        solveSteps: 220, solveStepMin: 213, solveStepMax: 227,
-    },
-    42: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    43: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 143,
-        solveSteps: 140, solveStepMin: 134, solveStepMax: 146,
-    },
-    44: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    45: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 143,
-        solveSteps: 140, solveStepMin: 134, solveStepMax: 146,
-    },
-    46: {
-        maxSlots: 5, numCategories: 14, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 190,
-        solveSteps: 200, solveStepMin: 194, solveStepMax: 206,
-    },
-    47: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    48: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 138,
-        solveSteps: 135, solveStepMin: 130, solveStepMax: 140,
-    },
-    49: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    50: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    51: {
-        maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 233,
-        solveSteps: 245, solveStepMin: 238, solveStepMax: 252,
-    },
-    52: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    53: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    54: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    55: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    56: {
-        maxSlots: 4, numCategories: 12, numColumns: 4,
-        columnSizes: [5, 6, 7, 8], maxSteps: 162,
-        solveSteps: 170, solveStepMin: 165, solveStepMax: 175,
-    },
-    57: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    58: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    59: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    60: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    61: {
-        maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 188,
-        solveSteps: 198, solveStepMin: 192, solveStepMax: 204,
-    },
-    62: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    63: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 123,
-        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
-    },
-    64: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    65: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    66: {
-        maxSlots: 5, numCategories: 14, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 171,
-        solveSteps: 180, solveStepMin: 175, solveStepMax: 185,
-    },
-    67: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    68: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 137,
-        solveSteps: 134, solveStepMin: 129, solveStepMax: 139,
-    },
-    69: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 131,
-        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
-    },
-    70: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 130,
-        solveSteps: 127, solveStepMin: 122, solveStepMax: 132,
-    },
-    71: {
-        maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 189,
-        solveSteps: 199, solveStepMin: 193, solveStepMax: 205,
-    },
-    72: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    73: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 124,
-        solveSteps: 122, solveStepMin: 117, solveStepMax: 127,
-    },
-    74: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    75: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
         columnSizes: [4, 5, 6, 7], maxSteps: 126,
         solveSteps: 124, solveStepMin: 119, solveStepMax: 129,
     },
-    76: {
+    36: {
         maxSlots: 4, numCategories: 12, numColumns: 4,
-        columnSizes: [5, 6, 7, 8], maxSteps: 164,
-        solveSteps: 173, solveStepMin: 168, solveStepMax: 178,
+        columnSizes: [5, 6, 7, 8], maxSteps: 163,
+        solveSteps: 168, solveStepMin: 163, solveStepMax: 173,
     },
-    77: {
+    37: {
         maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
+        columnSizes: [3, 4, 5], maxSteps: 74,
+        solveSteps: 64, solveStepMin: 61, solveStepMax: 67,
     },
-    78: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 131,
-        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
-    },
-    79: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
-    },
-    80: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 129,
-        solveSteps: 126, solveStepMin: 121, solveStepMax: 131,
-    },
-    81: {
-        maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 184,
-        solveSteps: 194, solveStepMin: 188, solveStepMax: 200,
-    },
-    82: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 86,
-        solveSteps: 75, solveStepMin: 71, solveStepMax: 79,
-    },
-    83: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 123,
-        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
-    },
-    84: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 122,
-        solveSteps: 120, solveStepMin: 115, solveStepMax: 125,
-    },
-    85: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 132,
-        solveSteps: 129, solveStepMin: 124, solveStepMax: 134,
-    },
-    86: {
-        maxSlots: 5, numCategories: 14, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 162,
-        solveSteps: 171, solveStepMin: 166, solveStepMax: 176,
-    },
-    87: {
-        maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 83,
-        solveSteps: 72, solveStepMin: 68, solveStepMax: 76,
-    },
-    88: {
-        maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 132,
-        solveSteps: 129, solveStepMin: 124, solveStepMax: 134,
-    },
-    89: {
+    38: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
         columnSizes: [4, 5, 6, 7], maxSteps: 128,
         solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
     },
-    90: {
+    39: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 133,
-        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
+        columnSizes: [4, 5, 6, 7], maxSteps: 118,
+        solveSteps: 116, solveStepMin: 111, solveStepMax: 121,
     },
-    91: {
+    40: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 129,
+        solveSteps: 126, solveStepMin: 121, solveStepMax: 131,
+    },
+    41: {
         maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 179,
-        solveSteps: 188, solveStepMin: 182, solveStepMax: 194,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 187,
+        solveSteps: 197, solveStepMin: 191, solveStepMax: 203,
     },
-    92: {
+    42: {
         maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 85,
-        solveSteps: 74, solveStepMin: 70, solveStepMax: 78,
+        columnSizes: [3, 4, 5], maxSteps: 74,
+        solveSteps: 64, solveStepMin: 61, solveStepMax: 67,
     },
-    93: {
+    43: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 134,
-        solveSteps: 131, solveStepMin: 126, solveStepMax: 136,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
     },
-    94: {
+    44: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 131,
-        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
+        columnSizes: [4, 5, 6, 7], maxSteps: 126,
+        solveSteps: 124, solveStepMin: 119, solveStepMax: 129,
     },
-    95: {
+    45: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 126,
+        solveSteps: 124, solveStepMin: 119, solveStepMax: 129,
+    },
+    46: {
+        maxSlots: 5, numCategories: 14, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 170,
+        solveSteps: 177, solveStepMin: 172, solveStepMax: 182,
+    },
+    47: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 70,
+        solveSteps: 61, solveStepMin: 58, solveStepMax: 64,
+    },
+    48: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 129,
+        solveSteps: 126, solveStepMin: 121, solveStepMax: 131,
+    },
+    49: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
         columnSizes: [4, 5, 6, 7], maxSteps: 123,
         solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
     },
-    96: {
-        maxSlots: 4, numCategories: 12, numColumns: 4,
-        columnSizes: [5, 6, 7, 8], maxSteps: 161,
-        solveSteps: 169, solveStepMin: 164, solveStepMax: 174,
+    50: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
     },
-    97: {
+    51: {
+        maxSlots: 5, numCategories: 15, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 186,
+        solveSteps: 196, solveStepMin: 190, solveStepMax: 202,
+    },
+    52: {
         maxSlots: 3, numCategories: 6, numColumns: 3,
-        columnSizes: [3, 4, 5], maxSteps: 85,
-        solveSteps: 74, solveStepMin: 70, solveStepMax: 78,
+        columnSizes: [3, 4, 5], maxSteps: 71,
+        solveSteps: 62, solveStepMin: 59, solveStepMax: 65,
     },
-    98: {
+    53: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 123,
+        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
+    },
+    54: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 124,
+        solveSteps: 122, solveStepMin: 117, solveStepMax: 127,
+    },
+    55: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
+    },
+    56: {
+        maxSlots: 4, numCategories: 12, numColumns: 4,
+        columnSizes: [5, 6, 7, 8], maxSteps: 158,
+        solveSteps: 163, solveStepMin: 158, solveStepMax: 168,
+    },
+    57: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 76,
+        solveSteps: 66, solveStepMin: 63, solveStepMax: 69,
+    },
+    58: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 126,
+        solveSteps: 124, solveStepMin: 119, solveStepMax: 129,
+    },
+    59: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 120,
+        solveSteps: 118, solveStepMin: 113, solveStepMax: 123,
+    },
+    60: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 124,
+        solveSteps: 122, solveStepMin: 117, solveStepMax: 127,
+    },
+    61: {
+        maxSlots: 5, numCategories: 15, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 185,
+        solveSteps: 195, solveStepMin: 189, solveStepMax: 201,
+    },
+    62: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 75,
+        solveSteps: 65, solveStepMin: 62, solveStepMax: 68,
+    },
+    63: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
+    },
+    64: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 123,
+        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
+    },
+    65: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 131,
+        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
+    },
+    66: {
+        maxSlots: 5, numCategories: 14, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 168,
+        solveSteps: 175, solveStepMin: 170, solveStepMax: 180,
+    },
+    67: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 70,
+        solveSteps: 61, solveStepMin: 58, solveStepMax: 64,
+    },
+    68: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 123,
+        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
+    },
+    69: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 130,
+        solveSteps: 127, solveStepMin: 122, solveStepMax: 132,
+    },
+    70: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 131,
+        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
+    },
+    71: {
+        maxSlots: 5, numCategories: 15, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 185,
+        solveSteps: 195, solveStepMin: 189, solveStepMax: 201,
+    },
+    72: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 72,
+        solveSteps: 63, solveStepMin: 60, solveStepMax: 66,
+    },
+    73: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 118,
+        solveSteps: 116, solveStepMin: 111, solveStepMax: 121,
+    },
+    74: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 122,
+        solveSteps: 120, solveStepMin: 115, solveStepMax: 125,
+    },
+    75: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 118,
+        solveSteps: 116, solveStepMin: 111, solveStepMax: 121,
+    },
+    76: {
+        maxSlots: 4, numCategories: 12, numColumns: 4,
+        columnSizes: [5, 6, 7, 8], maxSteps: 162,
+        solveSteps: 167, solveStepMin: 162, solveStepMax: 172,
+    },
+    77: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 71,
+        solveSteps: 62, solveStepMin: 59, solveStepMax: 65,
+    },
+    78: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 129,
+        solveSteps: 126, solveStepMin: 121, solveStepMax: 131,
+    },
+    79: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
         columnSizes: [4, 5, 6, 7], maxSteps: 119,
         solveSteps: 117, solveStepMin: 112, solveStepMax: 122,
     },
-    99: {
+    80: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
-        columnSizes: [4, 5, 6, 7], maxSteps: 136,
-        solveSteps: 133, solveStepMin: 128, solveStepMax: 138,
+        columnSizes: [4, 5, 6, 7], maxSteps: 121,
+        solveSteps: 119, solveStepMin: 114, solveStepMax: 124,
     },
-    100: {
+    81: {
+        maxSlots: 5, numCategories: 15, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 190,
+        solveSteps: 200, solveStepMin: 194, solveStepMax: 206,
+    },
+    82: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 71,
+        solveSteps: 62, solveStepMin: 59, solveStepMax: 65,
+    },
+    83: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 132,
+        solveSteps: 129, solveStepMin: 124, solveStepMax: 134,
+    },
+    84: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
+    },
+    85: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 131,
+        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
+    },
+    86: {
+        maxSlots: 5, numCategories: 14, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 171,
+        solveSteps: 178, solveStepMin: 173, solveStepMax: 183,
+    },
+    87: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 72,
+        solveSteps: 63, solveStepMin: 60, solveStepMax: 66,
+    },
+    88: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 129,
+        solveSteps: 126, solveStepMin: 121, solveStepMax: 131,
+    },
+    89: {
         maxSlots: 4, numCategories: 10, numColumns: 4,
         columnSizes: [4, 5, 6, 7], maxSteps: 125,
         solveSteps: 123, solveStepMin: 118, solveStepMax: 128,
     },
+    90: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 130,
+        solveSteps: 127, solveStepMin: 122, solveStepMax: 132,
+    },
+    91: {
+        maxSlots: 5, numCategories: 15, numColumns: 5,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 188,
+        solveSteps: 198, solveStepMin: 192, solveStepMax: 204,
+    },
+    92: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 74,
+        solveSteps: 64, solveStepMin: 61, solveStepMax: 67,
+    },
+    93: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 131,
+        solveSteps: 128, solveStepMin: 123, solveStepMax: 133,
+    },
+    94: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 128,
+        solveSteps: 125, solveStepMin: 120, solveStepMax: 130,
+    },
+    95: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 121,
+        solveSteps: 119, solveStepMin: 114, solveStepMax: 124,
+    },
+    96: {
+        maxSlots: 4, numCategories: 12, numColumns: 4,
+        columnSizes: [5, 6, 7, 8], maxSteps: 169,
+        solveSteps: 174, solveStepMin: 169, solveStepMax: 179,
+    },
+    97: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 74,
+        solveSteps: 64, solveStepMin: 61, solveStepMax: 67,
+    },
+    98: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 117,
+        solveSteps: 115, solveStepMin: 110, solveStepMax: 120,
+    },
+    99: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 133,
+        solveSteps: 130, solveStepMin: 125, solveStepMax: 135,
+    },
+    100: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 123,
+        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
+    },
     101: {
         maxSlots: 5, numCategories: 15, numColumns: 5,
-        columnSizes: [5, 6, 7, 8, 9], maxSteps: 180,
-        solveSteps: 189, solveStepMin: 183, solveStepMax: 195,
+        columnSizes: [5, 6, 7, 8, 9], maxSteps: 189,
+        solveSteps: 199, solveStepMin: 193, solveStepMax: 205,
+    },
+    102: {
+        maxSlots: 3, numCategories: 6, numColumns: 3,
+        columnSizes: [3, 4, 5], maxSteps: 72,
+        solveSteps: 63, solveStepMin: 60, solveStepMax: 66,
+    },
+    103: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 123,
+        solveSteps: 121, solveStepMin: 116, solveStepMax: 126,
+    },
+    104: {
+        maxSlots: 4, numCategories: 10, numColumns: 4,
+        columnSizes: [4, 5, 6, 7], maxSteps: 118,
+        solveSteps: 116, solveStepMin: 111, solveStepMax: 121,
     },
 };
 

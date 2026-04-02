@@ -5,25 +5,164 @@
       "maxSteps": 120,
       "strategyType": "priority",
       "solverSteps": 121,
+      "solverMaxSteps": 123,
+      "solverSeed": 957425987,
       "moveStats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 5,
-        "colToCol": 2,
-        "colMultiToCol": 3,
-        "handToSlot": 26,
-        "handToCol": 18,
-        "flip": 55,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 7,
+        "handToSlot": 29,
+        "handToCol": 15,
+        "flip": 50,
         "recycle": 1
-      }
+      },
+      "solver2Steps": -1,
+      "solver2StrategyType": "none",
+      "solver2Stats": {}
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Material_word",
-            "name": "Glass",
+            "category": "Molluscs_word",
+            "name": "Clam",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dairy_word",
+            "name": "Butter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bedtime_word",
+            "name": "Bedtime",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bedtime_word",
+            "name": "Dream",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Flowers",
+            "name": "Flowers",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Material_word",
+            "name": "Material",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Airport_word",
+            "name": "Gate",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Material_word",
+            "name": "Plastic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flowers",
+            "name": "Tulip",
+            "isText": false,
+            "image": "res/Item/flowers_tulip_3.png"
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Airport_word",
+            "name": "Runway",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Dairy_word",
+            "name": "Dairy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flowers",
+            "name": "Rose",
+            "isText": false,
+            "image": "res/Item/flowers_rose_4.png"
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Islands_word",
+            "name": "Sicily",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Islands_word",
+            "name": "Bali",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grandma",
+            "name": "Knitting scarf",
+            "isText": false
           },
           "faceUp": false
         },
@@ -38,88 +177,10 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Material_word",
-            "name": "Stone",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dairy_word",
-            "name": "Butter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Islands_word",
-            "name": "Iceland",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jewelry",
-            "name": "Diadem",
-            "isText": false,
-            "image": "res/Item/jewelry_diadem_7.png"
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dances_word",
-            "name": "Waltz",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Airport_word",
-            "name": "Gate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Airport_word",
-            "name": "Terminal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
-            "category": "Bedtime_word",
-            "name": "Bedtime",
+            "category": "Dances_word",
+            "name": "Dances",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Insects",
-            "name": "Dragonfly",
-            "isText": false,
-            "image": "res/Item/insects_dragonfly_5.png"
           },
           "faceUp": false
         },
@@ -127,65 +188,7 @@
           "card": {
             "type": "regular",
             "category": "Bedtime_word",
-            "name": "Lullaby",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Jewelry",
-            "name": "Bracelet",
-            "isText": false,
-            "image": "res/Item/jewelry_bracelet_4.png"
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Insects",
-            "name": "Mosquito",
-            "isText": false,
-            "image": "res/Item/insects_mosquito_1.png"
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Molluscs_word",
-            "name": "Oyster",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dances_word",
-            "name": "Rumba",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dances_word",
-            "name": "Flamenco",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dances_word",
-            "name": "Tango",
+            "name": "Yawn",
             "isText": true
           },
           "faceUp": true
@@ -197,7 +200,7 @@
       "Jewelry": 7,
       "Flowers": 7,
       "Dances_word": 6,
-      "Insects": 6,
+      "Grandma": 6,
       "Molluscs_word": 4,
       "Material_word": 4,
       "Bedtime_word": 4,
@@ -208,34 +211,15 @@
       {
         "type": "regular",
         "category": "Flowers",
-        "name": "Aster",
+        "name": "Daisy",
         "isText": false,
-        "image": "res/Item/flowers_aster_7.png"
-      },
-      {
-        "type": "gold",
-        "category": "Islands_word",
-        "name": "Islands",
-        "isText": true
+        "image": "res/Item/flowers_daisy_1.png"
       },
       {
         "type": "regular",
-        "category": "Islands_word",
-        "name": "Jamaica",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Islands_word",
-        "name": "Sicily",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Tulip",
-        "isText": false,
-        "image": "res/Item/flowers_tulip_3.png"
+        "category": "Grandma",
+        "name": "Rocking chair",
+        "isText": false
       },
       {
         "type": "regular",
@@ -246,8 +230,170 @@
       },
       {
         "type": "regular",
+        "category": "Dances_word",
+        "name": "Rumba",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Islands_word",
+        "name": "Ibiza",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dances_word",
+        "name": "Salsa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flowers",
+        "name": "Aster",
+        "isText": false,
+        "image": "res/Item/flowers_aster_7.png"
+      },
+      {
+        "type": "regular",
+        "category": "Islands_word",
+        "name": "Jamaica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bedtime_word",
+        "name": "Pajamas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Molluscs_word",
+        "name": "Slug",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grandma",
+        "name": "Needle case",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Dairy_word",
+        "name": "Yogurt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Islands_word",
+        "name": "Iceland",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Airport_word",
+        "name": "Airport",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Molluscs_word",
+        "name": "Snail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Molluscs_word",
+        "name": "Oyster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flowers",
+        "name": "Poppy",
+        "isText": false,
+        "image": "res/Item/flowers_poppy_5.png"
+      },
+      {
+        "type": "gold",
+        "category": "Molluscs_word",
+        "name": "Molluscs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bedtime_word",
+        "name": "Lullaby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flowers",
+        "name": "Lily",
+        "isText": false,
+        "image": "res/Item/flowers_lily_2.png"
+      },
+      {
+        "type": "regular",
+        "category": "Grandma",
+        "name": "Grandma glasses",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grandma",
+        "name": "Cozy slippers",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Islands_word",
         "name": "Hawaii",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Islands_word",
+        "name": "Crete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jewelry",
+        "name": "Necklace",
+        "isText": false,
+        "image": "res/Item/jewelry_necklace_1.png"
+      },
+      {
+        "type": "regular",
+        "category": "Jewelry",
+        "name": "Bracelet",
+        "isText": false,
+        "image": "res/Item/jewelry_bracelet_4.png"
+      },
+      {
+        "type": "regular",
+        "category": "Material_word",
+        "name": "Glass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Jewelry",
+        "name": "Diamond ring",
+        "isText": false,
+        "image": "res/Item/jewelry_diamondring_3.png"
+      },
+      {
+        "type": "regular",
+        "category": "Grandma",
+        "name": "Grandma photos",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Material_word",
+        "name": "Stone",
         "isText": true
       },
       {
@@ -260,35 +406,14 @@
       {
         "type": "regular",
         "category": "Dances_word",
-        "name": "Salsa",
+        "name": "Waltz",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Jewelry",
-        "name": "Diamond ring",
-        "isText": false,
-        "image": "res/Item/jewelry_diamondring_3.png"
-      },
-      {
-        "type": "regular",
-        "category": "Airport_word",
-        "name": "Runway",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Insects",
-        "name": "Wasp",
-        "isText": false,
-        "image": "res/Item/insects_wasp_4.png"
-      },
-      {
-        "type": "regular",
-        "category": "Insects",
-        "name": "Ladybug",
-        "isText": false,
-        "image": "res/Item/insects_ladybug_2.png"
+        "type": "gold",
+        "category": "Grandma",
+        "name": "Grandma",
+        "isText": false
       },
       {
         "type": "regular",
@@ -297,33 +422,16 @@
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
         "category": "Flowers",
-        "name": "Flowers",
-        "isText": false
+        "name": "Peony",
+        "isText": false,
+        "image": "res/Item/flowers_peony_6.png"
       },
       {
         "type": "gold",
-        "category": "Molluscs_word",
-        "name": "Molluscs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Molluscs_word",
-        "name": "Clam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Material_word",
-        "name": "Metal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bedtime_word",
-        "name": "Yawn",
+        "category": "Islands_word",
+        "name": "Islands",
         "isText": true
       },
       {
@@ -334,15 +442,14 @@
       },
       {
         "type": "regular",
-        "category": "Jewelry",
-        "name": "Necklace",
-        "isText": false,
-        "image": "res/Item/jewelry_necklace_1.png"
+        "category": "Material_word",
+        "name": "Metal",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Bedtime_word",
-        "name": "Pajamas",
+        "category": "Dances_word",
+        "name": "Flamenco",
         "isText": true
       },
       {
@@ -353,90 +460,8 @@
       },
       {
         "type": "regular",
-        "category": "Islands_word",
-        "name": "Ibiza",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Material_word",
-        "name": "Plastic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Islands_word",
-        "name": "Bali",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Lily",
-        "isText": false,
-        "image": "res/Item/flowers_lily_2.png"
-      },
-      {
-        "type": "regular",
-        "category": "Bedtime_word",
-        "name": "Dream",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Insects",
-        "name": "Moth",
-        "isText": false,
-        "image": "res/Item/insects_moth_3.png"
-      },
-      {
-        "type": "gold",
-        "category": "Dairy_word",
-        "name": "Dairy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Islands_word",
-        "name": "Crete",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Rose",
-        "isText": false,
-        "image": "res/Item/flowers_rose_4.png"
-      },
-      {
-        "type": "gold",
         "category": "Dances_word",
-        "name": "Dances",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Molluscs_word",
-        "name": "Snail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dairy_word",
-        "name": "Yogurt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Daisy",
-        "isText": false,
-        "image": "res/Item/flowers_daisy_1.png"
-      },
-      {
-        "type": "gold",
-        "category": "Airport_word",
-        "name": "Airport",
+        "name": "Tango",
         "isText": true
       },
       {
@@ -448,41 +473,15 @@
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Peony",
+        "category": "Jewelry",
+        "name": "Diadem",
         "isText": false,
-        "image": "res/Item/flowers_peony_6.png"
-      },
-      {
-        "type": "gold",
-        "category": "Insects",
-        "name": "Insects",
-        "isText": false
+        "image": "res/Item/jewelry_diadem_7.png"
       },
       {
         "type": "regular",
-        "category": "Insects",
-        "name": "Ant",
-        "isText": false,
-        "image": "res/Item/insects_ant_6.png"
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Poppy",
-        "isText": false,
-        "image": "res/Item/flowers_poppy_5.png"
-      },
-      {
-        "type": "regular",
-        "category": "Molluscs_word",
-        "name": "Slug",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Material_word",
-        "name": "Material",
+        "category": "Airport_word",
+        "name": "Terminal",
         "isText": true
       }
     ],

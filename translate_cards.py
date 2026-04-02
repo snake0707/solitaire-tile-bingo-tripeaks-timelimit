@@ -106,13 +106,13 @@ def main():
     print()
 
     # Process basic card config
-    # Columns: id(0), comments(1), basic_card_name(2), basic_card_res(3),
-    #          basic_card_name_en(4), theme(5), French(6), German(7), Spanish(8), Portuguese(9)
+    # Columns: id(0), comments(1), basic_card_res(2),
+    #          basic_card_name_en(3), theme(4), French(5), German(6), Spanish(7), Portuguese(8)
     print("Processing sort_game_basic_card_config.csv...")
     t, m = process_csv(
         'config/sort_game_basic_card_config.csv',
-        name_col_idx=4, theme_col_idx=5,
-        fr_col_idx=6, de_col_idx=7, es_col_idx=8, pt_col_idx=9,
+        name_col_idx=3, theme_col_idx=4,
+        fr_col_idx=5, de_col_idx=6, es_col_idx=7, pt_col_idx=8,
         header_rows=5, translations=all_trans
     )
     print(f"  Translated: {t}, Missing: {len(m)}")
@@ -125,13 +125,13 @@ def main():
     print()
 
     # Process category card config
-    # Columns: id(0), comments(1), category_name(2), basic_card_content(3),
-    #          is_text(4), category_name_en(5), theme(6), French(7), German(8), Spanish(9), Portuguese(10)
+    # Columns: id(0), comments(1), basic_card_content(2),
+    #          is_text(3), category_name_en(4), theme(5), French(6), German(7), Spanish(8), Portuguese(9)
     print("Processing sort_game_category_card_config.csv...")
     t, m = process_csv(
         'config/sort_game_category_card_config.csv',
-        name_col_idx=5, theme_col_idx=6,
-        fr_col_idx=7, de_col_idx=8, es_col_idx=9, pt_col_idx=10,
+        name_col_idx=4, theme_col_idx=5,
+        fr_col_idx=6, de_col_idx=7, es_col_idx=8, pt_col_idx=9,
         header_rows=5, translations=all_trans
     )
     print(f"  Translated: {t}, Missing: {len(m)}")

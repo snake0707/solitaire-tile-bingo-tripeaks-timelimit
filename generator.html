@@ -418,11 +418,13 @@ function verifySolvable(tableau, categoryTargets, maxSteps, maxSlots, handPile, 
             undo.startIdx = move.startIdx;
 
             const topCard = removed[removed.length - 1];
-            if (topCard.card.type === 'gold') {
+            const bottomCard = removed[0];
+            const goldCard = topCard.card.type === 'gold' ? topCard : (bottomCard.card.type === 'gold' ? bottomCard : null);
+            if (goldCard) {
                 const emptyIdx = state.slots.findIndex(s => s === null);
                 const regularCount = removed.length - 1;
-                const target = categoryTargets[topCard.card.category] || 0;
-                state.slots[emptyIdx] = { key: topCard.card.category, collected: regularCount, target };
+                const target = categoryTargets[goldCard.card.category] || 0;
+                state.slots[emptyIdx] = { key: goldCard.card.category, collected: regularCount, target };
                 undo.slotIdx = emptyIdx;
                 undo.slotWasNone = true;
                 if (regularCount >= target) {
@@ -1059,14 +1061,28 @@ const MAX_SOLVER_ROUNDS = 3;
 const LOW_PRIORITY = 1;
 const NORMAL_PRIORITY = 2;
 const HIGH_PRIORITY = 3;
+// Old multiplier constants kept for reference but no longer used in getPriorityWeight
 const PLACE_TO_HOME_MUL = 4;
 const PLACE_TO_PLAY_STACK_MUL = 2;
 const STOCK_CARD_MUL = 1;
 
 // ─── Priority + Equality Backtracking Solver ──────────────────────
 
-function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
+function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative, priorityOnly, greedyOnly) {
+    if (conservative === undefined) conservative = false;
+    if (priorityOnly === undefined) priorityOnly = false;
+    if (greedyOnly === undefined) greedyOnly = false;
     const MAX_RECYCLES_SL = 3;
+
+    // Seeded PRNG (mulberry32) for reproducible random choices within solver
+    let _rngState = (Date.now() ^ 0x5DEECE66D) >>> 0;
+    function seedRng(s) { _rngState = s >>> 0; }
+    function rng() {
+        _rngState |= 0; _rngState = (_rngState + 0x6D2B79F5) | 0;
+        let t = Math.imul(_rngState ^ (_rngState >>> 15), 1 | _rngState);
+        t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    }
 
     // Deep clone state
     const state = {
@@ -1081,9 +1097,74 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
     };
 
     let nodesExplored = 0;
+    const seenSinceDrag = new Set();
+
+    function isSoftDeadlock() {
+        const totalHand = state.handPile.length + state.handDisplay.length;
+        if (seenSinceDrag.size < totalHand) return false;
+        for (let ci = 0; ci < state.tableau.length; ci++) {
+            const col = state.tableau[ci];
+            if (!col.length || !col[col.length - 1].faceUp) continue;
+            const top = col[col.length - 1].card;
+            if (top.type === 'regular') {
+                for (const s of state.slots) {
+                    if (s !== null && s.key === top.category && s.collected < s.target) return false;
+                }
+            }
+            if (top.type === 'gold' && state.slots.some(s => s === null)) return false;
+            // Can move to another column? (skip weight=0: no facedown + empty target)
+            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            for (let ti = 0; ti < state.tableau.length; ti++) {
+                if (ti === ci) continue;
+                if (!hasFacedown && state.tableau[ti].length === 0) continue;
+                if (canStackOnColumn(top, state.tableau[ti])) return false;
+            }
+        }
+        if (state.handDisplay.length > 0) {
+            const hc = state.handDisplay[state.handDisplay.length - 1];
+            if (hc.type === 'regular') {
+                for (const s of state.slots) {
+                    if (s !== null && s.key === hc.category && s.collected < s.target) return false;
+                }
+            }
+            if (hc.type === 'gold' && state.slots.some(s => s === null)) return false;
+            for (let ti = 0; ti < state.tableau.length; ti++) {
+                if (canStackOnColumn(hc, state.tableau[ti])) return false;
+            }
+        }
+        return true;
+    }
 
     function getTopCard(col) {
         return col.length > 0 ? col[col.length - 1] : null;
+    }
+
+    // Conservative mode helpers
+    function hasTableauRegularFor(cat) {
+        for (const col of state.tableau) {
+            for (const tc of col) {
+                if (tc.faceUp && tc.card.type === 'regular' && tc.card.category === cat) return true;
+            }
+        }
+        return false;
+    }
+    function isCatCompleted(cat) {
+        for (const s of state.slots) {
+            if (s !== null && s.key === cat && s.collected >= s.target) return true;
+        }
+        return false;
+    }
+    function isCatAllRegularsOnTableau(cat) {
+        const target = categoryTargets[cat] || 0;
+        if (target <= 0) return false;
+        for (const col of state.tableau) {
+            let count = 0;
+            for (const tc of col) {
+                if (tc.faceUp && tc.card.type === 'regular' && tc.card.category === cat) count++;
+            }
+            if (count >= target) return true;
+        }
+        return false;
     }
 
     function getMoves() {
@@ -1105,6 +1186,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
 
             let addedMulti = false;
             if (dragCount >= 2) {
+                // Case A: gold on top + regulars below → to empty slot
                 if (col[topIdx].card.type === 'gold' && hasEmptySlot) {
                     let allRegular = true;
                     for (let i = startIdx; i < topIdx; i++) {
@@ -1115,6 +1197,18 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                         addedMulti = true;
                     }
                 }
+                // Case C: gold on bottom + regulars above → to empty slot
+                if (!addedMulti && col[startIdx].card.type === 'gold' && hasEmptySlot) {
+                    let allRegular = true;
+                    for (let i = startIdx + 1; i <= topIdx; i++) {
+                        if (col[i].card.type !== 'regular') { allRegular = false; break; }
+                    }
+                    if (allRegular) {
+                        moves.push({ type: 'tableau_multi_to_slot', colIdx: ci, startIdx, count: dragCount });
+                        addedMulti = true;
+                    }
+                }
+                // Case B: all regular → match existing slot
                 if (!addedMulti) {
                     let allRegular = true;
                     for (let i = startIdx; i <= topIdx; i++) {
@@ -1130,7 +1224,8 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                 }
             }
 
-            if (top.card.type === 'regular') {
+            // Single card to slot (skip if multi already covers this card)
+            if (top.card.type === 'regular' && !addedMulti) {
                 const slotIdx = state.slots.findIndex(
                     s => s !== null && s.key === top.card.category && s.collected < s.target
                 );
@@ -1154,7 +1249,9 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                 }
             }
             if (topCard.type === 'gold' && hasEmptySlot) {
-                moves.push({ type: 'display_gold_to_slot' });
+                if (!conservative || hasTableauRegularFor(topCard.category)) {
+                    moves.push({ type: 'display_gold_to_slot' });
+                }
             }
         }
 
@@ -1164,16 +1261,45 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
             if (!top || !top.faceUp) continue;
             for (let ti = 0; ti < state.tableau.length; ti++) {
                 if (ti === ci) continue;
+                // Conservative: gold cards can only move column-to-column if category completed
+                if (conservative && top.card.type === 'gold' && !isCatAllRegularsOnTableau(top.card.category)) continue;
                 if (canStackOnColumn(top.card, state.tableau[ti])) {
                     moves.push({ type: 'tableau_to_column', srcCol: ci, dstCol: ti });
                 }
             }
         }
 
+        // Tableau → column (multi-card: consecutive same-category face-up cards ≥2)
+        for (let ci = 0; ci < state.tableau.length; ci++) {
+            const col = state.tableau[ci];
+            if (!col.length) continue;
+            const topIdx = col.length - 1;
+            if (!col[topIdx].faceUp) continue;
+            const cat = col[topIdx].card.category;
+            let startIdx = topIdx;
+            while (startIdx > 0 && col[startIdx - 1].faceUp && col[startIdx - 1].card.category === cat) {
+                startIdx--;
+            }
+            const dragCount = topIdx - startIdx + 1;
+            if (dragCount < 2) continue;
+            // Conservative: if top card is gold, only allow if category completed
+            if (conservative && col[topIdx].card.type === 'gold' && !isCatAllRegularsOnTableau(cat)) continue;
+            const bottomCard = col[startIdx].card;
+            for (let ti = 0; ti < state.tableau.length; ti++) {
+                if (ti === ci) continue;
+                if (canStackOnColumn(bottomCard, state.tableau[ti])) {
+                    moves.push({ type: 'tableau_multi_to_column', srcCol: ci, dstCol: ti, startIdx, count: dragCount });
+                }
+            }
+        }
+
         if (state.handDisplay.length > 0) {
             const topCard = state.handDisplay[state.handDisplay.length - 1];
+            // Conservative: gold in hand + no free slots → only if category completed
+            const freeSlots = state.slots.filter(s => s === null).length;
+            const skipGoldCol = conservative && topCard.type === 'gold' && freeSlots === 0 && !isCatAllRegularsOnTableau(topCard.category);
             for (let ti = 0; ti < state.tableau.length; ti++) {
-                if (canStackOnColumn(topCard, state.tableau[ti])) {
+                if (!skipGoldCol && canStackOnColumn(topCard, state.tableau[ti])) {
                     moves.push({ type: 'display_to_column', dstCol: ti });
                 }
             }
@@ -1210,11 +1336,13 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
             undo.startIdx = move.startIdx;
 
             const topCard = removed[removed.length - 1];
-            if (topCard.card.type === 'gold') {
+            const bottomCard = removed[0];
+            const goldCard = topCard.card.type === 'gold' ? topCard : (bottomCard.card.type === 'gold' ? bottomCard : null);
+            if (goldCard) {
                 const emptyIdx = state.slots.findIndex(s => s === null);
                 const regularCount = removed.length - 1;
-                const target = categoryTargets[topCard.card.category] || 0;
-                state.slots[emptyIdx] = { key: topCard.card.category, collected: regularCount, target };
+                const target = categoryTargets[goldCard.card.category] || 0;
+                state.slots[emptyIdx] = { key: goldCard.card.category, collected: regularCount, target };
                 undo.slotIdx = emptyIdx;
                 undo.slotWasNone = true;
                 if (regularCount >= target) {
@@ -1428,63 +1556,163 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
     }
 
     function getPriorityWeight(move) {
+        /* Weight system (HINT_AND_SOLVER_DESIGN.md §2.4, scaled ×2):
+         *  14 = complete category (frees slot)
+         *  10 = column move revealing face-down (doc: 5)
+         *   8 = categorize + reveal face-down, free slots > 1 (doc: 4)
+         *   6 = safe categorize / clear column / hand→slot free>1 (doc: 3)
+         *   4 = tight categorize / hand→column (doc: 2)
+         *   2 = gold when tight / flip / recycle (doc: 1)
+         */
         const mt = move.type;
-        if (mt === 'tableau_multi_to_slot') {
-            return HIGH_PRIORITY * PLACE_TO_HOME_MUL; // 12
+        const freeSlots = state.slots.filter(s => s === null).length;
+
+        // ── Column moves ──
+        if (mt === 'tableau_to_column') {
+            const col = state.tableau[move.srcCol];
+            const dstCol = state.tableau[move.dstCol];
+            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            const emptiesCol = col.length === 1;
+            if (!hasFacedown && dstCol.length === 0) return 0;
+            if (hasFacedown) return 10;
+            if (emptiesCol) return 6;
+            return 4;
         }
-        if (mt === 'tableau_to_slot' || mt === 'display_to_slot') {
-            let catKey = null;
-            if (mt === 'tableau_to_slot') {
-                const col = state.tableau[move.colIdx];
-                catKey = col.length > 0 ? col[col.length - 1].card.category : null;
-            } else {
-                catKey = state.handDisplay.length > 0 ? state.handDisplay[state.handDisplay.length - 1].category : null;
+        if (mt === 'tableau_multi_to_column') {
+            const col = state.tableau[move.srcCol];
+            const dstCol = state.tableau[move.dstCol];
+            const startIdx = move.startIdx;
+            const hasFacedown = startIdx > 0 && !col[startIdx - 1].faceUp;
+            const emptiesCol = startIdx === 0;
+            if (!hasFacedown && dstCol.length === 0) return 0;
+            if (hasFacedown) return 10;
+            if (emptiesCol) return 6;
+            return 4;
+        }
+
+        // ── Tableau regular → slot ──
+        if (mt === 'tableau_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            const card = col[col.length - 1].card;
+            for (const s of state.slots) {
+                if (s !== null && s.key === card.category) {
+                    if (s.collected + 1 >= s.target) return 14;
+                    break;
+                }
             }
-            if (catKey) {
+            if (freeSlots > 1) return hasFacedown ? 8 : 6;
+            return 4;
+        }
+
+        // ── Tableau gold → slot ──
+        if (mt === 'tableau_gold_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+            if (freeSlots <= 1) return 2;
+            return hasFacedown ? 8 : 6;
+        }
+
+        // ── Tableau multi → slot ──
+        if (mt === 'tableau_multi_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const startIdx = move.startIdx || 0;
+            const hasFacedown = startIdx > 0 && !col[startIdx - 1].faceUp;
+            const isGoldMove = startIdx < col.length && col[startIdx].card.type === 'gold';
+            const numCards = col.length - startIdx;
+            if (isGoldMove && freeSlots <= 1) return 2;
+            if (!isGoldMove) {
+                const catKey = col[col.length - 1].card.category;
                 for (const s of state.slots) {
                     if (s !== null && s.key === catKey) {
-                        if (s.target - s.collected <= 2) {
-                            return HIGH_PRIORITY * PLACE_TO_HOME_MUL; // 12
-                        }
+                        if (s.collected + numCards >= s.target) return 14;
                         break;
                     }
                 }
             }
-            return NORMAL_PRIORITY * PLACE_TO_HOME_MUL; // 8
+            if (freeSlots > 1) return hasFacedown ? 8 : 6;
+            return 4;
         }
-        if (mt === 'tableau_gold_to_slot' || mt === 'display_gold_to_slot') {
-            return LOW_PRIORITY * PLACE_TO_HOME_MUL; // 4
-        }
-        if (mt === 'tableau_to_column') {
-            const col = state.tableau[move.srcCol];
-            if (col.length >= 2 && !col[col.length - 2].faceUp) {
-                return NORMAL_PRIORITY * PLACE_TO_PLAY_STACK_MUL; // 4
+
+        // ── Hand display → slot ──
+        if (mt === 'display_to_slot') {
+            const card = state.handDisplay[state.handDisplay.length - 1];
+            for (const s of state.slots) {
+                if (s !== null && s.key === card.category) {
+                    if (s.collected + 1 >= s.target) return 14;
+                    break;
+                }
             }
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL; // 2
+            return freeSlots > 1 ? 6 : 4;
         }
-        if (mt === 'tableau_multi_to_column') {
-            const col = state.tableau[move.srcCol];
-            const startIdx = move.startIdx;
-            if (startIdx > 0 && !col[startIdx - 1].faceUp) {
-                return NORMAL_PRIORITY * PLACE_TO_PLAY_STACK_MUL; // 4
+        if (mt === 'display_gold_to_slot') {
+            if (freeSlots <= 1) return 2;
+            return 6;
+        }
+
+        // ── Hand display → column ──
+        if (mt === 'display_to_column') return 4;
+
+        // ── Flip / recycle ──
+        if (mt === 'flip_hand') return 2;
+        if (mt === 'recycle') return 2;
+
+        return 2;
+    }
+
+    function countFacedown(colIdx) {
+        return state.tableau[colIdx].filter(tc => !tc.faceUp).length;
+    }
+
+    function getTiebreakKey(move) {
+        const w = getPriorityWeight(move);
+        const mt = move.type;
+
+        // Weight 10: prefer source column with fewer face-down cards
+        if (w === 10) {
+            return countFacedown(move.srcCol);
+        }
+
+        // Weight 8: gold first (0), then fewer face-down (1+count)
+        if (w === 8) {
+            if (mt === 'tableau_gold_to_slot') return 0;
+            const src = move.colIdx !== undefined ? move.colIdx : 0;
+            return 1 + countFacedown(src);
+        }
+
+        // Weight 6: tableau gold first (0), then tableau by fewer face-down (1+count), then hand (100)
+        if (w === 6) {
+            if (mt === 'tableau_gold_to_slot') return 0;
+            if (mt === 'tableau_to_slot' || mt === 'tableau_multi_to_slot') {
+                return 1 + countFacedown(move.colIdx);
             }
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL; // 2
+            if (mt === 'tableau_to_column' || mt === 'tableau_multi_to_column') {
+                return 1 + countFacedown(move.srcCol);
+            }
+            return 100; // hand moves
         }
-        if (mt === 'display_to_column') {
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL; // 2
+
+        // Weight 2: 2b(multi gold) > 2a(single gold) > 2c(hand gold) > rest
+        if (w === 2) {
+            if (mt === 'tableau_multi_to_slot') return 0;
+            if (mt === 'tableau_gold_to_slot') return 1;
+            if (mt === 'display_gold_to_slot') return 2;
+            return 100;
         }
-        if (mt === 'flip_hand') {
-            return NORMAL_PRIORITY * STOCK_CARD_MUL; // 2
+
+        // Weight 4: slot moves before column moves (don't waste a step going via column)
+        if (w === 4) {
+            if (mt === 'tableau_to_slot' || mt === 'tableau_multi_to_slot' || mt === 'display_to_slot') return 0;
+            return 1;
         }
-        if (mt === 'recycle') {
-            return LOW_PRIORITY * STOCK_CARD_MUL; // 1
-        }
-        return 1;
+
+        return 0;
     }
 
     function solveWithBacktracking(usePriority) {
         let totalSteps = 0;
         const moveSequence = [];
+        const movePath = [];      // track full move objects for path output
 
         const stack = [];
 
@@ -1493,7 +1721,11 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
             if (!moves.length) return [];
             if (moves.length > MAX_POSSIBLE_MOVES) moves = moves.slice(0, MAX_POSSIBLE_MOVES);
             if (usePriority) {
-                moves.sort((a, b) => getPriorityWeight(b) - getPriorityWeight(a));
+                moves.sort((a, b) => {
+                    const dw = getPriorityWeight(b) - getPriorityWeight(a);
+                    if (dw !== 0) return dw;
+                    return getTiebreakKey(a) - getTiebreakKey(b);
+                });
             }
             return moves;
         }
@@ -1501,29 +1733,45 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
         function greedyPlayout() {
             const undos = [];
             const mtypes = [];
+            const mdicts = [];
             let won = false;
+            seenSinceDrag.clear();
             while (state.stepsLeft > 0) {
                 if (state.completedCount >= state.numCategories) { won = true; break; }
                 let moves = getMoves();
                 if (!moves.length) break;
                 let move;
                 if (usePriority) {
-                    moves.sort((a, b) => getPriorityWeight(b) - getPriorityWeight(a));
-                    // Random tiebreak among same top weight
+                    moves.sort((a, b) => {
+                        const dw = getPriorityWeight(b) - getPriorityWeight(a);
+                        if (dw !== 0) return dw;
+                        return getTiebreakKey(a) - getTiebreakKey(b);
+                    });
                     const topW = getPriorityWeight(moves[0]);
+                    const topTB = getTiebreakKey(moves[0]);
                     let topCount = 1;
-                    while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW) topCount++;
-                    move = moves[Math.floor(Math.random() * topCount)];
+                    while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW && getTiebreakKey(moves[topCount]) === topTB) topCount++;
+                    move = moves[Math.floor(rng() * topCount)];
                 } else {
-                    move = moves[Math.floor(Math.random() * moves.length)];
+                    move = moves[Math.floor(rng() * moves.length)];
                 }
                 undos.push(applyMove(move));
                 mtypes.push(move.type);
+                mdicts.push({...move});
                 totalSteps++;
                 nodesExplored++;
+                // Soft deadlock tracking
+                if (move.type === 'flip_hand') {
+                    if (state.handDisplay.length > 0) {
+                        seenSinceDrag.add(state.handDisplay[state.handDisplay.length - 1]);
+                    }
+                    if (isSoftDeadlock()) break;
+                } else if (move.type !== 'recycle') {
+                    seenSinceDrag.clear();
+                }
                 if (totalSteps > MAX_SOLVER_STEPS) break;
             }
-            return { won, undos, mtypes };
+            return { won, undos, mtypes, mdicts };
         }
 
         let candidates = getSortedCandidates();
@@ -1532,6 +1780,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
         let move = candidates[0];
         let undo = applyMove(move);
         moveSequence.push(move.type);
+        movePath.push({...move});
         totalSteps++;
         nodesExplored++;
         stack.push({ candidates, index: 0, undo, move });
@@ -1545,9 +1794,11 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                     const cat = classifyMove(mt);
                     if (cat) ms[cat]++;
                 }
+                const resultPath = [...movePath];
                 for (let i = stack.length - 1; i >= 0; i--) undoMove(stack[i].undo);
                 moveSequence.length = 0;
-                return { won: true, stepsUsed, moveStats: ms, nodesExplored };
+                movePath.length = 0;
+                return { won: true, stepsUsed, moveStats: ms, nodesExplored, movePath: resultPath };
             }
 
             const depth = stack.length;
@@ -1558,6 +1809,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                     move = candidates[0];
                     undo = applyMove(move);
                     moveSequence.push(move.type);
+                    movePath.push({...move});
                     totalSteps++;
                     nodesExplored++;
                     stack.push({ candidates, index: 0, undo, move });
@@ -1572,10 +1824,12 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                         const cat = classifyMove(mt);
                         if (cat) ms[cat]++;
                     }
+                    const resultPath = [...movePath, ...playout.mdicts];
                     for (let i = playout.undos.length - 1; i >= 0; i--) undoMove(playout.undos[i]);
                     for (let i = stack.length - 1; i >= 0; i--) undoMove(stack[i].undo);
                     moveSequence.length = 0;
-                    return { won: true, stepsUsed, moveStats: ms, nodesExplored };
+                    movePath.length = 0;
+                    return { won: true, stepsUsed, moveStats: ms, nodesExplored, movePath: resultPath };
                 } else {
                     for (let i = playout.undos.length - 1; i >= 0; i--) undoMove(playout.undos[i]);
                 }
@@ -1588,10 +1842,12 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                 if (nextIdx < node.candidates.length) {
                     undoMove(node.undo);
                     moveSequence.pop();
+                    movePath.pop();
                     node.index = nextIdx;
                     const nextMove = node.candidates[nextIdx];
                     const nextUndo = applyMove(nextMove);
                     moveSequence.push(nextMove.type);
+                    movePath.push({...nextMove});
                     totalSteps++;
                     nodesExplored++;
                     node.undo = nextUndo;
@@ -1600,6 +1856,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
                 } else {
                     undoMove(node.undo);
                     moveSequence.pop();
+                    movePath.pop();
                     stack.pop();
                 }
             }
@@ -1611,8 +1868,62 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
         return null;
     }
 
+    // ── Greedy-only mode: single pass, no backtracking ──
+    if (greedyOnly) {
+        seedRng(42);
+        seenSinceDrag.clear();
+        const playoutPath = [];
+        let playoutSteps = 0;
+        const maxPlayoutSteps = 300;
+        while (state.stepsLeft > 0 && playoutSteps < maxPlayoutSteps) {
+            if (state.completedCount >= state.numCategories) break;
+            let moves = getMoves();
+            if (!moves.length) break;
+            moves.sort((a, b) => {
+                const dw = getPriorityWeight(b) - getPriorityWeight(a);
+                if (dw !== 0) return dw;
+                return getTiebreakKey(a) - getTiebreakKey(b);
+            });
+            const topW = getPriorityWeight(moves[0]);
+            const topTB = getTiebreakKey(moves[0]);
+            let topCount = 1;
+            while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW && getTiebreakKey(moves[topCount]) === topTB) topCount++;
+            const move = moves[Math.floor(rng() * topCount)];
+            playoutPath.push({ ...move });
+            applyMove(move);
+            playoutSteps++;
+            // Soft deadlock tracking
+            if (move.type === 'flip_hand') {
+                if (state.handDisplay.length > 0) {
+                    seenSinceDrag.add(state.handDisplay[state.handDisplay.length - 1]);
+                }
+                if (isSoftDeadlock()) break;
+            } else if (move.type !== 'recycle') {
+                seenSinceDrag.clear();
+            }
+        }
+        const won = state.completedCount >= state.numCategories;
+        const stepsUsed = maxPlayoutSteps - state.stepsLeft + (state.stepsLeft > 0 ? state.stepsLeft : 0);
+        return {
+            won,
+            stepsUsed: playoutSteps,
+            moveStats: (() => {
+                const ms = emptyMoveStats();
+                for (const m of playoutPath) {
+                    const cat = classifyMove(m.type);
+                    if (cat) ms[cat]++;
+                }
+                return ms;
+            })(),
+            strategyType: 'priority-greedy',
+            nodesExplored: playoutSteps,
+            movePath: playoutPath,
+        };
+    }
+
     // Multi-round: Priority Strategy (up to MAX_SOLVER_ROUNDS)
     for (let r = 0; r < MAX_SOLVER_ROUNDS; r++) {
+        seedRng(r * 1000003 + 42);  // Different seed each round
         let result = solveWithBacktracking(true);
         if (result && result.won) {
             result.strategyType = 'priority';
@@ -1620,13 +1931,60 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
         }
     }
 
-    // Multi-round: Equality Strategy (up to MAX_SOLVER_ROUNDS)
+    // Multi-round: Equality Strategy (up to MAX_SOLVER_ROUNDS) — skip if priorityOnly
+    if (!priorityOnly) {
     for (let r = 0; r < MAX_SOLVER_ROUNDS; r++) {
+        seedRng(r * 1000003 + 99);  // Different seed each round
         let result = solveWithBacktracking(false);
         if (result && result.won) {
             result.strategyType = 'equality';
             return result;
         }
+    }
+    }
+
+    // If priorityOnly and failed, do a 300-step greedy playout for diagnostic output
+    if (priorityOnly) {
+        seedRng(777);  // Fixed seed for reproducible greedy playout
+        // Reset state for greedy playout
+        state.tableau = tableau.map(col => col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp })));
+        state.slots = new Array(maxSlots).fill(null);
+        state.stepsLeft = 300;
+        state.completedCount = 0;
+        state.numCategories = Object.keys(categoryTargets).length;
+        state.handPile = handPile.map(c => ({ ...c }));
+        state.handDisplay = [];
+        state.recycleCount = 0;
+
+        const playoutPath = [];
+        let playoutSteps = 0;
+        while (state.stepsLeft > 0 && playoutSteps < 300) {
+            if (state.completedCount >= state.numCategories) break;
+            let moves = getMoves();
+            if (!moves.length) break;
+            moves.sort((a, b) => {
+                const dw = getPriorityWeight(b) - getPriorityWeight(a);
+                if (dw !== 0) return dw;
+                return getTiebreakKey(a) - getTiebreakKey(b);
+            });
+            const topW = getPriorityWeight(moves[0]);
+            const topTB = getTiebreakKey(moves[0]);
+            let topCount = 1;
+            while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW && getTiebreakKey(moves[topCount]) === topTB) topCount++;
+            const move = moves[Math.floor(rng() * topCount)];
+            playoutPath.push({ ...move });
+            applyMove(move);
+            playoutSteps++;
+        }
+        const won = state.completedCount >= state.numCategories;
+        return {
+            won,
+            stepsUsed: playoutSteps,
+            moveStats: emptyMoveStats(),
+            strategyType: 'priority-greedy',
+            nodesExplored,
+            movePath: playoutPath,
+        };
     }
 
     return {
@@ -1639,6 +1997,17 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile) {
 }
 
 // ─── Layout Generation ────────────────────────────────────────────
+
+/**
+ * Run a greedy playout (no backtracking) and check if it gets soft-deadlocked within maxSteps.
+ * Returns { softDead: bool, stepsUsed: int, won: bool }
+ */
+function greedyDeadlockCheck(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative) {
+    const result = solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative || false, true, true);
+    // If won → not deadlocked; if stepsUsed < maxSteps and not won → deadlocked
+    const softDead = !result.won && result.stepsUsed < maxSteps;
+    return { softDead, stepsUsed: result.stepsUsed, won: result.won };
+}
 
 function generateSolvableLayout(level) {
     const config = getLevelSettings(level);
@@ -1679,6 +2048,25 @@ function generateSolvableLayout(level) {
         if (stepsUsed < solveStepMin || stepsUsed > solveStepMax) {
             continue;
         }
+
+        // 条件2: 策略2（保守, priority only）有解且步数在 [solveStepMin, solveStepMax]
+        const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true);
+        if (!result2.won) continue;
+        const solver2Steps = result2.stepsUsed;
+        if (solver2Steps < solveStepMin || solver2Steps > solveStepMax) continue;
+        const solver2StrategyType = result2.strategyType;
+
+        // 条件3: 策略1纯贪心在 displaySteps 内不被软卡死
+        const check1 = greedyDeadlockCheck(gen.tableau, gen.categoryTargets, displaySteps, config.maxSlots, gen.handPile, false);
+        if (check1.softDead) continue;
+
+        // 条件4: 策略2纯贪心在 displaySteps 内不被软卡死
+        const check2 = greedyDeadlockCheck(gen.tableau, gen.categoryTargets, displaySteps, config.maxSlots, gen.handPile, true);
+        if (check2.softDead) continue;
+
+        // 策略2纯贪心输出（用于 solution log）
+        const result2Greedy = solveLevel(gen.tableau, gen.categoryTargets, 9999, config.maxSlots, gen.handPile, true, true, true);
+
         return {
             layout: {
                 config: {
@@ -1686,7 +2074,11 @@ function generateSolvableLayout(level) {
                     maxSteps: displaySteps,
                     strategyType: result.strategyType,
                     solverSteps: stepsUsed,
+                    solverMaxSteps: maxSolverSteps,
                     moveStats: result.moveStats,
+                    solver2Steps,
+                    solver2StrategyType,
+                    solver2Stats: result2.moveStats,
                 },
                 tableau: gen.tableau.map(col => col.map(tc => ({
                     card: { ...tc.card },
@@ -1701,6 +2093,10 @@ function generateSolvableLayout(level) {
             maxSteps: displaySteps,
             solveStepMax: maxSolverSteps,
             strategyType: result.strategyType,
+            movePath: result.movePath || [],
+            movePath2: result2Greedy.movePath || [],
+            solver2Steps,
+            solver2StrategyType,
             difficultySkips,
         };
     }
@@ -1717,6 +2113,211 @@ function downloadJSON(filename, data) {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+}
+
+function downloadTextFile(filename, text) {
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+function formatSolutionLog(level, layoutIdx, totalLayouts, layout, movePath, stepsUsed, strategyType) {
+    const config = layout.config;
+    const lines = [];
+
+    lines.push('========================================');
+    lines.push(`Level ${level}, Layout ${layoutIdx + 1}/${totalLayouts}`);
+    lines.push('========================================');
+    lines.push(`Config: slots=${config.maxSlots}, maxSteps=${config.maxSteps}, solverSteps=${stepsUsed}, strategyType=${strategyType}`);
+
+    // Tableau
+    lines.push('Tableau:');
+    layout.tableau.forEach((col, i) => {
+        const cards = col.map(tc => {
+            const flag = tc.faceUp ? '\u2191' : '\u2193';
+            const ctype = tc.card.type === 'gold' ? 'G' : 'R';
+            return `${flag}${ctype}:${tc.card.name}`;
+        });
+        lines.push(`  Col ${i}: ${cards.join(' | ')}`);
+    });
+    lines.push(`Hand: ${layout.handPile.length} cards`);
+    lines.push(`Categories: ${JSON.stringify(layout.categoryTargets)}`);
+    lines.push('');
+
+    if (!movePath || !movePath.length) {
+        lines.push('(no movePath recorded)');
+        return lines.join('\n');
+    }
+
+    lines.push(`=== solved ${stepsUsed} steps (${strategyType}) ===`);
+    lines.push('');
+
+    // Replay movePath with state tracking
+    const state = {
+        tableau: layout.tableau.map(col => col.map(tc => ({ card: { ...tc.card }, faceUp: tc.faceUp }))),
+        slots: new Array(config.maxSlots).fill(null),
+        completedCount: 0,
+        numCategories: Object.keys(layout.categoryTargets).length,
+        handPile: layout.handPile.map(c => ({ ...c })),
+        handDisplay: [],
+        recycleCount: 0,
+    };
+    const categoryTargets = layout.categoryTargets;
+
+    function slotsStr() {
+        return '[' + state.slots.map(s => {
+            if (!s) return '___';
+            return `${s.key.substring(0, 8)}(${s.collected}/${s.target})`;
+        }).join(', ') + ']';
+    }
+
+    function describeMove(move) {
+        const mt = move.type;
+        if (mt === 'tableau_multi_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const si = move.startIdx || 0;
+            const names = col.slice(si).map(c => c.card.name);
+            return `Col${move.colIdx}\u2192Slot(multi) [${names.join(', ')}]`;
+        } else if (mt === 'tableau_to_slot') {
+            const col = state.tableau[move.colIdx];
+            return `Col${move.colIdx}\u2192Slot [${col[col.length - 1].card.name}]`;
+        } else if (mt === 'tableau_gold_to_slot') {
+            const col = state.tableau[move.colIdx];
+            return `Col${move.colIdx}\u2192Slot(gold) [${col[col.length - 1].card.name}]`;
+        } else if (mt === 'display_to_slot') {
+            return `Hand\u2192Slot [${state.handDisplay[state.handDisplay.length - 1].name}]`;
+        } else if (mt === 'display_gold_to_slot') {
+            return `Hand\u2192Slot(gold) [${state.handDisplay[state.handDisplay.length - 1].name}]`;
+        } else if (mt === 'tableau_to_column') {
+            const col = state.tableau[move.srcCol];
+            return `Col${move.srcCol}\u2192Col${move.dstCol} [${col[col.length - 1].card.name}]`;
+        } else if (mt === 'tableau_multi_to_column') {
+            const si = move.startIdx || 0;
+            const names = state.tableau[move.srcCol].slice(si).map(c => c.card.name);
+            return `Col${move.srcCol}\u2192Col${move.dstCol}(multi) [${names.join(', ')}]`;
+        } else if (mt === 'display_to_column') {
+            return `Hand\u2192Col${move.dstCol} [${state.handDisplay[state.handDisplay.length - 1].name}]`;
+        } else if (mt === 'flip_hand') {
+            return `Flip [${state.handPile[state.handPile.length - 1].name}]`;
+        } else if (mt === 'recycle') {
+            return `Recycle (${state.handDisplay.length} cards)`;
+        }
+        return mt;
+    }
+
+    function autoFlip(col) {
+        if (col.length > 0 && !col[col.length - 1].faceUp) {
+            col[col.length - 1].faceUp = true;
+        }
+    }
+
+    function replayMove(move) {
+        const mt = move.type;
+        if (mt === 'tableau_multi_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const si = move.startIdx || 0;
+            const removed = col.splice(si);
+            const top = removed[removed.length - 1];
+            const bottom = removed[0];
+            const gold = top.card.type === 'gold' ? top : (bottom.card.type === 'gold' ? bottom : null);
+            if (gold) {
+                const ei = state.slots.indexOf(null);
+                const rc = removed.length - 1;
+                const t = categoryTargets[gold.card.category] || 0;
+                state.slots[ei] = { key: gold.card.category, collected: rc, target: t };
+                if (rc >= t) { state.slots[ei] = null; state.completedCount++; }
+            } else {
+                for (let si2 = 0; si2 < state.slots.length; si2++) {
+                    const s = state.slots[si2];
+                    if (s && s.key === top.card.category) {
+                        s.collected += removed.length;
+                        if (s.collected >= s.target) { state.slots[si2] = null; state.completedCount++; }
+                        break;
+                    }
+                }
+            }
+            autoFlip(col);
+        } else if (mt === 'tableau_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const card = col.pop();
+            for (let si = 0; si < state.slots.length; si++) {
+                const s = state.slots[si];
+                if (s && s.key === card.card.category) {
+                    s.collected++;
+                    if (s.collected >= s.target) { state.slots[si] = null; state.completedCount++; }
+                    break;
+                }
+            }
+            autoFlip(col);
+        } else if (mt === 'tableau_gold_to_slot') {
+            const col = state.tableau[move.colIdx];
+            const card = col.pop();
+            const ei = state.slots.indexOf(null);
+            state.slots[ei] = { key: card.card.category, collected: 0, target: categoryTargets[card.card.category] || 0 };
+            autoFlip(col);
+        } else if (mt === 'display_to_slot') {
+            const card = state.handDisplay.pop();
+            for (let si = 0; si < state.slots.length; si++) {
+                const s = state.slots[si];
+                if (s && s.key === card.category) {
+                    s.collected++;
+                    if (s.collected >= s.target) { state.slots[si] = null; state.completedCount++; }
+                    break;
+                }
+            }
+        } else if (mt === 'display_gold_to_slot') {
+            const card = state.handDisplay.pop();
+            const ei = state.slots.indexOf(null);
+            state.slots[ei] = { key: card.category, collected: 0, target: categoryTargets[card.category] || 0 };
+        } else if (mt === 'tableau_to_column') {
+            const src = state.tableau[move.srcCol];
+            const tc = src.pop();
+            state.tableau[move.dstCol].push(tc);
+            autoFlip(src);
+        } else if (mt === 'tableau_multi_to_column') {
+            const src = state.tableau[move.srcCol];
+            const si = move.startIdx || 0;
+            const removed = src.splice(si);
+            state.tableau[move.dstCol].push(...removed);
+            autoFlip(src);
+        } else if (mt === 'display_to_column') {
+            const card = state.handDisplay.pop();
+            state.tableau[move.dstCol].push({ card, faceUp: true });
+        } else if (mt === 'flip_hand') {
+            const card = state.handPile.pop();
+            state.handDisplay.push(card);
+        } else if (mt === 'recycle') {
+            state.handPile = [...state.handDisplay].reverse();
+            state.handDisplay = [];
+            state.recycleCount++;
+        }
+    }
+
+    lines.push(`--- Solution Path (${movePath.length} steps) ---`);
+    lines.push('');
+    for (let i = 0; i < movePath.length; i++) {
+        const move = movePath[i];
+        const desc = describeMove(move);
+        const step = String(i + 1).padStart(4);
+        lines.push(`${step}. ${desc}  Slots=${slotsStr()}`);
+        replayMove(move);
+    }
+
+    if (state.completedCount >= state.numCategories) {
+        lines.push('');
+        lines.push(`Solved! ${movePath.length} steps`);
+    } else {
+        lines.push('');
+        lines.push(`Replay error: ${state.completedCount}/${state.numCategories} categories completed`);
+    }
+
+    return lines.join('\n');
 }
 
 // ─── UI ────────────────────────────────────────────────────────────
@@ -1760,6 +2361,8 @@ btnGenerate.addEventListener('click', async () => {
         const catNames = catDefs.map(d => d.categoryName).join(', ');
         log(`\n--- Level ${lv} (${cfg.numColumns} cols, ${cfg.totalColumnCards} tableau cards, ${cfg.maxSlots} slots, ${catDefs.length} cats: ${catNames}) ---`);
 
+        const layoutResults = []; // Store movePath and metadata for solution log
+
         for (let i = 0; i < layoutsPerLevel; i++) {
             setProgress((completed / totalWork) * 100, `Level ${lv}: layout ${i + 1}/${layoutsPerLevel}`);
 
@@ -1769,6 +2372,14 @@ btnGenerate.addEventListener('click', async () => {
                 const result = generateSolvableLayout(lv);
                 if (result.layout) {
                     layouts.push(result.layout);
+                    layoutResults.push({
+                        movePath: result.movePath,
+                        stepsUsed: result.stepsUsed,
+                        strategyType: result.strategyType,
+                        movePath2: result.movePath2,
+                        solver2Steps: result.solver2Steps,
+                        solver2StrategyType: result.solver2StrategyType,
+                    });
                     const totalCards = result.layout.tableau.reduce((s, c) => s + c.length, 0);
                     log(`  Layout ${i + 1}: solved by ${result.strategyType} (${totalCards} tableau + ${result.layout.handPile.length} hand, ${result.stepsUsed}/${result.solveStepMax} steps, display=${result.maxSteps}, ${result.attempts} attempts)`);
 
@@ -1787,6 +2398,13 @@ btnGenerate.addEventListener('click', async () => {
                         return labels.filter(([k]) => (stats[k] || 0) > 0).map(([k, l]) => `${l}=${stats[k]}`).join(', ') || '(none)';
                     };
                     log(`    ops: ${formatStats(result.layout.config.moveStats)}`);
+                    // Strategy 2 log
+                    if (result.solver2Steps > 0) {
+                        log(`    策略2(保守): ${result.solver2Steps} steps by ${result.solver2StrategyType}`);
+                        log(`    策略2 ops: ${formatStats(result.layout.config.solver2Stats)}`);
+                    } else {
+                        log(`    策略2(保守): Priority无解, 输出${result.movePath2 ? result.movePath2.length : 0}步贪心路径`);
+                    }
                 } else {
                     log(`  Layout ${i + 1}: FAILED after ${result.attempts} attempts (${result.difficultySkips || 0} difficulty-filtered)`);
                 }
@@ -1800,6 +2418,35 @@ btnGenerate.addEventListener('click', async () => {
         if (layouts.length > 0) {
             downloadJSON(`level_${lv}.json`, layouts);
             log(`  Downloaded level_${lv}.json (${layouts.length} layouts)`);
+
+            // Generate and download solution log
+            const logParts = [];
+            for (let li = 0; li < layouts.length; li++) {
+                const lr = layoutResults[li];
+                if (lr) {
+                    logParts.push(formatSolutionLog(
+                        lv, li, layouts.length, layouts[li],
+                        lr.movePath, lr.stepsUsed, lr.strategyType
+                    ));
+                    // Strategy 2 solution log — always output path (solved or 300-step greedy playout)
+                    if (lr.movePath2 && lr.movePath2.length > 0) {
+                        const s2label = lr.solver2Steps > 0
+                            ? lr.solver2StrategyType + ' (conservative)'
+                            : lr.solver2StrategyType + ' (conservative, FAILED)';
+                        const s2steps = lr.solver2Steps > 0 ? lr.solver2Steps : lr.movePath2.length;
+                        logParts.push(formatSolutionLog(
+                            lv, li, layouts.length, layouts[li],
+                            lr.movePath2, s2steps, s2label
+                        ));
+                    } else {
+                        logParts.push(`=== Level ${lv} Layout ${li + 1} - Strategy 2 (conservative): UNSOLVABLE ===`);
+                    }
+                }
+            }
+            if (logParts.length > 0) {
+                downloadTextFile(`level_${lv}_solutions.txt`, logParts.join('\n\n\n'));
+                log(`  Downloaded level_${lv}_solutions.txt`);
+            }
         } else {
             log(`  WARNING: No solvable layouts found for level ${lv}`);
         }

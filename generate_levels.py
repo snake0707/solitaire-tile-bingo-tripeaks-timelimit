@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Generate level JSON files from level_config_v2.xlsx (SAJLike solitaire format).
+Generate level JSON files from level_config_v3_merged.xlsx (SAJLike solitaire format).
 
 Reads:
-  config/level_config_v2.xlsx  -- level definitions (sheet "level") + card defs (sheet "card")
+  config/level_config_v3_merged.xlsx  -- level definitions (sheet "level") + card defs (sheet "card")
   res/Item/*.png               -- image assets for image-type categories
 
 Writes:
@@ -96,9 +96,16 @@ def read_level_sheet(filepath):
                 column_sizes.append(int(row[i]))
         num_categories = int(row[7]) if len(row) > 7 and row[7] is not None else 0
         base_steps = int(row[9]) if len(row) > 9 and row[9] is not None else 0
-        display_steps = int(row[12]) if len(row) > 12 and row[12] is not None else base_steps
-        solve_step_min = int(row[13]) if len(row) > 13 and row[13] is not None else 0
-        solve_step_max = int(row[14]) if len(row) > 14 and row[14] is not None else base_steps * 2
+        adjust_ratio = float(row[10]) if len(row) > 10 and row[10] is not None else 0
+        solve_range = float(row[11]) if len(row) > 11 and row[11] is not None else 0
+        # Compute derived fields (replicate Excel formulas for v3 compatibility)
+        # 真实步数 = ROUND(基础步数 * (1 + 调整比例/100), 0)
+        display_steps = int(row[12]) if len(row) > 12 and row[12] is not None else round(base_steps * (1 + adjust_ratio / 100))
+        # delta = ROUND(基础步数 * 求解范围/100/2, 0)
+        delta = round(base_steps * solve_range / 100 / 2)
+        # 求解步数下限 = 基础步数 - delta, 求解步数上限 = 基础步数 + delta
+        solve_step_min = int(row[13]) if len(row) > 13 and row[13] is not None else base_steps - delta
+        solve_step_max = int(row[14]) if len(row) > 14 and row[14] is not None else base_steps + delta
 
         result[level] = {
             'maxSlots': max_slots,
@@ -564,21 +571,19 @@ MAX_POSSIBLE_MOVES = 50     # 每步最多考虑的分支数
 MAX_SOLVER_STEPS = 5000     # 单次模拟最大步数
 MAX_SOLVER_ROUNDS = 3       # 每种策略最多跑几轮
 
-# 权重系统: Weight = BaseWeight × Multiplier
-LOW_PRIORITY = 1
-NORMAL_PRIORITY = 2
-HIGH_PRIORITY = 3
-PLACE_TO_HOME_MUL = 4      # 放入收集槽
-PLACE_TO_PLAY_STACK_MUL = 2 # 列间移动
-STOCK_CARD_MUL = 1          # 翻牌/回收
 
-
-def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
+def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=False):
     """Priority + Equality backtracking solver (inspired by competitor approach).
 
     Two-round strategy:
       1. Priority Strategy: greedy with backtracking, weighted move selection
       2. Equality Strategy: unbiased DFS with backtracking
+
+    Args:
+        conservative: If True, use conservative gold card rules:
+          - display_gold_to_slot: only if tableau has face-up regular of same category
+          - gold column-to-column: only if category fully collected
+          - display gold to column: only if free_slots > 0 or category fully collected
 
     Returns: { 'won': bool, 'stepsUsed': int, 'moveStats': dict,
                'strategyType': 'priority'|'equality', 'nodesExplored': int }
@@ -596,9 +601,40 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
     }
 
     nodes_explored = [0]
+    seen_since_drag = set()  # Track hand cards seen since last successful drag (for soft deadlock)
 
     def get_top_card(col):
         return col[-1] if col else None
+
+    # ── Conservative mode helpers ──
+    def _has_tableau_regular_for(cat):
+        """Check if tableau has any face-up regular card of the given category."""
+        for col in state['tableau']:
+            for tc in col:
+                if tc['faceUp'] and tc['card']['type'] == 'regular' and tc['card']['category'] == cat:
+                    return True
+        return False
+
+    def _is_cat_completed(cat):
+        """Check if category's regular cards are fully collected in slots."""
+        for s in state['slots']:
+            if s is not None and s['key'] == cat and s['collected'] >= s['target']:
+                return True
+        return False
+
+    def _is_cat_all_regulars_on_tableau(cat):
+        """Check if all regular cards of a category are face-up on a single tableau column."""
+        target = category_targets.get(cat, 0)
+        if target <= 0:
+            return False
+        for col in state['tableau']:
+            count = 0
+            for tc in col:
+                if tc['faceUp'] and tc['card']['type'] == 'regular' and tc['card']['category'] == cat:
+                    count += 1
+            if count >= target:
+                return True
+        return False
 
     def get_moves():
         moves = []
@@ -628,7 +664,13 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                         moves.append({'type': 'tableau_multi_to_slot', 'colIdx': ci, 'startIdx': start_idx, 'count': drag_count})
                         added_multi = True
 
-                # Case B: all regular → match existing slot
+
+                # Case C: gold on bottom + regulars above → to empty slot
+                if not added_multi and col[start_idx]['card']['type'] == 'gold' and has_empty_slot:
+                    all_regular_above = all(col[i]['card']['type'] == 'regular' for i in range(start_idx + 1, top_idx + 1))
+                    if all_regular_above:
+                        moves.append({'type': 'tableau_multi_to_slot', 'colIdx': ci, 'startIdx': start_idx, 'count': drag_count})
+                        added_multi = True
                 if not added_multi and all(col[i]['card']['type'] == 'regular' for i in range(start_idx, top_idx + 1)):
                     for si, s in enumerate(state['slots']):
                         if s is not None and s['key'] == cat and s['collected'] + drag_count <= s['target']:
@@ -636,8 +678,8 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                             added_multi = True
                             break
 
-            # Single card moves (always available alongside multi)
-            if top['card']['type'] == 'regular':
+            # Single card moves (skip if multi-to-slot already covers this card)
+            if top["card"]["type"] == "regular" and not added_multi:
                 slot_idx = None
                 for si, s in enumerate(state['slots']):
                     if s is not None and s['key'] == top['card']['category'] and s['collected'] < s['target']:
@@ -662,7 +704,8 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     moves.append({'type': 'display_to_slot', 'slotIdx': slot_idx})
 
             if top_card['type'] == 'gold' and has_empty_slot:
-                moves.append({'type': 'display_gold_to_slot'})
+                if not conservative or _has_tableau_regular_for(top_card['category']):
+                    moves.append({'type': 'display_gold_to_slot'})
 
         # Tableau → column (single card)
         for ci in range(len(state['tableau'])):
@@ -672,6 +715,9 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                 continue
             for ti in range(len(state['tableau'])):
                 if ti == ci:
+                    continue
+                # Conservative: gold cards can only move column-to-column if category completed
+                if conservative and top['card']['type'] == 'gold' and not _is_cat_all_regulars_on_tableau(top['card']['category']):
                     continue
                 if can_stack_on_column(top['card'], state['tableau'][ti]):
                     moves.append({'type': 'tableau_to_column', 'srcCol': ci, 'dstCol': ti})
@@ -695,14 +741,20 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
             for ti in range(len(state['tableau'])):
                 if ti == ci:
                     continue
+                # Conservative: gold cards can only move column-to-column if category completed
+                if conservative and col[top_idx]['card']['type'] == 'gold' and not _is_cat_all_regulars_on_tableau(cat):
+                    continue
                 if can_stack_on_column(bottom_card, state['tableau'][ti]):
                     moves.append({'type': 'tableau_multi_to_column', 'srcCol': ci, 'dstCol': ti, 'startIdx': start_idx, 'count': drag_count})
 
         # Hand display → column
         if state['handDisplay']:
             top_card = state['handDisplay'][-1]
+            # Conservative: gold in hand + no free slots → only if category completed
+            free_slots_now = sum(1 for s in state['slots'] if s is None)
+            skip_gold_col = conservative and top_card['type'] == 'gold' and free_slots_now == 0 and not _is_cat_all_regulars_on_tableau(top_card['category'])
             for ti in range(len(state['tableau'])):
-                if can_stack_on_column(top_card, state['tableau'][ti]):
+                if not skip_gold_col and can_stack_on_column(top_card, state['tableau'][ti]):
                     moves.append({'type': 'display_to_column', 'dstCol': ti})
 
         # Flip hand
@@ -735,12 +787,19 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
             undo['startIdx'] = start_idx
 
             top_card = removed[-1]
+            bottom_card = removed[0]
+            # Gold on top (Case A) or gold on bottom (Case C)
+            gold_card = None
             if top_card['card']['type'] == 'gold':
+                gold_card = top_card
+            elif bottom_card['card']['type'] == 'gold':
+                gold_card = bottom_card
+            if gold_card is not None:
                 empty_idx = next(i for i, s in enumerate(state['slots']) if s is None)
                 regular_count = len(removed) - 1
-                target = category_targets.get(top_card['card']['category'], 0)
+                target = category_targets.get(gold_card['card']['category'], 0)
                 state['slots'][empty_idx] = {
-                    'key': top_card['card']['category'],
+                    'key': gold_card['card']['category'],
                     'collected': regular_count,
                     'target': target,
                 }
@@ -956,47 +1015,135 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
             state['recycleCount'] -= 1
 
     def get_priority_weight(move):
-        """Calculate priority weight for a move: BaseWeight × Multiplier."""
+        """Calculate priority weight for a move.
+
+        Based on HINT_AND_SOLVER_DESIGN.md section 2.4, scaled ×2 for greedy differentiation.
+        Additional bonus (14) for moves that complete a category (frees a slot).
+
+        Design doc → Implementation:
+          5 → 10: 列间移动（翻出暗牌）
+          4 →  8: 归类+翻暗牌（空位>1）
+          3 →  6: 列间移动（腾空列）/ 安全归类（空位>1）/ 手牌→收集区（空位>1）
+          2 →  4: 紧张归类（空位≤1）/ 手牌→桌面列
+          1 →  2: 翻手牌 / 回收
+
+        Gold cards (consume free slot) get extra penalty when free_slots ≤ 1.
+
+        Tiebreak: prefer moves that reveal face-down cards, then left-to-right.
+        (Tiebreak is handled by move ordering, not weight.)
+        """
         mt = move['type']
-        if mt == 'tableau_multi_to_slot':
-            return HIGH_PRIORITY * PLACE_TO_HOME_MUL  # 12
-        if mt in ('tableau_to_slot', 'display_to_slot'):
-            # Check if this category is close to completion
-            cat_key = None
-            if mt == 'tableau_to_slot':
-                col = state['tableau'][move['colIdx']]
-                cat_key = col[-1]['card']['category'] if col else None
-            else:
-                cat_key = state['handDisplay'][-1]['category'] if state['handDisplay'] else None
-            if cat_key:
-                for s in state['slots']:
-                    if s is not None and s['key'] == cat_key:
-                        remaining = s['target'] - s['collected']
-                        if remaining <= 2:
-                            return HIGH_PRIORITY * PLACE_TO_HOME_MUL  # 12
-                        break
-            return NORMAL_PRIORITY * PLACE_TO_HOME_MUL  # 8
-        if mt in ('tableau_gold_to_slot', 'display_gold_to_slot'):
-            return LOW_PRIORITY * PLACE_TO_HOME_MUL  # 4 (opening new category uses slot)
+        free_slots = sum(1 for s in state['slots'] if s is None)
+
+        # ── 列间移动 ──
         if mt == 'tableau_to_column':
-            # Higher priority if uncovering a face-down card
             col = state['tableau'][move['srcCol']]
-            if len(col) >= 2 and not col[-2]['faceUp']:
-                return NORMAL_PRIORITY * PLACE_TO_PLAY_STACK_MUL  # 4
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL  # 2
+            dst_col = state['tableau'][move['dstCol']]
+            has_facedown = len(col) >= 2 and not col[-2]['faceUp']
+            empties_col = len(col) == 1
+            # No facedown below + target column empty → pointless move
+            if not has_facedown and len(dst_col) == 0:
+                return 0
+            if has_facedown:
+                return 10  # 翻暗牌 (doc: 5)
+            if empties_col:
+                return 6   # 腾空列 (doc: 3)
+            return 4        # 普通列间移动
+
         if mt == 'tableau_multi_to_column':
             col = state['tableau'][move['srcCol']]
+            dst_col = state['tableau'][move['dstCol']]
             start_idx = move['startIdx']
-            if start_idx > 0 and not col[start_idx - 1]['faceUp']:
-                return NORMAL_PRIORITY * PLACE_TO_PLAY_STACK_MUL  # 4
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL  # 2
+            has_facedown = start_idx > 0 and not col[start_idx - 1]['faceUp']
+            empties_col = start_idx == 0
+            # No facedown below + target column empty → pointless move
+            if not has_facedown and len(dst_col) == 0:
+                return 0
+            if has_facedown:
+                return 10
+            if empties_col:
+                return 6
+            return 4
+
+        # ── 桌面牌 → 收集区（regular 牌到已有槽位）──
+        if mt == 'tableau_to_slot':
+            ci = move['colIdx']
+            col = state['tableau'][ci]
+            has_facedown = len(col) >= 2 and not col[-2]['faceUp']
+            # Check if completes category (frees slot)
+            card = col[-1]['card']
+            for s in state['slots']:
+                if s is not None and s['key'] == card['category']:
+                    if s['collected'] + 1 >= s['target']:
+                        return 14  # 完成类别, 释放槽位
+                    break
+            if free_slots > 1:
+                return 8 if has_facedown else 6  # doc: 4 / 3
+            else:
+                return 4  # doc: 2
+
+        # ── 桌面牌 → 收集区（gold 牌，开新类别，消耗空位）──
+        if mt == 'tableau_gold_to_slot':
+            ci = move['colIdx']
+            col = state['tableau'][ci]
+            has_facedown = len(col) >= 2 and not col[-2]['faceUp']
+            if free_slots <= 1:
+                return 2  # 极紧张, 消耗最后空位
+            if free_slots > 1:
+                return 8 if has_facedown else 6  # doc: 4 / 3
+
+        # ── 桌面牌 → 收集区（批量 multi）──
+        if mt == 'tableau_multi_to_slot':
+            ci = move['colIdx']
+            col = state['tableau'][ci]
+            start_idx = move.get('startIdx', 0)
+            has_facedown = start_idx > 0 and not col[start_idx - 1]['faceUp']
+            is_gold_move = start_idx < len(col) and col[start_idx]['card']['type'] == 'gold'
+            num_cards = len(col) - start_idx
+
+            if is_gold_move and free_slots <= 1:
+                return 2  # 极紧张, 消耗最后空位
+
+            # Check if completes category
+            if not is_gold_move:
+                cat_key = col[-1]['card']['category']
+                for s in state['slots']:
+                    if s is not None and s['key'] == cat_key:
+                        if s['collected'] + num_cards >= s['target']:
+                            return 14  # 完成类别
+                        break
+
+            if free_slots > 1:
+                return 8 if has_facedown else 6
+            else:
+                return 4
+
+        # ── 手牌 → 收集区 ──
+        if mt == 'display_to_slot':
+            card = state['handDisplay'][-1]
+            for s in state['slots']:
+                if s is not None and s['key'] == card['category']:
+                    if s['collected'] + 1 >= s['target']:
+                        return 14  # 完成类别
+                    break
+            return 6 if free_slots > 1 else 4  # doc: 3 / 2
+
+        if mt == 'display_gold_to_slot':
+            if free_slots <= 1:
+                return 2
+            return 6  # doc: 3
+
+        # ── 手牌 → 桌面列 ──
         if mt == 'display_to_column':
-            return LOW_PRIORITY * PLACE_TO_PLAY_STACK_MUL  # 2
+            return 4  # doc: 2
+
+        # ── 翻手牌 / 回收 ──
         if mt == 'flip_hand':
-            return NORMAL_PRIORITY * STOCK_CARD_MUL  # 2
+            return 2  # doc: 1
         if mt == 'recycle':
-            return LOW_PRIORITY * STOCK_CARD_MUL  # 1
-        return 1
+            return 2  # doc: 1
+
+        return 2
 
     def solve_with_backtracking(use_priority):
         """Core backtracking solver.
@@ -1008,13 +1155,68 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
         """
         total_steps = [0]
         move_sequence = []  # track move types for stats
+        move_path = []      # track full move dicts for path output
 
         # Stack-based decision tree
         # Each node: { 'candidates': list, 'index': int, 'undo': undo_info, 'move': move }
         stack = []
 
+        def _count_facedown(col_idx):
+            """Count face-down cards in a column."""
+            return sum(1 for tc in state['tableau'][col_idx] if not tc['faceUp'])
+
+        def _get_tiebreak_key(move):
+            """Secondary sort key within same weight. Lower = higher priority."""
+            w = get_priority_weight(move)
+            mt = move['type']
+
+            # Weight 10: prefer source column with fewer face-down cards
+            if w == 10:
+                src = move.get('srcCol', 0)
+                return _count_facedown(src)
+
+            # Weight 8: gold first (0), then fewer face-down (1+count)
+            if w == 8:
+                if mt in ('tableau_gold_to_slot',):
+                    return 0  # gold priority
+                src = move.get('colIdx', 0)
+                return 1 + _count_facedown(src)
+
+            # Weight 6: tableau gold first (0), then tableau by fewer face-down (1+count), then hand (100)
+            if w == 6:
+                if mt in ('tableau_gold_to_slot',):
+                    return 0  # tableau gold priority
+                if mt in ('tableau_to_slot', 'tableau_multi_to_slot'):
+                    src = move.get('colIdx', 0)
+                    return 1 + _count_facedown(src)
+                if mt in ('tableau_to_column', 'tableau_multi_to_column'):
+                    src = move.get('srcCol', 0)
+                    return 1 + _count_facedown(src)
+                # Hand moves (6f, 6g) — lower priority than tableau
+                return 100
+
+            # Weight 2: 2b(multi gold) > 2a(single gold) > 2c(hand gold) > rest
+            if w == 2:
+                if mt == 'tableau_multi_to_slot':
+                    return 0  # 2b
+                if mt == 'tableau_gold_to_slot':
+                    return 1  # 2a
+                if mt == 'display_gold_to_slot':
+                    return 2  # 2c
+                return 100  # flip/recycle — random among these
+
+            # Weight 4: slot moves before column moves (don't waste a step going via column)
+            if w == 4:
+                if mt in ('tableau_to_slot', 'tableau_multi_to_slot', 'display_to_slot'):
+                    return 0  # to-slot priority
+                return 1  # column moves / display_to_column
+
+            # Weight 14, 0: no tiebreak (random)
+            return 0
+
         def get_sorted_candidates():
-            """Get candidate moves, sorted by weight (priority) or original order (equality)."""
+            """Get candidate moves, sorted by weight (priority) or original order (equality).
+            Within same weight, apply tiebreak rules."""
             moves = get_moves()
             if not moves:
                 return []
@@ -1022,16 +1224,58 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
             if len(moves) > MAX_POSSIBLE_MOVES:
                 moves = moves[:MAX_POSSIBLE_MOVES]
             if use_priority:
-                # Sort by weight descending (highest priority first)
-                moves.sort(key=lambda m: get_priority_weight(m), reverse=True)
+                moves.sort(key=lambda m: (-get_priority_weight(m), _get_tiebreak_key(m)))
             return moves
 
+        def _is_soft_deadlock():
+            """Check if we're in a soft deadlock: all hand cards have been seen
+            since last successful drag, and no tableau or hand moves can collect."""
+            total_hand = len(state['handPile']) + len(state['handDisplay'])
+            if len(seen_since_drag) < total_hand:
+                return False
+            # Check if any tableau top card can go to slot or move between columns
+            for ci, col in enumerate(state['tableau']):
+                if not col or not col[-1]['faceUp']:
+                    continue
+                top = col[-1]['card']
+                # Can go to slot?
+                if top['type'] == 'regular':
+                    for s in state['slots']:
+                        if s is not None and s['key'] == top['category'] and s['collected'] < s['target']:
+                            return False
+                if top['type'] == 'gold' and any(s is None for s in state['slots']):
+                    return False
+                # Can move to another column? (skip weight=0: no facedown + empty target)
+                has_facedown = len(col) >= 2 and not col[-2]['faceUp']
+                for ti, tcol in enumerate(state['tableau']):
+                    if ti == ci:
+                        continue
+                    if not has_facedown and len(tcol) == 0:
+                        continue  # pointless move, ignore
+                    if can_stack_on_column(top, tcol):
+                        return False
+            # Check if any hand display card can go to slot or column
+            if state['handDisplay']:
+                hc = state['handDisplay'][-1]
+                if hc['type'] == 'regular':
+                    for s in state['slots']:
+                        if s is not None and s['key'] == hc['category'] and s['collected'] < s['target']:
+                            return False
+                if hc['type'] == 'gold' and any(s is None for s in state['slots']):
+                    return False
+                for ti, tcol in enumerate(state['tableau']):
+                    if can_stack_on_column(hc, tcol):
+                        return False
+            return True
+
         def greedy_playout():
-            """Play greedily to completion or deadlock. Returns (won, undos, move_types).
-            Uses random tiebreak among same-weight moves for diversity."""
+            """Play greedily to completion or deadlock. Returns (won, undos, move_types, move_dicts).
+            Uses tiebreak rules within same weight, random only among equal-tiebreak moves."""
             undos = []
             mtypes = []
+            mdicts = []
             won = False
+            seen_since_drag.clear()
             while state['stepsLeft'] > 0:
                 if state['completedCount'] >= state['numCategories']:
                     won = True
@@ -1040,22 +1284,35 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                 if not moves:
                     break
                 if use_priority:
-                    moves.sort(key=lambda m: get_priority_weight(m), reverse=True)
-                    # Random tiebreak among same top weight
+                    moves.sort(key=lambda m: (-get_priority_weight(m), _get_tiebreak_key(m)))
                     top_w = get_priority_weight(moves[0])
+                    top_tb = _get_tiebreak_key(moves[0])
                     top_count = 1
-                    while top_count < len(moves) and get_priority_weight(moves[top_count]) == top_w:
+                    while top_count < len(moves) and get_priority_weight(moves[top_count]) == top_w and _get_tiebreak_key(moves[top_count]) == top_tb:
                         top_count += 1
                     move = moves[random.randint(0, top_count - 1)]
                 else:
                     move = moves[random.randint(0, len(moves) - 1)]
                 undos.append(apply_move(move))
                 mtypes.append(move['type'])
+                mdicts.append(dict(move))
                 total_steps[0] += 1
                 nodes_explored[0] += 1
+                # Soft deadlock tracking
+                mt = move['type']
+                if mt == 'flip_hand':
+                    # Add the flipped card to seen set (it's now top of handDisplay)
+                    if state['handDisplay']:
+                        seen_since_drag.add(id(state['handDisplay'][-1]))
+                    if _is_soft_deadlock():
+                        break
+                elif mt != 'recycle':
+                    # Any non-flip, non-recycle move = board changed, reset tracking
+                    seen_since_drag.clear()
+                # recycle: don't clear (same cards, seen is seen)
                 if total_steps[0] > MAX_SOLVER_STEPS:
                     break
-            return won, undos, mtypes
+            return won, undos, mtypes, mdicts
 
         # Initial candidates
         candidates = get_sorted_candidates()
@@ -1066,6 +1323,7 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
         move = candidates[0]
         undo = apply_move(move)
         move_sequence.append(move['type'])
+        move_path.append(dict(move))
         total_steps[0] += 1
         nodes_explored[0] += 1
         stack.append({'candidates': candidates, 'index': 0, 'undo': undo, 'move': move})
@@ -1079,11 +1337,13 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     cat = classify_move(mt)
                     if cat:
                         ms[cat] += 1
+                result_path = list(move_path)
                 # Undo all to restore state
                 for node in reversed(stack):
                     undo_move(node['undo'])
                 move_sequence.clear()
-                return {'won': True, 'stepsUsed': steps_used, 'moveStats': ms, 'nodesExplored': nodes_explored[0]}
+                move_path.clear()
+                return {'won': True, 'stepsUsed': steps_used, 'moveStats': ms, 'nodesExplored': nodes_explored[0], 'movePath': result_path}
 
             depth = len(stack)
 
@@ -1094,6 +1354,7 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     move = candidates[0]
                     undo = apply_move(move)
                     move_sequence.append(move['type'])
+                    move_path.append(dict(move))
                     total_steps[0] += 1
                     nodes_explored[0] += 1
                     stack.append({'candidates': candidates, 'index': 0, 'undo': undo, 'move': move})
@@ -1103,7 +1364,7 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     pass
             else:
                 # At max depth: greedy playout
-                won, playout_undos, playout_types = greedy_playout()
+                won, playout_undos, playout_types, playout_dicts = greedy_playout()
                 if won:
                     steps_used = max_steps - state['stepsLeft']
                     ms = empty_move_stats()
@@ -1111,6 +1372,7 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                         cat = classify_move(mt)
                         if cat:
                             ms[cat] += 1
+                    result_path = list(move_path) + playout_dicts
                     # Undo playout
                     for u in reversed(playout_undos):
                         undo_move(u)
@@ -1118,7 +1380,8 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     for node in reversed(stack):
                         undo_move(node['undo'])
                     move_sequence.clear()
-                    return {'won': True, 'stepsUsed': steps_used, 'moveStats': ms, 'nodesExplored': nodes_explored[0]}
+                    move_path.clear()
+                    return {'won': True, 'stepsUsed': steps_used, 'moveStats': ms, 'nodesExplored': nodes_explored[0], 'movePath': result_path}
                 else:
                     # Undo playout
                     for u in reversed(playout_undos):
@@ -1133,11 +1396,13 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     # Undo current move
                     undo_move(node['undo'])
                     move_sequence.pop()
+                    move_path.pop()
                     # Try next candidate
                     node['index'] = next_idx
                     move = node['candidates'][next_idx]
                     undo = apply_move(move)
                     move_sequence.append(move['type'])
+                    move_path.append(dict(move))
                     total_steps[0] += 1
                     nodes_explored[0] += 1
                     node['undo'] = undo
@@ -1147,6 +1412,7 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile):
                     # Exhausted candidates at this level, pop
                     undo_move(node['undo'])
                     move_sequence.pop()
+                    move_path.pop()
                     stack.pop()
 
         # Clean up any remaining stack
@@ -1767,7 +2033,7 @@ def generate_settings_js(level_configs, card_defs, output_path):
     lines.append('/**')
     lines.append(' * Shared Level Settings for Solitaire Tile (SAJLike)')
     lines.append(' *')
-    lines.append(' * Auto-generated from level_config_v2.xlsx.')
+    lines.append(' * Auto-generated from level_config_v3_merged.xlsx.')
     lines.append(' * Used by game.js, generator.html, and converter.html.')
     lines.append(' */')
     lines.append('')
@@ -1826,7 +2092,7 @@ def generate_settings_js(level_configs, card_defs, output_path):
 # ── Read zh-CN translations ────────────────────────────────────────────────
 
 def read_zh_translations(base_dir):
-    """Read zh-CN translations from level_config_v2.xlsx card sheet.
+    """Read zh-CN translations from level_config_v3_merged.xlsx card sheet.
 
     The Excel card sheet has columns:
       col 4: categoryName (en), col 15: 类别中文
@@ -1837,7 +2103,7 @@ def read_zh_translations(base_dir):
       basic_fallback: {en_name: zh}
       category_map: {category_en: zh}
     """
-    config_file = os.path.join(base_dir, 'config', 'level_config_v2.xlsx')
+    config_file = os.path.join(base_dir, 'config', 'level_config_v3_merged.xlsx')
     if not os.path.exists(config_file):
         print("  Warning: %s not found for zh translations" % config_file)
         return {}, {}, {}
@@ -1913,7 +2179,7 @@ def generate_card_defs_js(card_defs, image_index, output_path, zh_translations=N
     lines.append('/**')
     lines.append(' * Level Card Definitions for Solitaire Tile (SAJLike)')
     lines.append(' *')
-    lines.append(' * Auto-generated from level_config_v2.xlsx by:')
+    lines.append(' * Auto-generated from level_config_v3_merged.xlsx by:')
     lines.append(' *   python3 generate_levels.py --export-defs')
     lines.append(' *')
     lines.append(' * Used by generator.html to generate solvable layouts.')
@@ -2024,7 +2290,7 @@ def main():
     args = parser.parse_args()
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    config_file = os.path.join(base_dir, 'config', 'level_config_v2.xlsx')
+    config_file = os.path.join(base_dir, 'config', 'level_config_v3_merged.xlsx')
     res_dir = os.path.join(base_dir, 'res')
     output_dir = os.path.join(base_dir, 'level')
     settings_path = os.path.join(base_dir, 'level_settings.js')
@@ -2131,6 +2397,8 @@ def main():
                     continue
 
                 # 求解（优先策略+均等策略回溯）
+                solver_seed = rng.randint(0, 2**31 - 1)
+                random.seed(solver_seed)
                 result = solve_level(
                     gen['tableau'], gen['categoryTargets'],
                     max_steps, cfg['maxSlots'], gen['handPile']
@@ -2175,13 +2443,33 @@ def main():
 
                 print("    ops: %s" % format_stats(result['moveStats']))
 
+                # 策略2求解（保守类别牌策略），步数上限+20
+                random.seed(solver_seed)
+                result2 = solve_level(
+                    gen['tableau'], gen['categoryTargets'],
+                    max_steps + 20, cfg['maxSlots'], gen['handPile'],
+                    conservative=True
+                )
+                solver2_steps = result2['stepsUsed'] if result2['won'] else -1
+                solver2_type = result2.get('strategyType', 'none') if result2['won'] else 'none'
+                if result2['won']:
+                    print("    策略2(保守): %d steps by %s" % (solver2_steps, solver2_type))
+                    print("    策略2 ops: %s" % format_stats(result2['moveStats']))
+                else:
+                    print("    策略2(保守): 无法通关")
+
                 layouts.append({
                     'config': {
                         'maxSlots': cfg['maxSlots'],
                         'maxSteps': display_steps,
                         'strategyType': result['strategyType'],
                         'solverSteps': steps_used,
+                        'solverMaxSteps': max_steps,
+                        'solverSeed': solver_seed,
                         'moveStats': result['moveStats'],
+                        'solver2Steps': solver2_steps,
+                        'solver2StrategyType': solver2_type,
+                        'solver2Stats': result2['moveStats'] if result2['won'] else {},
                     },
                     'tableau': gen['tableau'],
                     'categoryTargets': gen['categoryTargets'],

@@ -1,7 +1,7 @@
 # Solitaire Tile Bingo - 项目文档与开发追踪
 
 > 创建日期: 2026-03-11
-> 最后更新: 2026-03-16
+> 最后更新: 2026-04-02
 > 当前分支: `feature/SAJLike`
 
 ---
@@ -193,6 +193,58 @@ solitaire-tile-bingo/
 ---
 
 ## 九、开发日志
+
+### 2026-04-02 - 策略2求解器多项改进
+
+- **同权重 tiebreak 规则**: 解决贪心 playout 在同权重 move 中随机选择导致走入死路的问题
+  - 权重14: 随机
+  - 权重10: 源列暗牌少优先（优先翻暗牌少的列）
+  - 权重8: 金牌优先 → 源列暗牌少优先
+  - 权重6: 桌面金牌优先 → 桌面牌暗牌少优先 → 手牌操作最后
+  - 权重4: 归类(to_slot)优先于放列(to_column)，避免能直接归类时绕道浪费步数
+  - 权重2: 桌面金牌批量 > 桌面金牌单张 > 手牌金牌 > 其余随机
+- **multi 优先于 single**: 当同一列已生成 `tableau_multi_to_slot` 时，跳过该列的 `tableau_to_slot`（单张），避免拆分成多步浪费操作
+- **generator.html 策略2改为纯贪心**: 不使用回溯，直接跑一遍权重最高的选择，200步上限，无论成功失败都输出路径到 solution log
+- **generator.html 补齐 tableau_multi_to_column**: solveLevel 的 getMoves 之前缺少多牌列间移动的枚举，现已补齐，与 Python 版一致
+- **generator.html 加入 seeded PRNG**: 使用 mulberry32 替代 Math.random()，每轮回溯用不同 seed，确保多轮搜索探索不同路径
+- **修正规则2/3的"类别完成"判定**: 金牌列→列、手牌金牌→列 的条件从"槽里收集完"改为"桌面某列上堆齐了该类别所有亮牌基础牌"（新增 `_is_cat_all_regulars_on_tableau` 函数）
+- **列间移动权重=0**: 源列无暗牌+目标列为空时，权重设为0（解决无意义循环移动浪费步数问题）
+- **修改文件**: `generate_levels.py`、`generator.html`
+
+### 2026-04-01 - 修复 bug：最后0步完成时双弹窗 + undo 恢复已完成类别失败
+
+- **双弹窗 bug**: `decrementStep()` 步数归零时直接触发 `onLose`，随后 `checkWinOrDead()` 又触发 `onWin`。修复：`decrementStep()` 不再直接触发失败，由 `checkWinOrDead()` 统一处理，胜利优先
+- **undo 恢复失败 bug**: 部分 category key（如 Trees_word、Horror_word 等）不在 `categories.js` 中，undo 时 `CATEGORIES[catKey].name` 抛 TypeError 导致静默失败。修复：改为先检查 CATEGORIES 是否有该 key，无则从 moveHistory 中保存的牌数据取名称
+- **修改文件**: `game.js`
+
+### 2026-04-01 - 新增第二种求解策略（保守类别牌策略）
+
+- **背景**: 需要模拟更保守的玩法，对类别牌（gold card）的使用施加更严格约束
+- **策略2规则**（3条限制）:
+  1. 手牌展示区的类别牌 → 收集槽：仅当桌面有亮着的同类别基础牌时才允许
+  2. 类别牌 列→列：仅当桌面某列上堆齐了该类别所有亮牌基础牌后才允许
+  3. 手牌展示区类别牌 → 列：剩余空槽=0时，仅当桌面某列上堆齐了该类别所有亮牌基础牌后才允许
+- **求解参数**: generator.html 策略2使用纯贪心模式（200步上限），generate_levels.py 策略2步数上限 = 策略1上限 + 20
+- **实现**: `solve_level()` 新增 `conservative` 参数，`get_moves()` 内 3 处条件分支
+- **输出**: JSON 新增 `solver2Steps`(-1=无法通关)、`solver2StrategyType`、`solver2Stats`
+- **修改文件**: `generate_levels.py`、`generator.html`（含 solution log 输出）、`solve_debug.py`（新增 `--conservative` 参数，默认输出两种策略对比）
+
+### 2026-04-01 - 修正图片类别中英文翻译不匹配
+
+- **背景**: `level_config_v3_merged.xlsx` card 表中，部分图片类别的中文翻译与英文名称/图片内容不匹配
+- **问题分类**:
+  - **A. 完全错位**: Grandma 类别 zh="昆虫"，6 个卡牌词全是昆虫名（蚊子/瓢虫/蛾等）
+  - **B. 个别卡牌词错位**: X-ray(zh被截断)、Picnic(Ants→Cutlery)、Wings(Firefly→Sparrow, Butterfly→Airplane)
+  - **C. 英文卡牌词与图片不符**: 12 个类别的 EN 卡牌词与实际图片文件名完全不一致（如 Space 类别用了化学元素名、Halloween 用了奇幻词汇等），根据图片文件名确定正确英文再翻译中文
+- **修正内容**:
+  - A: Grandma 类别 zh 改为"奶奶"，6 个卡牌词改为正确中文翻译
+  - B: 3 个类别共 7 处卡牌词 zh 修正
+  - C: 12 个类别（Space/Egypt/Insects/Strings/Supplies/Survival/Utensils/Halloween/Arts/Medical/Purple/Eco）的 EN 卡牌词 + ZH 类别名 + ZH 卡牌词全部修正
+  - Wind 类别 zh 从"樂器"改为"管乐器"（更精确）
+  - Arts 文本版(Row 946) zh 从繁体"藝術"改为简体"艺术"
+- **跳过**: Grandma/Violin/Match 3 个无图片文件的类别卡牌词未修改
+- **修改文件**: `config/level_config_v3_merged.xlsx`(card 表 192 处变更)、`level_card_defs.js`(重新生成)
+- **总计**: 修正 16 个类别、约 192 处 Excel 单元格
 
 ### 2026-03-26 - 软卡关检测（Soft Deadlock Detection）
 
@@ -862,6 +914,115 @@ solitaire-tile-bingo/
 
 ### 2026-03-09 之前 - 第35关修改与配置同步
 - **操作**: 上传第35关修改 (`a1229ae`)，同步配置 (`57d0f98`)
+
+---
+
+### 2026-03-31 - generator.html 解法路径记录与日志导出
+
+- **背景**: 用户通过 generator.html 生成关卡，希望在生成时直接记录精确解法路径并导出日志文件。之前 solve_debug.py 重新求解时 Python/JS 求解器路径不一致，步数和解法不同
+- **改动**:
+  - `generator.html`:
+    - `solveWithBacktracking()` 新增 `movePath` 数组，与 `moveSequence` 并行记录完整 move 对象
+    - `greedyPlayout()` 返回值新增 `mdicts`
+    - 成功时返回 `movePath`（回溯树路径 + 贪心播放路径）
+    - `generateSolvableLayout()` 返回值新增 `movePath` 字段，JSON config 新增 `solverMaxSteps`
+    - 新增 `formatSolutionLog()` 函数：重放 movePath，输出逐步解法（牌面/槽位状态）
+    - 新增 `downloadTextFile()` 函数
+    - 生成完成后自动下载 `level_{N}_solutions.txt` 解法日志文件
+  - `generate_levels.py`:
+    - `solve_with_backtracking()` 新增 `move_path` 记录（与 generator.html 一致）
+    - 调用 `solve_level` 前从 `rng` 派生 `solver_seed` 并 seed 全局 `random`
+    - JSON config 新增 `solverSeed` 和 `solverMaxSteps` 字段
+  - `solve_debug.py`:
+    - 从 Excel 读取 `solveStepMax` 作为步数上限（优先 JSON → Excel → fallback）
+    - 自动搜索可用 seed（20 seeds × 3 种步数限制）
+    - 求解成功后回写 `solverSeed`/`solverMaxSteps`/`solverSteps` 到 level JSON
+    - 修复 `tableau_multi_to_slot` 的 gold 判断 bug（`removed[0]` → `removed[-1]`）
+
+### 2026-03-31 - solve_debug.py 精确解法路径输出
+
+- **背景**: solve_debug.py 之前通过 exec 调用 generate_levels.py 的 solve_level 求解，但 solve_level 只返回统计信息不返回 move path。贪心重放走不同路径，复杂关卡会死局无法输出完整解法
+- **改动**:
+  - `generate_levels.py`:
+    - `solve_with_backtracking()` 新增 `move_path` 列表，与 `move_sequence` 并行记录完整 move dict
+    - `greedy_playout()` 返回值新增 `mdicts`（move dict 列表）
+    - 成功时返回值新增 `movePath` 字段（回溯树路径 + 贪心播放路径）
+    - 对现有调用方（`--levels` 生成模式、generator.html）无影响，只是多一个不使用的字段
+  - `solve_debug.py`:
+    - 使用 `result['movePath']` 进行精确重放，替代旧的贪心重放
+    - 修复 `tableau_multi_to_slot` 的 gold 判断 bug：`removed[0]`（底部）→ `removed[-1]`（顶部），与 generate_levels.py 一致
+    - 步数上限从 `solverSteps + 10` 改为 `solverSteps * 2`，避免限制过紧导致求解失败
+- **验证**: level 1-10、31、41 全部求解完成，精确路径重放正确
+- **用法**: `python3 solve_debug.py 6` 输出 level 6 的逐步解法路径
+
+### 2026-03-31 - 求解器权重重构 & Hint 树搜索实现
+
+- **设计文档**: `doc/HINT_AND_SOLVER_DESIGN.md`
+- **操作**: 基于竞品逆向分析，重构求解器权重系统，实现 Hint 4层树搜索
+
+#### 求解器权重重构（generate_levels.py, generator.html, solve_debug.py）
+- 去掉旧的 `BASE × MULTIPLIER` 公式（LOW/NORMAL/HIGH × HOME/PLAY/STOCK）
+- 新权重系统引入 **收集槽空位因子** 和 **完成类别加成**：
+  - 14 = 完成类别（释放槽位）
+  - 10 = 列间移动（翻暗牌）
+  -  8 = 归类+翻暗牌（空位>1）
+  -  6 = 安全归类/腾空列（空位>1）
+  -  4 = 紧张归类/手牌→列
+  -  2 = gold开新类（空位≤1）/ 翻手牌 / 回收
+- gold 牌（消耗空位）在空位≤1时降到最低，regular 牌归类不受惩罚
+- 验证：level 1/10/41 全部 priority 策略解出
+
+#### Hint 4层树搜索（game.js）
+- 替换旧的 7级固定优先级为 **4层深度权重树搜索**
+- 新增模块：
+  - `_cloneState()` — 游戏状态深拷贝
+  - `_enumerateMoves(st)` — 合法移动枚举（含批量移动）
+  - `_applyMoveOnClone(st, move)` / `_undoMoveOnClone(st, undo)` — 模拟执行/撤销
+  - `_getHintWeight(st, move)` — Hint 权重（范围 1-5，归类优先）
+  - `_hintTreeSearch(st, depth)` — 递归树搜索
+- Hint 权重（与求解器不同，偏向归类）：
+  - 5 = 归类+翻牌（空位>1）
+  - 4 = 安全归类 / 手牌→收集区（空位>1）
+  - 3 = 列间翻暗牌 / 紧张归类+翻牌
+  - 2 = 紧张归类 / 腾空列 / 手牌→列
+  - 1 = 翻手牌 / 回收
+- 平局处理：优先翻暗牌，然后按列位置左→右
+
+---
+
+### 2026-03-30~31 - v3 配置迁移 & 数据管线工具
+
+- **操作**: 将关卡数据从 level_config_v2.xlsx 迁移到 level_config_v3_merged.xlsx
+
+#### generate_levels.py
+- 配置文件路径从 v2 改为 v3
+- `read_level_sheet()` 新增公式字段计算（真实步数、求解步数上下限、delta）
+- 所有注释/文档引用同步更新
+
+#### CSV 数据管线（新增 update_csvs_from_v3.py）
+- 从 v3 card sheet 生成 `sort_game_basic_card_config.csv`（5502条）和 `sort_game_category_card_config.csv`（1022条）
+- ID 规则：WORD/PIC 独立编号，WORD 在前 PIC 在后
+- 保留已有翻译（按 header 动态定位列）
+- PIC 类别填入图片资源名（从 image_mapping.json + res/Item 匹配，去掉 .png 后缀）
+
+#### Tag Config 管线（新增 update_tag_config.py）
+- 将 level JSON 转换写入 `sort_game_v2_tag_config.xlsx`
+- 支持 `--levels 1,3,5` / `--levels 1-10` / `--levels all`
+- 卡牌 ID 映射含 plural/singular 容错（Bird↔Birds）
+- 已写入 level 1/3/5/6/10/41
+
+#### CSV 格式调整
+- `sort_game_basic_card_config.csv` 删除 `basic_card_name` 列
+- `sort_game_category_card_config.csv` 删除 `category_name` 列
+- `translate_cards.py` 列索引同步更新
+
+#### config 目录重组
+- 非核心文件移至 `config/archive/`
+- 代码引用的 7 个文件保留在 `config/` 根目录
+
+#### 文档
+- 新增 `memory/config_output_workflow.md`（完整数据管线文档）
+- 新增 `doc/HINT_AND_SOLVER_DESIGN.md`（Hint & 求解器设计方案）
 
 ---
 
