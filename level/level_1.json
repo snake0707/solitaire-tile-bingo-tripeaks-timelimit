@@ -5,11 +5,24 @@
       "maxSteps": 999,
       "strategyType": "priority",
       "solverSteps": 30,
+      "solverMaxSteps": 1998,
       "moveStats": {
-        "colSingleToSlot": 9,
+        "colSingleToSlot": 7,
         "colMultiToSlot": 2,
-        "colToCol": 3,
+        "colToCol": 5,
         "colMultiToCol": 2,
+        "handToSlot": 7,
+        "handToCol": 0,
+        "flip": 7,
+        "recycle": 0
+      },
+      "solver2Steps": 30,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 2,
+        "colToCol": 5,
+        "colMultiToCol": 1,
         "handToSlot": 7,
         "handToCol": 0,
         "flip": 7,
@@ -21,8 +34,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pets_word",
-            "name": "Parrot",
+            "category": "Food_word",
+            "name": "Hot dog",
             "isText": true
           },
           "faceUp": false
@@ -47,33 +60,15 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Pets_word",
-            "name": "Cat",
+            "type": "gold",
+            "category": "Food_word",
+            "name": "Food",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Furniture_word",
-            "name": "Sofa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Food_word",
-            "name": "Burger",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "gold",
@@ -86,8 +81,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pets_word",
-            "name": "Hamster",
+            "category": "Furniture_word",
+            "name": "Wardrobe",
             "isText": true
           },
           "faceUp": false
@@ -95,8 +90,26 @@
         {
           "card": {
             "type": "gold",
+            "category": "Flowers_word",
+            "name": "Flowers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flowers_word",
+            "name": "Rose",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Food_word",
-            "name": "Food",
+            "name": "Pizza",
             "isText": true
           },
           "faceUp": true
@@ -106,8 +119,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Flowers_word",
-            "name": "Lily",
+            "category": "Furniture_word",
+            "name": "Table",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Parrot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pets_word",
+            "name": "Hamster",
             "isText": true
           },
           "faceUp": false
@@ -124,26 +155,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pets_word",
-            "name": "Dog",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Food_word",
-            "name": "Pizza",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flowers_word",
-            "name": "Rose",
+            "name": "Fries",
             "isText": true
           },
           "faceUp": true
@@ -159,44 +172,44 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Food_word",
-        "name": "Hot dog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture_word",
-        "name": "Wardrobe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Furniture_word",
-        "name": "Table",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Furniture_word",
         "name": "Bed",
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Cat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Food_word",
+        "name": "Burger",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pets_word",
+        "name": "Dog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Furniture_word",
+        "name": "Sofa",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Flowers_word",
-        "name": "Flowers",
+        "name": "Lily",
         "isText": true
       },
       {
         "type": "gold",
         "category": "Pets_word",
         "name": "Pets",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Food_word",
-        "name": "Fries",
         "isText": true
       }
     ],
