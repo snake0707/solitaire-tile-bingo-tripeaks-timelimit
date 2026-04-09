@@ -2,308 +2,35 @@
   {
     "config": {
       "maxSlots": 3,
-      "maxSteps": 75
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Delete",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Gauges",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Clinton",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Costume",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Screws",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Laughter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Obama",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Squares",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Leader_word",
-            "name": "Leader",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Clown",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Ketchup",
-            "image": "res/Item/eats_burrito_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Spy gear_word",
-            "name": "Wiretap",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Leader_word": 8,
-      "Circus_word": 8,
-      "Files_word": 4,
-      "Woodwork_word": 4,
-      "Spy gear_word": 3,
-      "Eats": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Troupe",
-        "isText": true
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 60,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 3,
+        "colToCol": 2,
+        "colMultiToCol": 0,
+        "handToSlot": 18,
+        "handToCol": 6,
+        "flip": 24,
+        "recycle": 0
       },
-      {
-        "type": "gold",
-        "category": "Woodwork_word",
-        "name": "Woodwork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sausage",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Adams",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Hammers",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Copy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Soft bun",
-        "image": "res/Item/eats_sandwich_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Files_word",
-        "name": "Files",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Reagan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Circus_word",
-        "name": "Circus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Lincoln",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Acrobat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Rename",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Kennedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Bush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Juggler",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Codebook",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spy gear_word",
-        "name": "Spy gear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Open",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Biden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Trapeze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Disguise",
-        "isText": true
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
       }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 75
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Rename",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Woodwork_word",
-            "name": "Woodwork",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -311,17 +38,6 @@
             "name": "Hammers",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Juggler",
-            "isText": true
-          },
           "faceUp": false
         },
         {
@@ -333,799 +49,6 @@
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Clinton",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Lincoln",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Files_word",
-            "name": "Files",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Open",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Soft bun",
-            "image": "res/Item/eats_sandwich_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Ketchup",
-            "image": "res/Item/eats_burrito_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Bush",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Leader_word": 8,
-      "Circus_word": 8,
-      "Files_word": 4,
-      "Woodwork_word": 4,
-      "Spy gear_word": 3,
-      "Eats": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Copy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Biden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Trapeze",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Circus_word",
-        "name": "Circus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sausage",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Costume",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Spy gear_word",
-        "name": "Spy gear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Wiretap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Squares",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Leader_word",
-        "name": "Leader",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Disguise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Laughter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Kennedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Acrobat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Troupe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Adams",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Codebook",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Gauges",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Clown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Obama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Reagan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Screws",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 75
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Gauges",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Troupe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Soft bun",
-            "image": "res/Item/eats_sandwich_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Leader_word",
-            "name": "Leader",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Kennedy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Obama",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Woodwork_word",
-            "name": "Woodwork",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Spy gear_word",
-            "name": "Disguise",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Adams",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Laughter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Spy gear_word",
-            "name": "Wiretap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Lincoln",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Leader_word": 8,
-      "Circus_word": 8,
-      "Files_word": 4,
-      "Woodwork_word": 4,
-      "Spy gear_word": 3,
-      "Eats": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Open",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Codebook",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Trapeze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Acrobat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Delete",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Biden",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Circus_word",
-        "name": "Circus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Ketchup",
-        "image": "res/Item/eats_burrito_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sausage",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Juggler",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Reagan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Hammers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Clown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Squares",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Rename",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Copy",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spy gear_word",
-        "name": "Spy gear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Costume",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Screws",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Bush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Clinton",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Files_word",
-        "name": "Files",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 75
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Clinton",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Open",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Gauges",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Leader_word",
-            "name": "Lincoln",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Troupe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Laughter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Delete",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Clown",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Ketchup",
-            "image": "res/Item/eats_burrito_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Circus_word",
-            "name": "Acrobat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Spy gear_word",
-            "name": "Wiretap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Leader_word",
-            "name": "Leader",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Leader_word": 8,
-      "Circus_word": 8,
-      "Files_word": 4,
-      "Woodwork_word": 4,
-      "Spy gear_word": 3,
-      "Eats": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Spy gear_word",
-        "name": "Spy gear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Hammers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Juggler",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Adams",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Woodwork_word",
-        "name": "Woodwork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sausage",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Circus_word",
-        "name": "Circus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Soft bun",
-        "image": "res/Item/eats_sandwich_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Obama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Rename",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Copy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Codebook",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Reagan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Screws",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Squares",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Kennedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Costume",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Trapeze",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Files_word",
-        "name": "Files",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Bush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Disguise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Biden",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 75
-    },
-    "tableau": [
-      [
         {
           "card": {
             "type": "regular",
@@ -1133,25 +56,6 @@
             "name": "Costume",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Files_word",
-            "name": "Files",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Soft bun",
-            "image": "res/Item/eats_sandwich_6.png",
-            "isText": false
-          },
           "faceUp": true
         }
       ],
@@ -1159,47 +63,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Circus_word",
-            "name": "Acrobat",
+            "category": "Leader_word",
+            "name": "Lincoln",
             "isText": true
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Delete",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Files_word",
-            "name": "Open",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Ketchup",
-            "image": "res/Item/eats_burrito_7.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
             "category": "Spy gear_word",
-            "name": "Disguise",
+            "name": "Codebook",
             "isText": true
           },
           "faceUp": false
@@ -1216,8 +90,343 @@
         {
           "card": {
             "type": "regular",
+            "category": "Hot dog",
+            "name": "Sausage",
+            "image": "res/Item/Meat_Sausage_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Adams",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Leader_word",
+            "name": "Leader",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Woodwork_word",
-            "name": "Screws",
+            "name": "Woodwork",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Rename",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Juggler",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Leader_word": 8,
+      "Circus_word": 8,
+      "Files_word": 4,
+      "Woodwork_word": 4,
+      "Spy gear_word": 3,
+      "Hot dog": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Open",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Laughter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Clown",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hot dog",
+        "name": "Hot dog",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Screws",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Acrobat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Kennedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Trapeze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Disguise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Clinton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Copy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Ketchup",
+        "image": "res/Item/Hot dog_Ketchup_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Bush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Obama",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Circus_word",
+        "name": "Circus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Reagan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Troupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Squares",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Gauges",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spy gear_word",
+        "name": "Spy gear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Wiretap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Soft bun",
+        "image": "res/Item/Hot dog_Softbun_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Files_word",
+        "name": "Files",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 5,
+        "colToCol": 0,
+        "colMultiToCol": 2,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 5,
+        "colToCol": 0,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Rename",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spy gear_word",
+            "name": "Codebook",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Circus_word",
+            "name": "Circus",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Costume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Lincoln",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Juggler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Ketchup",
+            "image": "res/Item/Hot dog_Ketchup_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Kennedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Magician",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Delete",
             "isText": true
           },
           "faceUp": false
@@ -1234,8 +443,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Woodwork_word",
-            "name": "Gauges",
+            "category": "Circus_word",
+            "name": "Clown",
             "isText": true
           },
           "faceUp": true
@@ -1248,61 +457,20 @@
       "Files_word": 4,
       "Woodwork_word": 4,
       "Spy gear_word": 3,
-      "Eats": 3
+      "Hot dog": 3
     },
     "handPile": [
       {
         "type": "regular",
-        "category": "Files_word",
-        "name": "Rename",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Clown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Clinton",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Bush",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
+        "category": "Hot dog",
+        "name": "Soft bun",
+        "image": "res/Item/Hot dog_Softbun_1.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Circus_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spy gear_word",
-        "name": "Spy gear",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
         "name": "Trapeze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Files_word",
-        "name": "Copy",
         "isText": true
       },
       {
@@ -1314,69 +482,8 @@
       {
         "type": "regular",
         "category": "Leader_word",
-        "name": "Adams",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
         "name": "Reagan",
         "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Circus_word",
-        "name": "Circus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spy gear_word",
-        "name": "Codebook",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Leader_word",
-        "name": "Leader",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Woodwork_word",
-        "name": "Hammers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Troupe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Kennedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Leader_word",
-        "name": "Obama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Circus_word",
-        "name": "Juggler",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sausage",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
       },
       {
         "type": "gold",
@@ -1392,8 +499,1026 @@
       },
       {
         "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Hammers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Clinton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Biden",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Obama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Troupe",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Files_word",
+        "name": "Files",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Acrobat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Open",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Screws",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spy gear_word",
+        "name": "Spy gear",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Leader_word",
+        "name": "Leader",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hot dog",
+        "name": "Hot dog",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Bush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Copy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Disguise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Gauges",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Adams",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 60,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 3,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 17,
+        "handToCol": 7,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Ketchup",
+            "image": "res/Item/Hot dog_Ketchup_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Juggler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Obama",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Acrobat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Kennedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Woodwork_word",
+            "name": "Gauges",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Adams",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Laughter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Biden",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spy gear_word",
+            "name": "Spy gear",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Trapeze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Clinton",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Leader_word": 8,
+      "Circus_word": 8,
+      "Files_word": 4,
+      "Woodwork_word": 4,
+      "Spy gear_word": 3,
+      "Hot dog": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Hot dog",
+        "name": "Hot dog",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Reagan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Copy",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Leader_word",
         "name": "Lincoln",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Woodwork_word",
+        "name": "Woodwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Squares",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Disguise",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Leader_word",
+        "name": "Leader",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Delete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Rename",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Hammers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Soft bun",
+        "image": "res/Item/Hot dog_Softbun_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Costume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Screws",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Clown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Open",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Codebook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Troupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Bush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Wiretap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Circus_word",
+        "name": "Circus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Files_word",
+        "name": "Files",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 64,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 64,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Ketchup",
+            "image": "res/Item/Hot dog_Ketchup_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Soft bun",
+            "image": "res/Item/Hot dog_Softbun_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Open",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Costume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spy gear_word",
+            "name": "Disguise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Obama",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Clinton",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Bush",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Leader_word",
+            "name": "Leader",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Magician",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Juggler",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Laughter",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Leader_word": 8,
+      "Circus_word": 8,
+      "Files_word": 4,
+      "Woodwork_word": 4,
+      "Spy gear_word": 3,
+      "Hot dog": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Troupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Adams",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spy gear_word",
+        "name": "Spy gear",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Trapeze",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Woodwork_word",
+        "name": "Woodwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Rename",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Copy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hot dog",
+        "name": "Hot dog",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Wiretap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Reagan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Squares",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Biden",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Hammers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Files_word",
+        "name": "Files",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Circus_word",
+        "name": "Circus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Screws",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Acrobat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Clown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hot dog",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Delete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Kennedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Codebook",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Lincoln",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Gauges",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 61,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 61,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Circus_word",
+            "name": "Magician",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Soft bun",
+            "image": "res/Item/Hot dog_Softbun_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spy gear_word",
+            "name": "Codebook",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Ketchup",
+            "image": "res/Item/Hot dog_Ketchup_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Woodwork_word",
+            "name": "Gauges",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Copy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Files_word",
+            "name": "Rename",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Woodwork_word",
+            "name": "Hammers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Leader_word",
+            "name": "Biden",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hot dog",
+            "name": "Sausage",
+            "image": "res/Item/Meat_Sausage_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spy gear_word",
+            "name": "Spy gear",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Leader_word",
+            "name": "Leader",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Leader_word": 8,
+      "Circus_word": 8,
+      "Files_word": 4,
+      "Woodwork_word": 4,
+      "Spy gear_word": 3,
+      "Hot dog": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Files_word",
+        "name": "Files",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Juggler",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Woodwork_word",
+        "name": "Woodwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Costume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Delete",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Circus_word",
+        "name": "Circus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hot dog",
+        "name": "Hot dog",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Clown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Trapeze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Screws",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Obama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Clinton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Lincoln",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Acrobat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Troupe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Bush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Wiretap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Circus_word",
+        "name": "Laughter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Files_word",
+        "name": "Open",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spy gear_word",
+        "name": "Disguise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Adams",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Reagan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Leader_word",
+        "name": "Kennedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Woodwork_word",
+        "name": "Squares",
         "isText": true
       }
     ],

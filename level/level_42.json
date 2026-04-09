@@ -1,0 +1,1527 @@
+[
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 74,
+      "strategyType": "priority",
+      "solverSteps": 61,
+      "solverMaxSteps": 67,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 3,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 7,
+        "handToCol": 17,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lollipop_word",
+            "name": "Sour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Laser",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Shield",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Strength_word",
+            "name": "Strength",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Alien",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Saga",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strength_word",
+            "name": "Might",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Economy_word",
+            "name": "Surplus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Economy_word",
+            "name": "Demand",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vikings_word",
+            "name": "Vikings",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Robot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Teleport",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Vikings_word": 8,
+      "Sci-Fi_word": 8,
+      "Economy_word": 4,
+      "Lollipop_word": 4,
+      "Pig": 3,
+      "Strength_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Sci-Fi_word",
+        "name": "Sci-Fi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Runes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Juicy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lollipop_word",
+        "name": "Lollipop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Blaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "UFO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Power",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Pig",
+        "name": "Pig",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Jarl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Sow",
+        "image": "res/Item/Pig_Sow_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Valhalla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Colorful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Shortage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Force",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Starship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Supply",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Phaser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Thrall",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Economy_word",
+        "name": "Economy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Longship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Raid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Hog",
+        "image": "res/Item/Pig_Hog_1.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 74,
+      "strategyType": "priority",
+      "solverSteps": 64,
+      "solverMaxSteps": 67,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 4,
+        "handToSlot": 17,
+        "handToCol": 7,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lollipop_word",
+            "name": "Sour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Saga",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Alien",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strength_word",
+            "name": "Might",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Piglet",
+            "image": "res/Item/Cuties_Piglet_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "UFO",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vikings_word",
+            "name": "Vikings",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Robot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pig",
+            "name": "Pig",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sci-Fi_word",
+            "name": "Sci-Fi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Sow",
+            "image": "res/Item/Pig_Sow_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Raid",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Vikings_word": 8,
+      "Sci-Fi_word": 8,
+      "Economy_word": 4,
+      "Lollipop_word": 4,
+      "Pig": 3,
+      "Strength_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Teleport",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Laser",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Economy_word",
+        "name": "Economy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Blaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Thrall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Longship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Juicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Starship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Demand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Valhalla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Force",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Surplus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Supply",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Hog",
+        "image": "res/Item/Pig_Hog_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Runes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Phaser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Shortage",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lollipop_word",
+        "name": "Lollipop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Power",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Strength_word",
+        "name": "Strength",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Jarl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Colorful",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 74,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 67,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 3,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 3,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 16,
+        "handToCol": 8,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Economy_word",
+            "name": "Economy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Shield",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lollipop_word",
+            "name": "Lollipop",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Blaster",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Longship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Starship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Economy_word",
+            "name": "Shortage",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Sow",
+            "image": "res/Item/Pig_Sow_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Economy_word",
+            "name": "Surplus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Jarl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Hog",
+            "image": "res/Item/Pig_Hog_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vikings_word",
+            "name": "Vikings",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Vikings_word": 8,
+      "Sci-Fi_word": 8,
+      "Economy_word": 4,
+      "Lollipop_word": 4,
+      "Pig": 3,
+      "Strength_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Sci-Fi_word",
+        "name": "Sci-Fi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Colorful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Might",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Supply",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Thrall",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Strength_word",
+        "name": "Strength",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Force",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Phaser",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pig",
+        "name": "Pig",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Robot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Valhalla",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Runes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Fruity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Saga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Alien",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Raid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Juicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Demand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Teleport",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "UFO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Laser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Power",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 74,
+      "strategyType": "priority",
+      "solverSteps": 61,
+      "solverMaxSteps": 67,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 18,
+        "handToCol": 6,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 17,
+        "handToCol": 7,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Teleport",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lollipop_word",
+            "name": "Fruity",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vikings_word",
+            "name": "Vikings",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Longship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Piglet",
+            "image": "res/Item/Cuties_Piglet_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strength_word",
+            "name": "Force",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Starship",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Blaster",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lollipop_word",
+            "name": "Sour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Strength_word",
+            "name": "Strength",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pig",
+            "name": "Hog",
+            "image": "res/Item/Pig_Hog_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Alien",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Vikings_word": 8,
+      "Sci-Fi_word": 8,
+      "Economy_word": 4,
+      "Lollipop_word": 4,
+      "Pig": 3,
+      "Strength_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Jarl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Juicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Surplus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "UFO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Laser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Supply",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Runes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Colorful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Might",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Thrall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Raid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lollipop_word",
+        "name": "Lollipop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Valhalla",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pig",
+        "name": "Pig",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Demand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Robot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Economy_word",
+        "name": "Economy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Saga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Power",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sci-Fi_word",
+        "name": "Sci-Fi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Shortage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Sow",
+        "image": "res/Item/Pig_Sow_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Phaser",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 74,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 67,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strength_word",
+            "name": "Power",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vikings_word",
+            "name": "Vikings",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Shield",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Laser",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sci-Fi_word",
+            "name": "Teleport",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lollipop_word",
+            "name": "Fruity",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Thrall",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Runes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vikings_word",
+            "name": "Raid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Economy_word",
+            "name": "Shortage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strength_word",
+            "name": "Force",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lollipop_word",
+            "name": "Lollipop",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Vikings_word": 8,
+      "Sci-Fi_word": 8,
+      "Economy_word": 4,
+      "Lollipop_word": 4,
+      "Pig": 3,
+      "Strength_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Juicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Valhalla",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sci-Fi_word",
+        "name": "Sci-Fi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "UFO",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Jarl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Economy_word",
+        "name": "Economy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Strength_word",
+        "name": "Strength",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Longship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Surplus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Hog",
+        "image": "res/Item/Pig_Hog_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strength_word",
+        "name": "Might",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Supply",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pig",
+        "name": "Sow",
+        "image": "res/Item/Pig_Sow_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Alien",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Blaster",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vikings_word",
+        "name": "Saga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Robot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pig",
+        "name": "Pig",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Colorful",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lollipop_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Economy_word",
+        "name": "Demand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Phaser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sci-Fi_word",
+        "name": "Starship",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  }
+]

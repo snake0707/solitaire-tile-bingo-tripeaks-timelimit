@@ -1,0 +1,2567 @@
+[
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 6,
+        "colToCol": 7,
+        "colMultiToCol": 5,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 54,
+        "recycle": 1
+      },
+      "solver2Steps": 128,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Spout",
+            "image": "res/Item/Kettle_Spout_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Novel_word",
+            "name": "Novel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Glamour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Vogue",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Subplot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Crest",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Wave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Clap",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Trend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gestures_word",
+            "name": "Gestures",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Bezant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moving_word",
+            "name": "Moving",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Annulet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Bow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Climax",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Style",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Heraldry_word",
+            "name": "Heraldry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Facepalm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Station",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Buddy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meat",
+            "name": "Sausage",
+            "image": "res/Item/Meat_Sausage_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Moving_word": 8,
+      "Heraldry_word": 8,
+      "Fashion_word": 8,
+      "Gestures_word": 6,
+      "Friends_word": 6,
+      "Meat": 4,
+      "Subway_word": 4,
+      "Novel_word": 4,
+      "Orators_word": 3,
+      "Kettle": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Outfit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Going",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Orators_word",
+        "name": "Orators",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Lid",
+        "image": "res/Item/Kettle_Lid_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Rhetoric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Bacon",
+        "image": "res/Item/Meat_Bacon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Cadency",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Conflict",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Subway_word",
+        "name": "Subway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Catwalk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Flying",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chorizo",
+        "image": "res/Item/Meat_Chorizo_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Chevron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Sailing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Nod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Emblem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Friend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Blazon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fashion_word",
+        "name": "Fashion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Runway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Friends_word",
+        "name": "Friends",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Oratory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chops",
+        "image": "res/Item/Meat_Chops_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Kettle",
+        "name": "Kettle",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Meat",
+        "name": "Meat",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Salute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Narrator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Mate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Chum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Handle",
+        "image": "res/Item/Kettle_Handle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Riding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Charisma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Models",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Bestie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Tunnel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Platform",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Bordure",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 127,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 5,
+        "colMultiToCol": 0,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 60,
+        "recycle": 1
+      },
+      "solver2Steps": 119,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 6,
+        "colMultiToCol": 2,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 51,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Hiking",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Platform",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Facepalm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Crest",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Catwalk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Cadency",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Bow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Tunnel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meat",
+            "name": "Chorizo",
+            "image": "res/Item/Meat_Chorizo_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moving_word",
+            "name": "Moving",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Vogue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Narrator",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Friends_word",
+            "name": "Friends",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Clap",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Novel_word",
+            "name": "Novel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Nod",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Mate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Trend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Bezant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Subplot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Bordure",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Moving_word": 8,
+      "Heraldry_word": 8,
+      "Fashion_word": 8,
+      "Gestures_word": 6,
+      "Friends_word": 6,
+      "Meat": 4,
+      "Subway_word": 4,
+      "Novel_word": 4,
+      "Orators_word": 3,
+      "Kettle": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Handle",
+        "image": "res/Item/Kettle_Handle_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Heraldry_word",
+        "name": "Heraldry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Blazon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Annulet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Spout",
+        "image": "res/Item/Kettle_Spout_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Meat",
+        "name": "Meat",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Friend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Bacon",
+        "image": "res/Item/Meat_Bacon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Conflict",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kettle",
+        "name": "Kettle",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Gestures_word",
+        "name": "Gestures",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Flying",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Models",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Outfit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Runway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Climax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Chevron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Sailing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chops",
+        "image": "res/Item/Meat_Chops_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Wave",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Subway_word",
+        "name": "Subway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fashion_word",
+        "name": "Fashion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Salute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Rhetoric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Station",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Bestie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Buddy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Orators_word",
+        "name": "Orators",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Chum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Lid",
+        "image": "res/Item/Kettle_Lid_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Oratory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Going",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Riding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Glamour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Style",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Emblem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Charisma",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 4,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 52,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Lid",
+            "image": "res/Item/Kettle_Lid_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Blazon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Vogue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fashion_word",
+            "name": "Fashion",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Kettle",
+            "name": "Kettle",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Glamour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Salute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Handle",
+            "image": "res/Item/Kettle_Handle_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Going",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Orators_word",
+            "name": "Charisma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meat",
+            "name": "Chops",
+            "image": "res/Item/Meat_Chops_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Mate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Station",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Runway",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Style",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Bezant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Flying",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Spout",
+            "image": "res/Item/Kettle_Spout_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Bow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Heraldry_word",
+            "name": "Heraldry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Orators_word",
+            "name": "Orators",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Climax",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Moving_word": 8,
+      "Heraldry_word": 8,
+      "Fashion_word": 8,
+      "Gestures_word": 6,
+      "Friends_word": 6,
+      "Meat": 4,
+      "Subway_word": 4,
+      "Novel_word": 4,
+      "Orators_word": 3,
+      "Kettle": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Trend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Bestie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Clap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Crest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Catwalk",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gestures_word",
+        "name": "Gestures",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Sailing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Oratory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Chum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Subplot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Facepalm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Bacon",
+        "image": "res/Item/Meat_Bacon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Chevron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Emblem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meat",
+        "name": "Meat",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Friend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Platform",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Outfit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Moving_word",
+        "name": "Moving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Narrator",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Annulet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Friends_word",
+        "name": "Friends",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Subway_word",
+        "name": "Subway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Models",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chorizo",
+        "image": "res/Item/Meat_Chorizo_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Nod",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Cadency",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Buddy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Wave",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Rhetoric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Bordure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Tunnel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Swimming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Riding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Conflict",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Novel_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Running",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 124,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 8,
+        "colToCol": 6,
+        "colMultiToCol": 2,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 55,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meat",
+            "name": "Bacon",
+            "image": "res/Item/Meat_Bacon_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Subplot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Bestie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Catwalk",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Annulet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Flying",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Glamour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Orators_word",
+            "name": "Charisma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Narrator",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Novel_word",
+            "name": "Conflict",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Riding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Outfit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Runway",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Chevron",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Nod",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Jogging",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Subway_word",
+            "name": "Subway",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Blazon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meat",
+            "name": "Chorizo",
+            "image": "res/Item/Meat_Chorizo_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Mate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Orators_word",
+            "name": "Oratory",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Moving_word": 8,
+      "Heraldry_word": 8,
+      "Fashion_word": 8,
+      "Gestures_word": 6,
+      "Friends_word": 6,
+      "Meat": 4,
+      "Subway_word": 4,
+      "Novel_word": 4,
+      "Orators_word": 3,
+      "Kettle": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Trend",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Novel_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Going",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Orators_word",
+        "name": "Orators",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Facepalm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Rhetoric",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gestures_word",
+        "name": "Gestures",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Emblem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Buddy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Cadency",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Station",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Hiking",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Clap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Platform",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meat",
+        "name": "Meat",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Vogue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Friend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Friends_word",
+        "name": "Friends",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Bow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Models",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Moving_word",
+        "name": "Moving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Train",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Sailing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Lid",
+        "image": "res/Item/Kettle_Lid_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Salute",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kettle",
+        "name": "Kettle",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fashion_word",
+        "name": "Fashion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Style",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Climax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Spout",
+        "image": "res/Item/Kettle_Spout_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Running",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Heraldry_word",
+        "name": "Heraldry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Bezant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Tunnel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Bordure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Handle",
+        "image": "res/Item/Kettle_Handle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Chum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Wave",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Crest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chops",
+        "image": "res/Item/Meat_Chops_4.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 6,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 124,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Riding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Mate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Nod",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Flying",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Trend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Crest",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Orators_word",
+            "name": "Charisma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Orators_word",
+            "name": "Oratory",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Friends_word",
+            "name": "Buddy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Bezant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Train",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Spout",
+            "image": "res/Item/Kettle_Spout_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Emblem",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Jogging",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Bow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moving_word",
+            "name": "Hiking",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Heraldry_word",
+            "name": "Annulet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Kettle",
+            "name": "Lid",
+            "image": "res/Item/Kettle_Lid_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Wave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fashion_word",
+            "name": "Vogue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gestures_word",
+            "name": "Facepalm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Subway_word",
+            "name": "Tunnel",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Moving_word": 8,
+      "Heraldry_word": 8,
+      "Fashion_word": 8,
+      "Gestures_word": 6,
+      "Friends_word": 6,
+      "Meat": 4,
+      "Subway_word": 4,
+      "Novel_word": 4,
+      "Orators_word": 3,
+      "Kettle": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Gestures_word",
+        "name": "Gestures",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Chevron",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Kettle",
+        "name": "Kettle",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Salute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Subplot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Subway_word",
+        "name": "Subway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Bordure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Chum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Narrator",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Novel_word",
+        "name": "Novel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Blazon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Climax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Platform",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Kettle",
+        "name": "Handle",
+        "image": "res/Item/Kettle_Handle_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fashion_word",
+        "name": "Fashion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Bestie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Sausage",
+        "image": "res/Item/Meat_Sausage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Sailing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gestures_word",
+        "name": "Clap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Moving_word",
+        "name": "Moving",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Orators_word",
+        "name": "Orators",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Runway",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Subway_word",
+        "name": "Station",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Heraldry_word",
+        "name": "Heraldry",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meat",
+        "name": "Meat",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Models",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chops",
+        "image": "res/Item/Meat_Chops_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Chorizo",
+        "image": "res/Item/Meat_Chorizo_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Heraldry_word",
+        "name": "Cadency",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Soulmate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Glamour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Novel_word",
+        "name": "Conflict",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Swimming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Friends_word",
+        "name": "Friend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Catwalk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Outfit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Going",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meat",
+        "name": "Bacon",
+        "image": "res/Item/Meat_Bacon_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Friends_word",
+        "name": "Friends",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fashion_word",
+        "name": "Style",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Orators_word",
+        "name": "Rhetoric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moving_word",
+        "name": "Running",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  }
+]

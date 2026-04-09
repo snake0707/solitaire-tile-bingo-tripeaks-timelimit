@@ -2,7 +2,32 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 9,
+        "colToCol": 13,
+        "colMultiToCol": 5,
+        "handToSlot": 22,
+        "handToCol": 19,
+        "flip": 41,
+        "recycle": 0
+      },
+      "solver2Steps": 118,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 24,
+        "handToCol": 17,
+        "flip": 51,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
@@ -18,8 +43,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Cipher_word",
-            "name": "Keyword",
+            "category": "Sentence_word",
+            "name": "Question",
             "isText": true
           },
           "faceUp": false
@@ -27,8 +52,56 @@
         {
           "card": {
             "type": "regular",
+            "category": "Rainbow_word",
+            "name": "Blue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Duckling",
+            "image": "res/Item/Cuties_Duckling_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
             "category": "Grains_word",
-            "name": "Wheat",
+            "name": "Rice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cuties",
+            "name": "Cuties",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rainbow_word",
+            "name": "Red",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Speedy",
             "isText": true
           },
           "faceUp": false
@@ -47,80 +120,6 @@
         {
           "card": {
             "type": "regular",
-            "category": "Events_word",
-            "name": "Fair",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Hasty",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sentence_word",
-            "name": "Hyphen",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Prompt",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Barley",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Rice",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Oats",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Symphony_word",
-            "name": "Symphony",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Cipher_word",
             "name": "Decode",
             "isText": true
@@ -129,428 +128,9 @@
         },
         {
           "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Events_word",
-            "name": "Carnival",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Millet",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Cygnet",
-            "image": "res/Item/dogs_terrier_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cipher_word",
-            "name": "Encode",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Symphony_word",
-            "name": "Melody",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artworks_word",
-            "name": "Painting",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sea life_word",
-            "name": "Algae",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artworks_word",
-            "name": "Drawing",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cipher_word",
-            "name": "Password",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fast_word": 8,
-      "Dogs": 8,
-      "Rainbow_word": 7,
-      "Sentence_word": 6,
-      "Grains_word": 6,
-      "Sea life_word": 4,
-      "Cipher_word": 4,
-      "Events_word": 4,
-      "Symphony_word": 3,
-      "Artworks_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Kelp",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Rapid",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sea life_word",
-        "name": "Sea life",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Foal",
-        "image": "res/Item/dogs_husky_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Rainbow_word",
-        "name": "Rainbow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Fiesta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Period",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Events_word",
-        "name": "Events",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Brisk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Question",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Grains_word",
-        "name": "Grains",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Blue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Calf",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Puppy",
-        "image": "res/Item/dogs_collie_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Comma",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cipher_word",
-        "name": "Cipher",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Parade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Duckling",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Kitten",
-        "image": "res/Item/dogs_pug_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Harmony",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Swift",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sentence_word",
-        "name": "Sentence",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Photo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Dogs",
-        "name": "Dogs",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Quick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Colon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Piglet",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Indigo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Dash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Yellow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Wakame",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Orange",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Lamb",
-        "image": "res/Item/dogs_poodle_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Fast_word",
-        "name": "Fast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Seagrass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Rye",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Speedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Violet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Overture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Green",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sentence_word",
-            "name": "Question",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Brisk",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sentence_word",
-            "name": "Hyphen",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Grains_word",
-            "name": "Grains",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Blue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Kitten",
-            "image": "res/Item/dogs_pug_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fast_word",
-            "name": "Fast",
+            "name": "Events",
             "isText": true
           },
           "faceUp": false
@@ -567,19 +147,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sea life_word",
-            "name": "Seagrass",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Dogs",
-            "name": "Dogs",
+            "category": "Cuties",
+            "name": "Kitten",
+            "image": "res/Item/Cuties_Kitten_2.png",
             "isText": false
           },
           "faceUp": false
@@ -587,17 +157,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Events_word",
-            "name": "Fair",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Symphony_word",
-            "name": "Symphony",
+            "category": "Sentence_word",
+            "name": "Comma",
             "isText": true
           },
           "faceUp": false
@@ -609,387 +170,10 @@
             "name": "Hasty",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Events_word",
-            "name": "Carnival",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Rapid",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Rice",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sea life_word",
-            "name": "Algae",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Violet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Lamb",
-            "image": "res/Item/dogs_poodle_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Red",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cipher_word",
-            "name": "Keyword",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Foal",
-            "image": "res/Item/dogs_husky_5.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fast_word": 8,
-      "Dogs": 8,
-      "Rainbow_word": 7,
-      "Sentence_word": 6,
-      "Grains_word": 6,
-      "Sea life_word": 4,
-      "Cipher_word": 4,
-      "Events_word": 4,
-      "Symphony_word": 3,
-      "Artworks_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Swift",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Overture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Orange",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cipher_word",
-        "name": "Cipher",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Kelp",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Colon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Encode",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Comma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Wheat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Painting",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sea life_word",
-        "name": "Sea life",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Fiesta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Password",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Artworks_word",
-        "name": "Artworks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Melody",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Events_word",
-        "name": "Events",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Speedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Barley",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Calf",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Dash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Drawing",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Parade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Quick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Cygnet",
-        "image": "res/Item/dogs_terrier_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Zippy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Wakame",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Rye",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Indigo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Puppy",
-        "image": "res/Item/dogs_collie_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Millet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Photo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Harmony",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Period",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Oats",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Decode",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Yellow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Piglet",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Duckling",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Sentence_word",
-        "name": "Sentence",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Prompt",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Oats",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Rice",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -1006,121 +190,13 @@
             "name": "Drawing",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Sea life_word",
-            "name": "Sea life",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Cygnet",
-            "image": "res/Item/dogs_terrier_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Grains_word",
-            "name": "Grains",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Brisk",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cipher_word",
-            "name": "Encode",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Kitten",
-            "image": "res/Item/dogs_pug_8.png",
-            "isText": false
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
             "category": "Sea life_word",
-            "name": "Wakame",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Puppy",
-            "image": "res/Item/dogs_collie_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Violet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grains_word",
-            "name": "Wheat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Symphony_word",
-            "name": "Overture",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Cipher_word",
-            "name": "Cipher",
+            "name": "Kelp",
             "isText": true
           },
           "faceUp": false
@@ -1137,28 +213,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Piglet",
-            "image": "res/Item/dogs_bulldog_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Duckling",
-            "image": "res/Item/dogs_spaniel_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Indigo",
+            "category": "Grains_word",
+            "name": "Wheat",
             "isText": true
           },
           "faceUp": false
@@ -1166,8 +222,396 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Red",
+            "category": "Cuties",
+            "name": "Calf",
+            "image": "res/Item/Cuties_Calf_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Quick",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fast_word": 8,
+      "Cuties": 8,
+      "Rainbow_word": 7,
+      "Sentence_word": 6,
+      "Grains_word": 6,
+      "Sea life_word": 4,
+      "Cipher_word": 4,
+      "Events_word": 4,
+      "Symphony_word": 3,
+      "Artworks_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Barley",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Cygnet",
+        "image": "res/Item/Cuties_Cygnet_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fast_word",
+        "name": "Fast",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Rye",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Hyphen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Fiesta",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Millet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Lamb",
+        "image": "res/Item/Cuties_Lamb_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Period",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Colon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Puppy",
+        "image": "res/Item/Cuties_Puppy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Harmony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Cipher_word",
+        "name": "Cipher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Algae",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sentence_word",
+        "name": "Sentence",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sea life_word",
+        "name": "Sea life",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Brisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Photo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Encode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Seagrass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Parade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grains_word",
+        "name": "Grains",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Foal",
+        "image": "res/Item/Cuties_Foal_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Dash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Melody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Indigo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Painting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Wakame",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Symphony_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Oats",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Overture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Fair",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Prompt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Keyword",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Orange",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Carnival",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 111,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 7,
+        "handToSlot": 27,
+        "handToCol": 14,
+        "flip": 41,
+        "recycle": 0
+      },
+      "solver2Steps": 118,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 24,
+        "handToCol": 17,
+        "flip": 52,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cipher_word",
+            "name": "Encode",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Algae",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Foal",
+            "image": "res/Item/Cuties_Foal_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Events_word",
+            "name": "Parade",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Puppy",
+            "image": "res/Item/Cuties_Puppy_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Brisk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Duckling",
+            "image": "res/Item/Cuties_Duckling_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sentence_word",
+            "name": "Sentence",
             "isText": true
           },
           "faceUp": false
@@ -1181,324 +625,13 @@
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Fast_word": 8,
-      "Dogs": 8,
-      "Rainbow_word": 7,
-      "Sentence_word": 6,
-      "Grains_word": 6,
-      "Sea life_word": 4,
-      "Cipher_word": 4,
-      "Events_word": 4,
-      "Symphony_word": 3,
-      "Artworks_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Hasty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Millet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Keyword",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Lamb",
-        "image": "res/Item/dogs_poodle_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Fast_word",
-        "name": "Fast",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Symphony_word",
-        "name": "Symphony",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Melody",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Calf",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Algae",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Orange",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Password",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sentence_word",
-        "name": "Sentence",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Question",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Prompt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Kelp",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Dogs",
-        "name": "Dogs",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Carnival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Parade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Painting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Speedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Fiesta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Zippy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Blue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Foal",
-        "image": "res/Item/dogs_husky_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Comma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Photo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Seagrass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Fair",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Period",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Hyphen",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Decode",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Harmony",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Quick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Barley",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Swift",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rainbow_word",
-        "name": "Rainbow",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Artworks_word",
-        "name": "Artworks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Colon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Rye",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Dash",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Blue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Dogs",
-            "name": "Dogs",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artworks_word",
-            "name": "Photo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Calf",
-            "image": "res/Item/dogs_beagle_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
       ],
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Sea life_word",
-            "name": "Sea life",
+            "type": "regular",
+            "category": "Sentence_word",
+            "name": "Question",
             "isText": true
           },
           "faceUp": false
@@ -1506,8 +639,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Events_word",
-            "name": "Fiesta",
+            "category": "Grains_word",
+            "name": "Barley",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Rye",
             "isText": true
           },
           "faceUp": false
@@ -1524,18 +666,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Lamb",
-            "image": "res/Item/dogs_poodle_3.png",
-            "isText": false
+            "category": "Rainbow_word",
+            "name": "Red",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Events_word",
-            "name": "Events",
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Oats",
             "isText": true
           },
           "faceUp": true
@@ -1545,8 +686,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sea life_word",
-            "name": "Kelp",
+            "category": "Artworks_word",
+            "name": "Photo",
             "isText": true
           },
           "faceUp": false
@@ -1555,7 +696,7 @@
           "card": {
             "type": "regular",
             "category": "Fast_word",
-            "name": "Swift",
+            "name": "Speedy",
             "isText": true
           },
           "faceUp": false
@@ -1563,8 +704,36 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Orange",
+            "category": "Sea life_word",
+            "name": "Wakame",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Seagrass",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Kitten",
+            "image": "res/Item/Cuties_Kitten_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Events_word",
+            "name": "Fair",
             "isText": true
           },
           "faceUp": false
@@ -1572,8 +741,326 @@
         {
           "card": {
             "type": "gold",
-            "category": "Rainbow_word",
-            "name": "Rainbow",
+            "category": "Grains_word",
+            "name": "Grains",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fast_word": 8,
+      "Cuties": 8,
+      "Rainbow_word": 7,
+      "Sentence_word": 6,
+      "Grains_word": 6,
+      "Sea life_word": 4,
+      "Cipher_word": 4,
+      "Events_word": 4,
+      "Symphony_word": 3,
+      "Artworks_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Orange",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Melody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Prompt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Fiesta",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Rice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Kelp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Indigo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Colon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Drawing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Decode",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cuties",
+        "name": "Cuties",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Symphony_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cipher_word",
+        "name": "Cipher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Zippy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Calf",
+        "image": "res/Item/Cuties_Calf_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Keyword",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Cygnet",
+        "image": "res/Item/Cuties_Cygnet_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Dash",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Artworks_word",
+        "name": "Artworks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Lamb",
+        "image": "res/Item/Cuties_Lamb_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Hasty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Period",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Overture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fast_word",
+        "name": "Fast",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sea life_word",
+        "name": "Sea life",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Comma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Yellow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Blue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Wheat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Painting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Hyphen",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rainbow_word",
+        "name": "Rainbow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Carnival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Harmony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Rapid",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 116,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 3,
+        "handToSlot": 18,
+        "handToCol": 23,
+        "flip": 49,
+        "recycle": 1
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Symphony_word",
+            "name": "Overture",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sea life_word",
+            "name": "Sea life",
             "isText": true
           },
           "faceUp": false
@@ -1583,6 +1070,54 @@
             "type": "regular",
             "category": "Cipher_word",
             "name": "Encode",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Events_word",
+            "name": "Fiesta",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Kitten",
+            "image": "res/Item/Cuties_Kitten_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Speedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sentence_word",
+            "name": "Hyphen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rainbow_word",
+            "name": "Blue",
             "isText": true
           },
           "faceUp": false
@@ -1601,8 +1136,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sea life_word",
-            "name": "Wakame",
+            "category": "Grains_word",
+            "name": "Oats",
             "isText": true
           },
           "faceUp": false
@@ -1619,9 +1154,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Foal",
-            "image": "res/Item/dogs_husky_5.png",
+            "category": "Cuties",
+            "name": "Piglet",
+            "image": "res/Item/Cuties_Piglet_5.png",
             "isText": false
           },
           "faceUp": false
@@ -1629,10 +1164,403 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Puppy",
-            "image": "res/Item/dogs_collie_6.png",
+            "category": "Fast_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Rye",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Rapid",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Millet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artworks_word",
+            "name": "Painting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fast_word",
+            "name": "Fast",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Zippy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Quick",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Artworks_word",
+            "name": "Artworks",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Cygnet",
+            "image": "res/Item/Cuties_Cygnet_8.png",
             "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fast_word": 8,
+      "Cuties": 8,
+      "Rainbow_word": 7,
+      "Sentence_word": 6,
+      "Grains_word": 6,
+      "Sea life_word": 4,
+      "Cipher_word": 4,
+      "Events_word": 4,
+      "Symphony_word": 3,
+      "Artworks_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Sentence_word",
+        "name": "Sentence",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rainbow_word",
+        "name": "Rainbow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Period",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Seagrass",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cuties",
+        "name": "Cuties",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Dash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Parade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Question",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Foal",
+        "image": "res/Item/Cuties_Foal_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Calf",
+        "image": "res/Item/Cuties_Calf_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Photo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Barley",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Wheat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grains_word",
+        "name": "Grains",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Algae",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Colon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Rice",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Symphony_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Events_word",
+        "name": "Events",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Orange",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Yellow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Drawing",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Hasty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cipher_word",
+        "name": "Cipher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Lamb",
+        "image": "res/Item/Cuties_Lamb_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Harmony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Duckling",
+        "image": "res/Item/Cuties_Duckling_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Keyword",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Carnival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Kelp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Prompt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Comma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Melody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Puppy",
+        "image": "res/Item/Cuties_Puppy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Brisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Indigo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Wakame",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 114,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 0,
+        "colMultiToCol": 3,
+        "handToSlot": 21,
+        "handToCol": 20,
+        "flip": 49,
+        "recycle": 1
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority-greedy",
+      "solver2Stats": {
+        "colSingleToSlot": 0,
+        "colMultiToSlot": 0,
+        "colToCol": 0,
+        "colMultiToCol": 0,
+        "handToSlot": 0,
+        "handToCol": 0,
+        "flip": 0,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Millet",
+            "isText": true
           },
           "faceUp": false
         },
@@ -1648,296 +1576,81 @@
         {
           "card": {
             "type": "regular",
-            "category": "Symphony_word",
-            "name": "Melody",
+            "category": "Cipher_word",
+            "name": "Encode",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Cipher_word",
-            "name": "Cipher",
+            "type": "regular",
+            "category": "Sentence_word",
+            "name": "Hyphen",
             "isText": true
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Fast_word": 8,
-      "Dogs": 8,
-      "Rainbow_word": 7,
-      "Sentence_word": 6,
-      "Grains_word": 6,
-      "Sea life_word": 4,
-      "Cipher_word": 4,
-      "Events_word": 4,
-      "Symphony_word": 3,
-      "Artworks_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Seagrass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Wheat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Prompt",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Quick",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Speedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sea life_word",
-        "name": "Algae",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Period",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Oats",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Dash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Yellow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Harmony",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Artworks_word",
-        "name": "Artworks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Question",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Violet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Password",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Barley",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Indigo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Painting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Drawing",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Carnival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Rye",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fast_word",
-        "name": "Fast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sentence_word",
-        "name": "Sentence",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Colon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Kitten",
-        "image": "res/Item/dogs_pug_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Rapid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Keyword",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Brisk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Grains_word",
-        "name": "Grains",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Piglet",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Symphony_word",
-        "name": "Symphony",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Parade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Cygnet",
-        "image": "res/Item/dogs_terrier_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Comma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Symphony_word",
-        "name": "Overture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Duckling",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Hasty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Zippy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Hyphen",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
+      ],
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Seagrass",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Lamb",
+            "image": "res/Item/Cuties_Lamb_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Duckling",
+            "image": "res/Item/Cuties_Duckling_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Algae",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sentence_word",
+            "name": "Dash",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -1950,8 +1663,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Events_word",
-            "name": "Parade",
+            "category": "Artworks_word",
+            "name": "Drawing",
             "isText": true
           },
           "faceUp": false
@@ -1960,56 +1673,7 @@
           "card": {
             "type": "regular",
             "category": "Grains_word",
-            "name": "Rice",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Foal",
-            "image": "res/Item/dogs_husky_5.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Symphony_word",
-            "name": "Overture",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fast_word",
-            "name": "Prompt",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Lamb",
-            "image": "res/Item/dogs_poodle_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sea life_word",
-            "name": "Algae",
+            "name": "Oats",
             "isText": true
           },
           "faceUp": false
@@ -2019,6 +1683,15 @@
             "type": "regular",
             "category": "Rainbow_word",
             "name": "Violet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fast_word",
+            "name": "Fast",
             "isText": true
           },
           "faceUp": true
@@ -2037,8 +1710,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fast_word",
-            "name": "Zippy",
+            "category": "Rainbow_word",
+            "name": "Green",
             "isText": true
           },
           "faceUp": false
@@ -2046,10 +1719,356 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Piglet",
-            "image": "res/Item/dogs_bulldog_7.png",
-            "isText": false
+            "category": "Rainbow_word",
+            "name": "Orange",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Wakame",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artworks_word",
+            "name": "Painting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Events_word",
+            "name": "Parade",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sea life_word",
+            "name": "Sea life",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fast_word": 8,
+      "Cuties": 8,
+      "Rainbow_word": 7,
+      "Sentence_word": 6,
+      "Grains_word": 6,
+      "Sea life_word": 4,
+      "Cipher_word": 4,
+      "Events_word": 4,
+      "Symphony_word": 3,
+      "Artworks_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Rapid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Wheat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Puppy",
+        "image": "res/Item/Cuties_Puppy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Rye",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Brisk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Harmony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Carnival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Kelp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Fiesta",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Overture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Hasty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Zippy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rainbow_word",
+        "name": "Rainbow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Period",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Blue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Calf",
+        "image": "res/Item/Cuties_Calf_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Melody",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Artworks_word",
+        "name": "Artworks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Indigo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Kitten",
+        "image": "res/Item/Cuties_Kitten_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Colon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Events_word",
+        "name": "Events",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Speedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Prompt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Decode",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cuties",
+        "name": "Cuties",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Barley",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grains_word",
+        "name": "Grains",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Comma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Yellow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Events_word",
+        "name": "Fair",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Cygnet",
+        "image": "res/Item/Cuties_Cygnet_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Question",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Foal",
+        "image": "res/Item/Cuties_Foal_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Symphony_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cipher_word",
+        "name": "Cipher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Photo",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 112,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 9,
+        "colMultiToCol": 4,
+        "handToSlot": 25,
+        "handToCol": 16,
+        "flip": 41,
+        "recycle": 0
+      },
+      "solver2Steps": 120,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 16,
+        "flip": 53,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Prompt",
+            "isText": true
           },
           "faceUp": false
         },
@@ -2065,8 +2084,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fast_word",
-            "name": "Speedy",
+            "category": "Rainbow_word",
+            "name": "Violet",
             "isText": true
           },
           "faceUp": false
@@ -2074,14 +2093,98 @@
         {
           "card": {
             "type": "regular",
-            "category": "Artworks_word",
-            "name": "Painting",
+            "category": "Events_word",
+            "name": "Fair",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Symphony_word",
+            "name": "Symphony",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Wheat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Artworks_word",
+            "name": "Artworks",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Events_word",
+            "name": "Parade",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Lamb",
+            "image": "res/Item/Cuties_Lamb_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fast_word",
+            "name": "Brisk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Events_word",
+            "name": "Events",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Algae",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sea life_word",
+            "name": "Kelp",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -2094,28 +2197,20 @@
         {
           "card": {
             "type": "regular",
-            "category": "Symphony_word",
-            "name": "Melody",
+            "category": "Grains_word",
+            "name": "Rice",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Puppy",
-            "image": "res/Item/dogs_collie_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "gold",
-            "category": "Dogs",
-            "name": "Dogs",
-            "isText": false
+            "category": "Cipher_word",
+            "name": "Cipher",
+            "isText": true
           },
           "faceUp": false
         },
@@ -2123,7 +2218,16 @@
           "card": {
             "type": "regular",
             "category": "Artworks_word",
-            "name": "Drawing",
+            "name": "Photo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sea life_word",
+            "name": "Sea life",
             "isText": true
           },
           "faceUp": false
@@ -2131,9 +2235,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Calf",
-            "image": "res/Item/dogs_beagle_2.png",
+            "category": "Sentence_word",
+            "name": "Question",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cuties",
+            "name": "Cygnet",
+            "image": "res/Item/Cuties_Cygnet_8.png",
             "isText": false
           },
           "faceUp": false
@@ -2141,8 +2254,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rainbow_word",
-            "name": "Blue",
+            "category": "Cuties",
+            "name": "Foal",
+            "image": "res/Item/Cuties_Foal_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grains_word",
+            "name": "Oats",
             "isText": true
           },
           "faceUp": true
@@ -2151,7 +2274,7 @@
     ],
     "categoryTargets": {
       "Fast_word": 8,
-      "Dogs": 8,
+      "Cuties": 8,
       "Rainbow_word": 7,
       "Sentence_word": 6,
       "Grains_word": 6,
@@ -2164,8 +2287,20 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Sea life_word",
-        "name": "Wakame",
+        "category": "Rainbow_word",
+        "name": "Indigo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grains_word",
+        "name": "Grains",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Password",
         "isText": true
       },
       {
@@ -2176,142 +2311,32 @@
       },
       {
         "type": "regular",
-        "category": "Fast_word",
-        "name": "Brisk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Artworks_word",
-        "name": "Artworks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Kitten",
-        "image": "res/Item/dogs_pug_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Colon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Fair",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artworks_word",
-        "name": "Photo",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Grains_word",
-        "name": "Oats",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Duckling",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cipher_word",
-        "name": "Decode",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Comma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Rye",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Question",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sentence_word",
-        "name": "Period",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Rapid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fast_word",
-        "name": "Hasty",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sea life_word",
-        "name": "Sea life",
+        "name": "Millet",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Rainbow_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Events_word",
-        "name": "Carnival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grains_word",
-        "name": "Barley",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Symphony_word",
-        "name": "Symphony",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Events_word",
-        "name": "Events",
+        "name": "Yellow",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Rainbow_word",
-        "name": "Indigo",
+        "name": "Blue",
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Artworks_word",
+        "name": "Drawing",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Fast_word",
-        "name": "Fast",
+        "name": "Swift",
         "isText": true
       },
       {
@@ -2322,14 +2347,20 @@
       },
       {
         "type": "gold",
-        "category": "Cipher_word",
-        "name": "Cipher",
+        "category": "Sentence_word",
+        "name": "Sentence",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Fast_word",
-        "name": "Quick",
+        "category": "Grains_word",
+        "name": "Barley",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Symphony_word",
+        "name": "Overture",
         "isText": true
       },
       {
@@ -2341,21 +2372,70 @@
       {
         "type": "regular",
         "category": "Fast_word",
-        "name": "Swift",
+        "name": "Hasty",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Dogs",
-        "name": "Cygnet",
-        "image": "res/Item/dogs_terrier_1.png",
+        "category": "Artworks_word",
+        "name": "Painting",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Speedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Comma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Decode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fast_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Period",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cipher_word",
+        "name": "Keyword",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Puppy",
+        "image": "res/Item/Cuties_Puppy_1.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Grains_word",
-        "name": "Millet",
-        "isText": true
+        "category": "Cuties",
+        "name": "Calf",
+        "image": "res/Item/Cuties_Calf_4.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -2365,14 +2445,20 @@
       },
       {
         "type": "regular",
-        "category": "Grains_word",
-        "name": "Wheat",
+        "category": "Fast_word",
+        "name": "Zippy",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Yellow",
+        "category": "Events_word",
+        "name": "Carnival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grains_word",
+        "name": "Rye",
         "isText": true
       },
       {
@@ -2383,15 +2469,28 @@
       },
       {
         "type": "regular",
-        "category": "Sea life_word",
-        "name": "Kelp",
+        "category": "Symphony_word",
+        "name": "Melody",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Rainbow_word",
-        "name": "Orange",
+        "category": "Fast_word",
+        "name": "Rapid",
         "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fast_word",
+        "name": "Fast",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Piglet",
+        "image": "res/Item/Cuties_Piglet_5.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -2401,14 +2500,40 @@
       },
       {
         "type": "regular",
-        "category": "Cipher_word",
-        "name": "Password",
+        "category": "Cuties",
+        "name": "Kitten",
+        "image": "res/Item/Cuties_Kitten_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rainbow_word",
+        "name": "Orange",
         "isText": true
       },
       {
+        "type": "regular",
+        "category": "Sentence_word",
+        "name": "Colon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cuties",
+        "name": "Duckling",
+        "image": "res/Item/Cuties_Duckling_7.png",
+        "isText": false
+      },
+      {
         "type": "gold",
-        "category": "Grains_word",
-        "name": "Grains",
+        "category": "Cuties",
+        "name": "Cuties",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sea life_word",
+        "name": "Wakame",
         "isText": true
       }
     ],

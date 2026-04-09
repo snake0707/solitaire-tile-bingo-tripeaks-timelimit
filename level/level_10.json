@@ -4,97 +4,33 @@
       "maxSlots": 4,
       "maxSteps": 130,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 131,
+      "solverMaxSteps": 132,
       "moveStats": {
         "colSingleToSlot": 12,
         "colMultiToSlot": 5,
-        "colToCol": 17,
-        "colMultiToCol": 0,
-        "handToSlot": 31,
-        "handToCol": 15,
-        "flip": 46,
-        "recycle": 0
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 21,
+        "flip": 63,
+        "recycle": 1
+      },
+      "solver2Steps": 124,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 1,
+        "colMultiToCol": 3,
+        "handToSlot": 23,
+        "handToCol": 23,
+        "flip": 55,
+        "recycle": 1
       }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Birds",
-            "name": "Owl",
-            "image": "res/Item/bird_owl_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Tongue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Shoe_word",
-            "name": "Shoe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Integral",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Genres_word",
-            "name": "Jazz",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Division",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Hockey_word",
-            "name": "Hockey",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Parlor",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -107,10 +43,49 @@
         {
           "card": {
             "type": "regular",
+            "category": "Rooms_word",
+            "name": "Bathroom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Birds",
-            "name": "Vulture",
-            "image": "res/Item/bird_vulture_8.png",
+            "name": "Heron",
+            "image": "res/Item/bird_heron_5.png",
             "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Date_word",
+            "name": "Couple",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Owl",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Date_word",
+            "name": "Date",
+            "isText": true
           },
           "faceUp": false
         },
@@ -118,16 +93,7 @@
           "card": {
             "type": "regular",
             "category": "Travel_word",
-            "name": "Trip",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Maths_word",
-            "name": "Maths",
+            "name": "Cruise",
             "isText": true
           },
           "faceUp": true
@@ -137,35 +103,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Genres_word",
-            "name": "Rap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Date_word",
-            "name": "Flowers",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Rooms_word",
-            "name": "Rooms",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Vector",
+            "category": "Minds_word",
+            "name": "Galileo",
             "isText": true
           },
           "faceUp": false
@@ -182,8 +121,82 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hockey_word",
-            "name": "Penalty",
+            "category": "Travel_word",
+            "name": "Trip",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoe_word",
+            "name": "Insole",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rooms_word",
+            "name": "Rooms",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Genres_word",
+            "name": "Reggae",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Minds_word",
+            "name": "Dante",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Vector",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rooms_word",
+            "name": "Bedroom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rooms_word",
+            "name": "Attic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Plus",
             "isText": true
           },
           "faceUp": true
@@ -205,204 +218,9 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Minds_word",
-        "name": "Plato",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bathroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Sartre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Robin",
-        "image": "res/Item/bird_robin_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Rock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Dante",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Laces",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Plus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Insole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bedroom",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Date_word",
-        "name": "Date",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Kitchen",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Tour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Blade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Pop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Percent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Cruise",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Minds_word",
-        "name": "Minds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Disco",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Cellar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Kant",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Puck",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Shoe_word",
         "name": "Sole",
         "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Birds",
-        "name": "Birds",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Goal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Eagle",
-        "image": "res/Item/bird_eagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Attic",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Genres_word",
-        "name": "Genres",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Travel_word",
-        "name": "Travel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Couple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Minus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Notch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Swan",
-        "image": "res/Item/bird_swan_3.png",
-        "isText": false
       },
       {
         "type": "regular",
@@ -411,59 +229,15 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Heron",
-        "image": "res/Item/bird_heron_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
+        "type": "gold",
         "category": "Maths_word",
-        "name": "Theorem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Voyage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Reggae",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Dove",
-        "image": "res/Item/bird_dove_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Galileo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Socrates",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Rink",
+        "name": "Maths",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Saw_word",
-        "name": "Saw",
+        "category": "Minds_word",
+        "name": "Minds",
         "isText": true
       },
       {
@@ -475,14 +249,253 @@
       },
       {
         "type": "regular",
+        "category": "Travel_word",
+        "name": "Tour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Tongue",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shoe_word",
+        "name": "Shoe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Cellar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Parlor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Birds",
+        "name": "Birds",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Puck",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Travel_word",
+        "name": "Travel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Notch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Saw_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Jazz",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Maths_word",
         "name": "Matrix",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Maths_word",
+        "name": "Integral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Voyage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Plato",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Genres_word",
+        "name": "Genres",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Penalty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Disco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Minus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Sartre",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Laces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Socrates",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hockey_word",
+        "name": "Hockey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Theorem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Percent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Pop",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Genres_word",
         "name": "Blues",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Vulture",
+        "image": "res/Item/bird_vulture_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Robin",
+        "image": "res/Item/bird_robin_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Dove",
+        "image": "res/Item/bird_dove_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Eagle",
+        "image": "res/Item/bird_eagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Rink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Goal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Blade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Kant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Flowers",
         "isText": true
       }
     ],
@@ -493,16 +506,29 @@
       "maxSlots": 4,
       "maxSteps": 130,
       "strategyType": "priority",
-      "solverSteps": 128,
+      "solverSteps": 127,
+      "solverMaxSteps": 132,
       "moveStats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 8,
-        "colToCol": 17,
-        "colMultiToCol": 0,
-        "handToSlot": 24,
-        "handToCol": 22,
-        "flip": 46,
-        "recycle": 0
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 6,
+        "handToSlot": 26,
+        "handToCol": 20,
+        "flip": 59,
+        "recycle": 1
+      },
+      "solver2Steps": 123,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 6,
+        "handToSlot": 20,
+        "handToCol": 26,
+        "flip": 54,
+        "recycle": 1
       }
     },
     "tableau": [
@@ -510,8 +536,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Minds_word",
-            "name": "Galileo",
+            "category": "Genres_word",
+            "name": "Jazz",
             "isText": true
           },
           "faceUp": false
@@ -519,9 +545,49 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rooms_word",
-            "name": "Attic",
+            "category": "Maths_word",
+            "name": "Percent",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Minds_word",
+            "name": "Plato",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Genres_word",
+            "name": "Country",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Owl",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Robin",
+            "image": "res/Item/bird_robin_6.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -539,8 +605,527 @@
         {
           "card": {
             "type": "regular",
+            "category": "Hockey_word",
+            "name": "Puck",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Shoe_word",
-            "name": "Sole",
+            "name": "Shoe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hockey_word",
+            "name": "Goal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hockey_word",
+            "name": "Rink",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Saw_word",
+            "name": "Blade",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hockey_word",
+            "name": "Penalty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rooms_word",
+            "name": "Parlor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Vulture",
+            "image": "res/Item/bird_vulture_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Eagle",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Minds_word",
+            "name": "Socrates",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Travel_word",
+            "name": "Voyage",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Maths_word": 8,
+      "Birds": 8,
+      "Genres_word": 8,
+      "Minds_word": 6,
+      "Rooms_word": 6,
+      "Travel_word": 4,
+      "Shoe_word": 4,
+      "Hockey_word": 4,
+      "Date_word": 3,
+      "Saw_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bedroom",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Genres_word",
+        "name": "Genres",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Cruise",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Birds",
+        "name": "Birds",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Notch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Sole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Laces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Sartre",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Minds_word",
+        "name": "Minds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Trip",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Cellar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Dante",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Blues",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Tongue",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Maths_word",
+        "name": "Maths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Vector",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Flowers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hockey_word",
+        "name": "Hockey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Pop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Attic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Dove",
+        "image": "res/Item/bird_dove_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Date_word",
+        "name": "Date",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rooms_word",
+        "name": "Rooms",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Finch",
+        "image": "res/Item/bird_finch_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Plus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Theorem",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Travel_word",
+        "name": "Travel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Saw_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Kant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Minus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Integral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Kitchen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Teeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Insole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Reggae",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Tuxedo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Couple",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Tour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Galileo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Matrix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Heron",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 130,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 132,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 27,
+        "handToCol": 19,
+        "flip": 59,
+        "recycle": 1
+      },
+      "solver2Steps": 129,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 24,
+        "handToCol": 22,
+        "flip": 63,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Matrix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Genres_word",
+            "name": "Genres",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Travel_word",
+            "name": "Cruise",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rooms_word",
+            "name": "Rooms",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoe_word",
+            "name": "Insole",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Eagle",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hockey_word",
+            "name": "Rink",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Genres_word",
+            "name": "Country",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Genres_word",
+            "name": "Rap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rooms_word",
+            "name": "Parlor",
             "isText": true
           },
           "faceUp": false
@@ -562,57 +1147,10 @@
             "name": "Blade",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Theorem",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Birds",
-            "name": "Eagle",
-            "image": "res/Item/bird_eagle_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Birds",
-            "name": "Owl",
-            "image": "res/Item/bird_owl_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Saw_word",
-            "name": "Saw",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Travel_word",
-            "name": "Cruise",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -620,54 +1158,6 @@
             "name": "Heron",
             "image": "res/Item/bird_heron_5.png",
             "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Genres_word",
-            "name": "Rap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Birds",
-            "name": "Robin",
-            "image": "res/Item/bird_robin_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Saw_word",
-            "name": "Teeth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Plus",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Percent",
-            "isText": true
           },
           "faceUp": false
         },
@@ -675,447 +1165,16 @@
           "card": {
             "type": "regular",
             "category": "Hockey_word",
-            "name": "Rink",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Maths_word": 8,
-      "Birds": 8,
-      "Genres_word": 8,
-      "Minds_word": 6,
-      "Rooms_word": 6,
-      "Travel_word": 4,
-      "Shoe_word": 4,
-      "Hockey_word": 4,
-      "Date_word": 3,
-      "Saw_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Sartre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Blues",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Minds_word",
-        "name": "Minds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Tuxedo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Penalty",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hockey_word",
-        "name": "Hockey",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Shoe_word",
-        "name": "Shoe",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Travel_word",
-        "name": "Travel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Kitchen",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Couple",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Rock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Matrix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Notch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bedroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Kant",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Division",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Tongue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bathroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Jazz",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rooms_word",
-        "name": "Rooms",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Vector",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Trip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Plato",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Birds",
-        "name": "Birds",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Flowers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Country",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Dante",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Swan",
-        "image": "res/Item/bird_swan_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Parlor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Integral",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Date_word",
-        "name": "Date",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Socrates",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Puck",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Minus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Cellar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Voyage",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Genres_word",
-        "name": "Genres",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Finch",
-        "image": "res/Item/bird_finch_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Tour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Reggae",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Insole",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Maths_word",
-        "name": "Maths",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Pop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Vulture",
-        "image": "res/Item/bird_vulture_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Laces",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Goal",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130,
-      "strategyType": "priority",
-      "solverSteps": 129,
-      "moveStats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 6,
-        "colToCol": 17,
-        "colMultiToCol": 0,
-        "handToSlot": 30,
-        "handToCol": 16,
-        "flip": 46,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Genres_word",
-            "name": "Rap",
+            "name": "Penalty",
             "isText": true
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Sole",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Cellar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Genres_word",
-            "name": "Genres",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Saw_word",
-            "name": "Saw",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Matrix",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Shoe_word",
-            "name": "Shoe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Insole",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Birds",
-            "name": "Heron",
-            "image": "res/Item/bird_heron_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Bathroom",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Theorem",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Plus",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
             "category": "Date_word",
-            "name": "Couple",
+            "name": "Flowers",
             "isText": true
           },
           "faceUp": false
@@ -1123,18 +1182,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Birds",
-            "name": "Eagle",
-            "image": "res/Item/bird_eagle_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Tongue",
+            "category": "Minds_word",
+            "name": "Galileo",
             "isText": true
           },
           "faceUp": false
@@ -1152,17 +1201,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Shoe_word",
-            "name": "Laces",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Minus",
+            "category": "Saw_word",
+            "name": "Teeth",
             "isText": true
           },
           "faceUp": true
@@ -1184,153 +1224,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Minds_word",
-        "name": "Socrates",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Kant",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Vulture",
-        "image": "res/Item/bird_vulture_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Maths_word",
-        "name": "Percent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Country",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Pop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Notch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Voyage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Flowers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Trip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Dante",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Penalty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Teeth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Jazz",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Division",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bedroom",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Date_word",
-        "name": "Date",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Travel_word",
-        "name": "Travel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Reggae",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Attic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Disco",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Sartre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Plato",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Parlor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Blues",
+        "name": "Plus",
         "isText": true
       },
       {
@@ -1341,46 +1236,8 @@
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Dove",
-        "image": "res/Item/bird_dove_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Tour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Puck",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Galileo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Owl",
-        "image": "res/Item/bird_owl_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Maths_word",
-        "name": "Maths",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rooms_word",
-        "name": "Rooms",
+        "category": "Date_word",
+        "name": "Couple",
         "isText": true
       },
       {
@@ -1392,50 +1249,8 @@
       },
       {
         "type": "gold",
-        "category": "Birds",
-        "name": "Birds",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Cruise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Blade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Minds_word",
-        "name": "Minds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Vector",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Rock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Rink",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hockey_word",
-        "name": "Hockey",
+        "category": "Shoe_word",
+        "name": "Shoe",
         "isText": true
       },
       {
@@ -1446,8 +1261,165 @@
       },
       {
         "type": "regular",
+        "category": "Shoe_word",
+        "name": "Laces",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Saw_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Cellar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Attic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hockey_word",
+        "name": "Hockey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Tour",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Minds_word",
+        "name": "Minds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Vulture",
+        "image": "res/Item/bird_vulture_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Travel_word",
+        "name": "Travel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Kant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Minus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Percent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Sartre",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Blues",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Division",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Maths_word",
+        "name": "Maths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Socrates",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Maths_word",
         "name": "Integral",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bedroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Trip",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Disco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Jazz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Sole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Reggae",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Pop",
         "isText": true
       },
       {
@@ -1458,10 +1430,77 @@
       },
       {
         "type": "regular",
+        "category": "Minds_word",
+        "name": "Dante",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Owl",
+        "image": "res/Item/bird_owl_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Date_word",
+        "name": "Date",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Voyage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Tongue",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Birds",
         "name": "Finch",
         "image": "res/Item/bird_finch_7.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Theorem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Puck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Plato",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Notch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Birds",
+        "name": "Birds",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Vector",
+        "isText": true
       }
     ],
     "handDisplay": []
@@ -1471,16 +1510,29 @@
       "maxSlots": 4,
       "maxSteps": 130,
       "strategyType": "priority",
-      "solverSteps": 123,
+      "solverSteps": 128,
+      "solverMaxSteps": 132,
       "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 9,
-        "colToCol": 13,
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 8,
+        "colToCol": 3,
         "colMultiToCol": 0,
         "handToSlot": 29,
         "handToCol": 17,
-        "flip": 46,
-        "recycle": 0
+        "flip": 62,
+        "recycle": 1
+      },
+      "solver2Steps": 130,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 7,
+        "colToCol": 4,
+        "colMultiToCol": 1,
+        "handToSlot": 29,
+        "handToCol": 17,
+        "flip": 62,
+        "recycle": 1
       }
     },
     "tableau": [
@@ -1488,8 +1540,38 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hockey_word",
-            "name": "Puck",
+            "category": "Birds",
+            "name": "Swan",
+            "image": "res/Item/bird_swan_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shoe_word",
+            "name": "Shoe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Minds_word",
+            "name": "Sartre",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shoe_word",
+            "name": "Sole",
             "isText": true
           },
           "faceUp": false
@@ -1506,8 +1588,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Minds_word",
-            "name": "Plato",
+            "category": "Rooms_word",
+            "name": "Parlor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Plus",
             "isText": true
           },
           "faceUp": true
@@ -1517,9 +1608,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Saw_word",
-            "name": "Notch",
-            "isText": true
+            "category": "Birds",
+            "name": "Finch",
+            "image": "res/Item/bird_finch_7.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1527,16 +1619,7 @@
           "card": {
             "type": "regular",
             "category": "Travel_word",
-            "name": "Trip",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Matrix",
+            "name": "Tour",
             "isText": true
           },
           "faceUp": false
@@ -1546,26 +1629,6 @@
             "type": "gold",
             "category": "Hockey_word",
             "name": "Hockey",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hockey_word",
-            "name": "Rink",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Tongue",
             "isText": true
           },
           "faceUp": false
@@ -1582,17 +1645,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Genres_word",
-            "name": "Pop",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Attic",
+            "category": "Maths_word",
+            "name": "Integral",
             "isText": true
           },
           "faceUp": true
@@ -1601,9 +1655,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Shoe_word",
-            "name": "Shoe",
+            "type": "regular",
+            "category": "Rooms_word",
+            "name": "Cellar",
             "isText": true
           },
           "faceUp": false
@@ -1611,35 +1665,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Genres_word",
-            "name": "Reggae",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Laces",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Date_word",
-            "name": "Date",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Minds_word",
-            "name": "Galileo",
+            "category": "Travel_word",
+            "name": "Trip",
             "isText": true
           },
           "faceUp": false
@@ -1648,7 +1675,34 @@
           "card": {
             "type": "regular",
             "category": "Hockey_word",
-            "name": "Penalty",
+            "name": "Goal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Birds",
+            "name": "Birds",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Theorem",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Saw_word",
+            "name": "Blade",
             "isText": true
           },
           "faceUp": true
@@ -1670,69 +1724,22 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Travel_word",
-        "name": "Cruise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Theorem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Division",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Minus",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Birds",
-        "name": "Swan",
-        "image": "res/Item/bird_swan_3.png",
+        "name": "Vulture",
+        "image": "res/Item/bird_vulture_8.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Maths_word",
-        "name": "Integral",
-        "isText": true
+        "category": "Birds",
+        "name": "Heron",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Rooms_word",
-        "name": "Bathroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Rap",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rooms_word",
-        "name": "Rooms",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Tuxedo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Date_word",
-        "name": "Flowers",
+        "name": "Attic",
         "isText": true
       },
       {
@@ -1743,52 +1750,38 @@
       },
       {
         "type": "regular",
-        "category": "Minds_word",
-        "name": "Kant",
+        "category": "Maths_word",
+        "name": "Minus",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Travel_word",
-        "name": "Tour",
+        "category": "Maths_word",
+        "name": "Matrix",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Vulture",
-        "image": "res/Item/bird_vulture_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Sartre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Sole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Blues",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Heron",
-        "image": "res/Item/bird_heron_5.png",
-        "isText": false
       },
       {
         "type": "gold",
-        "category": "Maths_word",
-        "name": "Maths",
+        "category": "Date_word",
+        "name": "Date",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Puck",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Saw_word",
+        "name": "Saw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Flowers",
         "isText": true
       },
       {
@@ -1801,37 +1794,91 @@
       {
         "type": "regular",
         "category": "Genres_word",
-        "name": "Disco",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Saw_word",
-        "name": "Saw",
+        "name": "Jazz",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Maths_word",
-        "name": "Plus",
+        "category": "Date_word",
+        "name": "Couple",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Minds_word",
-        "name": "Dante",
+        "name": "Socrates",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Hockey_word",
-        "name": "Goal",
+        "category": "Travel_word",
+        "name": "Voyage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bedroom",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Genres_word",
-        "name": "Rock",
+        "name": "Reggae",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Vector",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Disco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Laces",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bathroom",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Travel_word",
+        "name": "Travel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Rink",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rooms_word",
+        "name": "Rooms",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Blues",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Galileo",
         "isText": true
       },
       {
@@ -1841,9 +1888,15 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Travel_word",
-        "name": "Travel",
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Plato",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Pop",
         "isText": true
       },
       {
@@ -1855,63 +1908,20 @@
       },
       {
         "type": "regular",
-        "category": "Minds_word",
-        "name": "Socrates",
+        "category": "Shoe_word",
+        "name": "Tongue",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Date_word",
-        "name": "Couple",
+        "category": "Saw_word",
+        "name": "Notch",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Genres_word",
-        "name": "Country",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bedroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Voyage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Owl",
-        "image": "res/Item/bird_owl_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Blade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Parlor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Cellar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shoe_word",
-        "name": "Insole",
+        "name": "Rock",
         "isText": true
       },
       {
@@ -1923,33 +1933,75 @@
       },
       {
         "type": "regular",
+        "category": "Travel_word",
+        "name": "Cruise",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Maths_word",
         "name": "Percent",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Maths_word",
-        "name": "Vector",
+        "category": "Birds",
+        "name": "Owl",
+        "image": "res/Item/bird_owl_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Dante",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Finch",
-        "image": "res/Item/bird_finch_7.png",
-        "isText": false
+        "category": "Hockey_word",
+        "name": "Penalty",
+        "isText": true
       },
       {
         "type": "gold",
-        "category": "Birds",
-        "name": "Birds",
-        "isText": false
+        "category": "Maths_word",
+        "name": "Maths",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Division",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Genres_word",
-        "name": "Jazz",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Kant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Tuxedo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shoe_word",
+        "name": "Insole",
         "isText": true
       }
     ],
@@ -1960,16 +2012,29 @@
       "maxSlots": 4,
       "maxSteps": 130,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 131,
+      "solverMaxSteps": 132,
       "moveStats": {
-        "colSingleToSlot": 13,
-        "colMultiToSlot": 5,
-        "colToCol": 16,
-        "colMultiToCol": 0,
-        "handToSlot": 28,
-        "handToCol": 18,
-        "flip": 46,
-        "recycle": 0
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 4,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 31,
+        "handToCol": 15,
+        "flip": 64,
+        "recycle": 1
+      },
+      "solver2Steps": 131,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 5,
+        "handToSlot": 27,
+        "handToCol": 19,
+        "flip": 62,
+        "recycle": 1
       }
     },
     "tableau": [
@@ -1977,140 +2042,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hockey_word",
-            "name": "Rink",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Minds_word",
-            "name": "Minds",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Maths_word",
-            "name": "Maths",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Saw_word",
-            "name": "Notch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Date_word",
-            "name": "Date",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Kitchen",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Maths_word",
-            "name": "Percent",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rooms_word",
-            "name": "Parlor",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hockey_word",
-            "name": "Penalty",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shoe_word",
-            "name": "Tongue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Minds_word",
-            "name": "Plato",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Shoe_word",
-            "name": "Shoe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Date_word",
-            "name": "Couple",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Travel_word",
-            "name": "Travel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Minds_word",
-            "name": "Kant",
+            "category": "Genres_word",
+            "name": "Rap",
             "isText": true
           },
           "faceUp": false
@@ -2128,8 +2061,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Minds_word",
-            "name": "Dante",
+            "category": "Genres_word",
+            "name": "Disco",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Saw_word",
+            "name": "Saw",
             "isText": true
           },
           "faceUp": false
@@ -2137,9 +2081,134 @@
         {
           "card": {
             "type": "regular",
-            "category": "Saw_word",
-            "name": "Teeth",
+            "category": "Rooms_word",
+            "name": "Kitchen",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Travel_word",
+            "name": "Voyage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Owl",
+            "image": "res/Item/bird_owl_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shoe_word",
+            "name": "Shoe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Minus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Vulture",
+            "image": "res/Item/bird_vulture_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Minds_word",
+            "name": "Plato",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Eagle",
+            "image": "res/Item/bird_eagle_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Date_word",
+            "name": "Date",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Travel_word",
+            "name": "Cruise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hockey_word",
+            "name": "Goal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Genres_word",
+            "name": "Genres",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Maths_word",
+            "name": "Vector",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Birds",
+            "name": "Robin",
+            "image": "res/Item/bird_robin_6.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -2160,44 +2229,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Rooms_word",
-        "name": "Cellar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Voyage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Trip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Pop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Galileo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Tour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bathroom",
+        "category": "Maths_word",
+        "name": "Division",
         "isText": true
       },
       {
@@ -2208,8 +2241,20 @@
       },
       {
         "type": "regular",
-        "category": "Minds_word",
-        "name": "Socrates",
+        "category": "Hockey_word",
+        "name": "Penalty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Travel_word",
+        "name": "Travel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Bathroom",
         "isText": true
       },
       {
@@ -2220,20 +2265,68 @@
       },
       {
         "type": "regular",
+        "category": "Minds_word",
+        "name": "Sartre",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Kant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Notch",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Genres_word",
-        "name": "Rap",
+        "name": "Pop",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Maths_word",
+        "name": "Maths",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Shoe_word",
-        "name": "Laces",
+        "name": "Tongue",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Date_word",
-        "name": "Flowers",
+        "category": "Rooms_word",
+        "name": "Bedroom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rooms_word",
+        "name": "Parlor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Dante",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rooms_word",
+        "name": "Rooms",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Minds_word",
+        "name": "Minds",
         "isText": true
       },
       {
@@ -2244,34 +2337,8 @@
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Swan",
-        "image": "res/Item/bird_swan_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Division",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Rock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Vulture",
-        "image": "res/Item/bird_vulture_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Integral",
+        "category": "Rooms_word",
+        "name": "Cellar",
         "isText": true
       },
       {
@@ -2282,14 +2349,101 @@
       },
       {
         "type": "regular",
-        "category": "Shoe_word",
-        "name": "Insole",
+        "category": "Birds",
+        "name": "Heron",
+        "image": "res/Item/bird_heron_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Country",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Galileo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Date_word",
+        "name": "Flowers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Jazz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Tour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Minds_word",
+        "name": "Socrates",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Travel_word",
+        "name": "Trip",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Maths_word",
         "name": "Theorem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Saw_word",
+        "name": "Blade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Finch",
+        "image": "res/Item/bird_finch_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Birds",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Hockey_word",
+        "name": "Hockey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Genres_word",
+        "name": "Rock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hockey_word",
+        "name": "Rink",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Maths_word",
+        "name": "Matrix",
         "isText": true
       },
       {
@@ -2306,81 +2460,14 @@
       },
       {
         "type": "regular",
-        "category": "Genres_word",
-        "name": "Country",
+        "category": "Shoe_word",
+        "name": "Laces",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Genres_word",
-        "name": "Jazz",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Vector",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Robin",
-        "image": "res/Item/bird_robin_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Genres_word",
-        "name": "Genres",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Genres_word",
-        "name": "Disco",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rooms_word",
-        "name": "Bedroom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hockey_word",
-        "name": "Goal",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hockey_word",
-        "name": "Hockey",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Saw_word",
-        "name": "Saw",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Saw_word",
-        "name": "Blade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rooms_word",
-        "name": "Rooms",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Maths_word",
-        "name": "Minus",
+        "category": "Date_word",
+        "name": "Couple",
         "isText": true
       },
       {
@@ -2391,48 +2478,26 @@
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Heron",
-        "image": "res/Item/bird_heron_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Minds_word",
-        "name": "Sartre",
+        "category": "Maths_word",
+        "name": "Percent",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Finch",
-        "image": "res/Item/bird_finch_7.png",
-        "isText": false
+        "category": "Shoe_word",
+        "name": "Insole",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Birds",
-        "name": "Owl",
-        "image": "res/Item/bird_owl_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Birds",
-        "name": "Eagle",
-        "image": "res/Item/bird_eagle_2.png",
-        "isText": false
+        "category": "Saw_word",
+        "name": "Teeth",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Maths_word",
-        "name": "Matrix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Travel_word",
-        "name": "Cruise",
+        "name": "Integral",
         "isText": true
       },
       {

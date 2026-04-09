@@ -7,24 +7,1048 @@
       "solverSteps": 121,
       "solverMaxSteps": 130,
       "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 5,
-        "colToCol": 4,
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
         "colMultiToCol": 1,
         "handToSlot": 26,
         "handToCol": 16,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 127,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Armor_word",
+            "name": "Helmet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Van Gogh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Artists_word",
+            "name": "Artists",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Lactic",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Acetic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "December",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "April",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Views_word",
+            "name": "Views",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Vermeer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Diving_word",
+            "name": "Snorkel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rat_word",
+            "name": "Rat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Undercut",
+            "image": "res/Item/Hairs_Undercut_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "May",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Views_word",
+            "name": "Nihilism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Radiatus",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Opacus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Acids_word",
+            "name": "Acids",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Views_word",
+            "name": "Stoicism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Nimbus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Views_word",
+            "name": "Dualism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Cirrus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "October",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Months_word": 8,
+      "Artists_word": 8,
+      "Acids_word": 8,
+      "Clouds_word": 6,
+      "Hairs": 6,
+      "Message_word": 4,
+      "Armor_word": 4,
+      "Diving_word": 4,
+      "Views_word": 3,
+      "Rat_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Da Vinci",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Boric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Sneaky",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Armor_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Stratus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "June",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Text",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "July",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Malic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Fade",
+        "image": "res/Item/Hairs_Fade_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "January",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Gauntlet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Cumulus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Fins",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Folic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Warhol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Munch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hairs",
+        "name": "Hairs",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Diving_word",
+        "name": "Diving",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Clouds_word",
+        "name": "Clouds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "August",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Picasso",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Email",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Monet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Security",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Cuirass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mohawk",
+        "image": "res/Item/Hairs_Mohawk_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Dali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Wetsuit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Months_word",
+        "name": "Months",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Drysuit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mullet",
+        "image": "res/Item/Hairs_Mullet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Nitric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Sulfuric",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Message_word",
+        "name": "Message",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Oxalic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Bob",
+        "image": "res/Item/Hairs_Bob_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Nimble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Afro",
+        "image": "res/Item/Hairs_Afro_6.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 57,
+        "recycle": 1
+      },
+      "solver2Steps": 125,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 3,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 55,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Vermeer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Diving_word",
+            "name": "Fins",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Malic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Da Vinci",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Mohawk",
+            "image": "res/Item/Hairs_Mohawk_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Armor_word",
+            "name": "Armor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Van Gogh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Cumulus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Armor_word",
+            "name": "Gauntlet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Bob",
+            "image": "res/Item/Hairs_Bob_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Message_word",
+            "name": "Letter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Months_word",
+            "name": "Months",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hairs",
+            "name": "Hairs",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rat_word",
+            "name": "Sneaky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Diving_word",
+            "name": "Wetsuit",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Folic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Picasso",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Sulfuric",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rat_word",
+            "name": "Nimble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Dali",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rat_word",
+            "name": "Rat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "January",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Months_word": 8,
+      "Artists_word": 8,
+      "Acids_word": 8,
+      "Clouds_word": 6,
+      "Hairs": 6,
+      "Message_word": 4,
+      "Armor_word": 4,
+      "Diving_word": 4,
+      "Views_word": 3,
+      "Rat_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Clouds_word",
+        "name": "Clouds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Email",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Cirrus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Warhol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "August",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Snorkel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Nihilism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Boric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Monet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Oxalic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mullet",
+        "image": "res/Item/Hairs_Mullet_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Acids_word",
+        "name": "Acids",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Opacus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "April",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Nimbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Text",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Drysuit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Nitric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "June",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Helmet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Acetic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Message_word",
+        "name": "Message",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Radiatus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Views_word",
+        "name": "Views",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Fade",
+        "image": "res/Item/Hairs_Fade_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Diving_word",
+        "name": "Diving",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Stratus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Undercut",
+        "image": "res/Item/Hairs_Undercut_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "October",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Munch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "December",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Stoicism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Afro",
+        "image": "res/Item/Hairs_Afro_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "July",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Lactic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Dualism",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Artists_word",
+        "name": "Artists",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Security",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "May",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Cuirass",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 4,
+        "handToSlot": 31,
+        "handToCol": 11,
         "flip": 56,
         "recycle": 1
       },
       "solver2Steps": 125,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 8,
-        "colToCol": 7,
-        "colMultiToCol": 0,
-        "handToSlot": 26,
-        "handToCol": 16,
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 4,
+        "handToSlot": 24,
+        "handToCol": 18,
         "flip": 57,
         "recycle": 1
       }
@@ -34,8 +1058,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sticky_word",
-            "name": "Sap",
+            "category": "Acids_word",
+            "name": "Oxalic",
             "isText": true
           },
           "faceUp": false
@@ -43,39 +1067,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Polygons",
-            "name": "Octagon",
-            "image": "res/Item/shapes_octagon_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Hexagon",
-            "image": "res/Item/Polygons_Hexagon_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Gigantic",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hammock_word",
-            "name": "Chill",
+            "category": "Artists_word",
+            "name": "Van Gogh",
             "isText": true
           },
           "faceUp": false
@@ -83,26 +1076,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Big_word",
-            "name": "Huge",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Hammock_word",
-            "name": "Hammock",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Sticky_word",
-            "name": "Sticky",
+            "category": "Armor_word",
+            "name": "Security",
             "isText": true
           },
           "faceUp": false
@@ -110,8 +1085,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ports_word",
-            "name": "HDMI",
+            "category": "Rat_word",
+            "name": "Sneaky",
             "isText": true
           },
           "faceUp": true
@@ -121,26 +1096,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Heels_word",
-            "name": "Stiletto",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Robot_word",
-            "name": "Drone",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Sigma",
+            "category": "Views_word",
+            "name": "Stoicism",
             "isText": true
           },
           "faceUp": false
@@ -148,8 +1105,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Robot_word",
-            "name": "Robot",
+            "category": "Diving_word",
+            "name": "Diving",
             "isText": true
           },
           "faceUp": false
@@ -157,8 +1114,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sticky_word",
-            "name": "Glue",
+            "category": "Clouds_word",
+            "name": "Nimbus",
             "isText": true
           },
           "faceUp": false
@@ -166,10 +1123,75 @@
         {
           "card": {
             "type": "regular",
-            "category": "Polygons",
-            "name": "Decagon",
-            "image": "res/Item/Polygons_Decagon_4.png",
+            "category": "Acids_word",
+            "name": "Sulfuric",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Vermeer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Armor_word",
+            "name": "Armor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Opacus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "June",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Malic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Mohawk",
+            "image": "res/Item/Hairs_Mohawk_3.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Message_word",
+            "name": "Text",
+            "isText": true
           },
           "faceUp": true
         }
@@ -178,8 +1200,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Heels_word",
-            "name": "Cuban",
+            "category": "Artists_word",
+            "name": "Monet",
             "isText": true
           },
           "faceUp": false
@@ -187,8 +1209,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hammock_word",
-            "name": "Sleep",
+            "category": "Clouds_word",
+            "name": "Radiatus",
             "isText": true
           },
           "faceUp": false
@@ -196,8 +1218,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ports_word",
-            "name": "VGA",
+            "category": "Clouds_word",
+            "name": "Cirrus",
             "isText": true
           },
           "faceUp": false
@@ -205,8 +1227,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Nanobot",
+            "category": "Armor_word",
+            "name": "Helmet",
             "isText": true
           },
           "faceUp": false
@@ -214,26 +1236,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Big_word",
-            "name": "Sizable",
+            "category": "Message_word",
+            "name": "Email",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Inertia",
+            "type": "gold",
+            "category": "Acids_word",
+            "name": "Acids",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Velocity",
+            "type": "gold",
+            "category": "Rat_word",
+            "name": "Rat",
             "isText": true
           },
           "faceUp": true
@@ -241,271 +1263,273 @@
       ]
     ],
     "categoryTargets": {
-      "Big_word": 8,
-      "Sticky_word": 8,
-      "City_word": 8,
-      "Robot_word": 6,
-      "Polygons": 6,
-      "Ports_word": 4,
-      "Heels_word": 4,
-      "Hammock_word": 4,
-      "Greece_word": 3,
-      "Dynamics_word": 3
+      "Months_word": 8,
+      "Artists_word": 8,
+      "Acids_word": 8,
+      "Clouds_word": 6,
+      "Hairs": 6,
+      "Message_word": 4,
+      "Armor_word": 4,
+      "Diving_word": 4,
+      "Views_word": 3,
+      "Rat_word": 3
     },
     "handPile": [
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Massive",
+        "category": "Views_word",
+        "name": "Dualism",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Molasses",
+        "category": "Message_word",
+        "name": "Fax",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Ports_word",
-        "name": "Type-C",
+        "category": "Months_word",
+        "name": "August",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Dali",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Ports_word",
-        "name": "Ports",
+        "category": "Message_word",
+        "name": "Message",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Polygons",
-        "name": "Polygons",
+        "category": "Hairs",
+        "name": "Hairs",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Views_word",
+        "name": "Views",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Fade",
+        "image": "res/Item/Hairs_Fade_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Heels_word",
-        "name": "Spool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Lisbon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Rest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "USB",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Vienna",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "City_word",
-        "name": "City",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Android",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Colossal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Kappa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Enormous",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Heels_word",
-        "name": "Heels",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Adhesive",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Immense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Cyborg",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Vast",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Dynamics_word",
-        "name": "Dynamics",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Motion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Kitten",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Greece_word",
-        "name": "Greece",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Machine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Austin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Dallas",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Tar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Big_word",
-        "name": "Big",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Wax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Paris",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Delta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Resin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Heptagon",
-        "image": "res/Item/Polygons_Heptagon_2.png",
+        "category": "Hairs",
+        "name": "Undercut",
+        "image": "res/Item/Hairs_Undercut_2.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Mud",
+        "category": "Artists_word",
+        "name": "Munch",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Tokyo",
+        "category": "Clouds_word",
+        "name": "Cumulus",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Polygons",
-        "name": "Triangle",
-        "image": "res/Item/shapes_triangle_5.png",
+        "category": "Artists_word",
+        "name": "Picasso",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "January",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Nimble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Wetsuit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "April",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Nihilism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Da Vinci",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Boric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Bob",
+        "image": "res/Item/Hairs_Bob_1.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Toronto",
+        "category": "Acids_word",
+        "name": "Lactic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Robot_word",
-        "name": "Robovac",
+        "category": "Hairs",
+        "name": "Afro",
+        "image": "res/Item/Hairs_Afro_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Artists_word",
+        "name": "Artists",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Polygons",
-        "name": "Pentagon",
-        "image": "res/Item/Polygons_Pentagon_3.png",
+        "category": "Armor_word",
+        "name": "Cuirass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Acetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Snorkel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Folic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "December",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "May",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Warhol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Fins",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Clouds_word",
+        "name": "Clouds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mullet",
+        "image": "res/Item/Hairs_Mullet_5.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Chicago",
+        "category": "Message_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Months_word",
+        "name": "Months",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Stratus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Drysuit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "July",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Gauntlet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "October",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Nitric",
         "isText": true
       }
     ],
@@ -516,1052 +1540,28 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 129,
       "solverMaxSteps": 130,
       "moveStats": {
-        "colSingleToSlot": 9,
+        "colSingleToSlot": 11,
         "colMultiToSlot": 6,
-        "colToCol": 6,
-        "colMultiToCol": 4,
-        "handToSlot": 26,
-        "handToCol": 16,
+        "colToCol": 5,
+        "colMultiToCol": 6,
+        "handToSlot": 25,
+        "handToCol": 17,
         "flip": 58,
         "recycle": 1
       },
-      "solver2Steps": 124,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 26,
-        "handToCol": 16,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Paris",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Robot_word",
-            "name": "Robot",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Heptagon",
-            "image": "res/Item/Polygons_Heptagon_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Dallas",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Adhesive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "HDMI",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hammock_word",
-            "name": "Chill",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Decagon",
-            "image": "res/Item/Polygons_Decagon_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Stiletto",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Sigma",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hammock_word",
-            "name": "Relax",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Robot_word",
-            "name": "Cyborg",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Polygons",
-            "name": "Polygons",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Vast",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Hammock_word",
-            "name": "Hammock",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Hexagon",
-            "image": "res/Item/Polygons_Hexagon_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Gigantic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Dynamics_word",
-            "name": "Dynamics",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Massive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Sizable",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Tokyo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Sap",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Big_word": 8,
-      "Sticky_word": 8,
-      "City_word": 8,
-      "Robot_word": 6,
-      "Polygons": 6,
-      "Ports_word": 4,
-      "Heels_word": 4,
-      "Hammock_word": 4,
-      "Greece_word": 3,
-      "Dynamics_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Glue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Rest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Motion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Sleep",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Immense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Triangle",
-        "image": "res/Item/shapes_triangle_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Cuban",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "USB",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Pentagon",
-        "image": "res/Item/Polygons_Pentagon_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Big_word",
-        "name": "Big",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Kitten",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Kappa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Tar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Velocity",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Drone",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Greece_word",
-        "name": "Greece",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Heels_word",
-        "name": "Heels",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Colossal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "VGA",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Wax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Molasses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Austin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ports_word",
-        "name": "Ports",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Spool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Machine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Android",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Huge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Resin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "City_word",
-        "name": "City",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Enormous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Vienna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "Type-C",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Mud",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Lisbon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Inertia",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sticky_word",
-        "name": "Sticky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Octagon",
-        "image": "res/Item/shapes_octagon_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Nanobot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Robovac",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Toronto",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Delta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Chicago",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 124,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 9,
-        "colToCol": 7,
-        "colMultiToCol": 4,
-        "handToSlot": 20,
-        "handToCol": 22,
-        "flip": 54,
-        "recycle": 1
-      },
-      "solver2Steps": 124,
+      "solver2Steps": 127,
       "solver2StrategyType": "priority",
       "solver2Stats": {
         "colSingleToSlot": 11,
-        "colMultiToSlot": 8,
-        "colToCol": 5,
-        "colMultiToCol": 1,
-        "handToSlot": 17,
-        "handToCol": 25,
-        "flip": 56,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Austin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Stiletto",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Huge",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Robot_word",
-            "name": "Machine",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Chicago",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hammock_word",
-            "name": "Chill",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Velocity",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Spool",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Kitten",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hammock_word",
-            "name": "Sleep",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Robot_word",
-            "name": "Android",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Pentagon",
-            "image": "res/Item/Polygons_Pentagon_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Delta",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Mud",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Gigantic",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Robot_word",
-            "name": "Nanobot",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Greece_word",
-            "name": "Greece",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Kappa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "City_word",
-            "name": "City",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "Type-C",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Octagon",
-            "image": "res/Item/shapes_octagon_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Decagon",
-            "image": "res/Item/Polygons_Decagon_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Big_word": 8,
-      "Sticky_word": 8,
-      "City_word": 8,
-      "Robot_word": 6,
-      "Polygons": 6,
-      "Ports_word": 4,
-      "Heels_word": 4,
-      "Hammock_word": 4,
-      "Greece_word": 3,
-      "Dynamics_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Resin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sticky_word",
-        "name": "Sticky",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Big_word",
-        "name": "Big",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Cuban",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hammock_word",
-        "name": "Hammock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Molasses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "VGA",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Massive",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Enormous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Sigma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Hexagon",
-        "image": "res/Item/Polygons_Hexagon_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Inertia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Colossal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Vienna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Drone",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Paris",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Tokyo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Immense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Dallas",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ports_word",
-        "name": "Ports",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Glue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Vast",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Dynamics_word",
-        "name": "Dynamics",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Sap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "HDMI",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Tar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Toronto",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Wax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Robovac",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Polygons",
-        "name": "Polygons",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Triangle",
-        "image": "res/Item/shapes_triangle_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Heels_word",
-        "name": "Heels",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Sizable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Heptagon",
-        "image": "res/Item/Polygons_Heptagon_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Robot_word",
-        "name": "Robot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Rest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Adhesive",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Cyborg",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ports_word",
-        "name": "USB",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Lisbon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Motion",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 124,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 6,
-        "colToCol": 8,
-        "colMultiToCol": 4,
-        "handToSlot": 23,
-        "handToCol": 19,
-        "flip": 54,
-        "recycle": 1
-      },
-      "solver2Steps": 129,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 10,
         "colMultiToSlot": 6,
         "colToCol": 7,
-        "colMultiToCol": 3,
-        "handToSlot": 20,
-        "handToCol": 22,
-        "flip": 60,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 58,
         "recycle": 1
       }
     },
@@ -1569,9 +1569,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Heels_word",
-            "name": "Heels",
+            "type": "regular",
+            "category": "Months_word",
+            "name": "April",
             "isText": true
           },
           "faceUp": false
@@ -1579,8 +1579,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "City_word",
-            "name": "Tokyo",
+            "category": "Artists_word",
+            "name": "Munch",
             "isText": true
           },
           "faceUp": false
@@ -1588,8 +1588,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ports_word",
-            "name": "USB",
+            "category": "Diving_word",
+            "name": "Fins",
             "isText": true
           },
           "faceUp": false
@@ -1597,57 +1597,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Robovac",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Greece_word",
-            "name": "Greece",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Delta",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Triangle",
-            "image": "res/Item/shapes_triangle_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Heptagon",
-            "image": "res/Item/Polygons_Heptagon_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Paris",
+            "category": "Months_word",
+            "name": "June",
             "isText": true
           },
           "faceUp": true
@@ -1657,8 +1608,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hammock_word",
-            "name": "Sleep",
+            "category": "Diving_word",
+            "name": "Wetsuit",
             "isText": true
           },
           "faceUp": false
@@ -1666,8 +1617,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Nanobot",
+            "category": "Armor_word",
+            "name": "Helmet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rat_word",
+            "name": "Nimble",
             "isText": true
           },
           "faceUp": false
@@ -1675,8 +1635,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Dynamics_word",
-            "name": "Dynamics",
+            "category": "Artists_word",
+            "name": "Artists",
             "isText": true
           },
           "faceUp": false
@@ -1684,28 +1644,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Machine",
+            "category": "Artists_word",
+            "name": "Picasso",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "City_word",
-            "name": "Toronto",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Octagon",
-            "image": "res/Item/shapes_octagon_4.png",
-            "isText": false
           },
           "faceUp": true
         }
@@ -1714,334 +1655,393 @@
         {
           "card": {
             "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Velocity",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "VGA",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Glue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Cuban",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "Type-C",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Tar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Polygons",
-            "name": "Decagon",
-            "image": "res/Item/Polygons_Decagon_4.png",
+            "category": "Hairs",
+            "name": "Afro",
+            "image": "res/Item/Hairs_Afro_6.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Artists_word",
+            "name": "Warhol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Cirrus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Clouds_word",
+            "name": "Clouds",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Armor_word",
+            "name": "Security",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Acetic",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Diving_word",
+            "name": "Snorkel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Diving_word",
+            "name": "Drysuit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "August",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Cumulus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "May",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Undercut",
+            "image": "res/Item/Hairs_Undercut_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Acids_word",
+            "name": "Sulfuric",
+            "isText": true
           },
           "faceUp": true
         }
       ]
     ],
     "categoryTargets": {
-      "Big_word": 8,
-      "Sticky_word": 8,
-      "City_word": 8,
-      "Robot_word": 6,
-      "Polygons": 6,
-      "Ports_word": 4,
-      "Heels_word": 4,
-      "Hammock_word": 4,
-      "Greece_word": 3,
-      "Dynamics_word": 3
+      "Months_word": 8,
+      "Artists_word": 8,
+      "Acids_word": 8,
+      "Clouds_word": 6,
+      "Hairs": 6,
+      "Message_word": 4,
+      "Armor_word": 4,
+      "Diving_word": 4,
+      "Views_word": 3,
+      "Rat_word": 3
     },
     "handPile": [
       {
         "type": "regular",
-        "category": "Heels_word",
-        "name": "Kitten",
+        "category": "Artists_word",
+        "name": "Monet",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Chicago",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "City_word",
-        "name": "City",
+        "category": "Acids_word",
+        "name": "Boric",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Sizable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Hexagon",
-        "image": "res/Item/Polygons_Hexagon_1.png",
+        "category": "Hairs",
+        "name": "Bob",
+        "image": "res/Item/Hairs_Bob_1.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Hammock_word",
-        "name": "Hammock",
+        "category": "Acids_word",
+        "name": "Acids",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Austin",
+        "category": "Message_word",
+        "name": "Text",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Lisbon",
+        "category": "Artists_word",
+        "name": "Vermeer",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Greece_word",
-        "name": "Sigma",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sticky_word",
-        "name": "Sticky",
+        "category": "Acids_word",
+        "name": "Folic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Polygons",
-        "name": "Pentagon",
-        "image": "res/Item/Polygons_Pentagon_3.png",
+        "category": "Message_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Dali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "July",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "December",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mohawk",
+        "image": "res/Item/Hairs_Mohawk_3.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Huge",
+        "category": "Artists_word",
+        "name": "Da Vinci",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Inertia",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Robot_word",
-        "name": "Robot",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ports_word",
-        "name": "Ports",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Rest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Motion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Drone",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Massive",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Kappa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Sap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Chill",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Resin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Android",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Immense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Vienna",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Big_word",
-        "name": "Big",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Enormous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Molasses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Gigantic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Vast",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Wax",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Polygons",
-        "name": "Polygons",
+        "category": "Hairs",
+        "name": "Fade",
+        "image": "res/Item/Hairs_Fade_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Dallas",
+        "category": "Armor_word",
+        "name": "Cuirass",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Robot_word",
-        "name": "Cyborg",
+        "category": "Clouds_word",
+        "name": "Opacus",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Mud",
+        "category": "Armor_word",
+        "name": "Gauntlet",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Heels_word",
-        "name": "Stiletto",
+        "category": "Views_word",
+        "name": "Nihilism",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Heels_word",
-        "name": "Spool",
+        "category": "Message_word",
+        "name": "Fax",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Adhesive",
+        "category": "Months_word",
+        "name": "October",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Hammock_word",
-        "name": "Relax",
+        "category": "Months_word",
+        "name": "January",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Months_word",
+        "name": "Months",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Ports_word",
-        "name": "HDMI",
+        "category": "Acids_word",
+        "name": "Lactic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Armor_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Views_word",
+        "name": "Views",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Colossal",
+        "category": "Views_word",
+        "name": "Dualism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Stoicism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Nitric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Sneaky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Mullet",
+        "image": "res/Item/Hairs_Mullet_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Diving_word",
+        "name": "Diving",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hairs",
+        "name": "Hairs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Malic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Oxalic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Stratus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Message_word",
+        "name": "Message",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Radiatus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Van Gogh",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rat_word",
+        "name": "Rat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Nimbus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Email",
         "isText": true
       }
     ],
@@ -2052,28 +2052,28 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 123,
       "solverMaxSteps": 130,
       "moveStats": {
         "colSingleToSlot": 12,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 1,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 3,
         "handToSlot": 25,
         "handToCol": 17,
-        "flip": 60,
+        "flip": 55,
         "recycle": 1
       },
-      "solver2Steps": 128,
+      "solver2Steps": 123,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 8,
-        "colToCol": 6,
-        "colMultiToCol": 1,
-        "handToSlot": 23,
-        "handToCol": 19,
-        "flip": 60,
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 55,
         "recycle": 1
       }
     },
@@ -2082,9 +2082,56 @@
         {
           "card": {
             "type": "regular",
-            "category": "Polygons",
-            "name": "Octagon",
-            "image": "res/Item/shapes_octagon_4.png",
+            "category": "Acids_word",
+            "name": "Folic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "April",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Views_word",
+            "name": "Nihilism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Message_word",
+            "name": "Email",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "July",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hairs",
+            "name": "Undercut",
+            "image": "res/Item/Hairs_Undercut_2.png",
             "isText": false
           },
           "faceUp": false
@@ -2092,9 +2139,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Polygons",
-            "name": "Pentagon",
-            "image": "res/Item/Polygons_Pentagon_3.png",
+            "category": "Months_word",
+            "name": "January",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hairs",
+            "name": "Hairs",
             "isText": false
           },
           "faceUp": false
@@ -2102,17 +2157,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sticky_word",
-            "name": "Tar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Heels_word",
-            "name": "Cuban",
+            "category": "Clouds_word",
+            "name": "Stratus",
             "isText": true
           },
           "faceUp": true
@@ -2122,8 +2168,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Nanobot",
+            "category": "Artists_word",
+            "name": "Da Vinci",
             "isText": true
           },
           "faceUp": false
@@ -2131,8 +2177,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sticky_word",
-            "name": "Mud",
+            "category": "Hairs",
+            "name": "Mullet",
+            "image": "res/Item/Hairs_Mullet_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Acids_word",
+            "name": "Acids",
             "isText": true
           },
           "faceUp": false
@@ -2140,17 +2196,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Greece_word",
-            "name": "Delta",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "HDMI",
+            "category": "Months_word",
+            "name": "December",
             "isText": true
           },
           "faceUp": false
@@ -2158,8 +2205,17 @@
         {
           "card": {
             "type": "gold",
-            "category": "Sticky_word",
-            "name": "Sticky",
+            "category": "Views_word",
+            "name": "Views",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Clouds_word",
+            "name": "Radiatus",
             "isText": true
           },
           "faceUp": true
@@ -2169,8 +2225,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "City_word",
-            "name": "Dallas",
+            "category": "Armor_word",
+            "name": "Gauntlet",
             "isText": true
           },
           "faceUp": false
@@ -2178,8 +2234,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ports_word",
-            "name": "USB",
+            "category": "Rat_word",
+            "name": "Nimble",
             "isText": true
           },
           "faceUp": false
@@ -2187,8 +2243,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Robot_word",
-            "name": "Machine",
+            "category": "Hairs",
+            "name": "Bob",
+            "image": "res/Item/Hairs_Bob_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Months_word",
+            "name": "June",
             "isText": true
           },
           "faceUp": false
@@ -2196,46 +2262,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ports_word",
-            "name": "VGA",
-            "isText": true
+            "category": "Hairs",
+            "name": "Mohawk",
+            "image": "res/Item/Hairs_Mohawk_3.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Sticky_word",
-            "name": "Adhesive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Greece_word",
-            "name": "Sigma",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "City_word",
-            "name": "City",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Motion",
+            "category": "Clouds_word",
+            "name": "Nimbus",
             "isText": true
           },
           "faceUp": false
@@ -2243,44 +2281,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Ports_word",
-            "name": "Ports",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sticky_word",
-            "name": "Sap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ports_word",
-            "name": "Type-C",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Big_word",
-            "name": "Massive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dynamics_word",
-            "name": "Inertia",
+            "category": "Artists_word",
+            "name": "Artists",
             "isText": true
           },
           "faceUp": true
@@ -2288,272 +2290,270 @@
       ]
     ],
     "categoryTargets": {
-      "Big_word": 8,
-      "Sticky_word": 8,
-      "City_word": 8,
-      "Robot_word": 6,
-      "Polygons": 6,
-      "Ports_word": 4,
-      "Heels_word": 4,
-      "Hammock_word": 4,
-      "Greece_word": 3,
-      "Dynamics_word": 3
+      "Months_word": 8,
+      "Artists_word": 8,
+      "Acids_word": 8,
+      "Clouds_word": 6,
+      "Hairs": 6,
+      "Message_word": 4,
+      "Armor_word": 4,
+      "Diving_word": 4,
+      "Views_word": 3,
+      "Rat_word": 3
     },
     "handPile": [
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Wax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dynamics_word",
-        "name": "Velocity",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Lisbon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Huge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Glue",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Spool",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Android",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Sleep",
+        "category": "Artists_word",
+        "name": "Picasso",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Big_word",
-        "name": "Big",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Sizable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sticky_word",
-        "name": "Molasses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Rest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Triangle",
-        "image": "res/Item/shapes_triangle_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Hammock_word",
-        "name": "Hammock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Immense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Colossal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Kitten",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Austin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Big_word",
-        "name": "Gigantic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "City_word",
-        "name": "Toronto",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Greece_word",
-        "name": "Kappa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Robot_word",
-        "name": "Drone",
+        "category": "Clouds_word",
+        "name": "Clouds",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Greece_word",
-        "name": "Greece",
+        "category": "Message_word",
+        "name": "Message",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Polygons",
-        "name": "Heptagon",
-        "image": "res/Item/Polygons_Heptagon_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Polygons",
-        "name": "Polygons",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Dynamics_word",
-        "name": "Dynamics",
+        "category": "Acids_word",
+        "name": "Sulfuric",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Vienna",
+        "category": "Diving_word",
+        "name": "Fins",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Polygons",
-        "name": "Decagon",
-        "image": "res/Item/Polygons_Decagon_4.png",
+        "category": "Artists_word",
+        "name": "Monet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hairs",
+        "name": "Afro",
+        "image": "res/Item/Hairs_Afro_6.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Chicago",
+        "category": "Acids_word",
+        "name": "Boric",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Robot_word",
-        "name": "Cyborg",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hammock_word",
-        "name": "Chill",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Heels_word",
-        "name": "Heels",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Heels_word",
-        "name": "Stiletto",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Robot_word",
-        "name": "Robot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Polygons",
-        "name": "Hexagon",
-        "image": "res/Item/Polygons_Hexagon_1.png",
+        "category": "Hairs",
+        "name": "Fade",
+        "image": "res/Item/Hairs_Fade_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Enormous",
+        "category": "Months_word",
+        "name": "October",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Big_word",
-        "name": "Vast",
+        "category": "Artists_word",
+        "name": "Munch",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Tokyo",
+        "category": "Acids_word",
+        "name": "Malic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "City_word",
-        "name": "Paris",
+        "category": "Armor_word",
+        "name": "Cuirass",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Diving_word",
+        "name": "Diving",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sticky_word",
-        "name": "Resin",
+        "category": "Acids_word",
+        "name": "Lactic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Robot_word",
-        "name": "Robovac",
+        "category": "Message_word",
+        "name": "Text",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Dali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Wetsuit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Snorkel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Letter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Stoicism",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rat_word",
+        "name": "Rat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Vermeer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Diving_word",
+        "name": "Drysuit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Armor_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Views_word",
+        "name": "Dualism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "May",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Opacus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Nitric",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Warhol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Acetic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Quick",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artists_word",
+        "name": "Van Gogh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Months_word",
+        "name": "August",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Cumulus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Security",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Message_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Months_word",
+        "name": "Months",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Acids_word",
+        "name": "Oxalic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rat_word",
+        "name": "Sneaky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Armor_word",
+        "name": "Helmet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Clouds_word",
+        "name": "Cirrus",
         "isText": true
       }
     ],

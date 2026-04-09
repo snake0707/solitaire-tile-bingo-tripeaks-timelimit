@@ -2,165 +2,36 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 150
+      "maxSteps": 133,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 135,
+      "solverSeed": 1497671324,
+      "moveStats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 33,
+        "handToCol": 9,
+        "flip": 60,
+        "recycle": 1
+      },
+      "solver2Steps": 133,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 65,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Europium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Moose",
-            "image": "res/Item/rodents_marmot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Adenoids",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Addax",
-            "image": "res/Item/rodents_guineapig_8.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Okapi",
-            "image": "res/Item/rodents_rat_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Artifact_word",
-            "name": "Artifact",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Jacuzzi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Insignia",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Defense_word",
-            "name": "Patrol",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Partner",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Recline",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Particle_word",
-            "name": "Electron",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Zebra",
-            "image": "res/Item/rodents_squirrel_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Antelope",
-            "image": "res/Item/rodents_hamster_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Sinuses",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Lutetium",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -172,27 +43,18 @@
         },
         {
           "card": {
+            "type": "regular",
+            "category": "Metal_word",
+            "name": "Iridium",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "gold",
-            "category": "Relation_word",
-            "name": "Relation",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Jersey",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Metal_word",
-            "name": "Yttrium",
+            "name": "Metal",
             "isText": true
           },
           "faceUp": false
@@ -200,9 +62,69 @@
         {
           "card": {
             "type": "regular",
-            "category": "Metal_word",
-            "name": "Holmium",
+            "category": "Defense_word",
+            "name": "Guard",
             "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hoof",
+            "name": "Antelope",
+            "isText": false,
+            "image": "res/Item/Hoof_Antelope_5.png"
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "ENT_word",
+            "name": "ENT",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Relax_word",
+            "name": "Bath",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Alien_word",
+            "name": "Alien",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alien_word",
+            "name": "Lifeform",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hoof",
+            "name": "Bison",
+            "isText": false,
+            "image": "res/Item/Hoof_Bison_8.png"
           },
           "faceUp": false
         },
@@ -210,291 +132,20 @@
           "card": {
             "type": "regular",
             "category": "Artifact_word",
-            "name": "Amulet",
+            "name": "Sigil",
             "isText": true
           },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Metal_word": 8,
-      "Rodents": 8,
-      "Relax_word": 8,
-      "Relation_word": 6,
-      "Artifact_word": 6,
-      "Defense_word": 4,
-      "ENT_word": 4,
-      "New_word": 4,
-      "Alien_word": 3,
-      "Particle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Unwind",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relax_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Friend",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rodents",
-        "name": "Rodents",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Sigil",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "ENT_word",
-        "name": "ENT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Breathe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Mexico",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Atom",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Defense_word",
-        "name": "Defense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Lifeform",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Giraffe",
-        "image": "res/Item/rodents_capybara_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Particle_word",
-        "name": "Particle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Tonsils",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Iridium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "UFO",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Neutron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Hammam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Martian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Spa",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alien_word",
-        "name": "Alien",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Bath",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "CCTV",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Spouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Rhodium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Family",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Alpaca",
-        "image": "res/Item/rodents_nutria_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Relative",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Bison",
-        "image": "res/Item/rodents_beaver_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Security",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Erbium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Thulium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Relic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Throat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Guard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Neighbor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Vase",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New_word",
-        "name": "New",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Metal_word",
-        "name": "Metal",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Particle_word",
+            "name": "Atom",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "gold",
@@ -507,8 +158,29 @@
         {
           "card": {
             "type": "regular",
+            "category": "Particle_word",
+            "name": "Neutron",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hoof",
+            "name": "Giraffe",
+            "isText": false,
+            "image": "res/Item/Hoof_Giraffe_2.png"
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
             "category": "Defense_word",
-            "name": "Guard",
+            "name": "Patrol",
             "isText": true
           },
           "faceUp": false
@@ -516,536 +188,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rodents",
-            "name": "Zebra",
-            "image": "res/Item/rodents_squirrel_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Metal_word",
-            "name": "Metal",
+            "category": "Defense_word",
+            "name": "CCTV",
             "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Antelope",
-            "image": "res/Item/rodents_hamster_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Tonsils",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Addax",
-            "image": "res/Item/rodents_guineapig_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Jersey",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Artifact_word",
-            "name": "Artifact",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Okapi",
-            "image": "res/Item/rodents_rat_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Rodents",
-            "name": "Rodents",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Amulet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Relax_word",
-            "name": "Relax",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Relic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Mexico",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Alpaca",
-            "image": "res/Item/rodents_nutria_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Europium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Lutetium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Stretch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Throat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alien_word",
-            "name": "Lifeform",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Sinuses",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Metal_word": 8,
-      "Rodents": 8,
-      "Relax_word": 8,
-      "Relation_word": 6,
-      "Artifact_word": 6,
-      "Defense_word": 4,
-      "ENT_word": 4,
-      "New_word": 4,
-      "Alien_word": 3,
-      "Particle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Yttrium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Friend",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Unwind",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Partner",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New_word",
-        "name": "New",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Rhodium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Bath",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Jacuzzi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "CCTV",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Neutron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Recline",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Breathe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Electron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Patrol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Bison",
-        "image": "res/Item/rodents_beaver_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Particle_word",
-        "name": "Particle",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alien_word",
-        "name": "Alien",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Sigil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Relative",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "UFO",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Atom",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "ENT_word",
-        "name": "ENT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Erbium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Holmium",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relation_word",
-        "name": "Relation",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Moose",
-        "image": "res/Item/rodents_marmot_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Vase",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Insignia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Family",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Security",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Adenoids",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Spouse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Totem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Thulium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Hammam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Spa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Martian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Giraffe",
-        "image": "res/Item/rodents_capybara_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Iridium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Neighbor",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Spouse",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Jacuzzi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Stretch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Insignia",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Holmium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Erbium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Rodents",
-            "name": "Rodents",
-            "isText": false
           },
           "faceUp": false
         },
@@ -1062,18 +207,7 @@
           "card": {
             "type": "regular",
             "category": "Relax_word",
-            "name": "Breathe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Friend",
+            "name": "Stretch",
             "isText": true
           },
           "faceUp": false
@@ -1081,37 +215,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Metal_word",
-            "name": "Thulium",
+            "category": "Particle_word",
+            "name": "Electron",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alien_word",
-            "name": "Lifeform",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Partner",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Giraffe",
-            "image": "res/Item/rodents_capybara_5.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -1122,70 +228,13 @@
             "name": "Relative",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Relic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Bison",
-            "image": "res/Item/rodents_beaver_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Particle_word",
-            "name": "Atom",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Amulet",
-            "isText": true
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
-            "category": "Artifact_word",
-            "name": "Artifact",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Totem",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alien_word",
-            "name": "UFO",
+            "category": "Relation_word",
+            "name": "Relation",
             "isText": true
           },
           "faceUp": true
@@ -1194,7 +243,7 @@
     ],
     "categoryTargets": {
       "Metal_word": 8,
-      "Rodents": 8,
+      "Hoof": 8,
       "Relax_word": 8,
       "Relation_word": 6,
       "Artifact_word": 6,
@@ -1207,131 +256,16 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "ENT_word",
-        "name": "Adenoids",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Defense_word",
-        "name": "Defense",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Iridium",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Alien_word",
-        "name": "Martian",
+        "name": "UFO",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "New_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Throat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Neighbor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Guard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Patrol",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relax_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Vase",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Mexico",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alien_word",
-        "name": "Alien",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Tonsils",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Lutetium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Alpaca",
-        "image": "res/Item/rodents_nutria_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Europium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Antelope",
-        "image": "res/Item/rodents_hamster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Sigil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Bath",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Sinuses",
-        "isText": true
+        "category": "Hoof",
+        "name": "Okapi",
+        "isText": false,
+        "image": "res/Item/Hoof_Okapi_7.png"
       },
       {
         "type": "gold",
@@ -1340,397 +274,9 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Relation_word",
-        "name": "Relation",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Security",
-        "isText": true
-      },
-      {
         "type": "regular",
         "category": "Relax_word",
-        "name": "Recline",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Zebra",
-        "image": "res/Item/rodents_squirrel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "York",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Moose",
-        "image": "res/Item/rodents_marmot_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "ENT_word",
-        "name": "ENT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Yttrium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Okapi",
-        "image": "res/Item/rodents_rat_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Electron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Hammam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Rhodium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Spa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Unwind",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Jersey",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Neutron",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "New_word",
-        "name": "New",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Addax",
-        "image": "res/Item/rodents_guineapig_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Metal_word",
-        "name": "Metal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "CCTV",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Addax",
-            "image": "res/Item/rodents_guineapig_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Okapi",
-            "image": "res/Item/rodents_rat_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Vase",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Relax_word",
-            "name": "Relax",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Breathe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "ENT_word",
-            "name": "ENT",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Relative",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Spouse",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Jersey",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Spa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Adenoids",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Throat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Mexico",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Bath",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Amulet",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Year",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "New_word",
-            "name": "New",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alien_word",
-            "name": "UFO",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Particle_word",
-            "name": "Neutron",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Moose",
-            "image": "res/Item/rodents_marmot_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Defense_word",
-            "name": "Defense",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Recline",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Metal_word": 8,
-      "Rodents": 8,
-      "Relax_word": 8,
-      "Relation_word": 6,
-      "Artifact_word": 6,
-      "Defense_word": 4,
-      "ENT_word": 4,
-      "New_word": 4,
-      "Alien_word": 3,
-      "Particle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Hammam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Security",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Insignia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Giraffe",
-        "image": "res/Item/rodents_capybara_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Antelope",
-        "image": "res/Item/rodents_hamster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Holmium",
+        "name": "Breathe",
         "isText": true
       },
       {
@@ -1741,44 +287,40 @@
       },
       {
         "type": "regular",
+        "category": "Relax_word",
+        "name": "Unwind",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hoof",
+        "name": "Hoof",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hoof",
+        "name": "Moose",
+        "isText": false,
+        "image": "res/Item/Hoof_Moose_6.png"
+      },
+      {
+        "type": "regular",
+        "category": "Hoof",
+        "name": "Zebra",
+        "isText": false,
+        "image": "res/Item/Hoof_Zebra_3.png"
+      },
+      {
+        "type": "regular",
         "category": "Metal_word",
         "name": "Lutetium",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Metal_word",
-        "name": "Rhodium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Lifeform",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Sigil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Jacuzzi",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alien_word",
-        "name": "Alien",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Artifact_word",
-        "name": "Artifact",
+        "category": "Relation_word",
+        "name": "Spouse",
         "isText": true
       },
       {
@@ -1789,125 +331,14 @@
       },
       {
         "type": "regular",
+        "category": "Relax_word",
+        "name": "Hammam",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Metal_word",
         "name": "Europium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Yttrium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Neighbor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Friend",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Iridium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Alpaca",
-        "image": "res/Item/rodents_nutria_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Family",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Erbium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Patrol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Electron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Zebra",
-        "image": "res/Item/rodents_squirrel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Sinuses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Bison",
-        "image": "res/Item/rodents_beaver_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Relic",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rodents",
-        "name": "Rodents",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Metal_word",
-        "name": "Metal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "CCTV",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Unwind",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Totem",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Particle_word",
-        "name": "Particle",
         "isText": true
       },
       {
@@ -1918,313 +349,15 @@
       },
       {
         "type": "regular",
-        "category": "ENT_word",
-        "name": "Tonsils",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relation_word",
-        "name": "Relation",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Defense_word",
-        "name": "Guard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Thulium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Atom",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Particle_word",
-            "name": "Neutron",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Erbium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "New_word",
-            "name": "New",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Alien_word",
-            "name": "Alien",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Defense_word",
-            "name": "Guard",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Vase",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Bison",
-            "image": "res/Item/rodents_beaver_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "York",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Unwind",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Spouse",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Tonsils",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Jersey",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relation_word",
-            "name": "Partner",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Defense_word",
-            "name": "Security",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rodents",
-            "name": "Giraffe",
-            "image": "res/Item/rodents_capybara_5.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Relax_word",
-            "name": "Recline",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Adenoids",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Rhodium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "New_word",
-            "name": "Mexico",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "ENT_word",
-            "name": "Throat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Metal_word",
-            "name": "Europium",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Artifact_word",
-            "name": "Totem",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Metal_word": 8,
-      "Rodents": 8,
-      "Relax_word": 8,
-      "Relation_word": 6,
-      "Artifact_word": 6,
-      "Defense_word": 4,
-      "ENT_word": 4,
-      "New_word": 4,
-      "Alien_word": 3,
-      "Particle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Bath",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
+        "category": "Hoof",
         "name": "Alpaca",
-        "image": "res/Item/rodents_nutria_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Defense_word",
-        "name": "Defense",
-        "isText": true
+        "isText": false,
+        "image": "res/Item/Fluffy_Alpaca_8.png"
       },
       {
         "type": "regular",
-        "category": "Relation_word",
-        "name": "Neighbor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Okapi",
-        "image": "res/Item/rodents_rat_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Yttrium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Family",
+        "category": "Artifact_word",
+        "name": "Relic",
         "isText": true
       },
       {
@@ -2235,26 +368,123 @@
       },
       {
         "type": "regular",
-        "category": "Defense_word",
-        "name": "CCTV",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "UFO",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Electron",
+        "category": "Relation_word",
+        "name": "Neighbor",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Defense_word",
-        "name": "Patrol",
+        "name": "Security",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artifact_word",
+        "name": "Vase",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "ENT_word",
+        "name": "Tonsils",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "New_word",
+        "name": "New",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "ENT_word",
+        "name": "Adenoids",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Metal_word",
+        "name": "Yttrium",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hoof",
+        "name": "Addax",
+        "isText": false,
+        "image": "res/Item/Hoof_Addax_1.png"
+      },
+      {
+        "type": "regular",
+        "category": "Relax_word",
+        "name": "Spa",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Relax_word",
+        "name": "Relax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Metal_word",
+        "name": "Erbium",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Metal_word",
+        "name": "Thulium",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Artifact_word",
+        "name": "Amulet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New_word",
+        "name": "Mexico",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New_word",
+        "name": "Jersey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "ENT_word",
+        "name": "Sinuses",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Relax_word",
+        "name": "Jacuzzi",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Artifact_word",
+        "name": "Artifact",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "ENT_word",
+        "name": "Throat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "New_word",
+        "name": "Year",
         "isText": true
       },
       {
@@ -2266,179 +496,19 @@
       {
         "type": "regular",
         "category": "Relax_word",
-        "name": "Spa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Lifeform",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Hammam",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Metal_word",
-        "name": "Metal",
+        "name": "Recline",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Metal_word",
-        "name": "Thulium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Breathe",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Particle_word",
-        "name": "Particle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Relic",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rodents",
-        "name": "Rodents",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Artifact_word",
-        "name": "Artifact",
+        "name": "Rhodium",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Relation_word",
         "name": "Friend",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alien_word",
-        "name": "Martian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Jacuzzi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Lutetium",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Antelope",
-        "image": "res/Item/rodents_hamster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Amulet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Addax",
-        "image": "res/Item/rodents_guineapig_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "New_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Artifact_word",
-        "name": "Sigil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Moose",
-        "image": "res/Item/rodents_marmot_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rodents",
-        "name": "Zebra",
-        "image": "res/Item/rodents_squirrel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "ENT_word",
-        "name": "Sinuses",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relation_word",
-        "name": "Relation",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Relax_word",
-        "name": "Relax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relation_word",
-        "name": "Relative",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Particle_word",
-        "name": "Atom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Relax_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Metal_word",
-        "name": "Iridium",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "ENT_word",
-        "name": "ENT",
         "isText": true
       }
     ],

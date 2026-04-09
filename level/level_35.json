@@ -2,16 +2,59 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 145
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 4,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 31,
+        "handToCol": 11,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 120,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 3,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 53,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Lawn",
-            "name": "Grass",
-            "image": "res/Item/lawn_grass_1.png",
+            "category": "Pyramids_word",
+            "name": "Ramses",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lemon_word",
+            "name": "Lemon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Alt",
+            "image": "res/Item/Keyboard_Alt_3.png",
             "isText": false
           },
           "faceUp": false
@@ -20,7 +63,150 @@
           "card": {
             "type": "regular",
             "category": "Soups_word",
-            "name": "Tom yum",
+            "name": "Pho",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Saimin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Broth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pyramids_word",
+            "name": "Pyramids",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Grass",
+            "image": "res/Item/picnic_grass_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Teasers_word",
+            "name": "Teasers",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lemon_word",
+            "name": "Yellow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shuffle_word",
+            "name": "Shuffle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lemon_word",
+            "name": "Oval",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Park",
+            "name": "Park",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Maze",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sweet_word",
+            "name": "Sweet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Sharp",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Control",
+            "image": "res/Item/Keyboard_Control_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Metallic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Maltitol",
             "isText": true
           },
           "faceUp": false
@@ -29,7 +215,365 @@
           "card": {
             "type": "regular",
             "category": "Teasers_word",
-            "name": "Rebus",
+            "name": "Quiz",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shaft_word",
+            "name": "Shaft",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Anagram",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Teasers_word": 8,
+      "Keyboard": 8,
+      "Soups_word": 8,
+      "Sweet_word": 6,
+      "Park": 6,
+      "Lemon_word": 4,
+      "Needle_word": 4,
+      "Pyramids_word": 4,
+      "Shaft_word": 3,
+      "Shuffle_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sorbitol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Gazpacho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Tab",
+        "image": "res/Item/Keyboard_Tab_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Fountain",
+        "image": "res/Item/Park_Fountain_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Delete",
+        "image": "res/Item/Keyboard_Delete_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Mix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Tom yum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Pathway",
+        "image": "res/Item/Park_Pathway_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Harira",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sucrose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Ra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Charade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Puzzle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Pickaxe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Mine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Vitamin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sugar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Stir",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Anubis",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soups_word",
+        "name": "Soups",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Pointed",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Enigma",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Keyboard",
+        "name": "Keyboard",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Rebus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Enter",
+        "image": "res/Item/Keyboard_Enter_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Escape",
+        "image": "res/Item/Keyboard_Escape_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Cart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Osiris",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Riddle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Sinigang",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Needle_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Pozole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Fructose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Spacebar",
+        "image": "res/Item/Keyboard_Spacebar_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Tree",
+        "image": "res/Item/Park_Tree_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Shift",
+        "image": "res/Item/Keyboard_Shift_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Plant",
+        "image": "res/Item/Park_Plant_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Blend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Thin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Stevia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Sour",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 128,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 5,
+        "colToCol": 1,
+        "colMultiToCol": 5,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 60,
+        "recycle": 1
+      },
+      "solver2Steps": 125,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 5,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 56,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Pozole",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Pointed",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Sugar",
             "isText": true
           },
           "faceUp": false
@@ -48,8 +592,555 @@
         {
           "card": {
             "type": "regular",
+            "category": "Park",
+            "name": "Plant",
+            "image": "res/Item/Park_Plant_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Pathway",
+            "image": "res/Item/Park_Pathway_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Sucrose",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Bench",
+            "image": "res/Item/Park_Bench_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Shuffle_word",
+            "name": "Shuffle",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shuffle_word",
+            "name": "Stir",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Delete",
+            "image": "res/Item/Keyboard_Delete_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shaft_word",
+            "name": "Pickaxe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Tree",
+            "image": "res/Item/Park_Tree_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Enigma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Maze",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shuffle_word",
+            "name": "Blend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Control",
+            "image": "res/Item/Keyboard_Control_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Rebus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Stevia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Enter",
+            "image": "res/Item/Keyboard_Enter_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pyramids_word",
+            "name": "Ra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Escape",
+            "image": "res/Item/Keyboard_Escape_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Teasers_word": 8,
+      "Keyboard": 8,
+      "Soups_word": 8,
+      "Sweet_word": 6,
+      "Park": 6,
+      "Lemon_word": 4,
+      "Needle_word": 4,
+      "Pyramids_word": 4,
+      "Shaft_word": 3,
+      "Shuffle_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Broth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Alt",
+        "image": "res/Item/Keyboard_Alt_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Saimin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Ramses",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Shift",
+        "image": "res/Item/Keyboard_Shift_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Cart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sorbitol",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soups_word",
+        "name": "Soups",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lemon_word",
+        "name": "Lemon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Keyboard",
+        "name": "Keyboard",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Maltitol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Thin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Spacebar",
+        "image": "res/Item/Keyboard_Spacebar_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Metallic",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Teasers_word",
+        "name": "Teasers",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shaft_word",
+        "name": "Shaft",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sweet_word",
+        "name": "Sweet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Anagram",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Harira",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Quiz",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Grass",
+        "image": "res/Item/picnic_grass_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Charade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Gazpacho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Osiris",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Needle_word",
+        "name": "Needle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Tab",
+        "image": "res/Item/Keyboard_Tab_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Sinigang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Tom yum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Vitamin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Mine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Fountain",
+        "image": "res/Item/Park_Fountain_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Yellow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Park",
+        "name": "Park",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Fructose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Puzzle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Anubis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Pho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Mix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Oval",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Riddle",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 4,
+        "colToCol": 7,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 127,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 58,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shuffle_word",
+            "name": "Mix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Teasers_word",
+            "name": "Teasers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Metallic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Soups_word",
-            "name": "Gazpacho",
+            "name": "Broth",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pyramids_word",
+            "name": "Pyramids",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Sorbitol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Soups_word",
+            "name": "Soups",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Sinigang",
             "isText": true
           },
           "faceUp": false
@@ -61,14 +1152,17 @@
             "name": "Lemon",
             "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
-            "type": "gold",
-            "category": "Shaft_word",
-            "name": "Shaft",
-            "isText": true
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Alt",
+            "image": "res/Item/Keyboard_Alt_3.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -88,6 +1182,35 @@
             "name": "Pozole",
             "isText": true
           },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Escape",
+            "image": "res/Item/Keyboard_Escape_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Control",
+            "image": "res/Item/Keyboard_Control_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Sugar",
+            "isText": true
+          },
           "faceUp": true
         }
       ],
@@ -95,8 +1218,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Soups_word",
-            "name": "Broth",
+            "category": "Lemon_word",
+            "name": "Yellow",
             "isText": true
           },
           "faceUp": false
@@ -113,55 +1236,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Shuffle_word",
-            "name": "Blend",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shaft_word",
-            "name": "Cart",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Lawn",
-            "name": "Lawn",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Screen",
-            "name": "Screen",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Needle_word",
-            "name": "Sharp",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Pyramids_word",
-            "name": "Ra",
+            "name": "Ramses",
             "isText": true
           },
           "faceUp": false
@@ -169,27 +1245,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Shaft_word",
-            "name": "Mine",
-            "isText": true
+            "category": "Park",
+            "name": "Grass",
+            "image": "res/Item/picnic_grass_7.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Pho",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Plant",
-            "image": "res/Item/lawn_picnicblanket_7.png",
+            "type": "gold",
+            "category": "Keyboard",
+            "name": "Keyboard",
             "isText": false
           },
           "faceUp": false
@@ -197,9 +1264,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lawn",
-            "name": "Fountain",
-            "image": "res/Item/lawn_fourleafclover_3.png",
+            "category": "Keyboard",
+            "name": "Enter",
+            "image": "res/Item/Keyboard_Enter_6.png",
             "isText": false
           },
           "faceUp": false
@@ -207,9 +1274,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Teasers_word",
-            "name": "Enigma",
-            "isText": true
+            "category": "Keyboard",
+            "name": "Delete",
+            "image": "res/Item/Keyboard_Delete_4.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -217,10 +1285,10 @@
     ],
     "categoryTargets": {
       "Teasers_word": 8,
-      "Screen": 8,
+      "Keyboard": 8,
       "Soups_word": 8,
       "Sweet_word": 6,
-      "Lawn": 6,
+      "Park": 6,
       "Lemon_word": 4,
       "Needle_word": 4,
       "Pyramids_word": 4,
@@ -230,141 +1298,17 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Screen",
-        "name": "Shift",
-        "image": "res/Item/screen_laptop_2.png",
+        "category": "Park",
+        "name": "Fountain",
+        "image": "res/Item/Park_Fountain_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Teasers_word",
-        "name": "Puzzle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Riddle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Fructose",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Vitamin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Needle_word",
-        "name": "Needle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Pointed",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Control",
-        "image": "res/Item/screen_smartphone_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Mix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Pathway",
-        "image": "res/Item/lawn_frisbee_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Bench",
-        "image": "res/Item/lawn_gardeninggloves_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Stevia",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Teasers_word",
-        "name": "Teasers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Stir",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soups_word",
-        "name": "Soups",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Maze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Tree",
-        "image": "res/Item/lawn_mower_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Metallic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
+        "category": "Keyboard",
         "name": "Spacebar",
-        "image": "res/Item/screen_calculator_8.png",
+        "image": "res/Item/Keyboard_Spacebar_5.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Harira",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sugar",
-        "isText": true
       },
       {
         "type": "gold",
@@ -374,27 +1318,21 @@
       },
       {
         "type": "regular",
-        "category": "Screen",
-        "name": "Delete",
-        "image": "res/Item/screen_smartwatch_5.png",
+        "category": "Park",
+        "name": "Plant",
+        "image": "res/Item/Park_Plant_1.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Soups_word",
-        "name": "Sinigang",
+        "category": "Teasers_word",
+        "name": "Enigma",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Shaft_word",
-        "name": "Pickaxe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sucrose",
+        "category": "Teasers_word",
+        "name": "Quiz",
         "isText": true
       },
       {
@@ -411,351 +1349,47 @@
       },
       {
         "type": "regular",
-        "category": "Needle_word",
-        "name": "Thin",
-        "isText": true
+        "category": "Keyboard",
+        "name": "Shift",
+        "image": "res/Item/Keyboard_Shift_2.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Sweet_word",
-        "name": "Sorbitol",
+        "name": "Fructose",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Screen",
-        "name": "Tab",
-        "image": "res/Item/screen_handheldgameconsole_6.png",
+        "category": "Shuffle_word",
+        "name": "Blend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Tree",
+        "image": "res/Item/Park_Tree_2.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Enter",
-        "image": "res/Item/screen_tv_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Escape",
-        "image": "res/Item/screen_ereader_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Anubis",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Quiz",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Alt",
-        "image": "res/Item/screen_moviescreen_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Charade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Yellow",
-        "isText": true
       },
       {
         "type": "gold",
-        "category": "Shuffle_word",
-        "name": "Shuffle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ramses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Oval",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 145
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Spacebar",
-            "image": "res/Item/screen_calculator_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Stevia",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Rebus",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Maze",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Saimin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Needle_word",
-            "name": "Thin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Needle_word",
-            "name": "Needle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Broth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Plant",
-            "image": "res/Item/lawn_picnicblanket_7.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Shift",
-            "image": "res/Item/screen_laptop_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Grass",
-            "image": "res/Item/lawn_grass_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Puzzle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Delete",
-            "image": "res/Item/screen_smartwatch_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Yellow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Escape",
-            "image": "res/Item/screen_ereader_3.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pyramids_word",
-            "name": "Ramses",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Sweet_word",
-            "name": "Sweet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Sucrose",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Screen",
-            "name": "Screen",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Vitamin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Quiz",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Sour",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Teasers_word": 8,
-      "Screen": 8,
-      "Soups_word": 8,
-      "Sweet_word": 6,
-      "Lawn": 6,
-      "Lemon_word": 4,
-      "Needle_word": 4,
-      "Pyramids_word": 4,
-      "Shaft_word": 3,
-      "Shuffle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Charade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Harira",
+        "category": "Needle_word",
+        "name": "Needle",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Shaft_word",
-        "name": "Cart",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soups_word",
-        "name": "Soups",
+        "name": "Pickaxe",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Screen",
-        "name": "Control",
-        "image": "res/Item/screen_smartphone_4.png",
-        "isText": false
+        "category": "Sweet_word",
+        "name": "Stevia",
+        "isText": true
       },
       {
         "type": "regular",
@@ -765,14 +1399,14 @@
       },
       {
         "type": "regular",
-        "category": "Needle_word",
-        "name": "Metallic",
+        "category": "Teasers_word",
+        "name": "Puzzle",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Lemon_word",
-        "name": "Lemon",
+        "category": "Shuffle_word",
+        "name": "Shuffle",
         "isText": true
       },
       {
@@ -783,44 +1417,8 @@
       },
       {
         "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sugar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Osiris",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Maltitol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Mix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Enigma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Anubis",
+        "category": "Needle_word",
+        "name": "Sharp",
         "isText": true
       },
       {
@@ -831,134 +1429,70 @@
       },
       {
         "type": "regular",
-        "category": "Lawn",
-        "name": "Pathway",
-        "image": "res/Item/lawn_frisbee_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Sharp",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Teasers_word",
-        "name": "Teasers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Sinigang",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pozole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Pickaxe",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lawn",
-        "name": "Lawn",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Bench",
-        "image": "res/Item/lawn_gardeninggloves_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Stir",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Soups_word",
         "name": "Pho",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Shuffle_word",
-        "name": "Shuffle",
-        "isText": true
+        "type": "regular",
+        "category": "Park",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Teasers_word",
-        "name": "Anagram",
+        "name": "Charade",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Screen",
-        "name": "Tab",
-        "image": "res/Item/screen_handheldgameconsole_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Oval",
+        "category": "Needle_word",
+        "name": "Thin",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Fructose",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sorbitol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Alt",
-        "image": "res/Item/screen_moviescreen_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Enter",
-        "image": "res/Item/screen_tv_1.png",
-        "isText": false
       },
       {
         "type": "gold",
-        "category": "Pyramids_word",
-        "name": "Pyramids",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Tree",
-        "image": "res/Item/lawn_mower_2.png",
+        "category": "Park",
+        "name": "Park",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Needle_word",
         "name": "Pointed",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Vitamin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Rebus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Pathway",
+        "image": "res/Item/Park_Pathway_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Ra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Maze",
         "isText": true
       },
       {
@@ -975,16 +1509,52 @@
       },
       {
         "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Blend",
+        "category": "Lemon_word",
+        "name": "Oval",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Lawn",
-        "name": "Fountain",
-        "image": "res/Item/lawn_fourleafclover_3.png",
+        "category": "Shaft_word",
+        "name": "Cart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Harira",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Stir",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Anubis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Tab",
+        "image": "res/Item/Keyboard_Tab_8.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sucrose",
+        "isText": true
       }
     ],
     "handDisplay": []
@@ -992,24 +1562,40 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 145
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 127,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 7,
+        "colToCol": 6,
+        "colMultiToCol": 2,
+        "handToSlot": 18,
+        "handToCol": 24,
+        "flip": 60,
+        "recycle": 1
+      },
+      "solver2Steps": 126,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 9,
+        "colToCol": 5,
+        "colMultiToCol": 4,
+        "handToSlot": 17,
+        "handToCol": 25,
+        "flip": 54,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
         {
           "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Saimin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
-            "category": "Shaft_word",
-            "name": "Shaft",
+            "category": "Needle_word",
+            "name": "Needle",
             "isText": true
           },
           "faceUp": false
@@ -1026,516 +1612,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Teasers_word",
-            "name": "Maze",
+            "category": "Shuffle_word",
+            "name": "Blend",
             "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Stevia",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Sorbitol",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Lawn",
-            "name": "Lawn",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Tom yum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Vitamin",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Screen",
-            "name": "Screen",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Charade",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Bench",
-            "image": "res/Item/lawn_gardeninggloves_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Sour",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Needle_word",
-            "name": "Sharp",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pyramids_word",
-            "name": "Anubis",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Alt",
-            "image": "res/Item/screen_moviescreen_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Maltitol",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Plant",
-            "image": "res/Item/lawn_picnicblanket_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Tree",
-            "image": "res/Item/lawn_mower_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Delete",
-            "image": "res/Item/screen_smartwatch_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shaft_word",
-            "name": "Cart",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Needle_word",
-            "name": "Pointed",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Teasers_word": 8,
-      "Screen": 8,
-      "Soups_word": 8,
-      "Sweet_word": 6,
-      "Lawn": 6,
-      "Lemon_word": 4,
-      "Needle_word": 4,
-      "Pyramids_word": 4,
-      "Shaft_word": 3,
-      "Shuffle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Shuffle_word",
-        "name": "Shuffle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Pathway",
-        "image": "res/Item/lawn_frisbee_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Harira",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Rebus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Metallic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Stir",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Sinigang",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Enigma",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lemon_word",
-        "name": "Lemon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pho",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Mine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Yellow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Pickaxe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Oval",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ramses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Fructose",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sucrose",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Grass",
-        "image": "res/Item/lawn_grass_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Blend",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Enter",
-        "image": "res/Item/screen_tv_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Needle_word",
-        "name": "Needle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Gazpacho",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sweet_word",
-        "name": "Sweet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pyramids_word",
-        "name": "Pyramids",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Escape",
-        "image": "res/Item/screen_ereader_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Osiris",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Quiz",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Broth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Spacebar",
-        "image": "res/Item/screen_calculator_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Soups_word",
-        "name": "Soups",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Mix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pozole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Anagram",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sugar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Tab",
-        "image": "res/Item/screen_handheldgameconsole_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Control",
-        "image": "res/Item/screen_smartphone_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Puzzle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Riddle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Fountain",
-        "image": "res/Item/lawn_fourleafclover_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Shift",
-        "image": "res/Item/screen_laptop_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Thin",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 145
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Quiz",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Shaft_word",
-            "name": "Shaft",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Vitamin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Pyramids_word",
-            "name": "Pyramids",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Plant",
-            "image": "res/Item/lawn_picnicblanket_7.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -1546,35 +1625,6 @@
             "name": "Broth",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Fountain",
-            "image": "res/Item/lawn_fourleafclover_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Shift",
-            "image": "res/Item/screen_laptop_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Soups_word",
-            "name": "Soups",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
@@ -1582,17 +1632,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sweet_word",
-            "name": "Sucrose",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soups_word",
-            "name": "Tom yum",
+            "category": "Lemon_word",
+            "name": "Vitamin",
             "isText": true
           },
           "faceUp": false
@@ -1609,32 +1650,13 @@
         {
           "card": {
             "type": "regular",
-            "category": "Pyramids_word",
-            "name": "Osiris",
-            "isText": true
+            "category": "Keyboard",
+            "name": "Control",
+            "image": "res/Item/Keyboard_Control_1.png",
+            "isText": false
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Enigma",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lemon_word",
-            "name": "Yellow",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
@@ -1647,374 +1669,14 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sweet_word",
-            "name": "Maltitol",
+            "category": "Soups_word",
+            "name": "Pozole",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Needle_word",
-            "name": "Needle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Pathway",
-            "image": "res/Item/lawn_frisbee_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Tree",
-            "image": "res/Item/lawn_mower_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shaft_word",
-            "name": "Pickaxe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Lawn",
-            "name": "Lawn",
-            "isText": false
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Teasers_word": 8,
-      "Screen": 8,
-      "Soups_word": 8,
-      "Sweet_word": 6,
-      "Lawn": 6,
-      "Lemon_word": 4,
-      "Needle_word": 4,
-      "Pyramids_word": 4,
-      "Shaft_word": 3,
-      "Shuffle_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sugar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Blend",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Puzzle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Charade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Alt",
-        "image": "res/Item/screen_moviescreen_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Rebus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Enter",
-        "image": "res/Item/screen_tv_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Fructose",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Oval",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pozole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Delete",
-        "image": "res/Item/screen_smartwatch_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Mix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Spacebar",
-        "image": "res/Item/screen_calculator_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lemon_word",
-        "name": "Lemon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Grass",
-        "image": "res/Item/lawn_grass_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Gazpacho",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Cart",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sorbitol",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Teasers_word",
-        "name": "Teasers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Mine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pho",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sweet_word",
-        "name": "Sweet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ramses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Tab",
-        "image": "res/Item/screen_handheldgameconsole_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Anubis",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Pointed",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Anagram",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Control",
-        "image": "res/Item/screen_smartphone_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Escape",
-        "image": "res/Item/screen_ereader_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Stevia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Saimin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Thin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Stir",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Screen",
-        "name": "Screen",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Shuffle_word",
-        "name": "Shuffle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Maze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Bench",
-        "image": "res/Item/lawn_gardeninggloves_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Harira",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Sinigang",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Sharp",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 145
-    },
-    "tableau": [
+      ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Pathway",
-            "image": "res/Item/lawn_frisbee_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Fountain",
-            "image": "res/Item/lawn_fourleafclover_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Shuffle_word",
-            "name": "Blend",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -2022,15 +1684,13 @@
             "name": "Rebus",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
             "category": "Teasers_word",
-            "name": "Enigma",
+            "name": "Quiz",
             "isText": true
           },
           "faceUp": false
@@ -2038,100 +1698,22 @@
         {
           "card": {
             "type": "regular",
-            "category": "Screen",
-            "name": "Alt",
-            "image": "res/Item/screen_moviescreen_7.png",
+            "category": "Keyboard",
+            "name": "Spacebar",
+            "image": "res/Item/Keyboard_Spacebar_5.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Screen",
-            "name": "Shift",
-            "image": "res/Item/screen_laptop_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Stevia",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lawn",
-            "name": "Grass",
-            "image": "res/Item/lawn_grass_1.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Fructose",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sweet_word",
-            "name": "Sugar",
-            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
-            "category": "Teasers_word",
-            "name": "Teasers",
-            "isText": true
+            "category": "Park",
+            "name": "Park",
+            "isText": false
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Teasers_word",
-            "name": "Maze",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Shuffle_word",
-            "name": "Shuffle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pyramids_word",
-            "name": "Anubis",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
@@ -2144,18 +1726,21 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lemon_word",
-            "name": "Oval",
-            "isText": true
+            "category": "Park",
+            "name": "Pathway",
+            "image": "res/Item/Park_Pathway_6.png",
+            "isText": false
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
-            "category": "Screen",
-            "name": "Control",
-            "image": "res/Item/screen_smartphone_4.png",
+            "category": "Keyboard",
+            "name": "Tab",
+            "image": "res/Item/Keyboard_Tab_8.png",
             "isText": false
           },
           "faceUp": false
@@ -2172,10 +1757,366 @@
         {
           "card": {
             "type": "regular",
-            "category": "Screen",
-            "name": "Spacebar",
-            "image": "res/Item/screen_calculator_8.png",
+            "category": "Shuffle_word",
+            "name": "Mix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Pho",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Delete",
+            "image": "res/Item/Keyboard_Delete_4.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Enter",
+            "image": "res/Item/Keyboard_Enter_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Enigma",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Teasers_word": 8,
+      "Keyboard": 8,
+      "Soups_word": 8,
+      "Sweet_word": 6,
+      "Park": 6,
+      "Lemon_word": 4,
+      "Needle_word": 4,
+      "Pyramids_word": 4,
+      "Shaft_word": 3,
+      "Shuffle_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Sweet_word",
+        "name": "Sweet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lemon_word",
+        "name": "Lemon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Tree",
+        "image": "res/Item/Park_Tree_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Charade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Fructose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Pointed",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Oval",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Stevia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Harira",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Tom yum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Plant",
+        "image": "res/Item/Park_Plant_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Escape",
+        "image": "res/Item/Keyboard_Escape_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Soups_word",
+        "name": "Soups",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Ra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Alt",
+        "image": "res/Item/Keyboard_Alt_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Maltitol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Grass",
+        "image": "res/Item/picnic_grass_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Sharp",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Shuffle_word",
+        "name": "Shuffle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Osiris",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pyramids_word",
+        "name": "Pyramids",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Keyboard",
+        "name": "Keyboard",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Gazpacho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Fountain",
+        "image": "res/Item/Park_Fountain_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Shaft_word",
+        "name": "Shaft",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Anagram",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Mine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Sinigang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sugar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sorbitol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Cart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shuffle_word",
+        "name": "Stir",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Puzzle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Ramses",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Pickaxe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Shift",
+        "image": "res/Item/Keyboard_Shift_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Maze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Yellow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Thin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Anubis",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 120,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 52,
+        "recycle": 1
+      },
+      "solver2Steps": 126,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 9,
+        "colToCol": 9,
+        "colMultiToCol": 1,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 56,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soups_word",
+            "name": "Pozole",
+            "isText": true
           },
           "faceUp": false
         },
@@ -2190,9 +2131,192 @@
         },
         {
           "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Tree",
+            "image": "res/Item/Park_Tree_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "gold",
-            "category": "Soups_word",
-            "name": "Soups",
+            "category": "Park",
+            "name": "Park",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shuffle_word",
+            "name": "Mix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Thin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Enigma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Needle_word",
+            "name": "Pointed",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Shuffle_word",
+            "name": "Stir",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lemon_word",
+            "name": "Yellow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Pathway",
+            "image": "res/Item/Park_Pathway_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Plant",
+            "image": "res/Item/Park_Plant_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Park",
+            "name": "Fountain",
+            "image": "res/Item/Park_Fountain_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Anagram",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Tab",
+            "image": "res/Item/Keyboard_Tab_8.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Riddle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Teasers_word",
+            "name": "Teasers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pyramids_word",
+            "name": "Ramses",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sweet_word",
+            "name": "Stevia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pyramids_word",
+            "name": "Ra",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Keyboard",
+            "name": "Control",
+            "image": "res/Item/Keyboard_Control_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Teasers_word",
+            "name": "Puzzle",
             "isText": true
           },
           "faceUp": true
@@ -2201,10 +2325,10 @@
     ],
     "categoryTargets": {
       "Teasers_word": 8,
-      "Screen": 8,
+      "Keyboard": 8,
       "Soups_word": 8,
       "Sweet_word": 6,
-      "Lawn": 6,
+      "Park": 6,
       "Lemon_word": 4,
       "Needle_word": 4,
       "Pyramids_word": 4,
@@ -2213,116 +2337,15 @@
     },
     "handPile": [
       {
+        "type": "gold",
+        "category": "Shuffle_word",
+        "name": "Shuffle",
+        "isText": true
+      },
+      {
         "type": "regular",
         "category": "Soups_word",
         "name": "Harira",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Delete",
-        "image": "res/Item/screen_smartwatch_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Osiris",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Teasers_word",
-        "name": "Puzzle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Tab",
-        "image": "res/Item/screen_handheldgameconsole_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Mine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Thin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shaft_word",
-        "name": "Cart",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Bench",
-        "image": "res/Item/lawn_gardeninggloves_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Sinigang",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pozole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ramses",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Screen",
-        "name": "Escape",
-        "image": "res/Item/screen_ereader_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Vitamin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sweet_word",
-        "name": "Sorbitol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Pho",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lawn",
-        "name": "Tree",
-        "image": "res/Item/lawn_mower_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soups_word",
-        "name": "Gazpacho",
         "isText": true
       },
       {
@@ -2333,51 +2356,66 @@
       },
       {
         "type": "regular",
-        "category": "Teasers_word",
-        "name": "Quiz",
+        "category": "Sweet_word",
+        "name": "Sorbitol",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lemon_word",
+        "name": "Lemon",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Shaft_word",
-        "name": "Pickaxe",
+        "category": "Keyboard",
+        "name": "Alt",
+        "image": "res/Item/Keyboard_Alt_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Sour",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Screen",
+        "category": "Keyboard",
+        "name": "Delete",
+        "image": "res/Item/Keyboard_Delete_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Saimin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Sucrose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
         "name": "Enter",
-        "image": "res/Item/screen_tv_1.png",
+        "image": "res/Item/Keyboard_Enter_6.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Teasers_word",
-        "name": "Anagram",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pyramids_word",
-        "name": "Pyramids",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Needle_word",
-        "name": "Sharp",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pyramids_word",
-        "name": "Ra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lemon_word",
-        "name": "Yellow",
+        "name": "Maze",
         "isText": true
       },
       {
@@ -2388,27 +2426,52 @@
       },
       {
         "type": "regular",
-        "category": "Needle_word",
-        "name": "Pointed",
+        "category": "Shuffle_word",
+        "name": "Blend",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Teasers_word",
-        "name": "Riddle",
+        "category": "Shaft_word",
+        "name": "Pickaxe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Sinigang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Pho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Park",
+        "name": "Grass",
+        "image": "res/Item/picnic_grass_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lemon_word",
+        "name": "Vitamin",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Screen",
-        "name": "Screen",
-        "isText": false
+        "category": "Soups_word",
+        "name": "Soups",
+        "isText": true
       },
       {
-        "type": "gold",
-        "category": "Lawn",
-        "name": "Lawn",
-        "isText": false
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Osiris",
+        "isText": true
       },
       {
         "type": "gold",
@@ -2417,9 +2480,33 @@
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "Pyramids_word",
+        "name": "Pyramids",
+        "isText": true
+      },
+      {
         "type": "regular",
-        "category": "Lemon_word",
-        "name": "Sour",
+        "category": "Teasers_word",
+        "name": "Rebus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Teasers_word",
+        "name": "Quiz",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Keyboard",
+        "name": "Keyboard",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Needle_word",
+        "name": "Sharp",
         "isText": true
       },
       {
@@ -2430,21 +2517,52 @@
       },
       {
         "type": "regular",
-        "category": "Lawn",
-        "name": "Plant",
-        "image": "res/Item/lawn_picnicblanket_7.png",
+        "category": "Shaft_word",
+        "name": "Cart",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Spacebar",
+        "image": "res/Item/Keyboard_Spacebar_5.png",
         "isText": false
       },
       {
-        "type": "gold",
+        "type": "regular",
         "category": "Sweet_word",
-        "name": "Sweet",
+        "name": "Sugar",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Soups_word",
-        "name": "Broth",
+        "name": "Gazpacho",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Escape",
+        "image": "res/Item/Keyboard_Escape_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sweet_word",
+        "name": "Fructose",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pyramids_word",
+        "name": "Anubis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Shaft_word",
+        "name": "Mine",
         "isText": true
       },
       {
@@ -2455,20 +2573,27 @@
       },
       {
         "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Stir",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Shuffle_word",
-        "name": "Mix",
+        "category": "Lemon_word",
+        "name": "Oval",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Lemon_word",
-        "name": "Lemon",
+        "category": "Sweet_word",
+        "name": "Sweet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Keyboard",
+        "name": "Shift",
+        "image": "res/Item/Keyboard_Shift_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soups_word",
+        "name": "Broth",
         "isText": true
       }
     ],

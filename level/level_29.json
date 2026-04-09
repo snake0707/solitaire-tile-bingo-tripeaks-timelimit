@@ -2,15 +2,40 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 150
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 117,
+      "solverMaxSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 9,
+        "colMultiToCol": 7,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 112,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 6,
+        "colToCol": 9,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 42,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Festival_word",
-            "name": "Diwali",
+            "category": "Roadwork_word",
+            "name": "Concrete",
             "isText": true
           },
           "faceUp": false
@@ -18,8 +43,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lungs_word",
-            "name": "Bronchi",
+            "category": "Finger_word",
+            "name": "Loop",
             "isText": true
           },
           "faceUp": false
@@ -27,10 +52,58 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Howl",
-            "image": "res/Item/chess_chessclock_8.png",
+            "category": "Sound",
+            "name": "Bleat",
+            "image": "res/Item/Sound_Bleat_4.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mammoth_word",
+            "name": "Tusks",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Alloy_word",
+            "name": "Alloy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Quack",
+            "image": "res/Item/Sound_Quack_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meteo_word",
+            "name": "Heatwave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roadwork_word",
+            "name": "Sand",
+            "isText": true
           },
           "faceUp": false
         },
@@ -47,9 +120,46 @@
       [
         {
           "card": {
+            "type": "gold",
+            "category": "Meteo_word",
+            "name": "Meteo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "regular",
-            "category": "Lungs_word",
-            "name": "Exhale",
+            "category": "Flooring_word",
+            "name": "Tile",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Howl",
+            "image": "res/Item/Sound_Howl_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mammoth_word",
+            "name": "Tail",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Festival_word",
+            "name": "Diwali",
             "isText": true
           },
           "faceUp": false
@@ -58,7 +168,56 @@
           "card": {
             "type": "regular",
             "category": "Roadwork_word",
-            "name": "Concrete",
+            "name": "Rake",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Parsley",
+            "image": "res/Item/Herbs_Parsley_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Finger_word",
+            "name": "Arch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Rosemary",
+            "image": "res/Item/Herbs_Rosemary_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Alnico",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flooring_word",
+            "name": "Hardwood",
             "isText": true
           },
           "faceUp": false
@@ -74,38 +233,339 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Roadwork_word",
-            "name": "Roadwork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
-            "category": "Alloy_word",
-            "name": "Bronze",
-            "isText": true
+            "category": "Sound",
+            "name": "Croak",
+            "image": "res/Item/Sound_Croak_6.png",
+            "isText": false
           },
           "faceUp": true
         }
-      ],
+      ]
+    ],
+    "categoryTargets": {
+      "Sound": 8,
+      "Flooring_word": 8,
+      "Alloy_word": 8,
+      "Herbs": 6,
+      "Roadwork_word": 6,
+      "Lungs_word": 4,
+      "Mammoth_word": 4,
+      "Finger_word": 4,
+      "Festival_word": 3,
+      "Meteo_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Squeal",
+        "image": "res/Item/Sound_Squeal_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Flooring_word",
+        "name": "Flooring",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Songkran",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Nitinol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Grinder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Cork",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sound",
+        "name": "Sound",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Blizzard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Nichrome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Amalgam",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Laminate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Herbs",
+        "name": "Herbs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Exhale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Meow",
+        "image": "res/Item/Sound_Meow_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Mammoth_word",
+        "name": "Mammoth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Chives",
+        "image": "res/Item/Herbs_Chives_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Sage",
+        "image": "res/Item/Herbs_Sage_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Fur",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Bamboo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Bronze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Stellite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Trachea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Bronchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sidewalk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Linoleum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Tungsten",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Bitumen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Dill",
+        "image": "res/Item/Herbs_Dill_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Lungs_word",
+        "name": "Lungs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Vinyl",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Trunk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Inhale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Brass",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Finger_word",
+        "name": "Finger",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Caw",
+        "image": "res/Item/Sound_Caw_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Thunder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Whorl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Festival_word",
+        "name": "Festival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Thyme",
+        "image": "res/Item/Herbs_Thyme_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Furrow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Bark",
+        "image": "res/Item/Sound_Bark_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Roadwork_word",
+        "name": "Roadwork",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 7,
+        "colMultiToCol": 2,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 112,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 6,
+        "colMultiToCol": 1,
+        "handToSlot": 31,
+        "handToCol": 11,
+        "flip": 42,
+        "recycle": 0
+      }
+    },
+    "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Lungs_word",
-            "name": "Trachea",
-            "isText": true
+            "category": "Sound",
+            "name": "Quack",
+            "image": "res/Item/Sound_Quack_5.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Brass",
+            "type": "gold",
+            "category": "Finger_word",
+            "name": "Finger",
             "isText": true
           },
           "faceUp": false
@@ -122,51 +582,14 @@
         {
           "card": {
             "type": "gold",
-            "category": "Meteo_word",
-            "name": "Meteo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Laminate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Nitinol",
-            "isText": true
+            "category": "Sound",
+            "name": "Sound",
+            "isText": false
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Croak",
-            "image": "res/Item/chess_knight_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Sand",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -179,9 +602,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Flowers",
-            "name": "Dill",
-            "image": "res/Item/flowers_daisy_1.png",
+            "category": "Meteo_word",
+            "name": "Heatwave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Parsley",
+            "image": "res/Item/Herbs_Parsley_5.png",
             "isText": false
           },
           "faceUp": false
@@ -189,391 +621,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Bitumen",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Mammoth_word",
-            "name": "Mammoth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Chess",
-            "name": "Chess",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Chess": 8,
-      "Flooring_word": 8,
-      "Alloy_word": 8,
-      "Flowers": 6,
-      "Roadwork_word": 6,
-      "Lungs_word": 4,
-      "Mammoth_word": 4,
-      "Finger_word": 4,
-      "Festival_word": 3,
-      "Meteo_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Caw",
-        "image": "res/Item/chess_bishop_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Blizzard",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Finger_word",
-        "name": "Finger",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Quack",
-        "image": "res/Item/chess_queen_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Vinyl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Rosemary",
-        "image": "res/Item/flowers_poppy_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Stellite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Songkran",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Festival_word",
-        "name": "Festival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Grinder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Rake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Arch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tusks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Tile",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Tungsten",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Amalgam",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lungs_word",
-        "name": "Lungs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alloy_word",
-        "name": "Alloy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Loop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Fur",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Bleat",
-        "image": "res/Item/chess_chessboard_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Bark",
-        "image": "res/Item/chess_rook_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Sidewalk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Chives",
-        "image": "res/Item/flowers_aster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Sage",
-        "image": "res/Item/flowers_lily_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Linoleum",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Bamboo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Hardwood",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Furrow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Parsley",
-        "image": "res/Item/flowers_tulip_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Meow",
-        "image": "res/Item/chess_pawn_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Flooring_word",
-        "name": "Flooring",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flowers",
-        "name": "Flowers",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Inhale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Heatwave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Thunder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Alnico",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Thyme",
-        "image": "res/Item/flowers_pansy_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Squeal",
-        "image": "res/Item/chess_king_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Nichrome",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Whorl",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Laminate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Amalgam",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Caw",
-            "image": "res/Item/chess_bishop_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Alnico",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Bark",
-            "image": "res/Item/chess_rook_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Croak",
-            "image": "res/Item/chess_knight_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Flooring_word",
-            "name": "Flooring",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Hardwood",
+            "category": "Lungs_word",
+            "name": "Inhale",
             "isText": true
           },
           "faceUp": false
@@ -591,27 +640,28 @@
       [
         {
           "card": {
-            "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Sand",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lungs_word",
-            "name": "Exhale",
-            "isText": true
+            "type": "gold",
+            "category": "Herbs",
+            "name": "Herbs",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
-            "category": "Flowers",
-            "name": "Flowers",
+            "category": "Flooring_word",
+            "name": "Flooring",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Bleat",
+            "image": "res/Item/Sound_Bleat_4.png",
             "isText": false
           },
           "faceUp": false
@@ -619,66 +669,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Mammoth_word",
-            "name": "Fur",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Meteo_word",
-            "name": "Blizzard",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Tungsten",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Roadwork_word",
-            "name": "Roadwork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flowers",
-            "name": "Parsley",
-            "image": "res/Item/flowers_tulip_3.png",
+            "category": "Sound",
+            "name": "Bark",
+            "image": "res/Item/Sound_Bark_8.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Meteo_word",
-            "name": "Thunder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Meteo_word",
-            "name": "Meteo",
-            "isText": true
           },
           "faceUp": false
         },
@@ -687,442 +681,6 @@
             "type": "regular",
             "category": "Alloy_word",
             "name": "Nitinol",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lungs_word",
-            "name": "Trachea",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Chess",
-            "name": "Chess",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Chess": 8,
-      "Flooring_word": 8,
-      "Alloy_word": 8,
-      "Flowers": 6,
-      "Roadwork_word": 6,
-      "Lungs_word": 4,
-      "Mammoth_word": 4,
-      "Finger_word": 4,
-      "Festival_word": 3,
-      "Meteo_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Bleat",
-        "image": "res/Item/chess_chessboard_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lungs_word",
-        "name": "Lungs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Squeal",
-        "image": "res/Item/chess_king_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Mammoth_word",
-        "name": "Mammoth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Bitumen",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Brass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Meow",
-        "image": "res/Item/chess_pawn_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Nichrome",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alloy_word",
-        "name": "Alloy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Concrete",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Thyme",
-        "image": "res/Item/flowers_pansy_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Sidewalk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Rake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Trunk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tusks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Stellite",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Finger_word",
-        "name": "Finger",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Bamboo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Holi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Whorl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Diwali",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Quack",
-        "image": "res/Item/chess_queen_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Arch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Bronchi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Grinder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Chives",
-        "image": "res/Item/flowers_aster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Songkran",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Festival_word",
-        "name": "Festival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Dill",
-        "image": "res/Item/flowers_daisy_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Parquet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Furrow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Heatwave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Cork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Rosemary",
-        "image": "res/Item/flowers_poppy_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Howl",
-        "image": "res/Item/chess_chessclock_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Inhale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Linoleum",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Loop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Vinyl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Sage",
-        "image": "res/Item/flowers_lily_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Bronze",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 150
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Finger_word",
-            "name": "Loop",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Festival_word",
-            "name": "Holi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Finger_word",
-            "name": "Finger",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Bitumen",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Cork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Roadwork_word",
-            "name": "Roadwork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Hardwood",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Laminate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Meteo_word",
-            "name": "Heatwave",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Nichrome",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lungs_word",
-            "name": "Trachea",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Festival_word",
-            "name": "Songkran",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Bark",
-            "image": "res/Item/chess_rook_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lungs_word",
-            "name": "Exhale",
             "isText": true
           },
           "faceUp": false
@@ -1141,17 +699,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Alloy_word",
-            "name": "Bronze",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Chess",
-            "name": "Chess",
+            "category": "Herbs",
+            "name": "Sage",
+            "image": "res/Item/Herbs_Sage_6.png",
             "isText": false
           },
           "faceUp": false
@@ -1159,17 +709,28 @@
         {
           "card": {
             "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Sidewalk",
-            "isText": true
+            "category": "Herbs",
+            "name": "Rosemary",
+            "image": "res/Item/Herbs_Rosemary_2.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Meteo_word",
-            "name": "Meteo",
+            "type": "regular",
+            "category": "Sound",
+            "name": "Croak",
+            "image": "res/Item/Sound_Croak_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lungs_word",
+            "name": "Trachea",
             "isText": true
           },
           "faceUp": false
@@ -1177,8 +738,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Flooring_word",
-            "name": "Vinyl",
+            "category": "Lungs_word",
+            "name": "Bronchi",
             "isText": true
           },
           "faceUp": false
@@ -1186,17 +747,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Meteo_word",
-            "name": "Thunder",
+            "category": "Alloy_word",
+            "name": "Tungsten",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
             "category": "Mammoth_word",
-            "name": "Mammoth",
+            "name": "Tail",
             "isText": true
           },
           "faceUp": true
@@ -1204,10 +765,10 @@
       ]
     ],
     "categoryTargets": {
-      "Chess": 8,
+      "Sound": 8,
       "Flooring_word": 8,
       "Alloy_word": 8,
-      "Flowers": 6,
+      "Herbs": 6,
       "Roadwork_word": 6,
       "Lungs_word": 4,
       "Mammoth_word": 4,
@@ -1218,172 +779,58 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Festival_word",
-        "name": "Diwali",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Tungsten",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Sage",
-        "image": "res/Item/flowers_lily_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Howl",
-        "image": "res/Item/chess_chessclock_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tusks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Inhale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Caw",
-        "image": "res/Item/chess_bishop_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Fur",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Amalgam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Meow",
-        "image": "res/Item/chess_pawn_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Grinder",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flowers",
-        "name": "Flowers",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Rake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Arch",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Flooring_word",
-        "name": "Tile",
+        "name": "Vinyl",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Chives",
-        "image": "res/Item/flowers_aster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Furrow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Trunk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Bronchi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Whorl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Quack",
-        "image": "res/Item/chess_queen_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Alnico",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Squeal",
-        "image": "res/Item/chess_king_6.png",
+        "category": "Herbs",
+        "name": "Thyme",
+        "image": "res/Item/Herbs_Thyme_1.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Meteo_word",
-        "name": "Blizzard",
+        "name": "Thunder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Exhale",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Roadwork_word",
+        "name": "Roadwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Caw",
+        "image": "res/Item/Sound_Caw_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sidewalk",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Flooring_word",
-        "name": "Parquet",
+        "name": "Laminate",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Dill",
-        "image": "res/Item/flowers_daisy_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Stellite",
+        "category": "Flooring_word",
+        "name": "Bamboo",
         "isText": true
       },
       {
@@ -1394,47 +841,120 @@
       },
       {
         "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Sand",
+        "category": "Alloy_word",
+        "name": "Stellite",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Concrete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Bronze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Amalgam",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Holi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Blizzard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Howl",
+        "image": "res/Item/Sound_Howl_7.png",
+        "isText": false
       },
       {
         "type": "gold",
-        "category": "Alloy_word",
-        "name": "Alloy",
+        "category": "Meteo_word",
+        "name": "Meteo",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Rosemary",
-        "image": "res/Item/flowers_poppy_5.png",
-        "isText": false
+        "category": "Mammoth_word",
+        "name": "Fur",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Parsley",
-        "image": "res/Item/flowers_tulip_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Croak",
-        "image": "res/Item/chess_knight_3.png",
+        "category": "Herbs",
+        "name": "Chives",
+        "image": "res/Item/Herbs_Chives_3.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Flooring_word",
-        "name": "Bamboo",
+        "name": "Parquet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Mammoth_word",
+        "name": "Mammoth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Grinder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Songkran",
         "isText": true
       },
       {
         "type": "gold",
         "category": "Lungs_word",
         "name": "Lungs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Meow",
+        "image": "res/Item/Sound_Meow_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Nichrome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Squeal",
+        "image": "res/Item/Sound_Squeal_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Loop",
         "isText": true
       },
       {
@@ -1445,40 +965,75 @@
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Thyme",
-        "image": "res/Item/flowers_pansy_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Bleat",
-        "image": "res/Item/chess_chessboard_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Flooring_word",
-        "name": "Flooring",
+        "category": "Finger_word",
+        "name": "Furrow",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tail",
+        "category": "Finger_word",
+        "name": "Whorl",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Alloy_word",
-        "name": "Nitinol",
+        "name": "Alnico",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Roadwork_word",
-        "name": "Concrete",
+        "name": "Bitumen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Arch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Dill",
+        "image": "res/Item/Herbs_Dill_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Alloy_word",
+        "name": "Alloy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Rake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Tusks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Hardwood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Diwali",
         "isText": true
       }
     ],
@@ -1487,24 +1042,50 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 150
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 8,
+        "colMultiToCol": 4,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 113,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 8,
+        "colMultiToCol": 4,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 42,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Chess",
-            "name": "Chess",
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Dill",
+            "image": "res/Item/Herbs_Dill_4.png",
             "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Mammoth_word",
-            "name": "Mammoth",
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Nitinol",
             "isText": true
           },
           "faceUp": false
@@ -1512,18 +1093,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Caw",
-            "image": "res/Item/chess_bishop_4.png",
-            "isText": false
+            "category": "Alloy_word",
+            "name": "Alnico",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Lungs_word",
-            "name": "Lungs",
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Brass",
             "isText": true
           },
           "faceUp": true
@@ -1533,29 +1113,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Meow",
-            "image": "res/Item/chess_pawn_1.png",
+            "category": "Sound",
+            "name": "Squeal",
+            "image": "res/Item/Sound_Squeal_2.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Bleat",
-            "image": "res/Item/chess_chessboard_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Finger_word",
-            "name": "Furrow",
-            "isText": true
           },
           "faceUp": false
         },
@@ -1571,29 +1132,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Flooring_word",
-            "name": "Vinyl",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Alnico",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Hardwood",
-            "isText": true
+            "category": "Herbs",
+            "name": "Thyme",
+            "image": "res/Item/Herbs_Thyme_1.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1601,25 +1143,7 @@
           "card": {
             "type": "regular",
             "category": "Mammoth_word",
-            "name": "Fur",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Festival_word",
-            "name": "Holi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Tile",
+            "name": "Trunk",
             "isText": true
           },
           "faceUp": false
@@ -1628,7 +1152,7 @@
           "card": {
             "type": "regular",
             "category": "Alloy_word",
-            "name": "Nichrome",
+            "name": "Bronze",
             "isText": true
           },
           "faceUp": true
@@ -1638,37 +1162,28 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lungs_word",
-            "name": "Inhale",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Brass",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Finger_word",
-            "name": "Loop",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flowers",
-            "name": "Rosemary",
-            "image": "res/Item/flowers_poppy_5.png",
+            "category": "Sound",
+            "name": "Bark",
+            "image": "res/Item/Sound_Bark_8.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meteo_word",
+            "name": "Blizzard",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flooring_word",
+            "name": "Vinyl",
+            "isText": true
           },
           "faceUp": false
         },
@@ -1678,6 +1193,73 @@
             "category": "Lungs_word",
             "name": "Exhale",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mammoth_word",
+            "name": "Mammoth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roadwork_word",
+            "name": "Rake",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flooring_word",
+            "name": "Parquet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meteo_word",
+            "name": "Thunder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Chives",
+            "image": "res/Item/Herbs_Chives_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Roadwork_word",
+            "name": "Roadwork",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Bleat",
+            "image": "res/Item/Sound_Bleat_4.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1693,20 +1275,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Quack",
-            "image": "res/Item/chess_queen_5.png",
-            "isText": false
+            "category": "Lungs_word",
+            "name": "Trachea",
+            "isText": true
           },
           "faceUp": true
         }
       ]
     ],
     "categoryTargets": {
-      "Chess": 8,
+      "Sound": 8,
       "Flooring_word": 8,
       "Alloy_word": 8,
-      "Flowers": 6,
+      "Herbs": 6,
       "Roadwork_word": 6,
       "Lungs_word": 4,
       "Mammoth_word": 4,
@@ -1717,52 +1298,9 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Flooring_word",
-        "name": "Cork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Diwali",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Squeal",
-        "image": "res/Item/chess_king_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Amalgam",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Roadwork_word",
-        "name": "Roadwork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Stellite",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flooring_word",
-        "name": "Flooring",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Croak",
-        "image": "res/Item/chess_knight_3.png",
+        "category": "Sound",
+        "name": "Howl",
+        "image": "res/Item/Sound_Howl_7.png",
         "isText": false
       },
       {
@@ -1773,21 +1311,62 @@
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Parsley",
-        "image": "res/Item/flowers_tulip_3.png",
-        "isText": false
+        "category": "Finger_word",
+        "name": "Whorl",
+        "isText": true
       },
       {
         "type": "regular",
+        "category": "Lungs_word",
+        "name": "Bronchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Tungsten",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Festival_word",
+        "name": "Festival",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Flooring_word",
-        "name": "Laminate",
+        "name": "Flooring",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sound",
+        "name": "Sound",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Lungs_word",
+        "name": "Lungs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Loop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Furrow",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Mammoth_word",
-        "name": "Tail",
+        "name": "Fur",
         "isText": true
       },
       {
@@ -1798,101 +1377,20 @@
       },
       {
         "type": "regular",
-        "category": "Alloy_word",
-        "name": "Tungsten",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Howl",
-        "image": "res/Item/chess_chessclock_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Thyme",
-        "image": "res/Item/flowers_pansy_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Heatwave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Nitinol",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Festival_word",
-        "name": "Festival",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Bronze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tusks",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Arch",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flowers",
-        "name": "Flowers",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lungs_word",
-        "name": "Bronchi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Blizzard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Trunk",
+        "category": "Flooring_word",
+        "name": "Bamboo",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Flooring_word",
-        "name": "Parquet",
+        "name": "Cork",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Sand",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Sage",
-        "image": "res/Item/flowers_lily_2.png",
+        "type": "gold",
+        "category": "Herbs",
+        "name": "Herbs",
         "isText": false
       },
       {
@@ -1903,59 +1401,80 @@
       },
       {
         "type": "regular",
-        "category": "Finger_word",
-        "name": "Whorl",
+        "category": "Alloy_word",
+        "name": "Nichrome",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Meteo_word",
-        "name": "Thunder",
+        "category": "Herbs",
+        "name": "Sage",
+        "image": "res/Item/Herbs_Sage_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Parsley",
+        "image": "res/Item/Herbs_Parsley_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Caw",
+        "image": "res/Item/Sound_Caw_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Amalgam",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flooring_word",
-        "name": "Bamboo",
+        "category": "Alloy_word",
+        "name": "Stellite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Tail",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Festival_word",
-        "name": "Songkran",
+        "name": "Diwali",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Rake",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Meteo_word",
-        "name": "Meteo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Bark",
-        "image": "res/Item/chess_rook_2.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Lungs_word",
-        "name": "Trachea",
+        "name": "Inhale",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Chives",
-        "image": "res/Item/flowers_aster_7.png",
+        "category": "Herbs",
+        "name": "Rosemary",
+        "image": "res/Item/Herbs_Rosemary_2.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Croak",
+        "image": "res/Item/Sound_Croak_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Finger_word",
+        "name": "Finger",
+        "isText": true
       },
       {
         "type": "regular",
@@ -1965,15 +1484,76 @@
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Dill",
-        "image": "res/Item/flowers_daisy_1.png",
+        "category": "Mammoth_word",
+        "name": "Tusks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Holi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Laminate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Tile",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Hardwood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Meow",
+        "image": "res/Item/Sound_Meow_1.png",
         "isText": false
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Sound",
+        "name": "Quack",
+        "image": "res/Item/Sound_Quack_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Heatwave",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Finger_word",
-        "name": "Finger",
+        "name": "Arch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Songkran",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meteo_word",
+        "name": "Meteo",
         "isText": true
       }
     ],
@@ -1982,15 +1562,97 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 150
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 114,
+      "solverMaxSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 8,
+        "colMultiToCol": 5,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 112,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 7,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 42,
+        "recycle": 0
+      }
     },
     "tableau": [
       [
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Rosemary",
+            "image": "res/Item/Herbs_Rosemary_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meteo_word",
+            "name": "Heatwave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roadwork_word",
+            "name": "Grinder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Flooring_word",
-            "name": "Flooring",
+            "name": "Hardwood",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mammoth_word",
+            "name": "Fur",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Nitinol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flooring_word",
+            "name": "Vinyl",
             "isText": true
           },
           "faceUp": false
@@ -2007,17 +1669,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Festival_word",
-            "name": "Festival",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Laminate",
+            "category": "Alloy_word",
+            "name": "Alloy",
             "isText": true
           },
           "faceUp": true
@@ -2027,17 +1680,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Finger_word",
-            "name": "Furrow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Roadwork_word",
-            "name": "Roadwork",
+            "category": "Meteo_word",
+            "name": "Thunder",
             "isText": true
           },
           "faceUp": false
@@ -2045,8 +1689,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Meteo_word",
-            "name": "Thunder",
+            "category": "Flooring_word",
+            "name": "Linoleum",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Nichrome",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Flooring_word",
+            "name": "Flooring",
             "isText": true
           },
           "faceUp": false
@@ -2063,10 +1725,426 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Meow",
-            "image": "res/Item/chess_pawn_1.png",
+            "category": "Herbs",
+            "name": "Sage",
+            "image": "res/Item/Herbs_Sage_6.png",
             "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Finger_word",
+            "name": "Finger",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Finger_word",
+            "name": "Arch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Brass",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Festival_word",
+            "name": "Diwali",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Meow",
+            "image": "res/Item/Sound_Meow_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Dill",
+            "image": "res/Item/Herbs_Dill_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Amalgam",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sound": 8,
+      "Flooring_word": 8,
+      "Alloy_word": 8,
+      "Herbs": 6,
+      "Roadwork_word": 6,
+      "Lungs_word": 4,
+      "Mammoth_word": 4,
+      "Finger_word": 4,
+      "Festival_word": 3,
+      "Meteo_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Rake",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Roadwork_word",
+        "name": "Roadwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Bleat",
+        "image": "res/Item/Sound_Bleat_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Chives",
+        "image": "res/Item/Herbs_Chives_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Bronze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Thyme",
+        "image": "res/Item/Herbs_Thyme_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Inhale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Tusks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Bamboo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Bark",
+        "image": "res/Item/Sound_Bark_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Stellite",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sound",
+        "name": "Sound",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Furrow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Bitumen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Quack",
+        "image": "res/Item/Sound_Quack_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
+        "name": "Parsley",
+        "image": "res/Item/Herbs_Parsley_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Tungsten",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Tile",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lungs_word",
+        "name": "Lungs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sand",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Songkran",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Laminate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Loop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Trunk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Croak",
+        "image": "res/Item/Sound_Croak_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Whorl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Festival_word",
+        "name": "Festival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Alnico",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Howl",
+        "image": "res/Item/Sound_Howl_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Holi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Concrete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Bronchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sidewalk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Caw",
+        "image": "res/Item/Sound_Caw_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Squeal",
+        "image": "res/Item/Sound_Squeal_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Blizzard",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Meteo_word",
+        "name": "Meteo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Exhale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Cork",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Herbs",
+        "name": "Herbs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Trachea",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 119,
+      "strategyType": "priority",
+      "solverSteps": 117,
+      "solverMaxSteps": 122,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 5,
+        "colToCol": 8,
+        "colMultiToCol": 7,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 118,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 50,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Dill",
+            "image": "res/Item/Herbs_Dill_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flooring_word",
+            "name": "Linoleum",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Alloy_word",
+            "name": "Nitinol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Meteo_word",
+            "name": "Thunder",
+            "isText": true
           },
           "faceUp": true
         }
@@ -2076,7 +2154,7 @@
           "card": {
             "type": "regular",
             "category": "Lungs_word",
-            "name": "Trachea",
+            "name": "Bronchi",
             "isText": true
           },
           "faceUp": false
@@ -2084,9 +2162,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Bark",
-            "image": "res/Item/chess_rook_2.png",
+            "category": "Herbs",
+            "name": "Sage",
+            "image": "res/Item/Herbs_Sage_6.png",
             "isText": false
           },
           "faceUp": false
@@ -2094,19 +2172,115 @@
         {
           "card": {
             "type": "regular",
-            "category": "Chess",
-            "name": "Caw",
-            "image": "res/Item/chess_bishop_4.png",
-            "isText": false
+            "category": "Alloy_word",
+            "name": "Amalgam",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
+            "category": "Flooring_word",
+            "name": "Flooring",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Mammoth_word",
+            "name": "Fur",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Herbs",
+            "name": "Chives",
+            "image": "res/Item/Herbs_Chives_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roadwork_word",
+            "name": "Grinder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roadwork_word",
+            "name": "Bitumen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Alloy_word",
+            "name": "Alloy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Finger_word",
+            "name": "Finger",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Mammoth_word",
+            "name": "Mammoth",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
             "category": "Meteo_word",
             "name": "Meteo",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Meow",
+            "image": "res/Item/Sound_Meow_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sound",
+            "name": "Caw",
+            "image": "res/Item/Sound_Caw_3.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -2122,47 +2296,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Finger_word",
-            "name": "Arch",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Alloy_word",
-            "name": "Alnico",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Chess",
-            "name": "Squeal",
-            "image": "res/Item/chess_king_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Flooring_word",
-            "name": "Hardwood",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lungs_word",
-            "name": "Exhale",
+            "name": "Laminate",
             "isText": true
           },
           "faceUp": false
@@ -2171,7 +2306,7 @@
           "card": {
             "type": "regular",
             "category": "Alloy_word",
-            "name": "Tungsten",
+            "name": "Nichrome",
             "isText": true
           },
           "faceUp": false
@@ -2179,17 +2314,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Roadwork_word",
-            "name": "Sand",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flooring_word",
-            "name": "Vinyl",
+            "category": "Mammoth_word",
+            "name": "Tail",
             "isText": true
           },
           "faceUp": true
@@ -2197,10 +2323,10 @@
       ]
     ],
     "categoryTargets": {
-      "Chess": 8,
+      "Sound": 8,
       "Flooring_word": 8,
       "Alloy_word": 8,
-      "Flowers": 6,
+      "Herbs": 6,
       "Roadwork_word": 6,
       "Lungs_word": 4,
       "Mammoth_word": 4,
@@ -2211,120 +2337,15 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Sidewalk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Chess",
-        "name": "Chess",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Meteo_word",
-        "name": "Blizzard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Chives",
-        "image": "res/Item/flowers_aster_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Nitinol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Diwali",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Alloy_word",
-        "name": "Alloy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Croak",
-        "image": "res/Item/chess_knight_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Stellite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Rake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flooring_word",
-        "name": "Bamboo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lungs_word",
-        "name": "Lungs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Grinder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Fur",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Finger_word",
-        "name": "Loop",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flowers",
-        "name": "Flowers",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Festival_word",
-        "name": "Holi",
+        "name": "Whorl",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Chess",
-        "name": "Bleat",
-        "image": "res/Item/chess_chessboard_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Chess",
-        "name": "Howl",
-        "image": "res/Item/chess_chessclock_8.png",
+        "category": "Herbs",
+        "name": "Rosemary",
+        "image": "res/Item/Herbs_Rosemary_2.png",
         "isText": false
       },
       {
@@ -2335,46 +2356,10 @@
       },
       {
         "type": "regular",
-        "category": "Alloy_word",
-        "name": "Nichrome",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Amalgam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Finger_word",
-        "name": "Whorl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Trunk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
-        "name": "Rosemary",
-        "image": "res/Item/flowers_poppy_5.png",
+        "category": "Sound",
+        "name": "Croak",
+        "image": "res/Item/Sound_Croak_6.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Concrete",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Alloy_word",
-        "name": "Brass",
-        "isText": true
       },
       {
         "type": "regular",
@@ -2383,33 +2368,21 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Finger_word",
-        "name": "Finger",
-        "isText": true
-      },
-      {
         "type": "regular",
-        "category": "Lungs_word",
-        "name": "Bronchi",
+        "category": "Festival_word",
+        "name": "Holi",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Flooring_word",
-        "name": "Linoleum",
+        "name": "Parquet",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Lungs_word",
-        "name": "Inhale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tail",
+        "category": "Roadwork_word",
+        "name": "Sand",
         "isText": true
       },
       {
@@ -2420,9 +2393,70 @@
       },
       {
         "type": "regular",
-        "category": "Mammoth_word",
-        "name": "Tusks",
+        "category": "Flooring_word",
+        "name": "Bamboo",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Loop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Stellite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Festival_word",
+        "name": "Diwali",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Inhale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Rake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Concrete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roadwork_word",
+        "name": "Sidewalk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Bark",
+        "image": "res/Item/Sound_Bark_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Vinyl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Herbs",
+        "name": "Herbs",
+        "isText": false
       },
       {
         "type": "regular",
@@ -2432,44 +2466,135 @@
       },
       {
         "type": "regular",
-        "category": "Roadwork_word",
-        "name": "Bitumen",
+        "category": "Sound",
+        "name": "Howl",
+        "image": "res/Item/Sound_Howl_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Exhale",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sound",
+        "name": "Sound",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Alnico",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Flowers",
+        "category": "Mammoth_word",
+        "name": "Trunk",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Roadwork_word",
+        "name": "Roadwork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Herbs",
         "name": "Thyme",
-        "image": "res/Item/flowers_pansy_8.png",
+        "image": "res/Item/Herbs_Thyme_1.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Chess",
+        "category": "Alloy_word",
+        "name": "Tungsten",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Arch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
         "name": "Quack",
-        "image": "res/Item/chess_queen_5.png",
+        "image": "res/Item/Sound_Quack_5.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Sage",
-        "image": "res/Item/flowers_lily_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Flowers",
+        "category": "Herbs",
         "name": "Parsley",
-        "image": "res/Item/flowers_tulip_3.png",
+        "image": "res/Item/Herbs_Parsley_5.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Flowers",
-        "name": "Dill",
-        "image": "res/Item/flowers_daisy_1.png",
+        "category": "Sound",
+        "name": "Squeal",
+        "image": "res/Item/Sound_Squeal_2.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lungs_word",
+        "name": "Trachea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Finger_word",
+        "name": "Furrow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Festival_word",
+        "name": "Festival",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Meteo_word",
+        "name": "Blizzard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Mammoth_word",
+        "name": "Tusks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sound",
+        "name": "Bleat",
+        "image": "res/Item/Sound_Bleat_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Lungs_word",
+        "name": "Lungs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Alloy_word",
+        "name": "Brass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flooring_word",
+        "name": "Hardwood",
+        "isText": true
       }
     ],
     "handDisplay": []

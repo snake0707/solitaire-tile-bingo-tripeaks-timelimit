@@ -2,195 +2,40 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 120,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 53,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Hunting_word",
-            "name": "Trap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Silat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Panama",
-            "image": "res/Item/hats_panamahat_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Serum",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Rome",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Ragdoll",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Sombrero",
-            "image": "res/Item/hats_sombrero_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Prague",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Turban",
-            "image": "res/Item/hats_turban_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Kung fu",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hunting_word",
-            "name": "Decoy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Siamese",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Ballet_word",
-            "name": "Barre",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Bobtail",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Karate",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Ocicat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Madrid",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Ottawa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Compete_word",
-            "name": "Loser",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Bengal",
+            "name": "Tutu",
             "isText": true
           },
           "faceUp": false
@@ -206,415 +51,9 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Unite_word",
-            "name": "Alliance",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Cats_word": 8,
-      "Hats": 8,
-      "Capitals_word": 8,
-      "Makeup_word": 6,
-      "Combat_word": 6,
-      "Guitar_word": 4,
-      "Hunting_word": 4,
-      "Compete_word": 4,
-      "Ballet_word": 3,
-      "Unite_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Peel",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Capitals_word",
-        "name": "Capitals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Award",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Athens",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Unite_word",
-        "name": "Unite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Sponge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Pointe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Riffs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Compete_word",
-        "name": "Compete",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Oslo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cats_word",
-        "name": "Cats",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Savate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "League",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Hat",
-        "image": "res/Item/hats_hat_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Sphynx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Powder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Riyadh",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Guitar_word",
-        "name": "Guitar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Combat_word",
-        "name": "Combat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "License",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Chords",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Cairo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Persian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Tutu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Union",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ballet_word",
-        "name": "Ballet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Blush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Visor",
-        "image": "res/Item/hats_visor_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Cap",
-        "image": "res/Item/hats_cap_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Beret",
-        "image": "res/Item/hats_beret_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Palette",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Kepi",
-        "image": "res/Item/hats_kepi_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Exotic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Pickups",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Makeup_word",
-        "name": "Makeup",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Winner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Judo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Medal",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hunting_word",
-        "name": "Hunting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Sumo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Strings",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Ocicat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Ragdoll",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Compete_word",
-            "name": "Medal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ballet_word",
-            "name": "Barre",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Cap",
-            "image": "res/Item/hats_cap_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Sumo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Peel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Serum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Hat",
-            "image": "res/Item/hats_hat_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Panama",
-            "image": "res/Item/hats_panamahat_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Savate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Exotic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Kung fu",
+            "name": "Compete",
             "isText": true
           },
           "faceUp": false
@@ -626,905 +65,15 @@
             "name": "Palette",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Compete_word",
-            "name": "Compete",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Blush",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Ottawa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Rome",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Unite_word",
-            "name": "Unite",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Judo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ballet_word",
-            "name": "Pointe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Riyadh",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Cats_word": 8,
-      "Hats": 8,
-      "Capitals_word": 8,
-      "Makeup_word": 6,
-      "Combat_word": 6,
-      "Guitar_word": 4,
-      "Hunting_word": 4,
-      "Compete_word": 4,
-      "Ballet_word": 3,
-      "Unite_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Award",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hats",
-        "name": "Hats",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Hunting_word",
-        "name": "Hunting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Decoy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Bobtail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Tutu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Cairo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Alliance",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Guitar_word",
-        "name": "Guitar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Siamese",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Silat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Trap",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Combat_word",
-        "name": "Combat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "League",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Prague",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ballet_word",
-        "name": "Ballet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Beret",
-        "image": "res/Item/hats_beret_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Madrid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Sphynx",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cats_word",
-        "name": "Cats",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Bengal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Sombrero",
-        "image": "res/Item/hats_sombrero_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Sponge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Riffs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Strings",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Oslo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Loser",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Turban",
-        "image": "res/Item/hats_turban_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Powder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Athens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Chords",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Winner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "License",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Karate",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Makeup_word",
-        "name": "Makeup",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Union",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Pickups",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Kepi",
-        "image": "res/Item/hats_kepi_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Persian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Visor",
-        "image": "res/Item/hats_visor_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Capitals_word",
-        "name": "Capitals",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
       [
         {
           "card": {
             "type": "regular",
             "category": "Makeup_word",
             "name": "Serum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Exotic",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Bengal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Siamese",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Beret",
-            "image": "res/Item/hats_beret_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Peel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Cats_word",
-            "name": "Cats",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Makeup_word",
-            "name": "Powder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Savate",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Guitar_word",
-            "name": "Pickups",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Rome",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Prague",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Bobtail",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Karate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Guitar_word",
-            "name": "Riffs",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Turban",
-            "image": "res/Item/hats_turban_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Unite_word",
-            "name": "Alliance",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Silat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Riyadh",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Visor",
-            "image": "res/Item/hats_visor_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Sombrero",
-            "image": "res/Item/hats_sombrero_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Guitar_word",
-            "name": "Guitar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Cats_word": 8,
-      "Hats": 8,
-      "Capitals_word": 8,
-      "Makeup_word": 6,
-      "Combat_word": 6,
-      "Guitar_word": 4,
-      "Hunting_word": 4,
-      "Compete_word": 4,
-      "Ballet_word": 3,
-      "Unite_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Kung fu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Judo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "License",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Sponge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Athens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "League",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Unite_word",
-        "name": "Unite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Decoy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Pointe",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hunting_word",
-        "name": "Hunting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Cairo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Kepi",
-        "image": "res/Item/hats_kepi_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Combat_word",
-        "name": "Combat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Chords",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Oslo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Capitals_word",
-        "name": "Capitals",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Panama",
-        "image": "res/Item/hats_panamahat_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Sumo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Barre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Sphynx",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Madrid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Blush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Ragdoll",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Ocicat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Loser",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Persian",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hats",
-        "name": "Hats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Hat",
-        "image": "res/Item/hats_hat_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Winner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Strings",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Cap",
-        "image": "res/Item/hats_cap_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Makeup_word",
-        "name": "Makeup",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Tutu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Award",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Medal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Trap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Union",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Ottawa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Palette",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Ballet_word",
-        "name": "Ballet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Compete_word",
-        "name": "Compete",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 130
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hunting_word",
-            "name": "Rifle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Rome",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Guitar_word",
-            "name": "Pickups",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Oslo",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Ballet_word",
-            "name": "Ballet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Exotic",
             "isText": true
           },
           "faceUp": false
@@ -1541,83 +90,6 @@
         {
           "card": {
             "type": "regular",
-            "category": "Makeup_word",
-            "name": "Serum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Compete_word",
-            "name": "Medal",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hunting_word",
-            "name": "Decoy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Ottawa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cats_word",
-            "name": "Ragdoll",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Sumo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Athens",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
-            "name": "Panama",
-            "image": "res/Item/hats_panamahat_8.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
             "category": "Hats",
             "name": "Cap",
             "image": "res/Item/hats_cap_3.png",
@@ -1627,9 +99,113 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "Makeup_word",
+            "name": "Makeup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Turban",
+            "image": "res/Item/hats_turban_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
             "type": "regular",
             "category": "Cats_word",
-            "name": "Bengal",
+            "name": "Siamese",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hunting_word",
+            "name": "Hunting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compete_word",
+            "name": "Winner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Madrid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Judo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Guitar_word",
+            "name": "Guitar",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Riffs",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Pickups",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ballet_word",
+            "name": "Barre",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hunting_word",
+            "name": "Decoy",
             "isText": true
           },
           "faceUp": false
@@ -1646,17 +222,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hunting_word",
-            "name": "Trap",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Cats_word",
-            "name": "Cats",
+            "category": "Guitar_word",
+            "name": "Chords",
             "isText": true
           },
           "faceUp": false
@@ -1664,18 +231,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Capitals_word",
-            "name": "Cairo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Ballet_word",
-            "name": "Tutu",
-            "isText": true
+            "category": "Hats",
+            "name": "Kepi",
+            "image": "res/Item/hats_kepi_1.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -1696,38 +255,20 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Compete_word",
-        "name": "Loser",
+        "category": "Cats_word",
+        "name": "Bobtail",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Cats_word",
-        "name": "Sphynx",
+        "name": "Ragdoll",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Makeup_word",
-        "name": "Peel",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Combat_word",
-        "name": "Combat",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hats",
-        "name": "Hats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Madrid",
+        "category": "Cats_word",
+        "name": "Persian",
         "isText": true
       },
       {
@@ -1738,64 +279,26 @@
       },
       {
         "type": "regular",
-        "category": "Hats",
-        "name": "Hat",
-        "image": "res/Item/hats_hat_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Powder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Prague",
+        "category": "Cats_word",
+        "name": "Exotic",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Cats_word",
-        "name": "Siamese",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Winner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Riyadh",
+        "name": "Bengal",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Makeup_word",
-        "name": "Sponge",
+        "name": "Blush",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Hats",
-        "name": "Kepi",
-        "image": "res/Item/hats_kepi_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Union",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "League",
+        "category": "Hunting_word",
+        "name": "Rifle",
         "isText": true
       },
       {
@@ -1807,51 +310,14 @@
       {
         "type": "regular",
         "category": "Hats",
-        "name": "Turban",
-        "image": "res/Item/hats_turban_6.png",
+        "name": "Sombrero",
+        "image": "res/Item/hats_sombrero_7.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Combat_word",
-        "name": "Judo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Savate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Beret",
-        "image": "res/Item/hats_beret_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Hunting_word",
-        "name": "Hunting",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Guitar_word",
-        "name": "Guitar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Blush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Palette",
+        "category": "Capitals_word",
+        "name": "Athens",
         "isText": true
       },
       {
@@ -1862,15 +328,14 @@
       },
       {
         "type": "regular",
-        "category": "Hats",
-        "name": "Visor",
-        "image": "res/Item/hats_visor_5.png",
-        "isText": false
+        "category": "Unite_word",
+        "name": "League",
+        "isText": true
       },
       {
-        "type": "gold",
-        "category": "Compete_word",
-        "name": "Compete",
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Ottawa",
         "isText": true
       },
       {
@@ -1881,20 +346,65 @@
       },
       {
         "type": "regular",
-        "category": "Guitar_word",
-        "name": "Chords",
-        "isText": true
+        "category": "Hats",
+        "name": "Hat",
+        "image": "res/Item/hats_hat_4.png",
+        "isText": false
       },
       {
-        "type": "regular",
-        "category": "Ballet_word",
-        "name": "Barre",
+        "type": "gold",
+        "category": "Combat_word",
+        "name": "Combat",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Combat_word",
+        "name": "Sumo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cats_word",
+        "name": "Cats",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ballet_word",
+        "name": "Ballet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Panama",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
         "name": "Karate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Oslo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Visor",
+        "image": "res/Item/hats_visor_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Rome",
         "isText": true
       },
       {
@@ -1905,27 +415,14 @@
       },
       {
         "type": "regular",
-        "category": "Hats",
-        "name": "Sombrero",
-        "image": "res/Item/hats_sombrero_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Bobtail",
+        "category": "Capitals_word",
+        "name": "Prague",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Cats_word",
-        "name": "Persian",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Makeup_word",
-        "name": "Makeup",
+        "category": "Capitals_word",
+        "name": "Cairo",
         "isText": true
       },
       {
@@ -1936,9 +433,46 @@
       },
       {
         "type": "regular",
-        "category": "Guitar_word",
-        "name": "Riffs",
+        "category": "Unite_word",
+        "name": "Union",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Loser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Riyadh",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Capitals_word",
+        "name": "Capitals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Peel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Medal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Beret",
+        "image": "res/Item/hats_beret_2.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1947,9 +481,33 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Capitals_word",
-        "name": "Capitals",
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Sphynx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Powder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "Trap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Savate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Sponge",
         "isText": true
       }
     ],
@@ -1958,15 +516,40 @@
   {
     "config": {
       "maxSlots": 4,
-      "maxSteps": 130
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 6,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 53,
+        "recycle": 1
+      }
     },
     "tableau": [
       [
         {
           "card": {
             "type": "regular",
-            "category": "Compete_word",
-            "name": "Winner",
+            "category": "Hunting_word",
+            "name": "Rifle",
             "isText": true
           },
           "faceUp": false
@@ -1975,25 +558,25 @@
           "card": {
             "type": "regular",
             "category": "Makeup_word",
-            "name": "Palette",
+            "name": "Blush",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Ballet_word",
-            "name": "Tutu",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Capitals_word",
-            "name": "Madrid",
+            "name": "Capitals",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Powder",
             "isText": true
           },
           "faceUp": true
@@ -2003,9 +586,18 @@
         {
           "card": {
             "type": "regular",
+            "category": "Hunting_word",
+            "name": "Trap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Hats",
-            "name": "Panama",
-            "image": "res/Item/hats_panamahat_8.png",
+            "name": "Kepi",
+            "image": "res/Item/hats_kepi_1.png",
             "isText": false
           },
           "faceUp": false
@@ -2013,8 +605,56 @@
         {
           "card": {
             "type": "regular",
-            "category": "Ballet_word",
-            "name": "Pointe",
+            "category": "Hats",
+            "name": "Hat",
+            "image": "res/Item/hats_hat_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Ocicat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Makeup_word",
+            "name": "Makeup",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Sphynx",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hunting_word",
+            "name": "Hunting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Unite_word",
+            "name": "Alliance",
             "isText": true
           },
           "faceUp": false
@@ -2032,36 +672,6 @@
           "card": {
             "type": "regular",
             "category": "Hats",
-            "name": "Hat",
-            "image": "res/Item/hats_hat_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Cats_word",
-            "name": "Cats",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Combat_word",
-            "name": "Combat",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Hats",
             "name": "Cap",
             "image": "res/Item/hats_cap_3.png",
             "isText": false
@@ -2072,7 +682,54 @@
           "card": {
             "type": "regular",
             "category": "Cats_word",
-            "name": "Siamese",
+            "name": "Persian",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Sumo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Exotic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Savate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Strings",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cats_word",
+            "name": "Cats",
             "isText": true
           },
           "faceUp": false
@@ -2081,7 +738,332 @@
           "card": {
             "type": "regular",
             "category": "Capitals_word",
-            "name": "Oslo",
+            "name": "Prague",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ballet_word",
+            "name": "Ballet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cats_word": 8,
+      "Hats": 8,
+      "Capitals_word": 8,
+      "Makeup_word": 6,
+      "Combat_word": 6,
+      "Guitar_word": 4,
+      "Hunting_word": 4,
+      "Compete_word": 4,
+      "Ballet_word": 3,
+      "Unite_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "Union",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Riffs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Turban",
+        "image": "res/Item/hats_turban_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Panama",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Pointe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Kung fu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Peel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Barre",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Siamese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Sponge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "Decoy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Sombrero",
+        "image": "res/Item/hats_sombrero_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Bobtail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "League",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Karate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Rome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Pickups",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compete_word",
+        "name": "Compete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Visor",
+        "image": "res/Item/hats_visor_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Chords",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Oslo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Unite_word",
+        "name": "Unite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Ragdoll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Medal",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Guitar_word",
+        "name": "Guitar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Cairo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Award",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Riyadh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Tutu",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Combat_word",
+        "name": "Combat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Ottawa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Madrid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Serum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Silat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Athens",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Beret",
+        "image": "res/Item/hats_beret_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "License",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Loser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Bengal",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 114,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 6,
+        "colToCol": 5,
+        "colMultiToCol": 9,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 119,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 1,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 52,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Sponge",
             "isText": true
           },
           "faceUp": false
@@ -2098,38 +1080,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Hats",
-            "name": "Kepi",
-            "image": "res/Item/hats_kepi_1.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Capitals_word",
-            "name": "Cairo",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Combat_word",
-            "name": "Karate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Makeup_word",
-            "name": "Makeup",
+            "category": "Guitar_word",
+            "name": "Chords",
             "isText": true
           },
           "faceUp": false
@@ -2141,13 +1093,15 @@
             "name": "Ballet",
             "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
-            "category": "Combat_word",
-            "name": "Sumo",
+            "category": "Makeup_word",
+            "name": "Powder",
             "isText": true
           },
           "faceUp": false
@@ -2163,9 +1117,1179 @@
         },
         {
           "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Cairo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Ocicat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Bengal",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hunting_word",
+            "name": "Trap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Kepi",
+            "image": "res/Item/hats_kepi_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Oslo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Strings",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Prague",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Combat_word",
+            "name": "Combat",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hunting_word",
+            "name": "Hunting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cats_word",
+            "name": "Cats",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Beret",
+            "image": "res/Item/hats_beret_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ballet_word",
+            "name": "Barre",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Peel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Guitar_word",
+            "name": "Guitar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Karate",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cats_word": 8,
+      "Hats": 8,
+      "Capitals_word": 8,
+      "Makeup_word": 6,
+      "Combat_word": 6,
+      "Guitar_word": 4,
+      "Hunting_word": 4,
+      "Compete_word": 4,
+      "Ballet_word": 3,
+      "Unite_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Tutu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Loser",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compete_word",
+        "name": "Compete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "League",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Siamese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Riffs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "License",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Visor",
+        "image": "res/Item/hats_visor_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Sphynx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Sombrero",
+        "image": "res/Item/hats_sombrero_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Hat",
+        "image": "res/Item/hats_hat_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Blush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Turban",
+        "image": "res/Item/hats_turban_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Riyadh",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Judo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Athens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Cap",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Persian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Kung fu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "Rifle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Pointe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Ottawa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Rome",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Madrid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Award",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Capitals_word",
+        "name": "Capitals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Ragdoll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "Union",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Serum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Panama",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Bobtail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Sumo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "Alliance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Savate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Makeup_word",
+        "name": "Makeup",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Medal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Exotic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Silat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Pickups",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 4,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 55,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
             "type": "gold",
             "category": "Compete_word",
             "name": "Compete",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Peel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Athens",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Savate",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Rome",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Combat_word",
+            "name": "Combat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Powder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hunting_word",
+            "name": "Decoy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Siamese",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Riyadh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hunting_word",
+            "name": "Hunting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Pickups",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Makeup_word",
+            "name": "Makeup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Chords",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Guitar_word",
+            "name": "Guitar",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Kepi",
+            "image": "res/Item/hats_kepi_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Unite_word",
+            "name": "Unite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Sumo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cats_word",
+            "name": "Cats",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ballet_word",
+            "name": "Barre",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Cairo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Capitals_word",
+            "name": "Capitals",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cats_word": 8,
+      "Hats": 8,
+      "Capitals_word": 8,
+      "Makeup_word": 6,
+      "Combat_word": 6,
+      "Guitar_word": 4,
+      "Hunting_word": 4,
+      "Compete_word": 4,
+      "Ballet_word": 3,
+      "Unite_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Panama",
+        "image": "res/Item/hats_panamahat_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Ottawa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Turban",
+        "image": "res/Item/hats_turban_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Loser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "License",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Persian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Oslo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Visor",
+        "image": "res/Item/hats_visor_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Beret",
+        "image": "res/Item/hats_beret_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Pointe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "Union",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "League",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Award",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Ocicat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Ragdoll",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Hats",
+        "name": "Hats",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Silat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Karate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Serum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Hat",
+        "image": "res/Item/hats_hat_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Kung fu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Unite_word",
+        "name": "Alliance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Sombrero",
+        "image": "res/Item/hats_sombrero_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Sphynx",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Strings",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Cap",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Medal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Madrid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Bobtail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Blush",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Exotic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Bengal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "Rifle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Guitar_word",
+        "name": "Riffs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Sponge",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ballet_word",
+        "name": "Ballet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Judo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Prague",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "Trap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Tutu",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 117,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 8,
+        "colToCol": 11,
+        "colMultiToCol": 6,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 53,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Riyadh",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cats_word",
+            "name": "Cats",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Kepi",
+            "image": "res/Item/hats_kepi_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Chords",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Panama",
+            "image": "res/Item/hats_panamahat_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compete_word",
+            "name": "Award",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Pickups",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Bengal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Peel",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Hats",
+            "name": "Sombrero",
+            "image": "res/Item/hats_sombrero_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Capitals_word",
+            "name": "Cairo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Unite_word",
+            "name": "Alliance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compete_word",
+            "name": "Winner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Unite_word",
+            "name": "League",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compete_word",
+            "name": "Loser",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Unite_word",
+            "name": "Union",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Hunting_word",
+            "name": "Hunting",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Guitar_word",
+            "name": "Riffs",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Guitar_word",
+            "name": "Guitar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Combat_word",
+            "name": "Kung fu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Makeup_word",
+            "name": "Serum",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cats_word",
+            "name": "Bobtail",
             "isText": true
           },
           "faceUp": true
@@ -2188,82 +2312,37 @@
       {
         "type": "regular",
         "category": "Makeup_word",
-        "name": "Powder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Turban",
-        "image": "res/Item/hats_turban_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Beret",
-        "image": "res/Item/hats_beret_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "League",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Guitar_word",
-        "name": "Guitar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Sponge",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Union",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Visor",
-        "image": "res/Item/hats_visor_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Award",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Capitals_word",
-        "name": "Capitals",
+        "name": "Blush",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Capitals_word",
-        "name": "Athens",
+        "name": "Oslo",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Guitar_word",
-        "name": "Chords",
+        "name": "Strings",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Silat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ballet_word",
+        "name": "Ballet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Siamese",
         "isText": true
       },
       {
@@ -2274,32 +2353,70 @@
       },
       {
         "type": "regular",
-        "category": "Cats_word",
-        "name": "Bengal",
+        "category": "Hunting_word",
+        "name": "Rifle",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Ballet_word",
+        "name": "Pointe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hunting_word",
+        "name": "License",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Tutu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cats_word",
+        "name": "Ragdoll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Cap",
+        "image": "res/Item/hats_cap_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
         "category": "Combat_word",
-        "name": "Silat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Exotic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Peel",
+        "name": "Combat",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Capitals_word",
-        "name": "Riyadh",
+        "name": "Athens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Beret",
+        "image": "res/Item/hats_beret_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Savate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Palette",
         "isText": true
       },
       {
@@ -2311,31 +2428,13 @@
       {
         "type": "regular",
         "category": "Cats_word",
-        "name": "Persian",
+        "name": "Exotic",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Ballet_word",
-        "name": "Barre",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compete_word",
-        "name": "Medal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Makeup_word",
-        "name": "Blush",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Strings",
+        "category": "Hunting_word",
+        "name": "Decoy",
         "isText": true
       },
       {
@@ -2347,62 +2446,37 @@
       {
         "type": "regular",
         "category": "Hunting_word",
-        "name": "License",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hats",
-        "name": "Sombrero",
-        "image": "res/Item/hats_sombrero_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Savate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cats_word",
-        "name": "Bobtail",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Capitals_word",
-        "name": "Prague",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Unite_word",
-        "name": "Alliance",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Combat_word",
-        "name": "Kung fu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Hunting_word",
         "name": "Trap",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Guitar_word",
-        "name": "Pickups",
+        "category": "Capitals_word",
+        "name": "Madrid",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Cats_word",
-        "name": "Ragdoll",
+        "category": "Combat_word",
+        "name": "Judo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ballet_word",
+        "name": "Barre",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Capitals_word",
+        "name": "Capitals",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compete_word",
+        "name": "Medal",
         "isText": true
       },
       {
@@ -2413,20 +2487,8 @@
       },
       {
         "type": "regular",
-        "category": "Makeup_word",
-        "name": "Serum",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Hunting_word",
-        "name": "Hunting",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Guitar_word",
-        "name": "Riffs",
+        "category": "Cats_word",
+        "name": "Persian",
         "isText": true
       },
       {
@@ -2437,8 +2499,71 @@
       },
       {
         "type": "regular",
+        "category": "Makeup_word",
+        "name": "Powder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Turban",
+        "image": "res/Item/hats_turban_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
         "category": "Compete_word",
-        "name": "Loser",
+        "name": "Compete",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Makeup_word",
+        "name": "Sponge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Karate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Hat",
+        "image": "res/Item/hats_hat_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Combat_word",
+        "name": "Sumo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Hats",
+        "name": "Visor",
+        "image": "res/Item/hats_visor_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Capitals_word",
+        "name": "Prague",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Makeup_word",
+        "name": "Makeup",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Unite_word",
+        "name": "Unite",
         "isText": true
       }
     ],
