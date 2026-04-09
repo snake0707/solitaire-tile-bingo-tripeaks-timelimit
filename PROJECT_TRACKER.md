@@ -1,7 +1,7 @@
 # Solitaire Tile Bingo - 项目文档与开发追踪
 
 > 创建日期: 2026-03-11
-> 最后更新: 2026-04-02
+> 最后更新: 2026-04-09
 > 当前分支: `feature/SAJLike`
 
 ---
@@ -193,6 +193,43 @@ solitaire-tile-bingo/
 ---
 
 ## 九、开发日志
+
+### 2026-04-09 - 补全新类别图片映射（image_mapping.json + level_card_defs.js）
+
+- **背景**: 美术陆续交付了 118 个新类别（E-全新）的图片资源，文件名采用大写类别前缀（如 `Animals_Bear_6.png`、`Bigcats_Lion_5.png`、`Xray_ChestXray_1.png`）。原 `image_mapping.json` 未覆盖这些新前缀，`level_card_defs.js` 中 118 个图片类别全部 `image: ""`，无法显示图片
+- **数据源**: `config/archive/all_image_cards.xlsx` 的"所有图片牌" sheet，记录了 1090 个图片牌的分类（A-直接复用/C-空闲前缀/E-全新）、映射前缀、已有图片复用关系
+- **更新 1 · prefixMap（+114 条）**: `get_image_prefix()` 返回类别名的小写形式，但新图片用大写前缀。为每个 E 类类别添加小写→大写的映射：
+  - 一般情况: `"animals": "Animals"`, `"primates": "Primates"` 等
+  - 需要去空格/去连字符: `"big cats": "Bigcats"`, `"baby birds": "Babybirds"`, `"x-ray": "Xray"`
+  - 保留空格: `"hot dog": "Hot dog"`, `"wake up": "Wake up"`
+- **更新 2 · imageMap（+117 条）**: 三类复用关系
+  - **A/C 类同名图片复用**（Excel 明确标注）: `"Wooden/Pencil": "supplies_pencil_7.png"`, `"Headwear/Cap": "hats_cap_3.png"`, `"Wings/Eagle": "bird_eagle_2.png"` 等 ~65 条
+  - **无自己文件夹类别的跨类别引用**: `Horse`（3 词→Equidae/Hoof）、`Poultry`（4 词→Egg）、`Seats`（4 词→furniture/chair/Park）共 11 条
+  - **跨类别共用**（两个 E 类同词共用一张图）: `"Animals/Goat": "Hoofed_Goat_7.png"`, `"Omnivore/Bear": "Animals_Bear_6.png"`, `"Equidae/Horse": "Animals_Horse_4.png"` 等 ~40 条
+  - **连字符词名显式映射**: `"X-ray/Chest X-ray": "Xray_ChestXray_1.png"` 等 6 条（自动匹配无法处理连字符）
+- **生成结果**: 运行 `python3 generate_levels.py --export-defs`，所有 1090 个图片词条解析成功，0 个 `image: ""`
+- **验证**: 抽查 Animals/Seats/Horse/Poultry/X-ray/Big cats/Wooden 等关键类别，图片路径均正确指向同名 PNG 或合理的跨类别复用目标
+- **修改文件**: `config/image_mapping.json`（prefixMap 7→121，imageMap 487→604）、`level_card_defs.js`（自动生成）
+
+### 2026-04-07~08 - 修复求解器 gold multi 权重及冗余枚举 bug + 列间移动 tiebreak + 保守模式金牌移空列 + 手牌放列 tiebreak
+
+- **问题1**: 同一列顶部有 gold+基础牌时，求解器先放 gold 再放基础牌，多花1步（应为1步合并操作）
+- **根因1a（权重）**: `tableau_multi_to_slot` 含 gold 时固定返回权重10，未检查是否完成类别（应返回16）
+- **根因1b（枚举）**: `tableau_gold_to_slot` 单张枚举未被 `added_multi` 守卫，导致 multi 和 single 同时存在，tiebreak 可能选了单张
+- **修复1**: 权重函数 gold multi 也检查完成类别→16；枚举函数加 `not added_multi` 守卫
+- **问题2**: 列间移动（权重3）时，Baryonyx 放到空列而非已有同类别恐龙牌的列
+- **根因2**: 权重3无 tiebreak 规则，同权重随机选择导致不合理的列间移动
+- **修复2**: 权重3 tiebreak 加入"目标列同类别亮牌数量"因子，数量越多越优先（归拢同类别）
+- **问题3**: 保守模式下，Lie 金牌坐在暗牌上方，求解器宁可放手牌到空列也不移动金牌翻暗牌
+- **根因3**: 保守模式金牌列间移动限制过严（要求同类所有基础牌都在同一列上才允许移动）
+- **修复3**: 保守模式新增例外 — 源列有暗牌且目标是**空列**时，允许金牌移动（翻暗牌且不封死基础牌收集）
+  - 新增权重5：金牌移空列翻暗牌（介于基础牌翻暗牌6与手牌入列4之间）
+  - 不允许金牌移动到有基础牌的列（会封死该类收集）
+- **问题4**: 手牌 Mislead 可直接放到有同类牌的列，但求解器先放空列再移过去，多花1步
+- **根因4**: 权重4（手牌放列）无 tiebreak 规则，空列和同类列同权重随机选择
+- **修复4**: 权重4 tiebreak 加入"目标列同类别亮牌数量"因子，数量越多越优先
+- **修改文件**: `generate_levels.py`（主求解器）、`generator.html`（回溯求解器）
+- **solve_debug.py 无需修改**: 直接调用 generate_levels.py 的 solve_level
 
 ### 2026-04-02 - 策略2求解器多项改进
 

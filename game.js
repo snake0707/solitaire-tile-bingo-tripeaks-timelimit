@@ -862,9 +862,12 @@ class Game {
         if (layouts && layouts.length > 0) {
             const idx = Math.floor(Math.random() * layouts.length);
             selectedLayout = layouts[idx];
+            this.layoutIndex = idx;
             if (selectedLayout.config) {
                 config = { ...baseConfig, ...selectedLayout.config };
             }
+        } else {
+            this.layoutIndex = null;
         }
 
         this.numCategories = config.numCategories;
@@ -874,6 +877,7 @@ class Game {
         this.maxSteps = config.maxSteps + bonus;
         this.stepsLeft = this.maxSteps;
         this.solverSteps = config.solverSteps || null;
+        this.solver2Steps = config.solver2Steps != null ? config.solver2Steps : null;
 
         if (selectedLayout) {
             this.restoreLayout(selectedLayout);
@@ -996,7 +1000,11 @@ class Game {
             solverEl.style.cssText = 'font-size:12px;color:#999;margin-left:4px;';
             this.stepsEl.parentNode.appendChild(solverEl);
         }
-        solverEl.textContent = this.solverSteps != null ? `(AI:${this.solverSteps})` : '';
+        let parts = [];
+        if (this.layoutIndex != null) parts.push(`layout:${this.layoutIndex}`);
+        if (this.solverSteps != null) parts.push(`S1:${this.solverSteps}`);
+        if (this.solver2Steps != null) parts.push(`S2:${this.solver2Steps}`);
+        solverEl.textContent = parts.length ? `(${parts.join(' ')})` : '';
     }
 
     decrementStep() {
@@ -1026,6 +1034,7 @@ class Game {
         this.stepsLeft += 10;
         this.maxSteps += 10;
         this.renderSteps();
+        this.render();
     }
 
     showLevelSelect() {
@@ -1507,6 +1516,7 @@ class Game {
             this.decrementStep(); // flip costs 1 step
             if (this.stepsLeft <= 0) {
                 this.onLose('No more steps!');
+                this.renderHandArea();
                 return;
             }
             this.renderHandArea();
@@ -1631,7 +1641,7 @@ class Game {
                 if (card.isText) {
                     inner.innerHTML = `<span class="hand-card-name">${this.getDisplayName(card)}</span>`;
                 } else if (card.image) {
-                    inner.innerHTML = `<img class="card-img" src="${card.image}" alt="${this.getDisplayName(card)}" style="width:40px;height:48px;object-fit:contain;pointer-events:none;">`;
+                    inner.innerHTML = `<img class="card-img" src="${card.image}" alt="${this.getDisplayName(card)}" style="width:52px;height:60px;object-fit:contain;pointer-events:none;">`;
                 } else {
                     inner.innerHTML = `<span class="hand-card-name">${card.name}</span>`;
                 }
