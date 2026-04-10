@@ -885,6 +885,7 @@ class Game {
 
         const bonus = this.retryBonus[level] || 0;
         this.maxSteps = config.maxSteps + bonus;
+        this.baseMaxSteps = this.maxSteps;
         this.stepsLeft = this.maxSteps;
         this.solverSteps = config.solverSteps || null;
         this.solver2Steps = config.solver2Steps != null ? config.solver2Steps : null;
@@ -1244,7 +1245,7 @@ class Game {
         const bonus = (this.retryBonus[this.level] || 0) + 5;
         const stepsUsed = this.maxSteps - this.stepsLeft;
         let info = `${msg} Retry with +${bonus} steps.\n\n`;
-        info += `限定步数: ${this.maxSteps}  实际步数: ${stepsUsed}`;
+        info += `限定步数: ${this.baseMaxSteps}  实际步数: ${stepsUsed}`;
         let solverInfo = [];
         if (this.layoutIndex != null) solverInfo.push(`layout:${this.layoutIndex}`);
         if (this.solverSteps != null) solverInfo.push(`S1:${this.solverSteps}`);
@@ -1257,7 +1258,7 @@ class Game {
     onWin() {
         const stepsUsed = this.maxSteps - this.stepsLeft;
         let info = `All categories collected! Level ${this.level} complete!\n\n`;
-        info += `限定步数: ${this.maxSteps}  实际步数: ${stepsUsed}`;
+        info += `限定步数: ${this.baseMaxSteps}  实际步数: ${stepsUsed}`;
         let solverInfo = [];
         if (this.layoutIndex != null) solverInfo.push(`layout:${this.layoutIndex}`);
         if (this.solverSteps != null) solverInfo.push(`S1:${this.solverSteps}`);
