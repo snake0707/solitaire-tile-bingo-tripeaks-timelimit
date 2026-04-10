@@ -1197,6 +1197,15 @@ class Game {
     }
 
     onSoftDeadlock() {
+        const stepsUsed = this.maxSteps - this.stepsLeft;
+        let info = `No moves left to complete this level.\n\n`;
+        info += `限定步数: ${this.baseMaxSteps}  实际步数: ${stepsUsed}`;
+        let solverInfo = [];
+        if (this.layoutIndex != null) solverInfo.push(`layout:${this.layoutIndex}`);
+        if (this.solverSteps != null) solverInfo.push(`S1:${this.solverSteps}`);
+        if (this.solver2Steps != null) solverInfo.push(`S2:${this.solver2Steps}`);
+        if (solverInfo.length) info += `\n\n${solverInfo.join('  ')}`;
+        document.getElementById('soft-deadlock-message').textContent = info;
         this.softDeadlockOverlay.classList.remove('hidden');
     }
 

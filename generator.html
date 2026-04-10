@@ -310,8 +310,9 @@ function verifySolvable(tableau, categoryTargets, maxSteps, maxSlots, handPile, 
                 }
             }
 
-            // Single card moves (always available alongside multi in MCTS)
-            if (top.card.type === 'regular') {
+            // Single card moves (skip if multi-to-slot already covers this column)
+            const addedMulti = moves.some(m => m.type === 'tableau_multi_to_slot' && m.colIdx === ci);
+            if (top.card.type === 'regular' && !addedMulti) {
                 const slotIdx = state.slots.findIndex(
                     s => s !== null && s.key === top.card.category && s.collected < s.target
                 );
@@ -319,7 +320,7 @@ function verifySolvable(tableau, categoryTargets, maxSteps, maxSlots, handPile, 
                     moves.push({ type: 'tableau_to_slot', colIdx: ci, slotIdx });
                 }
             }
-            if (top.card.type === 'gold' && hasEmptySlot) {
+            if (top.card.type === 'gold' && hasEmptySlot && !addedMulti) {
                 moves.push({ type: 'tableau_gold_to_slot', colIdx: ci });
             }
         }
@@ -1057,6 +1058,7 @@ const MAX_TREE_DEPTH = 8;
 const MAX_POSSIBLE_MOVES = 50;
 const MAX_SOLVER_STEPS = 5000;
 const MAX_SOLVER_ROUNDS = 3;
+const GREEDY_PHASE_RATIO = 0.6;    // 前N%步数纯贪心（无回溯），之后启用决策树回溯
 
 const LOW_PRIORITY = 1;
 const NORMAL_PRIORITY = 2;
@@ -1068,11 +1070,15 @@ const STOCK_CARD_MUL = 1;
 
 // ─── Priority + Equality Backtracking Solver ──────────────────────
 
-function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative, priorityOnly, greedyOnly) {
+function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative, priorityOnly, greedyOnly, displaySteps) {
     if (conservative === undefined) conservative = false;
     if (priorityOnly === undefined) priorityOnly = false;
     if (greedyOnly === undefined) greedyOnly = false;
+    if (displaySteps === undefined) displaySteps = maxSteps;
     const MAX_RECYCLES_SL = 3;
+
+    // Greedy phase threshold: first N steps are pure greedy (no backtracking)
+    const greedyStepLimit = Math.floor(displaySteps * GREEDY_PHASE_RATIO);
 
     // Seeded PRNG (mulberry32) for reproducible random choices within solver
     let _rngState = (Date.now() ^ 0x5DEECE66D) >>> 0;
@@ -1233,7 +1239,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                     moves.push({ type: 'tableau_to_slot', colIdx: ci, slotIdx });
                 }
             }
-            if (top.card.type === 'gold' && hasEmptySlot) {
+            if (top.card.type === 'gold' && hasEmptySlot && !addedMulti) {
                 moves.push({ type: 'tableau_gold_to_slot', colIdx: ci });
             }
         }
@@ -1262,7 +1268,11 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             for (let ti = 0; ti < state.tableau.length; ti++) {
                 if (ti === ci) continue;
                 // Conservative: gold cards can only move column-to-column if category completed
-                if (conservative && top.card.type === 'gold' && !isCatAllRegularsOnTableau(top.card.category)) continue;
+                // Exception: allow if source has face-down card AND target is empty
+                if (conservative && top.card.type === 'gold' && !isCatAllRegularsOnTableau(top.card.category)) {
+                    const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
+                    if (!(hasFacedown && state.tableau[ti].length === 0)) continue;
+                }
                 if (canStackOnColumn(top.card, state.tableau[ti])) {
                     moves.push({ type: 'tableau_to_column', srcCol: ci, dstCol: ti });
                 }
@@ -1283,10 +1293,13 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             const dragCount = topIdx - startIdx + 1;
             if (dragCount < 2) continue;
             // Conservative: if top card is gold, only allow if category completed
-            if (conservative && col[topIdx].card.type === 'gold' && !isCatAllRegularsOnTableau(cat)) continue;
+            // Exception: allow if source has face-down card AND target is empty
+            const isConsGoldBlocked = conservative && col[topIdx].card.type === 'gold' && !isCatAllRegularsOnTableau(cat);
+            const consHasFacedown = startIdx > 0 && !col[startIdx - 1].faceUp;
             const bottomCard = col[startIdx].card;
             for (let ti = 0; ti < state.tableau.length; ti++) {
                 if (ti === ci) continue;
+                if (isConsGoldBlocked && !(consHasFacedown && state.tableau[ti].length === 0)) continue;
                 if (canStackOnColumn(bottomCard, state.tableau[ti])) {
                     moves.push({ type: 'tableau_multi_to_column', srcCol: ci, dstCol: ti, startIdx, count: dragCount });
                 }
@@ -1572,66 +1585,69 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             const col = state.tableau[move.srcCol];
             const dstCol = state.tableau[move.dstCol];
             const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
-            const emptiesCol = col.length === 1;
+            const topCard = col[col.length - 1].card;
             if (!hasFacedown && dstCol.length === 0) return 0;
-            if (hasFacedown) return 10;
-            if (emptiesCol) return 6;
-            return 4;
+            if (hasFacedown) {
+                // 金牌移动到空列翻暗牌：权重5
+                if (topCard.type === 'gold' && dstCol.length === 0) return 5;
+                return 6;
+            }
+            return 3;
         }
         if (mt === 'tableau_multi_to_column') {
             const col = state.tableau[move.srcCol];
             const dstCol = state.tableau[move.dstCol];
             const startIdx = move.startIdx;
             const hasFacedown = startIdx > 0 && !col[startIdx - 1].faceUp;
-            const emptiesCol = startIdx === 0;
+            const topCard = col[col.length - 1].card;
             if (!hasFacedown && dstCol.length === 0) return 0;
-            if (hasFacedown) return 10;
-            if (emptiesCol) return 6;
-            return 4;
+            if (hasFacedown) {
+                if (topCard.type === 'gold' && dstCol.length === 0) return 5;
+                return 6;
+            }
+            return 3;
         }
 
         // ── Tableau regular → slot ──
         if (mt === 'tableau_to_slot') {
-            const col = state.tableau[move.colIdx];
-            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
-            const card = col[col.length - 1].card;
+            const card = state.tableau[move.colIdx][state.tableau[move.colIdx].length - 1].card;
             for (const s of state.slots) {
                 if (s !== null && s.key === card.category) {
-                    if (s.collected + 1 >= s.target) return 14;
+                    if (s.collected + 1 >= s.target) return 16;
                     break;
                 }
             }
-            if (freeSlots > 1) return hasFacedown ? 8 : 6;
-            return 4;
+            return 14;
         }
 
         // ── Tableau gold → slot ──
         if (mt === 'tableau_gold_to_slot') {
-            const col = state.tableau[move.colIdx];
-            const hasFacedown = col.length >= 2 && !col[col.length - 2].faceUp;
-            if (freeSlots <= 1) return 2;
-            return hasFacedown ? 8 : 6;
+            return 10;
         }
 
         // ── Tableau multi → slot ──
         if (mt === 'tableau_multi_to_slot') {
             const col = state.tableau[move.colIdx];
             const startIdx = move.startIdx || 0;
-            const hasFacedown = startIdx > 0 && !col[startIdx - 1].faceUp;
-            const isGoldMove = startIdx < col.length && col[startIdx].card.type === 'gold';
+            const topCard = col[col.length - 1];
+            const bottomCard = col[startIdx];
+            const isGoldMove = topCard.card.type === 'gold' || bottomCard.card.type === 'gold';
             const numCards = col.length - startIdx;
-            if (isGoldMove && freeSlots <= 1) return 2;
-            if (!isGoldMove) {
+            if (isGoldMove) {
                 const catKey = col[col.length - 1].card.category;
-                for (const s of state.slots) {
-                    if (s !== null && s.key === catKey) {
-                        if (s.collected + numCards >= s.target) return 14;
-                        break;
-                    }
+                const numRegulars = numCards - 1;
+                const target = categoryTargets[catKey] || 0;
+                if (numRegulars >= target) return 16;
+                return 10;
+            }
+            const catKey = col[col.length - 1].card.category;
+            for (const s of state.slots) {
+                if (s !== null && s.key === catKey) {
+                    if (s.collected + numCards >= s.target) return 16;
+                    break;
                 }
             }
-            if (freeSlots > 1) return hasFacedown ? 8 : 6;
-            return 4;
+            return 14;
         }
 
         // ── Hand display → slot ──
@@ -1639,15 +1655,14 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             const card = state.handDisplay[state.handDisplay.length - 1];
             for (const s of state.slots) {
                 if (s !== null && s.key === card.category) {
-                    if (s.collected + 1 >= s.target) return 14;
+                    if (s.collected + 1 >= s.target) return 16;
                     break;
                 }
             }
-            return freeSlots > 1 ? 6 : 4;
+            return 12;
         }
         if (mt === 'display_gold_to_slot') {
-            if (freeSlots <= 1) return 2;
-            return 6;
+            return 8;
         }
 
         // ── Hand display → column ──
@@ -1655,9 +1670,9 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
 
         // ── Flip / recycle ──
         if (mt === 'flip_hand') return 2;
-        if (mt === 'recycle') return 2;
+        if (mt === 'recycle') return 1;
 
-        return 2;
+        return 0;
     }
 
     function countFacedown(colIdx) {
@@ -1668,44 +1683,56 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
         const w = getPriorityWeight(move);
         const mt = move.type;
 
-        // Weight 10: prefer source column with fewer face-down cards
-        if (w === 10) {
+        // Weight 6 (列间移动翻暗牌): source with fewer face-down first
+        if (w === 6) {
             return countFacedown(move.srcCol);
         }
 
-        // Weight 8: gold first (0), then fewer face-down (1+count)
-        if (w === 8) {
-            if (mt === 'tableau_gold_to_slot') return 0;
-            const src = move.colIdx !== undefined ? move.colIdx : 0;
-            return 1 + countFacedown(src);
+        // Weight 14 (桌面基础牌归类): source with fewer face-down first
+        if (w === 14) {
+            return countFacedown(move.colIdx);
         }
 
-        // Weight 6: tableau gold first (0), then tableau by fewer face-down (1+count), then hand (100)
-        if (w === 6) {
-            if (mt === 'tableau_gold_to_slot') return 0;
-            if (mt === 'tableau_to_slot' || mt === 'tableau_multi_to_slot') {
-                return 1 + countFacedown(move.colIdx);
+        // Weight 10 (桌面含类别牌收集): source with fewer face-down first
+        if (w === 10) {
+            return countFacedown(move.colIdx);
+        }
+
+        // Weight 3 (列间归拢同类别): prefer target column with more same-category cards
+        if (w === 3) {
+            const dstCol = state.tableau[move.dstCol];
+            let cardCat = null;
+            if (mt === 'tableau_to_column') {
+                const srcCol = state.tableau[move.srcCol];
+                cardCat = srcCol[srcCol.length - 1].card.category;
+            } else if (mt === 'tableau_multi_to_column') {
+                cardCat = state.tableau[move.srcCol][move.startIdx].card.category;
             }
-            if (mt === 'tableau_to_column' || mt === 'tableau_multi_to_column') {
-                return 1 + countFacedown(move.srcCol);
+            if (cardCat) {
+                let sameCount = 0;
+                for (const tc of dstCol) {
+                    if (tc.faceUp && tc.card.category === cardCat) sameCount++;
+                }
+                return -sameCount;
             }
-            return 100; // hand moves
+            return 0;
         }
 
-        // Weight 2: 2b(multi gold) > 2a(single gold) > 2c(hand gold) > rest
-        if (w === 2) {
-            if (mt === 'tableau_multi_to_slot') return 0;
-            if (mt === 'tableau_gold_to_slot') return 1;
-            if (mt === 'display_gold_to_slot') return 2;
-            return 100;
-        }
-
-        // Weight 4: slot moves before column moves (don't waste a step going via column)
+        // Weight 4 (手牌放列): prefer target column with more same-category cards
         if (w === 4) {
-            if (mt === 'tableau_to_slot' || mt === 'tableau_multi_to_slot' || mt === 'display_to_slot') return 0;
-            return 1;
+            const dstCol = state.tableau[move.dstCol];
+            if (state.handDisplay.length > 0) {
+                const cardCat = state.handDisplay[state.handDisplay.length - 1].category;
+                let sameCount = 0;
+                for (const tc of dstCol) {
+                    if (tc.faceUp && tc.card.category === cardCat) sameCount++;
+                }
+                return -sameCount;
+            }
+            return 0;
         }
 
+        // All other weights: no tiebreak (random)
         return 0;
     }
 
@@ -1715,6 +1742,23 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
         const movePath = [];      // track full move objects for path output
 
         const stack = [];
+
+        function pickGreedyMove(moves) {
+            if (usePriority) {
+                moves.sort((a, b) => {
+                    const dw = getPriorityWeight(b) - getPriorityWeight(a);
+                    if (dw !== 0) return dw;
+                    return getTiebreakKey(a) - getTiebreakKey(b);
+                });
+                const topW = getPriorityWeight(moves[0]);
+                const topTB = getTiebreakKey(moves[0]);
+                let topCount = 1;
+                while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW && getTiebreakKey(moves[topCount]) === topTB) topCount++;
+                return moves[Math.floor(rng() * topCount)];
+            } else {
+                return moves[Math.floor(rng() * moves.length)];
+            }
+        }
 
         function getSortedCandidates() {
             let moves = getMoves();
@@ -1774,8 +1818,70 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             return { won, undos, mtypes, mdicts };
         }
 
+        // ════════════════════════════════════════════════════════════
+        // Phase 1: Greedy phase — pure greedy for first greedyStepLimit steps
+        // ════════════════════════════════════════════════════════════
+        const greedyUndos = [];
+        seenSinceDrag.clear();
+        let greedyPhaseOk = true;
+
+        while (state.stepsLeft > 0 && totalSteps <= MAX_SOLVER_STEPS) {
+            if (state.completedCount >= state.numCategories) {
+                // Won during greedy phase!
+                const stepsUsed = maxSteps - state.stepsLeft;
+                const ms = emptyMoveStats();
+                for (const mt of moveSequence) { const cat = classifyMove(mt); if (cat) ms[cat]++; }
+                const resultPath = [...movePath];
+                for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
+                moveSequence.length = 0;
+                movePath.length = 0;
+                return { won: true, stepsUsed, moveStats: ms, nodesExplored, movePath: resultPath };
+            }
+
+            const stepsUsed = maxSteps - state.stepsLeft;
+            if (stepsUsed >= greedyStepLimit) break; // Greedy phase done, enter backtracking
+
+            let moves = getMoves();
+            if (!moves.length) { greedyPhaseOk = false; break; }
+
+            const move = pickGreedyMove(moves);
+            greedyUndos.push(applyMove(move));
+            moveSequence.push(move.type);
+            movePath.push({...move});
+            totalSteps++;
+            nodesExplored++;
+
+            // Soft deadlock tracking
+            if (move.type === 'flip_hand') {
+                if (state.handDisplay.length > 0) {
+                    seenSinceDrag.add(state.handDisplay[state.handDisplay.length - 1]);
+                }
+                if (isSoftDeadlock()) { greedyPhaseOk = false; break; }
+            } else if (move.type !== 'recycle') {
+                seenSinceDrag.clear();
+            }
+        }
+
+        if (!greedyPhaseOk) {
+            // Stuck in greedy phase → layout invalid, undo and return null
+            for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
+            moveSequence.length = 0;
+            movePath.length = 0;
+            return null;
+        }
+
+        // ════════════════════════════════════════════════════════════
+        // Phase 2: Backtracking phase — decision tree from current state
+        // ════════════════════════════════════════════════════════════
+
         let candidates = getSortedCandidates();
-        if (!candidates.length) return null;
+        if (!candidates.length) {
+            // No moves at start of phase 2 — undo greedy and fail
+            for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
+            moveSequence.length = 0;
+            movePath.length = 0;
+            return null;
+        }
 
         let move = candidates[0];
         let undo = applyMove(move);
@@ -1795,7 +1901,10 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                     if (cat) ms[cat]++;
                 }
                 const resultPath = [...movePath];
+                // Undo backtracking stack
                 for (let i = stack.length - 1; i >= 0; i--) undoMove(stack[i].undo);
+                // Undo greedy phase
+                for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
                 moveSequence.length = 0;
                 movePath.length = 0;
                 return { won: true, stepsUsed, moveStats: ms, nodesExplored, movePath: resultPath };
@@ -1826,7 +1935,10 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                     }
                     const resultPath = [...movePath, ...playout.mdicts];
                     for (let i = playout.undos.length - 1; i >= 0; i--) undoMove(playout.undos[i]);
+                    // Undo backtracking stack
                     for (let i = stack.length - 1; i >= 0; i--) undoMove(stack[i].undo);
+                    // Undo greedy phase
+                    for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
                     moveSequence.length = 0;
                     movePath.length = 0;
                     return { won: true, stepsUsed, moveStats: ms, nodesExplored, movePath: resultPath };
@@ -1864,6 +1976,8 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
 
         // Clean up remaining stack
         for (let i = stack.length - 1; i >= 0; i--) undoMove(stack[i].undo);
+        // Undo greedy phase
+        for (let i = greedyUndos.length - 1; i >= 0; i--) undoMove(greedyUndos[i]);
 
         return null;
     }
@@ -2036,7 +2150,7 @@ function generateSolvableLayout(level) {
         }
 
         // 求解（优先策略+均等策略回溯）
-        const result = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile);
+        const result = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, false, false, false, displaySteps);
 
         if (!result.won) continue;
 
@@ -2050,7 +2164,7 @@ function generateSolvableLayout(level) {
         }
 
         // 条件2: 策略2（保守, priority only）有解且步数在 [solveStepMin, solveStepMax]
-        const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true);
+        const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true, false, displaySteps);
         if (!result2.won) continue;
         const solver2Steps = result2.stepsUsed;
         if (solver2Steps < solveStepMin || solver2Steps > solveStepMax) continue;
