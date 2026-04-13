@@ -2268,7 +2268,7 @@ function generateSolvableLayout(level) {
             solveStepMax: maxSolverSteps,
             strategyType: result.strategyType,
             movePath: result.movePath || [],
-            movePath2: result2.movePath || [],
+            movePath2: (solver2StrategyType !== 'priority-greedy') ? (result2.movePath || []) : [],
             solver2Steps,
             solver2StrategyType,
             difficultySkips,
