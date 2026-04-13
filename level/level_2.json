@@ -7,10 +7,10 @@
       "solverSteps": 58,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 4,
+        "colSingleToSlot": 5,
         "colMultiToSlot": 4,
-        "colToCol": 4,
-        "colMultiToCol": 0,
+        "colToCol": 1,
+        "colMultiToCol": 2,
         "handToSlot": 14,
         "handToCol": 9,
         "flip": 23,
@@ -19,12 +19,1128 @@
       "solver2Steps": 58,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 4,
+        "colSingleToSlot": 5,
         "colMultiToSlot": 4,
-        "colToCol": 4,
-        "colMultiToCol": 0,
+        "colToCol": 1,
+        "colMultiToCol": 2,
+        "handToSlot": 14,
+        "handToCol": 9,
+        "flip": 23,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Calendar_word",
+            "name": "Day",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Drama",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Burger",
+            "name": "Bun",
+            "image": "res/Item/burger_bun_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Animals",
+            "name": "Sheep",
+            "image": "res/Item/Hoofed_Sheep_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Burger",
+            "name": "Sauce",
+            "image": "res/Item/burger_sauce_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Burger",
+            "name": "Cheese",
+            "image": "res/Item/burger_cheese_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Landmass_word",
+            "name": "Landmass",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Comedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Animals",
+            "name": "Goat",
+            "image": "res/Item/Hoofed_Goat_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Animals": 6,
+      "Cinema_word": 6,
+      "Calendar_word": 4,
+      "Burger": 4,
+      "Book_word": 3,
+      "Landmass_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Book_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Ticket",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Calendar_word",
+        "name": "Calendar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Monkey",
+        "image": "res/Item/Animals_Monkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Horse",
+        "image": "res/Item/Animals_Horse_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Page",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Asia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Bear",
+        "image": "res/Item/Animals_Bear_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Europe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Week",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Paper",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Animals",
+        "name": "Animals",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Year",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cinema_word",
+        "name": "Cinema",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Cover",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Pig",
+        "image": "res/Item/Animals_Pig_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Africa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Month",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Popcorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Beef",
+        "image": "res/Item/burger_beef_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Burger",
+        "name": "Burger",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Western",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 60,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 3,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 17,
+        "handToCol": 6,
+        "flip": 23,
+        "recycle": 0
+      },
+      "solver2Steps": 58,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 14,
+        "handToCol": 9,
+        "flip": 23,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Book_word",
+            "name": "Paper",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Calendar_word",
+            "name": "Month",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Landmass_word",
+            "name": "Africa",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cinema_word",
+            "name": "Cinema",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Book_word",
+            "name": "Cover",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Burger",
+            "name": "Cheese",
+            "image": "res/Item/burger_cheese_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Calendar_word",
+            "name": "Calendar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Calendar_word",
+            "name": "Year",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Animals": 6,
+      "Cinema_word": 6,
+      "Calendar_word": 4,
+      "Burger": 4,
+      "Book_word": 3,
+      "Landmass_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Day",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Bun",
+        "image": "res/Item/burger_bun_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Comedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Monkey",
+        "image": "res/Item/Animals_Monkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Asia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Pig",
+        "image": "res/Item/Animals_Pig_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Sauce",
+        "image": "res/Item/burger_sauce_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Book_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Landmass_word",
+        "name": "Landmass",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Burger",
+        "name": "Burger",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Horse",
+        "image": "res/Item/Animals_Horse_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Popcorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Bear",
+        "image": "res/Item/Animals_Bear_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Beef",
+        "image": "res/Item/burger_beef_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Animals",
+        "name": "Animals",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Goat",
+        "image": "res/Item/Hoofed_Goat_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Europe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Drama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Page",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Sheep",
+        "image": "res/Item/Hoofed_Sheep_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Week",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Western",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 4,
+        "colToCol": 5,
+        "colMultiToCol": 4,
+        "handToSlot": 14,
+        "handToCol": 9,
+        "flip": 23,
+        "recycle": 0
+      },
+      "solver2Steps": 58,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 3,
         "handToSlot": 15,
         "handToCol": 8,
+        "flip": 23,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Landmass_word",
+            "name": "Asia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Popcorn",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Comedy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Animals",
+            "name": "Horse",
+            "image": "res/Item/Animals_Horse_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Book_word",
+            "name": "Paper",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Animals",
+            "name": "Sheep",
+            "image": "res/Item/Hoofed_Sheep_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Calendar_word",
+            "name": "Calendar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Burger",
+            "name": "Sauce",
+            "image": "res/Item/burger_sauce_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Animals": 6,
+      "Cinema_word": 6,
+      "Calendar_word": 4,
+      "Burger": 4,
+      "Book_word": 3,
+      "Landmass_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Goat",
+        "image": "res/Item/Hoofed_Goat_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Beef",
+        "image": "res/Item/burger_beef_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Year",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Pig",
+        "image": "res/Item/Animals_Pig_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Western",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Cheese",
+        "image": "res/Item/burger_cheese_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Burger",
+        "name": "Burger",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Book_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Animals",
+        "name": "Animals",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Monkey",
+        "image": "res/Item/Animals_Monkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Month",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Drama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Africa",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cinema_word",
+        "name": "Cinema",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Page",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Bear",
+        "image": "res/Item/Animals_Bear_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Day",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Cover",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Europe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Bun",
+        "image": "res/Item/burger_bun_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Landmass_word",
+        "name": "Landmass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Week",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 58,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 11,
+        "flip": 23,
+        "recycle": 0
+      },
+      "solver2Steps": 58,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 11,
+        "flip": 23,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Book_word",
+            "name": "Cover",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Calendar_word",
+            "name": "Day",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Popcorn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Calendar_word",
+            "name": "Calendar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Comedy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Landmass_word",
+            "name": "Africa",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Drama",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cinema_word",
+            "name": "Western",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Animals": 6,
+      "Cinema_word": 6,
+      "Calendar_word": 4,
+      "Burger": 4,
+      "Book_word": 3,
+      "Landmass_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Animals",
+        "name": "Animals",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Page",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Goat",
+        "image": "res/Item/Hoofed_Goat_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Europe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Bear",
+        "image": "res/Item/Animals_Bear_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Burger",
+        "name": "Burger",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Bun",
+        "image": "res/Item/burger_bun_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Week",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Paper",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Landmass_word",
+        "name": "Landmass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Asia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Horse",
+        "image": "res/Item/Animals_Horse_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Sauce",
+        "image": "res/Item/burger_sauce_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Year",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Book_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Beef",
+        "image": "res/Item/burger_beef_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Sheep",
+        "image": "res/Item/Hoofed_Sheep_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Pig",
+        "image": "res/Item/Animals_Pig_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Cinema_word",
+        "name": "Cinema",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Burger",
+        "name": "Cheese",
+        "image": "res/Item/burger_cheese_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Animals",
+        "name": "Monkey",
+        "image": "res/Item/Animals_Monkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Month",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 58,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 11,
+        "flip": 23,
+        "recycle": 0
+      },
+      "solver2Steps": 59,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 11,
         "flip": 23,
         "recycle": 0
       }
@@ -44,855 +1160,18 @@
           "card": {
             "type": "regular",
             "category": "Cinema_word",
-            "name": "Western",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Animals",
-            "name": "Bear",
-            "image": "res/Item/Animals_Bear_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Animals",
-            "name": "Monkey",
-            "image": "res/Item/Animals_Monkey_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Burger",
-            "name": "Bun",
-            "image": "res/Item/burger_bun_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cinema_word",
             "name": "Drama",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Landmass_word",
-            "name": "Landmass",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Page",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Week",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Animals": 6,
-      "Cinema_word": 6,
-      "Calendar_word": 4,
-      "Burger": 4,
-      "Book_word": 3,
-      "Landmass_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Africa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Paper",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Animals",
-        "name": "Animals",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Pig",
-        "image": "res/Item/Animals_Pig_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Asia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Europe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Beef",
-        "image": "res/Item/burger_beef_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Horse",
-        "image": "res/Item/Animals_Horse_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Ticket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Cheese",
-        "image": "res/Item/burger_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Book_word",
-        "name": "Book",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Day",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Sheep",
-        "image": "res/Item/Hoofed_Sheep_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Goat",
-        "image": "res/Item/Hoofed_Goat_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Cover",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Comedy",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Burger",
-        "name": "Burger",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Sauce",
-        "image": "res/Item/burger_sauce_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cinema_word",
-        "name": "Cinema",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Calendar_word",
-        "name": "Calendar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Month",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 58,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 3,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 8,
-        "flip": 23,
-        "recycle": 0
-      },
-      "solver2Steps": 58,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 3,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 8,
-        "flip": 23,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Animals",
-            "name": "Monkey",
-            "image": "res/Item/Animals_Monkey_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Page",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Year",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Calendar_word",
-            "name": "Calendar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Burger",
-            "name": "Beef",
-            "image": "res/Item/burger_beef_1.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Paper",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Landmass_word",
-            "name": "Europe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Burger",
-            "name": "Cheese",
-            "image": "res/Item/burger_cheese_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Animals",
-            "name": "Animals",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Animals": 6,
-      "Cinema_word": 6,
-      "Calendar_word": 4,
-      "Burger": 4,
-      "Book_word": 3,
-      "Landmass_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Western",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Pig",
-        "image": "res/Item/Animals_Pig_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Sauce",
-        "image": "res/Item/burger_sauce_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Book_word",
-        "name": "Book",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Cover",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cinema_word",
-        "name": "Cinema",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Popcorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Drama",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Burger",
-        "name": "Burger",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Ticket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Sheep",
-        "image": "res/Item/Hoofed_Sheep_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Asia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Africa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Bear",
-        "image": "res/Item/Animals_Bear_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Month",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Horse",
-        "image": "res/Item/Animals_Horse_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Landmass_word",
-        "name": "Landmass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Goat",
-        "image": "res/Item/Hoofed_Goat_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Week",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Comedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Bun",
-        "image": "res/Item/burger_bun_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Day",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 58,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 3,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 17,
-        "handToCol": 6,
-        "flip": 23,
-        "recycle": 0
-      },
-      "solver2Steps": 58,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 16,
-        "handToCol": 7,
-        "flip": 23,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Burger",
-            "name": "Burger",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Landmass_word",
-            "name": "Landmass",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Landmass_word",
-            "name": "Europe",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
             "category": "Cinema_word",
-            "name": "Comedy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Cover",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Calendar_word",
-            "name": "Calendar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Day",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Animals",
-            "name": "Horse",
-            "image": "res/Item/Animals_Horse_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Month",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Animals": 6,
-      "Cinema_word": 6,
-      "Calendar_word": 4,
-      "Burger": 4,
-      "Book_word": 3,
-      "Landmass_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Cheese",
-        "image": "res/Item/burger_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Western",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Monkey",
-        "image": "res/Item/Animals_Monkey_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Paper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Popcorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Africa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Sheep",
-        "image": "res/Item/Hoofed_Sheep_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Book_word",
-        "name": "Book",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Week",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Goat",
-        "image": "res/Item/Hoofed_Goat_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Drama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Page",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cinema_word",
-        "name": "Cinema",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Ticket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Bun",
-        "image": "res/Item/burger_bun_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Pig",
-        "image": "res/Item/Animals_Pig_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Bear",
-        "image": "res/Item/Animals_Bear_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Sauce",
-        "image": "res/Item/burger_sauce_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Asia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Beef",
-        "image": "res/Item/burger_beef_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Animals",
-        "name": "Animals",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 60,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 3,
-        "handToSlot": 11,
-        "handToCol": 12,
-        "flip": 23,
-        "recycle": 0
-      },
-      "solver2Steps": 58,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 3,
-        "colToCol": 1,
-        "colMultiToCol": 2,
-        "handToSlot": 15,
-        "handToCol": 8,
-        "flip": 23,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Animals",
-            "name": "Animals",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Page",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Week",
+            "name": "Western",
             "isText": true
           },
           "faceUp": false
@@ -910,287 +1189,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Cinema_word",
-            "name": "Western",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Landmass_word",
-            "name": "Landmass",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Landmass_word",
-            "name": "Asia",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Book_word",
-            "name": "Cover",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cinema_word",
-            "name": "Horror",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Animals": 6,
-      "Cinema_word": 6,
-      "Calendar_word": 4,
-      "Burger": 4,
-      "Book_word": 3,
-      "Landmass_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Paper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Bear",
-        "image": "res/Item/Animals_Bear_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Africa",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Cinema_word",
-        "name": "Cinema",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Sauce",
-        "image": "res/Item/burger_sauce_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Comedy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Month",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Burger",
-        "name": "Burger",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Day",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Calendar_word",
-        "name": "Calendar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Popcorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Sheep",
-        "image": "res/Item/Hoofed_Sheep_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Monkey",
-        "image": "res/Item/Animals_Monkey_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Year",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Cheese",
-        "image": "res/Item/burger_cheese_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Europe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Goat",
-        "image": "res/Item/Hoofed_Goat_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Animals",
-        "name": "Horse",
-        "image": "res/Item/Animals_Horse_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Drama",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Book_word",
-        "name": "Book",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Bun",
-        "image": "res/Item/burger_bun_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Ticket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Burger",
-        "name": "Beef",
-        "image": "res/Item/burger_beef_1.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 62,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 3,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 15,
-        "handToCol": 8,
-        "flip": 23,
-        "recycle": 0
-      },
-      "solver2Steps": 58,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 2,
-        "colToCol": 4,
-        "colMultiToCol": 0,
-        "handToSlot": 16,
-        "handToCol": 7,
-        "flip": 23,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Calendar_word",
-            "name": "Year",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Cinema_word",
-            "name": "Horror",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Book_word",
-            "name": "Book",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Animals",
-            "name": "Animals",
+            "category": "Burger",
+            "name": "Cheese",
+            "image": "res/Item/burger_cheese_4.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Calendar_word",
-            "name": "Calendar",
-            "isText": true
           },
           "faceUp": true
         }
@@ -1209,8 +1211,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Cinema_word",
-            "name": "Western",
+            "category": "Animals",
+            "name": "Sheep",
+            "image": "res/Item/Hoofed_Sheep_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Landmass_word",
+            "name": "Europe",
             "isText": true
           },
           "faceUp": false
@@ -1218,20 +1230,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Burger",
-            "name": "Sauce",
-            "image": "res/Item/burger_sauce_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Burger",
-            "name": "Bun",
-            "image": "res/Item/burger_bun_2.png",
-            "isText": false
+            "category": "Book_word",
+            "name": "Paper",
+            "isText": true
           },
           "faceUp": true
         }
@@ -1247,27 +1248,9 @@
     },
     "handPile": [
       {
-        "type": "regular",
+        "type": "gold",
         "category": "Calendar_word",
-        "name": "Week",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Ticket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Landmass_word",
-        "name": "Europe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Paper",
+        "name": "Calendar",
         "isText": true
       },
       {
@@ -1279,8 +1262,39 @@
       },
       {
         "type": "regular",
+        "category": "Burger",
+        "name": "Sauce",
+        "image": "res/Item/burger_sauce_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Cinema_word",
-        "name": "Comedy",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Landmass_word",
+        "name": "Africa",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Book_word",
+        "name": "Book",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Book_word",
+        "name": "Page",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Year",
         "isText": true
       },
       {
@@ -1290,53 +1304,15 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Drama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Book_word",
-        "name": "Cover",
-        "isText": true
-      },
-      {
-        "type": "regular",
+        "type": "gold",
         "category": "Burger",
-        "name": "Cheese",
-        "image": "res/Item/burger_cheese_4.png",
+        "name": "Burger",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Animals",
-        "name": "Pig",
-        "image": "res/Item/Animals_Pig_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Landmass_word",
-        "name": "Landmass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Month",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Cinema_word",
-        "name": "Cinema",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Calendar_word",
-        "name": "Day",
+        "name": "Ticket",
         "isText": true
       },
       {
@@ -1348,20 +1324,15 @@
       },
       {
         "type": "regular",
-        "category": "Book_word",
-        "name": "Page",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Cinema_word",
-        "name": "Popcorn",
-        "isText": true
+        "category": "Burger",
+        "name": "Bun",
+        "image": "res/Item/burger_bun_2.png",
+        "isText": false
       },
       {
         "type": "gold",
-        "category": "Burger",
-        "name": "Burger",
+        "category": "Animals",
+        "name": "Animals",
         "isText": false
       },
       {
@@ -1380,16 +1351,45 @@
       },
       {
         "type": "regular",
-        "category": "Landmass_word",
-        "name": "Africa",
+        "category": "Calendar_word",
+        "name": "Month",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Animals",
-        "name": "Sheep",
-        "image": "res/Item/Hoofed_Sheep_3.png",
-        "isText": false
+        "category": "Book_word",
+        "name": "Cover",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cinema_word",
+        "name": "Cinema",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Week",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Calendar_word",
+        "name": "Day",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Landmass_word",
+        "name": "Landmass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cinema_word",
+        "name": "Comedy",
+        "isText": true
       }
     ],
     "handDisplay": []

@@ -4,27 +4,27 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 63,
+      "solverSteps": 61,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 4,
-        "colMultiToCol": 2,
-        "handToSlot": 17,
-        "handToCol": 7,
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 3,
+        "colToCol": 0,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 12,
         "flip": 24,
         "recycle": 0
       },
-      "solver2Steps": 63,
+      "solver2Steps": 61,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 7,
+        "colSingleToSlot": 9,
         "colMultiToSlot": 3,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 15,
-        "handToCol": 9,
+        "colToCol": 0,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 12,
         "flip": 24,
         "recycle": 0
       }
@@ -33,9 +33,38 @@
       [
         {
           "card": {
+            "type": "gold",
+            "category": "Soap_word",
+            "name": "Soap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "regular",
-            "category": "Sky_word",
-            "name": "Sun",
+            "category": "Siren_word",
+            "name": "Alert",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Slow",
+            "name": "Slow",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soap_word",
+            "name": "Liquid",
             "isText": true
           },
           "faceUp": false
@@ -53,7 +82,283 @@
           "card": {
             "type": "regular",
             "category": "Card_word",
-            "name": "PIN",
+            "name": "Pay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Clouds",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Card_word",
+            "name": "Card",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soap_word",
+            "name": "Bar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palm_word",
+            "name": "Joints",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palm_word",
+            "name": "Carpals",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Card_word": 8,
+      "Sky_word": 8,
+      "Siren_word": 4,
+      "Palm_word": 4,
+      "Slow": 3,
+      "Soap_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Sun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Withdraw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slow",
+        "name": "Turtle",
+        "image": "res/Item/reptiles_turtle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Muscles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Transfer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Alarm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Planes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Warning",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palm_word",
+        "name": "Palm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Chip",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Siren_word",
+        "name": "Siren",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Foam",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Tendons",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sky_word",
+        "name": "Sky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Stars",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slow",
+        "name": "Sloth",
+        "image": "res/Item/Slow_Sloth_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Slow",
+        "name": "Snail",
+        "image": "res/Item/Slow_Snail_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "CVV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Eclipse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "PIN",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Birds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Debit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Rainbow",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Card_word",
+            "name": "Chip",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Card_word",
+            "name": "Credit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Siren_word",
+            "name": "Warning",
             "isText": true
           },
           "faceUp": true
@@ -71,9 +376,19 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Soap_word",
-            "name": "Soap",
+            "type": "regular",
+            "category": "Slow",
+            "name": "Snail",
+            "image": "res/Item/Slow_Snail_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Stars",
             "isText": true
           },
           "faceUp": false
@@ -81,17 +396,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Card_word",
-            "name": "Transfer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
             "category": "Sky_word",
-            "name": "Sky",
+            "name": "Sun",
             "isText": true
           },
           "faceUp": true
@@ -110,18 +416,9 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Card_word",
-            "name": "Card",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Siren_word",
-            "name": "Siren",
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Planes",
             "isText": true
           },
           "faceUp": false
@@ -130,16 +427,25 @@
           "card": {
             "type": "regular",
             "category": "Card_word",
-            "name": "Withdraw",
+            "name": "Transfer",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
+            "category": "Card_word",
+            "name": "PIN",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Palm_word",
-            "name": "Palm",
+            "name": "Muscles",
             "isText": true
           },
           "faceUp": true
@@ -158,74 +464,7 @@
       {
         "type": "regular",
         "category": "Sky_word",
-        "name": "Stars",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Chip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Joints",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Birds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Alarm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Debit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
         "name": "Clouds",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Slow",
-        "name": "Slow",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Moon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Snail",
-        "image": "res/Item/Slow_Snail_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Pay",
         "isText": true
       },
       {
@@ -236,26 +475,14 @@
       },
       {
         "type": "regular",
-        "category": "Palm_word",
-        "name": "Muscles",
+        "category": "Siren_word",
+        "name": "Alert",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "CVV",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Bar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Liquid",
+        "type": "gold",
+        "category": "Siren_word",
+        "name": "Siren",
         "isText": true
       },
       {
@@ -265,15 +492,15 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Eclipse",
+        "type": "gold",
+        "category": "Soap_word",
+        "name": "Soap",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Planes",
+        "type": "gold",
+        "category": "Card_word",
+        "name": "Card",
         "isText": true
       },
       {
@@ -285,12 +512,6 @@
       },
       {
         "type": "regular",
-        "category": "Siren_word",
-        "name": "Warning",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Soap_word",
         "name": "Foam",
         "isText": true
@@ -298,7 +519,91 @@
       {
         "type": "regular",
         "category": "Siren_word",
-        "name": "Alert",
+        "name": "Alarm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Birds",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Slow",
+        "name": "Slow",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Palm_word",
+        "name": "Palm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Liquid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Pay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Signal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Bar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Debit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Joints",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Eclipse",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sky_word",
+        "name": "Sky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "CVV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Withdraw",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Moon",
         "isText": true
       }
     ],
@@ -309,27 +614,27 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 63,
+      "solverSteps": 62,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 4,
-        "colMultiToCol": 3,
-        "handToSlot": 17,
-        "handToCol": 7,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 2,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 18,
+        "handToCol": 6,
         "flip": 24,
         "recycle": 0
       },
-      "solver2Steps": 63,
+      "solver2Steps": 62,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 5,
+        "colSingleToSlot": 6,
         "colMultiToSlot": 3,
         "colToCol": 4,
-        "colMultiToCol": 3,
-        "handToSlot": 18,
-        "handToCol": 6,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
         "flip": 24,
         "recycle": 0
       }
@@ -339,8 +644,85 @@
         {
           "card": {
             "type": "gold",
+            "category": "Sky_word",
+            "name": "Sky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Card_word",
-            "name": "Card",
+            "name": "Chip",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slow",
+            "name": "Sloth",
+            "image": "res/Item/Slow_Sloth_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Card_word",
+            "name": "Credit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Clouds",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Siren_word",
+            "name": "Warning",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Card_word",
+            "name": "Transfer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Siren_word",
+            "name": "Alert",
             "isText": true
           },
           "faceUp": false
@@ -356,86 +738,9 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Rainbow",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Siren_word",
-            "name": "Alert",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Planes",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Sun",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
-            "category": "Siren_word",
-            "name": "Siren",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Slow",
-            "name": "Slow",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Birds",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Slow",
-            "name": "Snail",
-            "image": "res/Item/Slow_Snail_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Siren_word",
-            "name": "Signal",
+            "category": "Soap_word",
+            "name": "Soap",
             "isText": true
           },
           "faceUp": false
@@ -444,7 +749,7 @@
           "card": {
             "type": "regular",
             "category": "Sky_word",
-            "name": "Moon",
+            "name": "Stars",
             "isText": true
           },
           "faceUp": true
@@ -462,36 +767,6 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Sky_word",
-        "name": "Stars",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Bar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Alarm",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sky_word",
-        "name": "Sky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Muscles",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Slow",
         "name": "Turtle",
         "image": "res/Item/reptiles_turtle_7.png",
@@ -499,26 +774,45 @@
       },
       {
         "type": "regular",
-        "category": "Card_word",
-        "name": "Withdraw",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Chip",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soap_word",
-        "name": "Soap",
-        "isText": true
+        "category": "Slow",
+        "name": "Snail",
+        "image": "res/Item/Slow_Snail_2.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Sky_word",
-        "name": "Clouds",
+        "name": "Sun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Liquid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Pay",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Card_word",
+        "name": "Card",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Tendons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "PIN",
         "isText": true
       },
       {
@@ -530,51 +824,38 @@
       {
         "type": "regular",
         "category": "Card_word",
-        "name": "Debit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Warning",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
         "name": "CVV",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Card_word",
-        "name": "Pay",
+        "category": "Sky_word",
+        "name": "Planes",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sky_word",
-        "name": "Eclipse",
+        "category": "Siren_word",
+        "name": "Signal",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Palm_word",
-        "name": "Palm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Tendons",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Slow",
-        "name": "Sloth",
-        "image": "res/Item/Slow_Sloth_1.png",
+        "name": "Slow",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Alarm",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Siren_word",
+        "name": "Siren",
+        "isText": true
       },
       {
         "type": "regular",
@@ -585,25 +866,49 @@
       {
         "type": "regular",
         "category": "Card_word",
-        "name": "Credit",
+        "name": "Withdraw",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Card_word",
-        "name": "PIN",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Transfer",
+        "category": "Sky_word",
+        "name": "Birds",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Soap_word",
-        "name": "Liquid",
+        "name": "Bar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Eclipse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Muscles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Rainbow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palm_word",
+        "name": "Palm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Debit",
         "isText": true
       }
     ],
@@ -614,61 +919,32 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 62,
+      "solverSteps": 61,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 10,
+        "colSingleToSlot": 6,
         "colMultiToSlot": 4,
-        "colToCol": 0,
-        "colMultiToCol": 0,
-        "handToSlot": 14,
-        "handToCol": 10,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 62,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 10,
+        "colSingleToSlot": 7,
         "colMultiToSlot": 4,
-        "colToCol": 0,
-        "colMultiToCol": 0,
-        "handToSlot": 12,
-        "handToCol": 12,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 14,
+        "handToCol": 10,
         "flip": 24,
         "recycle": 0
       }
     },
     "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Rainbow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Card_word",
-            "name": "Withdraw",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Moon",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
       [
         {
           "card": {
@@ -690,18 +966,9 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Card_word",
-            "name": "Card",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
-            "category": "Palm_word",
-            "name": "Carpals",
+            "category": "Sky_word",
+            "name": "Birds",
             "isText": true
           },
           "faceUp": true
@@ -712,11 +979,41 @@
           "card": {
             "type": "regular",
             "category": "Sky_word",
-            "name": "Stars",
+            "name": "Planes",
             "isText": true
           },
           "faceUp": false
         },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Card_word",
+            "name": "Card",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slow",
+            "name": "Snail",
+            "image": "res/Item/Slow_Snail_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Siren_word",
+            "name": "Siren",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
@@ -728,10 +1025,11 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Sky_word",
-            "name": "Sky",
-            "isText": true
+            "type": "regular",
+            "category": "Slow",
+            "name": "Sloth",
+            "image": "res/Item/Slow_Sloth_1.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -739,7 +1037,7 @@
           "card": {
             "type": "regular",
             "category": "Palm_word",
-            "name": "Tendons",
+            "name": "Carpals",
             "isText": true
           },
           "faceUp": false
@@ -748,7 +1046,16 @@
           "card": {
             "type": "regular",
             "category": "Card_word",
-            "name": "PIN",
+            "name": "Debit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palm_word",
+            "name": "Muscles",
             "isText": true
           },
           "faceUp": true
@@ -772,56 +1079,8 @@
       },
       {
         "type": "regular",
-        "category": "Palm_word",
-        "name": "Muscles",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Card_word",
         "name": "Transfer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soap_word",
-        "name": "Soap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Liquid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Clouds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Planes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Debit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Bar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Alert",
         "isText": true
       },
       {
@@ -832,53 +1091,32 @@
       },
       {
         "type": "regular",
-        "category": "Slow",
-        "name": "Turtle",
-        "image": "res/Item/reptiles_turtle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Warning",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Sloth",
-        "image": "res/Item/Slow_Sloth_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Card_word",
-        "name": "Credit",
+        "name": "Withdraw",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Snail",
-        "image": "res/Item/Slow_Snail_2.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Sky_word",
-        "name": "Sun",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Foam",
+        "name": "Moon",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Siren_word",
-        "name": "Siren",
+        "category": "Sky_word",
+        "name": "Sky",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soap_word",
+        "name": "Soap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Pay",
         "isText": true
       },
       {
@@ -889,8 +1127,14 @@
       },
       {
         "type": "regular",
-        "category": "Card_word",
-        "name": "Pay",
+        "category": "Sky_word",
+        "name": "Sun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Alert",
         "isText": true
       },
       {
@@ -907,252 +1151,20 @@
       },
       {
         "type": "regular",
-        "category": "Sky_word",
-        "name": "Birds",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 61,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 2,
-        "handToSlot": 12,
-        "handToCol": 12,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 61,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 2,
-        "handToSlot": 12,
-        "handToCol": 12,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Card_word",
-            "name": "Withdraw",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Siren_word",
-            "name": "Alert",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Moon",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Planes",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Palm_word",
-            "name": "Palm",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soap_word",
-            "name": "Bar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Slow",
-            "name": "Slow",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Sky_word",
-            "name": "Sky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Clouds",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palm_word",
-            "name": "Joints",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Birds",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Card_word",
-            "name": "CVV",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Card_word": 8,
-      "Sky_word": 8,
-      "Siren_word": 4,
-      "Palm_word": 4,
-      "Slow": 3,
-      "Soap_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Debit",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Card_word",
         "name": "Credit",
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Siren_word",
-        "name": "Siren",
-        "isText": true
-      },
-      {
         "type": "regular",
-        "category": "Sky_word",
-        "name": "Sun",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soap_word",
-        "name": "Soap",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Card_word",
-        "name": "Card",
+        "name": "PIN",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Snail",
-        "image": "res/Item/Slow_Snail_2.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Sky_word",
         "name": "Stars",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Tendons",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Pay",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Signal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Sloth",
-        "image": "res/Item/Slow_Sloth_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Warning",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Muscles",
         "isText": true
       },
       {
@@ -1164,30 +1176,6 @@
       },
       {
         "type": "regular",
-        "category": "Siren_word",
-        "name": "Alarm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Transfer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Chip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Eclipse",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Soap_word",
         "name": "Liquid",
         "isText": true
@@ -1195,7 +1183,7 @@
       {
         "type": "regular",
         "category": "Soap_word",
-        "name": "Foam",
+        "name": "Bar",
         "isText": true
       },
       {
@@ -1206,14 +1194,26 @@
       },
       {
         "type": "regular",
-        "category": "Palm_word",
-        "name": "Carpals",
+        "category": "Siren_word",
+        "name": "Warning",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Card_word",
-        "name": "PIN",
+        "category": "Sky_word",
+        "name": "Clouds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Foam",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palm_word",
+        "name": "Tendons",
         "isText": true
       }
     ],
@@ -1227,24 +1227,24 @@
       "solverSteps": 61,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 11,
-        "handToCol": 13,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 3,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 15,
+        "handToCol": 9,
         "flip": 24,
         "recycle": 0
       },
-      "solver2Steps": 63,
+      "solver2Steps": 61,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 5,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 11,
-        "handToCol": 13,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 3,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 15,
+        "handToCol": 9,
         "flip": 24,
         "recycle": 0
       }
@@ -1253,18 +1253,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Slow",
-            "name": "Slow",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
-            "category": "Card_word",
-            "name": "Transfer",
+            "category": "Soap_word",
+            "name": "Bar",
             "isText": true
           },
           "faceUp": false
@@ -1272,10 +1263,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Slow",
-            "name": "Turtle",
-            "image": "res/Item/reptiles_turtle_7.png",
-            "isText": false
+            "category": "Soap_word",
+            "name": "Liquid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sky_word",
+            "name": "Clouds",
+            "isText": true
           },
           "faceUp": true
         }
@@ -1285,16 +1284,7 @@
           "card": {
             "type": "regular",
             "category": "Sky_word",
-            "name": "Moon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Card_word",
-            "name": "Withdraw",
+            "name": "Rainbow",
             "isText": true
           },
           "faceUp": false
@@ -1311,8 +1301,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sky_word",
-            "name": "Eclipse",
+            "category": "Card_word",
+            "name": "Transfer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Card_word",
+            "name": "Card",
             "isText": true
           },
           "faceUp": true
@@ -1321,9 +1320,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Sky_word",
-            "name": "Sky",
+            "type": "regular",
+            "category": "Palm_word",
+            "name": "Joints",
             "isText": true
           },
           "faceUp": false
@@ -1331,9 +1330,17 @@
         {
           "card": {
             "type": "regular",
+            "category": "Siren_word",
+            "name": "Alert",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Slow",
-            "name": "Snail",
-            "image": "res/Item/Slow_Snail_2.png",
+            "name": "Slow",
             "isText": false
           },
           "faceUp": false
@@ -1341,8 +1348,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Card_word",
-            "name": "CVV",
+            "category": "Siren_word",
+            "name": "Alarm",
             "isText": true
           },
           "faceUp": false
@@ -1350,17 +1357,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sky_word",
-            "name": "Stars",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sky_word",
-            "name": "Sun",
+            "category": "Palm_word",
+            "name": "Muscles",
             "isText": true
           },
           "faceUp": true
@@ -1377,9 +1375,53 @@
     },
     "handPile": [
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Slow",
+        "name": "Sloth",
+        "image": "res/Item/Slow_Sloth_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Card_word",
-        "name": "Card",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sky_word",
+        "name": "Sky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "CVV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slow",
+        "name": "Turtle",
+        "image": "res/Item/reptiles_turtle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Eclipse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Withdraw",
         "isText": true
       },
       {
@@ -1390,8 +1432,69 @@
       },
       {
         "type": "regular",
+        "category": "Sky_word",
+        "name": "Stars",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Siren_word",
         "name": "Signal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Birds",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Sun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soap_word",
+        "name": "Foam",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sky_word",
+        "name": "Planes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Chip",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slow",
+        "name": "Snail",
+        "image": "res/Item/Slow_Snail_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Siren_word",
+        "name": "Warning",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soap_word",
+        "name": "Soap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Card_word",
+        "name": "Debit",
         "isText": true
       },
       {
@@ -1402,8 +1505,8 @@
       },
       {
         "type": "regular",
-        "category": "Palm_word",
-        "name": "Joints",
+        "category": "Card_word",
+        "name": "Pay",
         "isText": true
       },
       {
@@ -1417,109 +1520,6 @@
         "category": "Card_word",
         "name": "PIN",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Alarm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Birds",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Bar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Planes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Warning",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Rainbow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Debit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Pay",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Siren_word",
-        "name": "Alert",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Foam",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palm_word",
-        "name": "Muscles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soap_word",
-        "name": "Liquid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Card_word",
-        "name": "Chip",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sky_word",
-        "name": "Clouds",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soap_word",
-        "name": "Soap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slow",
-        "name": "Sloth",
-        "image": "res/Item/Slow_Sloth_1.png",
-        "isText": false
       }
     ],
     "handDisplay": []

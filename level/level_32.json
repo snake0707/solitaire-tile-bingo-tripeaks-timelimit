@@ -4,27 +4,27 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 63,
+      "solverSteps": 62,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 3,
-        "colToCol": 4,
-        "colMultiToCol": 1,
-        "handToSlot": 20,
-        "handToCol": 4,
+        "colSingleToSlot": 2,
+        "colMultiToSlot": 4,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 14,
+        "handToCol": 10,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 63,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 3,
-        "colToCol": 4,
-        "colMultiToCol": 1,
-        "handToSlot": 20,
-        "handToCol": 4,
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 12,
+        "handToCol": 12,
         "flip": 24,
         "recycle": 0
       }
@@ -34,75 +34,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fans_word",
-            "name": "Blow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fall_word",
-            "name": "Hayride",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fans_word",
-            "name": "Whirl",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Eats",
-            "name": "Eats",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Signpost_word",
             "name": "Route",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fall_word",
-            "name": "Acorn",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Signpost_word",
-            "name": "Signpost",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Consent",
             "isText": true
           },
           "faceUp": false
@@ -119,17 +52,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fall_word",
-            "name": "Pumpkin",
+            "category": "Moon_word",
+            "name": "Full",
             "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
             "category": "Fall_word",
-            "name": "Fall",
+            "name": "Hayride",
             "isText": true
           },
           "faceUp": false
@@ -137,8 +72,76 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fall_word",
-            "name": "Leaves",
+            "category": "Eats",
+            "name": "Taco",
+            "image": "res/Item/eats_taco_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Yield",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Okay",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Fries",
+            "image": "res/Item/eats_fries_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Burger",
+            "image": "res/Item/eats_burger_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "No entry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Consent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
             "isText": true
           },
           "faceUp": true
@@ -157,19 +160,31 @@
       {
         "type": "regular",
         "category": "Signpost_word",
-        "name": "Yield",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Distance",
+        "name": "Path",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Fans_word",
-        "name": "Fans",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Eats",
+        "name": "Eats",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Signpost_word",
+        "name": "Signpost",
         "isText": true
       },
       {
@@ -181,14 +196,33 @@
       },
       {
         "type": "regular",
+        "category": "Eats",
+        "name": "Sandwich",
+        "image": "res/Item/eats_sandwich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Moon_word",
         "name": "Crescent",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Moon_word",
-        "name": "Full",
+        "name": "Moon",
         "isText": true
       },
       {
@@ -200,21 +234,262 @@
       {
         "type": "regular",
         "category": "Signpost_word",
-        "name": "No entry",
+        "name": "Arrow",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Taco",
-        "image": "res/Item/eats_taco_2.png",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Eats",
         "name": "Hot dog",
         "image": "res/Item/eats_hotdog_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Rotate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Kebab",
+        "image": "res/Item/eats_kebab_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Pizza",
+        "image": "res/Item/eats_pizza_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Gibbous",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Whirl",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fall_word",
+        "name": "Fall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "No entry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Hot dog",
+            "image": "res/Item/eats_hotdog_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "New",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Signpost_word",
+            "name": "Signpost",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Blow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Pumpkin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Burrito",
+            "image": "res/Item/eats_burrito_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Gibbous",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Acorn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Full",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Burger",
+            "image": "res/Item/eats_burger_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Eats": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Sandwich",
+        "image": "res/Item/eats_sandwich_6.png",
         "isText": false
       },
       {
@@ -231,14 +506,14 @@
       },
       {
         "type": "regular",
-        "category": "Moon_word",
-        "name": "Gibbous",
+        "category": "Signpost_word",
+        "name": "Yield",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "Course",
+        "category": "OK sign_word",
+        "name": "Consent",
         "isText": true
       },
       {
@@ -249,15 +524,10 @@
       },
       {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "Path",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "OK sign_word",
-        "name": "OK sign",
-        "isText": true
+        "category": "Eats",
+        "name": "Fries",
+        "image": "res/Item/eats_fries_3.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -267,10 +537,39 @@
       },
       {
         "type": "regular",
-        "category": "Eats",
-        "name": "Sandwich",
-        "image": "res/Item/eats_sandwich_6.png",
-        "isText": false
+        "category": "Signpost_word",
+        "name": "Lane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Crescent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Route",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fall_word",
+        "name": "Fall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
+        "isText": true
       },
       {
         "type": "regular",
@@ -281,22 +580,33 @@
       {
         "type": "regular",
         "category": "Eats",
-        "name": "Burger",
-        "image": "res/Item/eats_burger_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Fries",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
         "name": "Kebab",
         "image": "res/Item/eats_kebab_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Taco",
+        "image": "res/Item/eats_taco_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Eats",
+        "name": "Eats",
         "isText": false
       },
       {
@@ -314,27 +624,27 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 61,
+      "solverSteps": 63,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 3,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 14,
-        "handToCol": 10,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 16,
+        "handToCol": 8,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 61,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 5,
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
         "colToCol": 2,
         "colMultiToCol": 1,
-        "handToSlot": 10,
-        "handToCol": 14,
+        "handToSlot": 16,
+        "handToCol": 8,
         "flip": 24,
         "recycle": 0
       }
@@ -344,8 +654,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Signpost_word",
-            "name": "Distance",
+            "category": "Moon_word",
+            "name": "New",
             "isText": true
           },
           "faceUp": false
@@ -362,58 +672,29 @@
         {
           "card": {
             "type": "regular",
+            "category": "Fall_word",
+            "name": "Acorn",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
             "category": "Eats",
-            "name": "Hot dog",
-            "image": "res/Item/eats_hotdog_8.png",
+            "name": "Fries",
+            "image": "res/Item/eats_fries_3.png",
             "isText": false
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Signpost_word",
-            "name": "Path",
-            "isText": true
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Moon_word",
-            "name": "Full",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fans_word",
-            "name": "Rotate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
             "category": "Fall_word",
-            "name": "Fall",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Yes",
+            "name": "Leaves",
             "isText": true
           },
           "faceUp": false
@@ -431,8 +712,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Moon_word",
-            "name": "New",
+            "category": "Signpost_word",
+            "name": "Arrow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Lane",
             "isText": true
           },
           "faceUp": false
@@ -440,8 +732,17 @@
         {
           "card": {
             "type": "regular",
+            "category": "Signpost_word",
+            "name": "Yield",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Fall_word",
-            "name": "Pumpkin",
+            "name": "Fall",
             "isText": true
           },
           "faceUp": false
@@ -449,9 +750,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fall_word",
-            "name": "Leaves",
+            "category": "Signpost_word",
+            "name": "Distance",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Hot dog",
+            "image": "res/Item/eats_hotdog_8.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -467,33 +778,85 @@
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Moon_word",
-        "name": "Moon",
+        "type": "regular",
+        "category": "Eats",
+        "name": "Sandwich",
+        "image": "res/Item/eats_sandwich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Yes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Moon_word",
-        "name": "Crescent",
+        "name": "Gibbous",
         "isText": true
       },
       {
         "type": "regular",
         "category": "OK sign_word",
-        "name": "Okay",
+        "name": "Consent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Burger",
+        "image": "res/Item/eats_burger_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "No entry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Pizza",
+        "image": "res/Item/eats_pizza_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Signpost_word",
-        "name": "Lane",
+        "name": "Path",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Burrito",
+        "image": "res/Item/eats_burrito_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Whirl",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Signpost_word",
-        "name": "Course",
+        "name": "Route",
         "isText": true
       },
       {
@@ -511,14 +874,228 @@
       },
       {
         "type": "regular",
-        "category": "Fall_word",
-        "name": "Acorn",
+        "category": "Moon_word",
+        "name": "Crescent",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Fans_word",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Signpost_word",
+        "name": "Signpost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Rotate",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Moon_word",
-        "name": "Gibbous",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Hayride",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 70,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 64,
+      "moveStats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 61,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 6,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Burrito",
+            "image": "res/Item/eats_burrito_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fall_word",
+            "name": "Pumpkin",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Distance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Moon_word",
+            "name": "Crescent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Kebab",
+            "image": "res/Item/eats_kebab_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Lane",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Course",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Yield",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Moon_word",
+            "name": "Moon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Signpost_word",
+            "name": "Route",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Eats": 8,
+      "Signpost_word": 8,
+      "Moon_word": 4,
+      "Fall_word": 4,
+      "OK sign_word": 3,
+      "Fans_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Arrow",
         "isText": true
       },
       {
@@ -536,33 +1113,10 @@
       },
       {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "Yield",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "OK sign_word",
-        "name": "Consent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Blow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Route",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Arrow",
-        "isText": true
+        "category": "Eats",
+        "name": "Fries",
+        "image": "res/Item/eats_fries_3.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -572,9 +1126,9 @@
         "isText": false
       },
       {
-        "type": "gold",
-        "category": "OK sign_word",
-        "name": "OK sign",
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Path",
         "isText": true
       },
       {
@@ -585,252 +1139,32 @@
       },
       {
         "type": "regular",
-        "category": "Eats",
-        "name": "Burger",
-        "image": "res/Item/eats_burger_4.png",
-        "isText": false
+        "category": "Fans_word",
+        "name": "Rotate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Gibbous",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Fans_word",
-        "name": "Whirl",
+        "name": "Blow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Signpost_word",
         "name": "No entry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Fries",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Burrito",
-        "image": "res/Item/eats_burrito_7.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 63,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 5,
-        "colToCol": 2,
-        "colMultiToCol": 4,
-        "handToSlot": 10,
-        "handToCol": 14,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 61,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 3,
-        "colMultiToSlot": 6,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 12,
-        "handToCol": 12,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Moon_word",
-            "name": "Full",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Moon_word",
-            "name": "Crescent",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Signpost_word",
-            "name": "Yield",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fans_word",
-            "name": "Whirl",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Okay",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Taco",
-            "image": "res/Item/eats_taco_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Hot dog",
-            "image": "res/Item/eats_hotdog_8.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Consent",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Moon_word",
-            "name": "Gibbous",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Yes",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fans_word",
-            "name": "Rotate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fall_word",
-            "name": "Hayride",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Eats": 8,
-      "Signpost_word": 8,
-      "Moon_word": 4,
-      "Fall_word": 4,
-      "OK sign_word": 3,
-      "Fans_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Pizza",
-        "image": "res/Item/eats_pizza_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Acorn",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Moon_word",
-        "name": "Moon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Burger",
-        "image": "res/Item/eats_burger_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Arrow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Fries",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Eats",
-        "name": "Eats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Distance",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fans_word",
-        "name": "Fans",
         "isText": true
       },
       {
@@ -841,65 +1175,53 @@
       },
       {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "No entry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Kebab",
-        "image": "res/Item/eats_kebab_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Leaves",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Pumpkin",
+        "category": "Moon_word",
+        "name": "Full",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Signpost_word",
-        "name": "Signpost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Blow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Lane",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Eats",
-        "name": "Burrito",
-        "image": "res/Item/eats_burrito_7.png",
+        "name": "Eats",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "Course",
+        "category": "Eats",
+        "name": "Burger",
+        "image": "res/Item/eats_burger_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Okay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "OK sign_word",
+        "name": "Consent",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Eats",
-        "name": "Sandwich",
-        "image": "res/Item/eats_sandwich_6.png",
+        "name": "Taco",
+        "image": "res/Item/eats_taco_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Hot dog",
+        "image": "res/Item/eats_hotdog_8.png",
         "isText": false
       },
       {
@@ -909,21 +1231,9 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "OK sign_word",
-        "name": "OK sign",
-        "isText": true
-      },
-      {
         "type": "regular",
-        "category": "Signpost_word",
-        "name": "Route",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Path",
+        "category": "Fall_word",
+        "name": "Acorn",
         "isText": true
       }
     ],
@@ -934,27 +1244,27 @@
       "maxSlots": 3,
       "maxSteps": 70,
       "strategyType": "priority",
-      "solverSteps": 62,
+      "solverSteps": 61,
       "solverMaxSteps": 64,
       "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 3,
-        "colToCol": 2,
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 1,
         "colMultiToCol": 2,
-        "handToSlot": 16,
-        "handToCol": 8,
+        "handToSlot": 14,
+        "handToCol": 10,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 61,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 3,
-        "colToCol": 0,
-        "colMultiToCol": 0,
-        "handToSlot": 16,
-        "handToCol": 8,
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 1,
+        "colMultiToCol": 2,
+        "handToSlot": 14,
+        "handToCol": 10,
         "flip": 24,
         "recycle": 0
       }
@@ -964,8 +1274,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fall_word",
-            "name": "Leaves",
+            "category": "Signpost_word",
+            "name": "Lane",
             "isText": true
           },
           "faceUp": false
@@ -973,18 +1283,20 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fall_word",
-            "name": "Hayride",
-            "isText": true
+            "category": "Eats",
+            "name": "Kebab",
+            "image": "res/Item/eats_kebab_5.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "OK sign_word",
-            "name": "Okay",
-            "isText": true
+            "category": "Eats",
+            "name": "Burger",
+            "image": "res/Item/eats_burger_4.png",
+            "isText": false
           },
           "faceUp": true
         }
@@ -993,18 +1305,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Eats",
-            "name": "Hot dog",
-            "image": "res/Item/eats_hotdog_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Signpost_word",
-            "name": "Distance",
+            "category": "Moon_word",
+            "name": "New",
             "isText": true
           },
           "faceUp": false
@@ -1012,9 +1314,19 @@
         {
           "card": {
             "type": "gold",
-            "category": "Fall_word",
-            "name": "Fall",
+            "category": "Signpost_word",
+            "name": "Signpost",
             "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Eats",
+            "name": "Hot dog",
+            "image": "res/Item/eats_hotdog_8.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1033,7 +1345,16 @@
           "card": {
             "type": "regular",
             "category": "Signpost_word",
-            "name": "Course",
+            "name": "Arrow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "OK sign_word",
+            "name": "Yes",
             "isText": true
           },
           "faceUp": false
@@ -1042,7 +1363,7 @@
           "card": {
             "type": "regular",
             "category": "Fans_word",
-            "name": "Rotate",
+            "name": "Blow",
             "isText": true
           },
           "faceUp": false
@@ -1050,29 +1371,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Eats",
-            "name": "Pizza",
-            "image": "res/Item/eats_pizza_1.png",
-            "isText": false
+            "category": "Fans_word",
+            "name": "Whirl",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Eats",
-            "name": "Burger",
-            "image": "res/Item/eats_burger_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Eats",
-            "name": "Eats",
-            "isText": false
+            "category": "Fall_word",
+            "name": "Hayride",
+            "isText": true
           },
           "faceUp": true
         }
@@ -1089,14 +1399,64 @@
     "handPile": [
       {
         "type": "regular",
+        "category": "Eats",
+        "name": "Fries",
+        "image": "res/Item/eats_fries_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Course",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Signpost_word",
         "name": "Route",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Eats",
+        "name": "Burrito",
+        "image": "res/Item/eats_burrito_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
         "category": "Moon_word",
-        "name": "Full",
+        "name": "Moon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fans_word",
+        "name": "Fans",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "OK sign_word",
+        "name": "OK sign",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "Distance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Pumpkin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Leaves",
         "isText": true
       },
       {
@@ -1115,305 +1475,7 @@
       {
         "type": "regular",
         "category": "OK sign_word",
-        "name": "Yes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Moon_word",
-        "name": "Crescent",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fans_word",
-        "name": "Fans",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Acorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Lane",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Arrow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Blow",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Signpost_word",
-        "name": "Signpost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "No entry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Burrito",
-        "image": "res/Item/eats_burrito_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Moon_word",
-        "name": "Moon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Whirl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "OK sign_word",
-        "name": "Consent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Moon_word",
-        "name": "New",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Sandwich",
-        "image": "res/Item/eats_sandwich_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Fries",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Pumpkin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "OK sign_word",
-        "name": "OK sign",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Yield",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Kebab",
-        "image": "res/Item/eats_kebab_5.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 70,
-      "strategyType": "priority",
-      "solverSteps": 63,
-      "solverMaxSteps": 64,
-      "moveStats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 3,
-        "handToSlot": 13,
-        "handToCol": 11,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 60,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Burger",
-            "image": "res/Item/eats_burger_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Taco",
-            "image": "res/Item/eats_taco_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "OK sign_word",
-            "name": "Consent",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Moon_word",
-            "name": "New",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Signpost_word",
-            "name": "Arrow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Moon_word",
-            "name": "Crescent",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fans_word",
-            "name": "Blow",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Signpost_word",
-            "name": "Course",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Moon_word",
-            "name": "Moon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Eats",
-            "name": "Sandwich",
-            "image": "res/Item/eats_sandwich_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fall_word",
-            "name": "Acorn",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fall_word",
-            "name": "Fall",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Eats": 8,
-      "Signpost_word": 8,
-      "Moon_word": 4,
-      "Fall_word": 4,
-      "OK sign_word": 3,
-      "Fans_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Kebab",
-        "image": "res/Item/eats_kebab_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Leaves",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Hayride",
+        "name": "Okay",
         "isText": true
       },
       {
@@ -1424,113 +1486,14 @@
       },
       {
         "type": "regular",
-        "category": "Moon_word",
-        "name": "Gibbous",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Burrito",
-        "image": "res/Item/eats_burrito_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Path",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Hot dog",
-        "image": "res/Item/eats_hotdog_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Eats",
-        "name": "Fries",
-        "image": "res/Item/eats_fries_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "No entry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Distance",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Rotate",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "OK sign_word",
-        "name": "Okay",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fans_word",
-        "name": "Fans",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Lane",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fans_word",
-        "name": "Whirl",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fall_word",
-        "name": "Pumpkin",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "OK sign_word",
-        "name": "OK sign",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Yield",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Signpost_word",
-        "name": "Route",
+        "name": "Consent",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Moon_word",
-        "name": "Full",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Signpost_word",
-        "name": "Signpost",
+        "name": "Crescent",
         "isText": true
       },
       {
@@ -1542,8 +1505,45 @@
       },
       {
         "type": "regular",
-        "category": "OK sign_word",
-        "name": "Yes",
+        "category": "Signpost_word",
+        "name": "Yield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Signpost_word",
+        "name": "No entry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Eats",
+        "name": "Sandwich",
+        "image": "res/Item/eats_sandwich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Moon_word",
+        "name": "Full",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fall_word",
+        "name": "Acorn",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fall_word",
+        "name": "Fall",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fans_word",
+        "name": "Rotate",
         "isText": true
       }
     ],

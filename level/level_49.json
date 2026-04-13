@@ -4,1557 +4,27 @@
       "maxSlots": 4,
       "maxSteps": 123,
       "strategyType": "priority",
-      "solverSteps": 122,
+      "solverSteps": 125,
       "solverMaxSteps": 126,
       "moveStats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 7,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 25,
-        "handToCol": 17,
-        "flip": 53,
-        "recycle": 1
-      },
-      "solver2Steps": 124,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 8,
-        "colToCol": 5,
-        "colMultiToCol": 2,
-        "handToSlot": 23,
-        "handToCol": 19,
-        "flip": 55,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Today",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Rifle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Glock",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Hair",
-            "image": "res/Item/Head_Hair_1.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Prairie",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Anxiety",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Field",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Jute",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Altar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Face",
-            "image": "res/Item/Head_Face_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Dread",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Silk",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Packer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Idol",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Sorter",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Current",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Secret_word",
-            "name": "Secret",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Pistol",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Nylon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Ritual",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Height",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Steppe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Grass_word": 8,
-      "Gun_word": 8,
-      "Fears_word": 8,
-      "Rope_word": 6,
-      "Loader_word": 6,
-      "Head": 4,
-      "Masonry_word": 4,
-      "Paganism_word": 4,
-      "Present_word": 3,
-      "Secret_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Head",
-        "name": "Head",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Present_word",
-        "name": "Now",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Skull",
-        "image": "res/Item/Head_Skull_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Cotton",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Loader_word",
-        "name": "Loader",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Revolver",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Masonry_word",
-        "name": "Masonry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Walther",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Mortar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Pallet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Brain",
-        "image": "res/Item/Head_Brain_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Clowns",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Word",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Fright",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Agent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Pasture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Picker",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Rayon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Mauser",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rope_word",
-        "name": "Rope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Rebar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Present_word",
-        "name": "Present",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fears_word",
-        "name": "Fears",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Garden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Darkness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Snakes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Box",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Turf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Totem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Crate",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Paganism_word",
-        "name": "Paganism",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Meadow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Granite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Scaffold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Kevlar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Gun_word",
-        "name": "Gun",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Shotgun",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Code",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Grass_word",
-        "name": "Grass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Lawn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Barrel",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 123,
-      "strategyType": "priority",
-      "solverSteps": 120,
-      "solverMaxSteps": 126,
-      "moveStats": {
-        "colSingleToSlot": 11,
+        "colSingleToSlot": 13,
         "colMultiToSlot": 6,
-        "colToCol": 4,
+        "colToCol": 6,
         "colMultiToCol": 2,
-        "handToSlot": 21,
-        "handToCol": 21,
-        "flip": 54,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 55,
         "recycle": 1
       },
       "solver2Steps": 125,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 16,
-        "colMultiToSlot": 6,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Secret_word",
-            "name": "Secret",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Anxiety",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Hair",
-            "image": "res/Item/Head_Hair_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Paganism_word",
-            "name": "Paganism",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Loader_word",
-            "name": "Loader",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Current",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Pallet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Turf",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Darkness",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Ritual",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Barrel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Walther",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Gun_word",
-            "name": "Gun",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Height",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Mauser",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Packer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Today",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fears_word",
-            "name": "Fears",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Nylon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Shotgun",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Now",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Lawn",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Grass_word": 8,
-      "Gun_word": 8,
-      "Fears_word": 8,
-      "Rope_word": 6,
-      "Loader_word": 6,
-      "Head": 4,
-      "Masonry_word": 4,
-      "Paganism_word": 4,
-      "Present_word": 3,
-      "Secret_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Head",
-        "name": "Head",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Steppe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Fright",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Picker",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rope_word",
-        "name": "Rope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Pistol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Garden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Skull",
-        "image": "res/Item/Head_Skull_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Altar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Totem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Face",
-        "image": "res/Item/Head_Face_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Mortar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Brain",
-        "image": "res/Item/Head_Brain_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Meadow",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Present_word",
-        "name": "Present",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Silk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Field",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Idol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Cotton",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Grass_word",
-        "name": "Grass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Pasture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Agent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Word",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Masonry_word",
-        "name": "Masonry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Scaffold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Code",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Clowns",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Jute",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Dread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Crate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Sorter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Rayon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Revolver",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Box",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Prairie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Glock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Snakes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Rebar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Granite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Kevlar",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 123,
-      "strategyType": "priority",
-      "solverSteps": 125,
-      "solverMaxSteps": 126,
-      "moveStats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 6,
-        "colToCol": 3,
-        "colMultiToCol": 5,
-        "handToSlot": 32,
-        "handToCol": 10,
-        "flip": 57,
-        "recycle": 1
-      },
-      "solver2Steps": 120,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 3,
-        "handToSlot": 24,
-        "handToCol": 18,
-        "flip": 52,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Rayon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Rebar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Altar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Now",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Secret_word",
-            "name": "Word",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fears_word",
-            "name": "Fears",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Jute",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Sorter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Fright",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Brain",
-            "image": "res/Item/Head_Brain_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Crate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Picker",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Grass_word",
-            "name": "Grass",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Prairie",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Lawn",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Barrel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Gun_word",
-            "name": "Gun",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Present_word",
-            "name": "Present",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Rope_word",
-            "name": "Rope",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Granite",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Meadow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Masonry_word",
-            "name": "Masonry",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Grass_word": 8,
-      "Gun_word": 8,
-      "Fears_word": 8,
-      "Rope_word": 6,
-      "Loader_word": 6,
-      "Head": 4,
-      "Masonry_word": 4,
-      "Paganism_word": 4,
-      "Present_word": 3,
-      "Secret_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Totem",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Garden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Glock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Idol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Mortar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Shotgun",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Silk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Ritual",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Secret_word",
-        "name": "Secret",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Field",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Scaffold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Face",
-        "image": "res/Item/Head_Face_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Snakes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Steppe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Box",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Walther",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Mauser",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Clowns",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Anxiety",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Present_word",
-        "name": "Current",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Dread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Turf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Revolver",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Cotton",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Nylon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Kevlar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Present_word",
-        "name": "Today",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Loader_word",
-        "name": "Loader",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Height",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Paganism_word",
-        "name": "Paganism",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Packer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Head",
-        "name": "Head",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Skull",
-        "image": "res/Item/Head_Skull_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Hair",
-        "image": "res/Item/Head_Hair_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Agent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Pistol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Code",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Darkness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Pasture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Pallet",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 123,
-      "strategyType": "priority",
-      "solverSteps": 123,
-      "solverMaxSteps": 126,
-      "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 8,
-        "colToCol": 4,
-        "colMultiToCol": 6,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 55,
-        "recycle": 1
-      },
-      "solver2Steps": 124,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 9,
+        "colSingleToSlot": 8,
         "colMultiToSlot": 7,
-        "colToCol": 6,
+        "colToCol": 8,
         "colMultiToCol": 2,
-        "handToSlot": 22,
-        "handToCol": 20,
+        "handToSlot": 27,
+        "handToCol": 15,
         "flip": 57,
         "recycle": 1
       }
@@ -1564,565 +34,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Grass_word",
-            "name": "Meadow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Crate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Kevlar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Rayon",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
             "category": "Paganism_word",
             "name": "Ritual",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Scaffold",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Revolver",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Granite",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Silk",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Paganism_word",
-            "name": "Totem",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Shotgun",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Face",
-            "image": "res/Item/Head_Face_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Today",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Fright",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Rebar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Masonry_word",
-            "name": "Masonry",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Grass_word",
-            "name": "Lawn",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Present_word",
-            "name": "Now",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Snakes",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Walther",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Hair",
-            "image": "res/Item/Head_Hair_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Jute",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Grass_word": 8,
-      "Gun_word": 8,
-      "Fears_word": 8,
-      "Rope_word": 6,
-      "Loader_word": 6,
-      "Head": 4,
-      "Masonry_word": 4,
-      "Paganism_word": 4,
-      "Present_word": 3,
-      "Secret_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Nylon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Pallet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Gun_word",
-        "name": "Gun",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Head",
-        "name": "Head",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Fears_word",
-        "name": "Fears",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Present_word",
-        "name": "Present",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Grass_word",
-        "name": "Grass",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Prairie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Word",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Paganism_word",
-        "name": "Paganism",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rope_word",
-        "name": "Rope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Agent",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Anxiety",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Secret_word",
-        "name": "Secret",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Rifle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Sorter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Dread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Code",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Idol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Field",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Height",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Garden",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Mortar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Darkness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Pasture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Steppe",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Loader_word",
-        "name": "Loader",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Picker",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Box",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Brain",
-        "image": "res/Item/Head_Brain_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Turf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Horror",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Mauser",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Pistol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fears_word",
-        "name": "Clowns",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Glock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Skull",
-        "image": "res/Item/Head_Skull_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Altar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Present_word",
-        "name": "Current",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Barrel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Packer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rope_word",
-        "name": "Cotton",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 123,
-      "strategyType": "priority",
-      "solverSteps": 116,
-      "solverMaxSteps": 126,
-      "moveStats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 5,
-        "colToCol": 6,
-        "colMultiToCol": 7,
-        "handToSlot": 23,
-        "handToCol": 19,
-        "flip": 42,
-        "recycle": 0
-      },
-      "solver2Steps": 123,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 15,
-        "colMultiToSlot": 5,
-        "colToCol": 2,
-        "colMultiToCol": 2,
-        "handToSlot": 25,
-        "handToCol": 17,
-        "flip": 56,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Secret_word",
-            "name": "Secret",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Revolver",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Nylon",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rope_word",
-            "name": "Kevlar",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Darkness",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Loader_word",
-            "name": "Loader",
             "isText": true
           },
           "faceUp": false
@@ -2132,64 +45,6 @@
             "type": "regular",
             "category": "Grass_word",
             "name": "Garden",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Hair",
-            "image": "res/Item/Head_Hair_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gun_word",
-            "name": "Mauser",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fears_word",
-            "name": "Clowns",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Box",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Head",
-            "name": "Face",
-            "image": "res/Item/Head_Face_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Gun_word",
-            "name": "Gun",
             "isText": true
           },
           "faceUp": false
@@ -2216,33 +71,6 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Paganism_word",
-            "name": "Paganism",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Masonry_word",
-            "name": "Rebar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Loader_word",
-            "name": "Sorter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
             "category": "Secret_word",
             "name": "Code",
@@ -2252,9 +80,27 @@
         },
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Nylon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Fears_word",
-            "name": "Fears",
+            "name": "Fright",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Pallet",
             "isText": true
           },
           "faceUp": false
@@ -2263,7 +109,120 @@
           "card": {
             "type": "regular",
             "category": "Present_word",
-            "name": "Today",
+            "name": "Now",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rope_word",
+            "name": "Rope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Dread",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Totem",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Present_word",
+            "name": "Current",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Walther",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Kevlar",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Head",
+            "name": "Head",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Granite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Clowns",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Brain",
+            "image": "res/Item/Head_Brain_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Height",
             "isText": true
           },
           "faceUp": false
@@ -2294,26 +253,159 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Paganism_word",
-        "name": "Ritual",
+        "category": "Gun_word",
+        "name": "Pistol",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Secret_word",
-        "name": "Agent",
-        "isText": true
+        "category": "Head",
+        "name": "Face",
+        "image": "res/Item/Head_Face_4.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Grass_word",
-        "name": "Lawn",
+        "name": "Meadow",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Fears_word",
-        "name": "Dread",
+        "name": "Snakes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Darkness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Field",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Packer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Mauser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Idol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Scaffold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Anxiety",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Glock",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fears_word",
+        "name": "Fears",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Picker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Word",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Sorter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Rifle",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Loader_word",
+        "name": "Loader",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Pasture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Turf",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gun_word",
+        "name": "Gun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Rebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Crate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Shotgun",
         "isText": true
       },
       {
@@ -2325,7 +417,433 @@
       {
         "type": "regular",
         "category": "Grass_word",
+        "name": "Lawn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Hair",
+        "image": "res/Item/Head_Hair_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Box",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Secret_word",
+        "name": "Secret",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Today",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Mortar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Revolver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Skull",
+        "image": "res/Item/Head_Skull_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Barrel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grass_word",
+        "name": "Grass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Steppe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Agent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Rayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Prairie",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Paganism_word",
+        "name": "Paganism",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 123,
+      "strategyType": "priority",
+      "solverSteps": 120,
+      "solverMaxSteps": 126,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 51,
+        "recycle": 1
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 8,
+        "colToCol": 4,
+        "colMultiToCol": 1,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 55,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Jute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Lawn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Anxiety",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Sorter",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rope_word",
+            "name": "Rope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Garden",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Secret_word",
+            "name": "Agent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Skull",
+            "image": "res/Item/Head_Skull_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Scaffold",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Pistol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Turf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Box",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Height",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Steppe",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Secret_word",
+            "name": "Secret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Mauser",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Secret_word",
+            "name": "Word",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Rebar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Crate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Fright",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Clowns",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Grass_word": 8,
+      "Gun_word": 8,
+      "Fears_word": 8,
+      "Rope_word": 6,
+      "Loader_word": 6,
+      "Head": 4,
+      "Masonry_word": 4,
+      "Paganism_word": 4,
+      "Present_word": 3,
+      "Secret_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Picker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
         "name": "Field",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Glock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Kevlar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Dread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Face",
+        "image": "res/Item/Head_Face_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Rifle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Revolver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Mortar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Totem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Meadow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Code",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Shotgun",
         "isText": true
       },
       {
@@ -2337,8 +855,973 @@
       },
       {
         "type": "regular",
+        "category": "Rope_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Paganism_word",
+        "name": "Paganism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Barrel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Snakes",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Present_word",
         "name": "Now",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Granite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Idol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Current",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Loader_word",
+        "name": "Loader",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Head",
+        "name": "Head",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Walther",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Present_word",
+        "name": "Present",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Pasture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Today",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gun_word",
+        "name": "Gun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Hair",
+        "image": "res/Item/Head_Hair_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Grass_word",
+        "name": "Grass",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Nylon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Pallet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Rayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Ritual",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Masonry_word",
+        "name": "Masonry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Darkness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Prairie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Packer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fears_word",
+        "name": "Fears",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 123,
+      "strategyType": "priority",
+      "solverSteps": 117,
+      "solverMaxSteps": 126,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 4,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 50,
+        "recycle": 1
+      },
+      "solver2Steps": 125,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 8,
+        "colToCol": 1,
+        "colMultiToCol": 3,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 56,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Box",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Pistol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Prairie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Grass_word",
+            "name": "Grass",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Loader_word",
+            "name": "Loader",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Idol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Snakes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Granite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Packer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Walther",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Mauser",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Rifle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Pallet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Brain",
+            "image": "res/Item/Head_Brain_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Garden",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Dread",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Clowns",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rope_word",
+            "name": "Rope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Head",
+            "name": "Head",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Face",
+            "image": "res/Item/Head_Face_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Nylon",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Grass_word": 8,
+      "Gun_word": 8,
+      "Fears_word": 8,
+      "Rope_word": 6,
+      "Loader_word": 6,
+      "Head": 4,
+      "Masonry_word": 4,
+      "Paganism_word": 4,
+      "Present_word": 3,
+      "Secret_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Pasture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Skull",
+        "image": "res/Item/Head_Skull_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Totem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Revolver",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Agent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Steppe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Height",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Field",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Jute",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Present_word",
+        "name": "Present",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Today",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fears_word",
+        "name": "Fears",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Scaffold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Darkness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Crate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Masonry_word",
+        "name": "Masonry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Ritual",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Paganism_word",
+        "name": "Paganism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Code",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Rayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Hair",
+        "image": "res/Item/Head_Hair_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Gun_word",
+        "name": "Gun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Word",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Secret_word",
+        "name": "Secret",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Current",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Turf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Meadow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Picker",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Now",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Kevlar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Rebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Glock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Shotgun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Fright",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Barrel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Mortar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Sorter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Lawn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Anxiety",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 123,
+      "strategyType": "priority",
+      "solverSteps": 123,
+      "solverMaxSteps": 126,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 57,
+        "recycle": 1
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 8,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Altar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Lawn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Packer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Fright",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Rayon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Clowns",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Masonry_word",
+            "name": "Masonry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rope_word",
+            "name": "Jute",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Pistol",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Box",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Secret_word",
+            "name": "Agent",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Scaffold",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gun_word",
+            "name": "Gun",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Dread",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Paganism_word",
+            "name": "Paganism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Horror",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Rifle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Skull",
+            "image": "res/Item/Head_Skull_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Walther",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Meadow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Face",
+            "image": "res/Item/Head_Face_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Grass_word": 8,
+      "Gun_word": 8,
+      "Fears_word": 8,
+      "Rope_word": 6,
+      "Loader_word": 6,
+      "Head": 4,
+      "Masonry_word": 4,
+      "Paganism_word": 4,
+      "Present_word": 3,
+      "Secret_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Granite",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Present_word",
+        "name": "Present",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Mauser",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Idol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Today",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Steppe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Anxiety",
         "isText": true
       },
       {
@@ -2350,8 +1833,44 @@
       {
         "type": "regular",
         "category": "Loader_word",
-        "name": "Pallet",
+        "name": "Crate",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Ritual",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Field",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Prairie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Word",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Revolver",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Head",
+        "name": "Head",
+        "isText": false
       },
       {
         "type": "gold",
@@ -2360,15 +1879,52 @@
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
         "category": "Rope_word",
-        "name": "Rope",
+        "name": "Nylon",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Rope_word",
-        "name": "Rayon",
+        "category": "Present_word",
+        "name": "Now",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Current",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Rebar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Hair",
+        "image": "res/Item/Head_Hair_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Pallet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Turf",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Secret_word",
+        "name": "Secret",
         "isText": true
       },
       {
@@ -2385,51 +1941,8 @@
       },
       {
         "type": "regular",
-        "category": "Present_word",
-        "name": "Current",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Head",
-        "name": "Skull",
-        "image": "res/Item/Head_Skull_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Fears_word",
         "name": "Height",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Head",
-        "name": "Head",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Loader_word",
-        "name": "Packer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Pistol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Idol",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Paganism_word",
-        "name": "Altar",
         "isText": true
       },
       {
@@ -2439,15 +1952,34 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Grass_word",
-        "name": "Steppe",
+        "type": "gold",
+        "category": "Rope_word",
+        "name": "Rope",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Grass_word",
-        "name": "Meadow",
+        "category": "Gun_word",
+        "name": "Shotgun",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Brain",
+        "image": "res/Item/Head_Brain_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Totem",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Sorter",
         "isText": true
       },
       {
@@ -2458,38 +1990,397 @@
       },
       {
         "type": "regular",
-        "category": "Paganism_word",
-        "name": "Totem",
+        "category": "Grass_word",
+        "name": "Pasture",
         "isText": true
       },
       {
-        "type": "regular",
+        "type": "gold",
         "category": "Fears_word",
-        "name": "Fright",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Masonry_word",
-        "name": "Scaffold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Secret_word",
-        "name": "Word",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gun_word",
-        "name": "Rifle",
+        "name": "Fears",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Grass_word",
+        "name": "Garden",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Masonry_word",
+        "name": "Mortar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Code",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Kevlar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Loader_word",
+        "name": "Loader",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 123,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 126,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 5,
+        "handToSlot": 29,
+        "handToCol": 13,
+        "flip": 57,
+        "recycle": 1
+      },
+      "solver2Steps": 125,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 57,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Granite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Rifle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Pallet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Idol",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Darkness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Paganism_word",
+            "name": "Totem",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Glock",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Height",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Present_word",
+            "name": "Current",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Head",
+            "name": "Brain",
+            "image": "res/Item/Head_Brain_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Present_word",
+            "name": "Now",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Crate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Loader_word",
+            "name": "Picker",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Paganism_word",
+            "name": "Paganism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Grass_word",
+            "name": "Lawn",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fears_word",
+            "name": "Dread",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gun_word",
+            "name": "Gun",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Masonry_word",
+            "name": "Rebar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Secret_word",
+            "name": "Secret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Walther",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gun_word",
+            "name": "Shotgun",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Secret_word",
+            "name": "Word",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Grass_word": 8,
+      "Gun_word": 8,
+      "Fears_word": 8,
+      "Rope_word": 6,
+      "Loader_word": 6,
+      "Head": 4,
+      "Masonry_word": 4,
+      "Paganism_word": 4,
+      "Present_word": 3,
+      "Secret_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Grass_word",
         "name": "Prairie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Nylon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Masonry_word",
+        "name": "Masonry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Packer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Hair",
+        "image": "res/Item/Head_Hair_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Altar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Snakes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Pistol",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Face",
+        "image": "res/Item/Head_Face_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Agent",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Steppe",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rope_word",
+        "name": "Rope",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Kevlar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Loader_word",
+        "name": "Sorter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Field",
         "isText": true
       },
       {
@@ -2501,13 +2392,25 @@
       {
         "type": "regular",
         "category": "Gun_word",
-        "name": "Shotgun",
+        "name": "Revolver",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Loader_word",
+        "name": "Loader",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Grass_word",
+        "name": "Grass",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Rope_word",
-        "name": "Silk",
+        "category": "Gun_word",
+        "name": "Barrel",
         "isText": true
       },
       {
@@ -2518,20 +2421,62 @@
       },
       {
         "type": "regular",
+        "category": "Fears_word",
+        "name": "Clowns",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Loader_word",
-        "name": "Crate",
+        "name": "Box",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Jute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Present_word",
+        "name": "Today",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Cotton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Secret_word",
+        "name": "Code",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rope_word",
+        "name": "Silk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Grass_word",
+        "name": "Meadow",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Fears_word",
-        "name": "Anxiety",
+        "name": "Fright",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Gun_word",
-        "name": "Walther",
+        "category": "Grass_word",
+        "name": "Garden",
         "isText": true
       },
       {
@@ -2542,8 +2487,63 @@
       },
       {
         "type": "regular",
+        "category": "Rope_word",
+        "name": "Rayon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Anxiety",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fears_word",
+        "name": "Horror",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Paganism_word",
+        "name": "Ritual",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Head",
+        "name": "Skull",
+        "image": "res/Item/Head_Skull_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fears_word",
+        "name": "Fears",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Present_word",
+        "name": "Present",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Masonry_word",
-        "name": "Granite",
+        "name": "Scaffold",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Head",
+        "name": "Head",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gun_word",
+        "name": "Mauser",
         "isText": true
       }
     ],

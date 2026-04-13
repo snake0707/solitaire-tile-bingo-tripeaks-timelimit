@@ -4,1054 +4,28 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 125,
+      "solverSteps": 129,
       "solverMaxSteps": 130,
       "moveStats": {
         "colSingleToSlot": 10,
         "colMultiToSlot": 6,
-        "colToCol": 7,
-        "colMultiToCol": 0,
-        "handToSlot": 33,
-        "handToCol": 9,
-        "flip": 59,
-        "recycle": 1
-      },
-      "solver2Steps": 126,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 2,
-        "handToSlot": 27,
-        "handToCol": 15,
-        "flip": 60,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Office",
-            "name": "Pencil",
-            "image": "res/Item/supplies_pencil_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Spicy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Group_word",
-            "name": "Group",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Sorbonne",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Group_word",
-            "name": "Swarm",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Dracaena",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Tempest",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Aircraft_word",
-            "name": "Airplane",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Hibiscus",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Sweet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Yale",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Pericles",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Texas",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Canines_word",
-            "name": "Canines",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Calathea",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Hamlet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Office",
-            "name": "Marker",
-            "image": "res/Item/Schools_Marker_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Taste_word",
-            "name": "Taste",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Citrus",
-            "name": "Citrus",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Juliet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Bitter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "William_word",
-            "name": "William",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "William_word": 8,
-      "States_word": 8,
-      "Plants_word": 8,
-      "Canines_word": 6,
-      "Studies_word": 6,
-      "Group_word": 4,
-      "Office": 4,
-      "Taste_word": 4,
-      "Citrus": 3,
-      "Aircraft_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Harvard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Fern",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Pomelo",
-        "image": "res/Item/Citrus_Pomelo_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dingo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Henry V",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Colorado",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Jetliner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Lime",
-        "image": "res/Item/Citrus_Lime_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Lemon",
-        "image": "res/Item/yellow_lemon_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Begonia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Pothos",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "MIT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Coyote",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Eraser",
-        "image": "res/Item/Office_Eraser_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Office",
-        "name": "Office",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Aircraft_word",
-        "name": "Aircraft",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Orchid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Glider",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Ohio",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Studies_word",
-        "name": "Studies",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Gaggle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Herd",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Oxford",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Romeo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Plants_word",
-        "name": "Plants",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dhole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Macbeth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Wolf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Pen",
-        "image": "res/Item/Office_Pen_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Jackal",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "States_word",
-        "name": "States",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Florida",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Missouri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Fox",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Stanford",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Othello",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Nevada",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Aloe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Indiana",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Alabama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Flock",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 127,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 5,
-        "colToCol": 2,
-        "colMultiToCol": 6,
-        "handToSlot": 33,
-        "handToCol": 9,
-        "flip": 57,
-        "recycle": 1
-      },
-      "solver2Steps": 125,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 5,
-        "colToCol": 5,
-        "colMultiToCol": 1,
-        "handToSlot": 25,
-        "handToCol": 17,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Group_word",
-            "name": "Herd",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Group_word",
-            "name": "Swarm",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Oxford",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Citrus",
-            "name": "Pomelo",
-            "image": "res/Item/Citrus_Pomelo_3.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Fern",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Orchid",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Macbeth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Office",
-            "name": "Marker",
-            "image": "res/Item/Schools_Marker_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Canines_word",
-            "name": "Dhole",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Citrus",
-            "name": "Citrus",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Calathea",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Tempest",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Pothos",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Sweet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Plants_word",
-            "name": "Plants",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Office",
-            "name": "Pen",
-            "image": "res/Item/Office_Pen_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Othello",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Nevada",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Sorbonne",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Citrus",
-            "name": "Lime",
-            "image": "res/Item/Citrus_Lime_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Missouri",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Yale",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "William_word": 8,
-      "States_word": 8,
-      "Plants_word": 8,
-      "Canines_word": 6,
-      "Studies_word": 6,
-      "Group_word": 4,
-      "Office": 4,
-      "Taste_word": 4,
-      "Citrus": 3,
-      "Aircraft_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Florida",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Pericles",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Bitter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Alabama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Jetliner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Fox",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Jackal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Texas",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Coyote",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dingo",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Office",
-        "name": "Office",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Henry V",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Gaggle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Wolf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Harvard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Hamlet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Studies_word",
-        "name": "Studies",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Glider",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Romeo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Juliet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Aircraft_word",
-        "name": "Aircraft",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Begonia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Lemon",
-        "image": "res/Item/yellow_lemon_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Group_word",
-        "name": "Group",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Stanford",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Dracaena",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Spicy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Colorado",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Hibiscus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Aloe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Canines_word",
-        "name": "Canines",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "William_word",
-        "name": "William",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Taste_word",
-        "name": "Taste",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Eraser",
-        "image": "res/Item/Office_Eraser_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Ohio",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Airplane",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Indiana",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Pencil",
-        "image": "res/Item/supplies_pencil_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "States_word",
-        "name": "States",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "MIT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Flock",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 123,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 6,
-        "colToCol": 5,
+        "colToCol": 10,
         "colMultiToCol": 3,
-        "handToSlot": 20,
-        "handToCol": 22,
-        "flip": 54,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 57,
         "recycle": 1
       },
-      "solver2Steps": 129,
+      "solver2Steps": 124,
       "solver2StrategyType": "priority",
       "solver2Stats": {
         "colSingleToSlot": 14,
-        "colMultiToSlot": 7,
-        "colToCol": 2,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
         "colMultiToCol": 2,
-        "handToSlot": 18,
-        "handToCol": 24,
-        "flip": 61,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 55,
         "recycle": 1
       }
     },
@@ -1060,30 +34,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Office",
-            "name": "Eraser",
-            "image": "res/Item/Office_Eraser_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Office",
-            "name": "Pen",
-            "image": "res/Item/Office_Pen_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Citrus",
-            "name": "Lemon",
-            "image": "res/Item/yellow_lemon_6.png",
-            "isText": false
+            "category": "Studies_word",
+            "name": "Stanford",
+            "isText": true
           },
           "faceUp": false
         },
@@ -1091,74 +44,7 @@
           "card": {
             "type": "regular",
             "category": "States_word",
-            "name": "Texas",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Spicy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Canines_word",
-            "name": "Fox",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Sorbonne",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Juliet",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Hamlet",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Group_word",
-            "name": "Herd",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Oxford",
+            "name": "Indiana",
             "isText": true
           },
           "faceUp": false
@@ -1172,6 +58,18 @@
           },
           "faceUp": false
         },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Office",
+            "name": "Marker",
+            "image": "res/Item/Schools_Marker_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "gold",
@@ -1193,8 +91,82 @@
         {
           "card": {
             "type": "regular",
+            "category": "Taste_word",
+            "name": "Sour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Macbeth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Group_word",
-            "name": "Gaggle",
+            "name": "Swarm",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Begonia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Aircraft_word",
+            "name": "Aircraft",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Coyote",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Henry V",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Othello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Dhole",
             "isText": true
           },
           "faceUp": true
@@ -1213,375 +185,6 @@
         {
           "card": {
             "type": "regular",
-            "category": "Taste_word",
-            "name": "Sour",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Office",
-            "name": "Office",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Group_word",
-            "name": "Flock",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Taste_word",
-            "name": "Taste",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Studies_word",
-            "name": "Studies",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Canines_word",
-            "name": "Jackal",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "William_word": 8,
-      "States_word": 8,
-      "Plants_word": 8,
-      "Canines_word": 6,
-      "Studies_word": 6,
-      "Group_word": 4,
-      "Office": 4,
-      "Taste_word": 4,
-      "Citrus": 3,
-      "Aircraft_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Aircraft_word",
-        "name": "Aircraft",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "William_word",
-        "name": "William",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Group_word",
-        "name": "Group",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Nevada",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Harvard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Marker",
-        "image": "res/Item/Schools_Marker_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Alabama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Glider",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Colorado",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Begonia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Calathea",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Ohio",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Stanford",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Tempest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Airplane",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Pericles",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Canines_word",
-        "name": "Canines",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Orchid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Othello",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Lime",
-        "image": "res/Item/Citrus_Lime_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Bitter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Dracaena",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dingo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Aloe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Pomelo",
-        "image": "res/Item/Citrus_Pomelo_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Indiana",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Sweet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Missouri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Jetliner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Yale",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Coyote",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Florida",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Henry V",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Plants_word",
-        "name": "Plants",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Macbeth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Swarm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dhole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Hibiscus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Pothos",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Pencil",
-        "image": "res/Item/supplies_pencil_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Wolf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Fern",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 125,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 13,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 1,
-        "handToSlot": 27,
-        "handToCol": 15,
-        "flip": 58,
-        "recycle": 1
-      },
-      "solver2Steps": 125,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 13,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 24,
-        "handToCol": 18,
-        "flip": 55,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Group_word",
-            "name": "Group",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Studies_word",
             "name": "Harvard",
             "isText": true
@@ -1590,29 +193,9 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Ohio",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
-            "category": "Aircraft_word",
-            "name": "Aircraft",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Pericles",
+            "category": "Plants_word",
+            "name": "Plants",
             "isText": true
           },
           "faceUp": false
@@ -1629,111 +212,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Taste_word",
-            "name": "Spicy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Office",
-            "name": "Office",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Plants_word",
-            "name": "Hibiscus",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Aircraft_word",
-            "name": "Jetliner",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Aircraft_word",
-            "name": "Glider",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Calathea",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Missouri",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "William_word",
-            "name": "William",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Bitter",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Canines_word",
-            "name": "Canines",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Canines_word",
-            "name": "Fox",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Hamlet",
+            "name": "Orchid",
             "isText": true
           },
           "faceUp": false
@@ -1750,26 +230,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Aircraft_word",
-            "name": "Airplane",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "States_word",
-            "name": "Nevada",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Taste_word",
-            "name": "Sour",
+            "name": "Florida",
             "isText": true
           },
           "faceUp": true
@@ -1791,107 +253,15 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Studies_word",
-        "name": "MIT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Orchid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Sorbonne",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Swarm",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Texas",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Taste_word",
-        "name": "Taste",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Group_word",
-        "name": "Herd",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Henry V",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Marker",
-        "image": "res/Item/Schools_Marker_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Othello",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Citrus",
-        "name": "Lemon",
-        "image": "res/Item/yellow_lemon_6.png",
+        "name": "Lime",
+        "image": "res/Item/Citrus_Lime_2.png",
         "isText": false
       },
       {
         "type": "gold",
-        "category": "Citrus",
-        "name": "Citrus",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Dracaena",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Pothos",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Office",
-        "name": "Pencil",
-        "image": "res/Item/supplies_pencil_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Canines_word",
-        "name": "Dhole",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Juliet",
+        "name": "Canines",
         "isText": true
       },
       {
@@ -1902,21 +272,26 @@
       },
       {
         "type": "regular",
-        "category": "Citrus",
-        "name": "Lime",
-        "image": "res/Item/Citrus_Lime_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "States_word",
-        "name": "States",
+        "category": "Group_word",
+        "name": "Herd",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Taste_word",
+        "name": "Sweet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "William_word",
+        "name": "William",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Studies_word",
-        "name": "Oxford",
+        "name": "Studies",
         "isText": true
       },
       {
@@ -1928,50 +303,14 @@
       },
       {
         "type": "regular",
-        "category": "Plants_word",
-        "name": "Begonia",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dingo",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Studies_word",
-        "name": "Studies",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Wolf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Aloe",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Macbeth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Stanford",
+        "name": "Oxford",
         "isText": true
       },
       {
         "type": "regular",
         "category": "States_word",
-        "name": "Colorado",
+        "name": "Ohio",
         "isText": true
       },
       {
@@ -1984,7 +323,13 @@
       {
         "type": "regular",
         "category": "William_word",
-        "name": "Romeo",
+        "name": "Juliet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Glider",
         "isText": true
       },
       {
@@ -1994,15 +339,45 @@
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
         "category": "Plants_word",
-        "name": "Plants",
+        "name": "Calathea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Pothos",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Sorbonne",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Nevada",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Canines_word",
-        "name": "Coyote",
+        "name": "Fox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Jetliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dingo",
         "isText": true
       },
       {
@@ -2014,20 +389,57 @@
       },
       {
         "type": "regular",
-        "category": "Group_word",
-        "name": "Flock",
+        "category": "Plants_word",
+        "name": "Fern",
         "isText": true
       },
       {
         "type": "regular",
         "category": "States_word",
-        "name": "Florida",
+        "name": "Texas",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Office",
+        "name": "Pencil",
+        "image": "res/Item/supplies_pencil_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Aloe",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Taste_word",
-        "name": "Sweet",
+        "name": "Taste",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Wolf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Hamlet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Airplane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Hibiscus",
         "isText": true
       },
       {
@@ -2038,14 +450,63 @@
       },
       {
         "type": "regular",
+        "category": "Taste_word",
+        "name": "Bitter",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Plants_word",
-        "name": "Fern",
+        "name": "Dracaena",
         "isText": true
       },
       {
         "type": "regular",
         "category": "States_word",
-        "name": "Indiana",
+        "name": "Missouri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Pericles",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Office",
+        "name": "Office",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lemon",
+        "image": "res/Item/yellow_lemon_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Colorado",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Flock",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Group_word",
+        "name": "Group",
         "isText": true
       }
     ],
@@ -2056,28 +517,28 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 129,
+      "solverSteps": 123,
       "solverMaxSteps": 130,
       "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 7,
-        "colToCol": 9,
-        "colMultiToCol": 7,
-        "handToSlot": 27,
-        "handToCol": 15,
-        "flip": 56,
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 1,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 55,
         "recycle": 1
       },
-      "solver2Steps": 125,
+      "solver2Steps": 129,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 7,
-        "colToCol": 11,
-        "colMultiToCol": 4,
-        "handToSlot": 19,
-        "handToCol": 23,
-        "flip": 53,
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 9,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 17,
+        "handToCol": 25,
+        "flip": 60,
         "recycle": 1
       }
     },
@@ -2086,17 +547,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Citrus",
-            "name": "Citrus",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Begonia",
+            "category": "Aircraft_word",
+            "name": "Aircraft",
             "isText": true
           },
           "faceUp": false
@@ -2104,37 +556,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Plants_word",
-            "name": "Dracaena",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Office",
-            "name": "Office",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Pothos",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Taste_word",
-            "name": "Taste",
+            "category": "Studies_word",
+            "name": "Oxford",
             "isText": true
           },
           "faceUp": false
@@ -2142,17 +565,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Plants_word",
-            "name": "Aloe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Macbeth",
+            "category": "States_word",
+            "name": "Alabama",
             "isText": true
           },
           "faceUp": false
@@ -2171,26 +585,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Aircraft_word",
-            "name": "Jetliner",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Oxford",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "States_word",
-            "name": "Texas",
+            "category": "William_word",
+            "name": "Hamlet",
             "isText": true
           },
           "faceUp": false
@@ -2199,7 +595,16 @@
           "card": {
             "type": "regular",
             "category": "Group_word",
-            "name": "Gaggle",
+            "name": "Swarm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Sweet",
             "isText": true
           },
           "faceUp": false
@@ -2216,14 +621,106 @@
         {
           "card": {
             "type": "regular",
-            "category": "Group_word",
-            "name": "Herd",
+            "category": "Studies_word",
+            "name": "Stanford",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "Yale",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Taste_word",
+            "name": "Taste",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Ohio",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Spicy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Missouri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Colorado",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "States_word",
+            "name": "States",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Othello",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Office",
+            "name": "Office",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Juliet",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -2237,8 +734,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Studies_word",
-            "name": "Yale",
+            "category": "Canines_word",
+            "name": "Wolf",
             "isText": true
           },
           "faceUp": false
@@ -2246,44 +743,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Group_word",
-            "name": "Flock",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Plants_word",
-            "name": "Calathea",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Studies_word",
-            "name": "Sorbonne",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Aircraft_word",
-            "name": "Aircraft",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "William_word",
-            "name": "Othello",
+            "category": "Canines_word",
+            "name": "Coyote",
             "isText": true
           },
           "faceUp": true
@@ -2306,135 +767,14 @@
       {
         "type": "regular",
         "category": "Citrus",
-        "name": "Lime",
-        "image": "res/Item/Citrus_Lime_2.png",
+        "name": "Pomelo",
+        "image": "res/Item/Citrus_Pomelo_3.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Indiana",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Airplane",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Hibiscus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Hamlet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Plants_word",
-        "name": "Fern",
-        "isText": true
       },
       {
         "type": "regular",
         "category": "William_word",
         "name": "Tempest",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Dingo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Canines_word",
-        "name": "Coyote",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Sweet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Studies_word",
-        "name": "Studies",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "William_word",
-        "name": "William",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Taste_word",
-        "name": "Bitter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Missouri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Citrus",
-        "name": "Lemon",
-        "image": "res/Item/yellow_lemon_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Group_word",
-        "name": "Group",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Aircraft_word",
-        "name": "Glider",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Nevada",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Florida",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "States_word",
-        "name": "Alabama",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "William_word",
-        "name": "Romeo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Studies_word",
-        "name": "Stanford",
         "isText": true
       },
       {
@@ -2446,8 +786,15 @@
       },
       {
         "type": "regular",
-        "category": "William_word",
-        "name": "Juliet",
+        "category": "Office",
+        "name": "Marker",
+        "image": "res/Item/Schools_Marker_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Canines_word",
+        "name": "Canines",
         "isText": true
       },
       {
@@ -2458,8 +805,154 @@
       },
       {
         "type": "regular",
+        "category": "Group_word",
+        "name": "Herd",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Aloe",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Citrus",
+        "name": "Citrus",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dingo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Nevada",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lemon",
+        "image": "res/Item/yellow_lemon_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dhole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Airplane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Gaggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Florida",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Orchid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Texas",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "William_word",
+        "name": "William",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Begonia",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Plants_word",
+        "name": "Plants",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Hibiscus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "MIT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Pothos",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Indiana",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Flock",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Group_word",
+        "name": "Group",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Sorbonne",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lime",
+        "image": "res/Item/Citrus_Lime_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Taste_word",
-        "name": "Spicy",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Bitter",
         "isText": true
       },
       {
@@ -2471,26 +964,384 @@
       },
       {
         "type": "regular",
+        "category": "William_word",
+        "name": "Romeo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Calathea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Glider",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Pericles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Jetliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Fern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Macbeth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Dracaena",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Studies_word",
+        "name": "Studies",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Studies_word",
         "name": "Harvard",
         "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 57,
+        "recycle": 1
       },
+      "solver2Steps": 128,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "William_word",
+            "name": "William",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Begonia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Group_word",
+            "name": "Herd",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Aircraft_word",
+            "name": "Glider",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Nevada",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Aloe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Aircraft_word",
+            "name": "Jetliner",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Juliet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Romeo",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Macbeth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Plants_word",
+            "name": "Plants",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "States_word",
+            "name": "States",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Spicy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Colorado",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "Yale",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Coyote",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Office",
+            "name": "Pencil",
+            "image": "res/Item/supplies_pencil_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Indiana",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Canines_word",
+            "name": "Canines",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Sweet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Citrus",
+            "name": "Citrus",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Office",
+            "name": "Marker",
+            "image": "res/Item/Schools_Marker_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "William_word": 8,
+      "States_word": 8,
+      "Plants_word": 8,
+      "Canines_word": 6,
+      "Studies_word": 6,
+      "Group_word": 4,
+      "Office": 4,
+      "Taste_word": 4,
+      "Citrus": 3,
+      "Aircraft_word": 3
+    },
+    "handPile": [
       {
         "type": "gold",
+        "category": "Office",
+        "name": "Office",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Sorbonne",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Canines_word",
-        "name": "Canines",
+        "name": "Wolf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Sour",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "States_word",
-        "name": "States",
+        "category": "Studies_word",
+        "name": "Studies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "MIT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Calathea",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Canines_word",
         "name": "Dhole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Pothos",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Fern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Jackal",
         "isText": true
       },
       {
@@ -2502,19 +1353,503 @@
       {
         "type": "regular",
         "category": "States_word",
-        "name": "Ohio",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Plants_word",
-        "name": "Plants",
+        "name": "Florida",
         "isText": true
       },
       {
         "type": "regular",
         "category": "William_word",
         "name": "Pericles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Hibiscus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Group_word",
+        "name": "Group",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Fox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lemon",
+        "image": "res/Item/yellow_lemon_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Flock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Texas",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Airplane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Oxford",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Othello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Pen",
+        "image": "res/Item/Office_Pen_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Dracaena",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lime",
+        "image": "res/Item/Citrus_Lime_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dingo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Bitter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Harvard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Orchid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Eraser",
+        "image": "res/Item/Office_Eraser_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Henry V",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Taste_word",
+        "name": "Taste",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Alabama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Tempest",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Missouri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Pomelo",
+        "image": "res/Item/Citrus_Pomelo_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Gaggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Stanford",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Aircraft_word",
+        "name": "Aircraft",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Ohio",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Hamlet",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 57,
+        "recycle": 1
+      },
+      "solver2Steps": 123,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Taste_word",
+            "name": "Taste",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Dhole",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Pothos",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Dracaena",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Sweet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Aircraft_word",
+            "name": "Airplane",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Office",
+            "name": "Eraser",
+            "image": "res/Item/Office_Eraser_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "Stanford",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Hamlet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Nevada",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Missouri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Aircraft_word",
+            "name": "Aircraft",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Wolf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Indiana",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Studies_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Fox",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Ohio",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "MIT",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Texas",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Begonia",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Citrus",
+            "name": "Lime",
+            "image": "res/Item/Citrus_Lime_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Colorado",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "William_word": 8,
+      "States_word": 8,
+      "Plants_word": 8,
+      "Canines_word": 6,
+      "Studies_word": 6,
+      "Group_word": 4,
+      "Office": 4,
+      "Taste_word": 4,
+      "Citrus": 3,
+      "Aircraft_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Harvard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Canines_word",
+        "name": "Canines",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Gaggle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Pen",
+        "image": "res/Item/Office_Pen_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Yale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Alabama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Herd",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Tempest",
         "isText": true
       },
       {
@@ -2531,21 +1866,148 @@
         "isText": false
       },
       {
+        "type": "gold",
+        "category": "Citrus",
+        "name": "Citrus",
+        "isText": false
+      },
+      {
         "type": "regular",
-        "category": "Canines_word",
-        "name": "Wolf",
+        "category": "Plants_word",
+        "name": "Calathea",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Studies_word",
-        "name": "MIT",
+        "name": "Sorbonne",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Group_word",
+        "name": "Group",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Fern",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Plants_word",
+        "name": "Plants",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Henry V",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Aloe",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Office",
+        "name": "Office",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Coyote",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dingo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Romeo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Swarm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Florida",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Othello",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Juliet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Jackal",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Taste_word",
-        "name": "Sour",
+        "name": "Bitter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Oxford",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "William_word",
+        "name": "William",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lemon",
+        "image": "res/Item/yellow_lemon_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Hibiscus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Glider",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Macbeth",
         "isText": true
       },
       {
@@ -2557,8 +2019,546 @@
       },
       {
         "type": "regular",
+        "category": "Office",
+        "name": "Pencil",
+        "image": "res/Item/supplies_pencil_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
         "category": "States_word",
-        "name": "Colorado",
+        "name": "States",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Flock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Pericles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Jetliner",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 5,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 128,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 7,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 61,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Taste_word",
+            "name": "Sweet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Orchid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Missouri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Citrus",
+            "name": "Pomelo",
+            "image": "res/Item/Citrus_Pomelo_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Office",
+            "name": "Pencil",
+            "image": "res/Item/supplies_pencil_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "Sorbonne",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Henry V",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Colorado",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Coyote",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Aircraft_word",
+            "name": "Aircraft",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Group_word",
+            "name": "Group",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Texas",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Studies_word",
+            "name": "Oxford",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Plants_word",
+            "name": "Calathea",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "William_word",
+            "name": "Macbeth",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Studies_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Canines_word",
+            "name": "Jackal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Office",
+            "name": "Office",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Citrus",
+            "name": "Lemon",
+            "image": "res/Item/yellow_lemon_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "States_word",
+            "name": "States",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Indiana",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "States_word",
+            "name": "Ohio",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "William_word": 8,
+      "States_word": 8,
+      "Plants_word": 8,
+      "Canines_word": 6,
+      "Studies_word": 6,
+      "Group_word": 4,
+      "Office": 4,
+      "Taste_word": 4,
+      "Citrus": 3,
+      "Aircraft_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Stanford",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Harvard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Herd",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Citrus",
+        "name": "Citrus",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Flock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Begonia",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Aloe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Tempest",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "William_word",
+        "name": "William",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Pericles",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Romeo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Fox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Glider",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Taste_word",
+        "name": "Taste",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Juliet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Plants_word",
+        "name": "Plants",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Eraser",
+        "image": "res/Item/Office_Eraser_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Airplane",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Bitter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Fern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "MIT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Nevada",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dhole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Pothos",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Taste_word",
+        "name": "Spicy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Citrus",
+        "name": "Lime",
+        "image": "res/Item/Citrus_Lime_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Dingo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Studies_word",
+        "name": "Yale",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Aircraft_word",
+        "name": "Jetliner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Alabama",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Dracaena",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Swarm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Canines_word",
+        "name": "Wolf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Pen",
+        "image": "res/Item/Office_Pen_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Plants_word",
+        "name": "Hibiscus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Office",
+        "name": "Marker",
+        "image": "res/Item/Schools_Marker_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Othello",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Canines_word",
+        "name": "Canines",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "States_word",
+        "name": "Florida",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "William_word",
+        "name": "Hamlet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Group_word",
+        "name": "Gaggle",
         "isText": true
       }
     ],

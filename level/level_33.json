@@ -4,1082 +4,33 @@
       "maxSlots": 4,
       "maxSteps": 118,
       "strategyType": "priority",
-      "solverSteps": 117,
+      "solverSteps": 119,
       "solverMaxSteps": 121,
       "moveStats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 8,
-        "colToCol": 7,
-        "colMultiToCol": 8,
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 7,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 52,
+        "recycle": 1
+      },
+      "solver2Steps": 111,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 4,
         "handToSlot": 25,
         "handToCol": 17,
         "flip": 42,
         "recycle": 0
-      },
-      "solver2Steps": 111,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 13,
-        "colMultiToSlot": 5,
-        "colToCol": 7,
-        "colMultiToCol": 2,
-        "handToSlot": 26,
-        "handToCol": 16,
-        "flip": 42,
-        "recycle": 0
       }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Slang_word",
-            "name": "OMG",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Slang_word",
-            "name": "Cringe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bags_word",
-            "name": "Moon bag",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Florist",
-            "image": "res/Item/Bouquet_Florist_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bags_word",
-            "name": "Bags",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Laptop_word",
-            "name": "Portable",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "L",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "XS",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bouquet",
-            "name": "Bouquet",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Justice_word",
-            "name": "Justice",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Pitch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Adagio",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Chord",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Staccato",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Ruby red",
-            "image": "res/Item/Lipstick_Rubyred_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Checkout_word",
-            "name": "Checkout",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Nude",
-            "image": "res/Item/Lipstick_Nude_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Corsage",
-            "image": "res/Item/Bouquet_Corsage_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Symphony",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Filler",
-            "image": "res/Item/Bouquet_Filler_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Burgundy",
-            "image": "res/Item/Lipstick_Burgundy_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Slang_word",
-            "name": "Slang",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Bouquet": 8,
-      "Music_word": 8,
-      "Sizes_word": 8,
-      "Lipstick": 6,
-      "Bags_word": 6,
-      "Checkout_word": 4,
-      "Slang_word": 4,
-      "Justice_word": 4,
-      "Laptop_word": 3,
-      "Prisoner_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Wallet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Flower",
-        "image": "res/Item/Bouquet_Flower_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Octave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XXS",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Legato",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Cashier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Crimson",
-        "image": "res/Item/Lipstick_Crimson_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Customer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "BFF",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Wireless",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Music_word",
-        "name": "Music",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Foldable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Register",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "S",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Gavel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Scarlet",
-        "image": "res/Item/Lipstick_Scarlet_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Fuchsia",
-        "image": "res/Item/Lipstick_Fuchsia_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "Flex",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Petal",
-        "image": "res/Item/Bouquet_Petal_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lipstick",
-        "name": "Lipstick",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Scales",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Belt bag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Law",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Detainee",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Prisoner_word",
-        "name": "Prisoner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Felon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "M",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Ribbon",
-        "image": "res/Item/Bouquet_Ribbon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "One size",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Barcode",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Backpack",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Wrapper",
-        "image": "res/Item/Bouquet_Wrapper_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Laptop_word",
-        "name": "Laptop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Handbag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Box bag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Foliage",
-        "image": "res/Item/Bouquet_Foliage_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Inmate",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sizes_word",
-        "name": "Sizes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XXXL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Court",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Tempo",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 118,
-      "strategyType": "priority",
-      "solverSteps": 111,
-      "solverMaxSteps": 121,
-      "moveStats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 8,
-        "colToCol": 7,
-        "colMultiToCol": 2,
-        "handToSlot": 26,
-        "handToCol": 16,
-        "flip": 42,
-        "recycle": 0
-      },
-      "solver2Steps": 111,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 7,
-        "colToCol": 11,
-        "colMultiToCol": 3,
-        "handToSlot": 29,
-        "handToCol": 13,
-        "flip": 42,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Wrapper",
-            "image": "res/Item/Bouquet_Wrapper_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Legato",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bags_word",
-            "name": "Belt bag",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Flower",
-            "image": "res/Item/Bouquet_Flower_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Checkout_word",
-            "name": "Barcode",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Slang_word",
-            "name": "Cringe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Justice_word",
-            "name": "Justice",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bags_word",
-            "name": "Bags",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "XXS",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Petal",
-            "image": "res/Item/Bouquet_Petal_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Laptop_word",
-            "name": "Laptop",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Nude",
-            "image": "res/Item/Lipstick_Nude_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Symphony",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bags_word",
-            "name": "Moon bag",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Pitch",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Laptop_word",
-            "name": "Wireless",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Filler",
-            "image": "res/Item/Bouquet_Filler_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Staccato",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Florist",
-            "image": "res/Item/Bouquet_Florist_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Laptop_word",
-            "name": "Foldable",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Adagio",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Justice_word",
-            "name": "Gavel",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Bouquet": 8,
-      "Music_word": 8,
-      "Sizes_word": 8,
-      "Lipstick": 6,
-      "Bags_word": 6,
-      "Checkout_word": 4,
-      "Slang_word": 4,
-      "Justice_word": 4,
-      "Laptop_word": 3,
-      "Prisoner_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Felon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Octave",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Box bag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Music_word",
-        "name": "Music",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "OMG",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Customer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "Flex",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Handbag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Checkout_word",
-        "name": "Checkout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Scales",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Court",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Tempo",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Portable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Wallet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Detainee",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bouquet",
-        "name": "Bouquet",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Foliage",
-        "image": "res/Item/Bouquet_Foliage_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Ruby red",
-        "image": "res/Item/Lipstick_Rubyred_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "L",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Crimson",
-        "image": "res/Item/Lipstick_Crimson_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lipstick",
-        "name": "Lipstick",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Register",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Prisoner_word",
-        "name": "Prisoner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Fuchsia",
-        "image": "res/Item/Lipstick_Fuchsia_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Slang_word",
-        "name": "Slang",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Ribbon",
-        "image": "res/Item/Bouquet_Ribbon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Corsage",
-        "image": "res/Item/Bouquet_Corsage_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Inmate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "S",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Law",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XS",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Scarlet",
-        "image": "res/Item/Lipstick_Scarlet_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Chord",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "One size",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "M",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Backpack",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "BFF",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sizes_word",
-        "name": "Sizes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Cashier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XXXL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Burgundy",
-        "image": "res/Item/Lipstick_Burgundy_6.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 118,
-      "strategyType": "priority",
-      "solverSteps": 115,
-      "solverMaxSteps": 121,
-      "moveStats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 8,
-        "colToCol": 8,
-        "colMultiToCol": 7,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 42,
-        "recycle": 0
-      },
-      "solver2Steps": 113,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 6,
-        "colToCol": 9,
-        "colMultiToCol": 3,
-        "handToSlot": 32,
-        "handToCol": 10,
-        "flip": 42,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "L",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -1092,8 +43,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Prisoner_word",
-            "name": "Felon",
+            "category": "Music_word",
+            "name": "Adagio",
             "isText": true
           },
           "faceUp": false
@@ -1101,8 +52,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Music_word",
-            "name": "Symphony",
+            "category": "Bouquet",
+            "name": "Petal",
+            "image": "res/Item/Bouquet_Petal_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slang_word",
+            "name": "OMG",
             "isText": true
           },
           "faceUp": true
@@ -1112,8 +73,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Music_word",
-            "name": "Staccato",
+            "category": "Checkout_word",
+            "name": "Cashier",
             "isText": true
           },
           "faceUp": false
@@ -1121,20 +82,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lipstick",
-            "name": "Burgundy",
-            "image": "res/Item/Lipstick_Burgundy_6.png",
-            "isText": false
+            "category": "Music_word",
+            "name": "Pitch",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Bouquet",
-            "name": "Florist",
-            "image": "res/Item/Bouquet_Florist_6.png",
-            "isText": false
+            "category": "Music_word",
+            "name": "Tempo",
+            "isText": true
           },
           "faceUp": false
         },
@@ -1150,14 +109,52 @@
         {
           "card": {
             "type": "regular",
-            "category": "Laptop_word",
-            "name": "Portable",
+            "category": "Checkout_word",
+            "name": "Register",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Foliage",
+            "image": "res/Item/Bouquet_Foliage_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "L",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Burgundy",
+            "image": "res/Item/Lipstick_Burgundy_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XXXL",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -1170,45 +167,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Slang_word",
-            "name": "Cringe",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Fuchsia",
-            "image": "res/Item/Lipstick_Fuchsia_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "XS",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Justice_word",
-            "name": "Scales",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bags_word",
-            "name": "Bags",
+            "category": "Music_word",
+            "name": "Octave",
             "isText": true
           },
           "faceUp": true
@@ -1218,27 +178,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lipstick",
-            "name": "Crimson",
-            "image": "res/Item/Lipstick_Crimson_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bouquet",
-            "name": "Bouquet",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Legato",
+            "category": "Sizes_word",
+            "name": "M",
             "isText": true
           },
           "faceUp": false
@@ -1256,8 +197,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Music_word",
-            "name": "Tempo",
+            "category": "Sizes_word",
+            "name": "XS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bags_word",
+            "name": "Moon bag",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Checkout_word",
+            "name": "Barcode",
             "isText": true
           },
           "faceUp": false
@@ -1273,9 +232,9 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Octave",
+            "type": "gold",
+            "category": "Checkout_word",
+            "name": "Checkout",
             "isText": true
           },
           "faceUp": true
@@ -1297,125 +256,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Music_word",
-        "name": "Adagio",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Flower",
-        "image": "res/Item/Bouquet_Flower_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Inmate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Barcode",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lipstick",
-        "name": "Lipstick",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Foldable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Nude",
-        "image": "res/Item/Lipstick_Nude_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Detainee",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Checkout_word",
-        "name": "Checkout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XXXL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Ruby red",
-        "image": "res/Item/Lipstick_Rubyred_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Justice_word",
-        "name": "Justice",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Cashier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Pitch",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Bags_word",
-        "name": "Moon bag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Music_word",
-        "name": "Music",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Laptop_word",
-        "name": "Laptop",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sizes_word",
-        "name": "Sizes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "OMG",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Register",
+        "name": "Wallet",
         "isText": true
       },
       {
@@ -1425,53 +267,40 @@
         "isText": true
       },
       {
-        "type": "regular",
+        "type": "gold",
         "category": "Bouquet",
-        "name": "Foliage",
-        "image": "res/Item/Bouquet_Foliage_1.png",
+        "name": "Bouquet",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "S",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Wallet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "BFF",
+        "category": "Music_word",
+        "name": "Legato",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Prisoner_word",
-        "name": "Prisoner",
+        "category": "Justice_word",
+        "name": "Justice",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bouquet",
-        "name": "Filler",
-        "image": "res/Item/Bouquet_Filler_5.png",
+        "category": "Lipstick",
+        "name": "Fuchsia",
+        "image": "res/Item/Lipstick_Fuchsia_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Checkout_word",
-        "name": "Customer",
+        "category": "Slang_word",
+        "name": "Flex",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "XL",
+        "category": "Prisoner_word",
+        "name": "Felon",
         "isText": true
       },
       {
@@ -1488,22 +317,33 @@
       },
       {
         "type": "regular",
-        "category": "Bouquet",
-        "name": "Wrapper",
-        "image": "res/Item/Bouquet_Wrapper_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Ribbon",
-        "image": "res/Item/Bouquet_Ribbon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
         "category": "Justice_word",
         "name": "Gavel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bags_word",
+        "name": "Bags",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Flower",
+        "image": "res/Item/Bouquet_Flower_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Laptop_word",
+        "name": "Laptop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Customer",
         "isText": true
       },
       {
@@ -1514,21 +354,140 @@
       },
       {
         "type": "regular",
+        "category": "Laptop_word",
+        "name": "Wireless",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "S",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Bouquet",
-        "name": "Petal",
-        "image": "res/Item/Bouquet_Petal_8.png",
+        "name": "Ribbon",
+        "image": "res/Item/Bouquet_Ribbon_7.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Slang_word",
-        "name": "Flex",
+        "category": "Lipstick",
+        "name": "Ruby red",
+        "image": "res/Item/Lipstick_Rubyred_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Laptop_word",
+        "name": "Foldable",
         "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Prisoner_word",
+        "name": "Prisoner",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sizes_word",
+        "name": "Sizes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Crimson",
+        "image": "res/Item/Lipstick_Crimson_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Handbag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "BFF",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Nude",
+        "image": "res/Item/Lipstick_Nude_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Scales",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Detainee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Filler",
+        "image": "res/Item/Bouquet_Filler_5.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Music_word",
         "name": "Chord",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Music_word",
+        "name": "Music",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Laptop_word",
+        "name": "Portable",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Florist",
+        "image": "res/Item/Bouquet_Florist_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "XL",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lipstick",
+        "name": "Lipstick",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "Cringe",
         "isText": true
       },
       {
@@ -1540,20 +499,21 @@
       },
       {
         "type": "regular",
-        "category": "Laptop_word",
-        "name": "Wireless",
+        "category": "Music_word",
+        "name": "Staccato",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bags_word",
-        "name": "Handbag",
-        "isText": true
+        "category": "Bouquet",
+        "name": "Wrapper",
+        "image": "res/Item/Bouquet_Wrapper_3.png",
+        "isText": false
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "M",
+        "category": "Prisoner_word",
+        "name": "Inmate",
         "isText": true
       }
     ],
@@ -1567,24 +527,24 @@
       "solverSteps": 112,
       "solverMaxSteps": 121,
       "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 6,
-        "colToCol": 7,
-        "colMultiToCol": 3,
-        "handToSlot": 24,
-        "handToCol": 18,
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 7,
+        "colToCol": 8,
+        "colMultiToCol": 5,
+        "handToSlot": 27,
+        "handToCol": 15,
         "flip": 42,
         "recycle": 0
       },
       "solver2Steps": 112,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 13,
+        "colSingleToSlot": 9,
         "colMultiToSlot": 7,
-        "colToCol": 5,
+        "colToCol": 9,
         "colMultiToCol": 3,
-        "handToSlot": 23,
-        "handToCol": 19,
+        "handToSlot": 29,
+        "handToCol": 13,
         "flip": 42,
         "recycle": 0
       }
@@ -1595,7 +555,7 @@
           "card": {
             "type": "regular",
             "category": "Bags_word",
-            "name": "Backpack",
+            "name": "Wallet",
             "isText": true
           },
           "faceUp": false
@@ -1603,41 +563,32 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sizes_word",
-            "name": "M",
+            "category": "Laptop_word",
+            "name": "Foldable",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Bags_word",
-            "name": "Bags",
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Symphony",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Bouquet",
-            "name": "Bouquet",
-            "isText": false
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Pitch",
+            "isText": true
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Justice_word",
-            "name": "Scales",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -1651,39 +602,18 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bouquet",
-            "name": "Foliage",
-            "image": "res/Item/Bouquet_Foliage_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Tempo",
+            "category": "Slang_word",
+            "name": "OMG",
             "isText": true
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Laptop_word",
-            "name": "Wireless",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
             "category": "Lipstick",
-            "name": "Crimson",
-            "image": "res/Item/Lipstick_Crimson_1.png",
+            "name": "Scarlet",
+            "image": "res/Item/Lipstick_Scarlet_3.png",
             "isText": false
           },
           "faceUp": false
@@ -1701,8 +631,47 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sizes_word",
-            "name": "XL",
+            "category": "Bags_word",
+            "name": "Belt bag",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Staccato",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Filler",
+            "image": "res/Item/Bouquet_Filler_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Justice_word",
+            "name": "Justice",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Checkout_word",
+            "name": "Checkout",
             "isText": true
           },
           "faceUp": false
@@ -1711,7 +680,7 @@
           "card": {
             "type": "regular",
             "category": "Slang_word",
-            "name": "OMG",
+            "name": "Cringe",
             "isText": true
           },
           "faceUp": false
@@ -1720,8 +689,38 @@
           "card": {
             "type": "regular",
             "category": "Music_word",
-            "name": "Octave",
+            "name": "Tempo",
             "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bags_word",
+            "name": "Moon bag",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Gavel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Petal",
+            "image": "res/Item/Bouquet_Petal_8.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1732,24 +731,13 @@
             "name": "XXS",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Lipstick",
-            "name": "Lipstick",
-            "isText": false
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
             "category": "Prisoner_word",
-            "name": "Felon",
+            "name": "Detainee",
             "isText": true
           },
           "faceUp": false
@@ -1757,8 +745,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Sizes_word",
-            "name": "Sizes",
+            "category": "Laptop_word",
+            "name": "Laptop",
             "isText": true
           },
           "faceUp": false
@@ -1766,38 +754,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lipstick",
-            "name": "Nude",
-            "image": "res/Item/Lipstick_Nude_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Checkout_word",
-            "name": "Cashier",
+            "category": "Laptop_word",
+            "name": "Portable",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "L",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Ribbon",
-            "image": "res/Item/Bouquet_Ribbon_7.png",
-            "isText": false
           },
           "faceUp": true
         }
@@ -1818,51 +777,14 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Music_word",
-        "name": "Legato",
+        "category": "Laptop_word",
+        "name": "Wireless",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bags_word",
-        "name": "Handbag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Belt bag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bouquet",
-        "name": "Florist",
-        "image": "res/Item/Bouquet_Florist_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Gavel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Moon bag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Checkout_word",
-        "name": "Checkout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Court",
+        "category": "Sizes_word",
+        "name": "L",
         "isText": true
       },
       {
@@ -1873,14 +795,8 @@
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "XS",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Music_word",
-        "name": "Music",
+        "category": "Bags_word",
+        "name": "Box bag",
         "isText": true
       },
       {
@@ -1890,22 +806,15 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Justice_word",
-        "name": "Justice",
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "XS",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Lipstick",
-        "name": "Burgundy",
-        "image": "res/Item/Lipstick_Burgundy_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Symphony",
+        "category": "Justice_word",
+        "name": "Law",
         "isText": true
       },
       {
@@ -1916,14 +825,565 @@
       },
       {
         "type": "regular",
-        "category": "Music_word",
-        "name": "Pitch",
+        "category": "Sizes_word",
+        "name": "XXXL",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Music_word",
-        "name": "Staccato",
+        "name": "Adagio",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Customer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Music_word",
+        "name": "Music",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Slang_word",
+        "name": "Slang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "S",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "XL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Ribbon",
+        "image": "res/Item/Bouquet_Ribbon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Legato",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Ruby red",
+        "image": "res/Item/Lipstick_Rubyred_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Crimson",
+        "image": "res/Item/Lipstick_Crimson_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Court",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Wrapper",
+        "image": "res/Item/Bouquet_Wrapper_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Handbag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Octave",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Barcode",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sizes_word",
+        "name": "Sizes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "BFF",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Prisoner_word",
+        "name": "Prisoner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Cashier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Nude",
+        "image": "res/Item/Lipstick_Nude_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Lipstick",
+        "name": "Lipstick",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Backpack",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bags_word",
+        "name": "Bags",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Scales",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "Flex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Chord",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "M",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Foliage",
+        "image": "res/Item/Bouquet_Foliage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Florist",
+        "image": "res/Item/Bouquet_Florist_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Fuchsia",
+        "image": "res/Item/Lipstick_Fuchsia_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Burgundy",
+        "image": "res/Item/Lipstick_Burgundy_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Bouquet",
+        "name": "Bouquet",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Felon",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 113,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 6,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 111,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
+        "colToCol": 1,
+        "colMultiToCol": 5,
+        "handToSlot": 32,
+        "handToCol": 10,
+        "flip": 42,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Scales",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slang_word",
+            "name": "Flex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Laptop_word",
+            "name": "Wireless",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bags_word",
+            "name": "Bags",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Burgundy",
+            "image": "res/Item/Lipstick_Burgundy_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Checkout_word",
+            "name": "Register",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Nude",
+            "image": "res/Item/Lipstick_Nude_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Octave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Adagio",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slang_word",
+            "name": "BFF",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Pitch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bags_word",
+            "name": "Handbag",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Slang_word",
+            "name": "OMG",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Laptop_word",
+            "name": "Portable",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Music_word",
+            "name": "Music",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Laptop_word",
+            "name": "Laptop",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Crimson",
+            "image": "res/Item/Lipstick_Crimson_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Prisoner_word",
+            "name": "Felon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Staccato",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Laptop_word",
+            "name": "Foldable",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XL",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Bouquet": 8,
+      "Music_word": 8,
+      "Sizes_word": 8,
+      "Lipstick": 6,
+      "Bags_word": 6,
+      "Checkout_word": 4,
+      "Slang_word": 4,
+      "Justice_word": 4,
+      "Laptop_word": 3,
+      "Prisoner_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Barcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "One size",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Backpack",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Belt bag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "XXXL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Chord",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Fuchsia",
+        "image": "res/Item/Lipstick_Fuchsia_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Justice_word",
+        "name": "Justice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Cashier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Filler",
+        "image": "res/Item/Bouquet_Filler_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Corsage",
+        "image": "res/Item/Bouquet_Corsage_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Checkout_word",
+        "name": "Checkout",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Prisoner_word",
+        "name": "Prisoner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "XXS",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Inmate",
         "isText": true
       },
       {
@@ -1941,9 +1401,14 @@
       },
       {
         "type": "regular",
-        "category": "Bouquet",
-        "name": "Filler",
-        "image": "res/Item/Bouquet_Filler_5.png",
+        "category": "Sizes_word",
+        "name": "L",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lipstick",
+        "name": "Lipstick",
         "isText": false
       },
       {
@@ -1953,10 +1418,74 @@
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "Bouquet",
+        "name": "Bouquet",
+        "isText": false
+      },
+      {
         "type": "regular",
-        "category": "Checkout_word",
-        "name": "Barcode",
+        "category": "Bouquet",
+        "name": "Petal",
+        "image": "res/Item/Bouquet_Petal_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sizes_word",
+        "name": "Sizes",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Ruby red",
+        "image": "res/Item/Lipstick_Rubyred_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Box bag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Court",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Detainee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "M",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Legato",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Flower",
+        "image": "res/Item/Bouquet_Flower_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Ribbon",
+        "image": "res/Item/Bouquet_Ribbon_7.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1968,40 +1497,8 @@
       {
         "type": "regular",
         "category": "Bouquet",
-        "name": "Petal",
-        "image": "res/Item/Bouquet_Petal_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Ruby red",
-        "image": "res/Item/Lipstick_Rubyred_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Law",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Box bag",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Prisoner_word",
-        "name": "Prisoner",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Fuchsia",
-        "image": "res/Item/Lipstick_Fuchsia_4.png",
+        "name": "Florist",
+        "image": "res/Item/Bouquet_Florist_6.png",
         "isText": false
       },
       {
@@ -2012,50 +1509,33 @@
       },
       {
         "type": "regular",
+        "category": "Bouquet",
+        "name": "Foliage",
+        "image": "res/Item/Bouquet_Foliage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Law",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Tempo",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Bags_word",
         "name": "Wallet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "Flex",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Portable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Foldable",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Detainee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Chord",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Adagio",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Slang_word",
-        "name": "BFF",
         "isText": true
       },
       {
@@ -2065,15 +1545,15 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Laptop_word",
-        "name": "Laptop",
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Moon bag",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "XXXL",
+        "category": "Justice_word",
+        "name": "Gavel",
         "isText": true
       }
     ],
@@ -2084,12 +1564,12 @@
       "maxSlots": 4,
       "maxSteps": 118,
       "strategyType": "priority",
-      "solverSteps": 114,
+      "solverSteps": 115,
       "solverMaxSteps": 121,
       "moveStats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 8,
-        "colToCol": 6,
+        "colSingleToSlot": 17,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
         "colMultiToCol": 5,
         "handToSlot": 27,
         "handToCol": 15,
@@ -2099,12 +1579,12 @@
       "solver2Steps": 111,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 13,
+        "colSingleToSlot": 16,
         "colMultiToSlot": 6,
-        "colToCol": 6,
-        "colMultiToCol": 2,
-        "handToSlot": 29,
-        "handToCol": 13,
+        "colToCol": 2,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
         "flip": 42,
         "recycle": 0
       }
@@ -2113,30 +1593,10 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Justice_word",
-            "name": "Justice",
+            "type": "regular",
+            "category": "Bags_word",
+            "name": "Handbag",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Florist",
-            "image": "res/Item/Bouquet_Florist_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Flower",
-            "image": "res/Item/Bouquet_Flower_2.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -2147,92 +1607,35 @@
             "name": "Pitch",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lipstick",
-            "name": "Nude",
-            "image": "res/Item/Lipstick_Nude_5.png",
-            "isText": false
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Checkout_word",
-            "name": "Customer",
+            "category": "Bags_word",
+            "name": "Box bag",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sizes_word",
-            "name": "XL",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Justice_word",
-            "name": "Gavel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Slang_word",
-            "name": "Cringe",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Music_word",
-            "name": "Legato",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bouquet",
-            "name": "Petal",
-            "image": "res/Item/Bouquet_Petal_8.png",
-            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
-            "category": "Lipstick",
-            "name": "Lipstick",
-            "isText": false
+            "category": "Music_word",
+            "name": "Music",
+            "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
-            "category": "Music_word",
-            "name": "Tempo",
-            "isText": true
+            "category": "Lipstick",
+            "name": "Crimson",
+            "image": "res/Item/Lipstick_Crimson_1.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -2248,8 +1651,27 @@
         {
           "card": {
             "type": "regular",
-            "category": "Slang_word",
-            "name": "BFF",
+            "category": "Lipstick",
+            "name": "Fuchsia",
+            "image": "res/Item/Lipstick_Fuchsia_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Law",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Legato",
             "isText": true
           },
           "faceUp": true
@@ -2269,8 +1691,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Prisoner_word",
-            "name": "Detainee",
+            "category": "Sizes_word",
+            "name": "XS",
             "isText": true
           },
           "faceUp": false
@@ -2278,17 +1700,19 @@
         {
           "card": {
             "type": "regular",
-            "category": "Bags_word",
-            "name": "Wallet",
-            "isText": true
+            "category": "Bouquet",
+            "name": "Petal",
+            "image": "res/Item/Bouquet_Petal_8.png",
+            "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Bouquet",
-            "name": "Bouquet",
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Burgundy",
+            "image": "res/Item/Lipstick_Burgundy_6.png",
             "isText": false
           },
           "faceUp": false
@@ -2297,7 +1721,7 @@
           "card": {
             "type": "regular",
             "category": "Sizes_word",
-            "name": "M",
+            "name": "XL",
             "isText": true
           },
           "faceUp": false
@@ -2305,18 +1729,75 @@
         {
           "card": {
             "type": "regular",
-            "category": "Lipstick",
-            "name": "Crimson",
-            "image": "res/Item/Lipstick_Crimson_1.png",
+            "category": "Laptop_word",
+            "name": "Portable",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bags_word",
+            "name": "Backpack",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Wrapper",
+            "image": "res/Item/Bouquet_Wrapper_3.png",
             "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Filler",
+            "image": "res/Item/Bouquet_Filler_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Staccato",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "gold",
-            "category": "Slang_word",
-            "name": "Slang",
+            "category": "Checkout_word",
+            "name": "Checkout",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "L",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XXS",
             "isText": true
           },
           "faceUp": true
@@ -2338,14 +1819,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Laptop_word",
-        "name": "Portable",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Bags_word",
-        "name": "Belt bag",
+        "name": "Moon bag",
         "isText": true
       },
       {
@@ -2357,64 +1832,27 @@
       },
       {
         "type": "regular",
-        "category": "Slang_word",
-        "name": "OMG",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Bags_word",
-        "name": "Bags",
+        "name": "Wallet",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Justice_word",
-        "name": "Scales",
+        "category": "Sizes_word",
+        "name": "M",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Bags_word",
-        "name": "Moon bag",
+        "category": "Sizes_word",
+        "name": "XXXL",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Music_word",
-        "name": "Octave",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Prisoner_word",
-        "name": "Prisoner",
+        "name": "Detainee",
         "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Laptop_word",
-        "name": "Laptop",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bags_word",
-        "name": "Box bag",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Wireless",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lipstick",
-        "name": "Burgundy",
-        "image": "res/Item/Lipstick_Burgundy_6.png",
-        "isText": false
       },
       {
         "type": "regular",
@@ -2425,14 +1863,63 @@
       {
         "type": "regular",
         "category": "Bouquet",
-        "name": "Filler",
-        "image": "res/Item/Bouquet_Filler_5.png",
+        "name": "Florist",
+        "image": "res/Item/Bouquet_Florist_6.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Prisoner_word",
-        "name": "Felon",
+        "category": "Music_word",
+        "name": "Tempo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "S",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Justice_word",
+        "name": "Justice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Laptop_word",
+        "name": "Foldable",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lipstick",
+        "name": "Lipstick",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Flower",
+        "image": "res/Item/Bouquet_Flower_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Gavel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sizes_word",
+        "name": "One size",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Slang_word",
+        "name": "Slang",
         "isText": true
       },
       {
@@ -2444,27 +1931,113 @@
       },
       {
         "type": "regular",
-        "category": "Bouquet",
-        "name": "Wrapper",
-        "image": "res/Item/Bouquet_Wrapper_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Justice_word",
-        "name": "Court",
+        "category": "Checkout_word",
+        "name": "Register",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Sizes_word",
-        "name": "L",
+        "category": "Prisoner_word",
+        "name": "Inmate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Laptop_word",
+        "name": "Laptop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Scales",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Felon",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Checkout_word",
-        "name": "Register",
+        "name": "Customer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Octave",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sizes_word",
+        "name": "Sizes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Barcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Cashier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Corsage",
+        "image": "res/Item/Bouquet_Corsage_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Nude",
+        "image": "res/Item/Lipstick_Nude_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Bags_word",
+        "name": "Bags",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "OMG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Ruby red",
+        "image": "res/Item/Lipstick_Rubyred_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "BFF",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bouquet",
+        "name": "Bouquet",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Laptop_word",
+        "name": "Wireless",
         "isText": true
       },
       {
@@ -2475,10 +2048,294 @@
       },
       {
         "type": "regular",
-        "category": "Bags_word",
-        "name": "Handbag",
+        "category": "Slang_word",
+        "name": "Cringe",
         "isText": true
       },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "Flex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Court",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Prisoner_word",
+        "name": "Prisoner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Belt bag",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 118,
+      "strategyType": "priority",
+      "solverSteps": 115,
+      "solverMaxSteps": 121,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 5,
+        "colToCol": 9,
+        "colMultiToCol": 4,
+        "handToSlot": 31,
+        "handToCol": 11,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 111,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 4,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 42,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lipstick",
+            "name": "Scarlet",
+            "image": "res/Item/Lipstick_Scarlet_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Laptop_word",
+            "name": "Portable",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Flower",
+            "image": "res/Item/Bouquet_Flower_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Florist",
+            "image": "res/Item/Bouquet_Florist_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "XL",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Pitch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Ribbon",
+            "image": "res/Item/Bouquet_Ribbon_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Laptop_word",
+            "name": "Foldable",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Octave",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Checkout_word",
+            "name": "Cashier",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Petal",
+            "image": "res/Item/Bouquet_Petal_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Prisoner_word",
+            "name": "Detainee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bouquet",
+            "name": "Wrapper",
+            "image": "res/Item/Bouquet_Wrapper_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Gavel",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Court",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Slang_word",
+            "name": "Slang",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Music_word",
+            "name": "Chord",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Checkout_word",
+            "name": "Barcode",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Justice_word",
+            "name": "Law",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "M",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sizes_word",
+            "name": "L",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Bouquet": 8,
+      "Music_word": 8,
+      "Sizes_word": 8,
+      "Lipstick": 6,
+      "Bags_word": 6,
+      "Checkout_word": 4,
+      "Slang_word": 4,
+      "Justice_word": 4,
+      "Laptop_word": 3,
+      "Prisoner_word": 3
+    },
+    "handPile": [
       {
         "type": "regular",
         "category": "Lipstick",
@@ -2493,40 +2350,66 @@
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Nude",
+        "image": "res/Item/Lipstick_Nude_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Burgundy",
+        "image": "res/Item/Lipstick_Burgundy_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Sizes_word",
-        "name": "Sizes",
+        "name": "One size",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Justice_word",
+        "name": "Scales",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "OMG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Box bag",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Prisoner_word",
+        "name": "Prisoner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Staccato",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Lipstick",
-        "name": "Fuchsia",
-        "image": "res/Item/Lipstick_Fuchsia_4.png",
+        "name": "Crimson",
+        "image": "res/Item/Lipstick_Crimson_1.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Bags_word",
-        "name": "Backpack",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Music_word",
-        "name": "Music",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Checkout_word",
-        "name": "Checkout",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "XS",
+        "name": "Adagio",
         "isText": true
       },
       {
@@ -2538,26 +2421,149 @@
       },
       {
         "type": "regular",
+        "category": "Bouquet",
+        "name": "Foliage",
+        "image": "res/Item/Bouquet_Foliage_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Slang_word",
-        "name": "Flex",
+        "name": "Cringe",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Justice_word",
-        "name": "Law",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Laptop_word",
-        "name": "Foldable",
+        "category": "Bags_word",
+        "name": "Belt bag",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Sizes_word",
-        "name": "One size",
+        "name": "S",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Laptop_word",
+        "name": "Laptop",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "BFF",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Legato",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lipstick",
+        "name": "Fuchsia",
+        "image": "res/Item/Lipstick_Fuchsia_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Laptop_word",
+        "name": "Wireless",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Customer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Music_word",
+        "name": "Music",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Backpack",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Music_word",
+        "name": "Tempo",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sizes_word",
+        "name": "Sizes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Checkout_word",
+        "name": "Register",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Handbag",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bouquet",
+        "name": "Filler",
+        "image": "res/Item/Bouquet_Filler_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Checkout_word",
+        "name": "Checkout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Prisoner_word",
+        "name": "Felon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Justice_word",
+        "name": "Justice",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Moon bag",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lipstick",
+        "name": "Lipstick",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Bouquet",
+        "name": "Bouquet",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Slang_word",
+        "name": "Flex",
         "isText": true
       },
       {
@@ -2568,32 +2574,26 @@
       },
       {
         "type": "regular",
-        "category": "Checkout_word",
-        "name": "Barcode",
+        "category": "Music_word",
+        "name": "Symphony",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bags_word",
+        "name": "Wallet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bags_word",
+        "name": "Bags",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Sizes_word",
         "name": "XXS",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sizes_word",
-        "name": "S",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Music_word",
-        "name": "Staccato",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Checkout_word",
-        "name": "Cashier",
         "isText": true
       }
     ],

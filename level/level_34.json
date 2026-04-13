@@ -4,32 +4,175 @@
       "maxSlots": 4,
       "maxSteps": 133,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 133,
       "solverMaxSteps": 135,
       "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 5,
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 7,
         "colToCol": 3,
-        "colMultiToCol": 5,
-        "handToSlot": 27,
-        "handToCol": 15,
-        "flip": 58,
+        "colMultiToCol": 3,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 63,
         "recycle": 1
       },
-      "solver2Steps": 132,
+      "solver2Steps": 131,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 8,
-        "colToCol": 3,
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
         "colMultiToCol": 2,
-        "handToSlot": 16,
-        "handToCol": 26,
-        "flip": 64,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 61,
         "recycle": 1
       }
     },
     "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lock_word",
+            "name": "Lock",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Worship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Trusty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Aurora",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Pastor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Chalky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Legs_word",
+            "name": "Legs",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Clay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Prayer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Silty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Nova",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toppings",
+            "name": "Syrup",
+            "image": "res/Item/Toppings_Syrup_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Western",
+            "name": "Rodeo",
+            "image": "res/Item/western_cacti_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Nebula",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Thunder_word",
+            "name": "Hum",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
       [
         {
           "card": {
@@ -43,17 +186,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Motive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Boom",
+            "category": "Lock_word",
+            "name": "Secure",
             "isText": true
           },
           "faceUp": false
@@ -62,13 +196,921 @@
           "card": {
             "type": "regular",
             "category": "Religion_word",
-            "name": "Abbot",
+            "name": "Faith",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Pope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Sturdy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Sandy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Western",
+            "name": "Gambler",
+            "image": "res/Item/western_badge_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sleuth_word": 8,
+      "Space_word": 8,
+      "Religion_word": 8,
+      "Soil_word": 6,
+      "Western": 6,
+      "Roller_word": 4,
+      "Thunder_word": 4,
+      "Toppings": 4,
+      "Lock_word": 3,
+      "Legs_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Abbot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Motive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Pulsar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Monk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Mystery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Thigh",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sleuth_word",
+        "name": "Sleuth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Caramel",
+        "image": "res/Item/Toppings_Caramel_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Eclipse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Loamy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Boom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Jelly",
+        "image": "res/Item/Toppings_Jelly_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Toppings",
+        "name": "Toppings",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Lasso",
+        "image": "res/Item/western_lasso_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Roll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Suspect",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Western",
+        "name": "Western",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Space_word",
+        "name": "Space",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Thunder_word",
+        "name": "Thunder",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soil_word",
+        "name": "Soil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Crime",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Cowboy",
+        "image": "res/Item/western_cowboy_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Meteor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Sheriff",
+        "image": "res/Item/western_sheriff_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Victim",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Roar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Saloon",
+        "image": "res/Item/western_saloon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Cover",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Roller_word",
+        "name": "Roller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Witness",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Knee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Rumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Alibi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Ankle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Spread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Quasar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Cardinal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Peaty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Honey",
+        "image": "res/Item/Toppings_Honey_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Religion_word",
+        "name": "Religion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Clue",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 133,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 135,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 8,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 17,
+        "handToCol": 25,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 130,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 9,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 62,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Trusty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Aurora",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Western",
+            "name": "Cowboy",
+            "image": "res/Item/western_cowboy_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toppings",
+            "name": "Jelly",
+            "image": "res/Item/Toppings_Jelly_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Clue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Meteor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Roller_word",
+            "name": "Roller",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Crime",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Eclipse",
             "isText": true
           },
           "faceUp": true
         }
       ],
       [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sleuth_word",
+            "name": "Sleuth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Peaty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Nebula",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Chalky",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Quasar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legs_word",
+            "name": "Thigh",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Pope",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Legs_word",
+            "name": "Legs",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Pastor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Mystery",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Secure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roller_word",
+            "name": "Spread",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Silty",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sleuth_word": 8,
+      "Space_word": 8,
+      "Religion_word": 8,
+      "Soil_word": 6,
+      "Western": 6,
+      "Roller_word": 4,
+      "Thunder_word": 4,
+      "Toppings": 4,
+      "Lock_word": 3,
+      "Legs_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Roar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Worship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Victim",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Saloon",
+        "image": "res/Item/western_saloon_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Religion_word",
+        "name": "Religion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Knee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Witness",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toppings",
+        "name": "Toppings",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Western",
+        "name": "Western",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Faith",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Caramel",
+        "image": "res/Item/Toppings_Caramel_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Hum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Sheriff",
+        "image": "res/Item/western_sheriff_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Roll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Rodeo",
+        "image": "res/Item/western_cacti_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Honey",
+        "image": "res/Item/Toppings_Honey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Prayer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Loamy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Abbot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Rumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Nova",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Asteroid",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Space_word",
+        "name": "Space",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Suspect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Cover",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Thunder_word",
+        "name": "Thunder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Motive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Gambler",
+        "image": "res/Item/western_badge_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Ankle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Syrup",
+        "image": "res/Item/Toppings_Syrup_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Sandy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Lasso",
+        "image": "res/Item/western_lasso_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Cardinal",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lock_word",
+        "name": "Lock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Alibi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Boom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Monk",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Soil_word",
+        "name": "Soil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Clay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lock_word",
+        "name": "Sturdy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Pulsar",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 133,
+      "strategyType": "priority",
+      "solverSteps": 128,
+      "solverMaxSteps": 135,
+      "moveStats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 3,
+        "handToSlot": 29,
+        "handToCol": 13,
+        "flip": 59,
+        "recycle": 1
+      },
+      "solver2Steps": 126,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 28,
+        "handToCol": 14,
+        "flip": 57,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roller_word",
+            "name": "Paint",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Trusty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Monk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Eclipse",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Western",
+            "name": "Cowboy",
+            "image": "res/Item/western_cowboy_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "gold",
@@ -90,1162 +1132,30 @@
         {
           "card": {
             "type": "regular",
-            "category": "Soil_word",
-            "name": "Loamy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Space_word",
-            "name": "Quasar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toppings",
-            "name": "Syrup",
-            "image": "res/Item/Toppings_Syrup_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Space_word",
-            "name": "Space",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Roller_word",
-            "name": "Cover",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Lasso",
-            "image": "res/Item/western_lasso_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Chalky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lock_word",
-            "name": "Sturdy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Witness",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Clue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Sandy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Mystery",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toppings",
-            "name": "Jelly",
-            "image": "res/Item/Toppings_Jelly_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Victim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Cardinal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Western",
             "name": "Sheriff",
             "image": "res/Item/western_sheriff_5.png",
             "isText": false
           },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Sleuth_word": 8,
-      "Space_word": 8,
-      "Religion_word": 8,
-      "Soil_word": 6,
-      "Western": 6,
-      "Roller_word": 4,
-      "Thunder_word": 4,
-      "Toppings": 4,
-      "Lock_word": 3,
-      "Legs_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Meteor",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soil_word",
-        "name": "Soil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Roar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Monk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Religion_word",
-        "name": "Religion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Eclipse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Saloon",
-        "image": "res/Item/western_saloon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Alibi",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Toppings",
-        "name": "Toppings",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Roll",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Clay",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Thunder_word",
-        "name": "Thunder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nova",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sleuth_word",
-        "name": "Sleuth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Prayer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Rodeo",
-        "image": "res/Item/western_cacti_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Knee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Suspect",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Cowboy",
-        "image": "res/Item/western_cowboy_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Roller_word",
-        "name": "Roller",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Rumble",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Silty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Spread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Aurora",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Caramel",
-        "image": "res/Item/Toppings_Caramel_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Honey",
-        "image": "res/Item/Toppings_Honey_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Legs_word",
-        "name": "Legs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Peaty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Ankle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Pulsar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Lock_word",
-        "name": "Lock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pastor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Trusty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Secure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Hum",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Gambler",
-        "image": "res/Item/western_badge_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Thigh",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Paint",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nebula",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Crime",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 133,
-      "strategyType": "priority",
-      "solverSteps": 129,
-      "solverMaxSteps": 135,
-      "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 5,
-        "colToCol": 5,
-        "colMultiToCol": 2,
-        "handToSlot": 27,
-        "handToCol": 15,
-        "flip": 62,
-        "recycle": 1
-      },
-      "solver2Steps": 126,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 11,
-        "colMultiToSlot": 7,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 25,
-        "handToCol": 17,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Hum",
-            "isText": true
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Toppings",
-            "name": "Syrup",
-            "image": "res/Item/Toppings_Syrup_4.png",
+            "category": "Western",
+            "name": "Rodeo",
+            "image": "res/Item/western_cacti_8.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Chalky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Peaty",
-            "isText": true
           },
           "faceUp": true
         }
       ],
       [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Toppings",
-            "name": "Toppings",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Roar",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
             "category": "Legs_word",
             "name": "Ankle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Mystery",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Gambler",
-            "image": "res/Item/western_badge_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Pope",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Abbot",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Space_word",
-            "name": "Asteroid",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Motive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Space_word",
-            "name": "Space",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Clue",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Victim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Monk",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Rumble",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Space_word",
-            "name": "Pulsar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Sheriff",
-            "image": "res/Item/western_sheriff_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Loamy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Legs_word",
-            "name": "Legs",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Sleuth_word": 8,
-      "Space_word": 8,
-      "Religion_word": 8,
-      "Soil_word": 6,
-      "Western": 6,
-      "Roller_word": 4,
-      "Thunder_word": 4,
-      "Toppings": 4,
-      "Lock_word": 3,
-      "Legs_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Silty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Thigh",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Saloon",
-        "image": "res/Item/western_saloon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Cover",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Aurora",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Witness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Rodeo",
-        "image": "res/Item/western_cacti_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Alibi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Roll",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Religion_word",
-        "name": "Religion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Paint",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Quasar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Sandy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Faith",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Suspect",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Boom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Eclipse",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Western",
-        "name": "Western",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Clay",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Jelly",
-        "image": "res/Item/Toppings_Jelly_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Meteor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pastor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Trusty",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sleuth_word",
-        "name": "Sleuth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Knee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Lasso",
-        "image": "res/Item/western_lasso_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Crime",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Caramel",
-        "image": "res/Item/Toppings_Caramel_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Cardinal",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Soil_word",
-        "name": "Soil",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nova",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Spread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Honey",
-        "image": "res/Item/Toppings_Honey_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nebula",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Cowboy",
-        "image": "res/Item/western_cowboy_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lock_word",
-        "name": "Lock",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Sturdy",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Thunder_word",
-        "name": "Thunder",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Roller_word",
-        "name": "Roller",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Prayer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Secure",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 133,
-      "strategyType": "priority",
-      "solverSteps": 128,
-      "solverMaxSteps": 135,
-      "moveStats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 7,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 26,
-        "handToCol": 16,
-        "flip": 60,
-        "recycle": 1
-      },
-      "solver2Steps": 125,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 14,
-        "colMultiToSlot": 7,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 24,
-        "handToCol": 18,
-        "flip": 56,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Soil_word",
-            "name": "Soil",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Roller_word",
-            "name": "Roll",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Space_word",
-            "name": "Asteroid",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Victim",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Faith",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lock_word",
-            "name": "Sturdy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Hum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Monk",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Lock_word",
-            "name": "Secure",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Clue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Silty",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Alibi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Saloon",
-            "image": "res/Item/western_saloon_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Sandy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Crime",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Motive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Abbot",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Space_word",
-            "name": "Quasar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Clay",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Chalky",
             "isText": true
           },
           "faceUp": false
@@ -1263,8 +1173,100 @@
         {
           "card": {
             "type": "regular",
+            "category": "Soil_word",
+            "name": "Silty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Abbot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Sturdy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lock_word",
+            "name": "Lock",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roller_word",
+            "name": "Cover",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Aurora",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Nebula",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Meteor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Thunder_word",
+            "name": "Rumble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Sleuth_word",
-            "name": "Suspect",
+            "name": "Sleuth",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Thunder_word",
+            "name": "Hum",
             "isText": true
           },
           "faceUp": true
@@ -1286,40 +1288,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Toppings",
-        "name": "Jelly",
-        "image": "res/Item/Toppings_Jelly_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Aurora",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Roller_word",
-        "name": "Roller",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Rodeo",
-        "image": "res/Item/western_cacti_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Witness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Paint",
+        "category": "Religion_word",
+        "name": "Prayer",
         "isText": true
       },
       {
@@ -1330,28 +1300,64 @@
       },
       {
         "type": "regular",
+        "category": "Religion_word",
+        "name": "Worship",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Sandy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Chalky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Witness",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Thunder_word",
+        "name": "Thunder",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Roller_word",
-        "name": "Cover",
+        "name": "Roll",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Space_word",
-        "name": "Nova",
+        "category": "Sleuth_word",
+        "name": "Victim",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Western",
-        "name": "Lasso",
-        "image": "res/Item/western_lasso_3.png",
+        "category": "Soil_word",
+        "name": "Clay",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Cardinal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Jelly",
+        "image": "res/Item/Toppings_Jelly_3.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nebula",
-        "isText": true
       },
       {
         "type": "regular",
@@ -1361,8 +1367,26 @@
       },
       {
         "type": "regular",
-        "category": "Legs_word",
-        "name": "Knee",
+        "category": "Space_word",
+        "name": "Nova",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Space_word",
+        "name": "Space",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Clue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Pastor",
         "isText": true
       },
       {
@@ -1380,130 +1404,13 @@
       {
         "type": "regular",
         "category": "Thunder_word",
-        "name": "Roar",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Western",
-        "name": "Western",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Rumble",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Ankle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Cardinal",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Mystery",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Peaty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Trusty",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Space_word",
-        "name": "Space",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Meteor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Worship",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Thunder_word",
-        "name": "Thunder",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sleuth_word",
-        "name": "Sleuth",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Caramel",
-        "image": "res/Item/Toppings_Caramel_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Syrup",
-        "image": "res/Item/Toppings_Syrup_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Religion_word",
-        "name": "Religion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Gambler",
-        "image": "res/Item/western_badge_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pastor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pope",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Eclipse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
         "name": "Boom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Alibi",
         "isText": true
       },
       {
@@ -1514,21 +1421,108 @@
       },
       {
         "type": "regular",
+        "category": "Toppings",
+        "name": "Caramel",
+        "image": "res/Item/Toppings_Caramel_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Soil_word",
+        "name": "Soil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Knee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Roar",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Western",
-        "name": "Sheriff",
-        "image": "res/Item/western_sheriff_5.png",
+        "name": "Lasso",
+        "image": "res/Item/western_lasso_3.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Religion_word",
-        "name": "Prayer",
+        "name": "Pope",
         "isText": true
       },
       {
         "type": "gold",
+        "category": "Religion_word",
+        "name": "Religion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Motive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Syrup",
+        "image": "res/Item/Toppings_Syrup_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Suspect",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Gambler",
+        "image": "res/Item/western_badge_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Roller_word",
+        "name": "Roller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Crime",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Quasar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Peaty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Asteroid",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Lock_word",
-        "name": "Lock",
+        "name": "Secure",
         "isText": true
       },
       {
@@ -1540,9 +1534,15 @@
       {
         "type": "regular",
         "category": "Western",
-        "name": "Cowboy",
-        "image": "res/Item/western_cowboy_4.png",
+        "name": "Saloon",
+        "image": "res/Item/western_saloon_7.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Mystery",
+        "isText": true
       }
     ],
     "handDisplay": []
@@ -1552,28 +1552,28 @@
       "maxSlots": 4,
       "maxSteps": 133,
       "strategyType": "priority",
-      "solverSteps": 126,
+      "solverSteps": 125,
       "solverMaxSteps": 135,
       "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 5,
-        "colToCol": 5,
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
         "colMultiToCol": 2,
-        "handToSlot": 29,
-        "handToCol": 13,
-        "flip": 59,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 57,
         "recycle": 1
       },
-      "solver2Steps": 133,
+      "solver2Steps": 127,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 7,
-        "colToCol": 2,
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
         "colMultiToCol": 2,
-        "handToSlot": 20,
-        "handToCol": 22,
-        "flip": 67,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 57,
         "recycle": 1
       }
     },
@@ -1581,9 +1581,9 @@
       [
         {
           "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Space_word",
-            "name": "Pulsar",
+            "name": "Space",
             "isText": true
           },
           "faceUp": false
@@ -1591,17 +1591,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Western",
-            "name": "Western",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Worship",
+            "category": "Lock_word",
+            "name": "Lock",
             "isText": true
           },
           "faceUp": false
@@ -1609,8 +1600,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Legs_word",
-            "name": "Ankle",
+            "category": "Religion_word",
+            "name": "Faith",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roller_word",
+            "name": "Roll",
             "isText": true
           },
           "faceUp": true
@@ -1620,18 +1620,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Toppings",
-            "name": "Syrup",
-            "image": "res/Item/Toppings_Syrup_4.png",
-            "isText": false
+            "category": "Sleuth_word",
+            "name": "Crime",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Abbot",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "gold",
-            "category": "Sleuth_word",
-            "name": "Sleuth",
+            "category": "Thunder_word",
+            "name": "Thunder",
             "isText": true
           },
           "faceUp": false
@@ -1649,8 +1657,56 @@
         {
           "card": {
             "type": "regular",
+            "category": "Western",
+            "name": "Sheriff",
+            "image": "res/Item/western_sheriff_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
             "category": "Sleuth_word",
-            "name": "Suspect",
+            "name": "Witness",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legs_word",
+            "name": "Knee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Monk",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Thunder_word",
+            "name": "Roar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Mystery",
             "isText": true
           },
           "faceUp": false
@@ -1669,8 +1725,17 @@
         {
           "card": {
             "type": "regular",
+            "category": "Space_word",
+            "name": "Meteor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Religion_word",
-            "name": "Abbot",
+            "name": "Pastor",
             "isText": true
           },
           "faceUp": false
@@ -1678,18 +1743,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Western",
-            "name": "Sheriff",
-            "image": "res/Item/western_sheriff_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Crime",
+            "category": "Space_word",
+            "name": "Eclipse",
             "isText": true
           },
           "faceUp": false
@@ -1697,38 +1752,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Legs_word",
-            "name": "Knee",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Victim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Cowboy",
-            "image": "res/Item/western_cowboy_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
             "category": "Religion_word",
-            "name": "Religion",
+            "name": "Worship",
             "isText": true
           },
           "faceUp": false
@@ -1736,18 +1761,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "Lock_word",
-            "name": "Lock",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Western",
-            "name": "Saloon",
-            "image": "res/Item/western_saloon_7.png",
+            "name": "Western",
             "isText": false
           },
           "faceUp": false
@@ -1755,17 +1770,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Clue",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Roller_word",
-            "name": "Spread",
+            "category": "Soil_word",
+            "name": "Peaty",
             "isText": true
           },
           "faceUp": false
@@ -1774,16 +1780,7 @@
           "card": {
             "type": "regular",
             "category": "Thunder_word",
-            "name": "Roar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Sandy",
+            "name": "Rumble",
             "isText": true
           },
           "faceUp": true
@@ -1805,34 +1802,23 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Toppings",
-        "name": "Honey",
-        "image": "res/Item/Toppings_Honey_1.png",
+        "category": "Space_word",
+        "name": "Nebula",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Cowboy",
+        "image": "res/Item/western_cowboy_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Soil_word",
-        "name": "Clay",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Legs_word",
-        "name": "Legs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Trusty",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Thunder_word",
-        "name": "Thunder",
-        "isText": true
+        "category": "Western",
+        "name": "Rodeo",
+        "image": "res/Item/western_cacti_8.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1842,16 +1828,64 @@
       },
       {
         "type": "regular",
-        "category": "Toppings",
-        "name": "Caramel",
-        "image": "res/Item/Toppings_Caramel_2.png",
-        "isText": false
+        "category": "Sleuth_word",
+        "name": "Suspect",
+        "isText": true
       },
       {
         "type": "regular",
         "category": "Toppings",
-        "name": "Jelly",
-        "image": "res/Item/Toppings_Jelly_3.png",
+        "name": "Syrup",
+        "image": "res/Item/Toppings_Syrup_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Lock_word",
+        "name": "Trusty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Motive",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Loamy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Prayer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Ankle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Pope",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Saloon",
+        "image": "res/Item/western_saloon_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Toppings",
+        "name": "Toppings",
         "isText": false
       },
       {
@@ -1862,20 +1896,21 @@
       },
       {
         "type": "regular",
-        "category": "Religion_word",
-        "name": "Pope",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Space_word",
-        "name": "Space",
+        "category": "Soil_word",
+        "name": "Sandy",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Religion_word",
-        "name": "Faith",
+        "category": "Toppings",
+        "name": "Honey",
+        "image": "res/Item/Toppings_Honey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Alibi",
         "isText": true
       },
       {
@@ -1885,15 +1920,58 @@
         "isText": true
       },
       {
-        "type": "regular",
+        "type": "gold",
         "category": "Roller_word",
-        "name": "Cover",
+        "name": "Roller",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lock_word",
+        "name": "Sturdy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Jelly",
+        "image": "res/Item/Toppings_Jelly_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Victim",
         "isText": true
       },
       {
         "type": "gold",
+        "category": "Religion_word",
+        "name": "Religion",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Legs_word",
+        "name": "Legs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Space_word",
+        "name": "Pulsar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Silty",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Roller_word",
-        "name": "Roller",
+        "name": "Cover",
         "isText": true
       },
       {
@@ -1910,9 +1988,28 @@
       },
       {
         "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Mystery",
+        "category": "Thunder_word",
+        "name": "Hum",
         "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sleuth_word",
+        "name": "Sleuth",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Spread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Gambler",
+        "image": "res/Item/western_badge_6.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1922,8 +2019,8 @@
       },
       {
         "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Alibi",
+        "category": "Lock_word",
+        "name": "Secure",
         "isText": true
       },
       {
@@ -1934,39 +2031,301 @@
       },
       {
         "type": "regular",
-        "category": "Soil_word",
-        "name": "Silty",
+        "category": "Thunder_word",
+        "name": "Boom",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Western",
-        "name": "Rodeo",
-        "image": "res/Item/western_cacti_8.png",
+        "category": "Roller_word",
+        "name": "Paint",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Caramel",
+        "image": "res/Item/Toppings_Caramel_2.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Soil_word",
-        "name": "Peaty",
+        "name": "Clay",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Lock_word",
-        "name": "Sturdy",
+        "category": "Sleuth_word",
+        "name": "Clue",
         "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 133,
+      "strategyType": "priority",
+      "solverSteps": 129,
+      "solverMaxSteps": 135,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 4,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 58,
+        "recycle": 1
       },
+      "solver2Steps": 130,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 9,
+        "colToCol": 2,
+        "colMultiToCol": 4,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 61,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Meteor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Suspect",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lock_word",
+            "name": "Secure",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toppings",
+            "name": "Caramel",
+            "image": "res/Item/Toppings_Caramel_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Peaty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Prayer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Religion_word",
+            "name": "Religion",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Thunder_word",
+            "name": "Boom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Victim",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toppings",
+            "name": "Jelly",
+            "image": "res/Item/Toppings_Jelly_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Thunder_word",
+            "name": "Thunder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Pulsar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Nova",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Clay",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Legs_word",
+            "name": "Thigh",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Eclipse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Religion_word",
+            "name": "Worship",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sleuth_word",
+            "name": "Mystery",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Aurora",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Soil_word",
+            "name": "Silty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Roller_word",
+            "name": "Paint",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Space_word",
+            "name": "Quasar",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Sleuth_word": 8,
+      "Space_word": 8,
+      "Religion_word": 8,
+      "Soil_word": 6,
+      "Western": 6,
+      "Roller_word": 4,
+      "Thunder_word": 4,
+      "Toppings": 4,
+      "Lock_word": 3,
+      "Legs_word": 3
+    },
+    "handPile": [
       {
         "type": "gold",
-        "category": "Toppings",
-        "name": "Toppings",
-        "isText": false
+        "category": "Roller_word",
+        "name": "Roller",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Lock_word",
-        "name": "Secure",
+        "category": "Sleuth_word",
+        "name": "Clue",
         "isText": true
       },
       {
@@ -1977,14 +2336,120 @@
       },
       {
         "type": "regular",
-        "category": "Space_word",
-        "name": "Nebula",
+        "category": "Thunder_word",
+        "name": "Rumble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toppings",
+        "name": "Honey",
+        "image": "res/Item/Toppings_Honey_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Lasso",
+        "image": "res/Item/western_lasso_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Spread",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Space_word",
-        "name": "Eclipse",
+        "name": "Asteroid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Roller_word",
+        "name": "Roll",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Sheriff",
+        "image": "res/Item/western_sheriff_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Space_word",
+        "name": "Space",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lock_word",
+        "name": "Lock",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Pastor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Loamy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Saloon",
+        "image": "res/Item/western_saloon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Soil_word",
+        "name": "Sandy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lock_word",
+        "name": "Sturdy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Western",
+        "name": "Western",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Toppings",
+        "name": "Toppings",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Roar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sleuth_word",
+        "name": "Sleuth",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Legs_word",
+        "name": "Legs",
         "isText": true
       },
       {
@@ -2003,494 +2468,13 @@
       {
         "type": "regular",
         "category": "Religion_word",
-        "name": "Pastor",
+        "name": "Pope",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Roller_word",
-        "name": "Paint",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Boom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Meteor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Witness",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Loamy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Rumble",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Roll",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Hum",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Prayer",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 133,
-      "strategyType": "priority",
-      "solverSteps": 130,
-      "solverMaxSteps": 135,
-      "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 4,
-        "colToCol": 7,
-        "colMultiToCol": 4,
-        "handToSlot": 29,
-        "handToCol": 13,
-        "flip": 63,
-        "recycle": 1
-      },
-      "solver2Steps": 134,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 17,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 0,
-        "handToSlot": 23,
-        "handToCol": 19,
-        "flip": 64,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Pope",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Cardinal",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Loamy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Faith",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Religion_word",
-            "name": "Religion",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Roar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Thunder_word",
-            "name": "Thunder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Space_word",
-            "name": "Space",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Gambler",
-            "image": "res/Item/western_badge_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Crime",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Sleuth_word",
-            "name": "Sleuth",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Soil_word",
-            "name": "Sandy",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Motive",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Religion_word",
-            "name": "Abbot",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Boom",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Western",
-            "name": "Rodeo",
-            "image": "res/Item/western_cacti_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Suspect",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Victim",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toppings",
-            "name": "Syrup",
-            "image": "res/Item/Toppings_Syrup_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Thunder_word",
-            "name": "Hum",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Toppings",
-            "name": "Toppings",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sleuth_word",
-            "name": "Mystery",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Sleuth_word": 8,
-      "Space_word": 8,
-      "Religion_word": 8,
-      "Soil_word": 6,
-      "Western": 6,
-      "Roller_word": 4,
-      "Thunder_word": 4,
-      "Toppings": 4,
-      "Lock_word": 3,
-      "Legs_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Asteroid",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Western",
-        "name": "Western",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Alibi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Pulsar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Spread",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Sheriff",
-        "image": "res/Item/western_sheriff_5.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Lock_word",
-        "name": "Lock",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Legs_word",
-        "name": "Legs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Jelly",
-        "image": "res/Item/Toppings_Jelly_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Meteor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sleuth_word",
-        "name": "Clue",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Roller_word",
-        "name": "Roller",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Knee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Thigh",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Chalky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Trusty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Paint",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Peaty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Legs_word",
-        "name": "Ankle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Roll",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Monk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Clay",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Nova",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Prayer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Thunder_word",
-        "name": "Rumble",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Quasar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Eclipse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Sturdy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Space_word",
-        "name": "Aurora",
+        "name": "Cover",
         "isText": true
       },
       {
@@ -2502,21 +2486,76 @@
       },
       {
         "type": "regular",
+        "category": "Soil_word",
+        "name": "Chalky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Legs_word",
+        "name": "Knee",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Crime",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Western",
+        "name": "Rodeo",
+        "image": "res/Item/western_cacti_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Toppings",
-        "name": "Caramel",
-        "image": "res/Item/Toppings_Caramel_2.png",
+        "name": "Syrup",
+        "image": "res/Item/Toppings_Syrup_4.png",
         "isText": false
       },
       {
         "type": "regular",
         "category": "Religion_word",
-        "name": "Worship",
+        "name": "Faith",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sleuth_word",
+        "name": "Alibi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Thunder_word",
+        "name": "Hum",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Abbot",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Space_word",
         "name": "Nebula",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Religion_word",
+        "name": "Cardinal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lock_word",
+        "name": "Trusty",
         "isText": true
       },
       {
@@ -2527,54 +2566,15 @@
       },
       {
         "type": "regular",
+        "category": "Legs_word",
+        "name": "Ankle",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Sleuth_word",
         "name": "Witness",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Religion_word",
-        "name": "Pastor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Saloon",
-        "image": "res/Item/western_saloon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Western",
-        "name": "Lasso",
-        "image": "res/Item/western_lasso_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Roller_word",
-        "name": "Cover",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Soil_word",
-        "name": "Silty",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Lock_word",
-        "name": "Secure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toppings",
-        "name": "Honey",
-        "image": "res/Item/Toppings_Honey_1.png",
-        "isText": false
       }
     ],
     "handDisplay": []

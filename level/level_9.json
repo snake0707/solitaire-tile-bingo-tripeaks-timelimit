@@ -4,658 +4,33 @@
       "maxSlots": 4,
       "maxSteps": 122,
       "strategyType": "priority",
-      "solverSteps": 116,
-      "solverMaxSteps": 125,
-      "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 6,
-        "colToCol": 7,
-        "colMultiToCol": 2,
-        "handToSlot": 27,
-        "handToCol": 19,
-        "flip": 46,
-        "recycle": 0
-      },
-      "solver2Steps": 117,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 7,
-        "colToCol": 7,
-        "colMultiToCol": 1,
-        "handToSlot": 25,
-        "handToCol": 21,
-        "flip": 46,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Compass",
-            "name": "West",
-            "image": "res/Item/Compass_West_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Compass",
-            "name": "East",
-            "image": "res/Item/Compass_East_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bank_word",
-            "name": "Bank",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "ATM",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camera_word",
-            "name": "Lens",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Vehicles",
-            "name": "Truck",
-            "image": "res/Item/Heavy_Truck_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Vehicles",
-            "name": "Combine",
-            "image": "res/Item/Vehicles_Combine_2.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "White",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Brown",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Cerise",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "English",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Deposit",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fog_word",
-            "name": "Haze",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Vehicles",
-            "name": "Pickup",
-            "image": "res/Item/Vehicles_Pickup_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Compass",
-            "name": "Compass",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fog_word",
-            "name": "Mist",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Japanese",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Palette_word",
-            "name": "Palette",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Beverage_word": 8,
-      "Language_word": 8,
-      "Palette_word": 8,
-      "Bank_word": 6,
-      "Camera_word": 6,
-      "Compass": 4,
-      "Vehicles": 4,
-      "Fog_word": 4,
-      "Snow_word": 3,
-      "Spiky_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Vapor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Cactus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hebrew",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Beverage_word",
-        "name": "Beverage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Account",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camera_word",
-        "name": "Camera",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "South",
-        "image": "res/Item/Compass_South_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "North",
-        "image": "res/Item/Compass_North_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Iceberg",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fog_word",
-        "name": "Fog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Filter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hindi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Kombucha",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Shutter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Zoom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Latin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Danish",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spiky_word",
-        "name": "Spiky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Loan",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Coffee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Polish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Exposure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Smog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Black",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Matcha",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Durian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Khaki",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Flake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Italian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tonic",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Vehicles",
-        "name": "Vehicles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Violet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tea",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Trailer",
-        "image": "res/Item/Vehicles_Trailer_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Sleet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Smoothie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Money",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Snow_word",
-        "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Flash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Hedgehog",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Language_word",
-        "name": "Language",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 122,
-      "strategyType": "priority",
       "solverSteps": 118,
       "solverMaxSteps": 125,
       "moveStats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 7,
-        "colToCol": 7,
-        "colMultiToCol": 4,
-        "handToSlot": 30,
-        "handToCol": 16,
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 8,
+        "colToCol": 9,
+        "colMultiToCol": 5,
+        "handToSlot": 26,
+        "handToCol": 20,
         "flip": 46,
         "recycle": 0
       },
-      "solver2Steps": 115,
+      "solver2Steps": 116,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 6,
-        "colToCol": 8,
-        "colMultiToCol": 1,
-        "handToSlot": 32,
-        "handToCol": 14,
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 8,
+        "colToCol": 9,
+        "colMultiToCol": 2,
+        "handToSlot": 29,
+        "handToCol": 17,
         "flip": 46,
         "recycle": 0
       }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "ATM",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Snow_word",
-            "name": "Snow",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Loan",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Beverage_word",
-            "name": "Beverage",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Language_word",
-            "name": "Language",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beverage_word",
-            "name": "Water",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fog_word",
-            "name": "Fog",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "English",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Hebrew",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Deposit",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camera_word",
-            "name": "Flash",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camera_word",
-            "name": "Shutter",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Cerise",
-            "isText": true
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
@@ -665,405 +40,6 @@
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Money",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Danish",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Vehicles",
-            "name": "Truck",
-            "image": "res/Item/Heavy_Truck_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beverage_word",
-            "name": "Matcha",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Beverage_word": 8,
-      "Language_word": 8,
-      "Palette_word": 8,
-      "Bank_word": 6,
-      "Camera_word": 6,
-      "Compass": 4,
-      "Vehicles": 4,
-      "Fog_word": 4,
-      "Snow_word": 3,
-      "Spiky_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Zoom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Smoothie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Durian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Pickup",
-        "image": "res/Item/Vehicles_Pickup_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Polish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hindi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Vapor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Kombucha",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Coffee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tonic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "East",
-        "image": "res/Item/Compass_East_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Italian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Trailer",
-        "image": "res/Item/Vehicles_Trailer_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "North",
-        "image": "res/Item/Compass_North_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Combine",
-        "image": "res/Item/Vehicles_Combine_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "South",
-        "image": "res/Item/Compass_South_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Smog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Black",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Latin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Violet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Palette_word",
-        "name": "Palette",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tea",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Khaki",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Compass",
-        "name": "Compass",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Exposure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Account",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Haze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Hedgehog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Iceberg",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "White",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Cactus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "West",
-        "image": "res/Item/Compass_West_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Vehicles",
-        "name": "Vehicles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Sleet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camera_word",
-        "name": "Camera",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spiky_word",
-        "name": "Spiky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Flake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Brown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Japanese",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bank_word",
-        "name": "Bank",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Mist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Filter",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 122,
-      "strategyType": "priority",
-      "solverSteps": 121,
-      "solverMaxSteps": 125,
-      "moveStats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 6,
-        "colToCol": 2,
-        "colMultiToCol": 4,
-        "handToSlot": 29,
-        "handToCol": 17,
-        "flip": 54,
-        "recycle": 1
-      },
-      "solver2Steps": 115,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 9,
-        "colToCol": 4,
-        "colMultiToCol": 3,
-        "handToSlot": 25,
-        "handToCol": 21,
-        "flip": 46,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fog_word",
-            "name": "Fog",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Hindi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "ATM",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
         {
           "card": {
             "type": "regular",
@@ -1075,28 +51,9 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Compass",
-            "name": "Compass",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
-            "category": "Compass",
-            "name": "East",
-            "image": "res/Item/Compass_East_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Italian",
+            "category": "Palette_word",
+            "name": "White",
             "isText": true
           },
           "faceUp": true
@@ -1105,9 +62,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Bank_word",
-            "name": "Bank",
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Vapor",
             "isText": true
           },
           "faceUp": false
@@ -1116,7 +73,7 @@
           "card": {
             "type": "regular",
             "category": "Palette_word",
-            "name": "Cerise",
+            "name": "Red",
             "isText": true
           },
           "faceUp": false
@@ -1134,17 +91,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fog_word",
-            "name": "Mist",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beverage_word",
-            "name": "Smoothie",
+            "category": "Palette_word",
+            "name": "Green",
             "isText": true
           },
           "faceUp": true
@@ -1154,518 +102,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Spiky_word",
-            "name": "Hedgehog",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fog_word",
-            "name": "Haze",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Loan",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Compass",
-            "name": "West",
-            "image": "res/Item/Compass_West_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Language_word",
-            "name": "Polish",
+            "name": "Latin",
             "isText": true
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Violet",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Beverage_word": 8,
-      "Language_word": 8,
-      "Palette_word": 8,
-      "Bank_word": 6,
-      "Camera_word": 6,
-      "Compass": 4,
-      "Vehicles": 4,
-      "Fog_word": 4,
-      "Snow_word": 3,
-      "Spiky_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Snow_word",
-        "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Black",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Durian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Latin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Kombucha",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Vapor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Flake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "South",
-        "image": "res/Item/Compass_South_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Smog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Coffee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Brown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Matcha",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tonic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Exposure",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "White",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Cactus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Khaki",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Lens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Money",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Filter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Danish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Trailer",
-        "image": "res/Item/Vehicles_Trailer_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Sleet",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Language_word",
-        "name": "Language",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Beverage_word",
-        "name": "Beverage",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Pickup",
-        "image": "res/Item/Vehicles_Pickup_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Camera_word",
-        "name": "Camera",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Palette_word",
-        "name": "Palette",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Account",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Flash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Spiky_word",
-        "name": "Spiky",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Iceberg",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Truck",
-        "image": "res/Item/Heavy_Truck_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Deposit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Milk",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Shutter",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Vehicles",
-        "name": "Vehicles",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hebrew",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "English",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Combine",
-        "image": "res/Item/Vehicles_Combine_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Japanese",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Zoom",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 122,
-      "strategyType": "priority",
-      "solverSteps": 116,
-      "solverMaxSteps": 125,
-      "moveStats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 5,
-        "colToCol": 3,
-        "colMultiToCol": 4,
-        "handToSlot": 33,
-        "handToCol": 13,
-        "flip": 46,
-        "recycle": 0
-      },
-      "solver2Steps": 115,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 5,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 31,
-        "handToCol": 15,
-        "flip": 46,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
         {
           "card": {
             "type": "regular",
             "category": "Palette_word",
             "name": "Brown",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Hebrew",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Beverage_word",
-            "name": "Beverage",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Language_word",
-            "name": "Hindi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Red",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Bank_word",
-            "name": "Bank",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beverage_word",
-            "name": "Milk",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Spiky_word",
-            "name": "Spiky",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Vehicles",
-            "name": "Truck",
-            "image": "res/Item/Heavy_Truck_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Palette_word",
-            "name": "Khaki",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Vehicles",
-            "name": "Vehicles",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Snow_word",
-            "name": "Iceberg",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Spiky_word",
-            "name": "Hedgehog",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beverage_word",
-            "name": "Matcha",
             "isText": true
           },
           "faceUp": false
@@ -1682,8 +129,482 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fog_word",
-            "name": "Vapor",
+            "category": "Camera_word",
+            "name": "Shutter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Water",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Khaki",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Kombucha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Matcha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Cactus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "English",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Loan",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Compass": 4,
+      "Vehicles": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "East",
+        "image": "res/Item/Compass_East_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Haze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Cerise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Truck",
+        "image": "res/Item/Heavy_Truck_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "West",
+        "image": "res/Item/Compass_West_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Pickup",
+        "image": "res/Item/Vehicles_Pickup_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fog_word",
+        "name": "Fog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compass",
+        "name": "Compass",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Combine",
+        "image": "res/Item/Vehicles_Combine_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Vehicles",
+        "name": "Vehicles",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Coffee",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "South",
+        "image": "res/Item/Compass_South_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Trailer",
+        "image": "res/Item/Vehicles_Trailer_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 122,
+      "strategyType": "priority",
+      "solverSteps": 116,
+      "solverMaxSteps": 125,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 24,
+        "handToCol": 22,
+        "flip": 46,
+        "recycle": 0
+      },
+      "solver2Steps": 116,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 24,
+        "handToCol": 22,
+        "flip": 46,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Matcha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Cerise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Spiky_word",
+            "name": "Spiky",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "ATM",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Loan",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Hedgehog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bank_word",
+            "name": "Bank",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Account",
             "isText": true
           },
           "faceUp": false
@@ -1692,7 +613,81 @@
           "card": {
             "type": "regular",
             "category": "Camera_word",
-            "name": "Exposure",
+            "name": "Flash",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Black",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Mist",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Shutter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Money",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Water",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Smog",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Vapor",
             "isText": true
           },
           "faceUp": false
@@ -1724,210 +719,7 @@
       {
         "type": "regular",
         "category": "Palette_word",
-        "name": "Green",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Japanese",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "ATM",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Coffee",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Compass",
-        "name": "Compass",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Smoothie",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Flake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "South",
-        "image": "res/Item/Compass_South_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Fog_word",
-        "name": "Fog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Shutter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Durian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Account",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Pickup",
-        "image": "res/Item/Vehicles_Pickup_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Haze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Latin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Zoom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "White",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Vehicles",
-        "name": "Trailer",
-        "image": "res/Item/Vehicles_Trailer_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Money",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Polish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Danish",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camera_word",
-        "name": "Camera",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Black",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "East",
-        "image": "res/Item/Compass_East_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Cerise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Tonic",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
         "name": "Violet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Mist",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "West",
-        "image": "res/Item/Compass_West_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Filter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Loan",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Language_word",
-        "name": "Language",
         "isText": true
       },
       {
@@ -1939,32 +731,39 @@
       },
       {
         "type": "regular",
-        "category": "Language_word",
-        "name": "English",
+        "category": "Palette_word",
+        "name": "Red",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "East",
+        "image": "res/Item/Compass_East_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Vehicles",
+        "name": "Vehicles",
+        "isText": false
       },
       {
         "type": "gold",
         "category": "Snow_word",
         "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Smog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Flash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Lens",
         "isText": true
       },
       {
@@ -1981,8 +780,162 @@
       },
       {
         "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Bank_word",
         "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "South",
+        "image": "res/Item/Compass_South_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Khaki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Italian",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Haze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "English",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Combine",
+        "image": "res/Item/Vehicles_Combine_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "West",
+        "image": "res/Item/Compass_West_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Pickup",
+        "image": "res/Item/Vehicles_Pickup_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
         "isText": true
       },
       {
@@ -1992,17 +945,60 @@
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "Compass",
+        "name": "Compass",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
         "type": "regular",
         "category": "Spiky_word",
         "name": "Cactus",
         "isText": true
       },
       {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
         "type": "regular",
         "category": "Vehicles",
-        "name": "Combine",
-        "image": "res/Item/Vehicles_Combine_2.png",
+        "name": "Trailer",
+        "image": "res/Item/Vehicles_Trailer_3.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Truck",
+        "image": "res/Item/Heavy_Truck_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fog_word",
+        "name": "Fog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
       }
     ],
     "handDisplay": []
@@ -2012,27 +1008,27 @@
       "maxSlots": 4,
       "maxSteps": 122,
       "strategyType": "priority",
-      "solverSteps": 117,
+      "solverSteps": 115,
       "solverMaxSteps": 125,
       "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 9,
-        "colToCol": 4,
-        "colMultiToCol": 5,
-        "handToSlot": 26,
-        "handToCol": 20,
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 27,
+        "handToCol": 19,
         "flip": 46,
         "recycle": 0
       },
-      "solver2Steps": 115,
+      "solver2Steps": 116,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 7,
+        "colSingleToSlot": 10,
         "colMultiToSlot": 7,
-        "colToCol": 4,
-        "colMultiToCol": 5,
-        "handToSlot": 29,
-        "handToCol": 17,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 28,
+        "handToCol": 18,
         "flip": 46,
         "recycle": 0
       }
@@ -2042,10 +1038,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Vehicles",
-            "name": "Trailer",
-            "image": "res/Item/Vehicles_Trailer_3.png",
-            "isText": false
+            "category": "Palette_word",
+            "name": "Black",
+            "isText": true
           },
           "faceUp": false
         },
@@ -2053,7 +1048,45 @@
           "card": {
             "type": "regular",
             "category": "Spiky_word",
-            "name": "Cactus",
+            "name": "Durian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Lens",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "White",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Shutter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Khaki",
             "isText": true
           },
           "faceUp": false
@@ -2071,9 +1104,9 @@
       [
         {
           "card": {
-            "type": "gold",
-            "category": "Spiky_word",
-            "name": "Spiky",
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Tea",
             "isText": true
           },
           "faceUp": false
@@ -2081,8 +1114,56 @@
         {
           "card": {
             "type": "regular",
-            "category": "Palette_word",
-            "name": "Cerise",
+            "category": "Spiky_word",
+            "name": "Cactus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Kombucha",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Vapor",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "West",
+            "image": "res/Item/Compass_West_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fog_word",
+            "name": "Mist",
             "isText": true
           },
           "faceUp": false
@@ -2091,7 +1172,7 @@
           "card": {
             "type": "regular",
             "category": "Bank_word",
-            "name": "Deposit",
+            "name": "Credit",
             "isText": true
           },
           "faceUp": false
@@ -2099,14 +1180,12 @@
         {
           "card": {
             "type": "regular",
-            "category": "Palette_word",
-            "name": "White",
+            "category": "Beverage_word",
+            "name": "Tonic",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -2120,10 +1199,468 @@
         {
           "card": {
             "type": "regular",
-            "category": "Vehicles",
-            "name": "Truck",
-            "image": "res/Item/Heavy_Truck_5.png",
+            "category": "Language_word",
+            "name": "Italian",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Compass": 4,
+      "Vehicles": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Language_word",
+        "name": "Language",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Combine",
+        "image": "res/Item/Vehicles_Combine_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Vehicles",
+        "name": "Vehicles",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Pickup",
+        "image": "res/Item/Vehicles_Pickup_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Money",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fog_word",
+        "name": "Fog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Snow_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "English",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Haze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "North",
+        "image": "res/Item/Compass_North_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Truck",
+        "image": "res/Item/Heavy_Truck_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Cerise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Trailer",
+        "image": "res/Item/Vehicles_Trailer_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "South",
+        "image": "res/Item/Compass_South_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Japanese",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compass",
+        "name": "Compass",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 122,
+      "strategyType": "priority",
+      "solverSteps": 115,
+      "solverMaxSteps": 125,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 3,
+        "handToSlot": 28,
+        "handToCol": 18,
+        "flip": 46,
+        "recycle": 0
+      },
+      "solver2Steps": 115,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 23,
+        "handToCol": 23,
+        "flip": 46,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "West",
+            "image": "res/Item/Compass_West_3.png",
             "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "East",
+            "image": "res/Item/Compass_East_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "South",
+            "image": "res/Item/Compass_South_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Cactus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Filter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Vehicles",
+            "name": "Vehicles",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Milk",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Coffee",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Snow_word",
+            "name": "Iceberg",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Language_word",
+            "name": "Language",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Palette_word",
+            "name": "Green",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Vehicles",
+            "name": "Trailer",
+            "image": "res/Item/Vehicles_Trailer_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fog_word",
+            "name": "Fog",
+            "isText": true
           },
           "faceUp": false
         },
@@ -2138,9 +1675,384 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "Camera_word",
+            "name": "Camera",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "regular",
             "category": "Bank_word",
-            "name": "Account",
+            "name": "Money",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Snow_word",
+            "name": "Snow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Japanese",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Beverage_word": 8,
+      "Language_word": 8,
+      "Palette_word": 8,
+      "Bank_word": 6,
+      "Camera_word": 6,
+      "Compass": 4,
+      "Vehicles": 4,
+      "Fog_word": 4,
+      "Snow_word": 3,
+      "Spiky_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Zoom",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Lens",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hebrew",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "North",
+        "image": "res/Item/Compass_North_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tea",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Black",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "English",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Smog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Combine",
+        "image": "res/Item/Vehicles_Combine_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Shutter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Loan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Pickup",
+        "image": "res/Item/Vehicles_Pickup_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Truck",
+        "image": "res/Item/Heavy_Truck_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Haze",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Kombucha",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Bank_word",
+        "name": "Bank",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Latin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beverage_word",
+        "name": "Beverage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Italian",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Durian",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Matcha",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Cerise",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compass",
+        "name": "Compass",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Khaki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Danish",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 122,
+      "strategyType": "priority",
+      "solverSteps": 116,
+      "solverMaxSteps": 125,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 5,
+        "handToSlot": 31,
+        "handToCol": 15,
+        "flip": 46,
+        "recycle": 0
+      },
+      "solver2Steps": 115,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 7,
+        "colToCol": 7,
+        "colMultiToCol": 2,
+        "handToSlot": 26,
+        "handToCol": 20,
+        "flip": 46,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camera_word",
+            "name": "Zoom",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Loan",
             "isText": true
           },
           "faceUp": false
@@ -2159,17 +2071,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Language_word",
-            "name": "Polish",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Bank_word",
-            "name": "Loan",
+            "category": "Fog_word",
+            "name": "Haze",
             "isText": true
           },
           "faceUp": false
@@ -2177,8 +2080,46 @@
         {
           "card": {
             "type": "gold",
-            "category": "Fog_word",
-            "name": "Fog",
+            "category": "Beverage_word",
+            "name": "Beverage",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Spiky_word",
+            "name": "Durian",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beverage_word",
+            "name": "Water",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Snow_word",
+            "name": "Snow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Hebrew",
             "isText": true
           },
           "faceUp": false
@@ -2204,8 +2145,66 @@
         {
           "card": {
             "type": "regular",
-            "category": "Snow_word",
-            "name": "Iceberg",
+            "category": "Fog_word",
+            "name": "Smog",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "West",
+            "image": "res/Item/Compass_West_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Bank_word",
+            "name": "Money",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Compass",
+            "name": "North",
+            "image": "res/Item/Compass_North_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "Latin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Language_word",
+            "name": "English",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Bank_word",
+            "name": "Bank",
             "isText": true
           },
           "faceUp": true
@@ -2226,154 +2225,9 @@
     },
     "handPile": [
       {
-        "type": "gold",
-        "category": "Compass",
-        "name": "Compass",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Durian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Khaki",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
         "type": "regular",
         "category": "Camera_word",
         "name": "Lens",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Snow_word",
-        "name": "Flake",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hebrew",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Spiky_word",
-        "name": "Hedgehog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Italian",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Latin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Smoothie",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Language_word",
-        "name": "Language",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Money",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Beverage_word",
-        "name": "Beverage",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Bank_word",
-        "name": "Bank",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Bank_word",
-        "name": "Credit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Zoom",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Haze",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Brown",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Mist",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Snow_word",
-        "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "South",
-        "image": "res/Item/Compass_South_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Language_word",
-        "name": "Hindi",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camera_word",
-        "name": "Camera",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Violet",
         "isText": true
       },
       {
@@ -2384,57 +2238,14 @@
       },
       {
         "type": "regular",
-        "category": "Bank_word",
-        "name": "ATM",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Compass",
-        "name": "North",
-        "image": "res/Item/Compass_North_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Filter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Vapor",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Palette_word",
-        "name": "Green",
+        "name": "Khaki",
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Fog_word",
-        "name": "Smog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camera_word",
-        "name": "Flash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Palette_word",
-        "name": "Red",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beverage_word",
-        "name": "Coffee",
+        "type": "gold",
+        "category": "Spiky_word",
+        "name": "Spiky",
         "isText": true
       },
       {
@@ -2446,15 +2257,26 @@
       },
       {
         "type": "regular",
-        "category": "Compass",
-        "name": "West",
-        "image": "res/Item/Compass_West_3.png",
-        "isText": false
+        "category": "Bank_word",
+        "name": "Account",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "Beverage_word",
-        "name": "Milk",
+        "category": "Bank_word",
+        "name": "Deposit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Cerise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fog_word",
+        "name": "Mist",
         "isText": true
       },
       {
@@ -2465,9 +2287,35 @@
         "isText": false
       },
       {
-        "type": "gold",
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Red",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Flake",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Vehicles",
-        "name": "Vehicles",
+        "name": "Truck",
+        "image": "res/Item/Heavy_Truck_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Milk",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "East",
+        "image": "res/Item/Compass_East_1.png",
         "isText": false
       },
       {
@@ -2478,20 +2326,154 @@
       },
       {
         "type": "regular",
+        "category": "Palette_word",
+        "name": "Green",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Hindi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Violet",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Compass",
+        "name": "Compass",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Exposure",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Cactus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Smoothie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Sleet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Compass",
+        "name": "South",
+        "image": "res/Item/Compass_South_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "White",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "ATM",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Bank_word",
+        "name": "Credit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Snow_word",
+        "name": "Iceberg",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Vehicles",
+        "name": "Trailer",
+        "image": "res/Item/Vehicles_Trailer_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Flash",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Language_word",
         "name": "Danish",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Palette_word",
-        "name": "Palette",
+        "category": "Language_word",
+        "name": "Language",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Language_word",
-        "name": "English",
+        "name": "Polish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Palette_word",
+        "name": "Brown",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beverage_word",
+        "name": "Tonic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camera_word",
+        "name": "Filter",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camera_word",
+        "name": "Camera",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fog_word",
+        "name": "Fog",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Vehicles",
+        "name": "Vehicles",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Spiky_word",
+        "name": "Hedgehog",
         "isText": true
       },
       {
@@ -2502,8 +2484,26 @@
       },
       {
         "type": "regular",
+        "category": "Fog_word",
+        "name": "Vapor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Language_word",
+        "name": "Italian",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Palette_word",
+        "name": "Palette",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Beverage_word",
-        "name": "Tonic",
+        "name": "Coffee",
         "isText": true
       }
     ],

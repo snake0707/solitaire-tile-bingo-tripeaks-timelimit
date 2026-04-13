@@ -4,673 +4,38 @@
       "maxSlots": 3,
       "maxSteps": 72,
       "strategyType": "priority",
-      "solverSteps": 61,
-      "solverMaxSteps": 66,
-      "moveStats": {
-        "colSingleToSlot": 7,
-        "colMultiToSlot": 3,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 16,
-        "handToCol": 8,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 61,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Coding_word",
-            "name": "Coding",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Yosemite",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toys",
-            "name": "Yo-yo",
-            "image": "res/Item/toys_buildingblocks_8.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Gorilla",
-            "image": "res/Item/Primates_Gorilla_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Java",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sushi_word",
-            "name": "Chirashi",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rap_word",
-            "name": "Verse",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rap_word",
-            "name": "Lyrics",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Ruby",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Havasu",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "PHP",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Simian",
-            "image": "res/Item/Primates_Simian_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Primates": 8,
-      "Coding_word": 8,
-      "Rap_word": 4,
-      "Water_word": 4,
-      "Sushi_word": 3,
-      "Toys": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Punch",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Water_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rap_word",
-        "name": "Rap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "SQL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Mandrill",
-        "image": "res/Item/Primates_Mandrill_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Macaque",
-        "image": "res/Item/Primates_Macaque_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Baboon",
-        "image": "res/Item/Primates_Baboon_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Doll",
-        "image": "res/Item/toys_jigsawpuzzle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Spinner",
-        "image": "res/Item/toys_gamepad_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Victoria",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Niagara",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Python",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Rhyme",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Gibbon",
-        "image": "res/Item/Primates_Gibbon_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Tarsier",
-        "image": "res/Item/Primates_Tarsier_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Lemur",
-        "image": "res/Item/Primates_Lemur_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Swift",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Maki",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Toys",
-        "name": "Toys",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Primates",
-        "name": "Primates",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Nigiri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Bugs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sushi_word",
-        "name": "Sushi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Script",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 72,
-      "strategyType": "priority",
       "solverSteps": 62,
       "solverMaxSteps": 66,
       "moveStats": {
         "colSingleToSlot": 6,
-        "colMultiToSlot": 3,
-        "colToCol": 2,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
         "colMultiToCol": 3,
-        "handToSlot": 17,
-        "handToCol": 7,
+        "handToSlot": 10,
+        "handToCol": 14,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 62,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 2,
-        "colToCol": 4,
-        "colMultiToCol": 0,
-        "handToSlot": 17,
-        "handToCol": 7,
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 9,
+        "handToCol": 15,
         "flip": 24,
         "recycle": 0
       }
     },
     "tableau": [
       [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sushi_word",
-            "name": "Maki",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Baboon",
-            "image": "res/Item/Primates_Baboon_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Coding_word",
-            "name": "Coding",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Gibbon",
-            "image": "res/Item/Primates_Gibbon_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Swift",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Water_word",
-            "name": "Water",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Ruby",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Java",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Simian",
-            "image": "res/Item/Primates_Simian_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toys",
-            "name": "Doll",
-            "image": "res/Item/toys_jigsawpuzzle_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
         {
           "card": {
             "type": "regular",
             "category": "Coding_word",
             "name": "Bugs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Lemur",
-            "image": "res/Item/Primates_Lemur_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Primates": 8,
-      "Coding_word": 8,
-      "Rap_word": 4,
-      "Water_word": 4,
-      "Sushi_word": 3,
-      "Toys": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Verse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Rhyme",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Nigiri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Spinner",
-        "image": "res/Item/toys_gamepad_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Havasu",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Primates",
-        "name": "Primates",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Yo-yo",
-        "image": "res/Item/toys_buildingblocks_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "SQL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Lyrics",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Tarsier",
-        "image": "res/Item/Primates_Tarsier_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Punch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Niagara",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Victoria",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Yosemite",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Chirashi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Macaque",
-        "image": "res/Item/Primates_Macaque_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Python",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "PHP",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Toys",
-        "name": "Toys",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Script",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Mandrill",
-        "image": "res/Item/Primates_Mandrill_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Sushi_word",
-        "name": "Sushi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Gorilla",
-        "image": "res/Item/Primates_Gorilla_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Rap_word",
-        "name": "Rap",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 72,
-      "strategyType": "priority",
-      "solverSteps": 61,
-      "solverMaxSteps": 66,
-      "moveStats": {
-        "colSingleToSlot": 2,
-        "colMultiToSlot": 4,
-        "colToCol": 6,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 62,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 3,
-        "colMultiToSlot": 4,
-        "colToCol": 6,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Script",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Swift",
             "isText": true
           },
           "faceUp": false
@@ -682,6 +47,16 @@
             "name": "Rap",
             "isText": true
           },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Simian",
+            "image": "res/Item/Primates_Simian_6.png",
+            "isText": false
+          },
           "faceUp": true
         }
       ],
@@ -689,18 +64,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Coding_word",
-            "name": "PHP",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toys",
-            "name": "Yo-yo",
-            "image": "res/Item/toys_buildingblocks_8.png",
+            "category": "Primates",
+            "name": "Macaque",
+            "image": "res/Item/Primates_Macaque_5.png",
             "isText": false
           },
           "faceUp": false
@@ -717,274 +83,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Water_word",
-            "name": "Niagara",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Simian",
-            "image": "res/Item/Primates_Simian_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Coding_word",
-            "name": "Ruby",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Bugs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Water_word",
-            "name": "Water",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Yosemite",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Primates": 8,
-      "Coding_word": 8,
-      "Rap_word": 4,
-      "Water_word": 4,
-      "Sushi_word": 3,
-      "Toys": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Coding_word",
-        "name": "Coding",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Maki",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "SQL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Punch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Victoria",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Macaque",
-        "image": "res/Item/Primates_Macaque_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Lemur",
-        "image": "res/Item/Primates_Lemur_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Python",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Verse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Gibbon",
-        "image": "res/Item/Primates_Gibbon_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Java",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Spinner",
-        "image": "res/Item/toys_gamepad_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Tarsier",
-        "image": "res/Item/Primates_Tarsier_8.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Primates",
-        "name": "Primates",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Rhyme",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Baboon",
-        "image": "res/Item/Primates_Baboon_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Toys",
-        "name": "Toys",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Nigiri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Lyrics",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Doll",
-        "image": "res/Item/toys_jigsawpuzzle_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Mandrill",
-        "image": "res/Item/Primates_Mandrill_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Havasu",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sushi_word",
-        "name": "Sushi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Gorilla",
-        "image": "res/Item/Primates_Gorilla_1.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 72,
-      "strategyType": "priority",
-      "solverSteps": 61,
-      "solverMaxSteps": 66,
-      "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 14,
-        "handToCol": 10,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 61,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Toys",
-            "name": "Spinner",
-            "image": "res/Item/toys_gamepad_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Script",
+            "name": "Java",
             "isText": true
           },
           "faceUp": false
@@ -1003,8 +103,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Rap_word",
-            "name": "Rhyme",
+            "category": "Water_word",
+            "name": "Victoria",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Yosemite",
             "isText": true
           },
           "faceUp": false
@@ -1012,323 +121,9 @@
         {
           "card": {
             "type": "gold",
-            "category": "Primates",
-            "name": "Primates",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "Bugs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Victoria",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
             "category": "Toys",
-            "name": "Doll",
-            "image": "res/Item/toys_jigsawpuzzle_7.png",
+            "name": "Toys",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Gibbon",
-            "image": "res/Item/Primates_Gibbon_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sushi_word",
-            "name": "Maki",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Rap_word",
-            "name": "Punch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Yosemite",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Primates": 8,
-      "Coding_word": 8,
-      "Rap_word": 4,
-      "Water_word": 4,
-      "Sushi_word": 3,
-      "Toys": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "Water_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Nigiri",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Havasu",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Toys",
-        "name": "Toys",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Simian",
-        "image": "res/Item/Primates_Simian_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Swift",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Mandrill",
-        "image": "res/Item/Primates_Mandrill_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Rap_word",
-        "name": "Rap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Water_word",
-        "name": "Niagara",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Verse",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "PHP",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Gorilla",
-        "image": "res/Item/Primates_Gorilla_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Chirashi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Tarsier",
-        "image": "res/Item/Primates_Tarsier_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Toys",
-        "name": "Yo-yo",
-        "image": "res/Item/toys_buildingblocks_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Rap_word",
-        "name": "Lyrics",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Coding_word",
-        "name": "Coding",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Java",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "SQL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Lemur",
-        "image": "res/Item/Primates_Lemur_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Baboon",
-        "image": "res/Item/Primates_Baboon_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Macaque",
-        "image": "res/Item/Primates_Macaque_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Ruby",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Python",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 72,
-      "strategyType": "priority",
-      "solverSteps": 60,
-      "solverMaxSteps": 66,
-      "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 9,
-        "handToCol": 15,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 60,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 9,
-        "handToCol": 15,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Coding_word",
-            "name": "PHP",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Gorilla",
-            "image": "res/Item/Primates_Gorilla_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Water_word",
-            "name": "Yosemite",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Primates",
-            "name": "Gibbon",
-            "image": "res/Item/Primates_Gibbon_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sushi_word",
-            "name": "Maki",
-            "isText": true
           },
           "faceUp": false
         },
@@ -1345,9 +140,273 @@
         {
           "card": {
             "type": "regular",
+            "category": "Rap_word",
+            "name": "Lyrics",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Primates": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Primates",
+        "name": "Primates",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gorilla",
+        "image": "res/Item/Primates_Gorilla_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gibbon",
+        "image": "res/Item/Primates_Gibbon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Mandrill",
+        "image": "res/Item/Primates_Mandrill_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Baboon",
+        "image": "res/Item/Primates_Baboon_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Script",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Lemur",
+        "image": "res/Item/Primates_Lemur_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Tarsier",
+        "image": "res/Item/Primates_Tarsier_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_gamepad_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Punch",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 72,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 66,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Nigiri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Script",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Verse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Toys",
             "name": "Doll",
             "image": "res/Item/toys_jigsawpuzzle_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Rhyme",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Baboon",
+            "image": "res/Item/Primates_Baboon_3.png",
             "isText": false
           },
           "faceUp": true
@@ -1357,8 +416,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Coding_word",
-            "name": "Ruby",
+            "category": "Water_word",
+            "name": "Yosemite",
             "isText": true
           },
           "faceUp": false
@@ -1375,9 +434,625 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "Sushi_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Lemur",
+            "image": "res/Item/Primates_Lemur_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Mandrill",
+            "image": "res/Item/Primates_Mandrill_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Primates": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Rap_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gibbon",
+        "image": "res/Item/Primates_Gibbon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Coding_word",
+        "name": "Coding",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gorilla",
+        "image": "res/Item/Primates_Gorilla_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_gamepad_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_buildingblocks_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Punch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Tarsier",
+        "image": "res/Item/Primates_Tarsier_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Primates",
+        "name": "Primates",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Simian",
+        "image": "res/Item/Primates_Simian_6.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 72,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 66,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 18,
+        "handToCol": 6,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 64,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 18,
+        "handToCol": 6,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Java",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Tarsier",
+            "image": "res/Item/Primates_Tarsier_8.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coding_word",
+            "name": "Coding",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Lemur",
+            "image": "res/Item/Primates_Lemur_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Script",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "PHP",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
             "type": "regular",
             "category": "Water_word",
-            "name": "Victoria",
+            "name": "Yosemite",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Gibbon",
+            "image": "res/Item/Primates_Gibbon_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Baboon",
+            "image": "res/Item/Primates_Baboon_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Spinner",
+            "image": "res/Item/toys_gamepad_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Ruby",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Primates": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Punch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sushi_word",
+        "name": "Sushi",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Water_word",
+        "name": "Water",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "SQL",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_buildingblocks_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Rap_word",
+        "name": "Rap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gorilla",
+        "image": "res/Item/Primates_Gorilla_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Mandrill",
+        "image": "res/Item/Primates_Mandrill_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Verse",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Macaque",
+        "image": "res/Item/Primates_Macaque_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Simian",
+        "image": "res/Item/Primates_Simian_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Primates",
+        "name": "Primates",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 72,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 66,
+      "moveStats": {
+        "colSingleToSlot": 2,
+        "colMultiToSlot": 4,
+        "colToCol": 7,
+        "colMultiToCol": 1,
+        "handToSlot": 16,
+        "handToCol": 8,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 4,
+        "colToCol": 7,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Swift",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Nigiri",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sushi_word",
+            "name": "Sushi",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Python",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Mandrill",
+            "image": "res/Item/Primates_Mandrill_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Tarsier",
+            "image": "res/Item/Primates_Tarsier_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Script",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "SQL",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Yosemite",
             "isText": true
           },
           "faceUp": false
@@ -1393,9 +1068,19 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Toys",
-            "name": "Toys",
+            "type": "regular",
+            "category": "Water_word",
+            "name": "Niagara",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Gibbon",
+            "image": "res/Item/Primates_Gibbon_2.png",
             "isText": false
           },
           "faceUp": true
@@ -1418,59 +1103,9 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Primates",
-        "name": "Primates",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Baboon",
-        "image": "res/Item/Primates_Baboon_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Bugs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Java",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Water_word",
-        "name": "Water",
-        "isText": true
-      },
-      {
         "type": "regular",
         "category": "Rap_word",
-        "name": "Punch",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Rap_word",
-        "name": "Rap",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Primates",
-        "name": "Mandrill",
-        "image": "res/Item/Primates_Mandrill_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sushi_word",
-        "name": "Nigiri",
+        "name": "Lyrics",
         "isText": true
       },
       {
@@ -1481,38 +1116,27 @@
       },
       {
         "type": "regular",
-        "category": "Coding_word",
-        "name": "Swift",
+        "category": "Sushi_word",
+        "name": "Maki",
         "isText": true
       },
       {
-        "type": "regular",
+        "type": "gold",
         "category": "Water_word",
-        "name": "Niagara",
+        "name": "Water",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Toys",
+        "name": "Yo-yo",
+        "image": "res/Item/toys_buildingblocks_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
         "category": "Rap_word",
-        "name": "Lyrics",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Script",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "SQL",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Coding_word",
-        "name": "Python",
+        "name": "Rap",
         "isText": true
       },
       {
@@ -1524,15 +1148,60 @@
       },
       {
         "type": "regular",
-        "category": "Water_word",
-        "name": "Havasu",
+        "category": "Rap_word",
+        "name": "Punch",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Ruby",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Toys",
+        "name": "Toys",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gorilla",
+        "image": "res/Item/Primates_Gorilla_1.png",
+        "isText": false
       },
       {
         "type": "regular",
         "category": "Rap_word",
         "name": "Verse",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Macaque",
+        "image": "res/Item/Primates_Macaque_5.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1543,10 +1212,316 @@
       },
       {
         "type": "regular",
-        "category": "Primates",
-        "name": "Tarsier",
-        "image": "res/Item/Primates_Tarsier_8.png",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_gamepad_4.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Baboon",
+        "image": "res/Item/Primates_Baboon_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Primates",
+        "name": "Primates",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 72,
+      "strategyType": "priority",
+      "solverSteps": 64,
+      "solverMaxSteps": 66,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 3,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 21,
+        "handToCol": 3,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 61,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 2,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 20,
+        "handToCol": 4,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "SQL",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Water_word",
+            "name": "Water",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sushi_word",
+            "name": "Chirashi",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Simian",
+            "image": "res/Item/Primates_Simian_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Toys",
+            "name": "Yo-yo",
+            "image": "res/Item/toys_buildingblocks_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Coding_word",
+            "name": "Ruby",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Coding_word",
+            "name": "Coding",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Toys",
+            "name": "Toys",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Punch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Primates",
+            "name": "Tarsier",
+            "image": "res/Item/Primates_Tarsier_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Rap_word",
+            "name": "Verse",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Rap_word",
+            "name": "Rap",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Primates": 8,
+      "Coding_word": 8,
+      "Rap_word": 4,
+      "Water_word": 4,
+      "Sushi_word": 3,
+      "Toys": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Python",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Yosemite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Rhyme",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Spinner",
+        "image": "res/Item/toys_gamepad_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Macaque",
+        "image": "res/Item/Primates_Macaque_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Maki",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Niagara",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gorilla",
+        "image": "res/Item/Primates_Gorilla_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Swift",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Bugs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Gibbon",
+        "image": "res/Item/Primates_Gibbon_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Java",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Havasu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Lemur",
+        "image": "res/Item/Primates_Lemur_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sushi_word",
+        "name": "Nigiri",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Baboon",
+        "image": "res/Item/Primates_Baboon_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Rap_word",
+        "name": "Lyrics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Water_word",
+        "name": "Victoria",
+        "isText": true
       },
       {
         "type": "gold",
@@ -1556,10 +1531,35 @@
       },
       {
         "type": "regular",
-        "category": "Toys",
-        "name": "Spinner",
-        "image": "res/Item/toys_gamepad_4.png",
+        "category": "Coding_word",
+        "name": "PHP",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Primates",
+        "name": "Mandrill",
+        "image": "res/Item/Primates_Mandrill_7.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Toys",
+        "name": "Doll",
+        "image": "res/Item/toys_jigsawpuzzle_7.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Primates",
+        "name": "Primates",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Coding_word",
+        "name": "Script",
+        "isText": true
       }
     ],
     "handDisplay": []

@@ -4,28 +4,28 @@
       "maxSlots": 4,
       "maxSteps": 128,
       "strategyType": "priority",
-      "solverSteps": 127,
+      "solverSteps": 129,
       "solverMaxSteps": 130,
       "moveStats": {
-        "colSingleToSlot": 11,
+        "colSingleToSlot": 12,
         "colMultiToSlot": 6,
-        "colToCol": 11,
-        "colMultiToCol": 7,
-        "handToSlot": 26,
-        "handToCol": 20,
-        "flip": 46,
-        "recycle": 0
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 33,
+        "handToCol": 13,
+        "flip": 62,
+        "recycle": 1
       },
-      "solver2Steps": 128,
+      "solver2Steps": 127,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 7,
-        "colToCol": 5,
-        "colMultiToCol": 2,
-        "handToSlot": 25,
-        "handToCol": 21,
-        "flip": 58,
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 0,
+        "handToSlot": 33,
+        "handToCol": 13,
+        "flip": 61,
         "recycle": 1
       }
     },
@@ -33,557 +33,9 @@
       [
         {
           "card": {
-            "type": "regular",
-            "category": "House_word",
-            "name": "Palace",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Chivalry",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
-            "category": "Fire_word",
-            "name": "Fire",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Heart",
-            "image": "res/Item/icons_heart_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Destrier",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Yoga_word",
-            "name": "Yoga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Map",
-            "name": "Map",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yoga_word",
-            "name": "Meditate",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Log",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "House_word",
-            "name": "Villa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Crying",
-            "image": "res/Item/icons_cross_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "Cyprus",
-            "image": "res/Item/map_spain_7.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Shield",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Mackerel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "Australia",
-            "image": "res/Item/map_australia_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yoga_word",
-            "name": "Posture",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Flame",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Tears",
-            "image": "res/Item/icons_arrow_4.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fish_word": 8,
-      "Map": 8,
-      "Icons": 8,
-      "Knight_word": 6,
-      "Fire_word": 6,
-      "Gamer_word": 4,
-      "Winter_word": 4,
-      "Device_word": 4,
-      "Yoga_word": 3,
-      "House_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Goldfish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Grouper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Fax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Italy",
-        "image": "res/Item/map_italy_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "India",
-        "image": "res/Item/map_india_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Up",
-        "image": "res/Item/icons_circle_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snowman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Eyes",
-        "image": "res/Item/icons_lockicon_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Helmet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Strategy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Matches",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Prayer",
-        "image": "res/Item/icons_envelopeicon_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Mansion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Rolling",
-        "image": "res/Item/icons_checkmark_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Device_word",
-        "name": "Device",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Printer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Tuna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Sardine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Wood",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Eel",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Gamer_word",
-        "name": "Gamer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "House_word",
-        "name": "House",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Weapon",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Winter_word",
-        "name": "Winter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "UK",
-        "image": "res/Item/map_uk_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ember",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Poo",
-        "image": "res/Item/icons_star_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Marlin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Score",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Cold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "USA",
-        "image": "res/Item/map_usa_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Japan",
-        "image": "res/Item/map_japan_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Frost",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Knight_word",
-        "name": "Knight",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "France",
-        "image": "res/Item/map_france_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Perch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Arcade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fish_word",
-        "name": "Fish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Armor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Shooter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Dryer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Heater",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snow",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 121,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 6,
-        "colToCol": 7,
-        "colMultiToCol": 6,
-        "handToSlot": 24,
-        "handToCol": 22,
-        "flip": 46,
-        "recycle": 0
-      },
-      "solver2Steps": 122,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 9,
-        "colToCol": 3,
-        "colMultiToCol": 3,
-        "handToSlot": 21,
-        "handToCol": 25,
-        "flip": 52,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Winter_word",
-            "name": "Frost",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Grouper",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Destrier",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Map",
-            "name": "Map",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Log",
+            "category": "Device_word",
+            "name": "Device",
             "isText": true
           },
           "faceUp": false
@@ -599,11 +51,10 @@
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Heart",
-            "image": "res/Item/icons_heart_5.png",
-            "isText": false
+            "type": "gold",
+            "category": "Knight_word",
+            "name": "Knight",
+            "isText": true
           },
           "faceUp": true
         }
@@ -612,8 +63,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fire_word",
-            "name": "Flame",
+            "category": "Device_word",
+            "name": "Printer",
             "isText": true
           },
           "faceUp": false
@@ -621,17 +72,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fire_word",
-            "name": "Matches",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Perch",
+            "category": "Knight_word",
+            "name": "Chivalry",
             "isText": true
           },
           "faceUp": false
@@ -640,8 +82,8 @@
           "card": {
             "type": "regular",
             "category": "Map",
-            "name": "Australia",
-            "image": "res/Item/map_australia_3.png",
+            "name": "USA",
+            "image": "res/Item/map_usa_5.png",
             "isText": false
           },
           "faceUp": false
@@ -650,7 +92,7 @@
           "card": {
             "type": "regular",
             "category": "Winter_word",
-            "name": "Snow",
+            "name": "Snowman",
             "isText": true
           },
           "faceUp": true
@@ -660,8 +102,26 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fish_word",
-            "name": "Sardine",
+            "category": "Gamer_word",
+            "name": "Score",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Winter_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fire_word",
+            "name": "Fire",
             "isText": true
           },
           "faceUp": false
@@ -669,8 +129,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Fish_word",
-            "name": "Tuna",
+            "category": "Gamer_word",
+            "name": "Arcade",
             "isText": true
           },
           "faceUp": false
@@ -678,416 +138,28 @@
         {
           "card": {
             "type": "regular",
-            "category": "Icons",
-            "name": "Eyes",
-            "image": "res/Item/icons_lockicon_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Marlin",
+            "category": "Device_word",
+            "name": "Heater",
             "isText": true
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
             "type": "regular",
             "category": "Fire_word",
-            "name": "Wood",
+            "name": "Ash",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Goldfish",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fish_word": 8,
-      "Map": 8,
-      "Icons": 8,
-      "Knight_word": 6,
-      "Fire_word": 6,
-      "Gamer_word": 4,
-      "Winter_word": 4,
-      "Device_word": 4,
-      "Yoga_word": 3,
-      "House_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Cold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "France",
-        "image": "res/Item/map_france_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Score",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Armor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Printer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Winter_word",
-        "name": "Winter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Arcade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Fax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Villa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Strategy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snowman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Eel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "UK",
-        "image": "res/Item/map_uk_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Poo",
-        "image": "res/Item/icons_star_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "USA",
-        "image": "res/Item/map_usa_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Chivalry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Cyprus",
-        "image": "res/Item/map_spain_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "House_word",
-        "name": "House",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Weapon",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Knight_word",
-        "name": "Knight",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fish_word",
-        "name": "Fish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ember",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Heater",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Italy",
-        "image": "res/Item/map_italy_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Palace",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Crying",
-        "image": "res/Item/icons_cross_2.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Fire_word",
-        "name": "Fire",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "India",
-        "image": "res/Item/map_india_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Prayer",
-        "image": "res/Item/icons_envelopeicon_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Meditate",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Device_word",
-        "name": "Device",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Mackerel",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Gamer_word",
-        "name": "Gamer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Helmet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Up",
-        "image": "res/Item/icons_circle_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Yoga_word",
-        "name": "Yoga",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Posture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Dryer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Japan",
-        "image": "res/Item/map_japan_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Mansion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Rolling",
-        "image": "res/Item/icons_checkmark_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Shield",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Tears",
-        "image": "res/Item/icons_arrow_4.png",
-        "isText": false
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 120,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 6,
-        "colToCol": 6,
-        "colMultiToCol": 7,
-        "handToSlot": 27,
-        "handToCol": 19,
-        "flip": 46,
-        "recycle": 0
-      },
-      "solver2Steps": 127,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
-        "colMultiToCol": 4,
-        "handToSlot": 30,
-        "handToCol": 16,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Poo",
-            "image": "res/Item/icons_star_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Tears",
-            "image": "res/Item/icons_arrow_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "UK",
-            "image": "res/Item/map_uk_6.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Goldfish",
+            "type": "gold",
+            "category": "House_word",
+            "name": "House",
             "isText": true
           },
           "faceUp": false
@@ -1105,8 +177,461 @@
         {
           "card": {
             "type": "regular",
+            "category": "Icons",
+            "name": "Poo",
+            "image": "res/Item/icons_star_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Goldfish",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "Australia",
+            "image": "res/Item/map_australia_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fish_word": 8,
+      "Map": 8,
+      "Icons": 8,
+      "Knight_word": 6,
+      "Fire_word": 6,
+      "Gamer_word": 4,
+      "Winter_word": 4,
+      "Device_word": 4,
+      "Yoga_word": 3,
+      "House_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Eel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Mackerel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gamer_word",
+        "name": "Gamer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Posture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Cyprus",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Eyes",
+        "image": "res/Item/icons_lockicon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "France",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Italy",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Up",
+        "image": "res/Item/icons_circle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Perch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Yoga_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Mansion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Prayer",
+        "image": "res/Item/icons_envelopeicon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "UK",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Tuna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Marlin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Log",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Tears",
+        "image": "res/Item/icons_arrow_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Crying",
+        "image": "res/Item/icons_cross_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Matches",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Palace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Helmet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Japan",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Dryer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Icons",
+        "name": "Icons",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Sardine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fish_word",
+        "name": "Fish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Strategy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Frost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Stretch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Destrier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Villa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Heart",
+        "image": "res/Item/icons_heart_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Weapon",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Cold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Wood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Grouper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "India",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Ember",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 8,
+        "colToCol": 10,
+        "colMultiToCol": 12,
+        "handToSlot": 21,
+        "handToCol": 25,
+        "flip": 46,
+        "recycle": 0
+      },
+      "solver2Steps": 129,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 8,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 26,
+        "handToCol": 20,
+        "flip": 62,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Device_word",
+            "name": "Device",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Crying",
+            "image": "res/Item/icons_cross_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "House_word",
+            "name": "House",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Mackerel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Wood",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Weapon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Gamer_word",
-            "name": "Score",
+            "name": "Shooter",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Yoga_word",
+            "name": "Yoga",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Helmet",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Yoga_word",
+            "name": "Stretch",
             "isText": true
           },
           "faceUp": false
@@ -1114,8 +639,529 @@
         {
           "card": {
             "type": "gold",
+            "category": "Winter_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Fish_word",
-            "name": "Fish",
+            "name": "Tuna",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "India",
+            "image": "res/Item/map_india_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Marlin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Yoga_word",
+            "name": "Meditate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Device_word",
+            "name": "Printer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Device_word",
+            "name": "Fax",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gamer_word",
+            "name": "Strategy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fish_word": 8,
+      "Map": 8,
+      "Icons": 8,
+      "Knight_word": 6,
+      "Fire_word": 6,
+      "Gamer_word": 4,
+      "Winter_word": 4,
+      "Device_word": 4,
+      "Yoga_word": 3,
+      "House_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Dryer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Score",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Grouper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Destrier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Posture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Australia",
+        "image": "res/Item/map_australia_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Cold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Up",
+        "image": "res/Item/icons_circle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Heater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Poo",
+        "image": "res/Item/icons_star_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "UK",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Villa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Ember",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Palace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Mansion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Arcade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Perch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "France",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snowman",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fire_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Knight_word",
+        "name": "Knight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Tears",
+        "image": "res/Item/icons_arrow_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Log",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Japan",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Icons",
+        "name": "Icons",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "USA",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Rolling",
+        "image": "res/Item/icons_checkmark_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Prayer",
+        "image": "res/Item/icons_envelopeicon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Frost",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Eel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gamer_word",
+        "name": "Gamer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Sardine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Italy",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Chivalry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Heart",
+        "image": "res/Item/icons_heart_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Ash",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fish_word",
+        "name": "Fish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Cyprus",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Matches",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Eyes",
+        "image": "res/Item/icons_lockicon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Goldfish",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 3,
+        "handToSlot": 28,
+        "handToCol": 18,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 127,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 1,
+        "handToSlot": 27,
+        "handToCol": 19,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Winter_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "House_word",
+            "name": "House",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Wood",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Crying",
+            "image": "res/Item/icons_cross_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "India",
+            "image": "res/Item/map_india_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gamer_word",
+            "name": "Shooter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Helmet",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "Australia",
+            "image": "res/Item/map_australia_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fire_word",
+            "name": "Fire",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Winter_word",
+            "name": "Snowman",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Ember",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Device_word",
+            "name": "Dryer",
             "isText": true
           },
           "faceUp": true
@@ -1135,515 +1181,6 @@
         {
           "card": {
             "type": "regular",
-            "category": "Yoga_word",
-            "name": "Stretch",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Shield",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Device_word",
-            "name": "Heater",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Chivalry",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Mackerel",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Heart",
-            "image": "res/Item/icons_heart_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Matches",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Prayer",
-            "image": "res/Item/icons_envelopeicon_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Device_word",
-            "name": "Dryer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Map",
-            "name": "Map",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fish_word": 8,
-      "Map": 8,
-      "Icons": 8,
-      "Knight_word": 6,
-      "Fire_word": 6,
-      "Gamer_word": 4,
-      "Winter_word": 4,
-      "Device_word": 4,
-      "Yoga_word": 3,
-      "House_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Meditate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Flame",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Weapon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Strategy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Arcade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Up",
-        "image": "res/Item/icons_circle_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Yoga_word",
-        "name": "Yoga",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "India",
-        "image": "res/Item/map_india_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Posture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Shooter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Grouper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Wood",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Palace",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Destrier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Mansion",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Winter_word",
-        "name": "Winter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Japan",
-        "image": "res/Item/map_japan_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Helmet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Tuna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Printer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fire_word",
-        "name": "Fire",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Sardine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Fax",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Device_word",
-        "name": "Device",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Crying",
-        "image": "res/Item/icons_cross_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Cold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snowman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Australia",
-        "image": "res/Item/map_australia_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "USA",
-        "image": "res/Item/map_usa_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Frost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Eel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Italy",
-        "image": "res/Item/map_italy_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "House_word",
-        "name": "House",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Log",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Cyprus",
-        "image": "res/Item/map_spain_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ember",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Marlin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Armor",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Gamer_word",
-        "name": "Gamer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Villa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Perch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Eyes",
-        "image": "res/Item/icons_lockicon_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Knight_word",
-        "name": "Knight",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 129,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 5,
-        "colToCol": 3,
-        "colMultiToCol": 6,
-        "handToSlot": 35,
-        "handToCol": 11,
-        "flip": 60,
-        "recycle": 1
-      },
-      "solver2Steps": 127,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 13,
-        "colMultiToSlot": 4,
-        "colToCol": 1,
-        "colMultiToCol": 3,
-        "handToSlot": 33,
-        "handToCol": 13,
-        "flip": 59,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Rolling",
-            "image": "res/Item/icons_checkmark_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Winter_word",
-            "name": "Snowman",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Shield",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Ember",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Device_word",
-            "name": "Device",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "India",
-            "image": "res/Item/map_india_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Up",
-            "image": "res/Item/icons_circle_3.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "Italy",
-            "image": "res/Item/map_italy_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Fire_word",
             "name": "Ash",
             "isText": true
@@ -1652,575 +1189,27 @@
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Map",
-            "name": "Map",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "House_word",
-            "name": "House",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "regular",
             "category": "Fish_word",
-            "name": "Goldfish",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Device_word",
-            "name": "Printer",
+            "name": "Grouper",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Matches",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Marlin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "Icons",
-            "name": "Prayer",
-            "image": "res/Item/icons_envelopeicon_8.png",
+            "name": "Icons",
             "isText": false
           },
           "faceUp": false
         },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "Cyprus",
-            "image": "res/Item/map_spain_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gamer_word",
-            "name": "Score",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Fish_word": 8,
-      "Map": 8,
-      "Icons": 8,
-      "Knight_word": 6,
-      "Fire_word": 6,
-      "Gamer_word": 4,
-      "Winter_word": 4,
-      "Device_word": 4,
-      "Yoga_word": 3,
-      "House_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Heart",
-        "image": "res/Item/icons_heart_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Crying",
-        "image": "res/Item/icons_cross_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Palace",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Cold",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Mackerel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Posture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Wood",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Sardine",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Destrier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Heater",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Australia",
-        "image": "res/Item/map_australia_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Perch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Frost",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "France",
-        "image": "res/Item/map_france_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Strategy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Fax",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Eel",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Meditate",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "UK",
-        "image": "res/Item/map_uk_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Tuna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Japan",
-        "image": "res/Item/map_japan_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Grouper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Chivalry",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "USA",
-        "image": "res/Item/map_usa_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Log",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Eyes",
-        "image": "res/Item/icons_lockicon_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Winter_word",
-        "name": "Winter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Dryer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Poo",
-        "image": "res/Item/icons_star_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Gamer_word",
-        "name": "Gamer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fish_word",
-        "name": "Fish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snow",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Fire_word",
-        "name": "Fire",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Helmet",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Weapon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Arcade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Yoga_word",
-        "name": "Yoga",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Yoga_word",
-        "name": "Stretch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Flame",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Shooter",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Tears",
-        "image": "res/Item/icons_arrow_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Armor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Villa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Mansion",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Knight_word",
-        "name": "Knight",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 128,
-      "strategyType": "priority",
-      "solverSteps": 120,
-      "solverMaxSteps": 130,
-      "moveStats": {
-        "colSingleToSlot": 9,
-        "colMultiToSlot": 6,
-        "colToCol": 6,
-        "colMultiToCol": 7,
-        "handToSlot": 28,
-        "handToCol": 18,
-        "flip": 46,
-        "recycle": 0
-      },
-      "solver2Steps": 125,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 10,
-        "colMultiToSlot": 8,
-        "colToCol": 3,
-        "colMultiToCol": 0,
-        "handToSlot": 28,
-        "handToCol": 18,
-        "flip": 57,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
         {
           "card": {
             "type": "regular",
             "category": "Fish_word",
-            "name": "Sardine",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Gamer_word",
-            "name": "Shooter",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Gamer_word",
-            "name": "Gamer",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "USA",
-            "image": "res/Item/map_usa_5.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Yoga_word",
-            "name": "Yoga",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Eyes",
-            "image": "res/Item/icons_lockicon_7.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Winter_word",
-            "name": "Snow",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fire_word",
-            "name": "Ember",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Winter_word",
-            "name": "Cold",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Map",
-            "name": "Australia",
-            "image": "res/Item/map_australia_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Fish_word",
-            "name": "Fish",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Yoga_word",
-            "name": "Stretch",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Fish_word",
-            "name": "Marlin",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Knight_word",
-            "name": "Knight",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Tears",
-            "image": "res/Item/icons_arrow_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Knight_word",
-            "name": "Weapon",
+            "name": "Eel",
             "isText": true
           },
           "faceUp": false
@@ -2232,16 +1221,6 @@
             "name": "Posture",
             "isText": true
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Icons",
-            "name": "Prayer",
-            "image": "res/Item/icons_envelopeicon_8.png",
-            "isText": false
-          },
           "faceUp": true
         }
       ]
@@ -2260,87 +1239,10 @@
     },
     "handPile": [
       {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Flame",
+        "type": "gold",
+        "category": "Device_word",
+        "name": "Device",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "France",
-        "image": "res/Item/map_france_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Tuna",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Knight_word",
-        "name": "Armor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Crying",
-        "image": "res/Item/icons_cross_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Strategy",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Winter_word",
-        "name": "Snowman",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Japan",
-        "image": "res/Item/map_japan_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Perch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fire_word",
-        "name": "Ash",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Goldfish",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "UK",
-        "image": "res/Item/map_uk_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "India",
-        "image": "res/Item/map_india_2.png",
-        "isText": false
       },
       {
         "type": "regular",
@@ -2351,74 +1253,83 @@
       },
       {
         "type": "regular",
-        "category": "Knight_word",
-        "name": "Shield",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Fire_word",
-        "name": "Wood",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Winter_word",
-        "name": "Winter",
+        "name": "Log",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Gamer_word",
-        "name": "Arcade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Device_word",
-        "name": "Device",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Gamer_word",
-        "name": "Score",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Device_word",
-        "name": "Fax",
-        "isText": true
-      },
-      {
-        "type": "gold",
         "category": "Icons",
-        "name": "Icons",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Map",
-        "name": "Map",
+        "name": "Tears",
+        "image": "res/Item/icons_arrow_4.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Device_word",
-        "name": "Heater",
+        "category": "Fish_word",
+        "name": "Tuna",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Yoga_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fish_word",
+        "name": "Fish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Italy",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Sardine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Strategy",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Knight_word",
+        "name": "Knight",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Fish_word",
-        "name": "Eel",
+        "name": "Perch",
         "isText": true
       },
       {
         "type": "gold",
-        "category": "Fire_word",
-        "name": "Fire",
+        "category": "Gamer_word",
+        "name": "Gamer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Poo",
+        "image": "res/Item/icons_star_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Weapon",
         "isText": true
       },
       {
@@ -2430,46 +1341,7 @@
       {
         "type": "regular",
         "category": "Knight_word",
-        "name": "Destrier",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Fish_word",
-        "name": "Grouper",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Heart",
-        "image": "res/Item/icons_heart_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Map",
-        "name": "Cyprus",
-        "image": "res/Item/map_spain_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Icons",
-        "name": "Poo",
-        "image": "res/Item/icons_star_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "House_word",
-        "name": "House",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "House_word",
-        "name": "Villa",
+        "name": "Armor",
         "isText": true
       },
       {
@@ -2487,8 +1359,26 @@
       },
       {
         "type": "regular",
-        "category": "Fire_word",
-        "name": "Log",
+        "category": "Device_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Destrier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Arcade",
         "isText": true
       },
       {
@@ -2499,9 +1389,10 @@
       },
       {
         "type": "regular",
-        "category": "House_word",
-        "name": "Palace",
-        "isText": true
+        "category": "Icons",
+        "name": "Heart",
+        "image": "res/Item/icons_heart_5.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -2511,8 +1402,475 @@
       },
       {
         "type": "regular",
+        "category": "Map",
+        "name": "UK",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Stretch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Prayer",
+        "image": "res/Item/icons_envelopeicon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Cyprus",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Goldfish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Score",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Villa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Palace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "USA",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Cold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Marlin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Japan",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Frost",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Chivalry",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Heater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Eyes",
+        "image": "res/Item/icons_lockicon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Matches",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 1,
+        "handToSlot": 28,
+        "handToCol": 18,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 124,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 7,
+        "colToCol": 7,
+        "colMultiToCol": 2,
+        "handToSlot": 22,
+        "handToCol": 24,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Fish_word",
+            "name": "Fish",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Chivalry",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Sardine",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "Australia",
+            "image": "res/Item/map_australia_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Armor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gamer_word",
+            "name": "Strategy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Ember",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Rolling",
+            "image": "res/Item/icons_checkmark_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Yoga_word",
+            "name": "Meditate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Knight_word",
+            "name": "Knight",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Winter_word",
+            "name": "Snow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Grouper",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Device_word",
+            "name": "Fax",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Mackerel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Winter_word",
+            "name": "Frost",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Eel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "Cyprus",
+            "image": "res/Item/map_spain_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Log",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fish_word": 8,
+      "Map": 8,
+      "Icons": 8,
+      "Knight_word": 6,
+      "Fire_word": 6,
+      "Gamer_word": 4,
+      "Winter_word": 4,
+      "Device_word": 4,
+      "Yoga_word": 3,
+      "House_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Crying",
+        "image": "res/Item/icons_cross_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Gamer_word",
+        "name": "Gamer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Palace",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snowman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Italy",
+        "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Heart",
+        "image": "res/Item/icons_heart_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Marlin",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Yoga_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Device_word",
+        "name": "Device",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Cold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Goldfish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Destrier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Tears",
+        "image": "res/Item/icons_arrow_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "USA",
+        "image": "res/Item/map_usa_5.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "House_word",
+        "name": "House",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Tuna",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Japan",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Knight_word",
         "name": "Helmet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Posture",
         "isText": true
       },
       {
@@ -2523,14 +1881,432 @@
       },
       {
         "type": "regular",
+        "category": "Icons",
+        "name": "Poo",
+        "image": "res/Item/icons_star_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Wood",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Arcade",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Map",
+        "name": "Map",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Weapon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Ash",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Villa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Eyes",
+        "image": "res/Item/icons_lockicon_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Heater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "France",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Up",
+        "image": "res/Item/icons_circle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "UK",
+        "image": "res/Item/map_uk_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Fire_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Icons",
+        "name": "Icons",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "India",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Device_word",
         "name": "Dryer",
         "isText": true
       },
       {
         "type": "regular",
+        "category": "Gamer_word",
+        "name": "Score",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Printer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Prayer",
+        "image": "res/Item/icons_envelopeicon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Shooter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Stretch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Perch",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Knight_word",
-        "name": "Chivalry",
+        "name": "Shield",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Mansion",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Winter_word",
+        "name": "Winter",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 8,
+        "colToCol": 10,
+        "colMultiToCol": 4,
+        "handToSlot": 17,
+        "handToCol": 29,
+        "flip": 46,
+        "recycle": 0
+      },
+      "solver2Steps": 129,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 7,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 18,
+        "handToCol": 28,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "House_word",
+            "name": "Palace",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Tuna",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Ash",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Yoga_word",
+            "name": "Posture",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Eyes",
+            "image": "res/Item/icons_lockicon_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Winter_word",
+            "name": "Winter",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Knight_word",
+            "name": "Shield",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Rolling",
+            "image": "res/Item/icons_checkmark_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "House_word",
+            "name": "House",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "UK",
+            "image": "res/Item/map_uk_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Icons",
+            "name": "Crying",
+            "image": "res/Item/icons_cross_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gamer_word",
+            "name": "Gamer",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Flame",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gamer_word",
+            "name": "Strategy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fire_word",
+            "name": "Log",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fish_word",
+            "name": "Perch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Map",
+            "name": "Map",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Map",
+            "name": "USA",
+            "image": "res/Item/map_usa_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Fish_word": 8,
+      "Map": 8,
+      "Icons": 8,
+      "Knight_word": 6,
+      "Fire_word": 6,
+      "Gamer_word": 4,
+      "Winter_word": 4,
+      "Device_word": 4,
+      "Yoga_word": 3,
+      "House_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "India",
+        "image": "res/Item/map_india_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Mackerel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Matches",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Device_word",
+        "name": "Device",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Mansion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Prayer",
+        "image": "res/Item/icons_envelopeicon_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Ember",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Arcade",
         "isText": true
       },
       {
@@ -2541,9 +2317,233 @@
       },
       {
         "type": "regular",
+        "category": "Device_word",
+        "name": "Heater",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Stretch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fire_word",
+        "name": "Wood",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fish_word",
+        "name": "Fish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Armor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Fax",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Cold",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fire_word",
+        "name": "Fire",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Dryer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Yoga_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Device_word",
+        "name": "Printer",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Map",
         "name": "Italy",
         "image": "res/Item/map_italy_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snowman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Winter_word",
+        "name": "Snow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Weapon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Marlin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Grouper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Eel",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Knight_word",
+        "name": "Knight",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Destrier",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Japan",
+        "image": "res/Item/map_japan_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Icons",
+        "name": "Icons",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Sardine",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Score",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Helmet",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Poo",
+        "image": "res/Item/icons_star_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Tears",
+        "image": "res/Item/icons_arrow_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Yoga_word",
+        "name": "Meditate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Cyprus",
+        "image": "res/Item/map_spain_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Knight_word",
+        "name": "Chivalry",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "France",
+        "image": "res/Item/map_france_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gamer_word",
+        "name": "Shooter",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "House_word",
+        "name": "Villa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Up",
+        "image": "res/Item/icons_circle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Fish_word",
+        "name": "Goldfish",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Icons",
+        "name": "Heart",
+        "image": "res/Item/icons_heart_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Map",
+        "name": "Australia",
+        "image": "res/Item/map_australia_3.png",
         "isText": false
       }
     ],
