@@ -4,33 +4,562 @@
       "maxSlots": 4,
       "maxSteps": 126,
       "strategyType": "priority",
-      "solverSteps": 127,
+      "solverSteps": 122,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 6,
+        "colToCol": 9,
+        "colMultiToCol": 2,
+        "handToSlot": 29,
+        "handToCol": 13,
+        "flip": 54,
+        "recycle": 1
+      },
+      "solver2Steps": 128,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 9,
+        "colToCol": 4,
+        "colMultiToCol": 3,
+        "handToSlot": 14,
+        "handToCol": 28,
+        "flip": 60,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Spaniel",
+            "image": "res/Item/dogs_spaniel_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Metaphor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Dogs",
+            "name": "Dogs",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Terrier",
+            "image": "res/Item/dogs_terrier_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Bulldog",
+            "image": "res/Item/dogs_bulldog_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Speech_word",
+            "name": "Speech",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sour_word",
+            "name": "Pickle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Victory",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Arrange_word",
+            "name": "Clothes",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sour_word",
+            "name": "Sour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sour_word",
+            "name": "Vinegar",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Camping",
+            "name": "Camping",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Triumph",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sour_word",
+            "name": "Kimchi",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Arrange_word",
+            "name": "Hangers",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Auction_word",
+            "name": "Lot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camping",
+            "name": "Campfire",
+            "image": "res/Item/camping_campfire_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Achieve_word",
+            "name": "Achieve",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Griffin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Poodle",
+            "image": "res/Item/dogs_poodle_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beans_word",
+            "name": "Beans",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Auction_word",
+            "name": "Bidder",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Creature_word": 8,
+      "Speech_word": 8,
+      "Dogs": 8,
+      "Auction_word": 6,
+      "Achieve_word": 6,
+      "Sour_word": 4,
+      "Arrange_word": 4,
+      "Beans_word": 4,
+      "Pairs": 3,
+      "Camping": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Oxymoron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Arabica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dwarf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Twins",
+        "image": "res/Item/pairs_twins_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Merit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Elf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Tent",
+        "image": "res/Item/camping_tent_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Phoenix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Collie",
+        "image": "res/Item/dogs_collie_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Auction_word",
+        "name": "Auction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Simile",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Catalog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Excelsa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Tamarind",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pairs",
+        "name": "Pairs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Skis",
+        "image": "res/Item/pairs_skis_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Win",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Liberica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allegory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Hammock",
+        "image": "res/Item/camping_hammock_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Bid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Creature_word",
+        "name": "Creature",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Drawers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Unicorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Pegasus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Feat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allusion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Robusta",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Beagle",
+        "image": "res/Item/dogs_beagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Anaphora",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Paradox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Pug",
+        "image": "res/Item/dogs_pug_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Zeugma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Shelves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dragon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Husky",
+        "image": "res/Item/dogs_husky_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Success",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Socks",
+        "image": "res/Item/pairs_socks_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Hydra",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Arrange_word",
+        "name": "Arrange",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 123,
       "solverMaxSteps": 129,
       "moveStats": {
         "colSingleToSlot": 14,
-        "colMultiToSlot": 6,
-        "colToCol": 4,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
         "colMultiToCol": 1,
-        "handToSlot": 24,
-        "handToCol": 18,
-        "flip": 59,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 56,
         "recycle": 1
       },
-      "solver2Steps": 127,
+      "solver2Steps": 123,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 12,
-        "colMultiToSlot": 8,
-        "colToCol": 6,
-        "colMultiToCol": 2,
-        "handToSlot": 22,
-        "handToCol": 20,
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 21,
+        "handToCol": 21,
         "flip": 56,
         "recycle": 1
       }
     },
     "tableau": [
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Zeugma",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -44,17 +573,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Achieve_word",
-            "name": "Win",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Achieve_word",
-            "name": "Achieve",
+            "category": "Creature_word",
+            "name": "Dwarf",
             "isText": true
           },
           "faceUp": false
@@ -73,8 +593,91 @@
         {
           "card": {
             "type": "regular",
+            "category": "Auction_word",
+            "name": "Bid",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Arrange_word",
-            "name": "Hangers",
+            "name": "Drawers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pairs",
+            "name": "Pairs",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Auction_word",
+            "name": "Auction",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Hydra",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Oxymoron",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Phoenix",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Dragon",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Pegasus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beans_word",
+            "name": "Robusta",
             "isText": true
           },
           "faceUp": false
@@ -86,13 +689,15 @@
             "name": "Dogs",
             "isText": false
           },
-          "faceUp": false
-        },
+          "faceUp": true
+        }
+      ],
+      [
         {
           "card": {
-            "type": "regular",
-            "category": "Achieve_word",
-            "name": "Success",
+            "type": "gold",
+            "category": "Speech_word",
+            "name": "Speech",
             "isText": true
           },
           "faceUp": false
@@ -100,8 +705,395 @@
         {
           "card": {
             "type": "regular",
+            "category": "Achieve_word",
+            "name": "Triumph",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Unicorn",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Terrier",
+            "image": "res/Item/dogs_terrier_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
             "category": "Beans_word",
-            "name": "Robusta",
+            "name": "Beans",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Arrange_word",
+            "name": "Arrange",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Allegory",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Creature_word": 8,
+      "Speech_word": 8,
+      "Dogs": 8,
+      "Auction_word": 6,
+      "Achieve_word": 6,
+      "Sour_word": 4,
+      "Arrange_word": 4,
+      "Beans_word": 4,
+      "Pairs": 3,
+      "Camping": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Camping",
+        "name": "Camping",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Excelsa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Paradox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Spaniel",
+        "image": "res/Item/dogs_spaniel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Feat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Vinegar",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Achieve_word",
+        "name": "Achieve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Socks",
+        "image": "res/Item/pairs_socks_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allusion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Beagle",
+        "image": "res/Item/dogs_beagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sour_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Poodle",
+        "image": "res/Item/dogs_poodle_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Lot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Hammock",
+        "image": "res/Item/camping_hammock_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Bidder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Catalog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Tamarind",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Anaphora",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Twins",
+        "image": "res/Item/pairs_twins_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Arabica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Shelves",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Creature_word",
+        "name": "Creature",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Merit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Pickle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Collie",
+        "image": "res/Item/dogs_collie_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Simile",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Pug",
+        "image": "res/Item/dogs_pug_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Campfire",
+        "image": "res/Item/camping_campfire_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Liberica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Kimchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Tent",
+        "image": "res/Item/camping_tent_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Success",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Hangers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Skis",
+        "image": "res/Item/pairs_skis_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Metaphor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Griffin",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Win",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Clothes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Bulldog",
+        "image": "res/Item/dogs_bulldog_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Elf",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 4,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 53,
+        "recycle": 1
+      },
+      "solver2Steps": 125,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 8,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 19,
+        "handToCol": 23,
+        "flip": 57,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Griffin",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sour_word",
+            "name": "Pickle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sour_word",
+            "name": "Vinegar",
             "isText": true
           },
           "faceUp": false
@@ -120,36 +1112,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Speech_word",
-            "name": "Paradox",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camping",
-            "name": "Campfire",
-            "image": "res/Item/camping_campfire_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Speech_word",
-            "name": "Speech",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beans_word",
-            "name": "Liberica",
+            "category": "Creature_word",
+            "name": "Pegasus",
             "isText": true
           },
           "faceUp": false
@@ -158,23 +1122,21 @@
           "card": {
             "type": "regular",
             "category": "Dogs",
-            "name": "Terrier",
-            "image": "res/Item/dogs_terrier_1.png",
+            "name": "Poodle",
+            "image": "res/Item/dogs_poodle_3.png",
             "isText": false
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Kimchi",
+            "type": "gold",
+            "category": "Arrange_word",
+            "name": "Arrange",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -187,8 +1149,511 @@
         {
           "card": {
             "type": "regular",
+            "category": "Arrange_word",
+            "name": "Clothes",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Achieve_word",
+            "name": "Achieve",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Bulldog",
+            "image": "res/Item/dogs_bulldog_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pairs",
+            "name": "Socks",
+            "image": "res/Item/pairs_socks_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Arrange_word",
+            "name": "Drawers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camping",
+            "name": "Tent",
+            "image": "res/Item/camping_tent_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Beans_word",
+            "name": "Beans",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camping",
+            "name": "Campfire",
+            "image": "res/Item/camping_campfire_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Creature_word",
+            "name": "Elf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Feat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
             "category": "Auction_word",
             "name": "Lot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Merit",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pairs",
+            "name": "Skis",
+            "image": "res/Item/pairs_skis_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Auction_word",
+            "name": "Bidder",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Creature_word": 8,
+      "Speech_word": 8,
+      "Dogs": 8,
+      "Auction_word": 6,
+      "Achieve_word": 6,
+      "Sour_word": 4,
+      "Arrange_word": 4,
+      "Beans_word": 4,
+      "Pairs": 3,
+      "Camping": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Hydra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Terrier",
+        "image": "res/Item/dogs_terrier_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Unicorn",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Liberica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Pug",
+        "image": "res/Item/dogs_pug_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Husky",
+        "image": "res/Item/dogs_husky_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Beagle",
+        "image": "res/Item/dogs_beagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Auction_word",
+        "name": "Auction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Triumph",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Excelsa",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camping",
+        "name": "Camping",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Zeugma",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pairs",
+        "name": "Pairs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Paradox",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Tamarind",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dragon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Hangers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Twins",
+        "image": "res/Item/pairs_twins_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Speech_word",
+        "name": "Speech",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Spaniel",
+        "image": "res/Item/dogs_spaniel_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Phoenix",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Catalog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Victory",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sour_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allusion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Success",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Robusta",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dogs",
+        "name": "Dogs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Hammock",
+        "image": "res/Item/camping_hammock_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Kimchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dwarf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Arabica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Collie",
+        "image": "res/Item/dogs_collie_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allegory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Shelves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Win",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Simile",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Oxymoron",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Anaphora",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Creature_word",
+        "name": "Creature",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 126,
+      "strategyType": "priority",
+      "solverSteps": 121,
+      "solverMaxSteps": 129,
+      "moveStats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 29,
+        "handToCol": 13,
+        "flip": 54,
+        "recycle": 1
+      },
+      "solver2Steps": 128,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 16,
+        "colMultiToSlot": 6,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 59,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Arrange_word",
+            "name": "Arrange",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Victory",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Camping",
+            "name": "Tent",
+            "image": "res/Item/camping_tent_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Achieve_word",
+            "name": "Achieve",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Speech_word",
+            "name": "Speech",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Bulldog",
+            "image": "res/Item/dogs_bulldog_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Success",
             "isText": true
           },
           "faceUp": false
@@ -209,13 +1674,34 @@
             "name": "Feat",
             "isText": true
           },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Oxymoron",
+            "isText": true
+          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Creature_word",
-            "name": "Dragon",
+            "category": "Dogs",
+            "name": "Terrier",
+            "image": "res/Item/dogs_terrier_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Anaphora",
             "isText": true
           },
           "faceUp": false
@@ -233,339 +1719,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Speech_word",
-            "name": "Zeugma",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "Creature_word": 8,
-      "Speech_word": 8,
-      "Dogs": 8,
-      "Auction_word": 6,
-      "Achieve_word": 6,
-      "Sour_word": 4,
-      "Arrange_word": 4,
-      "Beans_word": 4,
-      "Pairs": 3,
-      "Camping": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Unicorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Poodle",
-        "image": "res/Item/dogs_poodle_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Oxymoron",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sour_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Anaphora",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camping",
-        "name": "Camping",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Price",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Simile",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Triumph",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Arrange_word",
-        "name": "Arrange",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Clothes",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Hammock",
-        "image": "res/Item/camping_hammock_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Collie",
-        "image": "res/Item/dogs_collie_6.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Tent",
-        "image": "res/Item/camping_tent_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Pegasus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Pug",
-        "image": "res/Item/dogs_pug_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allegory",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Shelves",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pairs",
-        "name": "Pairs",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Vinegar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Merit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Hammer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Beans_word",
-        "name": "Beans",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Auction_word",
-        "name": "Auction",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beans_word",
-        "name": "Excelsa",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Bidder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Hydra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Catalog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Drawers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Twins",
-        "image": "res/Item/pairs_twins_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Bulldog",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Tamarind",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Griffin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Socks",
-        "image": "res/Item/pairs_socks_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Dwarf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allusion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beans_word",
-        "name": "Arabica",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Spaniel",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Skis",
-        "image": "res/Item/pairs_skis_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Phoenix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Elf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Pickle",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 126,
-      "strategyType": "priority",
-      "solverSteps": 126,
-      "solverMaxSteps": 129,
-      "moveStats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 9,
-        "colToCol": 7,
-        "colMultiToCol": 5,
-        "handToSlot": 31,
-        "handToCol": 11,
-        "flip": 56,
-        "recycle": 1
-      },
-      "solver2Steps": 125,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 9,
-        "colToCol": 7,
-        "colMultiToCol": 3,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 55,
-        "recycle": 1
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Terrier",
-            "image": "res/Item/dogs_terrier_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Achieve_word",
-            "name": "Success",
+            "name": "Merit",
             "isText": true
           },
           "faceUp": false
@@ -573,104 +1728,21 @@
         {
           "card": {
             "type": "regular",
-            "category": "Auction_word",
-            "name": "Bidder",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Speech_word",
-            "name": "Anaphora",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Vinegar",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Beans_word",
-            "name": "Beans",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Arrange_word",
-            "name": "Arrange",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Poodle",
-            "image": "res/Item/dogs_poodle_3.png",
+            "category": "Pairs",
+            "name": "Twins",
+            "image": "res/Item/pairs_twins_2.png",
             "isText": false
           },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Auction_word",
-            "name": "Hammer",
-            "isText": true
-          },
           "faceUp": true
         }
       ],
       [
         {
           "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Pickle",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Tamarind",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Arrange_word",
-            "name": "Hangers",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beans_word",
-            "name": "Excelsa",
-            "isText": true
+            "type": "gold",
+            "category": "Pairs",
+            "name": "Pairs",
+            "isText": false
           },
           "faceUp": false
         },
@@ -687,59 +1759,10 @@
         {
           "card": {
             "type": "regular",
-            "category": "Speech_word",
-            "name": "Simile",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
             "category": "Pairs",
-            "name": "Twins",
-            "image": "res/Item/pairs_twins_2.png",
+            "name": "Socks",
+            "image": "res/Item/pairs_socks_1.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Pug",
-            "image": "res/Item/dogs_pug_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Arrange_word",
-            "name": "Shelves",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camping",
-            "name": "Campfire",
-            "image": "res/Item/camping_campfire_2.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Auction_word",
-            "name": "Auction",
-            "isText": true
           },
           "faceUp": false
         },
@@ -747,7 +1770,7 @@
           "card": {
             "type": "regular",
             "category": "Creature_word",
-            "name": "Unicorn",
+            "name": "Dragon",
             "isText": true
           },
           "faceUp": false
@@ -756,7 +1779,25 @@
           "card": {
             "type": "regular",
             "category": "Arrange_word",
-            "name": "Drawers",
+            "name": "Clothes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Auction_word",
+            "name": "Hammer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Achieve_word",
+            "name": "Triumph",
             "isText": true
           },
           "faceUp": true
@@ -777,31 +1818,6 @@
     },
     "handPile": [
       {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Catalog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Hammock",
-        "image": "res/Item/camping_hammock_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allusion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Metaphor",
-        "isText": true
-      },
-      {
         "type": "gold",
         "category": "Camping",
         "name": "Camping",
@@ -809,83 +1825,14 @@
       },
       {
         "type": "regular",
-        "category": "Pairs",
-        "name": "Skis",
-        "image": "res/Item/pairs_skis_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Bulldog",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Beans_word",
-        "name": "Arabica",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Merit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Socks",
-        "image": "res/Item/pairs_socks_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Bid",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Lot",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Creature_word",
-        "name": "Creature",
+        "category": "Arrange_word",
+        "name": "Drawers",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Speech_word",
-        "name": "Zeugma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beans_word",
-        "name": "Robusta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Paradox",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Victory",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Sour_word",
-        "name": "Sour",
+        "name": "Simile",
         "isText": true
       },
       {
@@ -902,9 +1849,10 @@
       },
       {
         "type": "regular",
-        "category": "Creature_word",
-        "name": "Dwarf",
-        "isText": true
+        "category": "Dogs",
+        "name": "Collie",
+        "image": "res/Item/dogs_collie_6.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -914,16 +1862,15 @@
       },
       {
         "type": "regular",
-        "category": "Achieve_word",
-        "name": "Win",
+        "category": "Sour_word",
+        "name": "Tamarind",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Dogs",
-        "name": "Beagle",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
+        "category": "Beans_word",
+        "name": "Arabica",
+        "isText": true
       },
       {
         "type": "regular",
@@ -933,69 +1880,39 @@
       },
       {
         "type": "regular",
-        "category": "Speech_word",
-        "name": "Oxymoron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allegory",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Triumph",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Achieve_word",
-        "name": "Achieve",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Collie",
-        "image": "res/Item/dogs_collie_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Speech_word",
-        "name": "Speech",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Kimchi",
+        "category": "Auction_word",
+        "name": "Lot",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Creature_word",
-        "name": "Phoenix",
+        "name": "Unicorn",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Clothes",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pairs",
-        "name": "Pairs",
-        "isText": false
       },
       {
         "type": "regular",
         "category": "Beans_word",
-        "name": "Liberica",
+        "name": "Excelsa",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Campfire",
+        "image": "res/Item/camping_campfire_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Sour_word",
+        "name": "Sour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Paradox",
         "isText": true
       },
       {
@@ -1006,28 +1923,60 @@
       },
       {
         "type": "regular",
+        "category": "Speech_word",
+        "name": "Allegory",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Camping",
-        "name": "Tent",
-        "image": "res/Item/camping_tent_1.png",
+        "name": "Hammock",
+        "image": "res/Item/camping_hammock_3.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Achieve_word",
-        "name": "Feat",
+        "category": "Speech_word",
+        "name": "Metaphor",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Creature_word",
-        "name": "Dragon",
+        "name": "Phoenix",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Creature_word",
-        "name": "Elf",
+        "name": "Dwarf",
         "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allusion",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pairs",
+        "name": "Skis",
+        "image": "res/Item/pairs_skis_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Bid",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Poodle",
+        "image": "res/Item/dogs_poodle_3.png",
+        "isText": false
       },
       {
         "type": "regular",
@@ -1035,6 +1984,97 @@
         "name": "Husky",
         "image": "res/Item/dogs_husky_5.png",
         "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Auction_word",
+        "name": "Auction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Shelves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Vinegar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Catalog",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Kimchi",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Pug",
+        "image": "res/Item/dogs_pug_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Bidder",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Beans_word",
+        "name": "Beans",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Robusta",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Win",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Zeugma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Hangers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Liberica",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Pickle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Elf",
+        "isText": true
       }
     ],
     "handDisplay": []
@@ -1044,28 +2084,28 @@
       "maxSlots": 4,
       "maxSteps": 126,
       "strategyType": "priority",
-      "solverSteps": 124,
+      "solverSteps": 128,
       "solverMaxSteps": 129,
       "moveStats": {
-        "colSingleToSlot": 14,
+        "colSingleToSlot": 8,
         "colMultiToSlot": 6,
-        "colToCol": 2,
-        "colMultiToCol": 2,
-        "handToSlot": 31,
-        "handToCol": 11,
-        "flip": 57,
+        "colToCol": 8,
+        "colMultiToCol": 4,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 59,
         "recycle": 1
       },
-      "solver2Steps": 126,
+      "solver2Steps": 125,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 15,
-        "colMultiToSlot": 6,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 30,
-        "handToCol": 12,
-        "flip": 58,
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 6,
+        "colMultiToCol": 4,
+        "handToSlot": 22,
+        "handToCol": 20,
+        "flip": 55,
         "recycle": 1
       }
     },
@@ -1073,58 +2113,18 @@
       [
         {
           "card": {
-            "type": "regular",
-            "category": "Achieve_word",
-            "name": "Success",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Arrange_word",
-            "name": "Drawers",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Collie",
-            "image": "res/Item/dogs_collie_6.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Camping",
-            "name": "Hammock",
-            "image": "res/Item/camping_hammock_3.png",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Speech_word",
-            "name": "Allegory",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
             "type": "gold",
             "category": "Beans_word",
             "name": "Beans",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Beans_word",
+            "name": "Liberica",
             "isText": true
           },
           "faceUp": false
@@ -1142,23 +2142,25 @@
         {
           "card": {
             "type": "regular",
-            "category": "Beans_word",
-            "name": "Excelsa",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Arrange_word",
-            "name": "Clothes",
-            "isText": true
+            "category": "Dogs",
+            "name": "Husky",
+            "image": "res/Item/dogs_husky_5.png",
+            "isText": false
           },
           "faceUp": true
         }
       ],
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Spaniel",
+            "image": "res/Item/dogs_spaniel_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -1171,74 +2173,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Achieve_word",
-            "name": "Triumph",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Speech_word",
-            "name": "Anaphora",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Speech_word",
-            "name": "Speech",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Dogs",
-            "name": "Pug",
-            "image": "res/Item/dogs_pug_8.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Dogs",
-            "name": "Dogs",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
-            "category": "Creature_word",
-            "name": "Creature",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
             "category": "Beans_word",
-            "name": "Liberica",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Speech_word",
-            "name": "Simile",
+            "name": "Excelsa",
             "isText": true
           },
           "faceUp": false
@@ -1255,348 +2191,22 @@
         {
           "card": {
             "type": "regular",
-            "category": "Camping",
-            "name": "Campfire",
-            "image": "res/Item/camping_campfire_2.png",
+            "category": "Dogs",
+            "name": "Collie",
+            "image": "res/Item/dogs_collie_6.png",
             "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Achieve_word",
-            "name": "Win",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beans_word",
-            "name": "Arabica",
-            "isText": true
           },
           "faceUp": true
         }
-      ]
-    ],
-    "categoryTargets": {
-      "Creature_word": 8,
-      "Speech_word": 8,
-      "Dogs": 8,
-      "Auction_word": 6,
-      "Achieve_word": 6,
-      "Sour_word": 4,
-      "Arrange_word": 4,
-      "Beans_word": 4,
-      "Pairs": 3,
-      "Camping": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Oxymoron",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Socks",
-        "image": "res/Item/pairs_socks_1.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Pairs",
-        "name": "Pairs",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Metaphor",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Bidder",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Husky",
-        "image": "res/Item/dogs_husky_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Poodle",
-        "image": "res/Item/dogs_poodle_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Price",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Auction_word",
-        "name": "Auction",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Beagle",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Pegasus",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Victory",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Zeugma",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Dwarf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Griffin",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Catalog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Hammer",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Camping",
-        "name": "Camping",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Achieve_word",
-        "name": "Achieve",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Tent",
-        "image": "res/Item/camping_tent_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Dragon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Lot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Kimchi",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Bulldog",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Unicorn",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Terrier",
-        "image": "res/Item/dogs_terrier_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Merit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Hydra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Pairs",
-        "name": "Skis",
-        "image": "res/Item/pairs_skis_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Sour_word",
-        "name": "Sour",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Tamarind",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Hangers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Vinegar",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Spaniel",
-        "image": "res/Item/dogs_spaniel_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allusion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Elf",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Sour_word",
-        "name": "Pickle",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Beans_word",
-        "name": "Robusta",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Phoenix",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Feat",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Shelves",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Paradox",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 4,
-      "maxSteps": 126,
-      "strategyType": "priority",
-      "solverSteps": 128,
-      "solverMaxSteps": 129,
-      "moveStats": {
-        "colSingleToSlot": 15,
-        "colMultiToSlot": 6,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 59,
-        "recycle": 1
-      },
-      "solver2Steps": 127,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 15,
-        "colMultiToSlot": 6,
-        "colToCol": 1,
-        "colMultiToCol": 2,
-        "handToSlot": 22,
-        "handToCol": 20,
-        "flip": 60,
-        "recycle": 1
-      }
-    },
-    "tableau": [
+      ],
       [
         {
           "card": {
             "type": "regular",
-            "category": "Arrange_word",
-            "name": "Shelves",
-            "isText": true
+            "category": "Dogs",
+            "name": "Pug",
+            "image": "res/Item/dogs_pug_8.png",
+            "isText": false
           },
           "faceUp": false
         },
@@ -1612,28 +2222,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "Beans_word",
-            "name": "Robusta",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Auction_word",
-            "name": "Hammer",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Beans_word",
-            "name": "Liberica",
+            "category": "Achieve_word",
+            "name": "Feat",
             "isText": true
           },
           "faceUp": false
@@ -1650,37 +2240,9 @@
         {
           "card": {
             "type": "regular",
-            "category": "Creature_word",
-            "name": "Unicorn",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Arrange_word",
-            "name": "Arrange",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Creature_word",
-            "name": "Dwarf",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "gold",
             "category": "Camping",
-            "name": "Camping",
+            "name": "Hammock",
+            "image": "res/Item/camping_hammock_3.png",
             "isText": false
           },
           "faceUp": false
@@ -1689,7 +2251,28 @@
           "card": {
             "type": "regular",
             "category": "Creature_word",
-            "name": "Griffin",
+            "name": "Unicorn",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dogs",
+            "name": "Bulldog",
+            "image": "res/Item/dogs_bulldog_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Speech_word",
+            "name": "Allusion",
             "isText": true
           },
           "faceUp": false
@@ -1708,18 +2291,8 @@
           "card": {
             "type": "regular",
             "category": "Achieve_word",
-            "name": "Win",
+            "name": "Triumph",
             "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Pairs",
-            "name": "Socks",
-            "image": "res/Item/pairs_socks_1.png",
-            "isText": false
           },
           "faceUp": false
         },
@@ -1730,43 +2303,13 @@
             "name": "Sour",
             "isText": true
           },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Vinegar",
-            "isText": true
-          },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Dogs",
-            "name": "Terrier",
-            "image": "res/Item/dogs_terrier_1.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Dogs",
-            "name": "Dogs",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Kimchi",
+            "category": "Speech_word",
+            "name": "Oxymoron",
             "isText": true
           },
           "faceUp": false
@@ -1775,25 +2318,7 @@
           "card": {
             "type": "regular",
             "category": "Creature_word",
-            "name": "Pegasus",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Speech_word",
-            "name": "Zeugma",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Sour_word",
-            "name": "Pickle",
+            "name": "Griffin",
             "isText": true
           },
           "faceUp": true
@@ -1815,133 +2340,8 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Dogs",
-        "name": "Collie",
-        "image": "res/Item/dogs_collie_6.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Beans_word",
-        "name": "Beans",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Bulldog",
-        "image": "res/Item/dogs_bulldog_7.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Speech_word",
-        "name": "Speech",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Pug",
-        "image": "res/Item/dogs_pug_8.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Hydra",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Simile",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Elf",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Pairs",
-        "name": "Pairs",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Price",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Poodle",
-        "image": "res/Item/dogs_poodle_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Triumph",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Drawers",
-        "isText": true
-      },
-      {
-        "type": "regular",
         "category": "Beans_word",
         "name": "Arabica",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Hammock",
-        "image": "res/Item/camping_hammock_3.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Auction_word",
-        "name": "Auction",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Creature_word",
-        "name": "Creature",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Allusion",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Catalog",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Merit",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Paradox",
         "isText": true
       },
       {
@@ -1952,51 +2352,32 @@
       },
       {
         "type": "regular",
-        "category": "Speech_word",
-        "name": "Oxymoron",
+        "category": "Creature_word",
+        "name": "Phoenix",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Achieve_word",
-        "name": "Feat",
+        "name": "Merit",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Catalog",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Speech_word",
-        "name": "Anaphora",
+        "name": "Paradox",
         "isText": true
       },
       {
         "type": "regular",
-        "category": "Pairs",
-        "name": "Skis",
-        "image": "res/Item/pairs_skis_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Lot",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Arrange_word",
-        "name": "Hangers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Achieve_word",
-        "name": "Victory",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Auction_word",
-        "name": "Bid",
+        "category": "Speech_word",
+        "name": "Zeugma",
         "isText": true
       },
       {
@@ -2006,42 +2387,9 @@
         "isText": true
       },
       {
-        "type": "regular",
-        "category": "Camping",
-        "name": "Tent",
-        "image": "res/Item/camping_tent_1.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Husky",
-        "image": "res/Item/dogs_husky_5.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
+        "type": "gold",
         "category": "Speech_word",
-        "name": "Allegory",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Dogs",
-        "name": "Beagle",
-        "image": "res/Item/dogs_beagle_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Creature_word",
-        "name": "Dragon",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Speech_word",
-        "name": "Metaphor",
+        "name": "Speech",
         "isText": true
       },
       {
@@ -2053,28 +2401,200 @@
       {
         "type": "regular",
         "category": "Creature_word",
-        "name": "Phoenix",
+        "name": "Elf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dragon",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Vinegar",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Simile",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Dogs",
-        "name": "Spaniel",
-        "image": "res/Item/dogs_spaniel_4.png",
+        "name": "Poodle",
+        "image": "res/Item/dogs_poodle_3.png",
         "isText": false
       },
       {
         "type": "regular",
-        "category": "Beans_word",
-        "name": "Excelsa",
+        "category": "Pairs",
+        "name": "Socks",
+        "image": "res/Item/pairs_socks_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Beagle",
+        "image": "res/Item/dogs_beagle_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Camping",
+        "name": "Tent",
+        "image": "res/Item/camping_tent_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Allegory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Drawers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Price",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Pegasus",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Creature_word",
+        "name": "Creature",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dogs",
+        "name": "Terrier",
+        "image": "res/Item/dogs_terrier_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Kimchi",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Pairs",
-        "name": "Twins",
-        "image": "res/Item/pairs_twins_2.png",
+        "name": "Skis",
+        "image": "res/Item/pairs_skis_3.png",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Anaphora",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Hydra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Shelves",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Victory",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sour_word",
+        "name": "Pickle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Arrange_word",
+        "name": "Hangers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Creature_word",
+        "name": "Dwarf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Auction_word",
+        "name": "Lot",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dogs",
+        "name": "Dogs",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Beans_word",
+        "name": "Robusta",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Camping",
+        "name": "Camping",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Pairs",
+        "name": "Pairs",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Auction_word",
+        "name": "Auction",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Speech_word",
+        "name": "Metaphor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Achieve_word",
+        "name": "Win",
+        "isText": true
       }
     ],
     "handDisplay": []
