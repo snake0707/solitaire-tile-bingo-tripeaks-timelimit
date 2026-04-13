@@ -1059,6 +1059,7 @@ const MAX_POSSIBLE_MOVES = 50;
 const MAX_SOLVER_STEPS = 5000;
 const MAX_SOLVER_ROUNDS = 3;
 const GREEDY_PHASE_RATIO = 0.6;    // 前N%步数纯贪心（无回溯），之后启用决策树回溯
+const MAX_CONSECUTIVE_FLIPS = 9;   // 连续翻手牌上限，超过则判定 layout 无效
 
 const LOW_PRIORITY = 1;
 const NORMAL_PRIORITY = 2;
@@ -1070,11 +1071,12 @@ const STOCK_CARD_MUL = 1;
 
 // ─── Priority + Equality Backtracking Solver ──────────────────────
 
-function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative, priorityOnly, greedyOnly, displaySteps) {
+function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, conservative, priorityOnly, greedyOnly, displaySteps, rejectGreedyTies) {
     if (conservative === undefined) conservative = false;
     if (priorityOnly === undefined) priorityOnly = false;
     if (greedyOnly === undefined) greedyOnly = false;
     if (displaySteps === undefined) displaySteps = maxSteps;
+    if (rejectGreedyTies === undefined) rejectGreedyTies = false;
     const MAX_RECYCLES_SL = 3;
 
     // Greedy phase threshold: first N steps are pure greedy (no backtracking)
@@ -1743,7 +1745,15 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
 
         const stack = [];
 
-        function pickGreedyMove(moves) {
+        function tooManyConsecutiveFlips(seq) {
+            if (seq.length < MAX_CONSECUTIVE_FLIPS) return false;
+            for (let i = 0; i < MAX_CONSECUTIVE_FLIPS; i++) {
+                if (seq[seq.length - 1 - i] !== 'flip_hand') return false;
+            }
+            return true;
+        }
+
+        function pickGreedyMove(moves, rejectTies) {
             if (usePriority) {
                 moves.sort((a, b) => {
                     const dw = getPriorityWeight(b) - getPriorityWeight(a);
@@ -1754,6 +1764,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                 const topTB = getTiebreakKey(moves[0]);
                 let topCount = 1;
                 while (topCount < moves.length && getPriorityWeight(moves[topCount]) === topW && getTiebreakKey(moves[topCount]) === topTB) topCount++;
+                if (rejectTies && topCount > 1) return null;
                 return moves[Math.floor(rng() * topCount)];
             } else {
                 return moves[Math.floor(rng() * moves.length)];
@@ -1810,6 +1821,10 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                         seenSinceDrag.add(state.handDisplay[state.handDisplay.length - 1]);
                     }
                     if (isSoftDeadlock()) break;
+                    if (tooManyConsecutiveFlips(moveSequence.concat(mtypes))) {
+                        won = false;
+                        break;
+                    }
                 } else if (move.type !== 'recycle') {
                     seenSinceDrag.clear();
                 }
@@ -1844,7 +1859,8 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             let moves = getMoves();
             if (!moves.length) { greedyPhaseOk = false; break; }
 
-            const move = pickGreedyMove(moves);
+            const move = pickGreedyMove(moves, rejectGreedyTies && usePriority);
+            if (move === null) { greedyPhaseOk = false; break; }
             greedyUndos.push(applyMove(move));
             moveSequence.push(move.type);
             movePath.push({...move});
@@ -1857,6 +1873,7 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                     seenSinceDrag.add(state.handDisplay[state.handDisplay.length - 1]);
                 }
                 if (isSoftDeadlock()) { greedyPhaseOk = false; break; }
+                if (tooManyConsecutiveFlips(moveSequence)) { greedyPhaseOk = false; break; }
             } else if (move.type !== 'recycle') {
                 seenSinceDrag.clear();
             }
@@ -1912,7 +1929,10 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
 
             const depth = stack.length;
 
-            if (depth < MAX_TREE_DEPTH) {
+            // Too many consecutive flips → treat as dead end, backtrack
+            if (tooManyConsecutiveFlips(moveSequence)) {
+                // fall through to backtrack
+            } else if (depth < MAX_TREE_DEPTH) {
                 candidates = getSortedCandidates();
                 if (candidates.length > 0) {
                     move = candidates[0];
@@ -2150,7 +2170,7 @@ function generateSolvableLayout(level) {
         }
 
         // 求解（优先策略+均等策略回溯）
-        const result = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, false, false, false, displaySteps);
+        const result = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, false, false, false, displaySteps, true);
 
         if (!result.won) continue;
 

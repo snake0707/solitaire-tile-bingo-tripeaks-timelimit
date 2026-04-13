@@ -176,12 +176,22 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 - 用 `_pick_greedy_move` 选操作
 - 卡住 → 返回 null（该轮失败）
 - 完成 → 直接返回结果
+- 策略1 的 Priority 轮启用 `reject_greedy_ties`：同权重同 tiebreak 出现多个候选时，直接判定失败
 
 ### Phase 2：决策树回溯
 - 从 Phase 1 结束的状态继续
 - 最大深度 `MAX_TREE_DEPTH=8`
 - 达到最大深度后 `greedy_playout` 下探验证
 - 失败时按 LIFO 顺序尝试兄弟分支
+
+### 布局淘汰规则（Phase 1 + Phase 2 + greedy_playout 共用）
+
+| 条件 | 触发效果 |
+|------|----------|
+| 软死锁（`_is_soft_deadlock`）| Phase 1 判定失败；Phase 2/playout 视为死端 |
+| 连续翻手牌 ≥ `MAX_CONSECUTIVE_FLIPS`（9次）| 同上 |
+| Phase 1 贪心阶段无可选操作 | 布局无效 |
+| Phase 1 策略1 Priority 轮出现等权重随机（`reject_greedy_ties`）| 布局无效 |
 
 ---
 
@@ -192,6 +202,7 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 | 特性 | 状态 |
 |------|------|
 | `GREEDY_PHASE_RATIO = 0.6` | 两端一致 |
+| `MAX_CONSECUTIVE_FLIPS = 9` | 两端一致 |
 | 两阶段框架（Phase 1 贪心 + Phase 2 回溯） | 两端一致 |
 | `solveLevel` 接受 `displaySteps` 参数 | 两端一致 |
 | 权重系统 `getPriorityWeight()` | 两端一致 |
@@ -220,6 +231,7 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 - **单次候选数上限**：`MAX_POSSIBLE_MOVES = 50`
 - **最大求解步数**：`MAX_SOLVER_STEPS = 5000`
 - **每算法轮数**：`MAX_SOLVER_ROUNDS = 3`
+- **连续翻手牌上限**：`MAX_CONSECUTIVE_FLIPS = 9`
 - **软死锁检测**（`_is_soft_deadlock`）：手牌全部见过且无有效归类/列间移动
 
 ---
@@ -245,4 +257,4 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 
 ---
 
-*文档生成日期：2026-04-10，修正"策略2 不用权重"的错误描述*
+*文档更新日期：2026-04-10，新增连续翻牌上限检测 + 布局淘汰规则汇总*

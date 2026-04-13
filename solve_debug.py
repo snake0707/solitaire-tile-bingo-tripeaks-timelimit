@@ -55,10 +55,10 @@ MAX_RECYCLES = 3
 MAX_AUTO_SEEDS = 20  # Auto-retry up to this many seeds
 
 
-def try_solve(layout, category_targets, max_steps, max_slots, seed, conservative=False):
+def try_solve(layout, category_targets, max_steps, max_slots, seed, conservative=False, display_steps=None):
     """Try solving with a given seed. Returns (won, result)."""
     random.seed(seed)
-    result = solve_level(layout['tableau'], category_targets, max_steps, max_slots, layout['handPile'], conservative=conservative)
+    result = solve_level(layout['tableau'], category_targets, max_steps, max_slots, layout['handPile'], conservative=conservative, display_steps=display_steps)
     return result['won'], result
 
 
@@ -92,7 +92,7 @@ def read_solve_step_max(level):
     return None
 
 
-def solve_and_print(layout, category_targets, max_steps, max_slots, seed=42, conservative=False):
+def solve_and_print(layout, category_targets, max_steps, max_slots, seed=42, conservative=False, display_steps=None):
     """Solve using generate_levels.py's solver, then replay movePath with detailed logging."""
 
     tableau = layout['tableau']
@@ -101,7 +101,7 @@ def solve_and_print(layout, category_targets, max_steps, max_slots, seed=42, con
     # Set random seed for reproducibility
     random.seed(seed)
 
-    result = solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=conservative)
+    result = solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=conservative, display_steps=display_steps)
 
     mode_str = "保守策略" if conservative else "标准策略"
     if not result['won']:
@@ -349,7 +349,7 @@ def main():
         for mult in multipliers:
             trial_steps = int(base_max_steps * mult)
             for try_seed in range(MAX_AUTO_SEEDS):
-                won, _ = try_solve(layout, category_targets, trial_steps, max_slots, try_seed)
+                won, _ = try_solve(layout, category_targets, trial_steps, max_slots, try_seed, display_steps=config['maxSteps'])
                 if won:
                     seed = try_seed
                     max_steps = trial_steps
@@ -366,7 +366,7 @@ def main():
             print("尝试 %d 个 seed × %d 种步数限制均失败" % (MAX_AUTO_SEEDS, len(multipliers)))
 
     success, result = solve_and_print(layout, category_targets, max_steps, max_slots, seed=seed,
-                                      conservative=args.conservative)
+                                      conservative=args.conservative, display_steps=config['maxSteps'])
 
     # If standard solve succeeded and not in --conservative mode, also try conservative
     if success and not args.conservative:
@@ -375,7 +375,7 @@ def main():
         print("=" * 60 + "\n")
         con_max = max_steps + 20
         random.seed(seed)
-        con_result = solve_level(layout['tableau'], category_targets, con_max, max_slots, layout['handPile'], conservative=True)
+        con_result = solve_level(layout['tableau'], category_targets, con_max, max_slots, layout['handPile'], conservative=True, display_steps=config['maxSteps'])
         if con_result['won']:
             print("策略2(保守): %d步 (策略: %s, maxSteps=%d)" % (
                 con_result['stepsUsed'], con_result['strategyType'], con_max))

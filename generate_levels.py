@@ -571,9 +571,10 @@ MAX_POSSIBLE_MOVES = 50     # 每步最多考虑的分支数
 MAX_SOLVER_STEPS = 5000     # 单次模拟最大步数
 MAX_SOLVER_ROUNDS = 3       # 每种策略最多跑几轮
 GREEDY_PHASE_RATIO = 0.6    # 前N%步数纯贪心（无回溯），之后启用决策树回溯
+MAX_CONSECUTIVE_FLIPS = 9   # 连续翻手牌上限，超过则判定 layout 无效
 
 
-def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=False, display_steps=None):
+def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=False, display_steps=None, reject_greedy_ties=False):
     """Priority + Equality backtracking solver (inspired by competitor approach).
 
     Two-phase per attempt:
@@ -1231,8 +1232,9 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 moves.sort(key=lambda m: (-get_priority_weight(m), _get_tiebreak_key(m)))
             return moves
 
-        def _pick_greedy_move(moves):
-            """Pick one greedy move: highest weight + tiebreak, random among ties."""
+        def _pick_greedy_move(moves, reject_ties=False):
+            """Pick one greedy move: highest weight + tiebreak, random among ties.
+            If reject_ties=True and use_priority, return None when multiple equal candidates exist."""
             if use_priority:
                 moves.sort(key=lambda m: (-get_priority_weight(m), _get_tiebreak_key(m)))
                 top_w = get_priority_weight(moves[0])
@@ -1240,9 +1242,17 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 top_count = 1
                 while top_count < len(moves) and get_priority_weight(moves[top_count]) == top_w and _get_tiebreak_key(moves[top_count]) == top_tb:
                     top_count += 1
+                if reject_ties and top_count > 1:
+                    return None
                 return moves[random.randint(0, top_count - 1)]
             else:
                 return moves[random.randint(0, len(moves) - 1)]
+
+        def _too_many_consecutive_flips(seq):
+            """Check if the last MAX_CONSECUTIVE_FLIPS moves in seq are all flip_hand."""
+            if len(seq) < MAX_CONSECUTIVE_FLIPS:
+                return False
+            return all(seq[-i-1] == 'flip_hand' for i in range(MAX_CONSECUTIVE_FLIPS))
 
         def _is_soft_deadlock():
             """Check if we're in a soft deadlock: all hand cards have been seen
@@ -1314,6 +1324,10 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                         seen_since_drag.add(id(state['handDisplay'][-1]))
                     if _is_soft_deadlock():
                         break
+                    # Check consecutive flips across move_sequence + mtypes
+                    if _too_many_consecutive_flips(move_sequence + mtypes):
+                        won = False
+                        break
                 elif mt != 'recycle':
                     # Any non-flip, non-recycle move = board changed, reset tracking
                     seen_since_drag.clear()
@@ -1359,7 +1373,10 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 greedy_phase_ok = False
                 break
 
-            move = _pick_greedy_move(moves)
+            move = _pick_greedy_move(moves, reject_ties=(reject_greedy_ties and use_priority))
+            if move is None:
+                greedy_phase_ok = False
+                break
             greedy_undos.append(apply_move(move))
             move_sequence.append(move['type'])
             move_path.append(dict(move))
@@ -1372,6 +1389,9 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 if state['handDisplay']:
                     seen_since_drag.add(id(state['handDisplay'][-1]))
                 if _is_soft_deadlock():
+                    greedy_phase_ok = False
+                    break
+                if _too_many_consecutive_flips(move_sequence):
                     greedy_phase_ok = False
                     break
             elif mt != 'recycle':
@@ -1428,7 +1448,10 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
 
             depth = len(stack)
 
-            if depth < MAX_TREE_DEPTH:
+            # Too many consecutive flips → treat as dead end, backtrack
+            if _too_many_consecutive_flips(move_sequence):
+                pass  # fall through to backtrack
+            elif depth < MAX_TREE_DEPTH:
                 # Expand: get candidates at this state
                 candidates = get_sorted_candidates()
                 if candidates:
@@ -2488,7 +2511,8 @@ def main():
                 result = solve_level(
                     gen['tableau'], gen['categoryTargets'],
                     max_steps, cfg['maxSlots'], gen['handPile'],
-                    display_steps=display_steps
+                    display_steps=display_steps,
+                    reject_greedy_ties=True
                 )
 
                 if not result['won']:
