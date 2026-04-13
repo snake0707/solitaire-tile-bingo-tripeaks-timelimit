@@ -572,6 +572,10 @@ MAX_SOLVER_STEPS = 5000     # 单次模拟最大步数
 MAX_SOLVER_ROUNDS = 3       # 每种策略最多跑几轮
 GREEDY_PHASE_RATIO = 0.6    # 前N%步数纯贪心（无回溯），之后启用决策树回溯
 MAX_CONSECUTIVE_FLIPS = 9   # 连续翻手牌上限，超过则判定 layout 无效
+MAX_CONSECUTIVE_FLIP_DRAGS = 7   # 连续翻拖（翻手牌+使用）绝对上限
+MAX_FLIP_DRAGS_STRICT = 5       # 手牌充足且桌面有牌时的严格上限
+FLIP_DRAG_HAND_THRESHOLD = 15   # 严格限制的手牌剩余阈值
+FLIP_DRAG_TABLEAU_THRESHOLD = 3  # 严格限制的桌面牌阈值
 
 
 def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, conservative=False, display_steps=None, reject_greedy_ties=False):
@@ -1254,6 +1258,36 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 return False
             return all(seq[-i-1] == 'flip_hand' for i in range(MAX_CONSECUTIVE_FLIPS))
 
+        def _too_many_flip_drags(seq):
+            """Check if recent moves have too many consecutive flip-drag pairs.
+            Two-tier: always check both absolute limit and strict limit separately."""
+            _drag_types = {'display_to_slot', 'display_to_column', 'display_gold_to_slot'}
+            def _check_limit(s, limit):
+                n = limit * 2
+                if len(s) < n:
+                    return False
+                for i in range(limit):
+                    flip_idx = len(s) - n + i * 2
+                    drag_idx = flip_idx + 1
+                    if s[flip_idx] != 'flip_hand' or s[drag_idx] not in _drag_types:
+                        return False
+                return True
+            # Absolute limit: always check
+            if _check_limit(seq, MAX_CONSECUTIVE_FLIP_DRAGS):
+                return True
+            # Strict limit: check if hand/tableau thresholds met at the START of the streak
+            if len(seq) >= MAX_FLIP_DRAGS_STRICT * 2 and _check_limit(seq, MAX_FLIP_DRAGS_STRICT):
+                # Estimate state at streak start:
+                # - hand: each flip consumed 1 from pile → start = current + limit
+                # - tableau: display_to_column adds 1 → start = current - count_of_display_to_column_in_streak
+                n = MAX_FLIP_DRAGS_STRICT * 2
+                hand_at_start = len(state['handPile']) + MAX_FLIP_DRAGS_STRICT
+                col_moves = sum(1 for i in range(len(seq) - n, len(seq)) if seq[i] == 'display_to_column')
+                tableau_at_start = sum(len(col) for col in state['tableau']) - col_moves
+                if hand_at_start >= FLIP_DRAG_HAND_THRESHOLD and tableau_at_start >= FLIP_DRAG_TABLEAU_THRESHOLD:
+                    return True
+            return False
+
         def _is_soft_deadlock():
             """Check if we're in a soft deadlock: all hand cards have been seen
             since last successful drag, and no tableau or hand moves can collect."""
@@ -1331,6 +1365,11 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
                 elif mt != 'recycle':
                     # Any non-flip, non-recycle move = board changed, reset tracking
                     seen_since_drag.clear()
+                # Consecutive flip-drag check
+                if mt in ('display_to_slot', 'display_to_column', 'display_gold_to_slot'):
+                    if _too_many_flip_drags(move_sequence + mtypes):
+                        won = False
+                        break
                 # recycle: don't clear (same cards, seen is seen)
                 if total_steps[0] > MAX_SOLVER_STEPS:
                     break
@@ -1397,6 +1436,12 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
             elif mt != 'recycle':
                 seen_since_drag.clear()
 
+            # Consecutive flip-drag check (after drag moves)
+            if mt in ('display_to_slot', 'display_to_column', 'display_gold_to_slot'):
+                if _too_many_flip_drags(move_sequence):
+                    greedy_phase_ok = False
+                    break
+
         if not greedy_phase_ok:
             # Stuck in greedy phase → layout invalid, undo and return None
             for u in reversed(greedy_undos):
@@ -1448,8 +1493,8 @@ def solve_level(tableau, category_targets, max_steps, max_slots, hand_pile, cons
 
             depth = len(stack)
 
-            # Too many consecutive flips → treat as dead end, backtrack
-            if _too_many_consecutive_flips(move_sequence):
+            # Too many consecutive flips or flip-drags → treat as dead end, backtrack
+            if _too_many_consecutive_flips(move_sequence) or _too_many_flip_drags(move_sequence):
                 pass  # fall through to backtrack
             elif depth < MAX_TREE_DEPTH:
                 # Expand: get candidates at this state
@@ -2387,8 +2432,8 @@ def main():
                         help='Level range to generate, e.g. "1-10" or "1-108" (default: 1-10)')
     parser.add_argument('--layouts', type=int, default=5,
                         help='Number of solvable layouts per level (default: 5)')
-    parser.add_argument('--attempts', type=int, default=200,
-                        help='Max attempts per layout for MCTS verification (default: 200)')
+    parser.add_argument('--attempts', type=int, default=2000,
+                        help='Max attempts per layout (default: 2000)')
     parser.add_argument('--seed', type=int, default=None,
                         help='Random seed for reproducibility')
     parser.add_argument('--mcts-iterations', type=int, default=DEFAULT_MCTS_ITERATIONS,

@@ -1060,6 +1060,10 @@ const MAX_SOLVER_STEPS = 5000;
 const MAX_SOLVER_ROUNDS = 3;
 const GREEDY_PHASE_RATIO = 0.6;    // 前N%步数纯贪心（无回溯），之后启用决策树回溯
 const MAX_CONSECUTIVE_FLIPS = 9;   // 连续翻手牌上限，超过则判定 layout 无效
+const MAX_CONSECUTIVE_FLIP_DRAGS = 7;   // 连续翻拖绝对上限
+const MAX_FLIP_DRAGS_STRICT = 5;       // 手牌充足且桌面有牌时的严格上限
+const FLIP_DRAG_HAND_THRESHOLD = 15;   // 严格限制的手牌剩余阈值
+const FLIP_DRAG_TABLEAU_THRESHOLD = 3;  // 严格限制的桌面牌阈值
 
 const LOW_PRIORITY = 1;
 const NORMAL_PRIORITY = 2;
@@ -1753,6 +1757,34 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
             return true;
         }
 
+        function tooManyFlipDrags(seq) {
+            const dragTypes = new Set(['display_to_slot', 'display_to_column', 'display_gold_to_slot']);
+            function checkLimit(s, limit) {
+                const n = limit * 2;
+                if (s.length < n) return false;
+                for (let i = 0; i < limit; i++) {
+                    const flipIdx = s.length - n + i * 2;
+                    const dragIdx = flipIdx + 1;
+                    if (s[flipIdx] !== 'flip_hand' || !dragTypes.has(s[dragIdx])) return false;
+                }
+                return true;
+            }
+            // Absolute limit
+            if (checkLimit(seq, MAX_CONSECUTIVE_FLIP_DRAGS)) return true;
+            // Strict limit: estimate state at streak start
+            if (seq.length >= MAX_FLIP_DRAGS_STRICT * 2 && checkLimit(seq, MAX_FLIP_DRAGS_STRICT)) {
+                const n = MAX_FLIP_DRAGS_STRICT * 2;
+                const handAtStart = state.handPile.length + MAX_FLIP_DRAGS_STRICT;
+                let colMoves = 0;
+                for (let i = seq.length - n; i < seq.length; i++) {
+                    if (seq[i] === 'display_to_column') colMoves++;
+                }
+                const tableauAtStart = state.tableau.reduce((s, col) => s + col.length, 0) - colMoves;
+                if (handAtStart >= FLIP_DRAG_HAND_THRESHOLD && tableauAtStart >= FLIP_DRAG_TABLEAU_THRESHOLD) return true;
+            }
+            return false;
+        }
+
         function pickGreedyMove(moves, rejectTies) {
             if (usePriority) {
                 moves.sort((a, b) => {
@@ -1828,6 +1860,13 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                 } else if (move.type !== 'recycle') {
                     seenSinceDrag.clear();
                 }
+                // Consecutive flip-drag check
+                if (move.type === 'display_to_slot' || move.type === 'display_to_column' || move.type === 'display_gold_to_slot') {
+                    if (tooManyFlipDrags(moveSequence.concat(mtypes))) {
+                        won = false;
+                        break;
+                    }
+                }
                 if (totalSteps > MAX_SOLVER_STEPS) break;
             }
             return { won, undos, mtypes, mdicts };
@@ -1876,6 +1915,10 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
                 if (tooManyConsecutiveFlips(moveSequence)) { greedyPhaseOk = false; break; }
             } else if (move.type !== 'recycle') {
                 seenSinceDrag.clear();
+            }
+            // Consecutive flip-drag check
+            if (move.type === 'display_to_slot' || move.type === 'display_to_column' || move.type === 'display_gold_to_slot') {
+                if (tooManyFlipDrags(moveSequence)) { greedyPhaseOk = false; break; }
             }
         }
 
@@ -1929,8 +1972,8 @@ function solveLevel(tableau, categoryTargets, maxSteps, maxSlots, handPile, cons
 
             const depth = stack.length;
 
-            // Too many consecutive flips → treat as dead end, backtrack
-            if (tooManyConsecutiveFlips(moveSequence)) {
+            // Too many consecutive flips or flip-drags → treat as dead end, backtrack
+            if (tooManyConsecutiveFlips(moveSequence) || tooManyFlipDrags(moveSequence)) {
                 // fall through to backtrack
             } else if (depth < MAX_TREE_DEPTH) {
                 candidates = getSortedCandidates();
@@ -2158,7 +2201,7 @@ function generateSolvableLayout(level) {
 
     const difficulty = document.getElementById('difficulty').value;
 
-    const maxAttempts = 200;
+    const maxAttempts = 2000;
     let difficultySkips = 0;
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
@@ -2198,9 +2241,6 @@ function generateSolvableLayout(level) {
         const check2 = greedyDeadlockCheck(gen.tableau, gen.categoryTargets, displaySteps, config.maxSlots, gen.handPile, true);
         if (check2.softDead) continue;
 
-        // 策略2纯贪心输出（用于 solution log）
-        const result2Greedy = solveLevel(gen.tableau, gen.categoryTargets, 9999, config.maxSlots, gen.handPile, true, true, true);
-
         return {
             layout: {
                 config: {
@@ -2228,7 +2268,7 @@ function generateSolvableLayout(level) {
             solveStepMax: maxSolverSteps,
             strategyType: result.strategyType,
             movePath: result.movePath || [],
-            movePath2: result2Greedy.movePath || [],
+            movePath2: result2.movePath || [],
             solver2Steps,
             solver2StrategyType,
             difficultySkips,

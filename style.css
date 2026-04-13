@@ -5,6 +5,14 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior: none;
+}
+
 body {
     font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     background: linear-gradient(180deg, #2956c4 0%, #1a3a8a 50%, #0f2460 100%);
@@ -12,8 +20,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow-y: auto;
+    overflow: hidden;
     user-select: none;
+    overscroll-behavior: none;
+    touch-action: manipulation;
 }
 
 #game-container {

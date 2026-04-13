@@ -99,6 +99,13 @@ class Game {
 
         this.initDragSystem();
 
+        // Prevent pull-to-refresh and elastic scroll on mobile
+        document.addEventListener('touchmove', (e) => {
+            if (!e.target.closest('.overlay:not(.hidden)')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
         this.levelData = {};
         this.layoutQueues = {};  // per-level shuffled layout index queues
         this.availableLevels = new Set();
