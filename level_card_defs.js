@@ -70,7 +70,7 @@ const LEVEL_CARD_DEFS = {
         { categoryName: "Driving", zhCategoryName: "驾驶", isImage: false, cardWords: [{ name: "Car", zh: "汽车" }, { name: "Road", zh: "道路" }, { name: "Sign", zh: "标志" }, { name: "Traffic", zh: "交通" }] },
         { categoryName: "Bakery", zhCategoryName: "面包店", isImage: false, cardWords: [{ name: "Yeast", zh: "酵母" }, { name: "Flour", zh: "面粉" }, { name: "Milk", zh: "牛奶" }, { name: "Eggs", zh: "鸡蛋" }] },
         { categoryName: "Explorer", zhCategoryName: "探险家", isImage: false, cardWords: [{ name: "Vespucci", zh: "韦斯普奇" }, { name: "Magellan", zh: "麦哲伦" }, { name: "Columbus", zh: "哥伦布" }] },
-        { categoryName: "Movement", zhCategoryName: "运动", isImage: false, cardWords: [{ name: "Kick", zh: "踢" }, { name: "Walk", zh: "行走" }, { name: "Jump", zh: "跳跃" }] },
+        { categoryName: "Movement", zhCategoryName: "动作", isImage: false, cardWords: [{ name: "Kick", zh: "踢" }, { name: "Walk", zh: "行走" }, { name: "Jump", zh: "跳跃" }] },
     ],
     7: [
         { categoryName: "Deck", zhCategoryName: "牌組", isImage: true, cardWords: [{ name: "Ace", zh: "Ace", image: "res/Item/deck_aceofhearts_1.png" }, { name: "King hearts", zh: "King hearts", image: "res/Item/deck_kinghearts_2.png" }, { name: "Queen hearts", zh: "Queen hearts", image: "res/Item/deck_queenhearts_3.png" }, { name: "Jack hearts", zh: "Jack hearts", image: "res/Item/deck_jackhearts_4.png" }, { name: "10 hearts", zh: "10 hearts", image: "res/Item/deck_10hearts_5.png" }, { name: "9 hearts", zh: "9 hearts", image: "res/Item/deck_9hearts_6.png" }, { name: "8 hearts", zh: "8 hearts", image: "res/Item/deck_8hearts_7.png" }, { name: "7 hearts", zh: "7 hearts", image: "res/Item/deck_7hearts_8.png" }] },

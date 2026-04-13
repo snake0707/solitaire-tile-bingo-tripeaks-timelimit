@@ -55,14 +55,16 @@ for _ in range(MAX_SOLVER_ROUNDS):
 
 ```python
 # 策略1：激进，步数 = max_steps
-result = solve_level(..., conservative=False, display_steps=display_steps)
+result = solve_level(..., conservative=False, reject_greedy_ties=True, display_steps=display_steps)
 
-# 策略2：保守，步数 = max_steps + 20
-result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=display_steps)
+# 策略2：保守，步数 = max_steps
+result2 = solve_level(..., max_steps, conservative=True, reject_greedy_ties=True, display_steps=display_steps)
 ```
 
 - **策略1 先跑**，用于难度过滤（easy=priority通过，hard=equality通过）
 - **策略2 在策略1 之后跑**，用于验证保守规则下也可解
+- 两个策略步数上限相同（均为 solveStepMax）
+- 两个策略都开启 `rejectGreedyTies`（贪心阶段拒绝等权重随机）
 - `generator.html` 调用策略2 时额外传 `priorityOnly=true`，**跳过 Equality 轮**（只跑 Priority）
 
 ---
@@ -72,7 +74,8 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 | 维度 | 策略1 | 策略2 |
 |------|-------|-------|
 | `conservative` | `False` | `True` |
-| 步数上限 | `max_steps` | `max_steps + 20` |
+| 步数上限 | `solveStepMax` | `solveStepMax` |
+| `rejectGreedyTies` | `True` | `True` |
 | 金牌（类别牌）规则 | 不限制 | 三条保守约束 |
 | 搜索算法 | Priority（3轮）→ Equality（3轮） | 同左†<br>† `generator.html` 只跑 Priority |
 | 权重系统 | **使用**（Priority 轮） | **使用**（Priority 轮） |
@@ -212,8 +215,8 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 
 | 调用场景 | `generate_levels.py` | `generator.html` |
 |---------|---------------------|-------------------|
-| 策略1求解 | `solve_level(..., display_steps=display_steps)` | `solveLevel(..., false, false, false, displaySteps)` |
-| 策略2求解 | `solve_level(..., conservative=True, display_steps=display_steps)` | `solveLevel(..., true, true, false, displaySteps)`（`priorityOnly=true` 跳过 Equality） |
+| 策略1求解 | `solve_level(..., reject_greedy_ties=True, display_steps=...)` | `solveLevel(..., false, false, false, displaySteps, true)` |
+| 策略2求解 | `solve_level(..., conservative=True, reject_greedy_ties=True, display_steps=...)` | `solveLevel(..., true, true, false, displaySteps, true)` |
 | 纯贪心模式 | 无单独模式 | `solveLevel(..., true, true, true)` — 不走两阶段 |
 
 ### 7.2 策略2 在两端的区别
@@ -242,7 +245,8 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 |------|-------|-------|
 | `conservative` | False | True |
 | 金牌使用 | 激进 | 保守（三条约束） |
-| 步数预算 | 标准 | +20 余量 |
+| 步数预算 | solveStepMax | solveStepMax |
+| `rejectGreedyTies` | True | True |
 | 主搜索算法 | **Priority（权重驱动）** | **Priority（权重驱动）** |
 | 兜底算法 | Equality（无偏 DFS） | Equality（仅 Python 端） |
 | 解的特点 | 激进用金牌，顺畅 | 延迟用金牌，稳健 |
@@ -257,4 +261,4 @@ result2 = solve_level(..., max_steps + 20, conservative=True, display_steps=disp
 
 ---
 
-*文档更新日期：2026-04-10，新增连续翻牌上限检测 + 布局淘汰规则汇总*
+*文档更新日期：2026-04-13，S2步数上限对齐+rejectGreedyTies双端开启*

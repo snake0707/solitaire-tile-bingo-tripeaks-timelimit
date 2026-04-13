@@ -447,7 +447,7 @@ def validate_layout(tableau, hand_pile, category_targets, max_slots):
             gold_accessible = True
             break
     if not gold_accessible:
-        for card in hand_pile[:5]:
+        for card in hand_pile[-5:]:
             if card['type'] == 'gold':
                 gold_accessible = True
                 break
@@ -477,8 +477,8 @@ def validate_layout(tableau, hand_pile, category_targets, max_slots):
             break
 
     if not has_immediate_move:
-        # 检查手牌前 2 张
-        for card in hand_pile[:2]:
+        # 检查手牌顶部 2 张（pop从末尾取，所以检查末尾）
+        for card in hand_pile[-2:]:
             if card['type'] == 'gold':
                 has_immediate_move = True
                 break
@@ -513,9 +513,9 @@ def validate_layout(tableau, hand_pile, category_targets, max_slots):
             drag_count += 1
             consec_flips = 0
         else:
-            # 翻手牌
+            # 翻手牌（从末尾取，与求解器一致）
             if sim_hand:
-                sim_display.append(sim_hand.pop(0))
+                sim_display.append(sim_hand.pop())
                 consec_flips += 1
                 if consec_flips > 3:
                     return False  # 连续翻牌超过 3 次
@@ -2599,13 +2599,14 @@ def main():
 
                 print("    ops: %s" % format_stats(result['moveStats']))
 
-                # 策略2求解（保守类别牌策略），步数上限+20
+                # 策略2求解（保守类别牌策略）
                 random.seed(solver_seed)
                 result2 = solve_level(
                     gen['tableau'], gen['categoryTargets'],
-                    max_steps + 20, cfg['maxSlots'], gen['handPile'],
+                    max_steps, cfg['maxSlots'], gen['handPile'],
                     conservative=True,
-                    display_steps=display_steps
+                    display_steps=display_steps,
+                    reject_greedy_ties=True
                 )
                 solver2_steps = result2['stepsUsed'] if result2['won'] else -1
                 solver2_type = result2.get('strategyType', 'none') if result2['won'] else 'none'

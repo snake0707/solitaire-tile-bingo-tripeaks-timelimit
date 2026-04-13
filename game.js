@@ -304,11 +304,18 @@ class Game {
 
         if (dropResult.success) {
             const targetRect = dropResult.targetRect;
-            clone.style.transition = 'all 0.2s ease-out';
-            clone.style.left = targetRect.left + 'px';
-            clone.style.top = targetRect.top + 'px';
-            clone.style.width = targetRect.width + 'px';
-            clone.style.height = targetRect.height + 'px';
+            const currentLeft = parseFloat(clone.style.left);
+            const currentTop = parseFloat(clone.style.top);
+            const currentWidth = parseFloat(clone.style.width) || sourceRect.width;
+            const currentHeight = parseFloat(clone.style.height) || sourceRect.height;
+            const tx = targetRect.left - currentLeft;
+            const ty = targetRect.top - currentTop;
+            const sx = targetRect.width / currentWidth;
+            const sy = targetRect.height / currentHeight;
+
+            clone.style.transition = 'transform 0.2s ease-out, opacity 0.2s ease-out';
+            clone.style.transformOrigin = '0 0';
+            clone.style.transform = `translate(${tx}px, ${ty}px) scale(${sx}, ${sy})`;
 
             setTimeout(() => {
                 clone.remove();
@@ -316,9 +323,15 @@ class Game {
             }, 200);
         } else {
             // Snap back to saved source position
-            clone.style.transition = 'all 0.25s ease-out';
-            clone.style.left = sourceRect.left + 'px';
-            clone.style.top = sourceRect.top + 'px';
+            const currentLeft = parseFloat(clone.style.left);
+            const currentTop = parseFloat(clone.style.top);
+            const tx = sourceRect.left - currentLeft;
+            const ty = sourceRect.top - currentTop;
+
+            clone.style.transition = 'transform 0.25s ease-out';
+            clone.style.transformOrigin = '0 0';
+            clone.style.transform = `translate(${tx}px, ${ty}px)`;
+
             setTimeout(() => {
                 clone.remove();
                 // Re-render to restore all hidden cards
@@ -2536,11 +2549,14 @@ class Game {
 
             clone.offsetHeight;
 
-            clone.style.transition = `all ${duration}ms ease-in-out`;
-            clone.style.left = targetRect.left + 'px';
-            clone.style.top = targetRect.top + 'px';
-            clone.style.width = targetRect.width + 'px';
-            clone.style.height = targetRect.height + 'px';
+            const tx = targetRect.left - sourceRect.left;
+            const ty = targetRect.top - sourceRect.top;
+            const sx = targetRect.width / sourceRect.width;
+            const sy = targetRect.height / sourceRect.height;
+
+            clone.style.transition = `transform ${duration}ms ease-in-out`;
+            clone.style.transformOrigin = '0 0';
+            clone.style.transform = `translate(${tx}px, ${ty}px) scale(${sx}, ${sy})`;
 
             setTimeout(() => {
                 clone.remove();

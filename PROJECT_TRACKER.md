@@ -194,6 +194,60 @@ solitaire-tile-bingo/
 
 ## 九、开发日志
 
+### 2026-04-13 - 求解器多项优化 + 布局质量检查修复
+
+- **修复 validateLayout 手牌方向 bug**: `validateLayout()` 用 `hand_pile[:5]`/`.pop(0)`/`.shift()` 从数组头部检查和取牌，但游戏和求解器都用 `.pop()` 从末尾取。导致检查的是最后翻到的牌而非最先翻到的牌。修复：条件1/2/3 全部改为从数组末尾操作
+  - 条件3 金牌可及性: `[:5]` → `[-5:]`
+  - 条件1 开局可操作: `[:2]` → `[-2:]`
+  - 条件2 前期流畅性: `.pop(0)`/`.shift()` → `.pop()`
+  - 修改文件: `generate_levels.py`、`generator.html`
+- **连续翻拖（flip-drag）上限检测**: 避免玩家反复"翻手牌→拖到槽/列"的单调操作
+  - 两层限制: 绝对上限 L=7 次 + 严格上限 K=5 次（手牌≥15 且 桌面≥3 时）
+  - 严格限制基于翻拖序列开始时的状态估算（手牌+回补、桌面-列移动）
+  - 检测点: Phase 1 贪心、Phase 2 回溯、greedy playout
+  - 新增常量: `MAX_CONSECUTIVE_FLIP_DRAGS=7`, `MAX_FLIP_DRAGS_STRICT=5`, `FLIP_DRAG_HAND_THRESHOLD=15`, `FLIP_DRAG_TABLEAU_THRESHOLD=3`
+  - 修改文件: `generate_levels.py`、`generator.html`
+- **S2 rejectGreedyTies 开启**: 策略2 也拒绝贪心阶段等权重随机选择，与策略1 一致
+- **S2 步数上限对齐**: Python 端 `max_steps+20` 改为 `max_steps`（= solveStepMax），与 generator.html 一致
+- **S2 solution log 修正**: 原来用纯贪心 `result2Greedy`（不受限制约束），改为用回溯求解 `result2`（受限制约束）。删除 `result2Greedy` 调用
+- **S2 fallback 贪心淘汰**: 回溯求解失败后 fallback 到纯贪心（strategyType=priority-greedy），现在视为布局不合格直接淘汰
+- **maxAttempts 提升**: 200 → 2000（两端），适应更严格的筛选规则
+
+### 2026-04-10 - 求解器贪心阶段等权重随机检测 + STUCK弹窗 + 手机防误触
+
+- **贪心阶段拒绝等权重随机（rejectGreedyTies）**: 策略1 Phase 1 贪心阶段，如果最高权重+tiebreak 有多个等价候选需要随机选择，直接判定 layout 不合格
+  - `solve_level()` 新增 `reject_greedy_ties` 参数
+  - `_pick_greedy_move()` 新增 `reject_ties` 参数，`top_count > 1` 时返回 None
+  - 修改文件: `generate_levels.py`、`generator.html`
+- **连续翻牌上限（MAX_CONSECUTIVE_FLIPS=9）**: 求解过程中连续翻手牌 ≥9 次则判定 layout 无效
+  - Phase 1 失败 / Phase 2+playout 视为死端回溯
+  - 修改文件: `generate_levels.py`、`generator.html`
+- **两阶段求解器同步到 generator.html**: 之前只有 `generate_levels.py` 有 Phase 1+Phase 2，generator.html 缺少 Phase 1
+  - 新增 `GREEDY_PHASE_RATIO` 常量和 `greedyStepLimit` 计算
+  - `solveWithBacktracking` 加入 Phase 1 纯贪心阶段（`pickGreedyMove`）
+  - Phase 2 回溯补充 `greedyUndos` 还原
+  - `solveLevel` 新增 `displaySteps` 参数
+- **STUCK 弹窗补充调试数据**: `onSoftDeadlock()` 显示限定步数、实际步数、layout/S1/S2（与 Lose/Win 弹窗一致）
+- **game over 弹窗限定步数修复**: 新增 `baseMaxSteps` 记录初始步数上限，弹窗显示不受 +10 Steps 影响
+- **手机端防误触**: html/body 禁止滚动 + overscroll-behavior:none + touchmove preventDefault，避免下拉刷新导致关卡重置
+- **新增工具**: `analyze_solutions.py` 关卡解法分析工具，支持 `--from-solutions`/`--detail`/`--context` 参数
+- **新增文档**: `doc/SOLVER_STRATEGY_COMPARISON.md` 策略对比、`doc/SOLVER_FLOW_CHART.md` 求解流程图、`doc/IMAGE_PROCESS_GUIDE.md` 图片处理手册
+- **sort_game_basic_card_config.csv 更新**: 603 行填入 basic_card_res，77 行填入 basic_card_res_small
+- **批量图片尺寸调整**: 491 张 v2 新增图片按 v1 基准（38% 填充比）批量放大
+- 修改文件: `game.js`、`style.css`、`generate_levels.py`、`generator.html`、`config/sort_game_basic_card_config.csv`
+
+### 2026-04-09 - 求解器两阶段改造：纯贪心阶段 + 回溯阶段
+
+- **背景**: 求解器原来从第一步就启用决策树回溯，导致部分 layout 在前期就需要"猜对分支"才能通关，玩家体验不佳。希望前期操作确定性强，后期才允许策略深度
+- **方案**: 将求解流程分为两阶段：
+  - **阶段1（纯贪心）**: 前 `displaySteps × GREEDY_PHASE_RATIO`（默认 60%）步，只按权重 + tiebreak + seed 选唯一最优操作，不建决策树、不尝试其他分支。卡死则 layout 无效，换 seed 重试
+  - **阶段2（决策树+回溯）**: 超过阈值后，从当前状态进入原有的决策树搜索（深度 ≤ MAX_TREE_DEPTH=8，greedy playout，回溯）
+- **新增常量**: `GREEDY_PHASE_RATIO = 0.6`（暂定 60%，后续可调整测试）
+- **接口变更**: `solve_level()` 新增 `display_steps` 参数，用于计算贪心阈值 `int(display_steps * GREEDY_PHASE_RATIO)`；不传时默认用 `max_steps`
+- **效果**: 前 60% 步数体验顺畅无需猜测，layout 筛选更严格（部分早期卡死的布局被淘汰）
+- **验证**: Level 2/30/50 均能在合理 attempt 次数内生成有效 layout
+- **修改文件**: `generate_levels.py`（求解器核心重构）、`solve_debug.py`（透传 display_steps）
+
 ### 2026-04-09 - 补全新类别图片映射（image_mapping.json + level_card_defs.js）
 
 - **背景**: 美术陆续交付了 118 个新类别（E-全新）的图片资源，文件名采用大写类别前缀（如 `Animals_Bear_6.png`、`Bigcats_Lion_5.png`、`Xray_ChestXray_1.png`）。原 `image_mapping.json` 未覆盖这些新前缀，`level_card_defs.js` 中 118 个图片类别全部 `image: ""`，无法显示图片

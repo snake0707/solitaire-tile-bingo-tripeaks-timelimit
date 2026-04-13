@@ -945,7 +945,7 @@ function validateLayout(tableau, handPile, categoryTargets, maxSlots) {
         }
     }
     if (!goldAccessible) {
-        for (let i = 0; i < Math.min(5, handPile.length); i++) {
+        for (let i = handPile.length - 1; i >= Math.max(0, handPile.length - 5); i--) {
             if (handPile[i].type === 'gold') {
                 goldAccessible = true;
                 break;
@@ -981,7 +981,8 @@ function validateLayout(tableau, handPile, categoryTargets, maxSlots) {
     }
 
     if (!hasImmediateMove) {
-        for (let k = 0; k < Math.min(2, handPile.length); k++) {
+        // 检查手牌顶部 2 张（pop从末尾取，所以检查末尾）
+        for (let k = handPile.length - 1; k >= Math.max(0, handPile.length - 2); k--) {
             const card = handPile[k];
             if (card.type === 'gold') {
                 hasImmediateMove = true;
@@ -1018,7 +1019,7 @@ function validateLayout(tableau, handPile, categoryTargets, maxSlots) {
             consecFlips = 0;
         } else {
             if (simHand.length > 0) {
-                simDisplay.push(simHand.shift());
+                simDisplay.push(simHand.pop());  // 从末尾取，与求解器一致
                 consecFlips++;
                 if (consecFlips > 3) return false;
             } else {
@@ -2201,7 +2202,7 @@ function generateSolvableLayout(level) {
 
     const difficulty = document.getElementById('difficulty').value;
 
-    const maxAttempts = 2000;
+    const maxAttempts = 10000;
     let difficultySkips = 0;
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
@@ -2227,7 +2228,7 @@ function generateSolvableLayout(level) {
         }
 
         // 条件2: 策略2（保守, priority only）有解且步数在 [solveStepMin, solveStepMax]
-        const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true, false, displaySteps);
+        const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true, false, displaySteps, true);
         if (!result2.won || result2.strategyType === 'priority-greedy') continue;
         const solver2Steps = result2.stepsUsed;
         if (solver2Steps < solveStepMin || solver2Steps > solveStepMax) continue;
