@@ -4,27 +4,27 @@
       "maxSlots": 3,
       "maxSteps": 71,
       "strategyType": "priority",
-      "solverSteps": 64,
+      "solverSteps": 62,
       "solverMaxSteps": 65,
       "moveStats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 3,
-        "colToCol": 3,
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
         "colMultiToCol": 2,
-        "handToSlot": 15,
-        "handToCol": 9,
+        "handToSlot": 16,
+        "handToCol": 8,
         "flip": 24,
         "recycle": 0
       },
       "solver2Steps": 63,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 8,
-        "colMultiToSlot": 3,
-        "colToCol": 3,
-        "colMultiToCol": 1,
-        "handToSlot": 17,
-        "handToCol": 7,
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 16,
+        "handToCol": 8,
         "flip": 24,
         "recycle": 0
       }
@@ -34,28 +34,27 @@
         {
           "card": {
             "type": "regular",
-            "category": "File_word",
-            "name": "GIF",
+            "category": "Injuries_word",
+            "name": "Wound",
             "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
-            "type": "gold",
-            "category": "Seats",
-            "name": "Seats",
-            "isText": false
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Ribs",
+            "isText": true
           },
           "faceUp": false
         },
         {
           "card": {
             "type": "regular",
-            "category": "Seats",
-            "name": "Chair",
-            "image": "res/Item/furniture_chair_3.png",
-            "isText": false
+            "category": "Injuries_word",
+            "name": "Fracture",
+            "isText": true
           },
           "faceUp": true
         }
@@ -64,8 +63,17 @@
         {
           "card": {
             "type": "regular",
-            "category": "Magician_word",
-            "name": "Wizard",
+            "category": "Injuries_word",
+            "name": "Bruise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "File_word",
+            "name": "TXT",
             "isText": true
           },
           "faceUp": false
@@ -82,6 +90,26 @@
         },
         {
           "card": {
+            "type": "gold",
+            "category": "BBQ_word",
+            "name": "BBQ",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Chicken",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
             "type": "regular",
             "category": "BBQ_word",
             "name": "Brisket",
@@ -93,27 +121,7 @@
           "card": {
             "type": "regular",
             "category": "File_word",
-            "name": "JPEG",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Pork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Injuries_word",
-            "name": "Injuries",
+            "name": "DOCX",
             "isText": true
           },
           "faceUp": false
@@ -130,17 +138,8 @@
         {
           "card": {
             "type": "regular",
-            "category": "BBQ_word",
-            "name": "Ribs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "BBQ_word",
-            "name": "BBQ",
+            "category": "File_word",
+            "name": "PDF",
             "isText": true
           },
           "faceUp": true
@@ -156,42 +155,6 @@
       "Flu_word": 3
     },
     "handPile": [
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Sorcerer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Sprain",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Wound",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Pills",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Bruise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "TXT",
-        "isText": true
-      },
       {
         "type": "regular",
         "category": "Seats",
@@ -202,7 +165,13 @@
       {
         "type": "regular",
         "category": "File_word",
-        "name": "PNG",
+        "name": "GIF",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "JPEG",
         "isText": true
       },
       {
@@ -212,57 +181,9 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "Magician_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Fracture",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Marinade",
-        "isText": true
-      },
-      {
         "type": "regular",
         "category": "Flu_word",
         "name": "Cough",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "HTML",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Chicken",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Witch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Charcoal",
         "isText": true
       },
       {
@@ -273,248 +194,27 @@
         "isText": false
       },
       {
+        "type": "gold",
+        "category": "Magician_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Pills",
+        "isText": true
+      },
+      {
         "type": "regular",
         "category": "BBQ_word",
-        "name": "Steak",
+        "name": "Charcoal",
         "isText": true
       },
       {
         "type": "regular",
         "category": "BBQ_word",
         "name": "Skewers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "DOCX",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "PDF",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Headache",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 71,
-      "strategyType": "priority",
-      "solverSteps": 63,
-      "solverMaxSteps": 65,
-      "moveStats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 4,
-        "handToSlot": 15,
-        "handToCol": 9,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 62,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 3,
-        "handToSlot": 18,
-        "handToCol": 6,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Seats",
-            "name": "Stool",
-            "image": "res/Item/chair_stool_4.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "PNG",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "BBQ_word",
-            "name": "BBQ",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flu_word",
-            "name": "Cough",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Seats",
-            "name": "Chair",
-            "image": "res/Item/furniture_chair_3.png",
-            "isText": false
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Ribs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "PDF",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "DOCX",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flu_word",
-            "name": "Pills",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Bruise",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Magician_word",
-            "name": "Magician",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "GIF",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "BBQ_word": 8,
-      "File_word": 8,
-      "Seats": 4,
-      "Injuries_word": 4,
-      "Magician_word": 3,
-      "Flu_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Brisket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "TXT",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Bench",
-        "image": "res/Item/Park_Bench_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Wound",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Sorcerer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Steak",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Wizard",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "JPEG",
         "isText": true
       },
       {
@@ -532,6 +232,24 @@
       {
         "type": "regular",
         "category": "BBQ_word",
+        "name": "Marinade",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Steak",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Magician_word",
+        "name": "Wizard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
         "name": "Pork",
         "isText": true
       },
@@ -543,10 +261,334 @@
       },
       {
         "type": "regular",
+        "category": "Flu_word",
+        "name": "Headache",
+        "isText": true
+      },
+      {
+        "type": "gold",
         "category": "Seats",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
+        "name": "Seats",
         "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Sprain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Magician_word",
+        "name": "Sorcerer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flu_word",
+        "name": "Flu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PNG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 20,
+        "handToCol": 4,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 5,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 17,
+        "handToCol": 7,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Sprain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flu_word",
+            "name": "Cough",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Fracture",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Flu_word",
+            "name": "Flu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Brisket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Marinade",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Magician_word",
+            "name": "Wizard",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Skewers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "File_word",
+            "name": "File",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Sofa",
+            "image": "res/Item/furniture_sofa_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Bench",
+            "image": "res/Item/Park_Bench_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flu_word",
+            "name": "Headache",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "BBQ_word": 8,
+      "File_word": 8,
+      "Seats": 4,
+      "Injuries_word": 4,
+      "Magician_word": 3,
+      "Flu_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Magician_word",
+        "name": "Sorcerer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Wound",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Magician_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "HTML",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Pills",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "BBQ_word",
+        "name": "BBQ",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "DOCX",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Stool",
+        "image": "res/Item/chair_stool_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PDF",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "JPEG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Steak",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Injuries_word",
+        "name": "Injuries",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Charcoal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "TXT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Ribs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PNG",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seats",
+        "name": "Seats",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Magician_word",
+        "name": "Witch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Bruise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Pork",
+        "isText": true
       },
       {
         "type": "regular",
@@ -561,358 +603,10 @@
         "isText": true
       },
       {
-        "type": "gold",
-        "category": "File_word",
-        "name": "File",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Fracture",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Seats",
-        "name": "Seats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Marinade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Headache",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Skewers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Sprain",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Charcoal",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 71,
-      "strategyType": "priority",
-      "solverSteps": 60,
-      "solverMaxSteps": 65,
-      "moveStats": {
-        "colSingleToSlot": 3,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 9,
-        "handToCol": 15,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 60,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 3,
-        "colMultiToSlot": 4,
-        "colToCol": 3,
-        "colMultiToCol": 2,
-        "handToSlot": 9,
-        "handToCol": 15,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "TXT",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Magician_word",
-            "name": "Wizard",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Seats",
-            "name": "Seats",
-            "isText": false
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Pork",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Wound",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "HTML",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "CSV",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flu_word",
-            "name": "Cough",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Magician_word",
-            "name": "Sorcerer",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Steak",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Ribs",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "BBQ_word",
-            "name": "Charcoal",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "BBQ_word": 8,
-      "File_word": 8,
-      "Seats": 4,
-      "Injuries_word": 4,
-      "Magician_word": 3,
-      "Flu_word": 3
-    },
-    "handPile": [
-      {
-        "type": "gold",
-        "category": "File_word",
-        "name": "File",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Fracture",
-        "isText": true
-      },
-      {
         "type": "regular",
         "category": "File_word",
         "name": "GIF",
         "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Witch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Stool",
-        "image": "res/Item/chair_stool_4.png",
-        "isText": false
-      },
-      {
-        "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "DOCX",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "PDF",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "PNG",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Pills",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "BBQ_word",
-        "name": "BBQ",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Injuries_word",
-        "name": "Injuries",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Magician_word",
-        "name": "Magician",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Bruise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Chicken",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Bench",
-        "image": "res/Item/Park_Bench_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Skewers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Marinade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Sprain",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "JPEG",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Brisket",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Headache",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
       }
     ],
     "handDisplay": []
@@ -925,30 +619,39 @@
       "solverSteps": 63,
       "solverMaxSteps": 65,
       "moveStats": {
-        "colSingleToSlot": 5,
-        "colMultiToSlot": 3,
-        "colToCol": 5,
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
         "colMultiToCol": 2,
-        "handToSlot": 12,
-        "handToCol": 12,
+        "handToSlot": 14,
+        "handToCol": 10,
         "flip": 24,
         "recycle": 0
       },
-      "solver2Steps": 62,
+      "solver2Steps": 63,
       "solver2StrategyType": "priority",
       "solver2Stats": {
-        "colSingleToSlot": 6,
-        "colMultiToSlot": 3,
-        "colToCol": 4,
-        "colMultiToCol": 1,
-        "handToSlot": 13,
-        "handToCol": 11,
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
         "flip": 24,
         "recycle": 0
       }
     },
     "tableau": [
       [
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Brisket",
+            "isText": true
+          },
+          "faceUp": false
+        },
         {
           "card": {
             "type": "regular",
@@ -962,16 +665,7 @@
           "card": {
             "type": "regular",
             "category": "Flu_word",
-            "name": "Headache",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "gold",
-            "category": "Magician_word",
-            "name": "Magician",
+            "name": "Cough",
             "isText": true
           },
           "faceUp": true
@@ -981,26 +675,8 @@
         {
           "card": {
             "type": "gold",
-            "category": "File_word",
-            "name": "File",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Fracture",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Sprain",
+            "category": "Magician_word",
+            "name": "Magician",
             "isText": true
           },
           "faceUp": false
@@ -1009,295 +685,7 @@
           "card": {
             "type": "regular",
             "category": "BBQ_word",
-            "name": "Charcoal",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Wound",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "DOCX",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "HTML",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "JPEG",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "GIF",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ]
-    ],
-    "categoryTargets": {
-      "BBQ_word": 8,
-      "File_word": 8,
-      "Seats": 4,
-      "Injuries_word": 4,
-      "Magician_word": 3,
-      "Flu_word": 3
-    },
-    "handPile": [
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Pills",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "BBQ_word",
-        "name": "BBQ",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Steak",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "PNG",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Witch",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Stool",
-        "image": "res/Item/chair_stool_4.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "Injuries_word",
-        "name": "Bruise",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Wizard",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Marinade",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Magician_word",
-        "name": "Sorcerer",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "PDF",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Skewers",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Bench",
-        "image": "res/Item/Park_Bench_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Ribs",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Chicken",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Flu_word",
-        "name": "Cough",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Seats",
-        "name": "Seats",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Pork",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Injuries_word",
-        "name": "Injuries",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "File_word",
-        "name": "TXT",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "Seats",
-        "name": "Sofa",
-        "image": "res/Item/furniture_sofa_2.png",
-        "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Brisket",
-        "isText": true
-      }
-    ],
-    "handDisplay": []
-  },
-  {
-    "config": {
-      "maxSlots": 3,
-      "maxSteps": 71,
-      "strategyType": "priority",
-      "solverSteps": 60,
-      "solverMaxSteps": 65,
-      "moveStats": {
-        "colSingleToSlot": 3,
-        "colMultiToSlot": 4,
-        "colToCol": 2,
-        "colMultiToCol": 3,
-        "handToSlot": 12,
-        "handToCol": 12,
-        "flip": 24,
-        "recycle": 0
-      },
-      "solver2Steps": 62,
-      "solver2StrategyType": "priority",
-      "solver2Stats": {
-        "colSingleToSlot": 4,
-        "colMultiToSlot": 5,
-        "colToCol": 4,
-        "colMultiToCol": 1,
-        "handToSlot": 12,
-        "handToCol": 12,
-        "flip": 24,
-        "recycle": 0
-      }
-    },
-    "tableau": [
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "DOCX",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "CSV",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Flu_word",
-            "name": "Pills",
-            "isText": true
-          },
-          "faceUp": true
-        }
-      ],
-      [
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "HTML",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Fracture",
+            "name": "Ribs",
             "isText": true
           },
           "faceUp": false
@@ -1324,9 +712,27 @@
       [
         {
           "card": {
-            "type": "gold",
+            "type": "regular",
             "category": "File_word",
-            "name": "File",
+            "name": "GIF",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Chicken",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Marinade",
             "isText": true
           },
           "faceUp": false
@@ -1342,27 +748,9 @@
         },
         {
           "card": {
-            "type": "regular",
+            "type": "gold",
             "category": "File_word",
-            "name": "PNG",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "Injuries_word",
-            "name": "Sprain",
-            "isText": true
-          },
-          "faceUp": false
-        },
-        {
-          "card": {
-            "type": "regular",
-            "category": "File_word",
-            "name": "JPEG",
+            "name": "File",
             "isText": true
           },
           "faceUp": true
@@ -1380,34 +768,16 @@
     "handPile": [
       {
         "type": "regular",
-        "category": "Flu_word",
-        "name": "Cough",
+        "category": "File_word",
+        "name": "PNG",
         "isText": true
       },
       {
         "type": "regular",
         "category": "Seats",
-        "name": "Stool",
-        "image": "res/Item/chair_stool_4.png",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
         "isText": false
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Ribs",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Flu_word",
-        "name": "Flu",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Charcoal",
-        "isText": true
       },
       {
         "type": "gold",
@@ -1416,15 +786,21 @@
         "isText": true
       },
       {
-        "type": "gold",
+        "type": "regular",
         "category": "BBQ_word",
-        "name": "BBQ",
+        "name": "Pork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Steak",
         "isText": true
       },
       {
         "type": "regular",
         "category": "File_word",
-        "name": "PDF",
+        "name": "DOCX",
         "isText": true
       },
       {
@@ -1435,8 +811,50 @@
       },
       {
         "type": "regular",
+        "category": "File_word",
+        "name": "JPEG",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seats",
+        "name": "Seats",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "TXT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PDF",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flu_word",
+        "name": "Flu",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "Injuries_word",
         "name": "Wound",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Sprain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "HTML",
         "isText": true
       },
       {
@@ -1448,8 +866,530 @@
       },
       {
         "type": "regular",
+        "category": "BBQ_word",
+        "name": "Charcoal",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Pills",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Fracture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "BBQ_word",
+        "name": "BBQ",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Magician_word",
+        "name": "Sorcerer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Stool",
+        "image": "res/Item/chair_stool_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
         "category": "Magician_word",
         "name": "Wizard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 61,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
+        "colMultiToCol": 1,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 60,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 2,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 0,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Magician_word",
+            "name": "Sorcerer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flu_word",
+            "name": "Headache",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Marinade",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Fracture",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Chair",
+            "image": "res/Item/furniture_chair_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Magician_word",
+            "name": "Wizard",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "File_word",
+            "name": "GIF",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flu_word",
+            "name": "Cough",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Charcoal",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Sprain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Sofa",
+            "image": "res/Item/furniture_sofa_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Magician_word",
+            "name": "Witch",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "BBQ_word": 8,
+      "File_word": 8,
+      "Seats": 4,
+      "Injuries_word": 4,
+      "Magician_word": 3,
+      "Flu_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PNG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Stool",
+        "image": "res/Item/chair_stool_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "BBQ_word",
+        "name": "BBQ",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Bench",
+        "image": "res/Item/Park_Bench_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Seats",
+        "name": "Seats",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Magician_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Skewers",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "DOCX",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Pills",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Wound",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "CSV",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Chicken",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "JPEG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Brisket",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flu_word",
+        "name": "Flu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "PDF",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Ribs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "TXT",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Injuries_word",
+        "name": "Injuries",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Bruise",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Steak",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "File_word",
+        "name": "File",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Pork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "HTML",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 3,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 9,
+        "handToCol": 15,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 6,
+        "colToCol": 3,
+        "colMultiToCol": 0,
+        "handToSlot": 7,
+        "handToCol": 17,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Bruise",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Wound",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Brisket",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "BBQ_word",
+            "name": "BBQ",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Skewers",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Sofa",
+            "image": "res/Item/furniture_sofa_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "File_word",
+            "name": "HTML",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Injuries_word",
+            "name": "Injuries",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Injuries_word",
+            "name": "Sprain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "File_word",
+            "name": "PNG",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seats",
+            "name": "Stool",
+            "image": "res/Item/chair_stool_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "BBQ_word",
+            "name": "Steak",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "BBQ_word": 8,
+      "File_word": 8,
+      "Seats": 4,
+      "Injuries_word": 4,
+      "Magician_word": 3,
+      "Flu_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Magician_word",
+        "name": "Magician",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Headache",
         "isText": true
       },
       {
@@ -1460,20 +1400,8 @@
       },
       {
         "type": "regular",
-        "category": "BBQ_word",
-        "name": "Pork",
-        "isText": true
-      },
-      {
-        "type": "regular",
-        "category": "BBQ_word",
-        "name": "Marinade",
-        "isText": true
-      },
-      {
-        "type": "gold",
-        "category": "Magician_word",
-        "name": "Magician",
+        "category": "Flu_word",
+        "name": "Cough",
         "isText": true
       },
       {
@@ -1485,8 +1413,8 @@
       },
       {
         "type": "regular",
-        "category": "BBQ_word",
-        "name": "Brisket",
+        "category": "File_word",
+        "name": "PDF",
         "isText": true
       },
       {
@@ -1497,8 +1425,75 @@
       },
       {
         "type": "regular",
+        "category": "Magician_word",
+        "name": "Witch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "DOCX",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "File_word",
+        "name": "File",
+        "isText": true
+      },
+      {
+        "type": "regular",
         "category": "BBQ_word",
-        "name": "Steak",
+        "name": "Ribs",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "TXT",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seats",
+        "name": "Chair",
+        "image": "res/Item/furniture_chair_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flu_word",
+        "name": "Pills",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Pork",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "JPEG",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "File_word",
+        "name": "CSV",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flu_word",
+        "name": "Flu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Injuries_word",
+        "name": "Fracture",
         "isText": true
       },
       {
@@ -1515,15 +1510,20 @@
       },
       {
         "type": "regular",
-        "category": "Seats",
-        "name": "Chair",
-        "image": "res/Item/furniture_chair_3.png",
-        "isText": false
+        "category": "BBQ_word",
+        "name": "Charcoal",
+        "isText": true
       },
       {
         "type": "regular",
-        "category": "File_word",
-        "name": "TXT",
+        "category": "Magician_word",
+        "name": "Wizard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "BBQ_word",
+        "name": "Marinade",
         "isText": true
       }
     ],
