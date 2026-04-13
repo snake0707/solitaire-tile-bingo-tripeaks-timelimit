@@ -2228,7 +2228,7 @@ function generateSolvableLayout(level) {
 
         // 条件2: 策略2（保守, priority only）有解且步数在 [solveStepMin, solveStepMax]
         const result2 = solveLevel(gen.tableau, gen.categoryTargets, maxSolverSteps, config.maxSlots, gen.handPile, true, true, false, displaySteps);
-        if (!result2.won) continue;
+        if (!result2.won || result2.strategyType === 'priority-greedy') continue;
         const solver2Steps = result2.stepsUsed;
         if (solver2Steps < solveStepMin || solver2Steps > solveStepMax) continue;
         const solver2StrategyType = result2.strategyType;
@@ -2268,7 +2268,7 @@ function generateSolvableLayout(level) {
             solveStepMax: maxSolverSteps,
             strategyType: result.strategyType,
             movePath: result.movePath || [],
-            movePath2: (solver2StrategyType !== 'priority-greedy') ? (result2.movePath || []) : [],
+            movePath2: result2.movePath || [],
             solver2Steps,
             solver2StrategyType,
             difficultySkips,
