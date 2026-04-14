@@ -48,6 +48,7 @@ class Game {
 
         // Chinese mode
         this.zhMode = false;
+        this.showDropTargets = false;
 
         // Step system
         this.stepsLeft = 0;
@@ -82,6 +83,7 @@ class Game {
         document.getElementById('menu-btn').addEventListener('click', () => this.showLevelSelect());
         document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
         document.getElementById('btn-zh').addEventListener('click', () => this.toggleZhMode());
+        document.getElementById('btn-highlight').addEventListener('click', () => this.toggleDropTargets());
 
         // Hand pile: click to flip (not drag)
         this._lastTouchTime = 0;
@@ -342,7 +344,14 @@ class Game {
         this.dragState = null;
     }
 
+    toggleDropTargets() {
+        this.showDropTargets = !this.showDropTargets;
+        const btn = document.getElementById('btn-highlight');
+        if (btn) btn.classList.toggle('active', this.showDropTargets);
+    }
+
     _highlightDropTargets(cardData, sourceType, sourceInfo) {
+        if (!this.showDropTargets) return;
         const card = cardData._isHandDisplay ? cardData.card : cardData.card;
         if (!card) return;
 
