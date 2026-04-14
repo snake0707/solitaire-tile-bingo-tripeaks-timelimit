@@ -1,0 +1,2552 @@
+[
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 6,
+        "colToCol": 5,
+        "colMultiToCol": 4,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 6,
+        "colMultiToCol": 2,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Tuition",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Biosphere",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sports_word",
+            "name": "Sports",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Alumni",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Blast",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Tears",
+            "image": "res/Item/Fluids_Tears_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Jackpot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Destroy",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Campus",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pumpkins_word",
+            "name": "Soup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pumpkins_word",
+            "name": "Pumpkins",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Nobel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Forbes",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Energy flow",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Class",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Material cycle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Sweat",
+            "image": "res/Item/Fluids_Sweat_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lottery_word",
+            "name": "Lottery",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Iconic costume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Detonate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Agenda",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "College_word": 8,
+      "Comics_word": 8,
+      "Sports_word": 8,
+      "Dynamite_word": 6,
+      "Ecology_word": 6,
+      "Fluids": 4,
+      "Forge_word": 4,
+      "Lists_word": 4,
+      "Lottery_word": 3,
+      "Pumpkins_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Lists_word",
+        "name": "Lists",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Dorm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Studies",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Football",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Explode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Villain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Food chain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Blood",
+        "image": "res/Item/Fluids_Blood_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Hero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Superpower",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Speech bubble",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Saliva",
+        "image": "res/Item/Fluids_Saliva_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Marvel Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Pie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comics_word",
+        "name": "Comics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Forge_word",
+        "name": "Forge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Bang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Smelt",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamite_word",
+        "name": "Dynamite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "DC Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Badminton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Bread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Basketball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Table tennis",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ecology_word",
+        "name": "Ecology",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Playlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Lecture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "College_word",
+        "name": "College",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Anvil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Ecozone",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Swimming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Issue",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fluids",
+        "name": "Fluids",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Global change",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Faculty",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 120,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 52,
+        "recycle": 1
+      },
+      "solver2Steps": 120,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 52,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Marvel Universe",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Biosphere",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "College_word",
+            "name": "College",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Campus",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ecology_word",
+            "name": "Ecology",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Pumpkins_word",
+            "name": "Soup",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lists_word",
+            "name": "Lists",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Issue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Winner",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Sweat",
+            "image": "res/Item/Fluids_Sweat_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Speech bubble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Nobel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Sports_word",
+            "name": "Sports",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Alumni",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Destroy",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Ecozone",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Blast",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Material cycle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Saliva",
+            "image": "res/Item/Fluids_Saliva_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "College_word": 8,
+      "Comics_word": 8,
+      "Sports_word": 8,
+      "Dynamite_word": 6,
+      "Ecology_word": 6,
+      "Fluids": 4,
+      "Forge_word": 4,
+      "Lists_word": 4,
+      "Lottery_word": 3,
+      "Pumpkins_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Detonate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fluids",
+        "name": "Fluids",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Football",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Lecture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Explode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Dorm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lottery_word",
+        "name": "Lottery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Tuition",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Agenda",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Villain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Blood",
+        "image": "res/Item/Fluids_Blood_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Iconic costume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Pie",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Forge_word",
+        "name": "Forge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Faculty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Menu",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Anvil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Superpower",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Hero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Playlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Table tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Bang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Tennis",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pumpkins_word",
+        "name": "Pumpkins",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Forbes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Smelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Energy flow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Bread",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comics_word",
+        "name": "Comics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Tears",
+        "image": "res/Item/Fluids_Tears_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Global change",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "DC Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Badminton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Food chain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Basketball",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamite_word",
+        "name": "Dynamite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Jackpot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Class",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 118,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 8,
+        "colMultiToCol": 9,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 121,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 4,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 51,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Speech bubble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Detonate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lottery_word",
+            "name": "Lottery",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Iconic costume",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Blood",
+            "image": "res/Item/Fluids_Blood_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Material cycle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Sweat",
+            "image": "res/Item/Fluids_Sweat_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Menu",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Tears",
+            "image": "res/Item/Fluids_Tears_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Forge_word",
+            "name": "Anvil",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Nobel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Table tennis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Alumni",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Class",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Tennis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Global change",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Basketball",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Ecozone",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Forge_word",
+            "name": "Forge",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Faculty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Forge_word",
+            "name": "Flame",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "College_word": 8,
+      "Comics_word": 8,
+      "Sports_word": 8,
+      "Dynamite_word": 6,
+      "Ecology_word": 6,
+      "Fluids": 4,
+      "Forge_word": 4,
+      "Lists_word": 4,
+      "Lottery_word": 3,
+      "Pumpkins_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "DC Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Football",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Ticket",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Tuition",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Villain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Badminton",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sports_word",
+        "name": "Sports",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Energy flow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Explode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Bang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Swimming",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Saliva",
+        "image": "res/Item/Fluids_Saliva_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Bread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Campus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Dorm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Agenda",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pumpkins_word",
+        "name": "Pumpkins",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comics_word",
+        "name": "Comics",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Forbes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Destroy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Soup",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Hero",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ecology_word",
+        "name": "Ecology",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fluids",
+        "name": "Fluids",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Biosphere",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Blast",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "College_word",
+        "name": "College",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Jackpot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Marvel Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Superpower",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Smelt",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lists_word",
+        "name": "Lists",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Lecture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Issue",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamite_word",
+        "name": "Dynamite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Pie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Playlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Food chain",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 8,
+        "colToCol": 2,
+        "colMultiToCol": 3,
+        "handToSlot": 17,
+        "handToCol": 25,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 8,
+        "colToCol": 2,
+        "colMultiToCol": 3,
+        "handToSlot": 17,
+        "handToCol": 25,
+        "flip": 55,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lists_word",
+            "name": "Lists",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Energy flow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "College_word",
+            "name": "College",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Faculty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Saliva",
+            "image": "res/Item/Fluids_Saliva_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Forge_word",
+            "name": "Hammer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Menu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Agenda",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ecology_word",
+            "name": "Ecology",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Pumpkins_word",
+            "name": "Pumpkins",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Nobel",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Football",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Tennis",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Forge_word",
+            "name": "Forge",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Comics_word",
+            "name": "Comics",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Ticket",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Class",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Speech bubble",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Sweat",
+            "image": "res/Item/Fluids_Sweat_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lottery_word",
+            "name": "Winner",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "College_word": 8,
+      "Comics_word": 8,
+      "Sports_word": 8,
+      "Dynamite_word": 6,
+      "Ecology_word": 6,
+      "Fluids": 4,
+      "Forge_word": 4,
+      "Lists_word": 4,
+      "Lottery_word": 3,
+      "Pumpkins_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Issue",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Soup",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamite_word",
+        "name": "Dynamite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Badminton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Dorm",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Playlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Tuition",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Food chain",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fluids",
+        "name": "Fluids",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Villain",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Explode",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Lottery_word",
+        "name": "Lottery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Bang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Blood",
+        "image": "res/Item/Fluids_Blood_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Destroy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Iconic costume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Detonate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Alumni",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Jogging",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Table tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Marvel Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Global change",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Smelt",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sports_word",
+        "name": "Sports",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Ecozone",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Hero",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Blast",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Tears",
+        "image": "res/Item/Fluids_Tears_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Pie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Biosphere",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "DC Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Campus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Anvil",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Lecture",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Superpower",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Jackpot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Material cycle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Bread",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Basketball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Forbes",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 120,
+      "strategyType": "priority",
+      "solverSteps": 114,
+      "solverMaxSteps": 123,
+      "moveStats": {
+        "colSingleToSlot": 10,
+        "colMultiToSlot": 7,
+        "colToCol": 8,
+        "colMultiToCol": 5,
+        "handToSlot": 25,
+        "handToCol": 17,
+        "flip": 42,
+        "recycle": 0
+      },
+      "solver2Steps": 113,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 4,
+        "colToCol": 8,
+        "colMultiToCol": 3,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 42,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ecology_word",
+            "name": "Ecology",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Hero",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Sweat",
+            "image": "res/Item/Fluids_Sweat_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Swimming",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Jogging",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Lists_word",
+            "name": "Lists",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Issue",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Dorm",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Basketball",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Sports_word",
+            "name": "Golf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Dynamite_word",
+            "name": "Blast",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Superpower",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Forge_word",
+            "name": "Smelt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "College_word",
+            "name": "College",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Agenda",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Lists_word",
+            "name": "Menu",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Fluids",
+            "name": "Tears",
+            "image": "res/Item/Fluids_Tears_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Comics_word",
+            "name": "Villain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Food chain",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ecology_word",
+            "name": "Biosphere",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Studies",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "College_word",
+            "name": "Alumni",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "College_word": 8,
+      "Comics_word": 8,
+      "Sports_word": 8,
+      "Dynamite_word": 6,
+      "Ecology_word": 6,
+      "Fluids": 4,
+      "Forge_word": 4,
+      "Lists_word": 4,
+      "Lottery_word": 3,
+      "Pumpkins_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Forbes",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Flame",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Bang",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Global change",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Explode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Iconic costume",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Saliva",
+        "image": "res/Item/Fluids_Saliva_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Bread",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Pumpkins_word",
+        "name": "Pumpkins",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Soup",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Table tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "DC Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Hammer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Tuition",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Lecture",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Dynamite_word",
+        "name": "Dynamite",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Pumpkins_word",
+        "name": "Pie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Nobel",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Campus",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Faculty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Fluids",
+        "name": "Blood",
+        "image": "res/Item/Fluids_Blood_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Lottery_word",
+        "name": "Lottery",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Jackpot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Ticket",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "College_word",
+        "name": "Class",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Sports_word",
+        "name": "Sports",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lists_word",
+        "name": "Playlist",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Material cycle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Energy flow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Football",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Lottery_word",
+        "name": "Winner",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Marvel Universe",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Detonate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Forge_word",
+        "name": "Anvil",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Comics_word",
+        "name": "Comics",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Forge_word",
+        "name": "Forge",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Badminton",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ecology_word",
+        "name": "Ecozone",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Sports_word",
+        "name": "Tennis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Dynamite_word",
+        "name": "Destroy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Comics_word",
+        "name": "Speech bubble",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Fluids",
+        "name": "Fluids",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  }
+]

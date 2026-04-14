@@ -1,0 +1,1552 @@
+[
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 76,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 69,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 3,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 3,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Lira",
+            "image": "res/Item/Money_Lira_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zebra_word",
+            "name": "Tail",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Zebra_word",
+            "name": "Zebra",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Latex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Key",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Dharma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Allergen_word",
+            "name": "Allergen",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Dust",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Pop art",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zebra_word",
+            "name": "Hoof",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Rinzai",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Franc",
+            "image": "res/Item/Money_Franc_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Money": 8,
+      "Art_word": 8,
+      "Allergen_word": 4,
+      "Access_word": 4,
+      "Zen_word": 3,
+      "Zebra_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Deco",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Art_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Keycard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Passcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Abstract",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zen_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yen",
+        "image": "res/Item/Money_Yen_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Pollen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Euro",
+        "image": "res/Item/Money_Euro_4.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Access_word",
+        "name": "Access",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Graffiti",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Snout",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Money",
+        "name": "Money",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Cubism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Dollar",
+        "image": "res/Item/Money_Dollar_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Realism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Rupee",
+        "image": "res/Item/Money_Rupee_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Modern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Peso",
+        "image": "res/Item/Money_Peso_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Gothic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yuan",
+        "image": "res/Item/Money_Yuan_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Nuts",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 76,
+      "strategyType": "priority",
+      "solverSteps": 68,
+      "solverMaxSteps": 69,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 7,
+        "colMultiToCol": 3,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 64,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Rupee",
+            "image": "res/Item/Money_Rupee_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Euro",
+            "image": "res/Item/Money_Euro_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Money",
+            "name": "Money",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Modern",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Latex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Yen",
+            "image": "res/Item/Money_Yen_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Keycard",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Nuts",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Allergen_word",
+            "name": "Allergen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Art_word",
+            "name": "Art",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Cubism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Dharma",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Money": 8,
+      "Art_word": 8,
+      "Allergen_word": 4,
+      "Access_word": 4,
+      "Zen_word": 3,
+      "Zebra_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Zebra_word",
+        "name": "Zebra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Key",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Passcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Gothic",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yuan",
+        "image": "res/Item/Money_Yuan_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Password",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Access_word",
+        "name": "Access",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Deco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Franc",
+        "image": "res/Item/Money_Franc_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Pollen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Snout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Graffiti",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Peso",
+        "image": "res/Item/Money_Peso_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Dust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Realism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Hoof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zen_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Abstract",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Rinzai",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Pop art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Dollar",
+        "image": "res/Item/Money_Dollar_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Lira",
+        "image": "res/Item/Money_Lira_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Yoga",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 76,
+      "strategyType": "priority",
+      "solverSteps": 65,
+      "solverMaxSteps": 69,
+      "moveStats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 3,
+        "colToCol": 0,
+        "colMultiToCol": 1,
+        "handToSlot": 12,
+        "handToCol": 12,
+        "flip": 27,
+        "recycle": 1
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 4,
+        "colToCol": 1,
+        "colMultiToCol": 3,
+        "handToSlot": 10,
+        "handToCol": 14,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Access_word",
+            "name": "Access",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Franc",
+            "image": "res/Item/Money_Franc_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Peso",
+            "image": "res/Item/Money_Peso_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Graffiti",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Latex",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Passcode",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Nuts",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Art_word",
+            "name": "Art",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Password",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Dharma",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Rupee",
+            "image": "res/Item/Money_Rupee_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Gothic",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Money": 8,
+      "Art_word": 8,
+      "Allergen_word": 4,
+      "Access_word": 4,
+      "Zen_word": 3,
+      "Zebra_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Dollar",
+        "image": "res/Item/Money_Dollar_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Allergen_word",
+        "name": "Allergen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yuan",
+        "image": "res/Item/Money_Yuan_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Key",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Dust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Deco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Realism",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Money",
+        "name": "Money",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yen",
+        "image": "res/Item/Money_Yen_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Rinzai",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Lira",
+        "image": "res/Item/Money_Lira_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Zebra_word",
+        "name": "Zebra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Abstract",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Modern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Hoof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Pop art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Snout",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Keycard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Pollen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zen_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Euro",
+        "image": "res/Item/Money_Euro_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Cubism",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 76,
+      "strategyType": "priority",
+      "solverSteps": 64,
+      "solverMaxSteps": 69,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 3,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 14,
+        "handToCol": 10,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Yen",
+            "image": "res/Item/Money_Yen_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Euro",
+            "image": "res/Item/Money_Euro_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Peso",
+            "image": "res/Item/Money_Peso_5.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Allergen_word",
+            "name": "Allergen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Cubism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Realism",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Abstract",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Gothic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Rinzai",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Allergen_word",
+            "name": "Dust",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Zen_word",
+            "name": "Zen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Password",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Money": 8,
+      "Art_word": 8,
+      "Allergen_word": 4,
+      "Access_word": 4,
+      "Zen_word": 3,
+      "Zebra_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Pop art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Rupee",
+        "image": "res/Item/Money_Rupee_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Key",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Passcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Deco",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Money",
+        "name": "Money",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Dharma",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Graffiti",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Keycard",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Art_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yuan",
+        "image": "res/Item/Money_Yuan_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Hoof",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Access_word",
+        "name": "Access",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Nuts",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Latex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Lira",
+        "image": "res/Item/Money_Lira_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Modern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Dollar",
+        "image": "res/Item/Money_Dollar_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Pollen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Franc",
+        "image": "res/Item/Money_Franc_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Zebra_word",
+        "name": "Zebra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Snout",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 76,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 69,
+      "moveStats": {
+        "colSingleToSlot": 5,
+        "colMultiToSlot": 4,
+        "colToCol": 4,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 2,
+        "handToSlot": 16,
+        "handToCol": 8,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Access_word",
+            "name": "Password",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Pop art",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Dharma",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Rupee",
+            "image": "res/Item/Money_Rupee_7.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Peso",
+            "image": "res/Item/Money_Peso_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Graffiti",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Zen_word",
+            "name": "Rinzai",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Art_word",
+            "name": "Gothic",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Euro",
+            "image": "res/Item/Money_Euro_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Allergen_word",
+            "name": "Allergen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Access_word",
+            "name": "Access",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Money",
+            "name": "Dollar",
+            "image": "res/Item/Money_Dollar_1.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Money": 8,
+      "Art_word": 8,
+      "Allergen_word": 4,
+      "Access_word": 4,
+      "Zen_word": 3,
+      "Zebra_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Deco",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Franc",
+        "image": "res/Item/Money_Franc_3.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Art_word",
+        "name": "Art",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Abstract",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Modern",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Key",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yen",
+        "image": "res/Item/Money_Yen_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Passcode",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zen_word",
+        "name": "Yoga",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Access_word",
+        "name": "Keycard",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Lira",
+        "image": "res/Item/Money_Lira_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Money",
+        "name": "Money",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Zen_word",
+        "name": "Zen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Tail",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Dust",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Cubism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Latex",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Pollen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Hoof",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Allergen_word",
+        "name": "Nuts",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Zebra_word",
+        "name": "Snout",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Zebra_word",
+        "name": "Zebra",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Art_word",
+        "name": "Realism",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Money",
+        "name": "Yuan",
+        "image": "res/Item/Money_Yuan_6.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  }
+]

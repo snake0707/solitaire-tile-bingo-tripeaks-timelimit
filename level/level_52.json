@@ -1,0 +1,1552 @@
+[
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 63,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 3,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 16,
+        "handToCol": 8,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 8,
+        "colMultiToSlot": 3,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 18,
+        "handToCol": 6,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luck_word",
+            "name": "Chance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Pour",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luck_word",
+            "name": "Godsend",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Strike",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Bat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ladder_word",
+            "name": "Ascend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Ball",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Violin",
+            "image": "res/Item/strings_violin_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ladder_word",
+            "name": "Ladder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ladder_word",
+            "name": "Elevate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Madman_word",
+            "name": "Wrath",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Dilute",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Baseball_word": 8,
+      "Strings": 8,
+      "Flasks_word": 4,
+      "Ladder_word": 4,
+      "Luck_word": 3,
+      "Madman_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Cello",
+        "image": "res/Item/strings_cello_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Harp",
+        "image": "res/Item/strings_harp_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Catcher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Glove",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Descend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Pitcher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Viola",
+        "image": "res/Item/strings_viola_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Mandolin",
+        "image": "res/Item/strings_mandolin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Fill",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Strings",
+        "name": "Strings",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Banjo",
+        "image": "res/Item/strings_banjo_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Shake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Base",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Fury",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Baseball_word",
+        "name": "Baseball",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luck_word",
+        "name": "Luck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Guitar",
+        "image": "res/Item/strings_guitar_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Rage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Fortune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Jersey",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Madman_word",
+        "name": "Madman",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flasks_word",
+        "name": "Flasks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Ukulele",
+        "image": "res/Item/strings_ukulele_7.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 62,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 7,
+        "colMultiToSlot": 4,
+        "colToCol": 2,
+        "colMultiToCol": 1,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Ball",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Luck_word",
+            "name": "Luck",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Glove",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Banjo",
+            "image": "res/Item/strings_banjo_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Pitcher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Shake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Dilute",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Strings",
+            "name": "Strings",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Jersey",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luck_word",
+            "name": "Fortune",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Ladder_word",
+            "name": "Ladder",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Madman_word",
+            "name": "Wrath",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Baseball_word": 8,
+      "Strings": 8,
+      "Flasks_word": 4,
+      "Ladder_word": 4,
+      "Luck_word": 3,
+      "Madman_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Strike",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Chance",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Madman_word",
+        "name": "Madman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Violin",
+        "image": "res/Item/strings_violin_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Bat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Catcher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Pour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Ukulele",
+        "image": "res/Item/strings_ukulele_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Guitar",
+        "image": "res/Item/strings_guitar_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Godsend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Viola",
+        "image": "res/Item/strings_viola_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Elevate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Descend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Fill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Ascend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Cello",
+        "image": "res/Item/strings_cello_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Mandolin",
+        "image": "res/Item/strings_mandolin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Fury",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flasks_word",
+        "name": "Flasks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Harp",
+        "image": "res/Item/strings_harp_6.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Baseball_word",
+        "name": "Baseball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Rage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Base",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 2,
+        "colMultiToSlot": 4,
+        "colToCol": 6,
+        "colMultiToCol": 2,
+        "handToSlot": 13,
+        "handToCol": 11,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 63,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 1,
+        "colMultiToSlot": 5,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 10,
+        "handToCol": 14,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Strike",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Ball",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Ukulele",
+            "image": "res/Item/strings_ukulele_7.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Dilute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Cello",
+            "image": "res/Item/strings_cello_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ladder_word",
+            "name": "Descend",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Jersey",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Strings",
+            "name": "Strings",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Harp",
+            "image": "res/Item/strings_harp_6.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luck_word",
+            "name": "Chance",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Banjo",
+            "image": "res/Item/strings_banjo_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Guitar",
+            "image": "res/Item/strings_guitar_2.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Baseball_word": 8,
+      "Strings": 8,
+      "Flasks_word": 4,
+      "Ladder_word": 4,
+      "Luck_word": 3,
+      "Madman_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Shake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Catcher",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Madman_word",
+        "name": "Madman",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Bat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Elevate",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Mandolin",
+        "image": "res/Item/strings_mandolin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Godsend",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flasks_word",
+        "name": "Flasks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Pour",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Baseball_word",
+        "name": "Baseball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Fortune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Fill",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Wrath",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Violin",
+        "image": "res/Item/strings_violin_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Ascend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Viola",
+        "image": "res/Item/strings_viola_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Fury",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luck_word",
+        "name": "Luck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Glove",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Rage",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ladder_word",
+        "name": "Ladder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Base",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Pitcher",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 62,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 6,
+        "colMultiToSlot": 4,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 17,
+        "handToCol": 7,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 61,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 6,
+        "colToCol": 1,
+        "colMultiToCol": 2,
+        "handToSlot": 11,
+        "handToCol": 13,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Madman_word",
+            "name": "Wrath",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Fill",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Luck_word",
+            "name": "Godsend",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Violin",
+            "image": "res/Item/strings_violin_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Pitcher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ladder_word",
+            "name": "Climb",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Harp",
+            "image": "res/Item/strings_harp_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Strike",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Madman_word",
+            "name": "Madman",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Base",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Madman_word",
+            "name": "Fury",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Cello",
+            "image": "res/Item/strings_cello_3.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Baseball_word": 8,
+      "Strings": 8,
+      "Flasks_word": 4,
+      "Ladder_word": 4,
+      "Luck_word": 3,
+      "Madman_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Ladder_word",
+        "name": "Ladder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Ball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Catcher",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Guitar",
+        "image": "res/Item/strings_guitar_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Ascend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Glove",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Rage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Jersey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Ukulele",
+        "image": "res/Item/strings_ukulele_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Pour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Descend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Mandolin",
+        "image": "res/Item/strings_mandolin_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Strings",
+        "name": "Strings",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Chance",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Luck_word",
+        "name": "Luck",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Baseball_word",
+        "name": "Baseball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Shake",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Fortune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Elevate",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flasks_word",
+        "name": "Flasks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Viola",
+        "image": "res/Item/strings_viola_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Dilute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Bat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Banjo",
+        "image": "res/Item/strings_banjo_5.png",
+        "isText": false
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 3,
+      "maxSteps": 71,
+      "strategyType": "priority",
+      "solverSteps": 64,
+      "solverMaxSteps": 65,
+      "moveStats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      },
+      "solver2Steps": 64,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 4,
+        "colMultiToSlot": 5,
+        "colToCol": 5,
+        "colMultiToCol": 2,
+        "handToSlot": 15,
+        "handToCol": 9,
+        "flip": 24,
+        "recycle": 0
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Madman_word",
+            "name": "Madman",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Glove",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Bat",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Ladder_word",
+            "name": "Elevate",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Madman_word",
+            "name": "Fury",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Dilute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Jersey",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Catcher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Banjo",
+            "image": "res/Item/strings_banjo_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Baseball_word",
+            "name": "Pitcher",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Flasks_word",
+            "name": "Shake",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Strings",
+            "name": "Viola",
+            "image": "res/Item/strings_viola_4.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Baseball_word": 8,
+      "Strings": 8,
+      "Flasks_word": 4,
+      "Ladder_word": 4,
+      "Luck_word": 3,
+      "Madman_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Harp",
+        "image": "res/Item/strings_harp_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Pour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Strike",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Flasks_word",
+        "name": "Flasks",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Guitar",
+        "image": "res/Item/strings_guitar_2.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Luck_word",
+        "name": "Luck",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Climb",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Violin",
+        "image": "res/Item/strings_violin_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Flasks_word",
+        "name": "Fill",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Strings",
+        "name": "Strings",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Rage",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Madman_word",
+        "name": "Wrath",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Godsend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Ball",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Ladder_word",
+        "name": "Ladder",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Fortune",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Cello",
+        "image": "res/Item/strings_cello_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Ascend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Ukulele",
+        "image": "res/Item/strings_ukulele_7.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Strings",
+        "name": "Mandolin",
+        "image": "res/Item/strings_mandolin_8.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Baseball_word",
+        "name": "Baseball",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Luck_word",
+        "name": "Chance",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Ladder_word",
+        "name": "Descend",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Baseball_word",
+        "name": "Base",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  }
+]

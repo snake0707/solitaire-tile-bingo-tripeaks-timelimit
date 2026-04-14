@@ -1,0 +1,2572 @@
+[
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 122,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 15,
+        "colMultiToSlot": 5,
+        "colToCol": 1,
+        "colMultiToCol": 3,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 55,
+        "recycle": 1
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 14,
+        "colMultiToSlot": 5,
+        "colToCol": 2,
+        "colMultiToCol": 2,
+        "handToSlot": 24,
+        "handToCol": 18,
+        "flip": 56,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Turkey",
+            "image": "res/Item/Egg_Turkey_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Rumor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "SOS_word",
+            "name": "Crisis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Fourteen",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cow_word",
+            "name": "Cow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Birdie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Caddie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Goose",
+            "image": "res/Item/Egg_Goose_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Golf_word",
+            "name": "Golf",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Buttons_word",
+            "name": "Buttons",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Club",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Chew",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Timer_word",
+            "name": "Timer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Ranch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "SOS_word",
+            "name": "Calamity",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Ruminant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gold_word",
+            "name": "Gold",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "SOS_word",
+            "name": "SOS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Thirty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Chicken",
+            "image": "res/Item/Egg_Chicken_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Buttons_word",
+            "name": "Polo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Latch",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cow_word": 8,
+      "Egg": 8,
+      "Even_word": 8,
+      "Buttons_word": 6,
+      "Golf_word": 6,
+      "Gold_word": 4,
+      "Gossip_word": 4,
+      "Seatbelt_word": 4,
+      "SOS_word": 3,
+      "Timer_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Cardigan",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Egg",
+        "name": "Egg",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Belt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Bull",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Shirt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Duck",
+        "image": "res/Item/Egg_Duck_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Blazer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Strap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Even_word",
+        "name": "Even",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gossip_word",
+        "name": "Gossip",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Steer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Coat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seatbelt_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Four",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Horns",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Sixty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Minute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Eighty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Whisper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Par",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Moo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Hour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Ore",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Penguin",
+        "image": "res/Item/Egg_Penguin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Overalls",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twenty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Karat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Ostrich",
+        "image": "res/Item/Egg_Ostrich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Quail",
+        "image": "res/Item/Egg_Quail_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Ingot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Slander",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Heifer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Hole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Buckle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Nugget",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Bogey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Forty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twelve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Second",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Secret",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 126,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 13,
+        "colMultiToSlot": 6,
+        "colToCol": 4,
+        "colMultiToCol": 4,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 56,
+        "recycle": 1
+      },
+      "solver2Steps": 123,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 6,
+        "colMultiToCol": 3,
+        "handToSlot": 26,
+        "handToCol": 16,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Buttons_word",
+            "name": "Buttons",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Swan",
+            "image": "res/Item/bird_swan_3.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Forty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Hour",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "gold",
+            "category": "Egg",
+            "name": "Egg",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Fourteen",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Chicken",
+            "image": "res/Item/Egg_Chicken_1.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Ostrich",
+            "image": "res/Item/Egg_Ostrich_6.png",
+            "isText": false
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ingot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Minute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "SOS_word",
+            "name": "Crisis",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Birdie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Even_word",
+            "name": "Even",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gossip_word",
+            "name": "Gossip",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Nugget",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Goose",
+            "image": "res/Item/Egg_Goose_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Caddie",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Four",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Steer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Ruminant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Strap",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cow_word": 8,
+      "Egg": 8,
+      "Even_word": 8,
+      "Buttons_word": 6,
+      "Golf_word": 6,
+      "Gold_word": 4,
+      "Gossip_word": 4,
+      "Seatbelt_word": 4,
+      "SOS_word": 3,
+      "Timer_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Rumor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twelve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Hole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Second",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twenty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Karat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Heifer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Buckle",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cow_word",
+        "name": "Cow",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Secret",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Thirty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gold_word",
+        "name": "Gold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Par",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Club",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Shirt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Bogey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Overalls",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Ranch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Blazer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Latch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Bull",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Horns",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Golf_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Calamity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Moo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Eighty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Chew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Duck",
+        "image": "res/Item/Egg_Duck_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Cardigan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Polo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Quail",
+        "image": "res/Item/Egg_Quail_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Whisper",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "SOS_word",
+        "name": "SOS",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Timer_word",
+        "name": "Timer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Turkey",
+        "image": "res/Item/Egg_Turkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Coat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Slander",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seatbelt_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Sixty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Penguin",
+        "image": "res/Item/Egg_Penguin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Belt",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 125,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 4,
+        "handToSlot": 27,
+        "handToCol": 15,
+        "flip": 57,
+        "recycle": 1
+      },
+      "solver2Steps": 122,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 2,
+        "colMultiToCol": 4,
+        "handToSlot": 23,
+        "handToCol": 19,
+        "flip": 54,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Second",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gossip_word",
+            "name": "Gossip",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Steer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Karat",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Ranch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "SOS_word",
+            "name": "SOS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Buttons_word",
+            "name": "Cardigan",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Four",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ingot",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Moo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cow_word",
+            "name": "Cow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Bull",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Buttons_word",
+            "name": "Blazer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Goose",
+            "image": "res/Item/Egg_Goose_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Fourteen",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Nugget",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Forty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Rumor",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Buttons_word",
+            "name": "Polo",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Par",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Minute",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cow_word": 8,
+      "Egg": 8,
+      "Even_word": 8,
+      "Buttons_word": 6,
+      "Golf_word": 6,
+      "Gold_word": 4,
+      "Gossip_word": 4,
+      "Seatbelt_word": 4,
+      "SOS_word": 3,
+      "Timer_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Shirt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Chew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Horns",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Ostrich",
+        "image": "res/Item/Egg_Ostrich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Hour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Penguin",
+        "image": "res/Item/Egg_Penguin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Bogey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Secret",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Birdie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Buckle",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Sixty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Seatbelt_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Calamity",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Chicken",
+        "image": "res/Item/Egg_Chicken_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Strap",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Buttons_word",
+        "name": "Buttons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Ruminant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Club",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Thirty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Heifer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Slander",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Hole",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Golf_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Whisper",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Caddie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Quail",
+        "image": "res/Item/Egg_Quail_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Coat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Belt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Crisis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Latch",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Egg",
+        "name": "Egg",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Timer_word",
+        "name": "Timer",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gold_word",
+        "name": "Gold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twenty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Duck",
+        "image": "res/Item/Egg_Duck_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Overalls",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Eighty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Even_word",
+        "name": "Even",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Turkey",
+        "image": "res/Item/Egg_Turkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twelve",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 124,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 12,
+        "colMultiToSlot": 7,
+        "colToCol": 3,
+        "colMultiToCol": 1,
+        "handToSlot": 30,
+        "handToCol": 12,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 126,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 9,
+        "colMultiToSlot": 8,
+        "colToCol": 5,
+        "colMultiToCol": 3,
+        "handToSlot": 20,
+        "handToCol": 22,
+        "flip": 58,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Whisper",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Thirty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Belt",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Buttons_word",
+            "name": "Buttons",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Strap",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Steer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Twenty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Slander",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Eighty",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Secret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Penguin",
+            "image": "res/Item/Egg_Penguin_8.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Buckle",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Minute",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Latch",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Birdie",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Par",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Cow_word",
+            "name": "Cow",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gossip_word",
+            "name": "Gossip",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "SOS_word",
+            "name": "SOS",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Goose",
+            "image": "res/Item/Egg_Goose_4.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "SOS_word",
+            "name": "Crisis",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cow_word": 8,
+      "Egg": 8,
+      "Even_word": 8,
+      "Buttons_word": 6,
+      "Golf_word": 6,
+      "Gold_word": 4,
+      "Gossip_word": 4,
+      "Seatbelt_word": 4,
+      "SOS_word": 3,
+      "Timer_word": 3
+    },
+    "handPile": [
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Blazer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Polo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Ostrich",
+        "image": "res/Item/Egg_Ostrich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Bogey",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twelve",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Ruminant",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Second",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Sixty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Overalls",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Coat",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gold_word",
+        "name": "Gold",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Fourteen",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Even_word",
+        "name": "Even",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Timer_word",
+        "name": "Timer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Turkey",
+        "image": "res/Item/Egg_Turkey_5.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Chicken",
+        "image": "res/Item/Egg_Chicken_1.png",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Seatbelt_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Forty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Bull",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Nugget",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Quail",
+        "image": "res/Item/Egg_Quail_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Four",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Club",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Horns",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Duck",
+        "image": "res/Item/Egg_Duck_2.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Caddie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Ranch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Hour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Rumor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Heifer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Ingot",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Chew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Moo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Cardigan",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Egg",
+        "name": "Egg",
+        "isText": false
+      },
+      {
+        "type": "gold",
+        "category": "Golf_word",
+        "name": "Golf",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Hole",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Karat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Shirt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Calamity",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  },
+  {
+    "config": {
+      "maxSlots": 4,
+      "maxSteps": 128,
+      "strategyType": "priority",
+      "solverSteps": 127,
+      "solverMaxSteps": 130,
+      "moveStats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 6,
+        "colToCol": 7,
+        "colMultiToCol": 2,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 58,
+        "recycle": 1
+      },
+      "solver2Steps": 129,
+      "solver2StrategyType": "priority",
+      "solver2Stats": {
+        "colSingleToSlot": 11,
+        "colMultiToSlot": 7,
+        "colToCol": 7,
+        "colMultiToCol": 2,
+        "handToSlot": 21,
+        "handToCol": 21,
+        "flip": 59,
+        "recycle": 1
+      }
+    },
+    "tableau": [
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Eighty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Club",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Hole",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Gold_word",
+            "name": "Gold",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Turkey",
+            "image": "res/Item/Egg_Turkey_5.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Timer_word",
+            "name": "Second",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Whisper",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Bull",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Even_word",
+            "name": "Even",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ingot",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Four",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gossip_word",
+            "name": "Secret",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Egg",
+            "name": "Duck",
+            "image": "res/Item/Egg_Duck_2.png",
+            "isText": false
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Steer",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Golf_word",
+            "name": "Bogey",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ],
+      [
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Ore",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Cow_word",
+            "name": "Ruminant",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "gold",
+            "category": "Golf_word",
+            "name": "Golf",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Even_word",
+            "name": "Thirty",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Buttons_word",
+            "name": "Overalls",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Gold_word",
+            "name": "Karat",
+            "isText": true
+          },
+          "faceUp": false
+        },
+        {
+          "card": {
+            "type": "regular",
+            "category": "Seatbelt_word",
+            "name": "Buckle",
+            "isText": true
+          },
+          "faceUp": true
+        }
+      ]
+    ],
+    "categoryTargets": {
+      "Cow_word": 8,
+      "Egg": 8,
+      "Even_word": 8,
+      "Buttons_word": 6,
+      "Golf_word": 6,
+      "Gold_word": 4,
+      "Gossip_word": 4,
+      "Seatbelt_word": 4,
+      "SOS_word": 3,
+      "Timer_word": 3
+    },
+    "handPile": [
+      {
+        "type": "gold",
+        "category": "Seatbelt_word",
+        "name": "Seatbelt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Strap",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Hour",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Horns",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Sixty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twenty",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Egg",
+        "name": "Egg",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gold_word",
+        "name": "Nugget",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Ranch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Shirt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Caddie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Coat",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Latch",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Quail",
+        "image": "res/Item/Egg_Quail_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Chicken",
+        "image": "res/Item/Egg_Chicken_1.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Calamity",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Gossip_word",
+        "name": "Gossip",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Timer_word",
+        "name": "Timer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Fourteen",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Birdie",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Twelve",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Cow_word",
+        "name": "Cow",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "SOS_word",
+        "name": "SOS",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Crisis",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Even_word",
+        "name": "Forty",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Penguin",
+        "image": "res/Item/Egg_Penguin_8.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Slander",
+        "isText": true
+      },
+      {
+        "type": "gold",
+        "category": "Buttons_word",
+        "name": "Buttons",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Heifer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Timer_word",
+        "name": "Minute",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Moo",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Cardigan",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Swan",
+        "image": "res/Item/bird_swan_3.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Golf_word",
+        "name": "Par",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Seatbelt_word",
+        "name": "Belt",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Cow_word",
+        "name": "Chew",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Gossip_word",
+        "name": "Rumor",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "SOS_word",
+        "name": "Tragedy",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Blazer",
+        "isText": true
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Goose",
+        "image": "res/Item/Egg_Goose_4.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Egg",
+        "name": "Ostrich",
+        "image": "res/Item/Egg_Ostrich_6.png",
+        "isText": false
+      },
+      {
+        "type": "regular",
+        "category": "Buttons_word",
+        "name": "Polo",
+        "isText": true
+      }
+    ],
+    "handDisplay": []
+  }
+]
