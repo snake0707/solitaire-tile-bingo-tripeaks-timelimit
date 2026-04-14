@@ -103,7 +103,7 @@ class Game {
 
         // Prevent pull-to-refresh and elastic scroll on mobile
         document.addEventListener('touchmove', (e) => {
-            if (!e.target.closest('.overlay:not(.hidden)')) {
+            if (!e.target.closest('[id$="-overlay"]:not(.hidden)')) {
                 e.preventDefault();
             }
         }, { passive: false });
