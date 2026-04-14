@@ -10633,59 +10633,59 @@ const CATEGORIES = {
     "name": "Decor",
     "configId": "PIC_DECOR_77"
   },
-  "Aquatics": {
+  "Water Sports": {
     "isText": false,
     "items": [
       {
         "image": "res/Item/aquatics_surfboard_1.png",
         "name": "Surfboard",
-        "id": "Surfboard_Aquatics",
+        "id": "Surfboard_Water Sports",
         "configId": "SURFBOARD_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_divingmask_2.png",
         "name": "Diving mask",
-        "id": "Diving_mask_Aquatics",
+        "id": "Diving_mask_Water Sports",
         "configId": "DIVING_MASK_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_kayak_3.png",
         "name": "Kayak",
-        "id": "Kayak_Aquatics",
+        "id": "Kayak_Water Sports",
         "configId": "KAYAK_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_lifering_4.png",
         "name": "Life ring",
-        "id": "Life_ring_Aquatics",
+        "id": "Life_ring_Water Sports",
         "configId": "LIFE_RING_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_wetsuit_5.png",
         "name": "Wetsuit",
-        "id": "Wetsuit_Aquatics",
+        "id": "Wetsuit_Water Sports",
         "configId": "WETSUIT_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_sailboat_6.png",
         "name": "Sailboat",
-        "id": "Sailboat_Aquatics",
+        "id": "Sailboat_Water Sports",
         "configId": "SAILBOAT_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_paddleboard_7.png",
         "name": "Paddleboard",
-        "id": "Paddleboard_Aquatics",
+        "id": "Paddleboard_Water Sports",
         "configId": "PADDLEBOARD_PIC_AQUATICS_78"
       },
       {
         "image": "res/Item/aquatics_lifejacket_8.png",
         "name": "Life jacket",
-        "id": "Life_jacket_Aquatics",
+        "id": "Life_jacket_Water Sports",
         "configId": "LIFE_JACKET_PIC_AQUATICS_78"
       }
     ],
-    "name": "Aquatics",
+    "name": "Water Sports",
     "configId": "PIC_AQUATICS_78"
   },
   "Icons": {
