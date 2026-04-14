@@ -1364,10 +1364,11 @@ class Game {
             if (card.type === 'gold') {
                 // Gold card: category name → zhCategoryName
                 const baseCat = card.category.replace(/_word$/, '');
-                card.zhName = catZhMap[baseCat] || '';
+                card.zhName = catZhMap[baseCat] || catZhMap[baseCat.replace(/_/g, ' ')] || '';
             } else {
                 // Regular card: lookup by category + name
-                card.zhName = wordZhMap[card.category + '|' + card.name] || '';
+                card.zhName = wordZhMap[card.category + '|' + card.name]
+                    || wordZhMap[card.category.replace(/_/g, ' ') + '|' + card.name] || '';
             }
         };
 
